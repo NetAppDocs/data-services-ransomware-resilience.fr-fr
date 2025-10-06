@@ -1,0 +1,34 @@
+= Prise en charge d' Amazon FSx for NetApp ONTAP
+:allow-uri-read: 
+
+
+
+
+=== Prise en charge d' Amazon FSx for NetApp ONTAP
+
+Cette version prend en charge Amazon FSx for NetApp ONTAP.  Cette fonctionnalité vous aide à protéger vos charges de travail FSx for ONTAP avec la BlueXP ransomware protection.
+
+FSx for ONTAP est un service entièrement géré qui fournit la puissance du stockage NetApp ONTAP dans le cloud.  Il offre les mêmes fonctionnalités, performances et capacités administratives que celles que vous utilisez sur site avec l'agilité et l'évolutivité d'un service AWS natif.
+
+Les modifications suivantes ont été apportées au flux de travail de BlueXP ransomware protection :
+
+* Discovery inclut les charges de travail dans les environnements de travail FSx pour ONTAP 9.15.
+* L'onglet Protection affiche les charges de travail dans les environnements FSx for ONTAP .  Dans cet environnement, vous devez effectuer des opérations de sauvegarde à l'aide du service de sauvegarde FSx for ONTAP .  Vous pouvez restaurer ces charges de travail à l’aide des instantanés de BlueXP ransomware protection .
++
+
+TIP: Les politiques de sauvegarde pour une charge de travail exécutée sur FSx pour ONTAP ne peuvent pas être définies dans BlueXP.  Toutes les politiques de sauvegarde existantes définies dans Amazon FSx for NetApp ONTAP restent inchangées.
+
+* Les incidents d'alerte montrent le nouvel environnement de travail FSx pour ONTAP .
+
+
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["En savoir plus sur la BlueXP ransomware protection"] .
+
+Pour plus d'informations sur les options prises en charge, reportez-vous à la https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-reference-limitations.html["Limitations de la BlueXP ransomware protection"] .
+
+
+
+=== Rôle d'accès BlueXP requis
+
+Vous avez désormais besoin de l’un des rôles d’accès suivants pour afficher, découvrir ou gérer la BlueXP ransomware protection: administrateur de l’organisation, administrateur de dossier ou de projet, administrateur de la protection contre les ransomwares ou visualiseur de protection contre les ransomwares.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .

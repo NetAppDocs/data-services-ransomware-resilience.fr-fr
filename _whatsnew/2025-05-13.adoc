@@ -1,0 +1,15 @@
+= Signalement d'environnements de travail non pris en charge dans la BlueXP ransomware protection
+:allow-uri-read: 
+
+
+
+
+=== Signalement d'environnements de travail non pris en charge dans la BlueXP ransomware protection
+
+Pendant le flux de travail de découverte, la BlueXP ransomware protection signale plus de détails lorsque vous passez la souris sur les charges de travail prises en charge ou non prises en charge.  Cela vous aidera à comprendre pourquoi certaines de vos charges de travail ne sont pas détectées par le service de BlueXP ransomware protection .
+
+Il existe de nombreuses raisons pour lesquelles le service ne prend pas en charge un environnement de travail. Par exemple, la version ONTAP de votre environnement de travail peut être inférieure à la version requise.  Lorsque vous survolez un environnement de travail non pris en charge, une info-bulle affiche la raison.
+
+Vous pouvez afficher les environnements de travail non pris en charge lors de la découverte initiale, où vous pouvez également télécharger les résultats.  Vous pouvez également afficher les résultats de la découverte à partir de l'option *Découverte de charge de travail* dans la page Paramètres.
+
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-discover.html["Découvrez les charges de travail dans la BlueXP ransomware protection"] .

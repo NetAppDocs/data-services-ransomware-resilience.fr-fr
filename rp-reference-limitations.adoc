@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: rp-reference-limitations.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware, role-based access control, rbac, role, permission, access rights, organization,project,account 
+summary: Les limitations connues identifient les plates-formes, les appareils ou les fonctions qui ne sont pas pris en charge par cette version du produit. 
+---
+= Limitations connues de NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les limitations connues identifient les plates-formes, les appareils ou les fonctions qui ne sont pas pris en charge par cette version du produit ou qui n'interagissent pas correctement avec elle. Examinez attentivement ces limitations.
+
+
+
+== Problème d'option de réinitialisation de l'exercice de préparation
+
+Si vous sélectionnez un volume ONTAP 9.11.1 pour l’exercice de préparation aux attaques de ransomware, Ransomware Resilience envoie une alerte.  Si vous récupérez les données à l'aide de l'option « cloner sur volume » et réinitialisez la perceuse, l'opération de réinitialisation échoue.
+
+
+
+== Limitations Amazon FSx for NetApp ONTAP
+
+Le système Amazon FSx for NetApp ONTAP est pris en charge dans Ransomware Resilience.  Les limitations suivantes s'appliquent à ce système :
+
+* Les politiques de sauvegarde ne sont pas prises en charge pour Fsx for ONTAP.  Dans cet environnement, vous devez effectuer des opérations de sauvegarde à l’aide d’ Amazon FSx pour les sauvegardes.  Vous pouvez restaurer ces charges de travail à l’aide de Ransomware Resilience.
+* Les opérations de restauration sont effectuées uniquement à partir de snapshots.
+

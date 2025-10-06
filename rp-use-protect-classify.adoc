@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: rp-use-protect-classify.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, cds, sensitive, pii, classification 
+summary: Améliorez la sécurité et la confidentialité de vos données avec NetApp Data Classification pour identifier si vos données contiennent des informations personnelles identifiables ou privées. 
+---
+= Recherchez des informations personnelles identifiables avec la classification des données NetApp dans Ransomware Resilience
+:allow-uri-read: 
+
+
+[role="lead"]
+Dans NetApp Ransomware Resilience, vous pouvez utiliser NetApp Data Classification pour analyser et classer les données dans une charge de travail de partage de fichiers.  La classification des données vous aide à déterminer si l'ensemble de données contient des informations personnelles identifiables (PII), ce qui peut augmenter les risques de sécurité.  La classification des données est un composant essentiel de la console et est disponible sans frais supplémentaires.
+
+link:https://docs.netapp.com/us-en/bluexp-classification/["Classification des données"^]utilise le traitement du langage naturel basé sur l'IA pour l'analyse et la catégorisation des données contextuelles, fournissant des informations exploitables sur vos données pour répondre aux exigences de conformité, détecter les vulnérabilités de sécurité, optimiser les coûts et accélérer la migration.
+
+
+TIP: Ce processus peut avoir un impact sur l’importance de la charge de travail pour vous aider à garantir que vous disposez de la protection appropriée.
+
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
+
+
+
+== Identifier l'exposition à la confidentialité grâce à la classification des données
+
+Avant d'utiliser la classification des données dans Ransomware Resilience, vous devezlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html["pour permettre à la classification des données d'analyser vos données"^] .
+
+Vous pouvez déployer la classification des données dans la page Protection de Ransomware Resilience.  Suivez la procédure pour identifier l’exposition à la confidentialité.  Lorsque vous sélectionnez **Identifier l'exposition**, si vous n'avez pas déjà déployé la classification des données, une boîte de dialogue vous permet d'activer la classification des données.
+
+image:classification-deploy.png["Capture d'écran de la classification de déploiement"]
+
+Pour plus d'informations sur la classification des données, voir :
+
+* https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["En savoir plus sur la classification des données"^]
+* https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Catégories de données privées"^]
+* https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Examinez les données stockées dans votre organisation"^]
+
+
+.Avant de commencer
+L'analyse des données PII dans Ransomware Resilience est disponible si vous avezlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html["Classification des données déployée"^] .  La classification des données est disponible dans le cadre de la console sans frais supplémentaires et peut être déployée sur site ou dans le cloud client.
+
+.Étapes
+. Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.
+. Dans la page Protection, recherchez une charge de travail de partage de fichiers dans la colonne Charge de travail.
++
+image:screen-protection-sensitive-preview-column.png["Page de protection affichant la colonne d'exposition à la confidentialité"]
+
+. Pour permettre à la classification des données d'analyser vos données à la recherche d'informations personnelles identifiables (PII), dans la colonne *Exposition à la confidentialité*, sélectionnez *Identifier l'exposition*.
+
+
+
+NOTE: Si vous n'avez pas déployé Data CCassification, la sélection de *Identifier l'exposition* ouvre une boîte de dialogue pour déployer la classification des données.  Sélectionnez *Déployer*.  Après avoir déployé la classification des données, vous pouvez revenir à la page Protection puis sélectionner *Identifier l'exposition*.
+
+.Résultat
+L'analyse peut prendre plusieurs minutes en fonction de la taille et du nombre de fichiers.  Pendant l'analyse, la page Protection indique qu'elle identifie les fichiers et fournit un nombre de fichiers.  Une fois l'analyse terminée, la colonne Exposition à la confidentialité évalue le niveau d'exposition comme Faible, Moyen ou Élevé.
+
+
+
+== Examiner l'exposition à la confidentialité
+
+Après avoir analysé les données de classification pour les informations personnelles identifiables, évaluez le risque.
+
+Les données PII sont classées selon l’une des trois désignations suivantes :
+
+* *Élevé* : Plus de 70 % des fichiers contiennent des informations personnelles identifiables
+* *Moyen* : Plus de 30 % et moins de 70 % des fichiers contiennent des informations personnelles identifiables
+* *Faible* : Plus de 0 % et moins de 30 % des fichiers contiennent des informations personnelles identifiables
+
+
+.Étapes
+. Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.
+. Dans la page Protection, recherchez la charge de travail du partage de fichiers dans la colonne Charge de travail qui affiche un statut dans la colonne Exposition à la confidentialité.
++
+image:screen-protection-sensitive-preview-column.png["Page de protection affichant la colonne d'exposition à la confidentialité"]
+
+. Sélectionnez le lien de charge de travail dans la colonne Charge de travail pour voir les détails de la charge de travail.
++
+image:screen-protection-workload-details-privacy-exposure.png["Écran des détails de la charge de travail affichant la mosaïque d'exposition à la confidentialité"]
+
+. Dans la page Détails de la charge de travail, examinez les détails de la mosaïque Exposition à la confidentialité.
+
+
+
+
+== Impact de l'exposition à la vie privée sur l'importance de la charge de travail
+
+Les changements d’exposition à la confidentialité peuvent avoir un impact sur l’importance de la charge de travail.
+
+[cols="15,20a,20,20"]
+|===
+| En cas d'exposition à la vie privée : | À partir de cette exposition à la vie privée : | À cette exposition à la vie privée : | Ensuite, l’importance de la charge de travail fait ceci : . 
+
+
+| *Diminue*  a| 
+Élevé, moyen ou faible
+| Moyen, faible ou aucun | Reste le même 
+
+
+.3+| *Augmente*  a| 
+Aucune
+| Faible | Reste au Standard 
+
+
+| Faible  a| 
+Moyen
+| Changements de Standard à Important 
+
+
+| Faible ou moyen  a| 
+Élevée
+| Changements de Standard ou Important à Critique 
+|===
+
+
+== Pour plus d'informations
+
+Pour plus de détails sur la classification des données, reportez-vous à la documentation sur la classification des données :
+
+* https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["En savoir plus sur la classification des données"^]
+* https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Catégories de données privées"^]
+* https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Examinez les données stockées dans votre organisation"^]
+

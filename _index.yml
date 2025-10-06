@@ -1,0 +1,60 @@
+---
+indexpage:
+  title: Documentation sur la résilience aux ransomwares de NetApp
+  summary: NetApp Ransomware Resilience est un service d'orchestration pour la protection,
+    la détection et la récupération des ransomwares.  Ransomware Resilience protège
+    les charges de travail basées sur les applications des banques de données Oracle,
+    MySQL, VM et des partages de fichiers sur le stockage NAS sur site ainsi que Cloud
+    Volumes ONTAP dans Amazon Web Services (à l'aide des protocoles NFS et CIFS) dans
+    les organisations NetApp Console et sauvegarde les données sur le stockage cloud
+    Amazon Web Services (AWS) ou NetApp StorageGRID.
+  keywords: bluexp, ransomware, anti-ransomware, cyber attack, netapp, ontap, amazon
+    web services, aws, storagegrid, protection, resilience
+  lead: NetApp Ransomware Resilience est un service d'orchestration pour la protection,
+    la détection et la récupération des ransomwares.  Ransomware Resilience protège
+    les charges de travail basées sur les applications des banques de données Oracle,
+    MySQL, VM et des partages de fichiers sur le stockage NAS sur site ainsi que Cloud
+    Volumes ONTAP dans Amazon Web Services (à l'aide des protocoles NFS et CIFS) dans
+    les organisations de console et sauvegarde les données sur le stockage cloud Amazon
+    Web Services (AWS) ou NetApp StorageGRID.
+  tiles:
+  - title: Commencer
+    links:
+    - title: En savoir plus sur la résilience aux ransomwares
+      url: "/concept-ransomware-resilience.html"
+    - title: Quoi de neuf dans Ransomware Resilience
+      url: "/whats-new.html"
+    - title: Prérequis
+      url: "/rp-start-prerequisites.html"
+    - title: Démarrage rapide
+      url: "/rp-start-quick-start.html"
+    - title: Configurer les destinations de sauvegarde et activer la détection des
+        menaces
+      url: "/rp-use-settings.html"
+    - title: Simuler une attaque de ransomware
+      url: "/rp-start-simulate.html"
+  - title: Utiliser la résilience aux ransomwares
+    links:
+    - title: Présentation de la résilience aux ransomwares
+      url: "/rp-use-overview.html"
+    - title: Découvrir les charges de travail
+      url: "/rp-start-discover.html"
+    - title: Afficher l'état de la charge de travail à l'aide du tableau de bord
+      url: "/rp-use-dashboard.html"
+    - title: Protéger les charges de travail
+      url: "/rp-use-protect.html"
+    - title: Recherchez des informations personnelles identifiables avec la classification
+        des données NetApp
+      url: "/rp-use-protect-classify.html"
+    - title: Répondre à une alerte détectée
+      url: "/rp-use-alert.html"
+    - title: Se remettre d'une attaque
+      url: "/rp-use-recover.html"
+  - title: Blogs et communauté
+    links:
+    - title: Console NetApp
+      url: https://www.netapp.com/console
+    - title: Services de données NetApp
+      url: https://www.netapp.com/data-services/
+    - title: Communauté NetApp
+      url: https://community.netapp.com/

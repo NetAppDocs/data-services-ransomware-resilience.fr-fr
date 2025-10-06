@@ -1,0 +1,554 @@
+---
+sidebar: sidebar 
+permalink: rp-use-settings.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware settings, backup destination 
+summary: Vous pouvez configurer plusieurs options, notamment une destination de sauvegarde, la détection des menaces et la connexion à Data Infrastructure Insights Workload Security dans Ransomware Resilience. 
+---
+= Configurer les paramètres de protection dans NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez configurer des destinations de sauvegarde, envoyer des données à un système externe de gestion de la sécurité et des événements (SIEM), effectuer un exercice de préparation aux attaques, configurer la découverte de charges de travail ou configurer la connexion à la sécurité de la charge de travail Data Infrastructure Insights en accédant à l'option *Paramètres*.
+
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
+
+*Que pouvez-vous faire dans la page Paramètres ?*  Depuis la page Paramètres, vous pouvez effectuer les opérations suivantes :
+
+* Simulez une attaque de ransomware en effectuant un exercice de préparation et répondez à une alerte de ransomware simulée. Pour plus de détails, consultez la section link:rp-start-simulate.html["Effectuer un exercice de préparation aux attaques de ransomware"] .
+* Configurer la découverte de charge de travail.
+* Configurez la connexion à la sécurité de la charge de travail Data Infrastructure Insights pour voir les informations sur les utilisateurs suspects dans les alertes de ransomware.
+* Ajouter une destination de sauvegarde.
+* Connectez votre système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces.  L'activation de la détection des menaces envoie automatiquement des données à votre SIEM pour l'analyse des menaces.
+
+
+
+
+== Accéder directement à la page Paramètres
+
+Vous pouvez facilement accéder à la page Paramètres à partir de l’option Actions près du menu supérieur.
+
+. Dans la résilience aux ransomwares, sélectionnez la verticaleimage:button-actions-vertical.png["Actions verticales"] ... option en haut à droite.
+. Dans le menu déroulant, sélectionnez *Paramètres*.
+
+
+
+
+== Simuler une attaque de ransomware
+
+Réalisez un exercice de préparation aux ransomwares en simulant une attaque de ransomware sur une charge de travail d’échantillon nouvellement créée.  Ensuite, examinez l’attaque simulée et récupérez l’exemple de charge de travail.  Cette fonctionnalité vous aide à savoir que vous êtes préparé en cas d'attaque réelle de ransomware en testant les processus de notification d'alerte, de réponse et de récupération.  Vous pouvez exécuter un exercice de préparation aux ransomwares plusieurs fois.
+
+Pour plus de détails, reportez-vous àlink:rp-start-simulate.html["Effectuer un exercice de préparation aux attaques de ransomware"] .
+
+
+
+== Configurer la découverte de la charge de travail
+
+Vous pouvez configurer la découverte de charges de travail pour découvrir automatiquement de nouvelles charges de travail dans votre environnement.
+
+. Dans la page Paramètres, recherchez la vignette *Découverte de charge de travail*.
+. Dans la mosaïque *Découverte de charge de travail*, sélectionnez *Découvrir les charges de travail*.
++
+Cette page affiche les agents de console avec des systèmes qui n'ont pas été sélectionnés précédemment, les agents de console nouvellement disponibles et les systèmes nouvellement disponibles.  Cette page n'affiche pas les systèmes qui ont été précédemment sélectionnés.
+
+. Sélectionnez l’agent de console dans lequel vous souhaitez découvrir les charges de travail.
+. Consultez la liste des systèmes.
+. Cochez les systèmes sur lesquels vous souhaitez découvrir les charges de travail ou cochez la case en haut du tableau pour découvrir les charges de travail dans tous les environnements de charge de travail découverts.
+. Faites ceci pour d’autres systèmes si nécessaire.
+. Sélectionnez *Découvrir* pour que Ransomware Resilience découvre automatiquement les nouvelles charges de travail dans l'agent de console sélectionné.
+
+
+
+
+== Identifiez les comportements utilisateur suspectés d'anomalie en vous connectant à Data Infrastructure Insights Sécurité de la charge de travail
+
+Avant de pouvoir afficher les détails du comportement utilisateur suspecté d'anomalie dans Ransomware Resilience, vous devez configurer la connexion au système de sécurité Data Infrastructure Insights Workload.
+
+
+
+=== Obtenir un jeton d'accès API auprès du système de sécurité Data Infrastructure Insights Workload
+
+Obtenez un jeton d’accès API auprès du système de sécurité Data Infrastructure Insights Workload.
+
+. Connectez-vous au système de sécurité de la charge de travail Data Infrastructure Insights .
+. Dans la navigation de gauche, sélectionnez *Admin* > *Accès API*.
++
+image:../media/screen-alerts-ci-api-access-token.png["Page d'accès API dans Data Infrastructure Insights Sécurité de la charge de travail"]
+
+. Créez un jeton d’accès API ou utilisez-en un existant.
+. Copiez le jeton d’accès API.
+
+
+
+
+=== Se connecter à Data Infrastructure Insights Sécurité de la charge de travail
+
+. Dans le menu Paramètres de résilience aux ransomwares, recherchez la vignette *Connexion de sécurité de la charge de travail*.
+. Sélectionnez *Connecter*.
+. Saisissez l’URL de l’interface utilisateur de sécurité de la charge de travail de l’infrastructure de données.
+. Saisissez le jeton d’accès API qui donne accès à la sécurité de la charge de travail.
+. Sélectionnez *Connecter*.
+
+
+
+
+== Ajouter une destination de sauvegarde
+
+Ransomware Resilience peut identifier les charges de travail qui n'ont pas encore de sauvegardes ainsi que les charges de travail qui n'ont pas encore de destinations de sauvegarde attribuées.
+
+Pour protéger ces charges de travail, vous devez ajouter une destination de sauvegarde.  Vous pouvez choisir l’une des destinations de sauvegarde suivantes :
+
+* NetApp StorageGRID
+* Amazon Web Services (AWS)
+* Plateforme Google Cloud
+* Microsoft Azure
+
+
+
+NOTE: Les destinations de sauvegarde ne sont pas disponibles pour les charges de travail dans Amazon FSx for NetApp ONTAP.  Effectuez des opérations de sauvegarde à l’aide du service de sauvegarde FSx for ONTAP .
+
+Vous pouvez ajouter une destination de sauvegarde en fonction d'une action recommandée à partir du tableau de bord ou en accédant à l'option Paramètres du menu.
+
+
+
+=== Accéder aux options de destination de sauvegarde à partir des actions recommandées du tableau de bord
+
+Le tableau de bord fournit de nombreuses recommandations.  Une recommandation pourrait être de configurer une destination de sauvegarde.
+
+.Étapes
+. Dans le tableau de bord Résilience aux ransomwares, examinez le volet Actions recommandées.
++
+image:screen-dashboard.png["Page du tableau de bord"]
+
+. Depuis le tableau de bord, sélectionnez *Vérifier et corriger* pour la recommandation « Préparer <fournisseur de sauvegarde> comme destination de sauvegarde ».
+. Continuez avec les instructions en fonction du fournisseur de sauvegarde.
+
+
+
+
+=== Ajouter StorageGRID comme destination de sauvegarde
+
+Pour configurer NetApp StorageGRID comme destination de sauvegarde, saisissez les informations suivantes.
+
+.Étapes
+. Dans la page *Paramètres > Destinations de sauvegarde*, sélectionnez *Ajouter*.
+. Entrez un nom pour la destination de sauvegarde.
++
+image:screen-settings-backup-destination.png["Page des destinations de sauvegarde"]
+
+. Sélectionnez * StorageGRID*.
+. Sélectionnez la flèche vers le bas à côté de chaque paramètre et saisissez ou sélectionnez des valeurs :
++
+** *Paramètres du fournisseur*:
++
+*** Créez un nouveau bucket ou apportez votre propre bucket qui stockera les sauvegardes.
+*** Nom de domaine complet du nœud de passerelle StorageGRID , port, clé d'accès StorageGRID et informations d'identification de la clé secrète.
+
+
+** *Réseau* : Choisissez l'espace IP.
++
+*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder. Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
+
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Résultat
+La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
+
+image:screen-settings-backup-destinations-list2.png["Page des destinations de sauvegarde l'option Paramètres"]
+
+
+
+=== Ajouter Amazon Web Services comme destination de sauvegarde
+
+Pour configurer AWS comme destination de sauvegarde, saisissez les informations suivantes.
+
+Pour plus de détails sur la gestion de votre stockage AWS dans la console, reportez-vous à https://docs.netapp.com/us-en/bluexp-setup-admin/task-viewing-amazon-s3.html["Gérez vos buckets Amazon S3"^] .
+
+.Étapes
+. Dans la page *Paramètres > Destinations de sauvegarde*, sélectionnez *Ajouter*.
+. Entrez un nom pour la destination de sauvegarde.
++
+image:screen-settings-backup-destination.png["Page des destinations de sauvegarde"]
+
+. Sélectionnez *Amazon Web Services*.
+. Sélectionnez la flèche vers le bas à côté de chaque paramètre et saisissez ou sélectionnez des valeurs :
++
+** *Paramètres du fournisseur*:
++
+*** Créez un nouveau bucket, sélectionnez un bucket existant s'il en existe déjà un dans la console ou apportez votre propre bucket qui stockera les sauvegardes.
+*** Compte AWS, région, clé d'accès et clé secrète pour les informations d'identification AWS
++
+https://docs.netapp.com/us-en/bluexp-s3-storage/task-add-s3-bucket.html["Si vous souhaitez apporter votre propre seau, reportez-vous à Ajouter des seaux S3"^] .
+
+
+
+** *Cryptage* : si vous créez un nouveau compartiment S3, saisissez les informations de clé de cryptage fournies par le fournisseur.  Si vous avez choisi un bucket existant, les informations de chiffrement sont déjà disponibles.
++
+Les données du bucket sont chiffrées par défaut avec des clés gérées par AWS.  Vous pouvez continuer à utiliser les clés gérées par AWS ou gérer le chiffrement de vos données à l'aide de vos propres clés.
+
+** *Réseau* : Choisissez l'espace IP et indiquez si vous utiliserez un point de terminaison privé.
++
+*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder. Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
+*** Vous pouvez également choisir si vous utiliserez un point de terminaison privé AWS (PrivateLink) que vous avez précédemment configuré.
++
+Si vous souhaitez utiliser AWS PrivateLink, reportez-vous à https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["AWS PrivateLink pour Amazon S3"^] .
+
+
+
+** *Verrouillage de sauvegarde* : choisissez si vous souhaitez que Ransomware Resilience protège les sauvegardes contre toute modification ou suppression.  Cette option utilise la technologie NetApp DataLock.  Chaque sauvegarde sera verrouillée pendant la période de conservation, ou pendant un minimum de 30 jours, plus une période tampon pouvant aller jusqu'à 14 jours.
++
+
+CAUTION: Si vous configurez le paramètre de verrouillage de sauvegarde maintenant, vous ne pourrez pas modifier le paramètre ultérieurement une fois la destination de sauvegarde configurée.
+
++
+*** *Mode de gouvernance* : des utilisateurs spécifiques (avec l'autorisation s3:BypassGovernanceRetention) peuvent écraser ou supprimer des fichiers protégés pendant la période de conservation.
+*** *Mode de conformité* : les utilisateurs ne peuvent pas écraser ou supprimer les fichiers de sauvegarde protégés pendant la période de conservation.
+
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Résultat
+La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
+
+image:screen-settings-backup-destinations-list2.png["Page des destinations de sauvegarde l'option Paramètres"]
+
+
+
+=== Ajouter Google Cloud Platform comme destination de sauvegarde
+
+Pour configurer Google Cloud Platform (GCP) comme destination de sauvegarde, saisissez les informations suivantes.
+
+Pour plus de détails sur la gestion de votre stockage GCP dans la console, reportez-vous à https://docs.netapp.com/us-en/bluexp-setup-admin/concept-install-options-google.html["Options d'installation de l'agent de console dans Google Cloud"^] .
+
+.Étapes
+. Dans la page *Paramètres > Destinations de sauvegarde*, sélectionnez *Ajouter*.
+. Entrez un nom pour la destination de sauvegarde.
++
+image:screen-settings-backup-destination-gcp.png["Page des destinations de sauvegarde"]
+
+. Sélectionnez *Google Cloud Platform*.
+. Sélectionnez la flèche vers le bas à côté de chaque paramètre et saisissez ou sélectionnez des valeurs :
++
+** *Paramètres du fournisseur*:
++
+*** Créer un nouveau bucket.  Entrez la clé d'accès et la clé secrète.
+*** Saisissez ou sélectionnez votre projet et votre région Google Cloud Platform.
+
+
+** *Cryptage* : Si vous créez un nouveau bucket, saisissez les informations de clé de cryptage fournies par le fournisseur.  Si vous avez choisi un bucket existant, les informations de chiffrement sont déjà disponibles.
++
+Les données du bucket sont chiffrées par défaut avec des clés gérées par Google.  Vous pouvez continuer à utiliser les clés gérées par Google.
+
+** *Réseau* : Choisissez l'espace IP et indiquez si vous utiliserez un point de terminaison privé.
++
+*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder. Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
+*** Vous pouvez également choisir si vous utiliserez un point de terminaison privé GCP (PrivateLink) que vous avez précédemment configuré.
+
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Résultat
+La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
+
+
+
+=== Ajouter Microsoft Azure comme destination de sauvegarde
+
+Pour configurer Azure comme destination de sauvegarde, saisissez les informations suivantes.
+
+Pour plus de détails sur la gestion de vos informations d'identification Azure et de vos abonnements à la place de marché dans la console, reportez-vous à https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html["Gérez vos informations d'identification Azure et vos abonnements à la place de marché"^] .
+
+.Étapes
+. Dans la page *Paramètres > Destinations de sauvegarde*, sélectionnez *Ajouter*.
+. Entrez un nom pour la destination de sauvegarde.
++
+image:screen-settings-backup-destination.png["Page des destinations de sauvegarde"]
+
+. Sélectionnez *Azure*.
+. Sélectionnez la flèche vers le bas à côté de chaque paramètre et saisissez ou sélectionnez des valeurs :
++
+** *Paramètres du fournisseur*:
++
+*** Créez un nouveau compte de stockage, sélectionnez-en un existant s'il en existe déjà un dans la console ou apportez votre propre compte de stockage qui stockera les sauvegardes.
+*** Abonnement Azure, région et groupe de ressources pour les informations d'identification Azure
++
+https://docs.netapp.com/us-en/bluexp-blob-storage/task-add-blob-storage.html["Si vous souhaitez utiliser votre propre compte de stockage, reportez-vous à la section Ajouter des comptes de stockage Azure Blob."^] .
+
+
+
+** *Cryptage* : Si vous créez un nouveau compte de stockage, saisissez les informations de clé de cryptage fournies par le fournisseur.  Si vous avez choisi un compte existant, les informations de cryptage sont déjà disponibles.
++
+Les données du compte sont chiffrées par défaut avec des clés gérées par Microsoft.  Vous pouvez continuer à utiliser les clés gérées par Microsoft ou gérer le chiffrement de vos données à l’aide de vos propres clés.
+
+** *Réseau* : Choisissez l'espace IP et indiquez si vous utiliserez un point de terminaison privé.
++
+*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder. Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
+*** Vous pouvez également choisir si vous utiliserez un point de terminaison privé Azure que vous avez précédemment configuré.
++
+Si vous souhaitez utiliser Azure PrivateLink, reportez-vous à https://azure.microsoft.com/en-us/products/private-link/["Azure PrivateLink"^] .
+
+
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Résultat
+La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
+
+image:screen-settings-backup-destinations-list2.png["Page des destinations de sauvegarde l'option Paramètres"]
+
+
+
+== Connectez-vous à un système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces
+
+Vous pouvez envoyer automatiquement des données à votre système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces.  Vous pouvez sélectionner AWS Security Hub, Microsoft Sentinel ou Splunk Cloud comme SIEM.
+
+Avant d'activer SIEM dans Ransomware Resilience, vous devez configurer votre système SIEM.
+
+.À propos des données d'événement envoyées à un SIEM
+Ransomware Resilience peut envoyer les données d’événement suivantes à votre système SIEM :
+
+* *contexte*:
++
+** *os*: Il s'agit d'une constante avec la valeur ONTAP.
+** *os_version* : la version d' ONTAP exécutée sur le système.
+** *connector_id* : l'ID de l'agent de console qui gère le système.
+** *cluster_id* : l'ID de cluster signalé par ONTAP pour le système.
+** *svm_name* : Le nom du SVM où l'alerte a été trouvée.
+** *volume_name* : Le nom du volume sur lequel l'alerte est trouvée.
+** *volume_id* : l'ID du volume signalé par ONTAP pour le système.
+
+
+* *incident*:
++
+** *incident_id* : l'ID d'incident généré par Ransomware Resilience pour le volume attaqué dans Ransomware Resilience.
+** *alert_id* : l'ID généré par Ransomware Resilience pour la charge de travail.
+** *gravité* : L'un des niveaux d'alerte suivants : « CRITIQUE », « ÉLEVÉ », « MOYEN », « FAIBLE ».
+** *description* : Détails sur l'alerte détectée, par exemple : « Une attaque potentielle de rançongiciel détectée sur la charge de travail arp_learning_mode_test_2630 »
+
+
+
+
+
+
+=== Configurer AWS Security Hub pour la détection des menaces
+
+Avant d'activer AWS Security Hub dans Ransomware Resilience, vous devez effectuer les étapes de haut niveau suivantes dans AWS Security Hub :
+
+* Configurez les autorisations dans AWS Security Hub.
+* Configurez la clé d’accès d’authentification et la clé secrète dans AWS Security Hub.  (Ces étapes ne sont pas fournies ici.)
+
+
+.Étapes pour configurer les autorisations dans AWS Security Hub
+. Accédez à la *console AWS IAM*.
+. Sélectionnez *Politiques*.
+. Créez une politique à l’aide du code suivant au format JSON :
++
+[listing]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "NetAppSecurityHubFindings",
+      "Effect": "Allow",
+      "Action": [
+        "securityhub:BatchImportFindings",
+        "securityhub:BatchUpdateFindings"
+      ],
+      "Resource": [
+        "arn:aws:securityhub:*:*:product/*/default",
+        "arn:aws:securityhub:*:*:hub/default"
+      ]
+    }
+  ]
+}
+----
+
+
+
+
+=== Configurer Microsoft Sentinel pour la détection des menaces
+
+Avant d'activer Microsoft Sentinel dans Ransomware Resilience, vous devez effectuer les étapes de haut niveau suivantes dans Microsoft Sentinel :
+
+* *Prérequis*
++
+** Activer Microsoft Sentinel.
+** Créez un rôle personnalisé dans Microsoft Sentinel.
+
+
+* *Inscription*
++
+** Inscrivez-vous à Ransomware Resilience pour recevoir des événements de Microsoft Sentinel.
+** Créez un secret pour l'inscription.
+
+
+* *Autorisations* : Attribuer des autorisations à l'application.
+* *Authentification* : Saisissez les informations d'authentification pour l'application.
+
+
+.Étapes pour activer Microsoft Sentinel
+. Accédez à Microsoft Sentinel.
+. Créez un *espace de travail Log Analytics*.
+. Autorisez Microsoft Sentinel à utiliser l’espace de travail Log Analytics que vous venez de créer.
+
+
+.Étapes pour créer un rôle personnalisé dans Microsoft Sentinel
+. Accédez à Microsoft Sentinel.
+. Sélectionnez *Abonnement* > *Contrôle d'accès (IAM)*.
+. Saisissez un nom de rôle personnalisé.  Utilisez le nom *Ransomware Resilience Sentinel Configurator*.
+. Copiez le JSON suivant et collez-le dans l'onglet *JSON*.
++
+[listing]
+----
+{
+  "roleName": "Ransomware Resilience Sentinel Configurator",
+  "description": "",
+  "assignableScopes":["/subscriptions/{subscription_id}"],
+  "permissions": [
+
+  ]
+}
+----
+. Vérifiez et enregistrez vos paramètres.
+
+
+.Étapes pour enregistrer Ransomware Resilience afin de recevoir les événements de Microsoft Sentinel
+. Accédez à Microsoft Sentinel.
+. Sélectionnez *Entra ID* > *Applications* > *Enregistrements d'applications*.
+. Pour le *Nom d'affichage* de l'application, saisissez « *Ransomware Resilience* ».
+. Dans le champ *Type de compte pris en charge*, sélectionnez *Comptes dans cet annuaire organisationnel uniquement*.
+. Sélectionnez un *index par défaut* où les événements seront poussés.
+. Sélectionnez *Révision*.
+. Sélectionnez *Enregistrer* pour enregistrer vos paramètres.
++
+Après l’enregistrement, le centre d’administration Microsoft Entra affiche le volet Présentation de l’application.
+
+
+
+.Étapes pour créer un secret pour l'enregistrement
+. Accédez à Microsoft Sentinel.
+. Sélectionnez *Certificats et secrets* > *Secrets client* > *Nouveau secret client*.
+. Ajoutez une description pour votre secret d’application.
+. Sélectionnez une *Expiration* pour le secret ou spécifiez une durée de vie personnalisée.
++
+
+TIP: La durée de vie d'un secret client est limitée à deux ans (24 mois) ou moins.  Microsoft vous recommande de définir une valeur d’expiration inférieure à 12 mois.
+
+. Sélectionnez *Ajouter* pour créer votre secret.
+. Enregistrez le secret à utiliser dans l’étape d’authentification.  Le secret ne s'affiche plus jamais après avoir quitté cette page.
+
+
+.Étapes pour attribuer des autorisations à l'application
+. Accédez à Microsoft Sentinel.
+. Sélectionnez *Abonnement* > *Contrôle d'accès (IAM)*.
+. Sélectionnez *Ajouter* > *Ajouter une attribution de rôle*.
+. Pour le champ *Rôles d'administrateur privilégiés*, sélectionnez *Ransomware Resilience Sentinel Configurator*.
++
+
+TIP: Il s’agit du rôle personnalisé que vous avez créé précédemment.
+
+. Sélectionnez *Suivant*.
+. Dans le champ *Attribuer l'accès à*, sélectionnez *Utilisateur, groupe ou principal de service*.
+. Sélectionnez *Sélectionner les membres*.  Ensuite, sélectionnez *Ransomware Resilience Sentinel Configurator*.
+. Sélectionnez *Suivant*.
+. Dans le champ *Ce que l'utilisateur peut faire*, sélectionnez *Autoriser l'utilisateur à attribuer tous les rôles à l'exception des rôles d'administrateur privilégié Propriétaire, UAA, RBAC (recommandé)*.
+. Sélectionnez *Suivant*.
+. Sélectionnez *Réviser et attribuer* pour attribuer les autorisations.
+
+
+.Étapes pour saisir les informations d'authentification pour l'application
+. Accédez à Microsoft Sentinel.
+. Entrez les informations d'identification :
++
+.. Saisissez l’ID du locataire, l’ID de l’application cliente et le secret de l’application cliente.
+.. Cliquez sur *Authentifier*.
++
+
+NOTE: Une fois l'authentification réussie, un message « Authentifié » s'affiche.
+
+
+
+. Saisissez les détails de l’espace de travail Log Analytics pour l’application.
++
+.. Sélectionnez l’ID d’abonnement, le groupe de ressources et l’espace de travail Log Analytics.
+
+
+
+
+
+
+=== Configurer Splunk Cloud pour la détection des menaces
+
+Avant d'activer Splunk Cloud dans Ransomware Resilience, vous devez effectuer les étapes de haut niveau suivantes dans Splunk Cloud :
+
+* Activez un collecteur d’événements HTTP dans Splunk Cloud pour recevoir des données d’événement via HTTP ou HTTPS à partir de la console.
+* Créez un jeton de collecteur d’événements dans Splunk Cloud.
+
+
+.Étapes pour activer un collecteur d'événements HTTP dans Splunk
+. Accédez à Splunk Cloud.
+. Sélectionnez *Paramètres* > *Entrées de données*.
+. Sélectionnez *Collecteur d’événements HTTP* > *Paramètres globaux*.
+. Sur le bouton bascule Tous les jetons, sélectionnez *Activé*.
+. Pour que le collecteur d'événements écoute et communique via HTTPS plutôt que HTTP, sélectionnez *Activer SSL*.
+. Saisissez un port dans *Numéro de port HTTP* pour le collecteur d'événements HTTP.
+
+
+.Étapes pour créer un jeton de collecteur d'événements dans Splunk
+. Accédez à Splunk Cloud.
+. Sélectionnez *Paramètres* > *Ajouter des données*.
+. Sélectionnez *Moniteur* > *Collecteur d'événements HTTP*.
+. Saisissez un nom pour le jeton et sélectionnez *Suivant*.
+. Sélectionnez un *Index par défaut* où les événements seront poussés, puis sélectionnez *Réviser*.
+. Confirmez que tous les paramètres du point de terminaison sont corrects, puis sélectionnez *Soumettre*.
+. Copiez le jeton et collez-le dans un autre document pour le préparer pour l’étape d’authentification.
+
+
+
+
+=== Connecter SIEM dans Ransomware Resilience
+
+L'activation de SIEM envoie les données de Ransomware Resilience à votre serveur SIEM pour l'analyse des menaces et la création de rapports.
+
+.Étapes
+. Dans le menu de la console, sélectionnez *Protection* > *Résilience aux ransomwares*.
+. Dans le menu Résilience aux ransomwares, sélectionnez la verticaleimage:button-actions-vertical.png["Actions verticales"] ... option en haut à droite.
+. Sélectionnez *Paramètres*.
++
+La page Paramètres apparaît.
+
++
+image:screen-settings2.png["Page des paramètres"]
+
+. Dans la page Paramètres, sélectionnez *Connecter* dans la mosaïque de connexion SIEM.
++
+image:screen-settings-threat-detection-3options.png["Activer la page de détails de détection des menaces"]
+
+. Choisissez l’un des systèmes SIEM.
+. Saisissez le jeton et les détails d’authentification que vous avez configurés dans AWS Security Hub ou Splunk Cloud.
++
+
+NOTE: Les informations que vous saisissez dépendent du SIEM que vous avez sélectionné.
+
+. Sélectionnez *Activer*.
++
+La page Paramètres affiche « Connecté ».
+
+

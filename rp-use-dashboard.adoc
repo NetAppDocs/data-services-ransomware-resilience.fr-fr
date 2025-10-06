@@ -1,0 +1,181 @@
+---
+sidebar: sidebar 
+permalink: rp-use-dashboard.html 
+keywords: ransomware protection, ransomware protection dashboard, detect ransomware attacks, recover from ransomware attack 
+summary: 'Le tableau de bord de résilience NetApp Ransomware fournit des informations sur l’état de protection de vos charges de travail.  Vous pouvez rapidement déterminer les charges de travail à risque ou protégées, les charges de travail impactées par un incident ou en cours de récupération, et évaluer l"étendue de la protection en examinant la quantité de stockage protégée ou à risque.  Vous pouvez également utiliser le tableau de bord pour examiner et appliquer les recommandations de protection.' 
+---
+= Surveiller l'état de la charge de travail à l'aide du tableau de bord de résilience NetAPp Ransomware
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le tableau de bord de résilience NetApp Ransomware fournit des informations rapides sur l'état de protection de vos charges de travail.  Vous pouvez rapidement déterminer les charges de travail qui sont à risque ou protégées, identifier les charges de travail affectées par un incident ou en cours de récupération, et évaluer l'étendue de la protection en examinant la quantité de stockage protégée ou à risque.
+
+Utilisez le tableau de bord pour examiner les suggestions de protection, modifier les paramètres, télécharger des rapports et afficher la documentation.
+
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet, d'administrateur de résilience aux ransomwares ou de visualiseur de résilience aux ransomwares. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
+
+
+
+== Examiner l'état de la charge de travail à l'aide du tableau de bord
+
+.Étapes
+. Une fois que la console a détecté vos charges de travail, le tableau de bord Ransomware Resilience affiche l’état de protection des données de la charge de travail.
++
+image:screen-dashboard.png["Page du tableau de bord"]
+
+. Depuis le tableau de bord, vous pouvez effectuer les actions suivantes dans chacun des volets :
++
+** *Protection des données de charge de travail* : sélectionnez *Afficher tout* pour voir toutes les charges de travail à risque ou protégées sur la page Protection.  Les charges de travail sont menacées lorsque les niveaux de protection ne correspondent pas à une politique de protection. link:rp-use-protect.html["Protéger les charges de travail"] .
++
+
+TIP: Sélectionnez l'info-bulle « i » pour voir des conseils sur ces données.  Pour augmenter la limite de charge de travail, sélectionnez *Augmenter la limite de charge de travail* dans cette note.  En sélectionnant cette option, vous accédez à la page d'assistance de la console où vous pouvez créer un ticket de cas.
+
+** *Alertes et récupération des données de charge de travail* : sélectionnez *Afficher tout* pour voir les incidents actifs qui ont eu un impact sur votre charge de travail, qui sont prêts à être récupérés une fois les incidents neutralisés ou qui sont en cours de récupération. link:rp-use-alert.html["Répondre à une alerte détectée"] .
++
+*** Un incident est classé dans l’un des états suivants :
++
+**** Nouveau
+**** Rejeté
+**** Rejeter
+**** Résolu
+
+
+*** Une alerte peut avoir l’un des statuts suivants :
++
+**** Nouveau
+**** Inactif
+
+
+*** Une charge de travail peut avoir l’un des états de restauration suivants :
++
+**** Restauration nécessaire
+**** En cours
+**** Restauré
+**** Échec
+
+
+
+
+** *Actions recommandées* : Pour augmenter la protection, examinez chaque recommandation, puis sélectionnez *Examiner et corriger*.
++
+Voir link:rp-use-dashboard.html#review-protection-recommendations-on-the-dashboard["Consultez les suggestions de protection sur le tableau de bord"] ou link:rp-use-protect.html["Protéger les charges de travail"] .
+
++
+Ransomware Resilience affiche les nouvelles recommandations depuis votre dernière visite sur le tableau de bord avec la balise « Nouveau » pendant 24 heures.  Les actions apparaissent par ordre de priorité, la plus importante en haut.  Examinez, appliquez ou rejetez chaque recommandation.
+
++
+Le nombre total d’actions n’inclut pas les actions que vous avez rejetées.
+
+** *Données de charge de travail* : Surveillez les changements dans la couverture de protection au cours des 7 derniers jours.
+** *Sauvegardes de charge de travail* : surveillez les modifications dans les sauvegardes de charge de travail créées par Ransomware Resilience qui ont échoué ou se sont terminées avec succès au cours des 7 derniers jours.
+
+
+
+
+
+
+== Consultez les recommandations de protection sur le tableau de bord
+
+Ransomware Resilience évalue la protection de vos charges de travail et recommande des actions pour améliorer cette protection.
+
+Vous pouvez consulter une recommandation et agir en conséquence, ce qui modifie le statut de la recommandation sur Terminé.  Ou, si vous souhaitez agir plus tard, vous pouvez le rejeter.  Le rejet d’une action déplace la recommandation vers une liste d’actions rejetées, que vous pouvez consulter ultérieurement.
+
+Voici un échantillon des recommandations proposées par Ransomware Resilience.
+
+[cols="30,30,30"]
+|===
+| Recommandation | Description | Comment résoudre 
+
+
+| Ajoutez une politique de protection contre les ransomwares. | La charge de travail n'est actuellement pas protégée. | Affecter une politique à la charge de travail. link:rp-use-protect.html["Protégez les charges de travail contre les attaques de ransomware"] . 
+
+
+| Connectez-vous au SIEM pour signaler les menaces. | Envoyez des données à un système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces. | Saisissez les détails du serveur SIEM/XDR pour activer la détection des menaces. link:rp-use-settings.html["Configurer les paramètres de protection"] . 
+
+
+| Activez la protection cohérente de la charge de travail pour les applications ou VMware. | Ces charges de travail ne sont pas gérées par le logiciel SnapCenter ou le SnapCenter Plug-in for VMware vSphere. | Pour qu'ils soient gérés par SnapCenter, activez la protection cohérente avec la charge de travail. link:rp-use-protect.html["Protégez la charge de travail contre les attaques de ransomware"] . 
+
+
+| Améliorer la posture de sécurité du système | NetApp Digital Advisor a identifié au moins un risque de sécurité élevé ou critique. | Passez en revue tous les risques de sécurité dans NetApp Digital Advisor. Se référer à https://docs.netapp.com/us-en/active-iq/index.html["Documentation du Digital Advisor"^] . 
+
+
+| Renforcer une politique. | Certaines charges de travail peuvent ne pas bénéficier d’une protection suffisante.  Renforcez la protection des charges de travail avec une politique. | Augmentez la rétention, ajoutez des sauvegardes, appliquez des sauvegardes immuables, bloquez les extensions de fichiers suspectes, activez la détection sur le stockage secondaire et bien plus encore. link:rp-use-protect.html["Protégez les charges de travail contre les attaques de ransomware"] . 
+
+
+| Préparez <fournisseur de sauvegarde> comme destination de sauvegarde pour sauvegarder vos données de charge de travail. | La charge de travail n’a actuellement aucune destination de sauvegarde. | Ajoutez des destinations de sauvegarde à cette charge de travail pour la protéger. link:rp-use-settings.html["Configurer les paramètres de protection"] . 
+
+
+| Protégez les charges de travail des applications critiques ou très importantes contre les ransomwares. | La page Protéger affiche les charges de travail d'application critiques ou très importantes (en fonction du niveau de priorité attribué) qui ne sont pas protégées. | Attribuez une politique à ces charges de travail. link:rp-use-protect.html["Protégez les charges de travail contre les attaques de ransomware"] . 
+
+
+| Protégez les charges de travail de partage de fichiers critiques ou très importantes contre les ransomwares. | La page Protection affiche les charges de travail critiques ou très importantes du type Partage de fichiers ou Banque de données qui ne sont pas protégées. | Attribuez une politique à chacune des charges de travail. link:rp-use-protect.html["Protégez les charges de travail contre les attaques de ransomware"] . 
+
+
+| Enregistrez le plug-in SnapCenter disponible pour VMware vSphere (SCV) avec la console | Une charge de travail VM n'est pas protégée. | Affectez une protection cohérente avec la machine virtuelle à la charge de travail de la machine virtuelle en activant le plug-in SnapCenter pour VMware vSphere. link:rp-use-protect.html["Protégez les charges de travail contre les attaques de ransomware"] . 
+
+
+| Enregistrer le serveur SnapCenter disponible avec la console | Une application n'est pas protégée. | Affectez une protection cohérente avec les applications à la charge de travail en activant SnapCenter Server. link:rp-use-protect.html["Protégez les charges de travail contre les attaques de ransomware"] . 
+
+
+| Consultez les nouvelles alertes. | De nouvelles alertes existent. | Consultez les nouvelles alertes. link:rp-use-alert.html["Répondre à une alerte de ransomware détectée"] . 
+|===
+.Étapes
+. Dans le volet Actions recommandées de Ransomware Resilience, sélectionnez une recommandation, puis *Vérifier et corriger*.
+. Pour annuler l'action jusqu'à plus tard, sélectionnez *Annuler*.
++
+La recommandation disparaît de la liste des tâches à effectuer et apparaît dans la liste des tâches rejetées.
+
++
+
+TIP: Vous pouvez ultérieurement transformer un élément rejeté en élément à faire.  Lorsque vous marquez un élément comme terminé ou que vous transformez un élément abandonné en action À faire, le nombre total d'actions augmente de 1.
+
+. Pour consulter les informations sur la manière d’agir sur la base des recommandations, sélectionnez l’icône *information*.
+
+
+
+
+== Exporter les données de protection vers des fichiers CSV
+
+Vous pouvez exporter des données et télécharger des fichiers CSV qui affichent les détails de la protection, des alertes et de la récupération.
+
+Vous pouvez télécharger des fichiers CSV à partir de l'une des options du menu principal :
+
+* *Protection* : contient l'état et les détails de toutes les charges de travail, y compris le nombre total de charges de travail que Ransomware Resilience marque comme protégées ou à risque.
+* *Alertes* : inclut l'état et les détails de toutes les alertes, y compris le nombre total d'alertes et d'instantanés automatisés.
+* *Récupération* : inclut l'état et les détails de toutes les charges de travail qui doivent être restaurées, y compris le nombre total de charges de travail que Ransomware Resilience marque comme « Restauration nécessaire », « En cours », « Échec de la restauration » et « Restaurée avec succès ».
+
+
+Le téléchargement d'un fichier CSV à partir d'une page inclut uniquement les données de cette page.
+
+Les fichiers CSV incluent des données pour toutes les charges de travail sur tous les systèmes de console.
+
+.Étapes
+. Depuis le tableau de bord de résilience aux ransomwares, sélectionnez *Actualiser*image:button-refresh.png["Option de rafraîchissement"] option en haut à droite pour rafraîchir les données qui apparaîtront dans les fichiers.
+. Effectuez l’une des opérations suivantes :
++
+** Depuis la page, sélectionnez *Télécharger*image:button-download.png["Option de téléchargement"] option.
+** Dans le menu Résilience aux ransomwares, sélectionnez *Rapports*.
+
+
+. Si vous avez sélectionné l'option *Rapports*, sélectionnez l'un des fichiers nommés préconfigurés, puis sélectionnez *Télécharger (CSV)* ou *Télécharger (JSON)*.
+
+
+
+
+== Accéder à la documentation technique
+
+Vous pouvez accéder à la documentation technique de Ransomware Resilience à partir delink:https://docs.netapp.com["docs.netapp.com"^] ou depuis Ransomware Resilience.
+
+.Étapes
+. Depuis le tableau de bord de résilience aux ransomwares, sélectionnez la verticale *Actions*image:button-actions-vertical.png["Option Actions verticales"] option.
+. Sélectionnez l'une de ces options :
++
+** *Quoi de neuf* pour afficher les informations sur les fonctionnalités des versions actuelles ou précédentes dans les notes de version.
+** *Documentation* pour afficher la page d'accueil de la documentation sur la résilience aux ransomwares et cette documentation.
+
+
+

@@ -1,0 +1,28 @@
+= Détectez les comportements anormaux des utilisateurs à l'aide de Data Infrastructure Insights Storage Workload Security
+:allow-uri-read: 
+
+
+
+
+=== Détectez les comportements anormaux des utilisateurs à l'aide de Data Infrastructure Insights Storage Workload Security
+
+Avec cette version, vous pouvez utiliser Data Infrastructure Insights Storage Workload Security pour détecter les comportements anormaux des utilisateurs dans vos charges de travail de stockage.  Cette fonctionnalité vous aide à identifier les menaces de sécurité potentielles et à bloquer les utilisateurs potentiellement malveillants pour protéger vos données.
+
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["Répondre à une alerte de ransomware détectée"] .
+
+Avant d'utiliser Data Infrastructure Insights Storage Workload Security pour détecter un comportement utilisateur anormal, vous devez configurer l'option à l'aide de l'option *Paramètres* de BlueXP ransomware protection .
+
+Se référer à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html["Configurer les paramètres de BlueXP ransomware protection"] .
+
+
+
+=== Sélectionnez les charges de travail à découvrir et à protéger
+
+Avec cette version, vous pouvez désormais effectuer les opérations suivantes :
+
+* Dans chaque connecteur, sélectionnez les environnements de travail dans lesquels vous souhaitez découvrir les charges de travail.  Vous pourriez bénéficier de cette fonctionnalité si vous souhaitez protéger des charges de travail spécifiques dans votre environnement et pas d’autres.
+* Lors de la découverte de charges de travail, vous pouvez activer la découverte automatique des charges de travail par connecteur.  Cette fonctionnalité vous permet de sélectionner les charges de travail que vous souhaitez protéger.
+* Découvrez les charges de travail nouvellement créées pour les environnements de travail précédemment sélectionnés.
+
+
+Se référer à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-discover.html["Découvrir les charges de travail"] .

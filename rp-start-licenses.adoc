@@ -1,0 +1,294 @@
+---
+sidebar: sidebar 
+permalink: rp-start-licenses.html 
+keywords: bluexp license, ransomware protection license, netapp console 
+summary: Commencez à utiliser NeApp Ransomware Resilience en configurant les licences. 
+---
+= Configurer les licences pour NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Avec NetApp Ransomware Resilience, vous pouvez utiliser différents plans de licence.
+
+Pour effectuer cette tâche, vous avez besoin du rôle d’administrateur d’organisation, de dossier ou de projet. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console"^] .
+
+*Types de licences* Vous pouvez utiliser les types de licences suivants :
+
+* Inscrivez-vous pour un essai gratuit de 30 jours.
+* Achetez un abonnement à la carte (PAYGO) avec Amazon Web Services (AWS) Marketplace, Google Cloud Marketplace ou Azure Marketplace.
+* Apportez votre propre licence (BYOL), qui est un fichier de licence NetApp (NLF) que vous obtenez auprès de votre représentant commercial NetApp . Vous pouvez utiliser le numéro de série de la licence pour activer le BYOL dans la console.
+
+
+Après avoir configuré votre BYOL ou acheté un abonnement PAYGO, vous pouvez voir la licence dans la section Licences et abonnements de la console.
+
+Une fois l'essai gratuit terminé ou la licence ou l'abonnement expiré, vous pouvez toujours effectuer les opérations suivantes dans Ransomware Resilience :
+
+* Afficher les charges de travail et l’état de la charge de travail.
+* Supprimez toute ressource, telle qu’une politique.
+* Exécutez toutes les opérations planifiées qui ont été créées pendant la période d’essai ou sous la licence.
+
+
+
+
+== Autres licences
+
+La licence Ransomware Resilience n'inclut pas de produits NetApp supplémentaires.  Ransomware Resilience peut utiliser NetApp Backup and Recovery même si vous ne disposez pas de licence pour cela.
+
+
+NOTE: Si vous disposez à la fois de Backup and Recovery et de Ransomware Resilience, toutes les données communes protégées par les deux produits seront facturées uniquement par Ransomware Resilience.
+
+Vous pouvez visualiser le comportement anormal des utilisateurs avec Data Infrastructure Insights Workload Security.  Cela nécessite une licence pour Data Infrastructure Insights Workload Security et que vous l'activiez dans Ransomware Resilience.  Pour un aperçu de la sécurité des charges de travail de Data Infrastructure Insights, consultez https://docs.netapp.com/us-en/data-infrastructure-insights/cs_intro.html["À propos de la sécurité de la charge de travail"^]
+
+
+TIP: Si vous ne disposez pas d'une licence pour Data Infrastructure Insights Workload Security et que vous ne l'activez pas dans Ransomware Resilience, vous ne verrez pas les informations sur le comportement anormal des utilisateurs.
+
+
+
+== Essayez-le en utilisant un essai gratuit de 30 jours
+
+Vous pouvez essayer Ransomware Resilience en utilisant un essai gratuit de 30 jours.  Vous devez être administrateur de l'organisation de la console pour démarrer l'essai gratuit.
+
+
+NOTE: Avec la sortie d'octobre 2024, les nouveaux déploiements de Ransomware Resilience bénéficient désormais de 30 jours d'essai gratuit.  Auparavant, Ransomware Resilience proposait 90 jours d’essai gratuit.  Si vous bénéficiez déjà de l'essai gratuit de 90 jours, cette offre se poursuit pendant 90 jours.
+
+Aucune limite de capacité n’est appliquée pendant le procès.
+
+Vous pouvez obtenir une licence ou vous abonner à tout moment et vous ne serez pas facturé avant la fin de l'essai de 30 jours.  Pour continuer après l'essai de 30 jours, vous devrez acheter une licence BYOL ou un abonnement PAYGO.
+
+Pendant la période d'essai, vous bénéficiez de toutes les fonctionnalités.
+
+.Étapes
+. Accéder au https://console.netapp.com/["Console"^] .
+. Connectez-vous à la console.
+. Depuis la console NetApp , sélectionnez *Protection* > *Résilience aux ransomwares*.
++
+Si c'est la première fois que vous vous connectez à ce service, la page de destination apparaît.
+
++
+image:screen-landing.png["Capture d'écran de la page de destination pour Ransomware Resilience"]
+
+. Si vous n’avez pas déjà ajouté de connecteur pour d’autres services, ajoutez-en un.
++
+Pour ajouter un agent de console, reportez-vous à https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["En savoir plus sur les agents de console"^] .
+
+. Après avoir configuré un agent de console, dans la page de destination de Ransomware Resilience, le bouton permettant d’ajouter un agent de console se transforme en bouton permettant de découvrir les charges de travail.  Sélectionnez *Commencer par découvrir les charges de travail*.
+. Pour consulter les informations sur l’essai gratuit, sélectionnez l’option déroulante en haut à droite.
+
+
+*Une fois la période d'essai terminée, obtenez un abonnement ou une licence*
+
+Une fois l'essai gratuit terminé, vous pouvez vous abonner via l'une des places de marché ou acheter une licence auprès de NetApp.
+
+Si vous disposez déjà d'un abonnement PAYGO, la licence est automatiquement basculée vers l'abonnement une fois l'essai gratuit terminé.
+
+<<Abonnez-vous via AWS Marketplace>> <<Abonnez-vous via Microsoft Azure Marketplace>> <<Abonnez-vous via Google Cloud Platform Marketplace>> <<Apportez votre propre permis de conduire (BYOL)>>
+
+
+
+== Abonnez-vous via AWS Marketplace
+
+Cette procédure fournit un aperçu de haut niveau sur la manière de s'abonner directement sur AWS Marketplace.
+
+.Étapes
+. Dans Ransomware Resilience, effectuez l’une des opérations suivantes :
++
+** Si vous recevez un message indiquant que l'essai gratuit est sur le point d'expirer, sélectionnez *Afficher les modes de paiement*.
+** Si vous n'avez pas commencé l'essai, sélectionnez l'avis *Essai gratuit* en haut à droite puis *Afficher les modes de paiement*.
++
+image:screen-license-payment-methods3.png["Page des méthodes de paiement de la résilience aux ransomwares"]
+
+
+
+. Sur la page Modes de paiement, sélectionnez *S'abonner* à *Amazon Web Services*.
+. Dans AWS Marketplace, sélectionnez *Afficher les options d'achat*.
+. Utilisez AWS Marketplace pour vous abonner à * NetApp Intelligent Services* et à *Ransomware Resilience*.
+. Lorsque vous revenez à Ransomware Resilience, un message indique que vous êtes abonné.
++
+
+NOTE: Un e-mail vous est envoyé contenant le numéro de série de Ransomware Resilience et indiquant que Ransomware Resilience est abonné sur AWS Marketplace.
+
+. Retournez à la page des méthodes de paiement de Ransomware Resilience.
+. Ajoutez la licence à la console en sélectionnant *Ajouter une licence*.
++
+image:screen-license-dw-add-license.png["Capture d'écran de la page Ajouter une licence."]
+
+. Sur la page Ajouter une licence, sélectionnez *Entrer le numéro de série*, saisissez le numéro de série inclus dans l'e-mail qui vous a été envoyé et sélectionnez *Ajouter une licence*.
+. Pour afficher les détails de la licence, dans la navigation de gauche de la console, sélectionnez *Administration* > *Licences et abonnements*.
++
+** Pour voir les informations d'abonnement, sélectionnez *Abonnements*.
+** Pour voir les licences BYOL, sélectionnez *Licences de services de données*.
++
+image:screen-dw-data-services-license.png["Capture d'écran des licences et des abonnements."]
+
+
+
+. Retour à la résilience aux ransomwares.  Dans la navigation de gauche de la console, sélectionnez *Protection* > *Résilience aux ransomwares*.
++
+Un message apparaît indiquant qu'une licence a été ajoutée.
+
+
+
+
+
+== Abonnez-vous via Microsoft Azure Marketplace
+
+Cette procédure fournit un aperçu de haut niveau de la manière de s’abonner directement sur la Place de marché Azure.
+
+.Étapes
+. Dans Ransomware Resilience, effectuez l’une des opérations suivantes :
++
+** Si vous recevez un message indiquant que l'essai gratuit est sur le point d'expirer, sélectionnez *Afficher les modes de paiement*.
+** Si vous n'avez pas commencé l'essai, sélectionnez l'avis *Essai gratuit* en haut à droite puis *Afficher les modes de paiement*.
++
+image:screen-license-payment-methods3.png["Page des méthodes de paiement de la résilience aux ransomwares"]
+
+
+
+. Sur la page Modes de paiement, sélectionnez *S'abonner* à *Microsoft Azure Marketplace*.
+. Dans la Place de marché Azure, sélectionnez *Afficher les options d’achat*.
+. Utilisez Azure Marketplace pour vous abonner à * NetApp Intelligent Services* et à *Ransomware Resilience*.
+. Lorsque vous revenez à Ransomware Resilience, un message indique que vous êtes abonné.
++
+
+NOTE: Un e-mail vous est envoyé contenant le numéro de série de Ransomware Resilience et indiquant que Ransomware Resilience est abonné sur Azure Marketplace.
+
+. Retour à la page Méthodes de paiement de Ransomware Resilience.
+. Pour ajouter la licence, sélectionnez *Ajouter une licence*.
++
+image:screen-license-dw-add-license.png["Capture d'écran de la page Ajouter une licence."]
+
+. Sur la page Ajouter une licence, sélectionnez *Entrer le numéro de série* puis saisissez le numéro de série figurant dans l'e-mail qui vous a été envoyé.  Sélectionnez *Ajouter une licence*.
+. Pour afficher les détails de la licence dans Licences et abonnements, dans la navigation de gauche de la console, sélectionnez *Gouvernance* > *Licences et abonnements*.
++
+** Pour voir les informations d'abonnement, sélectionnez *Abonnements*.
+** Pour voir les licences BYOL, sélectionnez *Licences de services de données*.
++
+image:screen-dw-data-services-license.png["Page des licences de services de données"]
+
+
+
+. Retour à la résilience aux ransomwares.  Dans la navigation de gauche de la console, sélectionnez *Protection* > *Résilience aux ransomwares*.
++
+Un message apparaît indiquant qu'une licence a été ajoutée.
+
+
+
+
+
+== Abonnez-vous via Google Cloud Platform Marketplace
+
+Cette procédure fournit un aperçu de haut niveau sur la manière de s'abonner directement sur Google Cloud Platform Marketplace.
+
+.Étapes
+. Dans Ransomware Resilience, effectuez l’une des opérations suivantes :
++
+** Si vous recevez un message indiquant que l'essai gratuit est sur le point d'expirer, sélectionnez *Afficher les modes de paiement*.
+** Si vous n'avez pas commencé l'essai, sélectionnez l'avis *Essai gratuit* en haut à droite puis *Afficher les modes de paiement*.
++
+image:screen-license-payment-methods3.png["Capture d'écran de la page des méthodes de paiement de Ransomware Resilience."]
+
+
+
+. Sur la page Modes de paiement, sélectionnez *S'abonner* à Google Cloud Platform Marketplace*.
+. Dans Google Cloud Platform Marketplace, sélectionnez *S'abonner*.
+. Utilisez Google Cloud Platform Marketplace pour vous abonner à * NetApp Intelligent Services* et à *Ransomware Resilience*.image:screen-license-payments-gcp2.png["Capture d'écran de la page d'abonnement à Google Cloud Marketplace."]
+. Lorsque vous revenez à Ransomware Resilience, un message indique que vous êtes abonné.
++
+
+NOTE: Un e-mail vous est envoyé contenant le numéro de série de Ransomware Resilience et indiquant que Ransomware Resilience est abonné sur Google Cloud Platform Marketplace.
+
+. Retour à la page Méthodes de paiement de Ransomware Resilience.
+. Pour ajouter la licence à la console, sélectionnez *Ajouter une licence*.
++
+image:screen-license-dw-add-license.png["Capture d'écran de la page Ajouter une licence."]
+
+. Dans la page Ajouter une licence, sélectionnez *Entrer le numéro de série*.  Saisissez le numéro de série dans l'e-mail qui vous a été envoyé.  Sélectionnez *Ajouter une licence*.
+. Pour afficher les détails de la licence, dans la navigation de gauche de la console, sélectionnez *Gouvernance* > *Licences et abonnements*.
++
+** Pour voir les informations d'abonnement, sélectionnez *Abonnements*.
+** Pour voir les licences BYOL, sélectionnez *Licences de services de données*.
++
+image:screen-dw-data-services-license.png["Capture d'écran de la page des licences et des abonnements."]
+
+
+
+. Retour à la résilience aux ransomwares.  Dans la navigation de gauche de la console, sélectionnez *Protection* > *Résilience aux ransomwares*.
++
+Un message apparaît indiquant qu'une licence a été ajoutée.
+
+
+
+
+
+== Apportez votre propre permis de conduire (BYOL)
+
+Si vous souhaitez apporter votre propre licence (BYOL), vous devez acheter la licence, obtenir le fichier de licence NetApp (NLF), puis ajouter la licence à la console.
+
+*Ajoutez votre fichier de licence à la console*
+
+Après avoir acheté votre licence Ransomware Resilience auprès de votre représentant commercial NetApp , vous activez la licence en saisissant le numéro de série Ransomware Resilience et les informations de compte du site de support NetApp (NSS).
+
+.Avant de commencer
+Vous avez besoin du numéro de série de Ransomware Resilience.  Recherchez ce numéro sur votre bon de commande ou contactez l'équipe de compte pour obtenir ces informations.
+
+.Étapes
+. Après avoir obtenu la licence, revenez à Ransomware Resilience.  Sélectionnez l'option *Afficher les modes de paiement* en haut à droite.  Ou, dans le message indiquant que l'essai gratuit expire, sélectionnez *S'abonner ou acheter une licence*.
+. Sélectionnez *Ajouter une licence* pour accéder à la page Licences et abonnements de la console.
+. Dans l’onglet *Licences des services de données*, sélectionnez *Ajouter une licence*.
++
+image:screen-license-dw-add-license.png["Capture d'écran de la page Ajouter une licence."]
+
+. Sur la page Ajouter une licence, saisissez le numéro de série et les informations du compte du site de support NetApp .
++
+** Si vous disposez du numéro de série de la licence de la console et connaissez votre compte NSS, sélectionnez l'option *Entrer le numéro de série* et saisissez ces informations.
++
+Si votre compte de site de support NetApp n'est pas disponible dans la liste déroulante, https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["ajouter le compte NSS à la console"^] .
+
+** Si vous disposez du fichier de licence zvondolr (requis lors de l'installation sur un site sombre), sélectionnez l'option *Télécharger le fichier de licence* et suivez les instructions pour joindre le fichier.
+
+
+. Sélectionnez *Ajouter une licence*.
+
+
+.Résultat
+La page Licences et abonnements indique que Ransomware Resilience dispose d'une licence.
+
+
+
+== Mettez à jour votre licence de console lorsqu'elle expire
+
+Si la durée de votre licence approche de la date d'expiration ou si votre capacité sous licence atteint la limite, vous en serez averti dans l'interface utilisateur de Ransomware Resilience.  Vous pouvez mettre à jour votre licence Ransomware Resilience avant son expiration afin de ne pas interrompre votre capacité à accéder à vos données numérisées.
+
+
+TIP: Ce message apparaît également dans Licences et abonnements et dans https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["Paramètres de notification"] .
+
+.Étapes
+. Vous pouvez envoyer un e-mail au support pour demander une mise à jour de votre licence.
++
+Une fois la licence payée et enregistrée sur le site de support NetApp , la console met automatiquement à jour la licence.  La page Licences des services de données reflétera le changement dans 5 à 10 minutes.
+
+. Si la console ne peut pas mettre à jour automatiquement la licence, vous devez télécharger manuellement le fichier de licence.
++
+.. Vous pouvez obtenir le fichier de licence sur le site de support NetApp .
+.. Dans la console, sélectionnez **Administration** > **Licences et abonnements**.
+.. Sélectionnez l'onglet *Licences des services de données*, sélectionnez l'icône *Actions...* pour le numéro de série que vous mettez à jour, puis sélectionnez *Mettre à jour la licence*.
+
+
+
+
+
+
+== Mettre fin à l'abonnement PAYGO
+
+Si vous souhaitez mettre fin à votre abonnement PAYGO, vous pouvez le faire à tout moment.
+
+.Étapes
+. Dans Ransomware Resilience, en haut à droite, sélectionnez l’option de licence.
+. Sélectionnez *Afficher les modes de paiement*.
+. Dans les détails déroulants, décochez la case *Utiliser après l'expiration du mode de paiement actuel*.
+. Sélectionnez *Enregistrer*.
+

@@ -1,0 +1,325 @@
+---
+sidebar: sidebar 
+permalink: rp-reference-roles.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware, role-based access control, rbac, role, permission, access rights, organization,project,account 
+summary: 'NetApp Ransomware Resilience utilise des rôles pour gérer l"accès de chaque utilisateur à des fonctionnalités et actions spécifiques.' 
+---
+= Accès basé sur les rôles NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Ransomware Resilience utilise des rôles pour gérer l'accès de chaque utilisateur à des fonctionnalités et actions spécifiques.
+
+Ransomware Resilience utilise les rôles suivants qui sont spécifiques à Ransomware Resilience.
+
+* *Administrateur de la résilience aux ransomwares* : gérez les actions sur les onglets Protéger, Alertes, Récupérer, Paramètres et Rapports.
+* *Visionneuse de résilience aux ransomwares* : affichez les données de charge de travail NetApp , affichez les données d'alerte, téléchargez les données de récupération et téléchargez les rapports.
+
+
+Ces rôles s'ajoutent aux rôles de la plateforme Console qui régissent l'accès au service Console et à d'autres services, tels que la protection des données, la gestion de la charge de travail, etc.  Pour plus de détails sur tous les rôles de la plateforme Console, voir https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["la documentation d'installation et d'administration"^] .
+
+Le tableau suivant indique les actions que chaque rôle de résilience aux ransomwares peut effectuer.
+
+[cols="40,20a,20a"]
+|===
+| Fonctionnalité et action | Administrateur de la résilience aux ransomwares | Visionneuse de résilience aux ransomwares 
+
+
+| Afficher le tableau de bord et tous les onglets  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Sur le tableau de bord, mettre à jour le statut de la recommandation  a| 
+Oui
+ a| 
+Non
+
+
+
+| Démarrer un essai gratuit  a| 
+Oui
+ a| 
+Non
+
+
+
+| Lancer la découverte des charges de travail  a| 
+Oui
+ a| 
+Non
+
+
+
+| Initier la redécouverte des charges de travail  a| 
+Oui
+ a| 
+Non
+
+
+
+3+| *Dans l'onglet Protéger* : 
+
+
+| Ajouter, modifier ou supprimer des plans de protection  a| 
+Oui
+ a| 
+Non
+
+
+
+| Protéger les charges de travail  a| 
+Oui
+ a| 
+Non
+
+
+
+| Identifier l'exposition aux données sensibles  a| 
+Oui
+ a| 
+Non
+
+
+
+| Liste des plans de protection et des détails  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Liste des groupes de protection  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Afficher les détails du groupe de protection  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Créer, modifier ou supprimer un groupe de protection  a| 
+Oui
+ a| 
+Non
+
+
+
+| Télécharger les données  a| 
+Oui
+ a| 
+Oui
+
+
+
+3+| *Dans l'onglet Alertes* : 
+
+
+| Afficher les alertes et les détails des alertes  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Modifier le statut de l'incident  a| 
+Oui
+ a| 
+Non
+
+
+
+| Marquer l'alerte pour la récupération  a| 
+Oui
+ a| 
+Non
+
+
+
+| Afficher les détails de l'incident  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Rejeter ou résoudre les incidents  a| 
+Oui
+ a| 
+Non
+
+
+
+| Bloquer l'utilisateur  a| 
+Oui
+ a| 
+Non
+
+
+
+| Obtenez la liste complète des fichiers concernés  a| 
+Oui
+ a| 
+Non
+
+
+
+| Télécharger les données d'alertes  a| 
+Oui
+ a| 
+Oui
+
+
+
+3+| *Dans l'onglet Récupérer* : 
+
+
+| Télécharger les fichiers concernés  a| 
+Oui
+ a| 
+Non
+
+
+
+| Restaurer la charge de travail  a| 
+Oui
+ a| 
+Non
+
+
+
+| Télécharger les données de récupération  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Télécharger les rapports  a| 
+Oui
+ a| 
+Oui
+
+
+
+3+| *Dans l'onglet Paramètres* : 
+
+
+| Ajouter ou modifier des destinations de sauvegarde  a| 
+Oui
+ a| 
+Non
+
+
+
+| Lister les destinations de sauvegarde  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Afficher les cibles SIEM connectées  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Ajouter ou modifier des cibles SIEM  a| 
+Oui
+ a| 
+Non
+
+
+
+| Connecter les cibles de sécurité de la charge de travail  a| 
+Oui
+ a| 
+Non
+
+
+
+| Afficher l'état de la connexion de sécurité de la charge de travail  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Déconnecter les cibles de sécurité de la charge de travail  a| 
+Oui
+ a| 
+Non
+
+
+
+| Configurer l'exercice de préparation  a| 
+Oui
+ a| 
+Non
+
+
+
+| Commencer l'exercice de préparation  a| 
+Oui
+ a| 
+Non
+
+
+
+| Exercice de préparation à la réinitialisation  a| 
+Oui
+ a| 
+Non
+
+
+
+| Modifier l'exercice de préparation  a| 
+Oui
+ a| 
+Non
+
+
+
+| Examen de l'état de préparation de l'exercice  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Mettre à jour la configuration de la découverte  a| 
+Oui
+ a| 
+Non
+
+
+
+| Afficher la configuration de la découverte  a| 
+Oui
+ a| 
+Oui
+
+
+
+3+| *Dans l'onglet Rapports* : 
+
+
+| Télécharger les rapports  a| 
+Oui
+ a| 
+Oui
+
+|===

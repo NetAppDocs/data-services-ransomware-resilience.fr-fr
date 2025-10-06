@@ -1,0 +1,68 @@
+---
+settings:
+  name: NetApp Ransomware Resilience
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: fr-fr,us-en,de-de,es-es,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
+sidebar:
+  entries:
+  - title: Documentation sur la résilience aux ransomwares NetApp
+    url: "/index.html"
+  - title: Notes de version
+    entries:
+    - title: Quoi de neuf dans Ransomware Resilience
+      url: "/whats-new.html"
+    - title: Limitations connues
+      url: "/rp-reference-limitations.html"
+  - title: Commencer
+    entries:
+    - title: En savoir plus sur la résilience aux ransomwares
+      url: "/concept-ransomware-resilience.html"
+    - title: Prérequis
+      url: "/rp-start-prerequisites.html"
+    - title: Démarrage rapide
+      url: "/rp-start-quick-start.html"
+    - title: Configurer la résilience aux ransomwares
+      url: "/rp-start-setup.html"
+    - title: Accéder à la résilience des ransomwares
+      url: "/rp-start-login.html"
+    - title: Configurer les licences
+      url: "/rp-start-licenses.html"
+    - title: Découvrir les charges de travail
+      url: "/rp-start-discover.html"
+    - title: Simulez une attaque de ransomware avec un exercice de préparation
+      url: "/rp-start-simulate.html"
+    - title: Configurer les sauvegardes, la détection des menaces et les simulations
+        d'attaque dans les paramètres
+      url: "/rp-use-settings.html"
+  - title: Utiliser la résilience aux ransomwares
+    entries:
+    - title: Présentation de la résilience aux ransomwares
+      url: "/rp-use-overview.html"
+    - title: Afficher l'état de la charge de travail à l'aide du tableau de bord
+      url: "/rp-use-dashboard.html"
+    - title: Protéger les charges de travail
+      entries:
+      - title: Protégez les charges de travail avec des stratégies de protection contre
+          les ransomwares
+        url: "/rp-use-protect.html"
+      - title: Rechercher des données personnelles identifiables
+        url: "/rp-use-protect-classify.html"
+    - title: Répondre à une alerte détectée
+      url: "/rp-use-alert.html"
+    - title: Se remettre d'une attaque de ransomware
+      url: "/rp-use-recover.html"
+    - title: Télécharger les rapports
+      url: "/rp-use-reports.html"
+  - section: support
+  - title: FAQ
+    url: "/rp-start-faq.html"
+  - title: Mentions légales
+    url: "/legal-notices.html"
+product-family:
+  name: NetApp Data Services
+  repo: data-services-family

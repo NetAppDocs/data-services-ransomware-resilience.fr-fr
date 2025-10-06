@@ -1,0 +1,31 @@
+= La BlueXP ransomware protection est désormais NetApp Ransomware Resilience
+:allow-uri-read: 
+
+
+
+
+=== La BlueXP ransomware protection est désormais NetApp Ransomware Resilience
+
+La réplication du ransomware BlueXP a été renommée NetApp Ransomware Resilience.
+
+
+
+=== BlueXP est désormais NetApp Console
+
+BlueXP a été renommé et repensé pour mieux refléter son rôle dans la gestion de votre infrastructure de données.
+
+La console NetApp offre une gestion centralisée des services de stockage et de données dans les environnements sur site et dans le cloud à l'échelle de l'entreprise, offrant des informations en temps réel, des flux de travail plus rapides et une administration simplifiée.
+
+Pour plus de détails sur ce qui a changé, consultez le https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Notes de version de la console NetApp"] .
+
+
+
+=== Protection contre les violations de données
+
+
+
+=== SIEM
+
+
+
+=== Environnement de restauration propre

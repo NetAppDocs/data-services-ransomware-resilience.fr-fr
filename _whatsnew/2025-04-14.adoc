@@ -1,0 +1,31 @@
+= Rapports d'exercices de préparation
+:allow-uri-read: 
+
+
+
+
+=== Rapports d'exercices de préparation
+
+Avec cette version, vous pouvez consulter les rapports d’exercices de préparation aux attaques de ransomware.  Un exercice de préparation vous permet de simuler une attaque de ransomware sur un échantillon de charge de travail nouvellement créé.  Ensuite, examinez l’attaque simulée et récupérez l’exemple de charge de travail.  Cette fonctionnalité vous aide à savoir que vous êtes préparé en cas d'attaque réelle de ransomware en testant les processus de notification d'alerte, de réponse et de récupération.
+
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-simulate.html["Effectuer un exercice de préparation aux attaques de ransomware"] .
+
+
+
+=== Nouveaux rôles et autorisations de contrôle d'accès basés sur les rôles
+
+Auparavant, vous pouviez attribuer des rôles et des autorisations aux utilisateurs en fonction de leurs responsabilités, ce qui vous aide à gérer l'accès des utilisateurs à la BlueXP ransomware protection.  Avec cette version, il existe deux nouveaux rôles spécifiques à la BlueXP ransomware protection avec des autorisations mises à jour.  Les nouveaux rôles sont :
+
+* Administrateur de la protection contre les ransomwares
+* Visionneuse de protection contre les ransomwares
+
+
+Pour plus de détails sur les autorisations, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-reference-roles.html["Accès aux fonctionnalités basé sur les rôles de BlueXP ransomware protection"] .
+
+
+
+=== Améliorations des paiements
+
+Cette version inclut plusieurs améliorations au processus de paiement.
+
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-licenses.html["Configurer les options de licence et de paiement"] .
