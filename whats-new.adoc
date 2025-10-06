@@ -38,18 +38,6 @@ Pour plus de détails sur ce qui a changé, consultez le https://docs.netapp.com
 
 
 
-=== Protection contre les violations de données
-
-
-
-=== SIEM
-
-
-
-=== Environnement de restauration propre
-
-
-
 == 15 juillet 2025
 
 
