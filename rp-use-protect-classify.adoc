@@ -11,32 +11,30 @@ summary: Améliorez la sécurité et la confidentialité de vos données avec Ne
 [role="lead"]
 Dans NetApp Ransomware Resilience, vous pouvez utiliser NetApp Data Classification pour analyser et classer les données dans une charge de travail de partage de fichiers.  La classification des données vous aide à déterminer si l'ensemble de données contient des informations personnelles identifiables (PII), ce qui peut augmenter les risques de sécurité.  La classification des données est un composant essentiel de la console et est disponible sans frais supplémentaires.
 
-link:https://docs.netapp.com/us-en/bluexp-classification/["Classification des données"^]utilise le traitement du langage naturel basé sur l'IA pour l'analyse et la catégorisation des données contextuelles, fournissant des informations exploitables sur vos données pour répondre aux exigences de conformité, détecter les vulnérabilités de sécurité, optimiser les coûts et accélérer la migration.
+link:https://docs.netapp.com/us-en/data-services-data-classification/["Classification des données"^]utilise le traitement du langage naturel basé sur l'IA pour l'analyse et la catégorisation des données contextuelles, fournissant des informations exploitables sur vos données pour répondre aux exigences de conformité, détecter les vulnérabilités de sécurité, optimiser les coûts et accélérer la migration.
 
 
 TIP: Ce processus peut avoir un impact sur l’importance de la charge de travail pour vous aider à garantir que vous disposez de la protection appropriée.
 
-*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
 
 
 
 == Identifier l'exposition à la confidentialité grâce à la classification des données
 
-Avant d'utiliser la classification des données dans Ransomware Resilience, vous devezlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html["pour permettre à la classification des données d'analyser vos données"^] .
+Avant d'utiliser la classification des données dans Ransomware Resilience, vous devezlink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-cloud-compliance.html["pour permettre à la classification des données d'analyser vos données"^] .
 
 Vous pouvez déployer la classification des données dans la page Protection de Ransomware Resilience.  Suivez la procédure pour identifier l’exposition à la confidentialité.  Lorsque vous sélectionnez **Identifier l'exposition**, si vous n'avez pas déjà déployé la classification des données, une boîte de dialogue vous permet d'activer la classification des données.
 
-image:classification-deploy.png["Capture d'écran de la classification de déploiement"]
-
 Pour plus d'informations sur la classification des données, voir :
 
-* https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["En savoir plus sur la classification des données"^]
-* https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Catégories de données privées"^]
-* https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Examinez les données stockées dans votre organisation"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["En savoir plus sur la classification des données"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html["Catégories de données privées"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Examinez les données stockées dans votre organisation"^]
 
 
 .Avant de commencer
-L'analyse des données PII dans Ransomware Resilience est disponible si vous avezlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html["Classification des données déployée"^] .  La classification des données est disponible dans le cadre de la console sans frais supplémentaires et peut être déployée sur site ou dans le cloud client.
+L'analyse des données PII dans Ransomware Resilience est disponible si vous avezlink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-cloud-compliance.html["Classification des données déployée"^] .  La classification des données est disponible dans le cadre de la console sans frais supplémentaires et peut être déployée sur site ou dans le cloud client.
 
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.
@@ -115,7 +113,7 @@ Moyen
 
 Pour plus de détails sur la classification des données, reportez-vous à la documentation sur la classification des données :
 
-* https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["En savoir plus sur la classification des données"^]
-* https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Catégories de données privées"^]
-* https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Examinez les données stockées dans votre organisation"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["En savoir plus sur la classification des données"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html["Catégories de données privées"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Examinez les données stockées dans votre organisation"^]
 

@@ -16,7 +16,7 @@ Se référer à https://docs.netapp.com/us-en/active-iq/index.html["Documentatio
 
 Avec cette version, vous pouvez définir une destination de sauvegarde sur un bucket Google Cloud Platform.  Auparavant, vous pouviez ajouter des destinations de sauvegarde uniquement à NetApp StorageGRID, Amazon Web Services et Microsoft Azure.
 
-https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html["En savoir plus sur la configuration des paramètres de BlueXP ransomware protection"] .
+https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-settings.html["En savoir plus sur la configuration des paramètres de BlueXP ransomware protection"] .
 
 
 
@@ -24,7 +24,7 @@ https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html[
 
 Le service prend désormais en charge Cloud Volumes ONTAP pour Google Cloud Platform pour la protection du stockage.  Auparavant, le service prenait uniquement en charge Cloud Volumes ONTAP pour Amazon Web Services et Microsoft Azure ainsi que le NAS sur site.
 
-https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["En savoir plus sur la BlueXP ransomware protection et les sources de données prises en charge, les destinations de sauvegarde et les environnements de travail"] .
+https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["En savoir plus sur la BlueXP ransomware protection et les sources de données prises en charge, les destinations de sauvegarde et les environnements de travail"] .
 
 
 
@@ -32,4 +32,4 @@ https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-pr
 
 Vous pouvez désormais limiter l’accès à des activités spécifiques grâce au contrôle d’accès basé sur les rôles (RBAC).  La BlueXP ransomware protection utilise deux rôles de BlueXP: administrateur de compte BlueXP et administrateur non-compte (spectateur).
 
-Pour plus de détails sur les actions que chaque rôle peut effectuer, voir https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-reference-roles.html["Privilèges de contrôle d'accès basés sur les rôles"] .
+Pour plus de détails sur les actions que chaque rôle peut effectuer, voir https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-roles.html["Privilèges de contrôle d'accès basés sur les rôles"] .

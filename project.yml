@@ -39,6 +39,8 @@ sidebar:
     - title: Configurer les sauvegardes, la détection des menaces et les simulations
         d'attaque dans les paramètres
       url: "/rp-use-settings.html"
+    - title: Configurer la détection des activités suspectes des utilisateurs
+      url: "/suspicious-user-activity.html"
   - title: Utiliser la résilience aux ransomwares
     entries:
     - title: Présentation de la résilience aux ransomwares

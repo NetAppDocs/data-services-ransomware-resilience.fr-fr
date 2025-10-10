@@ -14,7 +14,7 @@ summary: Lors de la découverte, Ransomware Resilience analyse tous les volumes 
 [role="lead"]
 Avant de pouvoir utiliser NetApp Ransomware Resilience, il doit d’abord découvrir les données.  Lors de la découverte, Ransomware Resilience analyse tous les volumes et fichiers des systèmes sur tous les agents et projets de console au sein d'une organisation.
 
-*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
 
 *Que découvre Ransomware Resilience ?*  Ransomware Resilience évalue les applications MySQL, les applications Oracle, les banques de données VMware, les partages de fichiers et le stockage en blocs.
 
@@ -55,7 +55,7 @@ NOTE: Si vous avez démarré l'essai gratuit, le libellé du bouton *Démarrer l
 Ransomware Resilience détecte à la fois les systèmes pris en charge et non pris en charge. Ce processus peut prendre quelques minutes.
 
 +
-image:screen-discover-workloads-unsupported.png["Capture d'écran de la découverte des charges de travail"]
+image:screen-discover-workloads.png["Capture d'écran de la découverte des charges de travail"]
 
 . Pour découvrir les charges de travail d'un agent de console spécifique, sélectionnez *Sélectionner les systèmes* à côté de l'agent de console pour lequel vous souhaitez découvrir les charges de travail.
 . Sélectionnez les systèmes sur lesquels vous souhaitez découvrir les charges de travail.

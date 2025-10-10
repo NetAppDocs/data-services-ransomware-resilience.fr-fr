@@ -8,7 +8,7 @@
 
 Avec cette version, simulez une attaque de ransomware pour tester votre réponse à une alerte de ransomware.  Cette fonctionnalité vous aide à savoir que vous êtes préparé en cas d'attaque réelle de ransomware en testant les processus de notification d'alerte, de réponse et de récupération.
 
-Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-simulate.html["Effectuer un exercice de préparation aux attaques de ransomware"] .
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-simulate.html["Effectuer un exercice de préparation aux attaques de ransomware"] .
 
 
 
@@ -21,7 +21,7 @@ Cette version inclut des améliorations aux processus de découverte et de redé
 * Vous pouvez effectuer ces processus de découverte au cours du processus de découverte initial ou dans l'option Paramètres.
 
 
-Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-discover.html["Découvrez les charges de travail nouvellement créées pour les environnements de travail précédemment sélectionnés"] et https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html["Configurer les fonctionnalités avec l'option Paramètres"] .
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-discover.html["Découvrez les charges de travail nouvellement créées pour les environnements de travail précédemment sélectionnés"] et https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-settings.html["Configurer les fonctionnalités avec l'option Paramètres"] .
 
 
 
@@ -29,4 +29,4 @@ Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ran
 
 Avec cette version, vous pouvez afficher des alertes lorsqu'un cryptage élevé est détecté sur vos charges de travail, même sans modifications d'extension de fichier élevées.  Cette fonctionnalité, qui utilise l'IA ONTAP Autonomous Ransomware Protection (ARP), vous aide à identifier les charges de travail exposées au risque d'attaques de ransomware.  Utilisez cette fonctionnalité et téléchargez la liste complète des fichiers impactés avec ou sans modifications d'extension.
 
-Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["Répondre à une alerte de ransomware détectée"] .
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["Répondre à une alerte de ransomware détectée"] .

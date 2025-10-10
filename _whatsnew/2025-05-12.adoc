@@ -21,9 +21,9 @@ TIP: Les politiques de sauvegarde pour une charge de travail exécutée sur FSx 
 * Les incidents d'alerte montrent le nouvel environnement de travail FSx pour ONTAP .
 
 
-Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["En savoir plus sur la BlueXP ransomware protection"] .
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["En savoir plus sur la BlueXP ransomware protection"] .
 
-Pour plus d'informations sur les options prises en charge, reportez-vous à la https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-reference-limitations.html["Limitations de la BlueXP ransomware protection"] .
+Pour plus d'informations sur les options prises en charge, reportez-vous à la https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-limitations.html["Limitations de la BlueXP ransomware protection"] .
 
 
 
@@ -31,4 +31,4 @@ Pour plus d'informations sur les options prises en charge, reportez-vous à la h
 
 Vous avez désormais besoin de l’un des rôles d’accès suivants pour afficher, découvrir ou gérer la BlueXP ransomware protection: administrateur de l’organisation, administrateur de dossier ou de projet, administrateur de la protection contre les ransomwares ou visualiseur de protection contre les ransomwares.
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
+https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .

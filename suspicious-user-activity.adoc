@@ -1,0 +1,185 @@
+---
+sidebar: sidebar 
+permalink: suspicious-user-activity.html 
+keywords: data breach detection, data breach, user activity, suspicious, anomalous, 
+summary: La détection d’activité utilisateur suspecte dans Ransomware Resilience vous permet de détecter l’activité utilisateur qui pourrait représenter une menace potentielle. 
+---
+= Configurer la détection des activités suspectes des utilisateurs dans NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ransomware Resilience prend en charge la détection des comportements suspects des utilisateurs dans les politiques de détection, vous permettant de traiter les incidents de ransomware au niveau de l'utilisateur.
+
+Ransomware Resilience détecte l'activité suspecte des utilisateurs en analysant les événements d'activité des utilisateurs générés par FPolicy dans ONTAP.  Pour collecter les données d’activité des utilisateurs, vous devez déployer un ou plusieurs agents d’activité des utilisateurs.  L'agent est un serveur Linux ou une machine virtuelle avec connectivité aux appareils de votre locataire.
+
+
+
+== Agents et collectionneurs
+
+Au moins un agent d’activité utilisateur doit être installé pour activer la détection d’activité utilisateur suspecte dans Ransomware Resilience.  Lorsque vous activez la fonctionnalité d’activité utilisateur suspecte à partir du tableau de bord Ransomware Resilience, vous devez fournir les informations de l’hôte de l’agent pour activer la fonctionnalité.
+
+Un agent peut héberger plusieurs collecteurs de données.  Les collecteurs de données envoient les données à un emplacement SaaS pour analyse.  Il existe deux types de collectionneurs :
+
+* le **collecteur de données** collecte les données d'activité des utilisateurs à partir d' ONTAP.
+* le **connecteur d'annuaire utilisateur** se connecte à votre annuaire pour mapper les identifiants utilisateur aux noms d'utilisateur.
+
+
+Les collecteurs sont configurés dans les paramètres de résilience aux ransomwares.
+
+
+
+== Activer la détection des activités suspectes des utilisateurs
+
+*Rôle de console requis* Pour effectuer cette tâche, vous avez besoin du rôle d'administrateur du comportement utilisateur Ransomware Resilience. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
+
+
+
+=== Ajouter un agent d'activité utilisateur
+
+Les agents d'activité utilisateur sont des environnements exécutables pour les collecteurs de données ; les collecteurs de données partagent les événements d'activité utilisateur avec Ransomware Resilience.  Vous devez créer au moins un agent d’activité utilisateur pour activer la détection d’activité utilisateur suspecte.
+
+
+
+==== Exigences
+
+Pour installer un agent d'activité utilisateur, vous avez besoin d'un hôte ou d'une machine virtuelle avec l'une des exigences de système d'exploitation et de serveur prises en charge suivantes.
+
+**Configuration requise pour le système d'exploitation**
+
+[cols="2"]
+|===
+
+
+| Système opérateur | Versions prises en charge 
+
+
+| AlmaLinux | 9.4 (64 bits) à 9.5 (64 bits) et 10 (64 bits), y compris SELinux 
+
+
+| CentOS | CentOS Stream 9 (64 bits) 
+
+
+| Debian | 11 (64 bits), 12 (64 bits), y compris SELinux 
+
+
+| OpenSUSE Leap | 15.3 (64 bits) à 15.6 (64 bits) 
+
+
+| Oracle Linux | 8.10 (64 bits) et 9.1 (64 bits) à 9.6 (64 bits), y compris SELinux 
+
+
+| RedHat | 8.10 (64 bits), 9.1 (64 bits) à 9.6 (64 bits) et 10 (64 bits), y compris SELinux 
+
+
+| Rocheux | Rocky 9.4 (64 bits) à 9.6 (64 bits), y compris SELinux 
+
+
+| SUSE Enterprise Linux | 15 SP4 (64 bits) à 15 SP6 (64 bits), y compris SELinux 
+
+
+| Ubuntu | 20.04 LTS (64 bits), 22.04 LTS (64 bits) et 24.04 LTS (64 bits) 
+|===
+**Configuration requise pour le serveur**
+
+Le serveur doit répondre aux exigences minimales suivantes :
+
+* **CPU** : 4 CŒURS
+* **RAM** : 16 Go de RAM
+* **Espace disque** : 35 Go d'espace disque libre
+
+
+.Étapes
+. Si c'est la première fois que vous créez un agent d'activité utilisateur, accédez au **Tableau de bord**.  Dans la mosaïque **Activité utilisateur**, sélectionnez **Activer**.
++
+Si vous ajoutez un agent d'activité utilisateur supplémentaire, accédez à *Paramètres*, recherchez la vignette **Activité utilisateur**, puis sélectionnez **Gérer**.  Sur l'écran Activité utilisateur, sélectionnez l'onglet **Agents d'activité utilisateur** puis **Ajouter**.
+
+. Sélectionnez un **fournisseur Cloud** puis une **région**.  Sélectionnez **Suivant**.
+. Fournissez les détails de l’agent d’activité de l’utilisateur :
++
+** **Nom de l'agent d'activité utilisateur**
+** *Agent de console* - l'agent de console doit être dans le même réseau que l'agent d'activité utilisateur et disposer d'une connectivité SSH à l'adresse IP de l'agent d'activité utilisateur.
+** *Nom DNS ou adresse IP de la VM*
+** *Clé SSH VM*
++
+image:user-activity-agent.png["Capture d'écran de l'interface d'ajout d'agent d'activité."]
+
+
+
+. Sélectionnez **Suivant**.
+. Vérifiez vos paramètres.  Sélectionnez *Activer* pour terminer l’ajout de l’agent d’activité utilisateur.
+. Confirmez que l’agent d’activité utilisateur a été créé avec succès.  Dans la mosaïque Activité utilisateur, un déploiement réussi s’affiche comme En cours d’exécution.
+
+
+.Résultat
+Une fois l'agent d'activité utilisateur créé avec succès, revenez au menu **Paramètres** puis sélectionnez **Gérer** dans la mosaïque Activité utilisateur.  Sélectionnez l'onglet **Agent d'activité utilisateur**, puis sélectionnez l'agent d'activité utilisateur pour afficher les détails le concernant, y compris les collecteurs de données et les connecteurs d'annuaire utilisateur.
+
+
+
+=== Ajouter un collecteur de données
+
+Les collecteurs de données sont créés automatiquement lorsque vous activez une stratégie de protection contre les ransomwares avec détection d'activité utilisateur suspecte. Pour plus d'informations, consultez la section xref:rp-use-protect.adoc#add-a-detection-policy-to workloads-with-existing-backup-or-snapshot-policies [ajouter une politique de détection] .
+
+Vous pouvez consulter les détails du collecteur de données.  Dans Paramètres, sélectionnez **Gérer** dans la mosaïque Activité utilisateur.  Sélectionnez l'onglet **Collecteur de données** puis sélectionnez le collecteur de données pour afficher ses détails ou le mettre en pause.
+
+image:user-activity-settings.png["Capture d'écran des paramètres d'activité de l'utilisateur"]
+
+
+
+=== Ajouter un connecteur d'annuaire utilisateur
+
+Pour mapper les ID utilisateur aux noms d’utilisateur, vous devez créer un connecteur d’annuaire utilisateur.
+
+.Étapes
+. Dans Ransomware Resilience, accédez à *Paramètres*.
+. Dans la mosaïque Activité utilisateur, sélectionnez **Gérer**.
+. Sélectionnez l'onglet **Connecteurs d'annuaire utilisateur** puis **Ajouter**.
+. Fournissez les détails de la connexion :
++
+** *Nom*
+** *Type de répertoire utilisateur*
+** *Adresse IP du serveur ou nom de domaine*
+** *Nom de la forêt ou nom de recherche*
+** *Nom de domaine BIND*
+** *Mot de passe BIND*
+** *Protocole* (ceci est facultatif)
+** *Port*
++
+image:screenshot-user-directory-connection.png["Capture d'écran de la connexion au répertoire utilisateur"]
+
++
+Fournissez les détails du mappage des attributs :
+
+** *Nom d'affichage*
+** *SID* (si vous utilisez LDAP)
+** *Nom d'utilisateur*
+** *ID Unix* (si vous utilisez NFS)
+** Sélectionnez *Inclure les attributs facultatifs*.  Vous pouvez également inclure une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un service, une photo, un nom distinctif du responsable ou des groupes.
++
+Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.
+
+
+
+. Sélectionnez **Ajouter**.
+. Revenez à l’onglet Connecteurs d’annuaire utilisateur pour vérifier l’état de votre connecteur d’annuaire utilisateur.  Si la création est réussie, l'état du connecteur d'annuaire utilisateur s'affiche comme *En cours d'exécution*.
+
+
+
+
+=== Supprimer un connecteur d'annuaire utilisateur
+
+. Dans Ransomware Resilience, accédez à *Paramètres*.
+. Localisez la mosaïque Activité utilisateur, sélectionnez **Gérer**.
+. Sélectionnez l’onglet **Connecteur d’annuaire utilisateur**.
+. Identifiez le connecteur d’annuaire utilisateur que vous souhaitez supprimer.  Dans le menu d'action en fin de ligne, sélectionnez les trois points `...` puis **Supprimer**.
+. Dans la boîte de dialogue contextuelle, sélectionnez **Supprimer** pour confirmer vos actions.
+
+
+
+
+== Répondre aux alertes d'activité suspecte des utilisateurs
+
+Après avoir configuré la détection des activités suspectes des utilisateurs, vous pouvez surveiller les événements dans la page des alertes. Pour plus d'informations, consultez la section link:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["Détecter les activités malveillantes et les comportements anormaux des utilisateurs"] .

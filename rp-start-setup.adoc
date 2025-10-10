@@ -39,20 +39,20 @@ Si vous souhaitez utiliser StorageGRID comme destination de sauvegarde, reportez
 === Préparez AWS à devenir une destination de sauvegarde
 
 * Configurer un compte dans AWS.
-* Configure https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html["Autorisations AWS"^] dans AWS.
+* Configure https://docs.netapp.com/us-en/console-setup-admin/reference-permissions.html["Autorisations AWS"^] dans AWS.
 
 
-Pour plus de détails sur la gestion de votre stockage AWS dans la console, reportez-vous à https://docs.netapp.com/us-en/bluexp-setup-admin/task-viewing-amazon-s3.html["Gérez vos buckets Amazon S3"^] .
+Pour plus de détails sur la gestion de votre stockage AWS dans la console, reportez-vous à https://docs.netapp.com/us-en/console-setup-admin/task-viewing-amazon-s3.html["Gérez vos buckets Amazon S3"^] .
 
 
 
 === Préparez Azure à devenir une destination de sauvegarde
 
 * Configurez un compte dans Azure.
-* Configure https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html["Autorisations Azure"^] dans Azure.
+* Configure https://docs.netapp.com/us-en/console-setup-admin/reference-permissions.html["Autorisations Azure"^] dans Azure.
 
 
-Pour plus de détails sur la gestion de votre stockage Azure dans la console, reportez-vous à https://docs.netapp.com/us-en/bluexp-blob-storage/task-view-azure-blob-storage.html["Gérez vos comptes de stockage Azure"^] .
+Pour plus de détails sur la gestion de votre stockage Azure dans la console, reportez-vous à https://docs.netapp.com/us-en/storage-management-blob-storage/task-view-azure-blob-storage.html["Gérez vos comptes de stockage Azure"^] .
 
 
 
@@ -60,7 +60,7 @@ Pour plus de détails sur la gestion de votre stockage Azure dans la console, re
 
 L’étape suivante consiste à configurer la console et la résilience aux ransomwares.
 
-Revoir https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-standard-mode.html["Configuration requise pour la console en mode standard"^] .
+Revoir https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["Configuration requise pour la console en mode standard"^] .
 
 
 

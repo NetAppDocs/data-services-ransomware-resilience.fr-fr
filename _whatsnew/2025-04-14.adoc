@@ -8,7 +8,7 @@
 
 Avec cette version, vous pouvez consulter les rapports d’exercices de préparation aux attaques de ransomware.  Un exercice de préparation vous permet de simuler une attaque de ransomware sur un échantillon de charge de travail nouvellement créé.  Ensuite, examinez l’attaque simulée et récupérez l’exemple de charge de travail.  Cette fonctionnalité vous aide à savoir que vous êtes préparé en cas d'attaque réelle de ransomware en testant les processus de notification d'alerte, de réponse et de récupération.
 
-Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-simulate.html["Effectuer un exercice de préparation aux attaques de ransomware"] .
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-simulate.html["Effectuer un exercice de préparation aux attaques de ransomware"] .
 
 
 
@@ -20,7 +20,7 @@ Auparavant, vous pouviez attribuer des rôles et des autorisations aux utilisate
 * Visionneuse de protection contre les ransomwares
 
 
-Pour plus de détails sur les autorisations, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-reference-roles.html["Accès aux fonctionnalités basé sur les rôles de BlueXP ransomware protection"] .
+Pour plus de détails sur les autorisations, reportez-vous à https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-roles.html["Accès aux fonctionnalités basé sur les rôles de BlueXP ransomware protection"] .
 
 
 
@@ -28,4 +28,4 @@ Pour plus de détails sur les autorisations, reportez-vous à https://docs.netap
 
 Cette version inclut plusieurs améliorations au processus de paiement.
 
-Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-licenses.html["Configurer les options de licence et de paiement"] .
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-licenses.html["Configurer les options de licence et de paiement"] .
