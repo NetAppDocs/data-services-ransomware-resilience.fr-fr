@@ -14,7 +14,7 @@ summary: Vous pouvez configurer plusieurs options, notamment une destination de 
 [role="lead"]
 Vous pouvez configurer des destinations de sauvegarde, envoyer des données à un système externe de gestion de la sécurité et des événements (SIEM), effectuer un exercice de préparation aux attaques, configurer la découverte de charge de travail ou configurer la détection d'activité utilisateur suspecte en accédant à l'option *Paramètres*.
 
-*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
 *Que pouvez-vous faire dans la page Paramètres ?*  Depuis la page Paramètres, vous pouvez effectuer les opérations suivantes :
 

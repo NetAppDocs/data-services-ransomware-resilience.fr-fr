@@ -17,7 +17,7 @@ Vous pouvez exporter des données de protection et télécharger les fichiers CS
 
 TIP: Avant de télécharger les fichiers, vous devez actualiser les données, ce qui actualise également les données qui apparaîtront dans les fichiers.
 
-*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet, d'administrateur de résilience aux ransomwares ou de visualiseur de résilience aux ransomwares. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet, d'administrateur de résilience aux ransomwares ou de visualiseur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
 *Quelles données pouvez-vous télécharger ?*  Vous pouvez télécharger des fichiers à partir de n’importe quelle option du menu principal :
 

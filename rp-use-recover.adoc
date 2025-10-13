@@ -59,7 +59,7 @@ Grâce à Ransomware Resilience, l’administrateur de stockage peut déterminer
 
 L'état de l'application changera si nécessaire pour la restauration.  L'application sera restaurée à son état précédent à partir des fichiers de contrôle, s'ils sont inclus dans la sauvegarde.  Une fois la restauration terminée, l'application s'ouvre en mode LECTURE-ÉCRITURE.
 
-*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
 .Étapes
 . Dans Ransomware Resilience, sélectionnez *Récupération*.
@@ -93,7 +93,7 @@ TIP: Ransomware Resilience identifie le meilleur point de restauration comme la 
 
 Grâce à Ransomware Resilience, l’administrateur de stockage peut déterminer la meilleure façon de restaurer les charges de travail à partir du point de restauration recommandé ou du point de restauration préféré.
 
-*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
 L'administrateur du stockage de sécurité peut récupérer des données à différents niveaux :
 

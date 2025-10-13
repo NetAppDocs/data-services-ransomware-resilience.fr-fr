@@ -14,7 +14,7 @@ summary: Vous pouvez protéger les charges de travail contre les attaques de ran
 [role="lead"]
 Vous pouvez protéger les charges de travail contre les attaques de ransomware en activant une protection cohérente avec la charge de travail ou en créant des stratégies de protection contre les ransomwares dans NetApp Ransomware Resilience.
 
-*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
 
 
