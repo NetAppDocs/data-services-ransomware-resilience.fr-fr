@@ -12,7 +12,7 @@ summary: Lors de la découverte, Ransomware Resilience analyse tous les volumes 
 
 
 [role="lead"]
-Avant de pouvoir utiliser NetApp Ransomware Resilience, il doit d’abord découvrir les données.  Lors de la découverte, Ransomware Resilience analyse tous les volumes et fichiers des systèmes sur tous les agents et projets de console au sein d'une organisation.
+Avant de pouvoir utiliser NetApp Ransomware Resilience, vous devez d’abord découvrir les données.  Lors de la découverte, Ransomware Resilience analyse tous les volumes et fichiers des systèmes sur tous les agents et projets de console au sein d'une organisation.
 
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
@@ -27,7 +27,7 @@ Ransomware Resilience vérifie votre protection de sauvegarde actuelle, vos copi
 
 *Comment pouvez-vous découvrir les charges de travail ?*  Vous pouvez faire ce qui suit :
 
-* Dans chaque agent de console, sélectionnez les systèmes sur lesquels vous souhaitez découvrir les charges de travail. Vous pourriez bénéficier de cette fonctionnalité si vous souhaitez protéger des charges de travail spécifiques dans votre environnement et pas d’autres.
+* Dans chaque agent de console, sélectionnez les systèmes sur lesquels vous souhaitez découvrir les charges de travail.  Vous pourriez bénéficier de cette fonctionnalité si vous souhaitez protéger des charges de travail spécifiques dans votre environnement et pas d’autres.
 * Découvrez les charges de travail nouvellement créées pour les systèmes précédemment sélectionnés.
 * Découvrez de nouveaux systèmes.
 
@@ -39,7 +39,7 @@ Ransomware Resilience vérifie votre protection de sauvegarde actuelle, vos copi
 Dans chaque agent de console, sélectionnez les systèmes sur lesquels vous souhaitez découvrir les charges de travail.
 
 .Étapes
-. Depuis la console NetApp , sélectionnez *Protection* > *Protection contre les ransomwares*.
+. Depuis la NetApp Console, sélectionnez *Protection* > *Protection contre les ransomwares*.
 +
 S'il s'agit de votre première connexion, la page de destination apparaît.
 
@@ -52,7 +52,7 @@ NOTE: Si vous avez démarré l'essai gratuit, le libellé du bouton *Démarrer l
 
 . Depuis la page d’accueil initiale, sélectionnez *Commencer par découvrir les charges de travail*.
 +
-Ransomware Resilience détecte à la fois les systèmes pris en charge et non pris en charge. Ce processus peut prendre quelques minutes.
+Ransomware Resilience détecte à la fois les systèmes pris en charge et non pris en charge.  Ce processus peut prendre quelques minutes.
 
 +
 image:screen-discover-workloads.png["Capture d'écran de la découverte des charges de travail"]
@@ -61,7 +61,7 @@ image:screen-discover-workloads.png["Capture d'écran de la découverte des char
 . Sélectionnez les systèmes sur lesquels vous souhaitez découvrir les charges de travail.
 . Sélectionnez *Découvrir*.
 +
-Ransomware Resilience découvre les données de charge de travail uniquement pour les agents de console avec les systèmes sélectionnés. Ce processus peut prendre quelques minutes.
+Ransomware Resilience découvre les données de charge de travail uniquement pour les agents de console avec les systèmes sélectionnés.  Ce processus peut prendre quelques minutes.
 
 . Pour télécharger la liste des charges de travail découvertes, sélectionnez *Télécharger les résultats*.
 . Pour afficher le tableau de bord de résilience aux ransomwares, sélectionnez *Accéder au tableau de bord*.

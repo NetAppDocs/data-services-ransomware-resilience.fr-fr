@@ -4,7 +4,7 @@ permalink: rp-use-reports.html
 keywords: ransomware protection, ransomware protection dashboard, detect ransomware attacks, recover from ransomware attack 
 summary: Grâce à NetApp Ransomware Resilience, vous pouvez télécharger des rapports qui affichent les détails de la protection, des alertes et de la récupération et les enregistrer sous forme de fichiers CSV. 
 ---
-= Télécharger les rapports sur la résilience aux ransomwares NetApp
+= Télécharger les rapports sur la NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -44,7 +44,7 @@ image:screen-dashboard.png["Page du tableau de bord"]
 . Effectuez l’une des opérations suivantes :
 +
 ** Depuis la page, sélectionnez *Télécharger*image:button-download.png["Option de téléchargement"] option.
-** Dans le menu NetApp Ransomware Resilience, sélectionnez *Rapports*.
+** Dans le menu NetApp Ransomware Resilience , sélectionnez *Rapports*.
 
 
 . Si vous avez sélectionné l'option *Rapports*, sélectionnez l'un des noms de fichiers préconfigurés et sélectionnez *Télécharger*.

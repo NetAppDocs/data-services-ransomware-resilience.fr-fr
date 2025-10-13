@@ -14,15 +14,15 @@ summary: La détection d’activité utilisateur suspecte dans Ransomware Resili
 [role="lead"]
 Ransomware Resilience prend en charge la détection des comportements suspects des utilisateurs dans les politiques de détection, vous permettant de traiter les incidents de ransomware au niveau de l'utilisateur.
 
-Ransomware Resilience détecte l'activité suspecte des utilisateurs en analysant les événements d'activité des utilisateurs générés par FPolicy dans ONTAP.  Pour collecter les données d’activité des utilisateurs, vous devez déployer un ou plusieurs agents d’activité des utilisateurs.  L'agent est un serveur Linux ou une machine virtuelle avec connectivité aux appareils de votre locataire.
+Ransomware Resilience détecte l'activité suspecte des utilisateurs en analysant les événements d'activité des utilisateurs générés par FPolicy dans ONTAP. Pour collecter les données d’activité des utilisateurs, vous devez déployer un ou plusieurs agents d’activité des utilisateurs. L'agent est un serveur Linux ou une machine virtuelle avec connectivité aux appareils de votre locataire.
 
 
 
 == Agents et collectionneurs
 
-Au moins un agent d’activité utilisateur doit être installé pour activer la détection d’activité utilisateur suspecte dans Ransomware Resilience.  Lorsque vous activez la fonctionnalité d’activité utilisateur suspecte à partir du tableau de bord Ransomware Resilience, vous devez fournir les informations de l’hôte de l’agent pour activer la fonctionnalité.
+Au moins un agent d’activité utilisateur doit être installé pour activer la détection d’activité utilisateur suspecte dans Ransomware Resilience. Lorsque vous activez la fonctionnalité d’activité utilisateur suspecte à partir du tableau de bord Ransomware Resilience, vous devez fournir les informations de l’hôte de l’agent pour activer la fonctionnalité.
 
-Un agent peut héberger plusieurs collecteurs de données.  Les collecteurs de données envoient les données à un emplacement SaaS pour analyse.  Il existe deux types de collectionneurs :
+Un agent peut héberger plusieurs collecteurs de données. Les collecteurs de données envoient les données à un emplacement SaaS pour analyse. Il existe deux types de collectionneurs :
 
 * le **collecteur de données** collecte les données d'activité des utilisateurs à partir d' ONTAP.
 * le **connecteur d'annuaire utilisateur** se connecte à votre annuaire pour mapper les identifiants utilisateur aux noms d'utilisateur.
@@ -40,7 +40,7 @@ Les collecteurs sont configurés dans les paramètres de résilience aux ransomw
 
 === Ajouter un agent d'activité utilisateur
 
-Les agents d'activité utilisateur sont des environnements exécutables pour les collecteurs de données ; les collecteurs de données partagent les événements d'activité utilisateur avec Ransomware Resilience.  Vous devez créer au moins un agent d’activité utilisateur pour activer la détection d’activité utilisateur suspecte.
+Les agents d'activité utilisateur sont des environnements exécutables pour les collecteurs de données ; les collecteurs de données partagent les événements d'activité utilisateur avec Ransomware Resilience. Vous devez créer au moins un agent d’activité utilisateur pour activer la détection d’activité utilisateur suspecte.
 
 
 
@@ -93,11 +93,11 @@ Le serveur doit répondre aux exigences minimales suivantes :
 
 
 .Étapes
-. Si c'est la première fois que vous créez un agent d'activité utilisateur, accédez au **Tableau de bord**.  Dans la mosaïque **Activité utilisateur**, sélectionnez **Activer**.
+. Si c'est la première fois que vous créez un agent d'activité utilisateur, accédez au **Tableau de bord**. Dans la mosaïque **Activité utilisateur**, sélectionnez **Activer**.
 +
-Si vous ajoutez un agent d'activité utilisateur supplémentaire, accédez à *Paramètres*, recherchez la vignette **Activité utilisateur**, puis sélectionnez **Gérer**.  Sur l'écran Activité utilisateur, sélectionnez l'onglet **Agents d'activité utilisateur** puis **Ajouter**.
+Si vous ajoutez un agent d'activité utilisateur supplémentaire, accédez à *Paramètres*, recherchez la vignette **Activité utilisateur**, puis sélectionnez **Gérer**. Sur l'écran Activité utilisateur, sélectionnez l'onglet **Agents d'activité utilisateur** puis **Ajouter**.
 
-. Sélectionnez un **fournisseur Cloud** puis une **région**.  Sélectionnez **Suivant**.
+. Sélectionnez un **fournisseur Cloud** puis une **région**. Sélectionnez **Suivant**.
 . Fournissez les détails de l’agent d’activité de l’utilisateur :
 +
 ** **Nom de l'agent d'activité utilisateur**
@@ -110,12 +110,12 @@ image:user-activity-agent.png["Capture d'écran de l'interface d'ajout d'agent d
 
 
 . Sélectionnez **Suivant**.
-. Vérifiez vos paramètres.  Sélectionnez *Activer* pour terminer l’ajout de l’agent d’activité utilisateur.
-. Confirmez que l’agent d’activité utilisateur a été créé avec succès.  Dans la mosaïque Activité utilisateur, un déploiement réussi s’affiche comme En cours d’exécution.
+. Vérifiez vos paramètres. Sélectionnez *Activer* pour terminer l’ajout de l’agent d’activité utilisateur.
+. Confirmez que l’agent d’activité utilisateur a été créé avec succès. Dans la mosaïque Activité utilisateur, un déploiement réussi s’affiche comme En cours d’exécution.
 
 
 .Résultat
-Une fois l'agent d'activité utilisateur créé avec succès, revenez au menu **Paramètres** puis sélectionnez **Gérer** dans la mosaïque Activité utilisateur.  Sélectionnez l'onglet **Agent d'activité utilisateur**, puis sélectionnez l'agent d'activité utilisateur pour afficher les détails le concernant, y compris les collecteurs de données et les connecteurs d'annuaire utilisateur.
+Une fois l'agent d'activité utilisateur créé avec succès, revenez au menu **Paramètres** puis sélectionnez **Gérer** dans la mosaïque Activité utilisateur. Sélectionnez l'onglet **Agent d'activité utilisateur**, puis sélectionnez l'agent d'activité utilisateur pour afficher les détails le concernant, y compris les collecteurs de données et les connecteurs d'annuaire utilisateur.
 
 
 
@@ -123,7 +123,7 @@ Une fois l'agent d'activité utilisateur créé avec succès, revenez au menu **
 
 Les collecteurs de données sont créés automatiquement lorsque vous activez une stratégie de protection contre les ransomwares avec détection d'activité utilisateur suspecte. Pour plus d'informations, consultez la section xref:rp-use-protect.adoc#add-a-detection-policy-to workloads-with-existing-backup-or-snapshot-policies [ajouter une politique de détection] .
 
-Vous pouvez consulter les détails du collecteur de données.  Dans Paramètres, sélectionnez **Gérer** dans la mosaïque Activité utilisateur.  Sélectionnez l'onglet **Collecteur de données** puis sélectionnez le collecteur de données pour afficher ses détails ou le mettre en pause.
+Vous pouvez consulter les détails du collecteur de données. Dans Paramètres, sélectionnez **Gérer** dans la mosaïque Activité utilisateur. Sélectionnez l'onglet **Collecteur de données** puis sélectionnez le collecteur de données pour afficher ses détails ou le mettre en pause.
 
 image:user-activity-settings.png["Capture d'écran des paramètres d'activité de l'utilisateur"]
 
@@ -157,14 +157,14 @@ Fournissez les détails du mappage des attributs :
 ** *SID* (si vous utilisez LDAP)
 ** *Nom d'utilisateur*
 ** *ID Unix* (si vous utilisez NFS)
-** Sélectionnez *Inclure les attributs facultatifs*.  Vous pouvez également inclure une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un service, une photo, un nom distinctif du responsable ou des groupes.
+** Sélectionnez *Inclure les attributs facultatifs*. Vous pouvez également inclure une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un service, une photo, un nom distinctif du responsable ou des groupes.
 +
 Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.
 
 
 
 . Sélectionnez **Ajouter**.
-. Revenez à l’onglet Connecteurs d’annuaire utilisateur pour vérifier l’état de votre connecteur d’annuaire utilisateur.  Si la création est réussie, l'état du connecteur d'annuaire utilisateur s'affiche comme *En cours d'exécution*.
+. Revenez à l’onglet Connecteurs d’annuaire utilisateur pour vérifier l’état de votre connecteur d’annuaire utilisateur. Si la création est réussie, l'état du connecteur d'annuaire utilisateur s'affiche comme *En cours d'exécution*.
 
 
 
@@ -174,7 +174,7 @@ Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.
 . Dans Ransomware Resilience, accédez à *Paramètres*.
 . Localisez la mosaïque Activité utilisateur, sélectionnez **Gérer**.
 . Sélectionnez l’onglet **Connecteur d’annuaire utilisateur**.
-. Identifiez le connecteur d’annuaire utilisateur que vous souhaitez supprimer.  Dans le menu d'action en fin de ligne, sélectionnez les trois points `...` puis **Supprimer**.
+. Identifiez le connecteur d’annuaire utilisateur que vous souhaitez supprimer. Dans le menu d'action en fin de ligne, sélectionnez les trois points `...` puis **Supprimer**.
 . Dans la boîte de dialogue contextuelle, sélectionnez **Supprimer** pour confirmer vos actions.
 
 

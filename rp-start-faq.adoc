@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: rp-start-faq.html 
 keywords: ransomware protection faq, ransomware protection frequently asked questions 
-summary: Trouvez une réponse à une question fréquemment posée sur la résilience aux ransomwares de NetApp . 
+summary: Trouvez une réponse à une question fréquemment posée sur la NetApp Ransomware Resilience. 
 ---
-= Questions fréquemment posées sur la résilience aux ransomwares NetApp
+= Questions fréquemment posées sur la NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: Trouvez une réponse à une question fréquemment posée sur la résili
 
 
 [role="lead"]
-Cette FAQ peut vous aider si vous recherchez simplement une réponse rapide à une question sur la résilience aux ransomwares de NetApp .
+Cette FAQ peut vous aider si vous recherchez simplement une réponse rapide à une question sur NetApp Ransomware Resilience.
 
 
 
@@ -24,18 +24,18 @@ Vous pouvez utiliser les types de licences suivants :
 
 * Inscrivez-vous pour un essai gratuit de 30 jours.
 * Achetez un abonnement à la carte (PAYGO) à NetApp Intelligent Services et Ransomware Resilience avec Amazon Web Services (AWS) Marketplace, Google Cloud Marketplace et Microsoft Azure Marketplace.
-* Apportez votre propre licence (BYOL), qui est un fichier de licence NetApp (NLF) que vous obtenez auprès de votre représentant commercial NetApp . Vous pouvez utiliser le numéro de série de la licence pour activer le BYOL dans la section Licences et abonnements de la console.
+* Apportez votre propre licence (BYOL), qui est un fichier de licence NetApp (NLF) que vous obtenez auprès de votre représentant commercial NetApp .  Vous pouvez utiliser le numéro de série de la licence pour activer le BYOL dans la section Licences et abonnements de la console.
 
 
-*Comment activer la résilience aux ransomwares ?*  La résilience aux ransomwares ne nécessite aucune activation.  Vous pouvez accéder à Ransomware Resilience depuis la console NetApp .
+*Comment activer la résilience aux ransomwares ?*  La résilience aux ransomwares ne nécessite aucune activation.  Vous pouvez accéder à Ransomware Resilience depuis la NetApp Console.
 
 Pour commencer, vous devez vous inscrire ou contacter votre représentant commercial NetApp pour essayer ce service.  Ensuite, lorsque vous utilisez l’agent de console, il inclura les fonctionnalités appropriées pour la résilience aux ransomwares.
 
 Pour démarrer avec Ransomware Resilience, sélectionnez « Commencer à découvrir les charges de travail » sur sa page d'accueil initiale.
 
-*Ransomware Resilience est-il disponible en modes standard, restreint et privé ?*  À l’heure actuelle, Ransomware Resilience n’est disponible qu’en mode standard. Restez à l’écoute pour en savoir plus.
+*Ransomware Resilience est-il disponible en modes standard, restreint et privé ?*  À l’heure actuelle, Ransomware Resilience n’est disponible qu’en mode standard.  Restez à l’écoute pour en savoir plus.
 
-Pour une explication sur ces modes dans tous les services de données NetApp , reportez-vous à https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["Modes de déploiement de la console NetApp"^] .
+Pour une explication sur ces modes dans tous les services de données NetApp , reportez-vous à https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["Modes de déploiement de la NetApp Console"^] .
 
 
 
@@ -45,15 +45,15 @@ Pour une explication sur ces modes dans tous les services de données NetApp , r
 
 *Comment sont gérées les autorisations d'accès ?* https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
 
-*Quelle est la meilleure résolution d'appareil ?* La résolution d'appareil recommandée pour Ransomware Resilience est de 1920 x 1080 ou supérieure.
+*Quelle est la meilleure résolution d'appareil ?*  La résolution d'appareil recommandée pour Ransomware Resilience est de 1920 x 1080 ou supérieure.
 
-*Quel navigateur dois-je utiliser ?* Tout navigateur moderne.
+*Quel navigateur dois-je utiliser ?*  Tout navigateur moderne.
 
 
 
 == Interaction avec d'autres services
 
-*Ransomware Resilience est-il conscient des paramètres de protection définis dans NetApp ONTAP?*  Oui, Ransomware Resilience découvre les planifications d'instantanés définies dans ONTAP.
+*Ransomware Resilience est-il conscient des paramètres de protection définis dans NetApp ONTAP?*  Oui, Ransomware Resilience découvre les planifications de snapshots définies dans ONTAP.
 
 *Si vous définissez une politique à l'aide de Ransomware Resilience, devez-vous apporter des modifications futures uniquement dans ce service ?*  Nous vous recommandons d'effectuer des modifications de politique à partir de Ransomware Resilience.
 
@@ -71,7 +71,7 @@ De plus, Ransomware Resilience utilise Backup and Recovery et SnapCenter / SnapC
 
 == Charges de travail
 
-*Qu'est-ce qui constitue une charge de travail ?* Une charge de travail est une application, une machine virtuelle ou un partage de fichiers. Une charge de travail inclut tous les volumes utilisés par une seule instance d’application.  Par exemple, une instance Oracle DB déployée sur ora3.host.com peut avoir vol1 et vol2 pour ses données et ses journaux, respectivement.  Ces volumes constituent ensemble la charge de travail pour cette instance spécifique de l'instance Oracle DB.
+*Qu'est-ce qui constitue une charge de travail ?*  Une charge de travail est une application, une machine virtuelle ou un partage de fichiers.  Une charge de travail inclut tous les volumes utilisés par une seule instance d’application.  Par exemple, une instance Oracle DB déployée sur ora3.host.com peut avoir vol1 et vol2 pour ses données et ses journaux, respectivement.  Ces volumes constituent ensemble la charge de travail pour cette instance spécifique de l'instance Oracle DB.
 
 *Comment Ransomware Resilience priorise-t-il les données de charge de travail ?*  La priorité des données est déterminée par les copies instantanées effectuées et les sauvegardes planifiées.
 
@@ -93,9 +93,9 @@ Ransomware Resilience associe les données à une charge de travail des manière
 * De plus, si vous disposez de SnapCenter ou de SnapCenter pour VMware et que vous avez configuré des charges de travail dans Sauvegarde et récupération, Ransomware Resilience découvre les charges de travail gérées par SnapCenter et SnapCenter pour VMware et leurs volumes associés.
 
 
-*Qu'est-ce qu'une charge de travail « protégée » ?* Dans Ransomware Resilience, une charge de travail affiche un statut « protégé » lorsqu'une politique de détection principale est activée.  Pour l’instant, cela signifie qu’ARP est activé sur tous les volumes liés à la charge de travail.
+*Qu'est-ce qu'une charge de travail « protégée » ?*  Dans Ransomware Resilience, une charge de travail affiche un statut « protégé » lorsqu'une politique de détection principale est activée.  Pour l’instant, cela signifie qu’ARP est activé sur tous les volumes liés à la charge de travail.
 
-*Qu'est-ce qu'une charge de travail « à risque » ?* Si une charge de travail n’a pas de stratégie de détection principale activée, elle est « à risque » même si une stratégie de sauvegarde et de snapshot est activée.
+*Qu'est-ce qu'une charge de travail « à risque » ?*  Si une charge de travail n’a pas de stratégie de détection principale activée, elle est « à risque » même si une stratégie de sauvegarde et de snapshot est activée.
 
 *Nouveau volume ajouté, mais n'apparaît pas encore* Si vous avez ajouté un nouveau volume à votre environnement, relancez la découverte et appliquez des politiques de protection pour protéger ce nouveau volume.
 
@@ -119,7 +119,7 @@ Une politique de sauvegarde n’est pas requise dans la stratégie de résilienc
 
 *Ransomware Resilience est-il conscient des paramètres de protection définis dans NetApp ONTAP?*
 
-Oui, Ransomware Resilience découvre les planifications de snapshots définies dans ONTAP et si ARP et FPolicy sont activés sur tous les volumes d'une charge de travail découverte. Les informations que vous voyez initialement dans le tableau de bord sont agrégées à partir d’autres solutions et produits NetApp .
+Oui, Ransomware Resilience découvre les planifications de snapshots définies dans ONTAP et si ARP et FPolicy sont activés sur tous les volumes d'une charge de travail découverte.  Les informations que vous voyez initialement dans le tableau de bord sont agrégées à partir d’autres solutions et produits NetApp .
 
 *Ransomware Resilience est-il au courant des politiques déjà définies dans Backup and Recovery et SnapCenter?*
 

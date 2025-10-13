@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-use-alert.html 
 keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert 
-summary: Si Ransomware Resilience détecte une attaque possible, une alerte apparaît sur le tableau de bord Ransomware Resilience indiquant une attaque potentielle.  À ce stade, vous devez examiner le risque potentiel dans l’onglet Alertes de résilience aux ransomwares. 
+summary: Si Ransomware Resilience détecte une attaque possible, une alerte apparaît sur le tableau de bord Ransomware Resilience indiquant une attaque potentielle. À ce stade, vous devez examiner le risque potentiel dans l’onglet Alertes de résilience aux ransomwares. 
 ---
 = Gérez les alertes de ransomware détectées avec NetApp Ransomware Resilience
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Si Ransomware Resilience détecte une attaque possible, une alerte appa
 [role="lead"]
 Lorsque NetApp Ransomware Resilience détecte une attaque possible, il affiche une alerte sur le tableau de bord et dans la zone Notifications.  Ransomware Resilience prend immédiatement un instantané.  Consultez le risque potentiel dans l’onglet *Alertes* de résilience aux ransomwares.
 
-Si Ransomware Resilience détecte une attaque possible, une notification apparaît dans les paramètres de notification de la console et un e-mail est envoyé à l'adresse configurée.  L'e-mail contient des informations sur la gravité, la charge de travail impactée et un lien vers l'alerte dans l'onglet *Alertes* de résilience aux ransomwares.
+Si Ransomware Resilience détecte une attaque possible, une notification apparaît dans les paramètres de notification de la console et un e-mail est envoyé à l'adresse configurée. L'e-mail contient des informations sur la gravité, la charge de travail impactée et un lien vers l'alerte dans l'onglet *Alertes* de résilience aux ransomwares.
 
 Vous pouvez ignorer les faux positifs ou décider de récupérer vos données immédiatement.
 
@@ -142,10 +142,10 @@ La page Alertes apparaît.
 
 En consultant l’onglet Alertes, vous pouvez identifier s’il s’agit d’une activité malveillante ou d’un comportement anormal de l’utilisateur.
 
-Vous devez avoir configuré un agent d’activité utilisateur et activé une politique de protection avec détection du comportement utilisateur pour afficher la détection au niveau utilisateur.  Lorsque la détection du comportement de l'utilisateur est activée, la colonne *Utilisateur suspect* apparaît dans le tableau de bord Alertes ; elle ne s'affiche pas lorsque la détection du comportement de l'utilisateur n'est pas activée.  Pour activer la détection des utilisateurs suspects, voirlink:suspicious-user-activity.html["Activité utilisateur suspecte"] .
+Vous devez avoir configuré un agent d’activité utilisateur et activé une politique de protection avec détection du comportement utilisateur pour afficher la détection au niveau utilisateur. Lorsque la détection du comportement de l'utilisateur est activée, la colonne *Utilisateur suspect* apparaît dans le tableau de bord Alertes ; elle ne s'affiche pas lorsque la détection du comportement de l'utilisateur n'est pas activée. Pour activer la détection des utilisateurs suspects, voirlink:suspicious-user-activity.html["Activité utilisateur suspecte"] .
 
 
-NOTE: Si vous utilisez NetApp Data Infrastructure Insights (DII) Workload Security, il est recommandé d'utiliser les mêmes agents Workload Security pour Ransomware Resilience.  Vous n'avez pas besoin de déployer des agents Workload Security distincts pour Ransomware Resilience. Cependant, l'utilisation des mêmes agents Workload Security nécessite une relation de couplage entre l'organisation de la console Ransomware Resilience et le locataire DII Storage Workload Security.  Contactez votre représentant de compte pour activer ce couplage.
+NOTE: Si vous utilisez NetApp Data Infrastructure Insights (DII) Workload Security, il est recommandé d'utiliser les mêmes agents Workload Security pour Ransomware Resilience. Vous n'avez pas besoin de déployer des agents Workload Security distincts pour Ransomware Resilience. Cependant, l'utilisation des mêmes agents Workload Security nécessite une relation de couplage entre l'organisation de la console Ransomware Resilience et le locataire DII Storage Workload Security. Contactez votre représentant de compte pour activer ce couplage.
 
 
 
@@ -177,7 +177,7 @@ image:screen-alerts-incidents3.png["Page d'alerte des incidents"]
 
 === Afficher le comportement anormal des utilisateurs
 
-Si vous avez configuré la détection des utilisateurs suspects pour afficher le comportement anormal des utilisateurs, vous pouvez afficher les données au niveau de l'utilisateur et bloquer des utilisateurs spécifiques.  Pour activer les paramètres utilisateur suspects, voirlink:rp-use-settings.html["Configurer les paramètres de résilience aux ransomwares"] .
+Si vous avez configuré la détection des utilisateurs suspects pour afficher le comportement anormal des utilisateurs, vous pouvez afficher les données au niveau de l'utilisateur et bloquer des utilisateurs spécifiques. Pour activer les paramètres utilisateur suspects, voirlink:rp-use-settings.html["Configurer les paramètres de résilience aux ransomwares"] .
 
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez *Alertes*.
@@ -216,7 +216,7 @@ Une fois l’alerte marquée pour restauration, elle passe de l’onglet Alertes
 
 == Ignorer les incidents qui ne sont pas des attaques potentielles
 
-Après avoir examiné les incidents, vous devez déterminer si les incidents constituent des attaques potentielles.  S’il ne s’agit pas de menaces réelles, elles peuvent être écartées.
+Après avoir examiné les incidents, vous devez déterminer si les incidents constituent des attaques potentielles. S’il ne s’agit pas de menaces réelles, elles peuvent être écartées.
 
 Vous pouvez ignorer les faux positifs ou décider de récupérer vos données immédiatement.  Si vous ignorez l'alerte, Ransomware Resilience apprend ce comportement, l'associe aux opérations normales et ne déclenche plus d'alerte sur un tel comportement.
 

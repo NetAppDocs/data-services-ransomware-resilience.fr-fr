@@ -6,7 +6,7 @@
 
 === Prise en charge de la charge de travail SAN
 
-Cette version inclut la prise en charge des charges de travail SAN dans la BlueXP ransomware protection.  Vous pouvez désormais protéger les charges de travail SAN en plus des charges de travail NFS et CIFS.
+Cette version inclut la prise en charge des charges de travail SAN dans la BlueXP ransomware protection. Vous pouvez désormais protéger les charges de travail SAN en plus des charges de travail NFS et CIFS.
 
 Pour plus d'informations, reportez-vous à link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-prerequisites.html["Conditions préalables à la BlueXP ransomware protection"] .
 
@@ -14,7 +14,7 @@ Pour plus d'informations, reportez-vous à link:https://docs.netapp.com/us-en/da
 
 === Protection améliorée de la charge de travail
 
-Cette version améliore le processus de configuration des charges de travail avec des stratégies de snapshot et de sauvegarde provenant d'autres outils NetApp tels que SnapCenter ou BlueXP backup and recovery.  Dans les versions précédentes, la BlueXP ransomware protection détectait les politiques d'autres outils, vous permettant uniquement de modifier la politique de détection.  Avec cette version, vous pouvez désormais remplacer les politiques de snapshot et de sauvegarde par les politiques de BlueXP ransomware protection ou continuer à utiliser les politiques d'autres outils.
+Cette version améliore le processus de configuration des charges de travail avec des stratégies de snapshot et de sauvegarde provenant d'autres outils NetApp tels que SnapCenter ou BlueXP backup and recovery. Dans les versions précédentes, la BlueXP ransomware protection détectait les politiques d'autres outils, vous permettant uniquement de modifier la politique de détection. Avec cette version, vous pouvez désormais remplacer les politiques de snapshot et de sauvegarde par les politiques de BlueXP ransomware protection ou continuer à utiliser les politiques d'autres outils.
 
 Pour plus de détails, reportez-vous àlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Protéger les charges de travail"] .
 

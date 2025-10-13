@@ -4,7 +4,7 @@ permalink: rp-use-protect-classify.html
 keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, cds, sensitive, pii, classification 
 summary: Améliorez la sécurité et la confidentialité de vos données avec NetApp Data Classification pour identifier si vos données contiennent des informations personnelles identifiables ou privées. 
 ---
-= Recherchez des informations personnelles identifiables avec la classification des données NetApp dans Ransomware Resilience
+= Recherchez des informations personnelles identifiables avec la NetApp Data Classification dans Ransomware Resilience
 :allow-uri-read: 
 
 
@@ -34,7 +34,7 @@ Pour plus d'informations sur la classification des données, voir :
 
 
 .Avant de commencer
-L'analyse des données PII dans Ransomware Resilience est disponible si vous avezlink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-cloud-compliance.html["Classification des données déployée"^] .  La classification des données est disponible dans le cadre de la console sans frais supplémentaires et peut être déployée sur site ou dans le cloud client.
+L'analyse des données PII dans Ransomware Resilience est disponible si vous avezlink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-cloud-compliance.html["Classification des données déployée"^] . La classification des données est disponible dans le cadre de la console sans frais supplémentaires et peut être déployée sur site ou dans le cloud client.
 
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.

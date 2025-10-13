@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-start-simulate.html 
 keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert, simulate, readiness drill, practice, ransomware attack, ransomware attack response, ransomware attack readiness drill 
-summary: Réalisez un exercice de préparation aux ransomwares en simulant une attaque de ransomware sur une charge de travail d’échantillon nouvellement créée.  Ensuite, examinez l’attaque simulée et récupérez l’exemple de charge de travail.  Vous pouvez exécuter un exercice de préparation aux ransomwares plusieurs fois. 
+summary: Réalisez un exercice de préparation aux ransomwares en simulant une attaque de ransomware sur un échantillon de charge de travail nouvellement créé.  Ensuite, examinez l’attaque simulée et récupérez l’exemple de charge de travail.  Vous pouvez exécuter un exercice de préparation aux ransomwares plusieurs fois. 
 ---
 = Effectuez un exercice de préparation aux attaques de ransomware dans NetApp Ransomware Resilience
 :hardbreaks:
@@ -35,7 +35,7 @@ Vous devez saisir un nom d'utilisateur et un mot de passe dans les situations su
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
 .Étapes
-. Dans le menu NetApp Ransomware Resilience, sélectionnez le bouton *Exécuter l'exercice de préparation* en haut à droite.
+. Dans le menu NetApp Ransomware Resilience , sélectionnez le bouton *Exécuter l'exercice de préparation* en haut à droite.
 +
 image:screen-dashboard.png["Page du tableau de bord affichant le bouton Exécuter l'exercice de préparation"]
 
@@ -121,7 +121,7 @@ Voici quelques éléments à rechercher :
 
 * Regardez la gravité potentielle de l’attaque.
 +
-Si la gravité indique qu’un utilisateur est suspecté d’activité malveillante, vérifiez le nom d’utilisateur.  Vous pouvez égalementlink:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["bloquer l'utilisateur."]
+Si la gravité indique qu’un utilisateur est suspecté d’activité malveillante, vérifiez le nom d’utilisateur. Vous pouvez égalementlink:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["bloquer l'utilisateur."]
 
 * Regardez l’activité du fichier et les processus suspects :
 +
@@ -183,7 +183,7 @@ Après avoir examiné l’alerte d’exercice de préparation et restauré la ch
 
 .Étapes
 . Retourner à la page des détails de l’alerte.
-. Sélectionnez à nouveau l'alerte.
+. Sélectionnez à nouveau l’alerte.
 . Indiquez le statut en sélectionnant *Modifier le statut* et modifiez le statut en l'un des suivants :
 +
 ** Rejeté : si vous pensez que l’activité n’est pas une attaque de ransomware, modifiez le statut sur Rejeté.

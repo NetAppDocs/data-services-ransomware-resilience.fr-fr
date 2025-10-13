@@ -4,7 +4,7 @@ permalink: concept-ransomware-resilience.html
 keywords: artificial intelligence, personal data, personal information, sensitive, personal sensitive data, data sense, ransomware, ransomware protection, ransomware attack, detect, recover, cyberstorage, cyberattack, cybersecurity, protection, bluexp, netapp, role-based access control, rbac 
 summary: 'Ransomware Resilience vous permet d"afficher des informations pertinentes sur la cybersécurité et d"évaluer la résilience de votre organisation face à une cyberattaque.  Il vous fournit également une liste d"alertes et d"étapes de correction pour renforcer la sécurité de vos données.' 
 ---
-= En savoir plus sur la résilience aux ransomwares de NetApp
+= En savoir plus sur la NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,11 +16,11 @@ summary: 'Ransomware Resilience vous permet d"afficher des informations pertinen
 [role="lead"]
 Les attaques de ransomware peuvent bloquer l’accès à vos données et les attaquants peuvent demander une rançon en échange de la divulgation des données ou de leur décryptage.  Selon l’IDC, il n’est pas rare que les victimes de ransomware subissent plusieurs attaques de ransomware.  L'attaque peut perturber l'accès à vos données pendant une durée allant d'un jour à plusieurs semaines.
 
-NetApp Ransomware Resilience protège vos données contre les attaques de ransomware.  Dans Ransomware Resilience, la protection est disponible pour les charges de travail basées sur les applications d'Oracle, MySQL, les banques de données VM et les partages de fichiers sur le stockage NAS sur site (à l'aide des protocoles NFS et CIFS) et le stockage SAN (FC, iSCSI et NVMe) ainsi que Cloud Volumes ONTAP pour Amazon Web Services, Cloud Volumes ONTAP pour Google Cloud, Cloud Volumes ONTAP pour Microsoft Azure et Amazon FSx for NetApp ONTAP sur la console NetApp .  Vous pouvez sauvegarder des données sur Amazon Web Services, Google Cloud, le stockage cloud Microsoft Azure et NetApp StorageGRID.
+NetApp Ransomware Resilience protège vos données contre les attaques de ransomware.  Dans Ransomware Resilience, la protection est disponible pour les charges de travail basées sur les applications d'Oracle, MySQL, les banques de données VM et les partages de fichiers sur le stockage NAS sur site (à l'aide des protocoles NFS et CIFS) et le stockage SAN (FC, iSCSI et NVMe) ainsi que Cloud Volumes ONTAP pour Amazon Web Services, Cloud Volumes ONTAP pour Google Cloud, Cloud Volumes ONTAP pour Microsoft Azure et Amazon FSx for NetApp ONTAP sur la NetApp Console.  Vous pouvez sauvegarder des données sur Amazon Web Services, Google Cloud, le stockage cloud Microsoft Azure et NetApp StorageGRID.
 
 
 
-== Résilience aux ransomwares au niveau des données
+== Résilience aux ransomwares au niveau de la couche de données
 
 Votre posture de sécurité comprend généralement plusieurs couches de défense pour vous protéger contre une gamme de cybermenaces.
 
@@ -39,7 +39,7 @@ image:concept-security-layer-diagram.png["Diagramme de la couche de sécurité"]
 
 Ransomware Resilience offre une utilisation complète de plusieurs technologies NetApp afin que votre administrateur de stockage, administrateur de sécurité des données ou ingénieur des opérations de sécurité puisse atteindre les objectifs suivants :
 
-* *Identifiez* toutes les charges de travail basées sur des applications, de partage de fichiers ou gérées par VMware dans les systèmes NAS (NFS ou CIFS) et SAN (FC, iSCSI et NVMe) sur site NetApp dans la console NetApp , les projets et les agents de la console.  Ransomware Resilience catégorise la priorité des données et vous fournit des recommandations pour améliorer la résilience des ransomwares.
+* *Identifiez* toutes les charges de travail basées sur des applications, de partage de fichiers ou gérées par VMware dans les systèmes NAS (NFS ou CIFS) et SAN (FC, iSCSI et NVMe) sur site NetApp dans la NetApp Console, les projets et les agents de la console.  Ransomware Resilience catégorise la priorité des données et vous fournit des recommandations pour améliorer la résilience des ransomwares.
 * *Protégez* vos charges de travail en activant les sauvegardes, les copies instantanées et les stratégies de protection contre les ransomwares sur vos données.
 * *Détecter* les anomalies qui pourraient être des attaques de ransomware.note de bas de page : [Bien qu'il soit possible qu'une attaque passe inaperçue, nos recherches indiquent que la technologie NetApp a permis un degré élevé de détection de certaines attaques de ransomware basées sur le chiffrement de fichiers.]
 * *Répondez* aux attaques potentielles de ransomware en lançant automatiquement un instantané NetApp ONTAP inviolable qui est verrouillé afin que la copie ne puisse pas être supprimée accidentellement ou de manière malveillante.  Vos données de sauvegarde resteront immuables et protégées de bout en bout contre les attaques de ransomware à la source et à la destination.
@@ -91,21 +91,21 @@ Ransomware Resilience nécessite une licence NetApp ONTAP One.
 
 La licence Ransomware Resilience n'inclut pas de produits NetApp supplémentaires.  Ransomware Resilience peut utiliser Backup and Recovery même si vous ne disposez pas de licence pour cela.
 
-Pour détecter les comportements anormaux des utilisateurs, Ransomware Resilience utilise NetApp Autonomous Ransomware Protection, un modèle d'apprentissage automatique (ML) au sein ONTAP qui détecte l'activité des fichiers malveillants.  Ce modèle est inclus dans la licence Ransomware Resilience.
+Pour détecter les comportements anormaux des utilisateurs, Ransomware Resilience utilise NetApp Autonomous Ransomware Protection, un modèle d'apprentissage automatique (ML) au sein ONTAP qui détecte l'activité des fichiers malveillants. Ce modèle est inclus dans la licence Ransomware Resilience.
 
 Pour plus de détails, consultez la section link:rp-start-licenses.html["Configurer les licences"] .
 
 
 
-== Console NetApp
+== NetApp Console
 
-La résilience aux ransomwares est accessible via la console NetApp .
+La résilience aux ransomwares est accessible via la NetApp Console.
 
-La console NetApp fournit une gestion centralisée des services de stockage et de données NetApp dans les environnements sur site et cloud à l'échelle de l'entreprise. La console est requise pour accéder aux services de données NetApp et les utiliser. En tant qu'interface de gestion, il vous permet de gérer de nombreuses ressources de stockage à partir d'une seule interface. Les administrateurs de console peuvent contrôler l’accès au stockage et aux services pour tous les systèmes de l’entreprise.
+La NetApp Console fournit une gestion centralisée des services de stockage et de données NetApp dans les environnements sur site et cloud à l'échelle de l'entreprise. La console est requise pour accéder aux services de données NetApp et les utiliser. En tant qu'interface de gestion, il vous permet de gérer de nombreuses ressources de stockage à partir d'une seule interface. Les administrateurs de console peuvent contrôler l’accès au stockage et aux services pour tous les systèmes de l’entreprise.
 
 Vous n'avez pas besoin de licence ni d'abonnement pour commencer à utiliser NetApp Console et vous n'encourez des frais que lorsque vous devez déployer des agents de console dans votre cloud pour garantir la connectivité à vos systèmes de stockage ou à vos services de données NetApp . Cependant, certains services de données NetApp accessibles depuis la console sont sous licence ou basés sur un abonnement.
 
-En savoir plus sur lelink:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["Console NetApp"^] .
+En savoir plus sur lelink:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Console"^] .
 
 
 
@@ -122,8 +122,8 @@ image:diagram-rp-architecture-preview3.png["Diagramme montrant l'architecture de
 
 | *IDENTIFIER*  a| 
 * Recherche toutes les données NAS (protocoles NFS et CIFS) sur site du client, SAN (FC, iSCSI et NVMe) et Cloud Volumes ONTAP connectées à la console.
-* Identifie les données client des API de service ONTAP et SnapCenter et les associe aux charges de travail. En savoir plus sur https://docs.netapp.com/us-en/ontap-family/["ONTAP"^] et https://docs.netapp.com/us-en/snapcenter/index.html["Logiciel SnapCenter"^] .
-* Découvre le niveau de protection actuel de chaque volume des copies instantanées NetApp et des politiques de sauvegarde, ainsi que toutes les capacités de détection intégrées.  Ransomware Resilience associe ensuite cette posture de protection aux charges de travail en utilisant la sauvegarde et la récupération, les services ONTAP et les technologies NetApp telles que la protection autonome contre les ransomwares (ARP ou ARP/AI selon votre version ONTAP ), FPolicy, les politiques de sauvegarde et les politiques de snapshot.  En savoir plus sur https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Protection autonome contre les ransomwares"^] , https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Sauvegarde et récupération NetApp"^] , et https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["Politique ONTAP"^] .
+* Identifie les données client des API de service ONTAP et SnapCenter et les associe aux charges de travail.  En savoir plus sur https://docs.netapp.com/us-en/ontap-family/["ONTAP"^] et https://docs.netapp.com/us-en/snapcenter/index.html["Logiciel SnapCenter"^] .
+* Découvre le niveau de protection actuel de chaque volume des copies instantanées NetApp et des politiques de sauvegarde, ainsi que toutes les capacités de détection intégrées. Ransomware Resilience associe ensuite cette posture de protection aux charges de travail en utilisant la sauvegarde et la récupération, les services ONTAP et les technologies NetApp telles que la protection autonome contre les ransomwares (ARP ou ARP/AI selon votre version ONTAP ), FPolicy, les politiques de sauvegarde et les politiques de snapshot. En savoir plus sur https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Protection autonome contre les ransomwares"^] , https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["NetApp Backup and Recovery"^] , et https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["Politique ONTAP"^] .
 * Attribue une priorité métier à chaque charge de travail en fonction des niveaux de protection découverts automatiquement et recommande des politiques de protection pour les charges de travail en fonction de leur priorité métier.  La priorité de la charge de travail est basée sur les fréquences d’instantanés déjà appliquées à chaque volume associé à la charge de travail.
 
 
@@ -158,7 +158,7 @@ image:diagram-rp-architecture-preview3.png["Diagramme montrant l'architecture de
 
 
 | *GOUVERNER*  a| 
-* Affecte les stratégies de protection contre les ransomwares
+* Attribue les stratégies de protection contre les ransomwares
 * Vous aide à surveiller les résultats.
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: support/task-support-registration.html 
 keywords: support registration, register for support, support, nss account, add nss account 
-summary: 'Avant de pouvoir ouvrir un dossier d"assistance auprès du support technique NetApp , vous devez ajouter un compte de site de support NetApp à la console NetApp , puis vous inscrire au support.' 
+summary: 'Avant de pouvoir ouvrir un dossier d"assistance auprès du support technique NetApp , vous devez ajouter un compte de site de support NetApp à la NetApp Console , puis vous inscrire au support.' 
 ---
 = Inscrivez-vous pour obtenir de l'aide
 :allow-uri-read: 
@@ -28,7 +28,7 @@ Il existe deux formes d'inscription pour activer le droit au support :
 
 * Enregistrement du numéro de série de votre compte BlueXP (votre numéro de série à 20 chiffres 960xxxxxxxxx situé sur la page Ressources d'assistance dans BlueXP).
 +
-Il s'agit de votre identifiant d'abonnement d'assistance unique pour tout service au sein de BlueXP. Chaque abonnement de support au niveau du compte BlueXP doit être enregistré.
+Il s'agit de votre identifiant d'abonnement d'assistance unique pour tout service au sein de BlueXP. Chaque abonnement d'assistance au niveau du compte BlueXP doit être enregistré.
 
 * Enregistrement des numéros de série Cloud Volumes ONTAP associés à un abonnement sur la place de marché de votre fournisseur de cloud (il s'agit de numéros de série 909201xxxxxxxx à 20 chiffres).
 +

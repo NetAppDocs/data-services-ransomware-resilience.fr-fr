@@ -43,8 +43,8 @@ TIP: Pour une gestion et une protection améliorées de votre parc de données, 
 
 Au-delà de la résilience aux ransomwares, les services suivants peuvent être utilisés pour gérer la protection :
 
-* Sauvegarde et récupération NetApp pour les partages de fichiers, les partages de fichiers de machines virtuelles
-* SnapCenter pour VMware pour les banques de données VM
+* NetApp Backup and Recovery pour les partages de fichiers, les partages de fichiers de machines virtuelles
+* SnapCenter pour VMware pour les magasins de données VM
 * SnapCenter pour Oracle et MySQL
 
 
@@ -133,7 +133,7 @@ Ransomware Resilience attribue une importance ou une priorité à chaque charge 
 
 * *Critique* : Copies instantanées prises plus d'une fois par heure (programme de protection très agressif)
 * *Important* : Copies instantanées prises moins d'une fois par heure mais plus d'une fois par jour
-* *Standard* : Copies instantanées prises plus d'une par jour
+* *Standard* : Copies instantanées prises plus d'une fois par jour
 
 
 * Politiques de détection prédéfinies * [[prédéfinies]]
@@ -145,7 +145,7 @@ NOTE: La stratégie **Extension utilisateur de chiffrement** est la seule strat�
 
 [cols="10,15a,20,15,15,15"]
 |===
-| Niveau politique | Instantané | Fréquence | Rétention (jours) | nombre de copies instantanées | Nombre total maximal de copies d'instantanés 
+| Niveau politique | Instantané | Fréquence | Rétention (jours) | # de copies instantanées | Nombre total maximal de copies d'instantanés 
 
 
 .4+| *Politique de charge de travail critique*  a| 
@@ -247,8 +247,8 @@ Pour en savoir plus sur l'enregistrement de SnapCenter ou du SnapCenter Plug-in 
 . Dans le menu Résilience aux ransomwares, sélectionnez *Tableau de bord*.
 . Dans le volet Recommandations, recherchez l’une des recommandations suivantes et sélectionnez *Réviser et corriger* :
 +
-** Enregistrez le serveur SnapCenter disponible avec la console NetApp
-** Enregistrez le SnapCenter Plug-in for VMware vSphere (SCV) avec la console NetApp
+** Enregistrez le serveur SnapCenter disponible avec la NetApp Console
+** Enregistrez le SnapCenter Plug-in for VMware vSphere (SCV) avec la NetApp Console
 
 
 . Suivez les informations pour enregistrer le SnapCenter Plug-in for VMware vSphere-in SnapCenter ou SnapCenter pour l'hôte VMware vSphere à l'aide de Backup and Recovery.
@@ -289,7 +289,7 @@ La stratégie de protection contre les ransomwares comprend :
 La politique de détection ne modifie pas les politiques gérées dans d’autres produits.
 
 +
-La politique de détection active la protection autonome contre les ransomwares et la protection FPolicy si elles sont déjà activées dans d'autres services.  En savoir plus surlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Protection autonome contre les ransomwares"^] ,link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Sauvegarde et récupération"^] , etlink:https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["Politique ONTAP"^] .
+La politique de détection active la protection autonome contre les ransomwares et la protection FPolicy si elles sont déjà activées dans d'autres services. En savoir plus surlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Protection autonome contre les ransomwares"^] ,link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Sauvegarde et récupération"^] , etlink:https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["Politique ONTAP"^] .
 
 
 
@@ -385,10 +385,10 @@ image:screen-protection.png["Gérer la page de stratégie"]
 . Sélectionnez **Suivant**.
 . Si vous avez sélectionné *Détection de comportement utilisateur suspect* comme paramètre de détection, sélectionnez l'agent d'activité utilisateur oulink:suspicious-user-activity.html#add-a-user-activity-agent["ou en créer un"] .
 +
-L'agent d'activité utilisateur héberge les nouveaux collecteurs de données.  Ransomware Resilience crée automatiquement le collecteur de données pour transmettre les événements d'activité des utilisateurs à Ransomware Resilience afin de détecter les comportements anormaux des utilisateurs.
+L'agent d'activité utilisateur héberge les nouveaux collecteurs de données. Ransomware Resilience crée automatiquement le collecteur de données pour transmettre les événements d'activité des utilisateurs à Ransomware Resilience afin de détecter les comportements anormaux des utilisateurs.
 
 . Sélectionnez **Suivant**.
-. Revoyez vos choix.  Sélectionnez **Créer** pour activer la détection.
+. Revoyez vos choix. Sélectionnez **Créer** pour activer la détection.
 . Sur la page Protection, vérifiez l'**état de détection** pour confirmer que la détection est active.
 
 
@@ -405,10 +405,10 @@ image:screen-protection.png["Gérer la page de stratégie"]
 
 . Depuis la page Protection, sélectionnez une charge de travail, puis sélectionnez *Protéger*.
 . Ransomware Resilience détecte s'il existe des politiques de sauvegarde et de récupération ou SnapCenter actives.  Pour remplacer les stratégies de sauvegarde et de récupération ou SnapCenter existantes, sélectionnez la case **Remplacer les stratégies existantes**.  Lorsque vous sélectionnez la case, Ransomware Resilience remplace la liste des stratégies de détection par des stratégies de détection.
-. Choisissez une politique de protection.  Si aucune politique de protection n’existe, sélectionnez **Ajouter** pour créer une nouvelle politique.  Pour plus d'informations sur la création d'une politique, voir<<steps,Créer une politique de protection>> .  Sélectionnez **Suivant**.
-. Sélectionnez une destination de sauvegarde ou créez-en une nouvelle.  Sélectionnez **Suivant**.
+. Choisissez une politique de protection.  Si aucune politique de protection n’existe, sélectionnez **Ajouter** pour créer une nouvelle politique.  Pour plus d'informations sur la création d'une politique, voir<<steps,Créer une politique de protection>> . Sélectionnez **Suivant**.
+. Sélectionnez une destination de sauvegarde ou créez-en une nouvelle. Sélectionnez **Suivant**.
 +
-.. Si votre stratégie de protection inclut la détection du comportement des utilisateurs, sélectionnez un agent d’activité utilisateur dans votre environnement pour héberger les nouveaux collecteurs de données.  Ransomware Resilience crée automatiquement le collecteur de données pour transmettre les événements d'activité des utilisateurs à Ransomware Resilience afin de détecter les comportements anormaux des utilisateurs.
+.. Si votre stratégie de protection inclut la détection du comportement des utilisateurs, sélectionnez un agent d’activité utilisateur dans votre environnement pour héberger les nouveaux collecteurs de données. Ransomware Resilience crée automatiquement le collecteur de données pour transmettre les événements d'activité des utilisateurs à Ransomware Resilience afin de détecter les comportements anormaux des utilisateurs.
 
 
 . Passez en revue la nouvelle stratégie de protection, puis sélectionnez **Protéger** pour l’appliquer.
@@ -436,7 +436,7 @@ Vous pouvez remplacer la politique existante par une autre.
 
 Le regroupement des partages de fichiers dans un groupe de protection facilite la protection de votre parc de données.  Ransomware Resilience peut protéger tous les volumes d’un groupe en même temps plutôt que de protéger chaque volume séparément.
 
-Vous pouvez créer des groupes quel que soit leur état de protection (c'est-à-dire des groupes non protégés et des groupes protégés).  Lorsque vous ajoutez une politique de protection à un groupe de protection, la nouvelle politique de protection remplace toute politique existante, y compris les politiques gérées par SnapCenter et NetApp Backup and Recovery.
+Vous pouvez créer des groupes quel que soit leur état de protection (c'est-à-dire des groupes non protégés et des groupes protégés). Lorsque vous ajoutez une politique de protection à un groupe de protection, la nouvelle politique de protection remplace toute politique existante, y compris les politiques gérées par SnapCenter et NetApp Backup and Recovery.
 
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.
@@ -461,7 +461,7 @@ TIP: Pour voir plus de détails sur les charges de travail, faites défiler vers
 +
 image:screen-protection-groups-policy.png["Ajouter un groupe de protection - Page de stratégie"]
 
-. Sélectionnez la politique qui régira la protection de ce groupe.  Pour confirmer, sélectionnez *Suivant*.
+. Sélectionnez la politique qui régira la protection de ce groupe. Pour confirmer, sélectionnez *Suivant*.
 +
 .. Si vous devez configurer une politique de sauvegarde, choisissez-en une puis sélectionnez **Suivant**.
 .. Si votre politique de détection inclut la détection du comportement des utilisateurs, sélectionnez le collecteur de données que vous souhaitez utiliser, puis **Suivant**.

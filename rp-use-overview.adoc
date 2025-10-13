@@ -4,7 +4,7 @@ permalink: rp-use-overview.html
 keywords: ransomware protection, ransomware protection, detect ransomware attacks, recover from ransomware attack 
 summary: Grâce à NetApp Ransomware Resilience, vous pouvez afficher l’état de la charge de travail et protéger les charges de travail. 
 ---
-= Utiliser la résilience aux ransomwares NetApp
+= Utiliser la NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

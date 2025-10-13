@@ -20,10 +20,10 @@ Pour effectuer cette tâche, vous avez besoin du rôle d’administrateur d’or
 
 * Inscrivez-vous pour un essai gratuit de 30 jours.
 * Achetez un abonnement à la carte (PAYGO) avec Amazon Web Services (AWS) Marketplace, Google Cloud Marketplace ou Azure Marketplace.
-* Apportez votre propre licence (BYOL), qui est un fichier de licence NetApp (NLF) que vous obtenez auprès de votre représentant commercial NetApp . Vous pouvez utiliser le numéro de série de la licence pour activer le BYOL dans la console.
+* Apportez votre propre licence (BYOL), qui est un fichier de licence NetApp (NLF) que vous obtenez auprès de votre représentant commercial NetApp .  Vous pouvez utiliser le numéro de série de la licence pour activer le BYOL dans la console.
 
 
-Après avoir configuré votre BYOL ou acheté un abonnement PAYGO, vous pouvez voir la licence dans la section Licences et abonnements de la console.
+Après avoir configuré votre BYOL ou acheté un abonnement PAYGO, vous pouvez voir la licence dans la section Licenses and subscriptions de la console.
 
 Une fois l'essai gratuit terminé ou la licence ou l'abonnement expiré, vous pouvez toujours effectuer les opérations suivantes dans Ransomware Resilience :
 
@@ -59,7 +59,7 @@ Pendant la période d'essai, vous bénéficiez de toutes les fonctionnalités.
 .Étapes
 . Accéder au https://console.netapp.com/["Console"^] .
 . Connectez-vous à la console.
-. Depuis la console NetApp , sélectionnez *Protection* > *Résilience aux ransomwares*.
+. Depuis la NetApp Console, sélectionnez *Protection* > *Résilience aux ransomwares*.
 +
 Si c'est la première fois que vous vous connectez à ce service, la page de destination apparaît.
 
@@ -112,7 +112,7 @@ NOTE: Un e-mail vous est envoyé contenant le numéro de série de Ransomware Re
 image:screen-license-dw-add-license.png["Capture d'écran de la page Ajouter une licence."]
 
 . Sur la page Ajouter une licence, sélectionnez *Entrer le numéro de série*, saisissez le numéro de série inclus dans l'e-mail qui vous a été envoyé et sélectionnez *Ajouter une licence*.
-. Pour afficher les détails de la licence, dans la navigation de gauche de la console, sélectionnez *Administration* > *Licences et abonnements*.
+. Pour afficher les détails de la licence, dans la navigation de gauche de la console, sélectionnez *Administration* > * Licenses and subscriptions*.
 +
 ** Pour voir les informations d'abonnement, sélectionnez *Abonnements*.
 ** Pour voir les licences BYOL, sélectionnez *Licences de services de données*.
@@ -154,7 +154,7 @@ NOTE: Un e-mail vous est envoyé contenant le numéro de série de Ransomware Re
 image:screen-license-dw-add-license.png["Capture d'écran de la page Ajouter une licence."]
 
 . Sur la page Ajouter une licence, sélectionnez *Entrer le numéro de série* puis saisissez le numéro de série figurant dans l'e-mail qui vous a été envoyé.  Sélectionnez *Ajouter une licence*.
-. Pour afficher les détails de la licence dans Licences et abonnements, dans la navigation de gauche de la console, sélectionnez *Gouvernance* > *Licences et abonnements*.
+. Pour afficher les détails de la licence dans Licenses and subscriptions, dans la navigation de gauche de la console, sélectionnez *Gouvernance* > * Licenses and subscriptions*.
 +
 ** Pour voir les informations d'abonnement, sélectionnez *Abonnements*.
 ** Pour voir les licences BYOL, sélectionnez *Licences de services de données*.
@@ -196,7 +196,7 @@ NOTE: Un e-mail vous est envoyé contenant le numéro de série de Ransomware Re
 image:screen-license-dw-add-license.png["Capture d'écran de la page Ajouter une licence."]
 
 . Dans la page Ajouter une licence, sélectionnez *Entrer le numéro de série*.  Saisissez le numéro de série dans l'e-mail qui vous a été envoyé.  Sélectionnez *Ajouter une licence*.
-. Pour afficher les détails de la licence, dans la navigation de gauche de la console, sélectionnez *Gouvernance* > *Licences et abonnements*.
+. Pour afficher les détails de la licence, dans la navigation de gauche de la console, sélectionnez *Gouvernance* > * Licenses and subscriptions*.
 +
 ** Pour voir les informations d'abonnement, sélectionnez *Abonnements*.
 ** Pour voir les licences BYOL, sélectionnez *Licences de services de données*.
@@ -241,7 +241,7 @@ Si votre compte de site de support NetApp n'est pas disponible dans la liste dé
 
 
 .Résultat
-La page Licences et abonnements indique que Ransomware Resilience dispose d'une licence.
+La page Licenses and subscriptions indique que Ransomware Resilience dispose d'une licence.
 
 
 
@@ -260,7 +260,7 @@ Une fois la licence payée et enregistrée sur le site de support NetApp , la co
 . Si la console ne peut pas mettre à jour automatiquement la licence, vous devez télécharger manuellement le fichier de licence.
 +
 .. Vous pouvez obtenir le fichier de licence sur le site de support NetApp .
-.. Dans la console, sélectionnez **Administration** > **Licences et abonnements**.
+.. Dans la console, sélectionnez **Administration** > ** Licenses and subscriptions**.
 .. Sélectionnez l'onglet *Licences des services de données*, sélectionnez l'icône *Actions...* pour le numéro de série que vous mettez à jour, puis sélectionnez *Mettre à jour la licence*.
 
 

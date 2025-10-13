@@ -126,7 +126,7 @@ image:screen-settings-backup-destination.png["Page des destinations de sauvegard
 
 ** *Réseau* : Choisissez l'espace IP.
 +
-*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder. Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
+*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder.  Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
 
 
 
@@ -171,7 +171,7 @@ Les données du bucket sont chiffrées par défaut avec des clés gérées par A
 
 ** *Réseau* : Choisissez l'espace IP et indiquez si vous utiliserez un point de terminaison privé.
 +
-*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder. Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
+*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder.  Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
 *** Vous pouvez également choisir si vous utiliserez un point de terminaison privé AWS (PrivateLink) que vous avez précédemment configuré.
 +
 Si vous souhaitez utiliser AWS PrivateLink, reportez-vous à https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["AWS PrivateLink pour Amazon S3"^] .
@@ -227,7 +227,7 @@ Les données du bucket sont chiffrées par défaut avec des clés gérées par G
 
 ** *Réseau* : Choisissez l'espace IP et indiquez si vous utiliserez un point de terminaison privé.
 +
-*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder. Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
+*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder.  Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
 *** Vous pouvez également choisir si vous utiliserez un point de terminaison privé GCP (PrivateLink) que vous avez précédemment configuré.
 
 
@@ -271,7 +271,7 @@ Les données du compte sont chiffrées par défaut avec des clés gérées par M
 
 ** *Réseau* : Choisissez l'espace IP et indiquez si vous utiliserez un point de terminaison privé.
 +
-*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder. Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
+*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder.  Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
 *** Vous pouvez également choisir si vous utiliserez un point de terminaison privé Azure que vous avez précédemment configuré.
 +
 Si vous souhaitez utiliser Azure PrivateLink, reportez-vous à https://azure.microsoft.com/en-us/products/private-link/["Azure PrivateLink"^] .
@@ -421,7 +421,7 @@ Après l’enregistrement, le centre d’administration Microsoft Entra affiche 
 .Étapes pour créer un secret pour l'enregistrement
 . Accédez à Microsoft Sentinel.
 . Sélectionnez *Certificats et secrets* > *Secrets client* > *Nouveau secret client*.
-. Ajoutez une description pour votre secret d’application.
+. Ajoutez une description pour le secret de votre application.
 . Sélectionnez une *Expiration* pour le secret ou spécifiez une durée de vie personnalisée.
 +
 

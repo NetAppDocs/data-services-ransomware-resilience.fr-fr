@@ -1,22 +1,22 @@
 ---
 indexpage:
-  title: Documentation sur la résilience aux ransomwares de NetApp
+  title: Documentation sur la NetApp Ransomware Resilience
   summary: NetApp Ransomware Resilience protège, détecte et prend en charge la récupération
     des charges de travail des applications et des partages de fichiers contre les
-    menaces de ransomware dans le stockage sur site et dans le cloud.  Prenant en
-    charge des plateformes telles qu'Oracle, MySQL, les magasins de données VM et
-    le stockage NAS, Ransomware Resilience permet une sauvegarde et une récupération
-    sécurisées, aidant les organisations à protéger les données critiques et à maintenir
-    la continuité des activités.
+    menaces de ransomware dans le stockage sur site et dans le cloud. Prenant en charge
+    des plateformes telles qu'Oracle, MySQL, les magasins de données VM et le stockage
+    NAS, Ransomware Resilience permet une sauvegarde et une récupération sécurisées,
+    aidant les organisations à protéger les données critiques et à maintenir la continuité
+    des activités.
   keywords: bluexp, ransomware, anti-ransomware, cyber attack, netapp, ontap, amazon
     web services, aws, storagegrid, protection, resilience
   lead: NetApp Ransomware Resilience protège, détecte et prend en charge la récupération
     des charges de travail des applications et des partages de fichiers contre les
-    menaces de ransomware dans le stockage sur site et dans le cloud.  Prenant en
-    charge des plateformes telles qu'Oracle, MySQL, les magasins de données VM et
-    le stockage NAS, Ransomware Resilience permet une sauvegarde et une récupération
-    sécurisées, aidant les organisations à protéger les données critiques et à maintenir
-    la continuité des activités.
+    menaces de ransomware dans le stockage sur site et dans le cloud. Prenant en charge
+    des plateformes telles qu'Oracle, MySQL, les magasins de données VM et le stockage
+    NAS, Ransomware Resilience permet une sauvegarde et une récupération sécurisées,
+    aidant les organisations à protéger les données critiques et à maintenir la continuité
+    des activités.
   tiles:
   - title: Commencer
     links:
@@ -43,8 +43,8 @@ indexpage:
       url: "/rp-use-dashboard.html"
     - title: Protéger les charges de travail
       url: "/rp-use-protect.html"
-    - title: Recherchez des informations personnelles identifiables avec la classification
-        des données NetApp
+    - title: Recherchez des informations personnelles identifiables avec la NetApp
+        Data Classification
       url: "/rp-use-protect-classify.html"
     - title: Répondre à une alerte détectée
       url: "/rp-use-alert.html"
@@ -52,9 +52,9 @@ indexpage:
       url: "/rp-use-recover.html"
   - title: Blogs et communauté
     links:
-    - title: Console NetApp
+    - title: NetApp Console
       url: https://www.netapp.com/console
-    - title: Services de données NetApp
+    - title: NetApp Data Services
       url: https://www.netapp.com/data-services/
     - title: Communauté NetApp
       url: https://community.netapp.com/

@@ -30,15 +30,15 @@ Le service de BlueXP ransomware protection a été renommé NetApp Ransomware Re
 
 === BlueXP est désormais NetApp Console
 
-La console NetApp offre une gestion centralisée des services de stockage et de données dans les environnements sur site et dans le cloud à l'échelle de l'entreprise, offrant des informations en temps réel, des flux de travail plus rapides et une administration simplifiée.
+La NetApp Console offre une gestion centralisée des services de stockage et de données dans les environnements sur site et dans le cloud à l'échelle de l'entreprise, offrant des informations en temps réel, des flux de travail plus rapides et une administration simplifiée.
 
-Pour plus de détails sur ce qui a changé, consultez le https://docs.netapp.com/us-en/console-relnotes/index.html["Notes de version de la console NetApp"] .
+Pour plus de détails sur ce qui a changé, consultez le https://docs.netapp.com/us-en/console-relnotes/index.html["Notes de version de la NetApp Console"] .
 
 
 
 === Détection de violation de données
 
-Ransomware Resilience inclut un nouveau mécanisme de détection qui peut être activé en quelques étapes pour détecter les lectures anormales des utilisateurs comme indicateur précoce d'une violation de données.  La résilience des ransomwares collecte et analyse les événements de lecture des utilisateurs en créant une base de référence historique, qui est un profil du comportement normal attendu à partir des données passées.  Lorsque l'activité d'un nouvel utilisateur s'écarte considérablement de cette norme établie (comme une augmentation inattendue des lectures associée à des modèles de lecture suspects), une alerte est générée.  Ransomware Resilience inclut un modèle d'IA pour détecter les modèles de lecture suspects.
+Ransomware Resilience inclut un nouveau mécanisme de détection qui peut être activé en quelques étapes pour détecter les lectures anormales des utilisateurs comme indicateur précoce d'une violation de données. La résilience des ransomwares collecte et analyse les événements de lecture des utilisateurs en créant une base de référence historique, qui est un profil du comportement normal attendu à partir des données passées. Lorsque l'activité d'un nouvel utilisateur s'écarte considérablement de cette norme établie (comme une augmentation inattendue des lectures associée à des modèles de lecture suspects), une alerte est générée. Ransomware Resilience inclut un modèle d'IA pour détecter les modèles de lecture suspects.
 
 Contrairement à la détection de chiffrement par ARP au niveau de la couche de stockage, la détection de l'anomalie de comportement de l'utilisateur est effectuée dans le service SaaS Ransomware Resilience en collectant les événements FPolicy.
 
@@ -64,7 +64,7 @@ En plus de la détection des violations de données, Ransomware Resilience déte
 
 Pour gérer les alertes d'activité utilisateur suspecte, Ransomware Resilience a introduit deux nouveaux rôles pour les administrateurs de l'organisation de la console afin d'accorder l'accès à la détection d'activité utilisateur suspecte : administrateur du comportement utilisateur Ransomware Resilience et visualiseur du comportement utilisateur Ransomware Resilience.
 
-Vous devez être un administrateur du comportement utilisateur pour configurer les paramètres de comportement utilisateur suspect.  Le rôle d’administrateur Ransomware Resilience n’est pas pris en charge pour la configuration des paramètres de comportement utilisateur suspect.
+Vous devez être un administrateur du comportement utilisateur pour configurer les paramètres de comportement utilisateur suspect. Le rôle d’administrateur Ransomware Resilience n’est pas pris en charge pour la configuration des paramètres de comportement utilisateur suspect.
 
 Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Accès basé sur les rôles NetApp Ransomware Resilience"^] .
 
@@ -82,7 +82,7 @@ Cette version comprend des améliorations générales.
 
 === Prise en charge de la charge de travail SAN
 
-Cette version inclut la prise en charge des charges de travail SAN dans la BlueXP ransomware protection.  Vous pouvez désormais protéger les charges de travail SAN en plus des charges de travail NFS et CIFS.
+Cette version inclut la prise en charge des charges de travail SAN dans la BlueXP ransomware protection. Vous pouvez désormais protéger les charges de travail SAN en plus des charges de travail NFS et CIFS.
 
 Pour plus d'informations, reportez-vous à link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-prerequisites.html["Conditions préalables à la BlueXP ransomware protection"] .
 
@@ -90,7 +90,7 @@ Pour plus d'informations, reportez-vous à link:https://docs.netapp.com/us-en/da
 
 === Protection améliorée de la charge de travail
 
-Cette version améliore le processus de configuration des charges de travail avec des stratégies de snapshot et de sauvegarde provenant d'autres outils NetApp tels que SnapCenter ou BlueXP backup and recovery.  Dans les versions précédentes, la BlueXP ransomware protection détectait les politiques d'autres outils, vous permettant uniquement de modifier la politique de détection.  Avec cette version, vous pouvez désormais remplacer les politiques de snapshot et de sauvegarde par les politiques de BlueXP ransomware protection ou continuer à utiliser les politiques d'autres outils.
+Cette version améliore le processus de configuration des charges de travail avec des stratégies de snapshot et de sauvegarde provenant d'autres outils NetApp tels que SnapCenter ou BlueXP backup and recovery. Dans les versions précédentes, la BlueXP ransomware protection détectait les politiques d'autres outils, vous permettant uniquement de modifier la politique de détection. Avec cette version, vous pouvez désormais remplacer les politiques de snapshot et de sauvegarde par les politiques de BlueXP ransomware protection ou continuer à utiliser les politiques d'autres outils.
 
 Pour plus de détails, reportez-vous àlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Protéger les charges de travail"] .
 
@@ -385,7 +385,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-setting
 
 
 
-== 1 juillet 2024
+== 1er juillet 2024
 
 
 
@@ -583,7 +583,7 @@ Vous pouvez désormais afficher davantage de détails médico-légaux pour enqu�
 
 === Processus de récupération
 
-Le processus de récupération a été amélioré.  Vous pouvez désormais récupérer volume par volume ou tous les volumes d’une charge de travail. https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-recover.html["En savoir plus sur la récupération après une attaque de ransomware (après la neutralisation des incidents)"] .
+Le processus de récupération a été amélioré. Vous pouvez désormais récupérer volume par volume ou tous les volumes d’une charge de travail. https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-recover.html["En savoir plus sur la récupération après une attaque de ransomware (après la neutralisation des incidents)"] .
 
 https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["En savoir plus sur la BlueXP ransomware protection"] .
 
