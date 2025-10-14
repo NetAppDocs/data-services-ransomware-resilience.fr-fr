@@ -25,10 +25,10 @@ Pour utiliser Ransomware Resilience, vous devez remplir les conditions préalabl
 * L'agent de la console doit avoir le `cloudmanager-ransomware-protection` conteneur dans un état actif.
 * Au moins un système de console avec un cluster ONTAP sur site NetApp ou Cloud Volumes ONTAP dans AWS ou Azure.  Ransomware Resilience prend en charge les protocoles NAS (NFS et SMB) et SAN (iSCSI, FC et NVMe).
 +
-** Les clusters ONTAP ou Cloud Volumes ONTAP avec la version 9.11.1 ou supérieure du système d'exploitation ONTAP sont pris en charge.
+** La résilience aux ransomwares est prise en charge avec les clusters ONTAP ou Cloud Volumes ONTAP avec la version ONTAP 9.11.1 ou supérieure.
 +
 
-NOTE: Les charges de travail SAN sont prises en charge uniquement dans ONTAP 9.17.1 et versions ultérieures.
+NOTE: Si vous prévoyez d’utiliser Ransomware Resilience sur des charges de travail SAN, vous devez exécuter ONTAP 9.17.1 ou une version ultérieure.
 
 ** Si vos clusters ONTAP locaux ou Cloud Volumes ONTAP dans AWS ou dans le cloud Azure ne sont pas déjà intégrés dans la console, vous avez besoin d’un agent de console.
 +
@@ -61,7 +61,7 @@ Pour plus de détails sur les licences, reportez-vous àlink:concept-ransomware-
 
 
 
-== Pour les sauvegardes de données
+== Sauvegardes de données
 
 * Un compte dans NetApp StorageGRID, AWS S3, Azure Blob ou Google Cloud Platform pour les cibles de sauvegarde et les autorisations d'accès définies.
 +
@@ -72,6 +72,12 @@ Se référer à la https://docs.netapp.com/us-en/console-setup-admin/reference-p
 Ransomware Resilience permet de configurer une destination de sauvegarde via l'option Paramètres. Voir link:rp-use-settings.html["Configurer les paramètres"] .
 
 
+
+
+
+== Comportement suspect de l'utilisateur
+
+Pour que Ransomware Resilience fournisse des alertes sur les comportements suspects des utilisateurs, vous devez configurer un agent d’activité utilisateur. Pour plus d'informations, voir link:suspicious-user-activity.html["Configurer la détection des activités suspectes des utilisateurs dans NetApp Ransomware Resilience"].
 
 
 

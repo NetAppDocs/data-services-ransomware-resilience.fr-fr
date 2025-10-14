@@ -52,6 +52,7 @@ image:screen-settings-alert-drill-configure.png["Configurer la page d'exercice d
 .. Sélectionnez un système de test.
 .. Sélectionnez un SVM de stockage de test.
 .. Si vous avez sélectionné une machine virtuelle de stockage CIFS (SMB), les champs **Nom d'utilisateur** et **Mot de passe** s'affichent.  Saisissez le nom d’utilisateur et le mot de passe de la machine virtuelle de stockage.
+.. Sélectionnez le type d’exercice de préparation. Pour une récupération manuelle après une violation de données de chiffrement, choisissez **Récupération personnalisée**. Pour récupérer une activité utilisateur suspecte, choisissez **Violation de données**.
 .. Saisissez le nom d’une nouvelle charge de travail de test à créer.  N'incluez pas de tirets dans le nom.
 
 
@@ -84,11 +85,10 @@ image:screen-dashboard.png["Page du tableau de bord affichant le bouton Exécute
 ** OU, à partir de la page Paramètres, dans la carte d’exercice de préparation, sélectionnez *Démarrer*.
 
 
-. Si vous avez déjà configuré l'exercice de préparation, après avoir sélectionné *Démarrer*, l'exercice de préparation commence.
 
 
 
-NOTE: Une fois l'exercice démarré, vous ne pouvez pas modifier la configuration de l'exercice de préparation.  Vous pouvez le réinitialiser pour recommencer.
+NOTE: Vous ne pouvez pas modifier la configuration de l'exercice de préparation pendant que l'exercice est en cours d'exécution. Vous pouvez réinitialiser la perceuse pour l'arrêter et modifier la configuration.
 
 
 
