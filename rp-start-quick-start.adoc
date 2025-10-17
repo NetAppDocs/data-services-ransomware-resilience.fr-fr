@@ -12,30 +12,57 @@ summary: Démarrez avec NetApp Ransomware Resilience en quelques étapes.
 
 
 [role="lead"]
-Voici un aperçu des étapes nécessaires pour démarrer avec NetApp Ransomware Resilience. Les liens à l’intérieur de chaque étape vous mènent à une page qui fournit plus de détails.
+Comprenez les étapes de haut niveau que vous devez suivre pour configurer la résilience aux ransomwares et protéger vos charges de travail.
+
+Suivez les liens à chaque étape pour des informations détaillées.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Un"]Réviser les prérequis
 [role="quick-margin-para"]
-link:rp-start-prerequisites.html["Assurez-vous que votre système répond à ces exigences"] .
+Ces tâches nécessitent le rôle _Console admin_.
+
+[role="quick-margin-list"]
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html#agent-installation["Assurez-vous d'avoir installé un agent de console"^]
+* link:rp-start-prerequisites.html["Assurez-vous que votre système répond aux exigences"]
+* link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-roles.html["Examiner les rôles des utilisateurs de Ransomware Resilience et attribuer des autorisations aux utilisateurs accédant à Ransomware Resilience"]
+* link:rp-start-licenses.html["Configurer les licences"]
+
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"]Configurer la résilience aux ransomwares
-[role="quick-margin-list"]
-* link:rp-start-setup.html["Préparez NetApp StorageGRID, Amazon Web Services, Google Cloud Platform ou Microsoft Azure comme destination de sauvegarde"] .
-* link:rp-start-setup.html["Configurer un agent de console"] .
-* link:rp-start-licenses.html["Configurer les licences"] .
-* link:rp-start-discover.html["Découvrir les charges de travail dans la console"] .
-* link:rp-start-setup.html["Configurer les destinations de sauvegarde"] .
-* link:rp-start-setup.html["Activer éventuellement la détection des menaces"] .
-* link:rp-start-simulate.html["En option, effectuez un exercice de préparation aux attaques de ransomware"] .
-
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"]Quelle est la prochaine étape ?
 [role="quick-margin-para"]
-Après avoir configuré Ransomware Resilience, voici ce que vous pouvez faire ensuite.
+Ces tâches nécessitent le rôle _Ransomware Resilience admin_.
 
 [role="quick-margin-list"]
-* link:rp-use-dashboard.html["Afficher l'état de protection de la charge de travail sur le tableau de bord"] .
-* link:rp-use-protect.html["Protéger les charges de travail"] .
-* link:rp-use-alert.html["Répondre à la détection d'attaques potentielles de ransomware"] .
-* link:rp-use-recover.html["Se remettre d'une attaque (après neutralisation des incidents)"] .
+* link:rp-start-discover.html["Découvrir les charges de travail dans la console"]
+* link:rp-use-dashboard.html["Afficher l'état de protection de la charge de travail sur le tableau de bord"]
+* link:rp-start-simulate.html["En option, effectuez un exercice de préparation aux attaques de ransomware"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"]Configurer la protection et la détection dans Ransomware Resilience
+[role="quick-margin-para"]
+Ces tâches nécessitent le rôle _Ransomware Resilience admin_.  La configuration d'une activité de comportement utilisateur suspecte nécessite le rôle supplémentaire _Ransomware Resilience user behavior admin_.
+
+[role="quick-margin-list"]
+* link:rp-use-protect.html["Protéger les charges de travail"]
++
+** En option,link:suspicious-user-activity.html["améliorer la protection en configurant la détection des activités suspectes des utilisateurs"]
+
+
+* Vous pouvez également configurer les destinations de sauvegarde :
++
+** link:rp-start-setup.html["Préparez NetApp StorageGRID, Amazon Web Services, Google Cloud Platform ou Microsoft Azure comme destination de sauvegarde"] .
+** link:rp-start-setup.html["Configurer les destinations de sauvegarde"]
+
+
+* link:rp-use-alert.html["Répondre à la détection d'attaques potentielles de ransomware"]
+* link:rp-use-recover.html["Se remettre d'une attaque (après neutralisation des incidents)"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatre"]Quelle est la prochaine étape ?
+[role="quick-margin-para"]
+Après avoir configuré la protection dans Ransomware Resilience, voici ce que vous pouvez faire ensuite.
+
+[role="quick-margin-list"]
+* link:rp-use-protect-classify.html["Activer la classification des données pour identifier les risques de gouvernance et de sécurité"]
+* link:rp-use-settings.html#connect-to-a-security-and-event-management-system-siem-for-threat-analysis-and-detection["Envoyer des alertes au SIEM"]
+* link:p-use-reports.html["Téléchargez des rapports d'alerte, de protection, d'exercice de préparation, de récupération ou de synthèse"]
 
