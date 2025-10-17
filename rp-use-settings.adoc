@@ -209,9 +209,6 @@ Pour plus de détails sur la gestion de votre stockage GCP dans la console, repo
 .Étapes
 . Dans la page *Paramètres > Destinations de sauvegarde*, sélectionnez *Ajouter*.
 . Entrez un nom pour la destination de sauvegarde.
-+
-image:screen-settings-backup-destination-gcp.png["Page des destinations de sauvegarde"]
-
 . Sélectionnez *Google Cloud Platform*.
 . Sélectionnez la flèche vers le bas à côté de chaque paramètre et saisissez ou sélectionnez des valeurs :
 +
@@ -219,6 +216,9 @@ image:screen-settings-backup-destination-gcp.png["Page des destinations de sauve
 +
 *** Créer un nouveau bucket.  Entrez la clé d'accès et la clé secrète.
 *** Saisissez ou sélectionnez votre projet et votre région Google Cloud Platform.
++
+image:screen-settings-backup-destination-gcp.png["Page des destinations de sauvegarde"]
+
 
 
 ** *Cryptage* : Si vous créez un nouveau bucket, saisissez les informations de clé de cryptage fournies par le fournisseur.  Si vous avez choisi un bucket existant, les informations de chiffrement sont déjà disponibles.
