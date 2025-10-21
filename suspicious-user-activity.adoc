@@ -14,7 +14,7 @@ summary: La détection d’activité utilisateur suspecte dans Ransomware Resili
 [role="lead"]
 Ransomware Resilience prend en charge la détection des comportements suspects des utilisateurs dans les politiques de détection, vous permettant de traiter les incidents de ransomware au niveau de l'utilisateur.
 
-Ransomware Resilience détecte l'activité suspecte des utilisateurs en analysant les événements d'activité des utilisateurs générés par FPolicy dans ONTAP. Pour collecter les données d’activité des utilisateurs, vous devez déployer un ou plusieurs agents d’activité des utilisateurs. L'agent est un serveur Linux ou une machine virtuelle avec connectivité aux appareils de votre locataire.
+Ransomware Resilience détecte l'activité suspecte des utilisateurs en analysant les événements d'activité des utilisateurs générés par FPolicy dans ONTAP. Pour collecter des données d’activité utilisateur, vous devez déployer un ou plusieurs agents d’activité utilisateur. L'agent est un serveur Linux ou une machine virtuelle avec connectivité aux appareils de votre locataire.
 
 
 
@@ -24,8 +24,8 @@ Au moins un agent d’activité utilisateur doit être installé pour activer la
 
 Un agent peut héberger plusieurs collecteurs de données. Les collecteurs de données envoient les données à un emplacement SaaS pour analyse. Il existe deux types de collectionneurs :
 
-* le **collecteur de données** collecte les données d'activité des utilisateurs à partir d' ONTAP.
-* le **connecteur d'annuaire utilisateur** se connecte à votre annuaire pour mapper les identifiants utilisateur aux noms d'utilisateur.
+* Le **collecteur de données** collecte les données d’activité des utilisateurs à partir d’ ONTAP.
+* Le **connecteur d'annuaire utilisateur** se connecte à votre annuaire pour mapper les identifiants utilisateur aux noms d'utilisateur.
 
 
 Les collecteurs sont configurés dans les paramètres de résilience aux ransomwares.
@@ -34,7 +34,7 @@ Les collecteurs sont configurés dans les paramètres de résilience aux ransomw
 
 == Activer la détection des activités suspectes des utilisateurs
 
-*Rôle de console requis* Pour effectuer cette tâche, vous avez besoin du rôle d'administrateur du comportement utilisateur Ransomware Resilience. Vous ne pouvez pas effectuer cette tâche avec le rôle d’administrateur Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
+*Rôle de console requis* Pour activer la détection d'activité utilisateur suspecte, vous avez besoin du rôle d'administrateur de l'organisation.  Pour les configurations ultérieures en cas d’activité utilisateur suspecte, vous avez besoin du rôle d’administrateur du comportement utilisateur Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^].
 
 
 
@@ -46,7 +46,7 @@ Les agents d'activité utilisateur sont des environnements exécutables pour les
 
 ==== Exigences
 
-Pour installer un agent d'activité utilisateur, vous avez besoin d'un hôte ou d'une machine virtuelle avec l'une des exigences de système d'exploitation et de serveur prises en charge suivantes.
+Pour installer un agent d’activité utilisateur, vous avez besoin d’un hôte ou d’une machine virtuelle qui répond aux exigences de système d’exploitation et de serveur prises en charge suivantes.
 
 **Configuration requise pour le système d'exploitation**
 

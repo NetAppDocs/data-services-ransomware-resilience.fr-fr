@@ -142,7 +142,7 @@ La page Alertes apparaît.
 
 En consultant l’onglet Alertes, vous pouvez identifier s’il s’agit d’une activité malveillante ou d’un comportement anormal de l’utilisateur.
 
-Vous devez avoir configuré un agent d’activité utilisateur et activé une politique de protection avec détection du comportement utilisateur pour afficher la détection au niveau utilisateur. Lorsque la détection du comportement de l'utilisateur est activée, la colonne *Utilisateur suspect* apparaît dans le tableau de bord Alertes ; elle ne s'affiche pas lorsque la détection du comportement de l'utilisateur n'est pas activée. Pour activer la détection des utilisateurs suspects, voirlink:suspicious-user-activity.html["Activité utilisateur suspecte"] .
+Vous devez avoir configuré un agent d’activité utilisateur et activé une politique de protection avec détection du comportement utilisateur pour afficher les alertes au niveau utilisateur. Lorsque la détection du comportement de l'utilisateur est activée, la colonne *Utilisateur suspect* apparaît dans le tableau de bord Alertes ; elle ne s'affiche pas lorsque la détection du comportement de l'utilisateur n'est pas activée.  Pour activer la détection des utilisateurs suspects, voirlink:suspicious-user-activity.html["Activité utilisateur suspecte"] .
 
 
 NOTE: Si vous utilisez NetApp Data Infrastructure Insights (DII) Workload Security, il est recommandé d'utiliser les mêmes agents Workload Security pour Ransomware Resilience. Vous n'avez pas besoin de déployer des agents Workload Security distincts pour Ransomware Resilience. Cependant, l'utilisation des mêmes agents Workload Security nécessite une relation de couplage entre l'organisation de la console Ransomware Resilience et le locataire DII Storage Workload Security. Contactez votre représentant de compte pour activer ce couplage.
@@ -183,7 +183,7 @@ Si vous avez configuré la détection des utilisateurs suspects pour afficher le
 . Dans le menu Résilience aux ransomwares, sélectionnez *Alertes*.
 . Sélectionnez une alerte.
 . Passez en revue les incidents dans l’alerte.
-. Pour empêcher un utilisateur suspect d'accéder à votre environnement surveillé par la console, sélectionnez *Bloquer* sous le nom de l'utilisateur.
+. Pour bloquer un utilisateur suspect dans votre environnement, sélectionnez *Bloquer* sous le nom de l'utilisateur.
 
 
 
@@ -223,7 +223,7 @@ Vous pouvez ignorer les faux positifs ou décider de récupérer vos données im
 Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à une attaque potentielle de ransomware sont définitivement supprimées.
 
 
-CAUTION: Si vous ignorez une alerte, vous ne pouvez pas modifier ce statut en un autre statut et vous ne pouvez pas annuler cette modification.
+CAUTION: Si vous ignorez une alerte, vous ne pouvez pas modifier son statut ni annuler cette modification.
 
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
@@ -277,5 +277,5 @@ TIP: Si un volume comporte plusieurs alertes, vous devrez peut-être télécharg
 +
 image:screen-alerts-incidents-impacted-files.png["liste des fichiers impactés par une alerte spécifique"]
 
-. Pour cet incident, sélectionnez l'icône de téléchargement et téléchargez la liste des fichiers impactés au format CSV.
+. Pour cet incident, sélectionnez l'icône de téléchargement pour télécharger la liste des fichiers impactés au format CSV.
 
