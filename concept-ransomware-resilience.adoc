@@ -169,7 +169,9 @@ image:diagram-rp-architecture-preview3.png["Diagramme montrant l'architecture de
 
 Ransomware Resilience prend en charge les cibles de sauvegarde, les systèmes et les sources de données suivants :
 
-*Cibles de sauvegarde prises en charge*
+
+
+=== Cibles de sauvegarde prises en charge
 
 * Amazon Web Services (AWS) S3
 * Plateforme Google Cloud
@@ -177,7 +179,9 @@ Ransomware Resilience prend en charge les cibles de sauvegarde, les systèmes et
 * NetApp StorageGRID
 
 
-*Systèmes pris en charge*
+
+
+=== Systèmes pris en charge
 
 * NAS ONTAP sur site (utilisant les protocoles NFS et CIFS) avec ONTAP version 9.11.1 et supérieure
 * SAN ONTAP sur site (utilisant les protocoles FC, iSCSI et NVMe) avec ONTAP version 9.17.1 et supérieure
@@ -186,16 +190,14 @@ Ransomware Resilience prend en charge les cibles de sauvegarde, les systèmes et
 * Cloud Volumes ONTAP 9.12.1 ou supérieur pour Microsoft Azure (utilisant les protocoles NFS et CIFS)
 * Cloud Volumes ONTAP 9.17.1 ou supérieur pour AWS, Google Cloud Platform et Microsoft Azure (à l'aide des protocoles FC, iSCSI et NVMe)
 * Amazon FSx for NetApp ONTAP, qui utilise la protection autonome contre les ransomwares (ARP et non ARP/AI)
-+
-
-NOTE: ARP/AI nécessite ONTAP 9.16 ou supérieur.
 
 
 
+NOTE: L'utilisation d'ARP/AI dans ONTAP nécessite ONTAP 9.16 ou une version supérieure.  + ONTAP ne fournit pas de prise en charge de la protection contre les ransomwares pour les volumes FlexGroup , les volumes de point de montage, les volumes de chemin de montage, les volumes hors ligne et les volumes de protection des données (DP).  Assurez-vous de consulterlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html["Configurations prises en charge et non prises en charge dans ONTAP"^] .
 
-NOTE: Les éléments suivants ne sont pas pris en charge : les volumes FlexGroup , les versions ONTAP antérieures à 9.11.1, les volumes de point de montage, les volumes de chemin de montage, les volumes hors ligne et les volumes de protection des données (DP).
 
-*Sources de données de charge de travail prises en charge*
+
+=== Sources de données de charge de travail prises en charge
 
 Ransomware Resilience protège les charges de travail basées sur les applications suivantes sur les volumes de données principaux :
 
@@ -203,7 +205,6 @@ Ransomware Resilience protège les charges de travail basées sur les applicatio
 * Stockage en bloc
 * Banques de données VMware
 * Bases de données (MySQL et Oracle)
-* Plus à venir bientôt
 
 
 De plus, si vous utilisez SnapCenter ou SnapCenter pour VMware, toutes les charges de travail prises en charge par ces produits sont également identifiées dans Ransomware Resilience.  Ransomware Resilience peut protéger et récupérer ces données de manière cohérente avec la charge de travail.
