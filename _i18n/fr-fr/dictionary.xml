@@ -253,7 +253,6 @@
   <block id="4f0550f066ae72bb8c24fc3f59c323bf" category="list-text">Stockage en bloc</block>
   <block id="ed11408803c4c1aca5fbebbc43d88458" category="list-text">Banques de données VMware</block>
   <block id="3560990ee46f2f17d59094ab9e308c5e" category="list-text">Bases de données (MySQL et Oracle)</block>
-  <block id="ac52d0195d6b8f8c9196f4a11d911326" category="paragraph">De plus, si vous utilisez SnapCenter ou SnapCenter pour VMware, toutes les charges de travail prises en charge par ces produits sont également identifiées dans Ransomware Resilience.  Ransomware Resilience peut protéger et récupérer ces données de manière cohérente avec la charge de travail.</block>
   <block id="02f360fe822afa82c0f600943169df7e" category="section-title">Termes qui pourraient vous aider à vous protéger contre les ransomwares</block>
   <block id="77460e2b891748333455193aadd137d8" category="paragraph">Il pourrait être utile de comprendre certains termes liés à la protection contre les ransomwares.</block>
   <block id="826a4e8d8facce6f785b2a404538e6cd" category="list-text">*Protection* : La protection dans Ransomware Resilience signifie garantir que des instantanés et des sauvegardes immuables se produisent régulièrement dans un domaine de sécurité différent à l'aide de politiques de protection.</block>
@@ -572,7 +571,6 @@
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Trois</block>
   <block id="d50e8172d497c020af4e234d3280aa47" category="inline-link-macro">Afficher l'état de protection de la charge de travail sur le tableau de bord</block>
   <block id="347a92b70b3c471a8a681a4b4a0c9256" category="inline-link-macro">Répondre à la détection d'attaques potentielles de ransomware</block>
-  <block id="063e9c9c189a9f6aaad2b0b511ff7b3f" category="list-text"><block ref="b5ea4db5c411dc6348eb99be9283796b" category="inline-link-macro-rx"></block> .</block>
   <block id="fc8492dd3eefdbcdcd34f8d91982e7a9" category="inline-link-macro">Se remettre d'une attaque (après neutralisation des incidents)</block>
   <block id="34966ee9421e907a190b85aa1680ce01" category="summary">Pour utiliser Ransomware Resilience, effectuez quelques étapes pour le configurer.</block>
   <block id="239718284ef31f1d7ca7a73645e14dd2" category="doc">Configurer la NetApp Ransomware Resilience</block>
@@ -910,21 +908,7 @@
   <block id="a5584fd777c131bf3f216931a3952c37" category="list-text">Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.</block>
   <block id="0c494aaba0bbfa24f1d3a7438930b616" category="list-text">Sélectionnez une charge de travail, sélectionnez l'icône *Actions*… à droite et sélectionnez *Modifier le nom de la charge de travail*.</block>
   <block id="b7ac3f69f0c0ac25814be4d03ba11c24" category="list-text">Saisissez le nouveau nom de la charge de travail et sélectionnez *Enregistrer*.</block>
-  <block id="da654f624b17520b58f56cd7c8a9f769" category="summary">Grâce à NetApp Ransomware Resilience, vous pouvez afficher l’état de la charge de travail et protéger les charges de travail.</block>
-  <block id="b05791264bdc7b222293c51d378f16d8" category="doc">Utiliser la NetApp Ransomware Resilience</block>
-  <block id="7e1d67d835e00f3989833a13c507a912" category="paragraph">Avec NetApp Ransomware Resilience, vous pouvez afficher l'état de la charge de travail et protéger les charges de travail.</block>
-  <block id="66e3fc6226503a1545683261aa615c2e" category="inline-link-macro">Découvrez les charges de travail dans Ransomware Resilience</block>
-  <block id="11169713ef219030e085aad80deaef78" category="list-text"><block ref="d9a82549307896e39722c8368294b0f7" category="inline-link-macro-rx"></block> .</block>
-  <block id="8ae38ddd8686d8865973c999b7665ad0" category="inline-link-macro">Afficher la protection et l'état de la charge de travail à partir du tableau de bord</block>
-  <block id="85799affb57a59ca2d5e76e59434ce35" category="list-text"><block ref="4303e5d19bf38f5d41c5f6787972e5c8" category="inline-link-macro-rx"></block> .</block>
-  <block id="8b4a0dc38e356222731815227b0e1e34" category="list-text">Examinez et appliquez les recommandations de protection contre les ransomwares.</block>
-  <block id="2206c214072c87c16fb7def537e52304" category="list-text"><block ref="2b2daeeb32402291362fa9fa843a5c7e" category="inline-link-macro-rx"></block>:</block>
-  <block id="01d9db102d1bd61a6c3336ec537d1d6b" category="list-text">Attribuez une stratégie de protection contre les ransomwares aux charges de travail.</block>
-  <block id="557cf3a90ba86c7dcbdd7df658946ddc" category="list-text">Augmentez la protection des applications pour prévenir de futures attaques de ransomware.</block>
-  <block id="39eb13fe6281f202063b8531a23fd007" category="list-text">Créer, modifier ou supprimer une stratégie de protection.</block>
   <block id="565c83689e020f29cdb2b1a2a0116b1a" category="inline-link-macro">Se remettre d'une attaque</block>
-  <block id="eb6896c0b72086313bce0e4ad75e5559" category="list-text"><block ref="eb5dab1cbde9ee264030dc77418dde97" category="inline-link-macro-rx"></block>(après que les incidents soient neutralisés).</block>
-  <block id="0a3dc5fda7d701cd5fc9a0ceb57afb3f" category="list-text"><block ref="9f0b279394cf25f00a608a52b5aed0b2" category="inline-link-macro-rx"></block> .</block>
   <block id="bc1b76060f49fe8ad404d389d8431371" category="summary">Améliorez la sécurité et la confidentialité de vos données avec NetApp Data Classification pour identifier si vos données contiennent des informations personnelles identifiables ou privées.</block>
   <block id="e00e52239c81eaad00507b4b0b815570" category="doc">Recherchez des informations personnelles identifiables avec la NetApp Data Classification dans Ransomware Resilience</block>
   <block id="604880f6f585767eee17ec85b3c76533" category="inline-link-macro">Classification des données</block>
@@ -1897,7 +1881,6 @@
   <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">Démarrage rapide</block>
   <block id="03a0606ea5e305ef55dd39ee839003fd" category="sidebar">Configurer les destinations de sauvegarde et activer la détection des menaces</block>
   <block id="8bbd68b188344ab54d9a5aa4369f8add" category="sidebar">Utiliser la résilience aux ransomwares</block>
-  <block id="1b8f24b7585f7f77c98a15695ae97523" category="sidebar">Présentation de la résilience aux ransomwares</block>
   <block id="20efa84cce28541d6712947d04bd7aff" category="sidebar">Afficher l'état de la charge de travail à l'aide du tableau de bord</block>
   <block id="166351bd2ed187c21a26c5609ef2768c" category="sidebar">Recherchez des informations personnelles identifiables avec la NetApp Data Classification</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs et communauté</block>
@@ -2074,4 +2057,6 @@
   <block id="2256fdd13b41cd806db98cd42c5b498c" category="list-text">Un compte dans NetApp StorageGRID, AWS S3, Azure Blob ou Google Cloud Platform pour les cibles de sauvegarde avec les autorisations d'accès appropriées configurées.</block>
   <block id="27bfb5502a8db50d09f593ce1b77b181" category="list-text">Connectez-vous à l'interface de ligne de commande du cluster ONTAP en tant qu'utilisateur administrateur.</block>
   <block id="14e79e90c6d487ebb867aa7b0f88bf25" category="list-text">Retournez à la NetApp Console pour utiliser la résilience face aux ransomwares.</block>
+  <block id="0d2fa76effcb3dce9fea42e1ccddfc30" category="paragraph">Si vous utilisez SnapCenter ou SnapCenter pour VMware, toutes les charges de travail prises en charge par ces produits sont également identifiées dans Ransomware Resilience. Ransomware Resilience peut protéger et récupérer ces données de manière cohérente avec la charge de travail.</block>
+  <block id="77750efa6f5ff153acdc42067058017f" category="section-title">10 novembre 2025</block>
 </blocks>

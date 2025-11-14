@@ -33,8 +33,6 @@ indexpage:
       url: "/rp-start-simulate.html"
   - title: Utiliser la résilience aux ransomwares
     links:
-    - title: Présentation de la résilience aux ransomwares
-      url: "/rp-use-overview.html"
     - title: Découvrir les charges de travail
       url: "/rp-start-discover.html"
     - title: Afficher l'état de la charge de travail à l'aide du tableau de bord

@@ -207,7 +207,7 @@ Ransomware Resilience protège les charges de travail basées sur les applicatio
 * Bases de données (MySQL et Oracle)
 
 
-De plus, si vous utilisez SnapCenter ou SnapCenter pour VMware, toutes les charges de travail prises en charge par ces produits sont également identifiées dans Ransomware Resilience.  Ransomware Resilience peut protéger et récupérer ces données de manière cohérente avec la charge de travail.
+Si vous utilisez SnapCenter ou SnapCenter pour VMware, toutes les charges de travail prises en charge par ces produits sont également identifiées dans Ransomware Resilience. Ransomware Resilience peut protéger et récupérer ces données de manière cohérente avec la charge de travail.
 
 
 
