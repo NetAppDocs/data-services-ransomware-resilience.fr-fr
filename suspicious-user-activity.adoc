@@ -52,8 +52,6 @@ Pour installer un agent d’activité utilisateur, vous avez besoin d’un hôte
 
 [cols="2"]
 |===
-
-
 | Système opérateur | Versions prises en charge 
 
 
@@ -92,6 +90,19 @@ Le serveur doit répondre aux exigences minimales suivantes :
 * **Espace disque** : 35 Go d'espace disque libre
 
 
+**Prise en charge des fournisseurs de services cloud**
+
+La détection des activités suspectes des utilisateurs est disponible avec AWS et Azure dans les régions suivantes :
+
+|===
+| Fournisseur de cloud | Région 
+
+
+| AWS | Est des États-Unis (us-east-1) 
+
+
+| Azuré | Est des États-Unis 
+|===
 .Étapes
 . Si c'est la première fois que vous créez un agent d'activité utilisateur, accédez au **Tableau de bord**. Dans la mosaïque **Activité utilisateur**, sélectionnez **Activer**.
 +
