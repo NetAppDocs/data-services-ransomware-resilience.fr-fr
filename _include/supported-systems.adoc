@@ -2,14 +2,34 @@
 :allow-uri-read: 
 
 
-* NAS ONTAP sur site (utilisant les protocoles NFS et CIFS) avec ONTAP version 9.11.1 et supérieure
-* SAN ONTAP sur site (utilisant les protocoles FC, iSCSI et NVMe) avec ONTAP version 9.17.1 et supérieure
-* Cloud Volumes ONTAP 9.11.1 ou supérieur pour AWS (utilisant les protocoles NFS et CIFS)
-* Cloud Volumes ONTAP 9.11.1 ou supérieur pour Google Cloud Platform (utilisant les protocoles NFS et CIFS)
-* Cloud Volumes ONTAP 9.12.1 ou supérieur pour Microsoft Azure (utilisant les protocoles NFS et CIFS)
-* Cloud Volumes ONTAP 9.17.1 ou supérieur pour AWS, Google Cloud Platform et Microsoft Azure (à l'aide des protocoles FC, iSCSI et NVMe)
-* Amazon FSx for NetApp ONTAP, qui utilise la protection autonome contre les ransomwares (ARP et non ARP/AI)
+|===
+| Environnement | Protocole | Versions prises en charge 
 
 
+| Amazon FSx for NetApp ONTAP* | NFS, CIFS et SAN | S/O 
 
-NOTE: L'utilisation d'ARP/AI dans ONTAP nécessite ONTAP 9.16 ou une version supérieure.  + ONTAP ne fournit pas de prise en charge de la protection contre les ransomwares pour les volumes FlexGroup , les volumes de point de montage, les volumes de chemin de montage, les volumes hors ligne et les volumes de protection des données (DP).  Assurez-vous de consulterlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html["Configurations prises en charge et non prises en charge dans ONTAP"^] .
+
+.2+| Cloud Volumes ONTAP pour AWS | CIFS et NFS | 9.11.1 et versions ultérieures 
+
+
+| SAN (FC, iSCSI et NVMe) | 9.17.1 et versions ultérieures 
+
+
+.2+| Cloud Volumes ONTAP pour Google Cloud Platform | CIFS et NFS | 9.11.1 et versions ultérieures 
+
+
+| SAN (FC, iSCSI et NVMe) | 9.17.1 et versions ultérieures 
+
+
+.2+| Cloud Volumes ONTAP pour Microsoft Azure | CIFS et NFS | 9.12.1 et versions ultérieures 
+
+
+| SAN (FC, iSCSI et NVMe) | 9.17.1 et versions ultérieures 
+
+
+.2+| ONTAP (sur site) | CIFS et NFS | 9.11.1 et versions ultérieures 
+
+
+| SAN (FC, iSCSI et NVMe) | 9.17.1 et versions ultérieures 
+|===
+Amazon FSx for NetApp ONTAP utilise la protection autonome contre les ransomwares (ARP) et non ARP/AI.  Pour plus d'informations sur la différence, voirlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/#arp-ai["ARP/IA"^] .

@@ -92,7 +92,7 @@ Le serveur doit répondre aux exigences minimales suivantes :
 
 **Prise en charge des fournisseurs de services cloud**
 
-La détection des activités suspectes des utilisateurs est disponible avec AWS et Azure dans les régions suivantes :
+Les données d'activité suspecte des utilisateurs peuvent être stockées dans AWS et Azure dans les régions suivantes :
 
 |===
 | Fournisseur de cloud | Région 
