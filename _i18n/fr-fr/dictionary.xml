@@ -1995,7 +1995,6 @@
   <block id="e29d7c0b36af68edd13ebac84f15b44b" category="cell">Fournisseur de cloud</block>
   <block id="f447ac856e7e72435904956e3b15f433" category="cell">Région</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="cell">AWS</block>
-  <block id="90f74c5c50c42b91275c19e2cccad976" category="cell">Est des États-Unis (us-east-1)</block>
   <block id="3a580f142203677f1f0bc30898f63f53" category="cell">Azuré</block>
   <block id="3c110de67497eb3f8d4c100e43101c81" category="cell">Est des États-Unis</block>
   <block id="0ba29c6a1afacf586b03a26162c72274" category="cell">Environnement</block>
@@ -2069,4 +2068,7 @@
   <block id="daf104544b5203a46e1580e1b8583f1f" category="paragraph">L’association des informations d’identification NSS à votre compte de NetApp Console est différente du compte NSS associé à une connexion utilisateur de console.</block>
   <block id="5bc1315a63455544e7a917a7cc968939" category="paragraph">Ces informations d’identification NSS sont associées à votre ID de compte de console spécifique. Les utilisateurs appartenant à l'organisation Console peuvent accéder à ces informations d'identification depuis *Support &gt; Gestion NSS*.</block>
   <block id="7687b0a57d5cb728d9fb892dfc814715" category="paragraph">Ces actions permettent à la console d'utiliser votre compte NSS pour des tâches telles que les téléchargements de licences, la vérification des mises à niveau de logiciels et les futures inscriptions au support.</block>
+  <block id="24dd233beea6d20446b604bba13115c0" category="list-text">Asie-Pacifique (Sydney) (ap-sud-est-2)</block>
+  <block id="5c024c0f8096e0fba857f661afe2dbd0" category="list-text">Europe (Francfort) (eu-central-1)</block>
+  <block id="d605e764d56b8615ebf6dd5f87998855" category="list-text">États-Unis Est (Virginie du Nord) (us-east-1)</block>
 </blocks>

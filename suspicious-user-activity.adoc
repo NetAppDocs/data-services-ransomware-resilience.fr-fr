@@ -98,11 +98,17 @@ Les données d'activité suspecte des utilisateurs peuvent être stockées dans 
 | Fournisseur de cloud | Région 
 
 
-| AWS | Est des États-Unis (us-east-1) 
+| AWS  a| 
+* Asie-Pacifique (Sydney) (ap-sud-est-2)
+* Europe (Francfort) (eu-central-1)
+* États-Unis Est (Virginie du Nord) (us-east-1)
+
+
 
 
 | Azuré | Est des États-Unis 
 |===
+ and
 .Étapes
 . Si c'est la première fois que vous créez un agent d'activité utilisateur, accédez au **Tableau de bord**. Dans la mosaïque **Activité utilisateur**, sélectionnez **Activer**.
 +
