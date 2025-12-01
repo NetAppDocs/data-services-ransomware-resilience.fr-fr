@@ -108,7 +108,6 @@ Les données d'activité suspecte des utilisateurs peuvent être stockées dans 
 
 | Azuré | Est des États-Unis 
 |===
- and
 .Étapes
 . Si c'est la première fois que vous créez un agent d'activité utilisateur, accédez au **Tableau de bord**. Dans la mosaïque **Activité utilisateur**, sélectionnez **Activer**.
 +
