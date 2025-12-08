@@ -83,7 +83,7 @@ La priorité de la charge de travail (critique, standard, importante) est déter
 link:rp-use-protect.html["En savoir plus sur la priorité ou l'importance de la charge de travail"] .
 
 .Quelles charges de travail la résilience face aux ransomwares prend-elle en charge ?
-Ransomware Resilience peut identifier les charges de travail suivantes : Oracle, MySQL, partages de fichiers, stockage en blocs, machines virtuelles et magasins de données de machines virtuelles.
+Ransomware Resilience peut identifier les charges de travail suivantes : Oracle, partages de fichiers, stockage par blocs, machines virtuelles et banques de données de machines virtuelles.
 
 Si vous utilisez SnapCenter ou SnapCenter pour VMware, toutes les charges de travail prises en charge par ces produits sont également identifiées dans Ransomware Resilience. Ransomware Resilience peut protéger et récupérer SnapCenter et les charges de travail SnapCenter de manière cohérente.
 

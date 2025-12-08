@@ -4,17 +4,17 @@ indexpage:
   summary: NetApp Ransomware Resilience protège, détecte et prend en charge la récupération
     des charges de travail des applications et des partages de fichiers contre les
     menaces de ransomware dans le stockage sur site et dans le cloud. Ransomware Resilience
-    permet une sauvegarde et une récupération sécurisées, aidant les organisations
-    à protéger les données critiques et à maintenir la continuité des activités pour
-    Oracle, MySQL, les magasins de données VM, le stockage NAS, etc.
+    permet une sauvegarde et une restauration sécurisées, aidant les organisations
+    à protéger leurs données critiques et à maintenir la continuité de leurs activités
+    pour Oracle, les banques de données VM, le stockage NAS, et bien plus encore.
   keywords: bluexp, ransomware, anti-ransomware, cyber attack, netapp, ontap, amazon
     web services, aws, storagegrid, protection, resilience
   lead: NetApp Ransomware Resilience protège, détecte et prend en charge la récupération
     des charges de travail des applications et des partages de fichiers contre les
     menaces de ransomware dans le stockage sur site et dans le cloud. Ransomware Resilience
-    permet une sauvegarde et une récupération sécurisées, aidant les organisations
-    à protéger les données critiques et à maintenir la continuité des activités pour
-    Oracle, MySQL, les magasins de données VM, le stockage NAS, etc.
+    permet une sauvegarde et une restauration sécurisées, aidant les organisations
+    à protéger leurs données critiques et à maintenir la continuité de leurs activités
+    pour Oracle, les banques de données VM, le stockage NAS, et bien plus encore.
   tiles:
   - title: Commencer
     links:
