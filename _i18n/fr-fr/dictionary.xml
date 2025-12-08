@@ -2073,6 +2073,11 @@
   <block id="dce365633ffb688b7532470dfaf4e118" category="cell">*Protocole*</block>
   <block id="91fa08a58f816e98d83df1ce310eb825" category="cell">Le champ protocole est facultatif. Vous pouvez utiliser LDAP, LDAPS ou LDAP sur StartTLS.</block>
   <block id="f9115354bfb0b47a80e11c68936a7ec8" category="cell">Saisissez le numéro de port que vous avez choisi</block>
-  <block id="ffcb2d1f993f068c61d2776ab07c354f" category="paragraph">Fournissez les détails de mappage des attributs : * *Nom d'affichage* * *SID* (si vous utilisez LDAP) * *Nom d'utilisateur* * *ID Unix* (si vous utilisez NFS) * Si vous sélectionnez *Inclure les attributs facultatifs*, vous pouvez également ajouter une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un département, une photo, un DN de responsable ou des groupes.</block>
-  <block id="8cab6e56434342fb39a14e12391a5d3e" category="paragraph">+ Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.</block>
+  <block id="86c3d5aee71dba0d2e67a122a900b46d" category="paragraph">Fournissez les détails du mappage des attributs :</block>
+  <block id="67abd0bd8cf8f6b948416d41be7c6f6a" category="list-text">*Nom d'affichage*</block>
+  <block id="aff175f709dc693d1f9ca4c44728163a" category="list-text">*SID* (si vous utilisez LDAP)</block>
+  <block id="3b57547caa3754998fa617bd92514f25" category="list-text">*Nom d'utilisateur*</block>
+  <block id="c8a0546946d4ed57fd88fc4918d3825f" category="list-text">*ID Unix* (si vous utilisez NFS)</block>
+  <block id="1358e8e29329a97048f0688a1813071f" category="list-text">Si vous sélectionnez *Inclure les attributs facultatifs*, vous pouvez également ajouter une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un département, une photo, un DN de responsable ou des groupes.</block>
+  <block id="7703674a5321c1f23549682250a732e9" category="paragraph">Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.</block>
 </blocks>

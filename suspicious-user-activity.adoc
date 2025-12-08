@@ -190,10 +190,18 @@ Vous pouvez spécifier le niveau de forêt de la structure de répertoires comme
 image:screenshot-user-directory-connection.png["Capture d'écran de la connexion au répertoire utilisateur"]
 
 +
-Fournissez les détails de mappage des attributs : * *Nom d'affichage* * *SID* (si vous utilisez LDAP) * *Nom d'utilisateur* * *ID Unix* (si vous utilisez NFS) * Si vous sélectionnez *Inclure les attributs facultatifs*, vous pouvez également ajouter une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un département, une photo, un DN de responsable ou des groupes.
+Fournissez les détails du mappage des attributs :
 
 +
-+ Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.
+** *Nom d'affichage*
+** *SID* (si vous utilisez LDAP)
+** *Nom d'utilisateur*
+** *ID Unix* (si vous utilisez NFS)
+** Si vous sélectionnez *Inclure les attributs facultatifs*, vous pouvez également ajouter une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un département, une photo, un DN de responsable ou des groupes.
++
+Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.
+
+
 
 . Sélectionnez **Ajouter**.
 . Revenez à l’onglet Connecteurs d’annuaire utilisateur pour vérifier l’état de votre connecteur d’annuaire utilisateur. Si la création est réussie, l'état du connecteur d'annuaire utilisateur s'affiche comme *En cours d'exécution*.
