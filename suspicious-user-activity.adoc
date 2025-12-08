@@ -20,7 +20,7 @@ Ransomware Resilience détecte l'activité suspecte des utilisateurs en analysan
 
 == Agents et collectionneurs
 
-Au moins un agent d’activité utilisateur doit être installé pour activer la détection d’activité utilisateur suspecte dans Ransomware Resilience. Lorsque vous activez la fonctionnalité d’activité utilisateur suspecte à partir du tableau de bord Ransomware Resilience, vous devez fournir les informations de l’hôte de l’agent pour activer la fonctionnalité.
+Au moins un agent d’activité utilisateur doit être installé pour activer la détection d’activité utilisateur suspecte dans Ransomware Resilience. Lorsque vous activez la fonctionnalité de détection d'activité utilisateur suspecte depuis le tableau de bord Ransomware Resilience, vous devez fournir les informations relatives à l'hôte de l'agent.
 
 Un agent peut héberger plusieurs collecteurs de données. Les collecteurs de données envoient les données à un emplacement SaaS pour analyse. Il existe deux types de collectionneurs :
 
@@ -70,7 +70,7 @@ Pour installer un agent d’activité utilisateur, vous avez besoin d’un hôte
 | Oracle Linux | 8.10 (64 bits) et 9.1 (64 bits) à 9.6 (64 bits), y compris SELinux 
 
 
-| RedHat | 8.10 (64 bits), 9.1 (64 bits) à 9.6 (64 bits) et 10 (64 bits), y compris SELinux 
+| Chapeau rouge | 8.10 (64 bits), 9.1 (64 bits) à 9.6 (64 bits) et 10 (64 bits), y compris SELinux 
 
 
 | Rocheux | Rocky 9.4 (64 bits) à 9.6 (64 bits), y compris SELinux 
@@ -85,9 +85,9 @@ Pour installer un agent d’activité utilisateur, vous avez besoin d’un hôte
 
 Le serveur doit répondre aux exigences minimales suivantes :
 
-* **CPU** : 4 CŒURS
+* **Processeur** : 4 cœurs
 * **RAM** : 16 Go de RAM
-* **Espace disque** : 35 Go d'espace disque libre
+* **Espace disque** : 35 Go d’espace disque libre
 
 
 **Prise en charge des fournisseurs de services cloud**
@@ -153,31 +153,47 @@ Pour mapper les ID utilisateur aux noms d’utilisateur, vous devez créer un co
 . Dans Ransomware Resilience, accédez à *Paramètres*.
 . Dans la mosaïque Activité utilisateur, sélectionnez **Gérer**.
 . Sélectionnez l'onglet **Connecteurs d'annuaire utilisateur** puis **Ajouter**.
-. Fournissez les détails de la connexion :
+. Configurez la connexion. Saisissez les informations requises pour chaque champ.
 +
-** *Nom*
-** *Type de répertoire utilisateur*
-** *Adresse IP du serveur ou nom de domaine*
-** *Nom de la forêt ou nom de recherche*
-** *Nom de domaine BIND*
-** *Mot de passe BIND*
-** *Protocole* (ceci est facultatif)
-** *Port*
+|===
+
+
+| Champ | Description 
+
+
+| *Nom* | Saisissez un nom unique pour le connecteur d'annuaire utilisateur 
+
+
+| *Type de répertoire utilisateur* | Le type de répertoire 
+
+
+| *Adresse IP du serveur ou nom de domaine* | L'adresse IP ou le nom de domaine pleinement qualifié (FQDN) du serveur hébergeant la connexion 
+
+
+| *Nom de la forêt ou nom de recherche*  a| 
+Vous pouvez spécifier le niveau de forêt de la structure de répertoires comme nom de domaine direct (par exemple, `unit.company.com`) ou un ensemble de noms distinctifs relatifs (par exemple : `DC=unit,DC=company,DC=com`). Vous pouvez également saisir un `OU` filtrer par unité organisationnelle ou par un `CN` limiter à un utilisateur spécifique (par exemple : `CN=user,OU=engineering,DC=unit,DC=company,DC=com`).
+
+
+
+| *BIND DN* | Le DN BIND est un compte utilisateur autorisé à effectuer des recherches dans l'annuaire, tel que utilisateur@domaine.com. L'utilisateur doit disposer de l'autorisation « Lecture seule du domaine ». 
+
+
+| *Mot de passe BIND* | Le mot de passe de l'utilisateur a été fourni dans BIND DN 
+
+
+| *Protocole* | Le champ protocole est facultatif. Vous pouvez utiliser LDAP, LDAPS ou LDAP sur StartTLS. 
+
+
+| *Port* | Saisissez le numéro de port que vous avez choisi 
+|===
 +
 image:screenshot-user-directory-connection.png["Capture d'écran de la connexion au répertoire utilisateur"]
 
 +
-Fournissez les détails du mappage des attributs :
+Fournissez les détails de mappage des attributs : * *Nom d'affichage* * *SID* (si vous utilisez LDAP) * *Nom d'utilisateur* * *ID Unix* (si vous utilisez NFS) * Si vous sélectionnez *Inclure les attributs facultatifs*, vous pouvez également ajouter une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un département, une photo, un DN de responsable ou des groupes.
 
-** *Nom d'affichage*
-** *SID* (si vous utilisez LDAP)
-** *Nom d'utilisateur*
-** *ID Unix* (si vous utilisez NFS)
-** Sélectionnez *Inclure les attributs facultatifs*. Vous pouvez également inclure une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un service, une photo, un nom distinctif du responsable ou des groupes.
 +
-Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.
-
-
++ Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.
 
 . Sélectionnez **Ajouter**.
 . Revenez à l’onglet Connecteurs d’annuaire utilisateur pour vérifier l’état de votre connecteur d’annuaire utilisateur. Si la création est réussie, l'état du connecteur d'annuaire utilisateur s'affiche comme *En cours d'exécution*.
