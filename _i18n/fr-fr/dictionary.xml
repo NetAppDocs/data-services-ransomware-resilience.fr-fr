@@ -2069,8 +2069,6 @@
   <block id="8a9b2764802b622f9894a669a606f74f" category="doc">Le blocage des extensions est activé au niveau de la charge de travail.</block>
   <block id="ab47595f128d75b47b3449fcd4dfb523" category="paragraph">Lorsque vous activez le blocage des extensions, celui-ci est désormais activé au niveau de la charge de travail et non plus au niveau de la machine virtuelle de stockage.</block>
   <block id="a6493502d5fc22c0b3ccee818dc4a5a5" category="section-title">Modifier l'état d'alerte du comportement de l'utilisateur</block>
-  <block id="685b0f2db45e4fc09a06ccb4695806de" category="inline-xref-macro">Gérer les alertes</block>
-  <block id="30acfc7aa0f5ff9593d73e769de766c0" category="paragraph">Pour plus d'informations, voir <block ref="32161c93f86d45672d8429d13ea78e6b" category="inline-xref-macro-rx"></block>.</block>
   <block id="d5214a8deea026de61af736ebf8697dd" category="section-title">Prise en charge de plusieurs agents de console</block>
   <block id="1a6a565def701385358a626d6728afd8" category="paragraph">Ransomware Resilience prend désormais en charge l'utilisation de plusieurs agents Console pour gérer les mêmes systèmes.</block>
   <block id="76adc55b5a0beb97a709fbc0c204a3d0" category="paragraph">Pour plus d'informations sur les agents de console, consultez<block ref="c97584494dd542160395e5c607ae4c2c" category="inline-link-macro-rx"></block> .</block>
@@ -2089,4 +2087,6 @@
   <block id="8e19d605b8be4e3be2157e822268633f" category="list-text">Si vous sélectionnez *Inclure les attributs facultatifs*, vous pouvez également ajouter une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un département, une photo, un DN de responsable ou des groupes. Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.</block>
   <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">8 décembre 2025</block>
   <block id="4256b08931f8c14d28bbf33199e1b022" category="paragraph">Ransomware Resilience vous permet désormais de modifier le statut des alertes comportementales des utilisateurs. Vous pouvez ignorer et résoudre manuellement les alertes.</block>
+  <block id="8fe404d4b8af36b9844eb288d2706bbe" category="inline-link-macro">Gérer les alertes dans Ransomware Resilience</block>
+  <block id="869c8807275d576171cb34b892652da6" category="paragraph">Pour plus d'informations, voir <block ref="ca80a6cafecee489657bc722219fb267" category="inline-link-macro-rx"></block>.</block>
 </blocks>

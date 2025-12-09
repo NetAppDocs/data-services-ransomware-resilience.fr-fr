@@ -32,7 +32,7 @@ Lorsque vous activez le blocage des extensions, celui-ci est désormais activé 
 
 Ransomware Resilience vous permet désormais de modifier le statut des alertes comportementales des utilisateurs. Vous pouvez ignorer et résoudre manuellement les alertes.
 
-Pour plus d'informations, voir xref:rp-use-alert.html[Gérer les alertes].
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["Gérer les alertes dans Ransomware Resilience"^].
 
 
 
