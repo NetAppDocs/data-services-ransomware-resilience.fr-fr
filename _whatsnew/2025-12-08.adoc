@@ -12,7 +12,7 @@ Lorsque vous activez le blocage des extensions, celui-ci est désormais activé 
 
 === Modifier l'état d'alerte du comportement de l'utilisateur
 
-Ransomware Resilience vous permet désormais de modifier le statut des alertes comportementales des utilisateurs.  Vous pouvez ignorer et résoudre manuellement les alertes.  Vous pouvez désormais également marquer les alertes comme « En cours d'examen ».
+Ransomware Resilience vous permet désormais de modifier le statut des alertes comportementales des utilisateurs. Vous pouvez ignorer et résoudre manuellement les alertes.
 
 Pour plus d'informations, voir xref:rp-use-alert.html[Gérer les alertes].
 

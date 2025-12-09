@@ -59,7 +59,6 @@ Une alerte peut avoir l’un des statuts suivants :
 Un incident d'alerte peut présenter les états suivants :
 
 * *Nouveau* : Tous les incidents sont marqués « nouveaux » lorsqu'ils sont identifiés pour la première fois.
-* *En cours d'examen* : Vous pouvez marquer un incident comme étant en cours d'examen pendant que vous l'évaluez.
 * *Rejeté* : Si vous pensez que l'activité n'est pas une attaque de ransomware, vous pouvez modifier le statut sur « Rejeté ».
 +
 

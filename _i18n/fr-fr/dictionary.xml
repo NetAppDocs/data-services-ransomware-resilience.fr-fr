@@ -2069,7 +2069,6 @@
   <block id="8a9b2764802b622f9894a669a606f74f" category="doc">Le blocage des extensions est activé au niveau de la charge de travail.</block>
   <block id="ab47595f128d75b47b3449fcd4dfb523" category="paragraph">Lorsque vous activez le blocage des extensions, celui-ci est désormais activé au niveau de la charge de travail et non plus au niveau de la machine virtuelle de stockage.</block>
   <block id="a6493502d5fc22c0b3ccee818dc4a5a5" category="section-title">Modifier l'état d'alerte du comportement de l'utilisateur</block>
-  <block id="f143f02b29819ec9e761d9f292dea42c" category="paragraph">Ransomware Resilience vous permet désormais de modifier le statut des alertes comportementales des utilisateurs.  Vous pouvez ignorer et résoudre manuellement les alertes.  Vous pouvez désormais également marquer les alertes comme « En cours d'examen ».</block>
   <block id="685b0f2db45e4fc09a06ccb4695806de" category="inline-xref-macro">Gérer les alertes</block>
   <block id="30acfc7aa0f5ff9593d73e769de766c0" category="paragraph">Pour plus d'informations, voir <block ref="32161c93f86d45672d8429d13ea78e6b" category="inline-xref-macro-rx"></block>.</block>
   <block id="d5214a8deea026de61af736ebf8697dd" category="section-title">Prise en charge de plusieurs agents de console</block>
@@ -2079,7 +2078,6 @@
   <block id="ee1bc5da2dde4f02ef7aa47df921506a" category="doc">Gérer les alertes dans NetApp Ransomware Resilience</block>
   <block id="9a51095678260d2a753174230dbe8a88" category="paragraph">Lorsque NetApp Ransomware Resilience détecte une attaque potentielle, il affiche une alerte sur le tableau de bord et dans la zone de notifications. Ransomware Resilience prend immédiatement un instantané. Consultez le risque potentiel dans l’onglet *Alertes* de résilience aux ransomwares.</block>
   <block id="6fe459ab097d6c4270e2ad317a017b93" category="paragraph">Un incident d'alerte peut présenter les états suivants :</block>
-  <block id="afc3fd7b02af578176e65700acd6709b" category="list-text">*En cours d'examen* : Vous pouvez marquer un incident comme étant en cours d'examen pendant que vous l'évaluez.</block>
   <block id="93771318f0ad483bcb651c0ded2c6033" category="admonition">Une fois une attaque rejetée, son statut ne peut être modifié. Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à l’attaque potentielle du ransomware seront définitivement supprimées.</block>
   <block id="c95e7dd9856afddc701e5bf3b384f093" category="paragraph">Après avoir examiné les incidents, vous devez déterminer si les incidents constituent des attaques potentielles. Si elles ne constituent pas de véritables menaces, elles peuvent être ignorées.</block>
   <block id="c73a9fafaefc34f0b97adbaba4200dc9" category="paragraph">Vous pouvez ignorer les faux positifs ou décider de récupérer vos données immédiatement. Si vous ignorez l'alerte, Ransomware Resilience apprend ce comportement et l'associe à un fonctionnement normal, et ne déclenche plus d'alerte pour un tel comportement.</block>
@@ -2090,4 +2088,5 @@
   <block id="6edf03555b64b68b413469994ca42164" category="list-text">*Agent de console* - L'agent de console doit se trouver sur le même réseau que l'agent d'activité utilisateur et disposer d'une connectivité SSH à l'adresse IP de l'agent d'activité utilisateur.</block>
   <block id="8e19d605b8be4e3be2157e822268633f" category="list-text">Si vous sélectionnez *Inclure les attributs facultatifs*, vous pouvez également ajouter une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un département, une photo, un DN de responsable ou des groupes. Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.</block>
   <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">8 décembre 2025</block>
+  <block id="4256b08931f8c14d28bbf33199e1b022" category="paragraph">Ransomware Resilience vous permet désormais de modifier le statut des alertes comportementales des utilisateurs. Vous pouvez ignorer et résoudre manuellement les alertes.</block>
 </blocks>
