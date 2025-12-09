@@ -215,7 +215,6 @@
   <block id="533c17bbfdfb297420db9af0908070d6" category="inline-link">Protection autonome contre les ransomwares</block>
   <block id="cc6088539286339733631d73fb51774b" category="inline-link">NetApp Backup and Recovery</block>
   <block id="2dd00507ca85eec8a3465506e478e45f" category="inline-link">Politique ONTAP</block>
-  <block id="f2abd20c3ee58c54298223da2df91335" category="list-text">Découvre le niveau de protection actuel de chaque volume des copies instantanées NetApp et des politiques de sauvegarde, ainsi que toutes les capacités de détection intégrées. Ransomware Resilience associe ensuite cette posture de protection aux charges de travail en utilisant la sauvegarde et la récupération, les services ONTAP et les technologies NetApp telles que la protection autonome contre les ransomwares (ARP ou ARP/AI selon votre version ONTAP ), FPolicy, les politiques de sauvegarde et les politiques de snapshot. En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline-link-rx"></block> ,<block ref="2b1b7f994c6938347657a18d8edc7db7" category="inline-link-rx"></block> , et<block ref="591ebe16737e602cc342b68e859c040e" category="inline-link-rx"></block> .</block>
   <block id="d8b67a8dae92158ddb9e71a66b9532b5" category="list-text">Attribue une priorité métier à chaque charge de travail en fonction des niveaux de protection découverts automatiquement et recommande des politiques de protection pour les charges de travail en fonction de leur priorité métier.  La priorité de la charge de travail est basée sur les fréquences d’instantanés déjà appliquées à chaque volume associé à la charge de travail.</block>
   <block id="f23d5c00c473a2e87ffcd7a0eedb89b5" category="cell">*PROTÉGER*</block>
   <block id="63b3247f9021fefc99163e7f1ccaa624" category="list-text">Surveille activement les charges de travail et orchestre l'utilisation des API Backup and Recovery, SnapCenter et ONTAP en appliquant des politiques à chacune des charges de travail identifiées.</block>
@@ -680,8 +679,6 @@
   <block id="179e5ea4317177f519c688d15ef67987" category="paragraph"><block ref="179e5ea4317177f519c688d15ef67987" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e462715e9b155f4f9638da4f314c8aff" category="list-text">Sélectionnez *Exercices de préparation* et *Télécharger* pour télécharger le rapport d’exercice de préparation.</block>
   <block id="bb44ab86396f7335c45f2c99c022776c" category="summary">Si Ransomware Resilience détecte une attaque possible, une alerte apparaît sur le tableau de bord Ransomware Resilience indiquant une attaque potentielle. À ce stade, vous devez examiner le risque potentiel dans l’onglet Alertes de résilience aux ransomwares.</block>
-  <block id="1238309e873f300d76b90a5b0f3a20bc" category="doc">Gérez les alertes de ransomware détectées avec NetApp Ransomware Resilience</block>
-  <block id="5edf980bc8d23fb98c1f0d60dc6594f8" category="paragraph">Lorsque NetApp Ransomware Resilience détecte une attaque possible, il affiche une alerte sur le tableau de bord et dans la zone Notifications.  Ransomware Resilience prend immédiatement un instantané.  Consultez le risque potentiel dans l’onglet *Alertes* de résilience aux ransomwares.</block>
   <block id="0cf61fe483b7c3216a42a15a22e0ef97" category="paragraph">Si Ransomware Resilience détecte une attaque possible, une notification apparaît dans les paramètres de notification de la console et un e-mail est envoyé à l'adresse configurée. L'e-mail contient des informations sur la gravité, la charge de travail impactée et un lien vers l'alerte dans l'onglet *Alertes* de résilience aux ransomwares.</block>
   <block id="4c8cd66676ad1c434108e699d9777408" category="paragraph">Vous pouvez ignorer les faux positifs ou décider de récupérer vos données immédiatement.</block>
   <block id="899157335f0c98105a8cbc92966ba06d" category="admonition">Si vous ignorez l'alerte, Ransomware Resilience apprend ce comportement, l'associe aux opérations normales et ne déclenche plus d'alerte.</block>
@@ -703,10 +700,8 @@
   <block id="64c00e9ea78abe412d8db56dd1df0462" category="paragraph">Une alerte peut avoir l’un des statuts suivants :</block>
   <block id="adf79604cd73ac69e1173c85b1070d09" category="list-text">*Nouveau*</block>
   <block id="001af4b9160bf93cb0c3215a7180e3b7" category="list-text">*Inactif*</block>
-  <block id="0ab8632cf6795b381aaa64cb2dc1b45f" category="paragraph">Un incident d’alerte peut avoir l’un des états suivants :</block>
   <block id="be48871d3fcb22d62d5de71b2de11ab9" category="list-text">*Nouveau* : Tous les incidents sont marqués « nouveaux » lorsqu'ils sont identifiés pour la première fois.</block>
   <block id="d2b7a3286df55d9570e26ad7450dfeb9" category="list-text">*Rejeté* : Si vous pensez que l'activité n'est pas une attaque de ransomware, vous pouvez modifier le statut sur « Rejeté ».</block>
-  <block id="5295c827fac90b16880fb1c75f51694f" category="admonition">Après avoir rejeté une attaque, vous ne pouvez pas revenir en arrière.  Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à l’attaque potentielle du ransomware seront définitivement supprimées.</block>
   <block id="abcc01ccddba81d6df2f14e786d4b375" category="list-text">*Rejet* : L'incident est en cours de rejet.</block>
   <block id="135963592c039774ee41872c4fec1009" category="list-text">*Résolu* : L'incident a été résolu.</block>
   <block id="afd9740574ba951a58c825da5cfeddb3" category="list-text">*Résolution automatique* : pour les alertes de faible priorité, l'incident est automatiquement résolu si aucune mesure n'a été prise à ce sujet dans les cinq jours.</block>
@@ -768,18 +763,12 @@
   <block id="6faff9d182a89c619b1ad36913af4fa5" category="list-text">Pour lancer la récupération de la charge de travail, sélectionnez *Récupérer* la charge de travail dans le message ou sélectionnez l'onglet *Récupération*.</block>
   <block id="dbb2ae89216b8dfda3662d01ab32469f" category="paragraph">Une fois l’alerte marquée pour restauration, elle passe de l’onglet Alertes à l’onglet Récupération.</block>
   <block id="d3870301348c9947a819b7a9ed0c25df" category="section-title">Ignorer les incidents qui ne sont pas des attaques potentielles</block>
-  <block id="b0b578b8be1448972010b482195bbda8" category="paragraph">Après avoir examiné les incidents, vous devez déterminer si les incidents constituent des attaques potentielles. S’il ne s’agit pas de menaces réelles, elles peuvent être écartées.</block>
-  <block id="74583f536ee54b8803ab561a596f2bb9" category="paragraph">Vous pouvez ignorer les faux positifs ou décider de récupérer vos données immédiatement.  Si vous ignorez l'alerte, Ransomware Resilience apprend ce comportement, l'associe aux opérations normales et ne déclenche plus d'alerte sur un tel comportement.</block>
   <block id="5a5533258cfacee641d19f7f201b727f" category="paragraph">Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à une attaque potentielle de ransomware sont définitivement supprimées.</block>
-  <block id="46b4f01c45e92cd2d2fe7d4406168b5d" category="list-text">Sélectionnez un ou plusieurs incidents.  Ou sélectionnez tous les incidents en sélectionnant la case ID d’incident en haut à gauche du tableau.</block>
   <block id="c4229f2836db3c8f0198619d853bad27" category="list-text">Si vous déterminez que l’incident ne constitue pas une menace, considérez-le comme un faux positif :</block>
   <block id="a20ff2150b7b9f34f30c94111d0f2672" category="list-text">Sélectionnez l'incident.</block>
   <block id="4c8220d9b08f6a99b99ca2a31e910796" category="list-text">Sélectionnez le bouton *Modifier le statut* au-dessus du tableau.</block>
   <block id="cae6793a9f947fdb33e9ebb9c2913794" category="inline-image-macro">Page de modification du statut d'alerte</block>
   <block id="e6fe1dbe41a0d14f05208f5ee0593783" category="paragraph"><block ref="e6fe1dbe41a0d14f05208f5ee0593783" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a3766d306cdb80badf038a83067d73d3" category="list-text">Dans la boîte Modifier le statut, sélectionnez le statut *« Rejeté »*.</block>
-  <block id="0d77ad85eefae95571395461b82d0990" category="paragraph">Des informations supplémentaires sur la charge de travail et sur le fait que les copies instantanées sont supprimées s'affichent.</block>
-  <block id="982b96cbcd987b2495b15ba07dd59831" category="paragraph">Le statut de l’incident ou des incidents passe à « Ignoré ».</block>
   <block id="03449fca76164b6dcb5b9e314b4a5c2b" category="section-title">Afficher la liste des fichiers concernés</block>
   <block id="0fd4c032e8d9638089eca51930a25305" category="paragraph">Avant de restaurer une charge de travail d’application au niveau du fichier, vous pouvez afficher une liste des fichiers impactés.  Vous pouvez accéder à la page Alertes pour télécharger une liste des fichiers impactés.  Utilisez ensuite la page de récupération pour télécharger la liste et choisir les fichiers à restaurer.</block>
   <block id="6162015141ec2e05b3da3316c594dc7a" category="paragraph">Utilisez la page Alertes pour récupérer la liste des fichiers impactés.</block>
@@ -1639,7 +1628,6 @@
   <block id="75d41b8fe2ef8de56d2fd2046bb0dad3" category="list-text">Sélectionnez un **fournisseur Cloud** puis une **région**. Sélectionnez **Suivant**.</block>
   <block id="604a864dab990debb57e02cc6550cb0b" category="list-text">Fournissez les détails de l’agent d’activité de l’utilisateur :</block>
   <block id="8b67ab5f6d4b7a7c9b54a220ab393e0f" category="list-text">**Nom de l'agent d'activité utilisateur**</block>
-  <block id="40c10b55b38de651cc304b987f3b8552" category="list-text">*Agent de console* - l'agent de console doit être dans le même réseau que l'agent d'activité utilisateur et disposer d'une connectivité SSH à l'adresse IP de l'agent d'activité utilisateur.</block>
   <block id="b023c42f6578a2febd3d77169ecb00ef" category="list-text">*Nom DNS ou adresse IP de la VM*</block>
   <block id="95a1594aeff80ead5b4f2710e4acb1c5" category="list-text">*Clé SSH VM*</block>
   <block id="1dc03f52e7a38f5b6ec91f4303e010ad" category="inline-image-macro">Capture d'écran de l'interface d'ajout d'agent d'activité.</block>
@@ -2078,6 +2066,28 @@
   <block id="aff175f709dc693d1f9ca4c44728163a" category="list-text">*SID* (si vous utilisez LDAP)</block>
   <block id="3b57547caa3754998fa617bd92514f25" category="list-text">*Nom d'utilisateur*</block>
   <block id="c8a0546946d4ed57fd88fc4918d3825f" category="list-text">*ID Unix* (si vous utilisez NFS)</block>
-  <block id="1358e8e29329a97048f0688a1813071f" category="list-text">Si vous sélectionnez *Inclure les attributs facultatifs*, vous pouvez également ajouter une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un département, une photo, un DN de responsable ou des groupes.</block>
-  <block id="7703674a5321c1f23549682250a732e9" category="paragraph">Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.</block>
+  <block id="8a9b2764802b622f9894a669a606f74f" category="doc">Le blocage des extensions est activé au niveau de la charge de travail.</block>
+  <block id="ab47595f128d75b47b3449fcd4dfb523" category="paragraph">Lorsque vous activez le blocage des extensions, celui-ci est désormais activé au niveau de la charge de travail et non plus au niveau de la machine virtuelle de stockage.</block>
+  <block id="a6493502d5fc22c0b3ccee818dc4a5a5" category="section-title">Modifier l'état d'alerte du comportement de l'utilisateur</block>
+  <block id="f143f02b29819ec9e761d9f292dea42c" category="paragraph">Ransomware Resilience vous permet désormais de modifier le statut des alertes comportementales des utilisateurs.  Vous pouvez ignorer et résoudre manuellement les alertes.  Vous pouvez désormais également marquer les alertes comme « En cours d'examen ».</block>
+  <block id="685b0f2db45e4fc09a06ccb4695806de" category="inline-xref-macro">Gérer les alertes</block>
+  <block id="30acfc7aa0f5ff9593d73e769de766c0" category="paragraph">Pour plus d'informations, voir <block ref="32161c93f86d45672d8429d13ea78e6b" category="inline-xref-macro-rx"></block>.</block>
+  <block id="d5214a8deea026de61af736ebf8697dd" category="section-title">Prise en charge de plusieurs agents de console</block>
+  <block id="1a6a565def701385358a626d6728afd8" category="paragraph">Ransomware Resilience prend désormais en charge l'utilisation de plusieurs agents Console pour gérer les mêmes systèmes.</block>
+  <block id="76adc55b5a0beb97a709fbc0c204a3d0" category="paragraph">Pour plus d'informations sur les agents de console, consultez<block ref="c97584494dd542160395e5c607ae4c2c" category="inline-link-macro-rx"></block> .</block>
+  <block id="be8cc003074f86f2bc2b3ef0d2f3a334" category="list-text">Découvre le niveau de protection actuel de chaque volume des copies instantanées NetApp et des politiques de sauvegarde, ainsi que toutes les capacités de détection intégrées. Ransomware Resilience associe ensuite cette posture de protection aux charges de travail en utilisant Backup and Recovery, les services ONTAP et les technologies NetApp telles que la protection autonome contre les ransomwares (ARP ou ARP/AI selon votre version ONTAP ), FPolicy, les politiques de sauvegarde et les politiques de snapshot.  Apprenez-en davantage sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline-link-rx"></block> ,<block ref="2b1b7f994c6938347657a18d8edc7db7" category="inline-link-rx"></block> , et<block ref="591ebe16737e602cc342b68e859c040e" category="inline-link-rx"></block> .</block>
+  <block id="ee1bc5da2dde4f02ef7aa47df921506a" category="doc">Gérer les alertes dans NetApp Ransomware Resilience</block>
+  <block id="9a51095678260d2a753174230dbe8a88" category="paragraph">Lorsque NetApp Ransomware Resilience détecte une attaque potentielle, il affiche une alerte sur le tableau de bord et dans la zone de notifications. Ransomware Resilience prend immédiatement un instantané. Consultez le risque potentiel dans l’onglet *Alertes* de résilience aux ransomwares.</block>
+  <block id="6fe459ab097d6c4270e2ad317a017b93" category="paragraph">Un incident d'alerte peut présenter les états suivants :</block>
+  <block id="afc3fd7b02af578176e65700acd6709b" category="list-text">*En cours d'examen* : Vous pouvez marquer un incident comme étant en cours d'examen pendant que vous l'évaluez.</block>
+  <block id="93771318f0ad483bcb651c0ded2c6033" category="admonition">Une fois une attaque rejetée, son statut ne peut être modifié. Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à l’attaque potentielle du ransomware seront définitivement supprimées.</block>
+  <block id="c95e7dd9856afddc701e5bf3b384f093" category="paragraph">Après avoir examiné les incidents, vous devez déterminer si les incidents constituent des attaques potentielles. Si elles ne constituent pas de véritables menaces, elles peuvent être ignorées.</block>
+  <block id="c73a9fafaefc34f0b97adbaba4200dc9" category="paragraph">Vous pouvez ignorer les faux positifs ou décider de récupérer vos données immédiatement. Si vous ignorez l'alerte, Ransomware Resilience apprend ce comportement et l'associe à un fonctionnement normal, et ne déclenche plus d'alerte pour un tel comportement.</block>
+  <block id="ea3cf0f8eb2106f78fd9e62d674bd7c0" category="list-text">Sélectionnez un ou plusieurs incidents. Vous pouvez également sélectionner tous les incidents en cochant la case « ID de l’incident » en haut à gauche du tableau.</block>
+  <block id="845279243191f55592e2d4438456de67" category="list-text">Dans la boîte de dialogue Modifier le statut, choisissez le statut *Rejeté*.</block>
+  <block id="c66f0ec622b69a240be9821f2dbbb082" category="paragraph">Des informations supplémentaires concernant la charge de travail et la suppression des copies d'instantané apparaissent.</block>
+  <block id="3224e89b6de433c70f47e320c0777439" category="paragraph">Le statut de l'incident ou des incidents passe à « Classé sans suite ».</block>
+  <block id="6edf03555b64b68b413469994ca42164" category="list-text">*Agent de console* - L'agent de console doit se trouver sur le même réseau que l'agent d'activité utilisateur et disposer d'une connectivité SSH à l'adresse IP de l'agent d'activité utilisateur.</block>
+  <block id="8e19d605b8be4e3be2157e822268633f" category="list-text">Si vous sélectionnez *Inclure les attributs facultatifs*, vous pouvez également ajouter une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un département, une photo, un DN de responsable ou des groupes. Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.</block>
+  <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">8 décembre 2025</block>
 </blocks>

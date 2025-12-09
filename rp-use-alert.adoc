@@ -4,7 +4,7 @@ permalink: rp-use-alert.html
 keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert 
 summary: Si Ransomware Resilience détecte une attaque possible, une alerte apparaît sur le tableau de bord Ransomware Resilience indiquant une attaque potentielle. À ce stade, vous devez examiner le risque potentiel dans l’onglet Alertes de résilience aux ransomwares. 
 ---
-= Gérez les alertes de ransomware détectées avec NetApp Ransomware Resilience
+= Gérer les alertes dans NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: Si Ransomware Resilience détecte une attaque possible, une alerte appa
 
 
 [role="lead"]
-Lorsque NetApp Ransomware Resilience détecte une attaque possible, il affiche une alerte sur le tableau de bord et dans la zone Notifications.  Ransomware Resilience prend immédiatement un instantané.  Consultez le risque potentiel dans l’onglet *Alertes* de résilience aux ransomwares.
+Lorsque NetApp Ransomware Resilience détecte une attaque potentielle, il affiche une alerte sur le tableau de bord et dans la zone de notifications. Ransomware Resilience prend immédiatement un instantané. Consultez le risque potentiel dans l’onglet *Alertes* de résilience aux ransomwares.
 
 Si Ransomware Resilience détecte une attaque possible, une notification apparaît dans les paramètres de notification de la console et un e-mail est envoyé à l'adresse configurée. L'e-mail contient des informations sur la gravité, la charge de travail impactée et un lien vers l'alerte dans l'onglet *Alertes* de résilience aux ransomwares.
 
@@ -56,13 +56,14 @@ Une alerte peut avoir l’un des statuts suivants :
 * *Inactif*
 
 
-Un incident d’alerte peut avoir l’un des états suivants :
+Un incident d'alerte peut présenter les états suivants :
 
 * *Nouveau* : Tous les incidents sont marqués « nouveaux » lorsqu'ils sont identifiés pour la première fois.
+* *En cours d'examen* : Vous pouvez marquer un incident comme étant en cours d'examen pendant que vous l'évaluez.
 * *Rejeté* : Si vous pensez que l'activité n'est pas une attaque de ransomware, vous pouvez modifier le statut sur « Rejeté ».
 +
 
-CAUTION: Après avoir rejeté une attaque, vous ne pouvez pas revenir en arrière.  Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à l’attaque potentielle du ransomware seront définitivement supprimées.
+CAUTION: Une fois une attaque rejetée, son statut ne peut être modifié. Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à l’attaque potentielle du ransomware seront définitivement supprimées.
 
 * *Rejet* : L'incident est en cours de rejet.
 * *Résolu* : L'incident a été résolu.
@@ -216,9 +217,9 @@ Une fois l’alerte marquée pour restauration, elle passe de l’onglet Alertes
 
 == Ignorer les incidents qui ne sont pas des attaques potentielles
 
-Après avoir examiné les incidents, vous devez déterminer si les incidents constituent des attaques potentielles. S’il ne s’agit pas de menaces réelles, elles peuvent être écartées.
+Après avoir examiné les incidents, vous devez déterminer si les incidents constituent des attaques potentielles. Si elles ne constituent pas de véritables menaces, elles peuvent être ignorées.
 
-Vous pouvez ignorer les faux positifs ou décider de récupérer vos données immédiatement.  Si vous ignorez l'alerte, Ransomware Resilience apprend ce comportement, l'associe aux opérations normales et ne déclenche plus d'alerte sur un tel comportement.
+Vous pouvez ignorer les faux positifs ou décider de récupérer vos données immédiatement. Si vous ignorez l'alerte, Ransomware Resilience apprend ce comportement et l'associe à un fonctionnement normal, et ne déclenche plus d'alerte pour un tel comportement.
 
 Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à une attaque potentielle de ransomware sont définitivement supprimées.
 
@@ -236,7 +237,7 @@ image:screen-alerts.png["Page d'alertes"]
 +
 image:screen-alerts-incidents3.png["Page d'alerte des incidents"]
 
-. Sélectionnez un ou plusieurs incidents.  Ou sélectionnez tous les incidents en sélectionnant la case ID d’incident en haut à gauche du tableau.
+. Sélectionnez un ou plusieurs incidents. Vous pouvez également sélectionner tous les incidents en cochant la case « ID de l’incident » en haut à gauche du tableau.
 . Si vous déterminez que l’incident ne constitue pas une menace, considérez-le comme un faux positif :
 +
 ** Sélectionnez l'incident.
@@ -246,13 +247,13 @@ image:screen-alerts-status-edit.png["Page de modification du statut d'alerte"]
 
 
 
-. Dans la boîte Modifier le statut, sélectionnez le statut *« Rejeté »*.
+. Dans la boîte de dialogue Modifier le statut, choisissez le statut *Rejeté*.
 +
-Des informations supplémentaires sur la charge de travail et sur le fait que les copies instantanées sont supprimées s'affichent.
+Des informations supplémentaires concernant la charge de travail et la suppression des copies d'instantané apparaissent.
 
 . Sélectionnez *Enregistrer*.
 +
-Le statut de l’incident ou des incidents passe à « Ignoré ».
+Le statut de l'incident ou des incidents passe à « Classé sans suite ».
 
 
 

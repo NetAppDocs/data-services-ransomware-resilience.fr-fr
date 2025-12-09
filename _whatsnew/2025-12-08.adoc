@@ -1,0 +1,25 @@
+= Le blocage des extensions est activé au niveau de la charge de travail.
+:allow-uri-read: 
+
+
+
+
+=== Le blocage des extensions est activé au niveau de la charge de travail.
+
+Lorsque vous activez le blocage des extensions, celui-ci est désormais activé au niveau de la charge de travail et non plus au niveau de la machine virtuelle de stockage.
+
+
+
+=== Modifier l'état d'alerte du comportement de l'utilisateur
+
+Ransomware Resilience vous permet désormais de modifier le statut des alertes comportementales des utilisateurs.  Vous pouvez ignorer et résoudre manuellement les alertes.  Vous pouvez désormais également marquer les alertes comme « En cours d'examen ».
+
+Pour plus d'informations, voir xref:rp-use-alert.html[Gérer les alertes].
+
+
+
+=== Prise en charge de plusieurs agents de console
+
+Ransomware Resilience prend désormais en charge l'utilisation de plusieurs agents Console pour gérer les mêmes systèmes.
+
+Pour plus d'informations sur les agents de console, consultezlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-setup.html["Créer un agent de console"] .

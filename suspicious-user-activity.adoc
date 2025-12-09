@@ -117,7 +117,7 @@ Si vous ajoutez un agent d'activité utilisateur supplémentaire, accédez à *P
 . Fournissez les détails de l’agent d’activité de l’utilisateur :
 +
 ** **Nom de l'agent d'activité utilisateur**
-** *Agent de console* - l'agent de console doit être dans le même réseau que l'agent d'activité utilisateur et disposer d'une connectivité SSH à l'adresse IP de l'agent d'activité utilisateur.
+** *Agent de console* - L'agent de console doit se trouver sur le même réseau que l'agent d'activité utilisateur et disposer d'une connectivité SSH à l'adresse IP de l'agent d'activité utilisateur.
 ** *Nom DNS ou adresse IP de la VM*
 ** *Clé SSH VM*
 +
@@ -155,9 +155,8 @@ Pour mapper les ID utilisateur aux noms d’utilisateur, vous devez créer un co
 . Sélectionnez l'onglet **Connecteurs d'annuaire utilisateur** puis **Ajouter**.
 . Configurez la connexion. Saisissez les informations requises pour chaque champ.
 +
+[cols="25,75"]
 |===
-
-
 | Champ | Description 
 
 
@@ -197,10 +196,7 @@ Fournissez les détails du mappage des attributs :
 ** *SID* (si vous utilisez LDAP)
 ** *Nom d'utilisateur*
 ** *ID Unix* (si vous utilisez NFS)
-** Si vous sélectionnez *Inclure les attributs facultatifs*, vous pouvez également ajouter une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un département, une photo, un DN de responsable ou des groupes.
-+
-Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.
-
+** Si vous sélectionnez *Inclure les attributs facultatifs*, vous pouvez également ajouter une adresse e-mail, un numéro de téléphone, un rôle, un état, un pays, un département, une photo, un DN de responsable ou des groupes. Sélectionnez *Avancé* pour ajouter une requête de recherche facultative.
 
 
 . Sélectionnez **Ajouter**.
