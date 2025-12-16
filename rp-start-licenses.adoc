@@ -280,3 +280,10 @@ Si vous souhaitez mettre fin à votre abonnement PAYGO, vous pouvez le faire à 
 . Dans les détails déroulants, décochez la case *Utiliser après l'expiration du mode de paiement actuel*.
 . Sélectionnez *Enregistrer*.
 
+
+
+
+== Plus d'informations
+
+* link:https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html["Documentation relative aux licences et abonnements de NetApp Console"^]
+
