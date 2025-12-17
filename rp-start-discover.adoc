@@ -12,18 +12,16 @@ summary: Lors de la découverte, Ransomware Resilience analyse tous les volumes 
 
 
 [role="lead"]
-Avant de pouvoir utiliser NetApp Ransomware Resilience, vous devez d’abord découvrir les données.  Lors de la découverte, Ransomware Resilience analyse tous les volumes et fichiers des systèmes sur tous les agents et projets de console au sein d'une organisation.
+Avant de pouvoir utiliser NetApp Ransomware Resilience, il est nécessaire de découvrir les données de charge de travail. Lors de la découverte, Ransomware Resilience analyse tous les volumes et fichiers des systèmes sur tous les agents et projets de console au sein d'une organisation.
+
+Dans le tableau de bord Discovery, Ransomware Resilience affiche les configurations système prises en charge et celles qui ne le sont pas. Ransomware Resilience évalue les applications Oracle, les datastores VMware, les partages de fichiers et le stockage par blocs.
+
+
+NOTE: Ransomware Resilience ne détecte pas les charges de travail avec des volumes utilisant FlexGroup.
+
+Ransomware Resilience vérifie votre protection de sauvegarde actuelle, vos copies instantanées et vos options de protection autonome contre les ransomwares NetApp . Ransomware Resilience détecte également les informations de protection de SnapCenter for VMware pour les banques de données de machines virtuelles, de SnapCenter for Oracle et de NetApp Backup and Recovery pour les partages de fichiers et les partages de fichiers de machines virtuelles. Il recommande ensuite des moyens d’améliorer votre protection contre les ransomwares.
 
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
-
-*Que découvre Ransomware Resilience ?* Ransomware Resilience évalue les applications Oracle, les datastores VMware, les partages de fichiers et le stockage par blocs.
-
-
-NOTE: Ransomware Resilience ne détecte pas les charges de travail avec des volumes qui utilisent FlexGroup.
-
-Ransomware Resilience découvre et affiche les configurations système prises en charge et non prises en charge dans le tableau de bord.
-
-Ransomware Resilience vérifie votre protection de sauvegarde actuelle, vos copies instantanées et vos options de protection autonome contre les ransomwares NetApp .  Il recommande ensuite des moyens d’améliorer votre protection contre les ransomwares.
 
 *Comment pouvez-vous découvrir les charges de travail ?*  Vous pouvez faire ce qui suit :
 
@@ -61,7 +59,7 @@ image:screen-discover-workloads.png["Capture d'écran de la découverte des char
 . Sélectionnez les systèmes sur lesquels vous souhaitez découvrir les charges de travail.
 . Sélectionnez *Découvrir*.
 +
-Ransomware Resilience découvre les données de charge de travail uniquement pour les agents de console avec les systèmes sélectionnés.  Ce processus peut prendre quelques minutes.
+Ransomware Resilience détecte les données de charge de travail uniquement pour les agents Console avec les systèmes sélectionnés. Ce processus peut prendre quelques minutes.
 
 . Pour télécharger la liste des charges de travail découvertes, sélectionnez *Télécharger les résultats*.
 . Pour afficher le tableau de bord de résilience aux ransomwares, sélectionnez *Accéder au tableau de bord*.
@@ -84,7 +82,7 @@ Si vous avez déjà sélectionné des systèmes à découvrir, vous pouvez déco
 
 .Étapes
 . Pour identifier la date de la dernière découverte, regardez l'horodatage à côté de l'icône *Actualiser* en haut à droite du tableau de bord de résilience aux ransomwares.
-. Depuis le tableau de bord, sélectionnez l’icône *Actualiser* pour rechercher de nouvelles charges de travail.
+. Depuis le tableau de bord, sélectionnez l'icône *Actualiser* pour trouver les nouvelles charges de travail.
 
 
 
@@ -95,11 +93,7 @@ Si vous avez déjà découvert des systèmes, vous pouvez en trouver de nouveaux
 
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez la verticaleimage:button-actions-vertical.png["Actions verticales"] ... option en haut à droite.  Dans le menu déroulant, sélectionnez *Paramètres*.
-. Dans la carte Découverte de charge de travail, sélectionnez *Découvrir les charges de travail*.
-+
-
-TIP: Ce processus peut prendre quelques minutes et une icône de chargement indique la progression.
-
-. Ransomware Resilience détecte les systèmes pris en charge et non pris en charge.  Ransomware Resilience ne prend pas en charge un système si sa version ONTAP est inférieure à la version requise.  Lorsque vous survolez un système non pris en charge, une info-bulle affiche la raison.  Sélectionnez les systèmes sur lesquels vous souhaitez découvrir les charges de travail.
+. Dans la carte Découverte de charge de travail, sélectionnez *Découvrir les charges de travail*. La découverte peut prendre quelques minutes.  Une icône de chargement indique la progression.
+. Ransomware Resilience détecte les systèmes pris en charge et non pris en charge. Il ne prend pas en charge un système si sa version ONTAP est inférieure à la version requise. Lorsque vous survolez un système non pris en charge, une info-bulle affiche la raison. Sélectionnez les systèmes sur lesquels vous souhaitez découvrir les charges de travail.
 . Sélectionnez *Découvrir*.
 
