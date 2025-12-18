@@ -109,9 +109,9 @@ Ransomware Resilience permet de configurer une destination de sauvegarde via l'o
 
 
 
-== Comportement suspect de l'utilisateur
+== Exigences relatives aux comportements suspects des utilisateurs
 
-Pour que Ransomware Resilience fournisse des alertes sur les comportements suspects des utilisateurs, vous devez configurer un agent d’activité utilisateur. Pour plus d'informations, voir link:suspicious-user-activity.html["Configurer la détection des activités suspectes des utilisateurs dans NetApp Ransomware Resilience"].
+Pour que Ransomware Resilience fournisse des alertes sur les comportements suspects des utilisateurs, vous devez configurer un agent d’activité utilisateur. To install a user activity agent, ensure your system meets link:suspicious-user-activity.html["les exigences"].
 
 
 
