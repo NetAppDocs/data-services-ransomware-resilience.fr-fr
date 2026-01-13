@@ -20,9 +20,9 @@ Vous pouvez protéger les charges de travail contre les attaques de ransomware e
 
 == Comprendre les stratégies de protection contre les ransomwares
 
-Les stratégies de protection contre les ransomwares englobent à la fois des politiques de _détection_ et de _protection_.
+Les stratégies de protection contre les ransomwares englobent à la fois les politiques de _détection_, de _protection_ et de _réplication_.
 
-* **Les politiques de détection** détectent les menaces de ransomware
+* **Les politiques de détection** permettent d'identifier les menaces de type ransomware.
 * **Les politiques de protection** incluent les politiques de capture instantanée et de sauvegarde.  Les politiques de détection et de capture instantanée sont nécessaires dans une stratégie de protection.  Les politiques de sauvegarde sont facultatives.
 +
 Si vous utilisez d'autres produits NetApp pour protéger votre charge de travail, Ransomware Resilience les découvre et offre la possibilité de :
@@ -31,6 +31,10 @@ Si vous utilisez d'autres produits NetApp pour protéger votre charge de travail
 ** utiliser une politique de détection de ransomware et continuer à utiliser les politiques de snapshot et de sauvegarde créées par d'autres outils NetApp , ou
 ** utilisez Ransomware Resilience pour gérer la détection, les instantanés et les sauvegardes.
 
+
+* Les **stratégies de réplication** vous permettent de répliquer les instantanés de Ransomware Resilience vers un site secondaire. Les calendriers de réplication peuvent être définis sur des fréquences horaires, quotidiennes, hebdomadaires ou mensuelles.
++
+Actuellement, vous ne pouvez répliquer les instantanés que vers un stockage ONTAP local.
 
 
 
@@ -74,7 +78,7 @@ L’une des premières étapes de la protection des charges de travail consiste 
 
 
 .Étapes
-. Dans la navigation de gauche de la console, sélectionnez *Protection* > *Résilience aux ransomwares*.
+. Dans le menu de navigation de gauche de la console, sélectionnez *Protection* > *Résilience aux ransomwares*.
 . Effectuez l’une des opérations suivantes :
 +
 ** Dans le volet Protection des données du tableau de bord, sélectionnez *Afficher tout*.
@@ -116,7 +120,12 @@ TIP: Lorsque la protection est activée dans Ransomware Resilience, la détectio
 
 
 
+
+NOTE: Les activités liées aux comportements suspects des utilisateurs et à l'activité FPolicy (extension de fichier suspecte) sont répertoriées séparément de l'état de détection.
+
 *Politique de détection* : Le nom de la politique de détection des ransomwares apparaît, si elle a été attribuée.  Si la politique de détection n'a pas été attribuée, « N/A » s'affiche.
+
+*Destination de réplication* : Si vous avez configuré la réplication par instantané, les noms des machines virtuelles et des systèmes de stockage de destination sont indiqués. En l'absence de réplication, ce champ affiche « Aucune ».
 
 * Politiques de capture instantanée et de sauvegarde * : cette colonne affiche les politiques de capture instantanée et de sauvegarde appliquées à la charge de travail et au produit ou service qui gère ces politiques.
 
@@ -131,21 +140,25 @@ TIP: Lorsque la protection est activée dans Ransomware Resilience, la détectio
 
 Ransomware Resilience attribue une importance ou une priorité à chaque charge de travail lors de la découverte en fonction d'une analyse de chaque charge de travail.  L’importance de la charge de travail est déterminée par les fréquences d’instantanés suivantes :
 
-* *Critique* : Copies instantanées prises plus d'une fois par heure (programme de protection très agressif)
-* *Important* : Copies instantanées prises moins d'une fois par heure mais plus d'une fois par jour
-* *Standard* : Copies instantanées prises plus d'une fois par jour
+* *Critique* : Plusieurs copies instantanées sont effectuées par heure (plan de protection très agressif)
+* *Important* : Les copies instantanées sont créées moins fréquemment qu’une fois par heure, mais plus fréquemment qu’une fois par jour.
+* *Standard* : Des copies instantanées sont prises plus d’une fois par jour.
 
 
-* Politiques de détection prédéfinies * [[prédéfinies]]
+
+
+=== Politiques de détection prédéfinies
 
 Vous pouvez choisir l’une des politiques prédéfinies de résilience aux ransomwares suivantes, qui sont alignées sur l’importance de la charge de travail.
 
 
 NOTE: La stratégie **Extension utilisateur de chiffrement** est la seule stratégie prédéfinie qui prend en charge la détection des comportements suspects des utilisateurs.
 
++ La **stratégie de réplication critique** est la seule stratégie prédéfinie qui prend en charge la réplication des instantanés vers ONTAP.
+
 [cols="10,15a,20,15,15,15"]
 |===
-| Niveau politique | Instantané | Fréquence | Rétention (jours) | # de copies instantanées | Nombre total maximal de copies d'instantanés 
+| Niveau politique | Instantané | Fréquence | Rétention (jours) | Nombre de copies d'instantané | Nombre maximal de copies d'instantané 
 
 
 .4+| *Politique de charge de travail critique*  a| 
@@ -226,6 +239,46 @@ Toutes les 1 semaine
 | Mensuel  a| 
 Tous les 30 jours
 | 60 | 2 | 93 
+
+
+.4+| *Extension utilisateur de chiffrement*  a| 
+Quart d'heure
+| Toutes les 30 minutes | 3 | 72 | 93 
+
+
+| Tous les jours  a| 
+Tous les 1 jour
+| 14 | 14 | 93 
+
+
+| Hebdomadaire  a| 
+Toutes les 1 semaine
+| 35 | 5 | 93 
+
+
+| Mensuel  a| 
+Tous les 30 jours
+| 60 | 2 | 93 
+
+
+.4+| *Politique de réplication critique*  a| 
+Quart d'heure
+| Toutes les 15 minutes | 3 | 288 | 309 
+
+
+| Tous les jours  a| 
+Tous les 1 jour
+| 14 | 14 | 309 
+
+
+| Hebdomadaire  a| 
+Toutes les 1 semaine
+| 35 | 5 | 309 
+
+
+| Mensuel  a| 
+Tous les 30 jours
+| 60 | 2 | 309 
 |===
 
 
@@ -302,6 +355,7 @@ Si les stratégies de capture instantanée ou de sauvegarde n'existent pas sur l
 * Politique d'instantané
 * Politique de sauvegarde
 * Politique de détection des ransomwares
+* Réplication secondaire vers ONTAP
 
 
 .Étapes pour créer une stratégie de protection contre les ransomwares [[étapes]]
@@ -324,9 +378,9 @@ NOTE: Si vous choisissez de copier et de modifier une stratégie existante, Rans
 ** *Politique de détection*:
 +
 *** *Politique* : Choisissez l’une des politiques de détection prédéfinies.
-*** *Détection principale* : activez la détection de ransomware pour que Ransomware Resilience détecte les attaques potentielles de ransomware.
+*** *Détection primaire* : Activez la résilience aux ransomwares pour détecter les attaques potentielles de ransomware.
 *** *Détection de comportement utilisateur suspect* : activez la détection du comportement utilisateur pour transmettre les événements d'activité utilisateur à Ransomware Resilience et détecter les événements suspects, tels que les violations de données.
-*** *Bloquer les extensions de fichiers* : activez cette option pour que Ransomware Resilience bloque les extensions de fichiers suspectes connues.  Ransomware Resilience effectue des copies instantanées automatisées lorsque la détection principale est activée.
+*** *Bloquer les extensions de fichiers* : Activez la résistance aux ransomwares pour bloquer les extensions de fichiers suspectes connues. Ransomware Resilience effectue des copies instantanées automatisées lorsque la détection principale est activée.
 +
 Si vous souhaitez modifier les extensions de fichiers bloquées, modifiez-les dans le Gestionnaire système.
 
@@ -345,17 +399,23 @@ Le verrouillage de copie d'instantané est disponible avec ONTAP 9.12.1 et versi
 *** *Planifications d'instantanés* : Choisissez les options de planification, le nombre de copies d'instantanés à conserver et sélectionnez pour activer la planification.
 
 
+** *Politique de réplication* :
++
+*** *Nom de base de la stratégie de réplication* : Saisissez un nouveau nom ou choisissez-en un existant. Le nom de base est le préfixe ajouté à tous les instantanés.
+*** *Planifications de réplication* : Activez les fréquences que vous souhaitez (horaire, quotidienne, hebdomadaire ou mensuelle) et définissez la valeur de rétention (le nombre d’instantanés répliqués à conserver) pour chaque planification activée.
+
+
 ** *Politique de sauvegarde*:
 +
 *** *Nom de base de la politique de sauvegarde* : saisissez un nouveau nom ou choisissez un nom existant.
 *** *Planifications de sauvegarde* : Choisissez les options de planification pour le stockage secondaire et activez la planification.
-
-
-
-
 +
 
 TIP: Pour activer le verrouillage de sauvegarde sur le stockage secondaire, configurez vos destinations de sauvegarde à l'aide de l'option *Paramètres*. Pour plus de détails, consultez la section link:rp-use-settings.html["Configurer les paramètres"] .
+
+
+
+
 
 . Sélectionnez *Ajouter*.
 
@@ -381,7 +441,7 @@ image:screen-protection.png["Gérer la page de stratégie"]
 . Ransomware Resilience détecte s'il existe des politiques SnapCenter ou de sauvegarde et de récupération actives.
 . Pour conserver vos politiques de sauvegarde et de récupération ou SnapCenter existantes et appliquer uniquement une politique de _détection_, laissez la case **Remplacer les politiques existantes** décochée.
 . Pour voir les détails des politiques SnapCenter , sélectionnez la *flèche vers le bas*.
-. Sélectionnez les paramètres de détection souhaités : *Détection de cryptage* *Détection de comportement utilisateur suspect* *Bloquer les extensions de fichiers suspectes*
+. Sélectionnez les paramètres de détection souhaités : *Détection du chiffrement* *Détection des comportements suspects des utilisateurs* *Blocage des extensions de fichiers suspectes*
 . Sélectionnez **Suivant**.
 . Si vous avez sélectionné *Détection de comportement utilisateur suspect* comme paramètre de détection, sélectionnez l'agent d'activité utilisateur oulink:suspicious-user-activity.html#add-a-user-activity-agent["ou en créer un"] .
 +
@@ -406,6 +466,7 @@ image:screen-protection.png["Gérer la page de stratégie"]
 . Depuis la page Protection, sélectionnez une charge de travail, puis sélectionnez *Protéger*.
 . Ransomware Resilience détecte s'il existe des politiques de sauvegarde et de récupération ou SnapCenter actives.  Pour remplacer les stratégies de sauvegarde et de récupération ou SnapCenter existantes, sélectionnez la case **Remplacer les stratégies existantes**.  Lorsque vous sélectionnez la case, Ransomware Resilience remplace la liste des stratégies de détection par des stratégies de détection.
 . Choisissez une politique de protection.  Si aucune politique de protection n’existe, sélectionnez **Ajouter** pour créer une nouvelle politique.  Pour plus d'informations sur la création d'une politique, voir<<steps,Créer une politique de protection>> . Sélectionnez **Suivant**.
+. Si votre stratégie inclut la réplication, sélectionnez le **système de destination** et la **VM de stockage de destination**. Sélectionnez **Suivant**.
 . Sélectionnez une destination de sauvegarde ou créez-en une nouvelle. Sélectionnez **Suivant**.
 +
 .. Si votre stratégie de protection inclut la détection du comportement des utilisateurs, sélectionnez un agent d’activité utilisateur dans votre environnement pour héberger les nouveaux collecteurs de données. Ransomware Resilience crée automatiquement le collecteur de données pour transmettre les événements d'activité des utilisateurs à Ransomware Resilience afin de détecter les comportements anormaux des utilisateurs.
@@ -462,11 +523,16 @@ TIP: Pour voir plus de détails sur les charges de travail, faites défiler vers
 image:screen-protection-groups-policy.png["Ajouter un groupe de protection - Page de stratégie"]
 
 . Sélectionnez la politique qui régira la protection de ce groupe. Pour confirmer, sélectionnez *Suivant*.
+. Si la stratégie de protection inclut la réplication, vérifiez les paramètres de réplication.
 +
-.. Si vous devez configurer une politique de sauvegarde, choisissez-en une puis sélectionnez **Suivant**.
-.. Si votre politique de détection inclut la détection du comportement des utilisateurs, sélectionnez le collecteur de données que vous souhaitez utiliser, puis **Suivant**.
+.. Pour répliquer tous les instantanés vers la même destination, cochez **Utiliser la même destination pour chaque charge de travail**. Choisissez un *système de destination* et une *VM de stockage de destination* pour les charges de travail dans la section Agent de la console.
++
+Pour utiliser des destinations différentes, décochez cette case. Examinez chaque charge de travail sous chaque agent de console et attribuez un *système de destination* et une *VM de stockage de destination* à chaque charge de travail. Sélectionnez **Suivant**.
 
 
+
+. Si vous devez configurer une politique de sauvegarde, choisissez-en une puis sélectionnez **Suivant**.
+. Si votre politique de détection inclut la détection du comportement des utilisateurs, sélectionnez le collecteur de données que vous souhaitez utiliser, puis **Suivant**.
 . Passez en revue les sélections pour le groupe de protection.
 . Pour finaliser la création du groupe de protection, sélectionnez *Ajouter*.
 

@@ -59,10 +59,11 @@ Une alerte peut avoir l’un des statuts suivants :
 Un incident d'alerte peut présenter les états suivants :
 
 * *Nouveau* : Tous les incidents sont marqués « nouveaux » lorsqu'ils sont identifiés pour la première fois.
+* *En cours d'examen* : Vous pouvez marquer un incident comme étant en cours d'examen pendant que vous l'évaluez.
 * *Rejeté* : Si vous pensez que l'activité n'est pas une attaque de ransomware, vous pouvez modifier le statut sur « Rejeté ».
 +
 
-CAUTION: Une fois une attaque rejetée, son statut ne peut être modifié. Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à l’attaque potentielle du ransomware seront définitivement supprimées.
+CAUTION: Une fois une attaque rejetée, son statut ne peut être modifié. Si vous supprimez une charge de travail, toutes les copies d'instantané prises automatiquement en réponse à une potentielle attaque de ransomware seront définitivement supprimées.
 
 * *Rejet* : L'incident est en cours de rejet.
 * *Résolu* : L'incident a été résolu.

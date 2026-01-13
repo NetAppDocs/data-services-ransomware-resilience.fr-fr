@@ -15,13 +15,13 @@ summary: Grâce à NetApp Ransomware Resilience, vous pouvez télécharger des r
 Vous pouvez exporter des données de protection et télécharger les fichiers CSV ou JSON qui affichent les détails des exercices de préparation aux attaques, de la protection, des alertes et de la récupération.
 
 
-TIP: Avant de télécharger les fichiers, vous devez actualiser les données, ce qui actualise également les données qui apparaîtront dans les fichiers.
+TIP: Avant de télécharger les fichiers, vous devez actualiser le tableau de bord pour que vos rapports intègrent les données les plus récentes.
 
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet, d'administrateur de résilience aux ransomwares ou de visualiseur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
 *Quelles données pouvez-vous télécharger ?*  Vous pouvez télécharger des fichiers à partir de n’importe quelle option du menu principal :
 
-* *Protection* : Contient l'état et les détails de toutes les charges de travail, y compris le nombre total de charges protégées et à risque.
+* *Protection* : Comprend l’état et les détails de toutes les charges de travail, y compris le nombre total de charges de travail protégées et à risque.
 * *Alertes* : inclut l'état et les détails de toutes les alertes, y compris le nombre total d'alertes et d'instantanés automatisés.
 * *Récupération* : inclut l'état et les détails de toutes les charges de travail qui doivent être restaurées, y compris le nombre total de charges de travail marquées « Restauration nécessaire », « En cours », « Échec de la restauration » et « Restaurée avec succès ».
 * *Rapports* : Vous pouvez exporter des données depuis n'importe quelle page et télécharger les fichiers.

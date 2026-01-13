@@ -18,6 +18,34 @@ Découvrez les nouveautés de NetApp Ransomware Resilience.
 
 
 
+== 12 janvier 2026
+
+
+
+=== Répliquer les instantanés sur ONTAP
+
+Ransomware Resilience prend désormais en charge l'ajout de la réplication des instantanés vers un site ONTAP secondaire. Vous pouvez créer une stratégie de protection contre les ransomwares incluant la réplication ou utiliser la stratégie prédéfinie. Avec les groupes de protection qui utilisent une stratégie de réplication, vous pouvez répliquer vers la même destination ou vers des destinations différentes pour chaque charge de travail.
+
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Protéger les charges de travail grâce à la résilience contre les ransomwares"^].
+
+
+
+=== Exclure les charges de travail de la résilience aux ransomwares
+
+Ransomware Resilience prend désormais en charge l'exclusion de certaines charges de travail d'un système de la protection et du tableau de bord Ransomware Resilience. Vous pouvez exclure les charges de travail après leur découverte, puis les réinclure si vous souhaitez ajouter une protection contre les ransomwares. Les charges de travail exclues ne vous seront pas facturées.
+
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-discover.html#exclude-workloads["Exclure les charges de travail"^].
+
+
+
+=== Les alertes marquées comme étant en cours de révision
+
+Ransomware Resilience vous permet désormais de marquer les alertes comme « En cours d'examen ». Utilisez l'étiquette « En cours d'examen » pour améliorer la clarté au sein de votre équipe lors du tri et de la gestion des menaces de ransomware actives.
+
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["Gérer les alertes dans Ransomware Resilience"^].
+
+
+
 == 8 décembre 2025
 
 
