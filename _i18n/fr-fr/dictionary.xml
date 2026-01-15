@@ -268,61 +268,7 @@
   <block id="20fd4e2b91312c8ee1419aa853c936e1" category="paragraph">Si vous sélectionnez un volume ONTAP 9.11.1 pour l’exercice de préparation aux attaques de ransomware, Ransomware Resilience envoie une alerte.  Si vous récupérez les données à l'aide de l'option « cloner sur volume » et réinitialisez la perceuse, l'opération de réinitialisation échoue.</block>
   <block id="4662983aa04c5f2df5dded885a7f15c5" category="section-title">Limitations Amazon FSx for NetApp ONTAP</block>
   <block id="ae06555bf1899a4ef9c10d46f1e1d5ab" category="list-text">Les opérations de restauration sont effectuées uniquement à partir de snapshots.</block>
-  <block id="59ad4756ad1f9899a8154575ba4aeb8f" category="summary">NetApp Ransomware Resilience utilise des rôles pour gérer l'accès de chaque utilisateur à des fonctionnalités et actions spécifiques.</block>
-  <block id="bb1accae7f94f7f55d6103b9e6ed4887" category="paragraph">Ransomware Resilience utilise les rôles suivants qui sont spécifiques à Ransomware Resilience.</block>
-  <block id="db7664bf605b3c359f584db725113965" category="list-text">*Administrateur de résilience aux ransomwares* : gérez les actions sur les onglets Protéger, Alertes, Récupérer, Paramètres et Rapports.</block>
-  <block id="0f8a9a76c246899cc20804694dde0c5d" category="list-text">*Visionneuse de résilience aux ransomwares* : affichez les données de charge de travail NetApp , affichez les données d'alerte, téléchargez les données de récupération et téléchargez les rapports.</block>
-  <block id="6451a60ec696fdaf149fd3ab5d73d11b" category="inline-link">la documentation d'installation et d'administration</block>
-  <block id="d8a8c665f6da963545862e3f1cd5ee11" category="paragraph">Ces rôles s'ajoutent aux rôles de la plateforme Console qui régissent l'accès au service Console et à d'autres services, tels que la protection des données, la gestion de la charge de travail, etc. Pour plus de détails sur tous les rôles de la plateforme Console, voir<block ref="70be838599755f5947865c6eb0bd7ba4" category="inline-link-rx"></block> .</block>
-  <block id="dac305684bf34329491ffc1845204f2f" category="paragraph">Le tableau suivant indique les actions que chaque rôle de résilience aux ransomwares peut effectuer.</block>
-  <block id="4420e7353184ac575b539cdce1b991db" category="cell">Fonctionnalité et action</block>
-  <block id="913c14919cea84283a7e5c825e227099" category="cell">Administrateur de la résilience aux ransomwares</block>
-  <block id="5955e6b8bb599727395fc82db2951dcd" category="cell">Visionneuse de résilience aux ransomwares</block>
-  <block id="b60c44c6bbbb3793d0c08c34cd6e2382" category="cell">Afficher le tableau de bord et tous les onglets</block>
-  <block id="93cba07454f06a4a960172bbd6e2a435" category="paragraph">Oui</block>
-  <block id="2961ef9224153d664a9bde6ee6ef2570" category="cell">Sur le tableau de bord, mettre à jour le statut de la recommandation</block>
-  <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="paragraph">Non</block>
-  <block id="78c7efbfa07116553a52f59800129dde" category="cell">Démarrer un essai gratuit</block>
-  <block id="42174d568723a8694dc7e6dfd143cb12" category="cell">Lancer la découverte des charges de travail</block>
-  <block id="bb73fa2a07d0c544491039dc1ffed7b8" category="cell">Initier la redécouverte des charges de travail</block>
-  <block id="26548eb85488e3cdc0f0b9b27802995f" category="cell">*Dans l'onglet Protéger* :</block>
-  <block id="8ae06231e3533fd967c3e2959a7f5325" category="cell">Ajouter, modifier ou supprimer des plans de protection</block>
-  <block id="579066063b3104c9f6c74d2084e0e7e4" category="cell">Identifier l'exposition aux données sensibles</block>
-  <block id="e1b7f478f4648932399a0f8d6835740b" category="cell">Liste des plans de protection et des détails</block>
-  <block id="8921dd8678af3de7359bee784af9a8e0" category="cell">Liste des groupes de protection</block>
-  <block id="97803e7af23cd9dd5e46bef4245a8480" category="cell">Afficher les détails du groupe de protection</block>
-  <block id="70348d94ac22a6df8ff175b1e3a7535b" category="cell">Créer, modifier ou supprimer un groupe de protection</block>
-  <block id="4330b42a340140b836c42bbe9c7105be" category="cell">Télécharger les données</block>
-  <block id="b1e60ac72e50f485ca0a5ea9c82143d2" category="cell">*Dans l'onglet Alertes* :</block>
-  <block id="a0da34eb7fa7ce71299612d3548b6f6a" category="cell">Afficher les alertes et les détails des alertes</block>
-  <block id="f700fad2259a25a87fbe56ba2810e8ff" category="cell">Modifier le statut de l'incident</block>
-  <block id="e975f9abac95a06f0645ce83ab0e4e37" category="cell">Marquer l'alerte pour la récupération</block>
-  <block id="ef9988f85b068b8709daa3be2c31fca3" category="cell">Afficher les détails de l'incident</block>
-  <block id="52d7595020614137b8fad8f4575e90d3" category="cell">Rejeter ou résoudre les incidents</block>
-  <block id="f84e2dc493985bbd340b2cd14bf2daeb" category="cell">Bloquer l'utilisateur</block>
-  <block id="38de1b212ca13fa4c230f4c20adbb48a" category="cell">Obtenez la liste complète des fichiers concernés</block>
-  <block id="4b1b2c63b979feafab4b35d6b2307876" category="cell">Télécharger les données d'alertes</block>
-  <block id="b338bf8c8e0fbc61d8a0fad3b4a74e35" category="cell">*Dans l'onglet Récupérer* :</block>
-  <block id="f5f949f53a00b2da6ffa7a9f7a0fd0f8" category="cell">Télécharger les fichiers concernés</block>
-  <block id="65ca8041cc328ebb64db5f8368a9101a" category="cell">Restaurer la charge de travail</block>
-  <block id="4ebc1406711ca6754873e22a81f31c6f" category="cell">Télécharger les données de récupération</block>
   <block id="df6e3c89245cdc5bf0a7191c642d6997" category="cell">Télécharger les rapports</block>
-  <block id="a4f2411faacb07693dd051a3d2d9f97e" category="cell">*Dans l'onglet Paramètres* :</block>
-  <block id="fc36f5b7ec87bb05d12fcec7b985fe79" category="cell">Ajouter ou modifier des destinations de sauvegarde</block>
-  <block id="765ffd3ea8472bde364d6d75c648c7e2" category="cell">Lister les destinations de sauvegarde</block>
-  <block id="be9d2f996415c0e9128f109806d13e74" category="cell">Afficher les cibles SIEM connectées</block>
-  <block id="08fec10c338548595a28b0310a1c0600" category="cell">Ajouter ou modifier des cibles SIEM</block>
-  <block id="39a6763102d641618da35a0d6583043f" category="cell">Connecter les cibles de sécurité de la charge de travail</block>
-  <block id="08181115072bbb33365c19f99efea3d7" category="cell">Afficher l'état de la connexion de sécurité de la charge de travail</block>
-  <block id="613856eb65cebd5ee253760f764af42d" category="cell">Déconnecter les cibles de sécurité de la charge de travail</block>
-  <block id="0e12704ac2cf7981683f2392843a3751" category="cell">Configurer l'exercice de préparation</block>
-  <block id="fbca60f39e39ac567548a02c9e536305" category="cell">Commencer l'exercice de préparation</block>
-  <block id="9e914ba4c13fe3f6329717ca31b8bfca" category="cell">Exercice de préparation à la réinitialisation</block>
-  <block id="45f15fba3339f71439f0c72c967fc0d3" category="cell">Modifier l'exercice de préparation</block>
-  <block id="62bbacc7c65bd53641f4347319efbc1b" category="cell">Examen de l'état de préparation de l'exercice</block>
-  <block id="0e6583bdbbf88acbfc57d3f868629d3c" category="cell">Mettre à jour la configuration de la découverte</block>
-  <block id="5439d77b96ff7a9498be958a6755e89a" category="cell">Afficher la configuration de la découverte</block>
-  <block id="1ed006cd78ff9bf590a02c6fc268141f" category="cell">*Dans l'onglet Rapports* :</block>
   <block id="c237a2957d794956f228d80e877a27db" category="summary">Si vous ne souhaitez plus utiliser NetApp Ransomware Resilience, vous pouvez laisser la licence expirer.</block>
   <block id="e84bd6808df2e3541b6e418b89691895" category="doc">Désactiver la NetApp Ransomware Resilience</block>
   <block id="47dde0af2802e8666105b9e466033035" category="paragraph">Si vous ne souhaitez plus utiliser NetApp Ransomware Resilience, vous pouvez laisser la licence expirer.  Vous pouvez également désactiver les politiques que vous ne souhaitez plus utiliser.</block>
@@ -1097,7 +1043,6 @@
   <block id="f7ba12bb96df2ae9d69ffbf1bc2af6bb" category="inline-image-macro">Ajouter un groupe de protection - Page de stratégie</block>
   <block id="a739b6145911af1f850b745cae737475" category="paragraph"><block ref="a739b6145911af1f850b745cae737475" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1ae08906aa42275aa58a2b7641019104" category="list-text">Sélectionnez la politique qui régira la protection de ce groupe. Pour confirmer, sélectionnez *Suivant*.</block>
-  <block id="810716a15e8cb79df6f2dd60bfee1161" category="list-text">Si vous devez configurer une politique de sauvegarde, choisissez-en une puis sélectionnez **Suivant**.</block>
   <block id="f724f66c90177c8dac8336038a0778c0" category="list-text">Si votre politique de détection inclut la détection du comportement des utilisateurs, sélectionnez le collecteur de données que vous souhaitez utiliser, puis **Suivant**.</block>
   <block id="0fc76de5572d1186f1358665dff6076f" category="list-text">Passez en revue les sélections pour le groupe de protection.</block>
   <block id="d7a75d0f58bb349985e6d2104ca65596" category="list-text">Pour finaliser la création du groupe de protection, sélectionnez *Ajouter*.</block>
@@ -1803,7 +1748,6 @@
   <block id="fca5751a0529f9987d0699648a97be3a" category="list-text">Si la console ne peut pas mettre à jour automatiquement la licence, vous devez télécharger manuellement le fichier de licence.</block>
   <block id="f8541056d6bacae1a78fb5d2b68c67a8" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>Démarrer avec Ransomware Resilience</block>
   <block id="43eec2eb3dba42398d66e0c2aa294ea2" category="paragraph">Vous devez avoir configuré un agent d’activité utilisateur et activé une politique de protection avec détection du comportement utilisateur pour afficher les alertes au niveau utilisateur. Lorsque la détection du comportement de l'utilisateur est activée, la colonne *Utilisateur suspect* apparaît dans le tableau de bord Alertes ; elle ne s'affiche pas lorsque la détection du comportement de l'utilisateur n'est pas activée.  Pour activer la détection des utilisateurs suspects, voir<block ref="da26800578b610b8b3390e49bb643377" category="inline-link-macro-rx"></block> .</block>
-  <block id="3c6a637355e70f686e34e6e7c966c200" category="admonition">Si vous utilisez NetApp Data Infrastructure Insights (DII) Workload Security, il est recommandé d'utiliser les mêmes agents Workload Security pour Ransomware Resilience. Vous n'avez pas besoin de déployer des agents Workload Security distincts pour Ransomware Resilience. Cependant, l'utilisation des mêmes agents Workload Security nécessite une relation de couplage entre l'organisation de la console Ransomware Resilience et le locataire DII Storage Workload Security. Contactez votre représentant de compte pour activer ce couplage.</block>
   <block id="7a7f05bb105ddcf9c0d221e37f8a923c" category="list-text">Pour bloquer un utilisateur suspect dans votre environnement, sélectionnez *Bloquer* sous le nom de l'utilisateur.</block>
   <block id="bc8ffb69fb560086f529e0097158caad" category="admonition">Si vous ignorez une alerte, vous ne pouvez pas modifier son statut ni annuler cette modification.</block>
   <block id="7149ff1e14f0a158752906babaa08dc3" category="list-text">Pour cet incident, sélectionnez l'icône de téléchargement pour télécharger la liste des fichiers impactés au format CSV.</block>
@@ -2103,7 +2047,6 @@
   <block id="3711ac0a85bd797cffe6d1b55a460f16" category="paragraph">Assurez-vous d'avoir respecté les <block ref="24745d2c3c6c1ff64bcdf410b4214e6b" category="inline-link-macro-rx"></block> pour l'agent d'activité utilisateur. Assurez-vous que votre configuration respecte les fournisseurs de cloud et les régions pris en charge.</block>
   <block id="bbeae0eeffca7072631fe62be382e481" category="cell">Service de résilience aux ransomwares</block>
   <block id="28f949c139c27e6b09df3640a4d3aea0" category="doc">Répliquer les instantanés sur ONTAP</block>
-  <block id="f67d671d0eb9b2810d472b2c73fb65d6" category="paragraph">Ransomware Resilience prend désormais en charge l'ajout de la réplication des instantanés vers un site ONTAP secondaire. Vous pouvez créer une stratégie de protection contre les ransomwares incluant la réplication ou utiliser la stratégie prédéfinie. Avec les groupes de protection qui utilisent une stratégie de réplication, vous pouvez répliquer vers la même destination ou vers des destinations différentes pour chaque charge de travail.</block>
   <block id="6ca5a36112bece1031ef1a3e82518ffb" category="inline-link-macro">Protéger les charges de travail grâce à la résilience contre les ransomwares</block>
   <block id="0b603f5148dda4ce1b974e4b20493476" category="paragraph">Pour plus d'informations, voir <block ref="1b59dbcecddb451034333205ceb2d85d" category="inline-link-macro-rx"></block>.</block>
   <block id="f7bb3fba9e87909a7d99018a8feebef5" category="section-title">Exclure les charges de travail de la résilience aux ransomwares</block>
@@ -2162,9 +2105,6 @@
   <block id="d230465858c85552b6c5a5b1ef3bb21f" category="list-text">*Planifications de réplication* : Activez les fréquences que vous souhaitez (horaire, quotidienne, hebdomadaire ou mensuelle) et définissez la valeur de rétention (le nombre d’instantanés répliqués à conserver) pour chaque planification activée.</block>
   <block id="228ec8f5cf8241b99a71e0c11689b0e6" category="list-text">Sélectionnez les paramètres de détection souhaités : *Détection du chiffrement* *Détection des comportements suspects des utilisateurs* *Blocage des extensions de fichiers suspectes*</block>
   <block id="447fce6406d4a8e99de98a2d5d107536" category="list-text">Si votre stratégie inclut la réplication, sélectionnez le **système de destination** et la **VM de stockage de destination**. Sélectionnez **Suivant**.</block>
-  <block id="0c82c0ade162cfe42b72c98aa569451d" category="list-text">Si la stratégie de protection inclut la réplication, vérifiez les paramètres de réplication.</block>
-  <block id="22af614d3b0e3b88037f6f632819e41f" category="list-text">Pour répliquer tous les instantanés vers la même destination, cochez **Utiliser la même destination pour chaque charge de travail**. Choisissez un *système de destination* et une *VM de stockage de destination* pour les charges de travail dans la section Agent de la console.</block>
-  <block id="5cddb60bd30a2b5abfa065435ff46fad" category="paragraph">Pour utiliser des destinations différentes, décochez cette case. Examinez chaque charge de travail sous chaque agent de console et attribuez un *système de destination* et une *VM de stockage de destination* à chaque charge de travail. Sélectionnez **Suivant**.</block>
   <block id="05f102695dcd78d82f88a52818f4c682" category="admonition">Avant de télécharger les fichiers, vous devez actualiser le tableau de bord pour que vos rapports intègrent les données les plus récentes.</block>
   <block id="6f540707e47351a26c8e3c79ccce18ea" category="list-text">*Protection* : Comprend l’état et les détails de toutes les charges de travail, y compris le nombre total de charges de travail protégées et à risque.</block>
   <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
@@ -2172,4 +2112,8 @@
   <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">Il s’agit d’un identifiant généré par le système qui correspond à votre e-mail. Sur la page *Gestion NSS*, vous pouvez afficher votre e-mail à partir du<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">Si vous avez besoin d'actualiser vos jetons d'identification de connexion, il existe également une option *Mettre à jour les informations d'identification* dans le<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="667dffcf5676fe0bd645082d2a512fef" category="section-title">12 janvier 2026</block>
+  <block id="1bfdea46bcdc184ecc395f7be984a97f" category="paragraph">Ransomware Resilience prend désormais en charge l'ajout de la réplication des instantanés vers un site ONTAP secondaire. Vous pouvez créer une stratégie de protection contre les ransomwares incluant la réplication ou utiliser la stratégie prédéfinie.</block>
+  <block id="1f84339ab34d5298a23a70d51ad457d4" category="inline-link-macro">détection d'activité utilisateur suspecte activée</block>
+  <block id="0c72d558c2e8468bc311f1933be197b5" category="admonition">Si vous utilisez NetApp Data Infrastructure Insights (DII) Workload Security, il est recommandé d'utiliser les mêmes agents Workload Security pour la résilience aux ransomwares. Vous n'avez pas besoin de déployer des agents Workload Security distincts pour Ransomware Resilience ; toutefois, l'utilisation des mêmes agents Workload Security nécessite une relation d'appairage entre l'organisation Ransomware Resilience Console et le locataire DII Storage Workload Security. Contactez votre représentant commercial pour activer ce jumelage. + Si vous n'utilisez pas DII, vous pouvez bénéficier de fonctionnalités de détection des comportements suspects des utilisateurs. Assurez-vous d'avoir <block ref="f31f86ab68cf8ca6dc8a3009e6d9ea7a" category="inline-link-macro-rx"></block> et avons configuré les agents appropriés.</block>
+  <block id="49fa679e35a13dc09de6805c384904d1" category="list-text">Pour configurer une stratégie de sauvegarde, choisissez-en une puis sélectionnez **Suivant**.</block>
 </blocks>
