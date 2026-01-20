@@ -62,6 +62,9 @@ Cette page affiche les agents de console avec des systèmes qui n'ont pas été 
 
 
 
+TIP: Dans la carte Découverte de la charge de travail des Paramètres, sélectionnez le menu Actions `...` puis **Télécharger le rapport (JSON)** pour consulter la liste des charges de travail prises en charge et non prises en charge dans vos systèmes.
+
+
 
 == Activité utilisateur suspecte
 

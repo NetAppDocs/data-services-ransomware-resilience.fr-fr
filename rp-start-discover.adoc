@@ -79,6 +79,9 @@ Si vous avez ajouté des charges de travail à un système précédemment décou
 
 
 
+TIP: Si vous constatez que certains volumes ne s'affichent pas pour le système que vous avez découvert, il se peut qu'ils ne soient pas pris en charge. Pour trouver une liste des volumes non pris en charge, accédez au menu **Paramètres** puis sélectionnez le menu d'actions dans la carte Découverte de la charge de travail pour télécharger un rapport JSON des volumes pris en charge et non pris en charge.
+
+
 
 == Découvrez de nouveaux systèmes
 

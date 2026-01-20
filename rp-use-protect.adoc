@@ -523,6 +523,11 @@ TIP: Pour voir plus de détails sur les charges de travail, faites défiler vers
 image:screen-protection-groups-policy.png["Ajouter un groupe de protection - Page de stratégie"]
 
 . Sélectionnez la politique qui régira la protection de ce groupe. Pour confirmer, sélectionnez *Suivant*.
+. Si la stratégie de protection inclut la réplication, vérifiez les paramètres de réplication.
++
+.. Pour répliquer tous les instantanés vers la même destination, cochez **Utiliser la même destination pour chaque charge de travail**. Choisissez un *système de destination* et une *VM de stockage de destination* pour les charges de travail dans la section Agent de la console. + Pour utiliser des destinations différentes, décochez cette case. Examinez chaque charge de travail sous chaque agent de console et attribuez un *système de destination* et une *VM de stockage de destination* à chaque charge de travail. Sélectionnez **Suivant**.
+
+
 . Pour configurer une stratégie de sauvegarde, choisissez-en une puis sélectionnez **Suivant**.
 . Si votre politique de détection inclut la détection du comportement des utilisateurs, sélectionnez le collecteur de données que vous souhaitez utiliser, puis **Suivant**.
 . Passez en revue les sélections pour le groupe de protection.
