@@ -30,7 +30,9 @@ Un agent peut héberger plusieurs collecteurs de données. Les collecteurs de do
 
 Les collecteurs sont configurés dans les paramètres de résilience aux ransomwares.
 
-*Rôle de console requis* Pour activer la détection d'activité utilisateur suspecte, vous avez besoin du rôle d'administrateur de l'organisation.  Pour les configurations ultérieures en cas d’activité utilisateur suspecte, vous avez besoin du rôle d’administrateur du comportement utilisateur Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^].
+*Rôle Console requis* Pour activer la détection des activités utilisateur suspectes, vous devez disposer du **rôle Organization admin**. Pour les configurations ultérieures relatives aux activités utilisateur suspectes, vous devez disposer du **rôle Ransomware Resilience user behavior admin**. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^].
+
+Assurez-vous que chaque rôle est appliqué au niveau de l'organisation.
 
 
 
