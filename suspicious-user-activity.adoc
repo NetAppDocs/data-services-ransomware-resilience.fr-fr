@@ -107,46 +107,58 @@ TIP: Il est recommandé de synchroniser l'heure à la fois sur le système ONTAP
 Veuillez consulter les règles d'accès au réseau cloud pour votre zone géographique concernée (Asie-Pacifique, Europe ou États-Unis).
 
 
+IMPORTANT: Lors de l'installation initiale, remplacez le  `<site_name>` par une autorisation générique (`*`. Après que l'agent est activé et pleinement opérationnel, vous pouvez remplacer l'autorisation par le nom du site. Contactez votre NetApp représentant pour le nom du site.
+
+
 
 ==== Déploiements d'agents d'activité utilisateur basés en APAC
 
-[cols="5*"]
+[cols="1,1,1,3,1"]
 |===
 | Protocole | Port | Source | Destination | Description 
 
 
-| TCP | 443 | Agent d'activité utilisateur | Service de résilience aux ransomwares | Accès à la résilience face aux ransomwares 
+| TCP | 443 | Agent d'activité utilisateur  a| 
+* <site_name>.cs01-ap-1.cloudinsights.netapp.com
+* <site_name>.c01-ap-1.cloudinsights.netapp.com
+* <site_name>.c02-ap-1.cloudinsights.netapp.com
+* gentlogin.cs01-ap-1.cloudinsights.netapp.com
 
-
-| TCP | 443 | Agent d'activité utilisateur | Service de résilience aux ransomwares | Accès aux services d'authentification 
+| Accès à la résilience face aux ransomwares 
 |===
 
 
 ==== Déploiements d'agents d'activité utilisateur basés en Europe
 
-[cols="5*"]
+[cols="1,1,1,3,1"]
 |===
 | Protocole | Port | Source | Destination | Description 
 
 
-| TCP | 443 | Agent d'activité utilisateur | Service de résilience aux ransomwares | Accès à la résilience face aux ransomwares 
+| TCP | 443 | Agent d'activité utilisateur  a| 
+* <site_name>.cs01-eu-1.cloudinsights.netapp.com
+* <site_name>.c01-eu-1.cloudinsights.netapp.com
+* <site_name>.c02-eu-1.cloudinsights.netapp.com
+* agentlogin.cs01-eu-1.cloudinsights.netapp.com
 
-
-| TCP | 443 | Agent d'activité utilisateur | Service de résilience aux ransomwares | Accès aux services d'authentification 
+| Accès à la résilience face aux ransomwares 
 |===
 
 
 ==== Déploiements d'agents d'activité utilisateur basés aux États-Unis
 
-[cols="5*"]
+[cols="1,1,1,3,1"]
 |===
 | Protocole | Port | Source | Destination | Description 
 
 
-| TCP | 443 | Agent d'activité utilisateur | Service de résilience aux ransomwares | Accès à la résilience face aux ransomwares 
+| TCP | 443 | Agent d'activité utilisateur  a| 
+* <site_name>.cs01.cloudinsights.netapp.com
+* <site_name>.c01.cloudinsights.netapp.com
+* <site_name>.c02.cloudinsights.netapp.com
+* agentlogin.cs01.cloudinsights.netapp.com
 
-
-| TCP | 443 | Agent d'activité utilisateur | Service de résilience aux ransomwares | Accès aux services d'authentification 
+| Accès à la résilience face aux ransomwares 
 |===
 
 
