@@ -20,7 +20,7 @@ Vous pouvez protéger les charges de travail contre les attaques de ransomware e
 
 == Comprendre les stratégies de protection contre les ransomwares
 
-Les stratégies de protection contre les ransomwares englobent à la fois les politiques de _détection_, de _protection_ et de _réplication_.
+Les stratégies de protection contre les ransomwares englobent _détection_, _protection_ et _réplication_.
 
 * **Les politiques de détection** permettent d'identifier les menaces de type ransomware.
 * **Les politiques de protection** incluent les politiques de capture instantanée et de sauvegarde.  Les politiques de détection et de capture instantanée sont nécessaires dans une stratégie de protection.  Les politiques de sauvegarde sont facultatives.
