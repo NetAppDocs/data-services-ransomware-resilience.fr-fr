@@ -196,7 +196,6 @@
   <block id="3c031b939f6ec312ee601d021e7a6644" category="section-title">NetApp Console</block>
   <block id="ddf52fb0677b5f9f1c4b564b82866d6e" category="paragraph">La résilience aux ransomwares est accessible via la NetApp Console.</block>
   <block id="0a0979a6d279475a420ea5c279943daa" category="paragraph">La NetApp Console fournit une gestion centralisée des services de stockage et de données NetApp dans les environnements sur site et cloud à l'échelle de l'entreprise. La console est requise pour accéder aux services de données NetApp et les utiliser. En tant qu'interface de gestion, il vous permet de gérer de nombreuses ressources de stockage à partir d'une seule interface. Les administrateurs de console peuvent contrôler l’accès au stockage et aux services pour tous les systèmes de l’entreprise.</block>
-  <block id="874065797510ef71853078d085cab4b0" category="paragraph">Vous n'avez pas besoin de licence ni d'abonnement pour commencer à utiliser NetApp Console et vous n'encourez des frais que lorsque vous devez déployer des agents de console dans votre cloud pour garantir la connectivité à vos systèmes de stockage ou à vos services de données NetApp . Cependant, certains services de données NetApp accessibles depuis la console sont sous licence ou basés sur un abonnement.</block>
   <block id="a139b69cf2c6a37377eea224685da3f6" category="paragraph">En savoir plus sur le<block ref="6d844886de4fe963e1e4b97f495f829d" category="inline-link-macro-rx"></block> .</block>
   <block id="cbd914c846d96d6001aec3ae8b50e684" category="section-title">Comment fonctionne la résilience aux ransomwares</block>
   <block id="16091f015c891dfa25a4cfd6d5a0d84b" category="paragraph">Ransomware Resilience utilise NetApp Backup and Recovery pour découvrir et définir des stratégies de snapshot et de sauvegarde pour les charges de travail de partage de fichiers, et SnapCenter ou SnapCenter pour VMware pour découvrir et définir des stratégies de snapshot et de sauvegarde pour les charges de travail des applications et des machines virtuelles.  De plus, Ransomware Resilience utilise Backup and Recovery et SnapCenter / SnapCenter pour VMware pour effectuer une récupération cohérente au niveau des fichiers et des charges de travail.</block>
@@ -238,7 +237,6 @@
   <block id="ffc184891768c331383cd53bcd1bc968" category="list-text">Partages de fichiers NetApp</block>
   <block id="4f0550f066ae72bb8c24fc3f59c323bf" category="list-text">Stockage en bloc</block>
   <block id="ed11408803c4c1aca5fbebbc43d88458" category="list-text">Banques de données VMware</block>
-  <block id="02f360fe822afa82c0f600943169df7e" category="section-title">Termes qui pourraient vous aider à vous protéger contre les ransomwares</block>
   <block id="77460e2b891748333455193aadd137d8" category="paragraph">Il pourrait être utile de comprendre certains termes liés à la protection contre les ransomwares.</block>
   <block id="826a4e8d8facce6f785b2a404538e6cd" category="list-text">*Protection* : La protection dans Ransomware Resilience signifie garantir que des instantanés et des sauvegardes immuables se produisent régulièrement dans un domaine de sécurité différent à l'aide de politiques de protection.</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Mentions légales</block>
@@ -462,11 +460,7 @@
   <block id="fb197ee87a0f850dc3b7bb98fe408518" category="inline-link-macro">Configurer les paramètres</block>
   <block id="35743d3ea81079f21301876eeaf2d70d" category="paragraph">Ransomware Resilience permet de configurer une destination de sauvegarde via l'option Paramètres. Voir <block ref="522f9942d2238ef69c22ece6b9af5205" category="inline-link-macro-rx"></block> .</block>
   <block id="1afe90b99262d688f040631ea9d6dcce" category="section-title">Mettre à jour les autorisations des utilisateurs non administrateurs dans un système ONTAP</block>
-  <block id="63d2122922e06d4feae3b17b3f005ec1" category="paragraph">Si vous devez mettre à jour les autorisations des utilisateurs non administrateurs pour un système particulier, procédez comme suit.</block>
-  <block id="df4a4e3e8d87a650fd5d152bd4fab199" category="list-text">Connectez-vous à la console et recherchez le système dont les autorisations utilisateur ONTAP doivent être mises à jour.</block>
-  <block id="0a8a7f0fafc4b245a6e039b7da0e38c7" category="list-text">Sélectionnez le système pour voir les détails.</block>
   <block id="ddf0d8cb7fa932ccfbf9231d4f27f992" category="list-text">Sélectionnez *Afficher les informations supplémentaires* pour afficher le nom d'utilisateur.</block>
-  <block id="af2fd7f57e628b460dd2978fa6cf0a79" category="list-text">Afficher les rôles existants pour cet utilisateur. Entrer:</block>
   <block id="ec2732dacf33a5e90fbcf1cf42cb9ef7" category="list-text">Modifier le rôle de l'utilisateur. Entrer:</block>
   <block id="01ad1e9b6ee32140ab032c379c4fd753" category="summary">Démarrez avec NetApp Ransomware Resilience en quelques étapes.</block>
   <block id="87269d545e3fccdff13a867df7261ace" category="doc">Démarrage rapide pour NetApp Ransomware Resilience</block>
@@ -998,7 +992,6 @@
   <block id="346ced422939f5220048eed80e512829" category="list-text">Pour voir les détails des politiques SnapCenter , sélectionnez la *flèche vers le bas*.</block>
   <block id="c716b644cde6bcf010e93cdafcb078a0" category="list-text">Sélectionnez **Suivant**.</block>
   <block id="a3de809b15b92430b0a649973defb161" category="inline-link-macro">ou en créer un</block>
-  <block id="4ba6fce8781481d7a10ccdf42ed8690d" category="list-text">Si vous avez sélectionné *Détection de comportement utilisateur suspect* comme paramètre de détection, sélectionnez l'agent d'activité utilisateur ou<block ref="739a3400f03009256dff1eb7cc8f7f4a" category="inline-link-macro-rx"></block> .</block>
   <block id="8e7f1a46323a19741e1abd05eac8cbb8" category="paragraph">L'agent d'activité utilisateur héberge les nouveaux collecteurs de données. Ransomware Resilience crée automatiquement le collecteur de données pour transmettre les événements d'activité des utilisateurs à Ransomware Resilience afin de détecter les comportements anormaux des utilisateurs.</block>
   <block id="7976453f8009e02e337c120a10100393" category="list-text">Revoyez vos choix. Sélectionnez **Créer** pour activer la détection.</block>
   <block id="24fae1821c4530c41f4af2d4f1f70175" category="list-text">Sur la page Protection, vérifiez l'**état de détection** pour confirmer que la détection est active.</block>
@@ -1485,11 +1478,7 @@
   <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">Une icône de trois points horizontaux</block>
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">L'utilisation de cette option vous invite à vous reconnecter. Notez que le jeton de ces comptes expire après 90 jours. Une notification sera publiée pour vous en informer.</block>
   <block id="2a4edc5ec6e55f07dba0609dc2cd6d87" category="summary">La détection d’activité utilisateur suspecte dans Ransomware Resilience vous permet de détecter l’activité utilisateur qui pourrait représenter une menace potentielle.</block>
-  <block id="906ec8bab01967c36f2f073eff9f54df" category="doc">Configurer la détection des activités suspectes des utilisateurs dans NetApp Ransomware Resilience</block>
-  <block id="9ba1db4a2c84400f14de2d58496b9f52" category="paragraph">Ransomware Resilience prend en charge la détection des comportements suspects des utilisateurs dans les politiques de détection, vous permettant de traiter les incidents de ransomware au niveau de l'utilisateur.</block>
   <block id="fa83d0f077ae64e1df0b8a9ed9982815" category="paragraph">Les collecteurs sont configurés dans les paramètres de résilience aux ransomwares.</block>
-  <block id="4f047e83e52e21d5382adc1b5dbf3119" category="section-title">Ajouter un agent d'activité utilisateur</block>
-  <block id="4d4379036f7207029fbe126649ccc0a6" category="paragraph">Les agents d'activité utilisateur sont des environnements exécutables pour les collecteurs de données ; les collecteurs de données partagent les événements d'activité utilisateur avec Ransomware Resilience. Vous devez créer au moins un agent d’activité utilisateur pour activer la détection d’activité utilisateur suspecte.</block>
   <block id="696c660ff8d9323e55146a6dbd4e4088" category="cell">Système opérateur</block>
   <block id="2e5d14f7919ff3c6138e7845aec4f915" category="cell">Versions prises en charge</block>
   <block id="c158e3ead98c5929e4228914a1e6e615" category="cell">AlmaLinux</block>
@@ -1517,13 +1506,11 @@
   <block id="1dc03f52e7a38f5b6ec91f4303e010ad" category="inline-image-macro">Capture d'écran de l'interface d'ajout d'agent d'activité.</block>
   <block id="7298950e09abf5a29938d42a442acced" category="paragraph"><block ref="7298950e09abf5a29938d42a442acced" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f2d7e7792f60fc56fc833ac06d43ff03" category="list-text">Vérifiez vos paramètres. Sélectionnez *Activer* pour terminer l’ajout de l’agent d’activité utilisateur.</block>
-  <block id="a5990ac92f36dcb99f016321efbfa2cd" category="list-text">Confirmez que l’agent d’activité utilisateur a été créé avec succès. Dans la mosaïque Activité utilisateur, un déploiement réussi s’affiche comme En cours d’exécution.</block>
   <block id="87890c9758b28588c6845cfcf6d19b17" category="section-title">Ajouter un collecteur de données</block>
   <block id="cebc35dcf9d04a393d86d35a4e3cf6be" category="inline-xref-macro">ajouter une politique de détection</block>
   <block id="723cff7a2b53371ffdffcdc65a370014" category="paragraph">Vous pouvez consulter les détails du collecteur de données. Dans Paramètres, sélectionnez **Gérer** dans la mosaïque Activité utilisateur. Sélectionnez l'onglet **Collecteur de données** puis sélectionnez le collecteur de données pour afficher ses détails ou le mettre en pause.</block>
   <block id="79994c0d6b62d6854ba2d69416af2030" category="inline-image-macro">Capture d'écran des paramètres d'activité de l'utilisateur</block>
   <block id="eb9abd0b9e77424befbbd0596585482d" category="paragraph"><block ref="eb9abd0b9e77424befbbd0596585482d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ae5063128f989ec31ec308b7dd0cb2ed" category="section-title">Ajouter un connecteur d'annuaire utilisateur</block>
   <block id="8348d8dcee9ea32e049e21c42a431b91" category="list-text">Dans Ransomware Resilience, accédez à *Paramètres*.</block>
   <block id="9fcb0a7634f29d96ae98e37bbc76e1cd" category="list-text">Dans la mosaïque Activité utilisateur, sélectionnez **Gérer**.</block>
   <block id="e70202c14c96f451fdcf2617844ea351" category="list-text">Sélectionnez l'onglet **Connecteurs d'annuaire utilisateur** puis **Ajouter**.</block>
@@ -1541,9 +1528,7 @@
   <block id="064c929bca3d74ce57c593b98179d9b6" category="list-text">Localisez la mosaïque Activité utilisateur, sélectionnez **Gérer**.</block>
   <block id="7a4d95b4bd97e134c18ec0bc73dfdc26" category="list-text">Sélectionnez l’onglet **Connecteur d’annuaire utilisateur**.</block>
   <block id="78b1b242bace6a18a2fc89d34f35271a" category="list-text">Identifiez le connecteur d’annuaire utilisateur que vous souhaitez supprimer. Dans le menu d'action en fin de ligne, sélectionnez les trois points<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block> puis **Supprimer**.</block>
-  <block id="d612f3439b60caf42aae1b535bd86696" category="list-text">Dans la boîte de dialogue contextuelle, sélectionnez **Supprimer** pour confirmer vos actions.</block>
   <block id="2dbd6a4739d1db42b8aac2205ef06e6e" category="section-title">Répondre aux alertes d'activité suspecte des utilisateurs</block>
-  <block id="2d8b6636ea3b13ca52dd572d55fc4d15" category="paragraph">Après avoir configuré la détection des activités suspectes des utilisateurs, vous pouvez surveiller les événements dans la page des alertes. Pour plus d'informations, consultez la section <block ref="23491e50ff66c3ad8e47bd3a8caca02f" category="inline-link-macro-rx"></block> .</block>
   <block id="e5b5e43b801607d44c3fb5101a5e5b57" category="summary">Découvrez les nouveautés de NetApp Ransomware Resilience.</block>
   <block id="be2c4f84f4ed6985fafea5f33caf0b99" category="doc">Nouveautés de NetApp Ransomware Resilience</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">06 octobre 2025</block>
@@ -1674,7 +1659,6 @@
   <block id="3e89831fbd0267df9052ee5e70bc06ab" category="sidebar">Accéder à la résilience des ransomwares</block>
   <block id="36eabf0873c4e7de41ebd02438b3b19f" category="sidebar">Simulez une attaque de ransomware avec un exercice de préparation</block>
   <block id="a216cb7967dcfa49b3b976657369cd25" category="sidebar">Configurer les sauvegardes, la détection des menaces et les simulations d'attaque dans les paramètres</block>
-  <block id="e65f6e4b1867bfedf08120cb1ab99c24" category="sidebar">Configurer la détection des activités suspectes des utilisateurs</block>
   <block id="d67482bbf82ef9c339e44809ea9873b1" category="sidebar">Protégez les charges de travail avec des stratégies de protection contre les ransomwares</block>
   <block id="4b55af6e5a9948a11e84a0809a34edfb" category="sidebar">Rechercher des données personnelles identifiables</block>
   <block id="f8a7dc43864435cb9b522a28b586e556" category="sidebar">Se remettre d'une attaque de ransomware</block>
@@ -1741,7 +1725,6 @@
   <block id="7149ff1e14f0a158752906babaa08dc3" category="list-text">Pour cet incident, sélectionnez l'icône de téléchargement pour télécharger la liste des fichiers impactés au format CSV.</block>
   <block id="fe1bb8cb54f03cf7a69c3e9568118b30" category="list-text">Le **collecteur de données** collecte les données d’activité des utilisateurs à partir d’ ONTAP.</block>
   <block id="b6173a051353d59a4ee775fcef288441" category="list-text">Le **connecteur d'annuaire utilisateur** se connecte à votre annuaire pour mapper les identifiants utilisateur aux noms d'utilisateur.</block>
-  <block id="398de83ff8f318218f9eaedb05929ef0" category="paragraph">Une fois l'agent d'activité utilisateur créé avec succès, revenez au menu **Paramètres** puis sélectionnez **Gérer** dans la mosaïque Activité utilisateur. Sélectionnez l'onglet **Agent d'activité utilisateur**, puis sélectionnez l'agent d'activité utilisateur pour afficher les détails le concernant, y compris les collecteurs de données et les connecteurs d'annuaire utilisateur.</block>
   <block id="a83ea9a287c9fdd0689933a464055150" category="paragraph">Pour mapper les ID utilisateur aux noms d’utilisateur, vous devez créer un connecteur d’annuaire utilisateur.</block>
   <block id="89bd0177a422e5d81fce2f8f82dac3f6" category="paragraph-title">Avez-vous besoin d'une licence pour utiliser Ransomware Resilience ?</block>
   <block id="bc43d832ca9bfb061aff20db6dea53d8" category="list-text">Apportez votre propre licence (BYOL), qui est un fichier de licence NetApp (NLF) que vous obtenez auprès de votre représentant commercial NetApp . Vous pouvez utiliser le numéro de série de la licence pour activer le BYOL dans la section Licenses and subscriptions de la console.</block>
@@ -1978,7 +1961,6 @@
   <block id="7e56b5e89b8f29e1bd4a5ecf15c201e8" category="paragraph">Vous pouvez essayer Ransomware Resilience avec un essai gratuit de 30 jours. NetApp ne vous facture pas l'utilisation de la version d'essai de Ransomware Resilience.</block>
   <block id="773dd0f5eb55036249a06d189bd46093" category="section-title">Exigences relatives aux comportements suspects des utilisateurs</block>
   <block id="567dcfd6302e5511c1b546a4df21a679" category="inline-link-macro">les exigences</block>
-  <block id="3fa9bd6939fae83104d5483bb4df09cf" category="paragraph">Pour que Ransomware Resilience fournisse des alertes sur les comportements suspects des utilisateurs, vous devez configurer un agent d’activité utilisateur. To install a user activity agent, ensure your system meets <block ref="48db2132a53f1fefbda7dcf1745aa324" category="inline-link-macro-rx"></block>.</block>
   <block id="7f176789d86d465c8df04184cd91e82b" category="doc">Surveiller l'état de la charge de travail à l'aide du tableau de bord de NetApp Ransomware Resilience</block>
   <block id="bb0857f5685be3107534e9cb3600a43f" category="paragraph">Utilisez le tableau de bord pour consulter les suggestions de protection, modifier les paramètres et télécharger les rapports.</block>
   <block id="acf2855d96f83cab1f4ac80844c18ed5" category="admonition">Sélectionnez l'info-bulle « i » pour voir des conseils sur ces données. Pour augmenter la limite de charge de travail, sélectionnez *Augmenter la limite de charge de travail* dans cette note. En sélectionnant cette option, vous accédez à la page d'assistance de la console où vous pouvez créer un ticket de cas.</block>
@@ -1988,22 +1970,16 @@
   <block id="83740edb7e1cce01ad9abd22c965f833" category="inline-image-macro">Image de l'icône de l'option de téléchargement</block>
   <block id="003de596593787da81cd02bc78808f9d" category="list-text">Sur la page, sélectionnez *Télécharger* <block ref="10920434d8a4b3cb6afdcf0337f83d24" category="inline-image-macro-rx" type="image"></block> option.</block>
   <block id="d51c0020ded66c680ed4bf4dab57a782" category="paragraph">Ransomware Resilience détecte l'activité suspecte des utilisateurs en analysant les événements d'activité des utilisateurs générés par FPolicy dans ONTAP. Pour collecter des données d’activité utilisateur, vous devez déployer un ou plusieurs agents d’activité utilisateur. L'agent est un serveur Linux ou une machine virtuelle avec connectivité aux appareils de votre locataire.</block>
-  <block id="951fa3938f2418e5c7bdceb36d525b4e" category="section-title">Agents et collecteurs d'activité utilisateur</block>
-  <block id="012fdb750d9f768ed33b4236dd982ae4" category="paragraph">Au moins un agent d’activité utilisateur doit être installé pour activer la détection d’activité utilisateur suspecte dans Ransomware Resilience. Lorsque vous activez la fonctionnalité de détection d'activité utilisateur suspecte depuis le tableau de bord Ransomware Resilience, vous devez fournir les informations relatives à l'hôte de l'agent.</block>
   <block id="da7bfaf398235069a409197330d59b53" category="paragraph">Un agent peut héberger plusieurs collecteurs de données. Les collecteurs de données envoient les données à un emplacement SaaS pour analyse. Il existe deux types de collectionneurs :</block>
-  <block id="1e496ca2f7a66d863132588473f14de2" category="section-title">Configuration requise</block>
-  <block id="b7cc904e79a175038a121ea330565832" category="paragraph">Pour installer un agent d'activité utilisateur, vous avez besoin d'un hôte ou d'une machine virtuelle répondant aux exigences suivantes.</block>
   <block id="b9300e15e3fa20c1dc3ecfabbbb96a7b" category="section-title">Configuration requise pour le système d'exploitation</block>
   <block id="afea8c44acd019a3a489f7a3ddeb5c8e" category="admonition">L’ordinateur que vous utilisez pour l’agent d’activité de l’utilisateur ne doit pas exécuter d’autres logiciels au niveau de l’application. Un serveur dédié est recommandé.</block>
   <block id="19edca9ea70315410039bf08b3ffecda" category="paragraph">Le<block ref="0a342b59ecdcede0571340b9ed11633f" prefix=" " category="inline-code"></block> Cette commande est requise pour l'installation. Le<block ref="beb493211c3135923a11284ef26bf909" prefix=" " category="inline-code"></block> Cette commande est nécessaire pour l'installation, l'exécution des scripts et la désinstallation.</block>
   <block id="a54c13ad42512dbfec4e8a44d793a52e" category="section-title">Configuration requise pour le serveur</block>
   <block id="34af15b56c0def7a2806fd4b03537e12" category="list-text">**Espace disque** : 36 Go d’espace disque libre</block>
   <block id="68eda0e29d8e074409c51f53581f3a64" category="admonition">Allouez de l'espace disque supplémentaire pour permettre la création du système de fichiers. Assurez-vous qu'il y a au moins 35 Go d'espace libre dans le système de fichiers. + Si<block ref="68ab1268abb7e5f5688810968df97d6b" prefix=" " category="inline-code"></block> Il s'agit d'un dossier monté depuis un stockage NAS ; les utilisateurs locaux doivent avoir accès à ce dossier. La création de l'agent d'activité utilisateur peut échouer si les utilisateurs locaux ne disposent pas des autorisations nécessaires.</block>
-  <block id="4efd7fc25783a87a8f0795f4de1a8af7" category="admonition">Il est recommandé d'installer l'agent d'activité utilisateur sur un système différent de celui de votre environnement de résilience aux ransomwares. Si vous les installez sur la même machine, prévoyez entre 50 et 55 Go d'espace disque. Pour Linux, allouez 25 à 30 Go d'espace à<block ref="4bf2f0d069734974e4d76e679433aa07" prefix=" " category="inline-code"></block> et 25 Go à<block ref="ea5f88360fb7c06d3270b165b4dad226" prefix=" " category="inline-code"></block>.</block>
   <block id="52554f7429cd5c72cd3c3e9561412160" category="admonition">Il est recommandé de synchroniser l'heure à la fois sur le système ONTAP et sur la machine de l'agent d'activité utilisateur à l'aide du protocole NTP (Network Time Protocol) ou du protocole SNTP (Simple Network Time Protocol).</block>
   <block id="77469c598ab2b5984e8dafd3d15a2315" category="section-title">règles d'accès au réseau cloud</block>
   <block id="c793f078b8fd1dcce9dfd5ae57f2a51c" category="paragraph">Veuillez consulter les règles d'accès au réseau cloud pour votre zone géographique concernée (Asie-Pacifique, Europe ou États-Unis).</block>
-  <block id="b59e5489bdc375550b52afe395f08180" category="section-title">Déploiements d'agents d'activité utilisateur basés en APAC</block>
   <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">Port</block>
   <block id="f31bbdd1b3e85bccd652680e16935819" category="cell">Source</block>
   <block id="12007e1d59f4d09c87dbe2c438256244" category="cell">Destination</block>
@@ -2011,8 +1987,6 @@
   <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
   <block id="f2ca52b87225d79d40f899aebabeec45" category="cell">Agent d'activité utilisateur</block>
   <block id="b7169d36c5259a3a051359ca51dbd682" category="cell">Accès à la résilience face aux ransomwares</block>
-  <block id="0e07fec3da393adf659f6e786a442b5d" category="section-title">Déploiements d'agents d'activité utilisateur basés en Europe</block>
-  <block id="e0a04d596459d34d5495089a5a992421" category="section-title">Déploiements d'agents d'activité utilisateur basés aux États-Unis</block>
   <block id="0cd58d8585970b5311e84ca2c34ba5ef" category="section-title">Règles du réseau</block>
   <block id="1b09a58921479be87f9dae639915150f" category="cell">389 (LDAP) 636 (LDAP / start-tls)</block>
   <block id="84caee864977bc98db0b0df24853f63c" category="cell">URL du serveur LDAP</block>
@@ -2029,8 +2003,6 @@
   <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
   <block id="1eb5ae63609e68a11106494d272615bf" category="cell">Gestion des clusters</block>
   <block id="269ab41459ba8b3de391eb30b649d222" category="cell">Nécessaire pour le blocage des utilisateurs CIFS/SMB.</block>
-  <block id="c3c0e3736c092f9f194505694468ca8b" category="inline-link-macro">exigences système</block>
-  <block id="3711ac0a85bd797cffe6d1b55a460f16" category="paragraph">Assurez-vous d'avoir respecté les <block ref="24745d2c3c6c1ff64bcdf410b4214e6b" category="inline-link-macro-rx"></block> pour l'agent d'activité utilisateur. Assurez-vous que votre configuration respecte les fournisseurs de cloud et les régions pris en charge.</block>
   <block id="28f949c139c27e6b09df3640a4d3aea0" category="doc">Répliquer les instantanés sur ONTAP</block>
   <block id="6ca5a36112bece1031ef1a3e82518ffb" category="inline-link-macro">Protéger les charges de travail grâce à la résilience contre les ransomwares</block>
   <block id="0b603f5148dda4ce1b974e4b20493476" category="paragraph">Pour plus d'informations, voir <block ref="1b59dbcecddb451034333205ceb2d85d" category="inline-link-macro-rx"></block>.</block>
@@ -2095,7 +2067,6 @@
   <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">Il s’agit d’un identifiant généré par le système qui correspond à votre e-mail. Sur la page *Gestion NSS*, vous pouvez afficher votre e-mail à partir du<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">Si vous avez besoin d'actualiser vos jetons d'identification de connexion, il existe également une option *Mettre à jour les informations d'identification* dans le<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="667dffcf5676fe0bd645082d2a512fef" category="section-title">12 janvier 2026</block>
-  <block id="1f84339ab34d5298a23a70d51ad457d4" category="inline-link-macro">détection d'activité utilisateur suspecte activée</block>
   <block id="49fa679e35a13dc09de6805c384904d1" category="list-text">Pour configurer une stratégie de sauvegarde, choisissez-en une puis sélectionnez **Suivant**.</block>
   <block id="748b96a793ccf0ab113112372db17649" category="paragraph">Ransomware Resilience prend désormais en charge l'ajout de la réplication des instantanés vers un site ONTAP secondaire. Avec les groupes de protection qui utilisent une stratégie de réplication, vous pouvez répliquer vers la même destination ou vers des destinations différentes pour chaque charge de travail. Vous pouvez créer une stratégie de protection contre les ransomwares incluant la réplication ou utiliser la stratégie prédéfinie.</block>
   <block id="389e0c39aeda061370262a9fa330d865" category="doc">Volumes non pris en charge</block>
@@ -2116,9 +2087,7 @@
   <block id="53140a5b1fd2965a3ae256fca48ef979" category="paragraph">Lorsque Ransomware Resilience détecte une attaque potentielle, il envoie une notification par e-mail aux utilisateurs abonnés selon leurs préférences de notification d’abonnement configurées dans les paramètres de la NetApp Console. L’e-mail contient des informations sur l’alerte, y compris la gravité et les ressources impactées.</block>
   <block id="a2079b2871fe8072cb3a3a5245ad0458" category="admonition">Pour configurer les notifications par e-mail dans la Console, consultez <block ref="7a8deb9a674d2246166ab2113d0b6247" category="inline-link-macro-rx"></block>.</block>
   <block id="02b8f736b0a683e2999fdad847ee8cd4" category="paragraph">Pour afficher les alertes au niveau de l'utilisateur, vous devez avoir configuré un agent d'activité utilisateur et activé une stratégie de protection avec détection du comportement de l'utilisateur. La colonne *Utilisateur suspect* apparaît dans le tableau de bord Alertes uniquement lorsque la détection du comportement de l'utilisateur est activée. Pour activer la détection des utilisateurs suspects, voir <block ref="da26800578b610b8b3390e49bb643377" category="inline-link-macro-rx"></block>.</block>
-  <block id="b37f5f6a060700bfc5da32b05dba5978" category="admonition">Si vous utilisez NetApp Data Infrastructure Insights (DII) Workload Security, il est recommandé d'utiliser les mêmes agents Workload Security pour Ransomware Resilience. Il n'est pas nécessaire de déployer des agents Workload Security distincts pour Ransomware Resilience, cependant, l'utilisation des mêmes agents Workload Security requiert une association entre l'organisation de la console Ransomware Resilience et le locataire DII Storage Workload Security. Contactez votre responsable de compte pour activer cette association. + Pour utiliser la détection des utilisateurs suspects _sans_ DII, assurez-vous <block ref="f31f86ab68cf8ca6dc8a3009e6d9ea7a" category="inline-link-macro-rx"></block> et d'avoir configuré les agents appropriés.</block>
   <block id="22b921337bb720d655059859772c0131" category="paragraph">Après avoir arrêté l'attaque, informez votre administrateur de stockage que les données sont prêtes afin qu'il puisse lancer le processus de récupération.</block>
-  <block id="beb3dd3f004aa88c321d7b13cd6d36c1" category="admonition">Lors de l'installation initiale, remplacez le <block ref="50cff7c5933e29331b88e32e4f2a101d" prefix=" " category="inline-code"></block> par une autorisation générique <block ref="3389dae361af79b04c9c8e7057f60cc6" prefix="(" category="inline-code"></block>. Après que l'agent est activé et pleinement opérationnel, vous pouvez remplacer l'autorisation par le nom du site. Contactez votre NetApp représentant pour le nom du site.</block>
   <block id="e7d932b2a7bf9471a38ac8c68fbf83ad" category="list-text">&lt;site_name&gt;.cs01-ap-1.cloudinsights.netapp.com</block>
   <block id="8f31785e58dfdc396495a127fdd7d7dd" category="list-text">&lt;site_name&gt;.c01-ap-1.cloudinsights.netapp.com</block>
   <block id="edc2894193def90c2ccbb8f855d6f564" category="list-text">&lt;site_name&gt;.c02-ap-1.cloudinsights.netapp.com</block>
@@ -2133,4 +2102,72 @@
   <block id="142b47c359d647af9faff9ef084152c7" category="list-text">agentlogin.cs01.cloudinsights.netapp.com</block>
   <block id="9d710e8874b82a90107c10683350b48a" category="paragraph">Les stratégies de protection contre les ransomwares englobent _détection_, _protection_ et _réplication_.</block>
   <block id="7923de3f0c836263e77d3ef5585b2ee7" category="cell">HTTPS (TCP)</block>
+  <block id="af60295fce6b96f900090d3e184223fe" category="paragraph">Si vous utilisez déjà NetApp Data Infrastructure Insights (DII) Workload Security, il est recommandé d'utiliser les mêmes agents Workload Security pour Ransomware Resilience. Il n'est pas nécessaire de déployer des agents Workload Security distincts pour Ransomware Resilience, cependant, l'utilisation des mêmes agents Workload Security nécessite une relation de couplage entre l'organisation de la Ransomware Resilience Console et le locataire DII Storage Workload Security. Contactez votre responsable de compte pour activer ce couplage.</block>
+  <block id="27db5f7ea4fbef607be3e5580d6023dd" category="paragraph">Vous n'avez besoin d'aucune licence ni d'abonnement pour commencer à utiliser NetApp Console et vous n'encourez des frais que lorsque vous déployez des agents Console dans votre cloud pour assurer la connectivité à vos systèmes de stockage ou aux services de données NetApp. Cependant, certains services de données NetApp accessibles depuis la Console sont sous licence ou nécessitent un abonnement.</block>
+  <block id="354ccfdcbf26f407e895a47f9d8a503b" category="section-title">Termes clés</block>
+  <block id="206e0373b94bf3006b9c11363d0a6656" category="summary">Utilisez la détection des comportements suspects des utilisateurs et les alertes pour prévenir les violations de données et les destructions de données sur vos charges de travail.</block>
+  <block id="82156aa22b84e7cdae45e96a8874e738" category="doc">Découvrez la détection de l'activité des utilisateurs dans NetApp Ransomware Resilience</block>
+  <block id="074b162bda03a9fc18a8e2478409227d" category="paragraph">NetApp Ransomware Resilience prend en charge la détection des comportements suspects des utilisateurs, vous permettant de traiter les incidents de ransomware au niveau de l'utilisateur.</block>
+  <block id="1627b4ca1991074a822eba6346ce7cf3" category="paragraph">NetApp Ransomware Resilience fournit une détection de violation de données basée sur l'IA en surveillant l'activité utilisateur suspecte. Des augmentations soudaines de l'activité de lecture et des schémas d'accès à l'activité de lecture sont utilisées pour déterminer une intention malveillante. Une fois détectée, Ransomware Resilience génère automatiquement des alertes dans la NetApp Console, par e-mail et dans tout écosystème de sécurité configuré (par exemple, SIEM).</block>
+  <block id="ac1c3ee23cfae2a6639804d5bf68bc7b" category="paragraph">Grâce à la détection et à l'alerte en cas de comportement utilisateur suspect, Ransomware Resilience vous avertit des tentatives de violation et de destruction de données ainsi que des schémas qui semblent suspects. Dans chaque alerte, Ransomware Resilience identifie un utilisateur que vous pouvez bloquer.</block>
+  <block id="5a163912783b3c6dabd57eb66f95fd81" category="section-title">Analyse forensique des activités suspectes des utilisateurs</block>
+  <block id="a67f686690c7ab560a999ed6e1388387" category="paragraph">Ransomware Resilience propose une analyse forensique des comportements des utilisateurs : listes et graphiques montrant quand une activité suspecte a eu lieu et quand des notifications ont été envoyées. Ces éléments détaillent la fréquence des activités suspectes sur les fichiers, répertoires, volumes et charges de travail au fil du temps pour aider à retracer les événements. Vous pouvez également observer l’apparition de nouvelles extensions de fichiers.</block>
+  <block id="02a67200e42b35e71345f58bd2d775c7" category="inline-image-macro">Capture d'écran de l'ensemble de l'activité des fichiers</block>
+  <block id="487282b4d6c56d72392385b208588404" category="paragraph"><block ref="07c9bb39165625164f68bd238da6408f" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="6bc8a06a459a0d2214186eb151bdd57f" category="paragraph">Vous pouvez comparer l'activité suspecte avec une vue de toute l'activité. Dans la vue de toute l'activité, vous pouvez observer les événements de lecture, d'écriture, de renommage, de déplacement, de création et de suppression, en plus des événements de modification d'accès et d'accès refusé.</block>
+  <block id="792ee2f33057c1f11c391b212b045c77" category="paragraph"><block ref="96bbe9b1211998a6e7e8886375bb3a56" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="05bbb43b3d923283e0b6ffafd088f41f" category="section-title">Composants</block>
+  <block id="b4fb5162d4e2b2c8cd91b15fdb14da68" category="paragraph">Il existe trois composants clés dans la détection de l'activité de comportement utilisateur suspecte de NetApp Ransomware Resilience.</block>
+  <block id="33f62223b33e38496534300dcae35620" category="list-text">L’**agent d’activité utilisateur** est un environnement d’exécution pour les collecteurs de données. Vous devez configurer l’agent d’activité utilisateur.</block>
+  <block id="deecb3eddf0c0100fbbd14529b41b460" category="inline-xref-macro">mettre en place une stratégie de protection contre les ransomwares avec détection des activités suspectes des utilisateurs</block>
+  <block id="c4609467d00df3610ff2f210aafff8b2" category="list-text">Le **collecteur de données** partage les événements d'activité des utilisateurs avec Ransomware Resilience. Le collecteur de données est créé automatiquement lorsque vous <block ref="c19104d57074dd1c9a267e1c5da6c193" category="inline-xref-macro-rx"></block>.</block>
+  <block id="36a3ad726c8c5be9317408ba7fc9fbbb" category="list-text">Le **connecteur d'annuaire utilisateur** permet d'associer les noms d'utilisateur aux identifiants d'utilisateur, créant une plus grande clarté lors de la réponse à un comportement utilisateur suspect. Vous devez configurer le connecteur d'annuaire utilisateur.</block>
+  <block id="bf79cae4914e3581b2da41344f5d22a3" category="section-title">Ransomware Resilience et Data Infrastructure Insights</block>
+  <block id="58fad0abcf1e493b911b1fec13e0ad03" category="inline-link-macro">Points de terminaison DII</block>
+  <block id="75a6a9319b6e0275c06122285e74cd15" category="inline-link-macro">créez l’agent et les collecteurs requis et activez la stratégie de protection contre les ransomwares appropriée</block>
+  <block id="2ce1aa775333063c8d5109b382e42bda" category="paragraph">La détection des comportements suspects des utilisateurs de Ransomware Resilience est une intégration avec Data Infrastructure Insights (DII) Workload Security et utilise <block ref="993ff5110e958e49fd06b299835086fa" category="inline-link-macro-rx"></block>. Vous n'avez besoin d'aucune configuration DII pour activer la détection des comportements des utilisateurs dans Ransomware Resilience. Pour activer la détection des comportements des utilisateurs, <block ref="4bdaea1abd6621c9e973abeffc732722" category="inline-link-macro-rx"></block>.</block>
+  <block id="cce78dc6ebbec7385a01f2146d6d01c8" category="section-title">Prochaines étapes</block>
+  <block id="b653b21a84dc4f7eff813be91d1c09c6" category="inline-link-macro">Exigences relatives à la détection de l'activité comportementale des utilisateurs</block>
+  <block id="411fa4c20567ddb2326b3d53683bd67f" category="list-text"><block ref="411fa4c20567ddb2326b3d53683bd67f" category="inline-link-macro-rx"></block></block>
+  <block id="8c458dae44a326b93145aea4dd0f630e" category="inline-link-macro">Configurer les agents et détecteurs d'activité du comportement utilisateur</block>
+  <block id="1c92ed852b0b86bd1948ec6e816262ce" category="list-text"><block ref="1c92ed852b0b86bd1948ec6e816262ce" category="inline-link-macro-rx"></block></block>
+  <block id="92df6f183b2e1cfcc696af23c1edd4cb" category="summary">Avant de créer un agent d'activité utilisateur et d'autres collecteurs, vous devez vous assurer de répondre aux exigences décrites concernant le système d'exploitation, le serveur et le réseau.</block>
+  <block id="9cc59391625fcde368f1996a2950eec4" category="doc">Exigences relatives à la détection du comportement des utilisateurs dans NetApp Ransomware Resilience</block>
+  <block id="fc36a1ad1399ea3c897ac2b166f590bc" category="section-title">Prise en charge du fournisseur de cloud</block>
+  <block id="3156b4b992dec700b60fedaa2eca010c" category="paragraph">La détection des comportements suspects des utilisateurs est prise en charge avec les systèmes d'exploitation suivants :</block>
+  <block id="92adf790b863484fc83be969039ec890" category="section-title">Recommandations serveur</block>
+  <block id="28296e91eb448ead6c0f37548d3101a8" category="list-text">Il est recommandé d’installer l’agent d’activité utilisateur sur un système distinct de votre environnement NetApp Ransomware Resilience. Si vous les installez sur la même machine, vous devez prévoir 50 à 55 Go d’espace disque. Pour Linux, allouez 25 à 30 Go d’espace à<block ref="4bf2f0d069734974e4d76e679433aa07" prefix=" " category="inline-code"></block> et 25 Go à<block ref="ea5f88360fb7c06d3270b165b4dad226" prefix=" " category="inline-code"></block>.</block>
+  <block id="b81a18d778d8d2491614ae90532db84f" category="admonition">Lors de l'installation initiale, remplacez le <block ref="50cff7c5933e29331b88e32e4f2a101d" prefix=" " category="inline-code"></block> par une autorisation de caractère générique <block ref="3389dae361af79b04c9c8e7057f60cc6" prefix="(" category="inline-code"></block>. Après que l'agent est activé et pleinement opérationnel, vous pouvez remplacer l'autorisation par le nom du site. Contactez votre représentant NetApp pour le nom du site.</block>
+  <block id="9625968bd02420d60f939947dec5ee63" category="admonition">L'agent d'activité utilisateur utilise la technologie NetApp Data Insights Infrastructure, d'où l'utilisation de points de terminaison <block ref="08f7b82cf54cd7bdcab171ad9bd445cc" prefix=" " category="inline-code"></block>. Pour plus d'informations, consultez</block>
+  <block id="c4f09ee186bb94e99b8c3f938adf8816" category="section-title">Déploiements d'agents d'activité utilisateur basés en APAC</block>
+  <block id="869af1b4577e081268bf8ee592a6018e" category="section-title">Déploiements d'agents d'activité utilisateur basés en Europe</block>
+  <block id="ae6cc9c44044939bcbbefd693857f742" category="section-title">Déploiements d'agents d'activité utilisateur basés aux États-Unis</block>
+  <block id="c290a5941ad6eb0d5fe8752c15c5fd78" category="section-title">Étape suivante</block>
+  <block id="e85295e320f98fda3869b6fd777fcb74" category="inline-link-macro">Configurer les agents d'activité utilisateur et les collecteurs</block>
+  <block id="1cb54935f05151077e45294fd0acda40" category="list-text"><block ref="1cb54935f05151077e45294fd0acda40" category="inline-link-macro-rx"></block></block>
+  <block id="a7f617894520c70eda06105083582777" category="paragraph">Pour que Ransomware Resilience puisse fournir des alertes concernant un comportement utilisateur suspect, vous devez configurer un agent d'activité utilisateur. Pour installer un agent d'activité utilisateur, assurez-vous que votre système répond <block ref="423b5fb22336ee99727442d2bf2268c5" category="inline-link-macro-rx"></block>.</block>
+  <block id="f5d77d7a39be1811d47f1310b0b80a61" category="paragraph">Si vous devez mettre à jour les autorisations des utilisateurs non administrateurs pour un système particulier, utilisez ces étapes de procédure.</block>
+  <block id="ecafefb609794a493ed83be961865b30" category="list-text">Connectez-vous à la Console. Dans le tableau de bord, identifiez le système dont les autorisations utilisateur ONTAP doivent être mises à jour.</block>
+  <block id="6a3ad50557786ed110b2cefa2a2be7bd" category="list-text">Sélectionnez le système pour afficher ses détails.</block>
+  <block id="6872a6ef5ae2db047b6effa74304d0af" category="list-text">Afficher les rôles existants pour cet utilisateur :</block>
+  <block id="67c903793b6bf8b730fee76339b93672" category="list-text">Si vous avez sélectionné *Détection des comportements suspects des utilisateurs* comme paramètre de détection, sélectionnez l’agent d’activité utilisateur ou <block ref="0fcb9e48262f104799fbf49d6c09d7d5" category="inline-link-macro-rx"></block>.</block>
+  <block id="7c6b2f72c99d1ebd4a429f9dc9ce38de" category="doc">Configurer les agents et les collecteurs pour la détection de l'activité des utilisateurs dans NetApp Ransomware Resilience</block>
+  <block id="7309dd33bbfad8caf3238871d7a3ecbd" category="paragraph">Pour activer la détection des comportements suspects des utilisateurs dans NetApp Ransomware Resilience, vous devez installer au moins un agent d'activité utilisateur. Lorsque vous activez la fonctionnalité de détection d'activité utilisateur suspecte depuis le tableau de bord de Ransomware Resilience, vous devez fournir les informations d'hôte de l'agent d'activité utilisateur.</block>
+  <block id="308513e42102f99f930ca1ce8950bbe3" category="paragraph">+ Si vous n'utilisez pas déjà DII, suivez les instructions de configuration ici.</block>
+  <block id="a7045f65a60246a57662a00a9dc6dc73" category="inline-link-macro">exigences relatives au système d'exploitation, au serveur et au réseau</block>
+  <block id="72ae3905ad051e75d558266df8b1e63a" category="list-text">Assurez-vous de respecter les <block ref="4535d4c19297d046165dc98674d914e8" category="inline-link-macro-rx"></block>.</block>
+  <block id="59ad45573dbf4296a202cefa7894c118" category="section-title">Créer un agent d'activité utilisateur</block>
+  <block id="a757b06cbcf40569f4970cd41ee13a89" category="inline-link-macro">collecteurs de données</block>
+  <block id="c9340543ea0272663b1ebbd6d53d7135" category="paragraph">Les agents d'activité utilisateur sont des environnements exécutables pour <block ref="b01719fec0510bde74c1a44e6f94ab27" category="inline-link-macro-rx"></block> ; les collecteurs de données partagent les événements d'activité utilisateur avec Ransomware Resilience. Vous devez créer au moins un agent d'activité utilisateur pour activer la détection des activités utilisateur suspectes.</block>
+  <block id="3e5b5a49d2a1ae0f82a222ba8e4ffa7c" category="list-text">Vérifiez que l'agent d'activité utilisateur a bien été créé. Dans la vignette Activité utilisateur, un déploiement réussi s'affiche comme **Running**.</block>
+  <block id="01aa0dea5e13315b3322ab5d449cbb8e" category="paragraph">Une fois l'agent d'activité utilisateur créé avec succès, retournez dans le menu **Paramètres** puis sélectionnez **Gérer** dans la vignette Activité utilisateur. Sélectionnez l'onglet **Agents d'activité utilisateur** puis sélectionnez l'agent d'activité utilisateur pour afficher des détails à son sujet, y compris les collecteurs de données et les connecteurs d'annuaire utilisateur.</block>
+  <block id="1c3618a77bb3c98ee22e85ebb2ff2cb5" category="section-title">Créer un connecteur d'annuaire utilisateur</block>
+  <block id="450a540c6661e25e017db4862aec2e38" category="list-text">Dans la boîte de dialogue contextuelle, sélectionnez **Supprimer** pour confirmer.</block>
+  <block id="236c87046e76c7fbe637db256ad65c54" category="inline-link-macro">Détecter les activités malveillantes et les comportements suspects des utilisateurs</block>
+  <block id="a22ce6d164acfe568fad471cc211d23a" category="paragraph">Une fois la détection des activités suspectes des utilisateurs configurée, vous pouvez suivre les événements sur la page des alertes. Pour plus d'informations, voir <block ref="8143bbb79caf2751151f26d9d0abf580" category="inline-link-macro-rx"></block>.</block>
+  <block id="907e291a40a36d257c91cac9e320dd0c" category="sidebar">Configurer la détection des activités suspectes des utilisateurs</block>
+  <block id="36a605a41424e007ca5ba825a9623c96" category="sidebar">Configurer la détection de l'activité de l'utilisateur</block>
+  <block id="f31838bfd1a4d7d1cc348bb0e79249aa" category="sidebar">Découvrez la détection de l'activité des utilisateurs</block>
+  <block id="f77c342afbfaabafce4f6d6b3c0fc25a" category="sidebar">Exigences relatives à l'activité de l'utilisateur</block>
+  <block id="851ba516be036ed05e26d4e1aa17e994" category="sidebar">Configurer les agents et les collecteurs</block>
 </blocks>

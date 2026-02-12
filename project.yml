@@ -41,8 +41,14 @@ sidebar:
     - title: Configurer les sauvegardes, la détection des menaces et les simulations
         d'attaque dans les paramètres
       url: "/rp-use-settings.html"
-    - title: Configurer la détection des activités suspectes des utilisateurs
-      url: "/suspicious-user-activity.html"
+    - title: Configurer la détection de l'activité de l'utilisateur
+      entries:
+      - title: Découvrez la détection de l'activité des utilisateurs
+        url: "/concept-user-behavior.html"
+      - title: Exigences relatives à l'activité de l'utilisateur
+        url: "/reference-user-activity-requirements.html"
+      - title: Configurer les agents et les collecteurs
+        url: "/suspicious-user-activity.html"
   - title: Utiliser la résilience aux ransomwares
     entries:
     - title: Afficher l'état de la charge de travail à l'aide du tableau de bord

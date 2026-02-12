@@ -136,9 +136,6 @@ En consultant l’onglet Alertes, vous pouvez identifier s’il s’agit d’une
 Pour afficher les alertes au niveau de l'utilisateur, vous devez avoir configuré un agent d'activité utilisateur et activé une stratégie de protection avec détection du comportement de l'utilisateur. La colonne *Utilisateur suspect* apparaît dans le tableau de bord Alertes uniquement lorsque la détection du comportement de l'utilisateur est activée. Pour activer la détection des utilisateurs suspects, voir link:suspicious-user-activity.html["Activité utilisateur suspecte"].
 
 
-NOTE: Si vous utilisez NetApp Data Infrastructure Insights (DII) Workload Security, il est recommandé d'utiliser les mêmes agents Workload Security pour Ransomware Resilience. Il n'est pas nécessaire de déployer des agents Workload Security distincts pour Ransomware Resilience, cependant, l'utilisation des mêmes agents Workload Security requiert une association entre l'organisation de la console Ransomware Resilience et le locataire DII Storage Workload Security. Contactez votre responsable de compte pour activer cette association. + Pour utiliser la détection des utilisateurs suspects _sans_ DII, assurez-vous link:suspicious-user-activity.html["détection d'activité utilisateur suspecte activée"] et d'avoir configuré les agents appropriés.
-
-
 
 === Afficher les activités malveillantes
 

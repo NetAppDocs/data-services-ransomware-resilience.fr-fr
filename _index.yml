@@ -31,6 +31,8 @@ indexpage:
       url: "/rp-use-settings.html"
     - title: Simuler une attaque de ransomware
       url: "/rp-start-simulate.html"
+    - title: Configurer la détection des activités suspectes des utilisateurs
+      url: "/suspicious-user-activity.html"
   - title: Utiliser la résilience aux ransomwares
     links:
     - title: Découvrir les charges de travail
