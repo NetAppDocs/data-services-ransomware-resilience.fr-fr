@@ -26,6 +26,17 @@ Si vous sélectionnez un volume ONTAP 9.11.1 pour l’exercice de préparation a
 
 Le système Amazon FSx for NetApp ONTAP est pris en charge dans Ransomware Resilience. Les limitations suivantes s'appliquent à Amazon FSx pour ONTAP:
 
-* Les stratégies de sauvegarde ne sont pas prises en charge pour Amazon FSx for ONTAP. Dans cet environnement, vous devez effectuer des opérations de sauvegarde à l’aide d’ Amazon FSx pour les sauvegardes. Vous pouvez restaurer ces charges de travail à l’aide de Ransomware Resilience.
+* Les stratégies de sauvegarde ne sont pas prises en charge pour Amazon FSx for ONTAP. Dans cet environnement, vous devez effectuer les opérations de sauvegarde à l'aide d'Amazon FSx for ONTAP. Vous pouvez restaurer ces charges de travail grâce à Ransomware Resilience.
 * Les opérations de restauration sont effectuées uniquement à partir de snapshots.
+
+
+
+
+== Limitations d'Azure NetApp Files
+
+Azure NetApp Files est pris en charge dans Ransomware Resilience. Les limitations suivantes s'appliquent à Azure NetApp Files :
+
+* Les stratégies de protection contre les ransomwares avec des politiques de sauvegarde ne sont pas prises en charge pour Azure NetApp Files. Vous pouvez utiliser la sauvegarde Azure NetApp Files à la place.
+* Les stratégies de protection contre les ransomwares avec réplication ne sont pas prises en charge pour Azure NetApp Files.
+* Lors du choix d'une stratégie de protection, assurez-vous que sa fréquence de création d'instantanés est compatible avec Azure NetApp Files. La fréquence de création d'instantanés la plus fréquente disponible dans Azure NetApp Files est horaire.
 

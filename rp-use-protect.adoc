@@ -39,6 +39,9 @@ Actuellement, vous ne pouvez répliquer les instantanés que vers un stockage ON
 
 
 
+NOTE: Si vous configurez des stratégies de protection pour Amazon FSxN pour ONTAP et Azure NetApp Files, consultez link:rp-reference-limitations.html["les limitations de chaque service"].
+
+
 TIP: Pour une gestion et une protection améliorées de votre parc de données, vous pouvez créerlink:#create-a-protection-group["partages de fichiers de groupe"] pour protéger collectivement les volumes sous une seule stratégie.
 
 
@@ -57,7 +60,7 @@ Les informations de protection de ces services apparaissent dans Ransomware Resi
 Si une politique de détection de ransomware est gérée par Autonomous Ransomware Protection (ARP ou ARP/AI, selon la version ONTAP ) et FPolicy dans ONTAP, ces charges de travail sont protégées et continueront d'être gérées par ARP et FPolicy.
 
 
-NOTE: Les destinations de sauvegarde ne sont pas disponibles pour les charges de travail dans Amazon FSx for NetApp ONTAP.  Effectuez des opérations de sauvegarde à l’aide du service de sauvegarde FSx for ONTAP .  Vous définissez des politiques de sauvegarde pour les charges de travail dans FSx pour ONTAP dans AWS, pas dans Ransomware Resilience.  Les politiques de sauvegarde apparaissent dans Ransomware Resilience et restent inchangées par rapport à AWS.
+NOTE: Les destinations de sauvegarde ne sont pas disponibles pour les charges de travail dans Amazon FSx for NetApp ONTAP ou Azure NetApp Files. Effectuez les opérations de sauvegarde à l'aide du service de sauvegarde FSx for ONTAP. Vous définissez les stratégies de sauvegarde pour les charges de travail dans FSx for ONTAP dans AWS, et non dans Ransomware Resilience. Les stratégies de sauvegarde apparaissent dans Ransomware Resilience et restent inchangées par rapport à AWS.
 
 
 
@@ -441,7 +444,13 @@ image:screen-protection.png["Gérer la page de stratégie"]
 . Ransomware Resilience détecte s'il existe des politiques SnapCenter ou de sauvegarde et de récupération actives.
 . Pour conserver vos politiques de sauvegarde et de récupération ou SnapCenter existantes et appliquer uniquement une politique de _détection_, laissez la case **Remplacer les politiques existantes** décochée.
 . Pour voir les détails des politiques SnapCenter , sélectionnez la *flèche vers le bas*.
-. Sélectionnez les paramètres de détection souhaités : *Détection du chiffrement* *Détection des comportements suspects des utilisateurs* *Blocage des extensions de fichiers suspectes*
+. Sélectionnez les paramètres de détection que vous souhaitez :
++
+....
+*Encryption detection*
+*Suspicious user behavior detection*
+*Block suspicious file extensions*
+....
 . Sélectionnez **Suivant**.
 . Si vous avez sélectionné *Détection des comportements suspects des utilisateurs* comme paramètre de détection, sélectionnez l’agent d’activité utilisateur ou link:suspicious-user-activity.html#create-a-user-activity-agent["ou en créer un"].
 +
@@ -522,7 +531,7 @@ TIP: Pour voir plus de détails sur les charges de travail, faites défiler vers
 +
 image:screen-protection-groups-policy.png["Ajouter un groupe de protection - Page de stratégie"]
 
-. Sélectionnez la politique qui régira la protection de ce groupe. Pour confirmer, sélectionnez *Suivant*.
+. Sélectionnez la stratégie pour régir la protection de ce groupe.
 . Si la stratégie de protection inclut la réplication, vérifiez les paramètres de réplication.
 +
 .. Pour répliquer tous les instantanés vers la même destination, cochez **Utiliser la même destination pour chaque charge de travail**. Choisissez un *système de destination* et une *VM de stockage de destination* pour les charges de travail dans la section Agent de la console. + Pour utiliser des destinations différentes, décochez cette case. Examinez chaque charge de travail sous chaque agent de console et attribuez un *système de destination* et une *VM de stockage de destination* à chaque charge de travail. Sélectionnez **Suivant**.

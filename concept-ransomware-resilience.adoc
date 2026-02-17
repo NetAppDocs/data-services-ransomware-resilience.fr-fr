@@ -184,7 +184,10 @@ Ransomware Resilience prend en charge les cibles de sauvegarde, les systèmes et
 | Environnement | Protocole | Versions prises en charge 
 
 
-| Amazon FSx for NetApp ONTAP* | NFS, CIFS et SAN | S/O 
+| Amazon FSx for NetApp ONTAP* | CIFS, NFS et SAN | S/O 
+
+
+| Azure NetApp Files | CIFS et NFS | S/O 
 
 
 .2+| Cloud Volumes ONTAP pour AWS | CIFS et NFS | 9.11.1 et versions ultérieures 

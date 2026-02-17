@@ -150,11 +150,51 @@ Fournissez les détails du mappage des attributs :
 
 === Supprimer un connecteur d'annuaire utilisateur
 
+.Étapes
 . Dans Ransomware Resilience, accédez à *Paramètres*.
 . Localisez la mosaïque Activité utilisateur, sélectionnez **Gérer**.
 . Sélectionnez l’onglet **Connecteur d’annuaire utilisateur**.
 . Identifiez le connecteur d’annuaire utilisateur que vous souhaitez supprimer. Dans le menu d'action en fin de ligne, sélectionnez les trois points `...` puis **Supprimer**.
 . Dans la boîte de dialogue contextuelle, sélectionnez **Supprimer** pour confirmer.
+
+
+
+
+=== Exclure les utilisateurs des alertes
+
+S'il existe certains utilisateurs de confiance dont le comportement pourrait déclencher des alertes de comportement utilisateur, vous pouvez les exclure des alertes.
+
+.Étapes
+. Dans Ransomware Resilience, sélectionnez **Paramètres**.
+. Dans le tableau de bord Paramètres, repérez la carte User activity puis sélectionnez **Manage**.
+. Sélectionnez l’onglet **Excluded users**.
+. Pour consulter les utilisateurs individuellement dans l'interface utilisateur, choisissez **Select manually**. Pour importer une liste d'utilisateurs exclus, sélectionnez **Upload**.
++
+.. Si vous avez sélectionné **Select manually**, cochez la case en regard des noms des utilisateurs spécifiques que vous souhaitez exclure.
+.. Si vous sélectionnez **Upload**, vous devez d'abord télécharger un fichier CSV contenant la liste de tous les utilisateurs. Sélectionnez **Download** pour accéder à la liste.
++
+Examinez le fichier CSV. Supprimez les noms de tous les utilisateurs pour lesquels vous souhaitez maintenir la détection. Lorsque la liste ne contient plus que les noms des utilisateurs que vous souhaitez exclure de la détection, enregistrez-la. Sélectionnez **Importer** pour localiser le fichier, puis choisissez-le.
+
+
+
+. Sélectionnez **Ajouter** pour terminer l'ajout des utilisateurs à la liste d'exclusion.
+. Dans l'onglet **Utilisateurs exclus**, les noms des utilisateurs retirés des alertes de détection du comportement des utilisateurs s'affichent désormais dans le tableau de bord.
+
+
+
+TIP: Vous pouvez également exclure un utilisateur directement d'une alerte. Pour plus d'informations, consultez link:rp-use-alert.html["Répondre aux alertes de ransomware"].
+
+
+
+==== Supprimer des utilisateurs de la liste des utilisateurs exclus
+
+Vous pouvez réintégrer un utilisateur dans la détection après.
+
+.Étapes
+. Dans le tableau de bord Paramètres, repérez la carte User activity puis sélectionnez **Manage**.
+. Sélectionnez l’onglet **Excluded users**.
+. Repérez le nom de l'utilisateur que vous souhaitez supprimer de la liste des utilisateurs exclus. Sélectionnez le menu d'actions (`...` sur la ligne contenant le nom de l'utilisateur, puis **Supprimer**.
+. Dans la boîte de dialogue, sélectionnez **Remove** pour confirmer que vous souhaitez supprimer les utilisateurs sélectionnés.
 
 
 

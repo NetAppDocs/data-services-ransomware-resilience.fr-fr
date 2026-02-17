@@ -41,6 +41,8 @@ sidebar:
     - title: Configurer les sauvegardes, la détection des menaces et les simulations
         d'attaque dans les paramètres
       url: "/rp-use-settings.html"
+    - title: Configurer SIEM
+      url: "/task-siem.html"
     - title: Configurer la détection de l'activité de l'utilisateur
       entries:
       - title: Découvrez la détection de l'activité des utilisateurs

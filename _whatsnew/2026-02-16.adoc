@@ -1,0 +1,27 @@
+= Prise en charge d'Azure NetApp Files
+:allow-uri-read: 
+
+
+
+
+=== Prise en charge d'Azure NetApp Files
+
+Ransomware Resilience prend désormais en charge les systèmes Azure NetApp Files, vous permettant de détecter et de contrer efficacement les menaces de ransomware dans Azure NetApp Files. Lorsque vous découvrez des charges de travail, Ransomware Resilience présente désormais Azure NetApp Files et les affiche dans le tableau de bord de protection. La prise en charge de Ransomware Resilience pour Azure NetApp Files inclut des stratégies de détection et de protection uniquement avec des instantanés. La prise en charge d’Azure NetApp Files est actuellement en préversion.
+
+Pour plus d'informations, consultez le lien : Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["En savoir plus sur la résilience aux ransomwares"^].
+
+
+
+=== Exclure les utilisateurs des alertes de comportement utilisateur
+
+Ransomware Resilience permet désormais d'exclure des utilisateurs spécifiques des alertes de comportement utilisateur. Exclure des utilisateurs de confiance peut éviter les faux positifs et les alertes inutiles.
+
+Pour plus d'informations, consultez le lien : Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#exclude-users-from-alerts["Exclure les utilisateurs des alertes"^].
+
+
+
+=== Prise en charge des groupes de protection pour l'activité des comportements des utilisateurs
+
+Les groupes de protection Ransomware Resilience prennent désormais en charge les politiques de détection des comportements suspects des utilisateurs. Lorsque vous appliquez une stratégie de protection contre les ransomwares à un groupe de protection, elle applique une politique à l'ensemble des charges de travail, simplifiant la gestion de votre posture de cybersécurité.
+
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html#create-a-protection-group["Créer un groupe de protection"^].

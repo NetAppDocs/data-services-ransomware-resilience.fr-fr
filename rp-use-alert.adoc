@@ -171,8 +171,15 @@ Si vous avez configuré la détection des utilisateurs suspects pour afficher le
 . Dans le menu Résilience aux ransomwares, sélectionnez *Alertes*.
 . Sélectionnez une alerte.
 . Passez en revue les incidents dans l’alerte.
-. Pour bloquer un utilisateur suspect dans votre environnement, sélectionnez *Bloquer* sous le nom de l'utilisateur.
++
+.. Pour bloquer un utilisateur suspect dans votre environnement, sélectionnez *Bloquer* à côté du nom de l'utilisateur.
+.. Pour désactiver les alertes concernant un utilisateur faisant l'objet d'une alerte que vous savez être fausse, sélectionnez les trois points (`...` puis **Exclure cet utilisateur de la surveillance**. Examinez la boîte de dialogue, puis sélectionnez **Exclure** pour confirmer.
 
+
+
+
+
+TIP: Pour réactiver les alertes d'un utilisateur, renvoyez l'alerte. Sélectionnez les trois points, puis **Inclure cet utilisateur dans la surveillance**. Vous pouvez également link:suspicious-user-activity.html#exclude-users-from-alerts["Exclure les utilisateurs"] depuis la surveillance.
 
 
 
