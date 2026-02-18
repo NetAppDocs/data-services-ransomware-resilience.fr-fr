@@ -60,6 +60,8 @@ sidebar:
       - title: Protégez les charges de travail avec des stratégies de protection contre
           les ransomwares
         url: "/rp-use-protect.html"
+      - title: Gérer les groupes de protection
+        url: "/task-protection-group.html"
       - title: Rechercher des données personnelles identifiables
         url: "/rp-use-protect-classify.html"
     - title: Répondre à une alerte détectée

@@ -62,9 +62,9 @@ Oui, Ransomware Resilience découvre les planifications de snapshots définies d
 .Comment Ransomware Resilience interagit-il avec NetApp Backup and Recovery et SnapCenter?
 Ransomware Resilience fonctionne avec Backup and Recovery pour découvrir et définir des politiques de capture instantanée et de sauvegarde pour les charges de travail de partage de fichiers.
 
-Ransomware Resilience fonctionne avec SnapCenter ou SnapCenter pour VMware afin de découvrir et de définir des politiques de snapshot et de sauvegarde pour les charges de travail des applications et des machines virtuelles.
+Ransomware Resilience fonctionne avec SnapCenter ou SnapCenter pour VMware afin de découvrir et de définir des stratégies de snapshots et de sauvegarde pour les charges de travail d'applications et de machines virtuelles. Il n'est actuellement pas possible d'utiliser Ransomware Resilience pour la récupération avec SnapCenter.
 
-Ransomware Resilience fonctionne également avec Backup and Recovery et SnapCenter (y compris SnapCenter pour VMware) pour effectuer une récupération cohérente des fichiers et des charges de travail.
+Ransomware Resilience fonctionne également avec Backup and Recovery pour effectuer une récupération cohérente des fichiers et des charges de travail.
 
 Pour la gestion des licences et la facturation, Ransomware Resilience peut s'intégrer à Backup and Recovery même si vous ne disposez pas d'une licence distincte pour Backup and Recovery. Si vous disposez à la fois de Backup and Recovery et de Ransomware Resilience, toutes les données communes protégées par les deux produits sont facturées uniquement par Ransomware Resilience.
 
@@ -85,7 +85,7 @@ link:rp-use-protect.html["En savoir plus sur la priorité ou l'importance de la 
 .Quelles charges de travail la résilience face aux ransomwares prend-elle en charge ?
 Ransomware Resilience peut identifier les charges de travail suivantes : Oracle, partages de fichiers, stockage par blocs, machines virtuelles et banques de données de machines virtuelles.
 
-Si vous utilisez SnapCenter ou SnapCenter pour VMware, toutes les charges de travail prises en charge par ces produits sont également identifiées dans Ransomware Resilience. Ransomware Resilience peut protéger et récupérer SnapCenter et les charges de travail SnapCenter de manière cohérente.
+Si vous utilisez SnapCenter ou SnapCenter for VMware, toutes les charges de travail prises en charge par ces produits sont également identifiées dans Ransomware Resilience.
 
 .Comment associer des données à une charge de travail ?
 Ransomware Resilience détecte les volumes et les extensions de fichiers et les associe à la charge de travail appropriée.

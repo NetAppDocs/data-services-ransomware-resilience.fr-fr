@@ -42,20 +42,17 @@ Actuellement, vous ne pouvez répliquer les instantanés que vers un stockage ON
 NOTE: Si vous configurez des stratégies de protection pour Amazon FSxN pour ONTAP et Azure NetApp Files, consultez link:rp-reference-limitations.html["les limitations de chaque service"].
 
 
-TIP: Pour une gestion et une protection améliorées de votre parc de données, vous pouvez créerlink:#create-a-protection-group["partages de fichiers de groupe"] pour protéger collectivement les volumes sous une seule stratégie.
+TIP: Pour une gestion et une protection améliorées de votre patrimoine de données, vous pouvez créer link:task-protection-group.html["groupes de charges de travail"] pour protéger collectivement les volumes sous une seule stratégie.
 
 
 
 === Politiques de protection avec d'autres services gérés par NetApp
 
-Au-delà de la résilience aux ransomwares, les services suivants peuvent être utilisés pour gérer la protection :
+Au-delà de la résilience aux ransomwares, vous pouvez utiliser NetApp Backup and Recovery pour gérer la protection des partages de fichiers et des partages de fichiers de machines virtuelles.
 
-* NetApp Backup and Recovery pour les partages de fichiers, les partages de fichiers de machines virtuelles
-* SnapCenter pour VMware pour les magasins de données VM
-* SnapCenter pour Oracle
+Les informations de protection des services de Backup & Recovery apparaissent dans Ransomware Resilience. Vous pouvez ajouter des stratégies de détection à ces services avec Ransomware Resilience. L'ajout d'une stratégie de protection avec Ransomware Resilience remplace les stratégies de protection existantes.
 
-
-Les informations de protection de ces services apparaissent dans Ransomware Resilience.  Vous pouvez ajouter des politiques de détection à ces services avec Ransomware Resilience.  L'ajout d'une politique de protection avec Ransomware Resilience remplace les politiques de protection existantes.
+Ransomware Resilience détecte également les politiques de protection de SnapCenter pour VMware pour les banques de données de machines virtuelles et de SnapCenter pour Oracle. Vous ne pouvez pas utiliser ces services pour effectuer une restauration avec Ransomware Resilience.
 
 Si une politique de détection de ransomware est gérée par Autonomous Ransomware Protection (ARP ou ARP/AI, selon la version ONTAP ) et FPolicy dans ONTAP, ces charges de travail sont protégées et continueront d'être gérées par ARP et FPolicy.
 
@@ -66,7 +63,7 @@ NOTE: Les destinations de sauvegarde ne sont pas disponibles pour les charges de
 
 === Politiques de protection pour les charges de travail non protégées par les applications NetApp
 
-Si votre charge de travail n'est pas gérée par Backup and Recovery, Ransomware Resilience, SnapCenter ou SnapCenter Plug-in for VMware vSphere, des instantanés peuvent être pris dans le cadre d' ONTAP ou d'autres produits.  Si la protection FPolicy ONTAP est en place, vous pouvez modifier la protection FPolicy à l'aide ONTAP.
+Si votre charge de travail n'est pas gérée par Backup and Recovery ou Ransomware Resilience, elle peut avoir des instantanés pris dans le cadre d'ONTAP ou d'autres produits. Si la protection FPolicy d'ONTAP est en place, vous pouvez modifier la protection FPolicy à l'aide d'ONTAP.
 
 
 
@@ -95,7 +92,7 @@ image:screen-protection.png["Page de protection"]
 
 
 
-NOTE: Voirlink:#add-a-ransomware-protection-strategy["Ajouter une stratégie de protection contre les ransomwares"] pour en savoir plus sur l'utilisation de Ransomware Resilience lorsqu'il existe une politique de protection existante avec SnapCenter ou Backup and Recovery.
+NOTE: Consultez link:#add-a-ransomware-protection-strategy["Ajouter une stratégie de protection contre les ransomwares"] pour en savoir plus sur l'utilisation de Ransomware Resilience lorsqu'il existe déjà une politique de protection avec Backup and Recovery.
 
 
 
@@ -130,7 +127,7 @@ NOTE: Les activités liées aux comportements suspects des utilisateurs et à l'
 
 *Destination de réplication* : Si vous avez configuré la réplication par instantané, les noms des machines virtuelles et des systèmes de stockage de destination sont indiqués. En l'absence de réplication, ce champ affiche « Aucune ».
 
-* Politiques de capture instantanée et de sauvegarde * : cette colonne affiche les politiques de capture instantanée et de sauvegarde appliquées à la charge de travail et au produit ou service qui gère ces politiques.
+*Stratégies de capture instantanée, de réplication et de sauvegarde* : Cette colonne affiche les stratégies de capture instantanée et de sauvegarde appliquées à la charge de travail et le produit ou service qui gère ces stratégies.
 
 * Géré par SnapCenter
 * Géré par SnapCenter Plug-in for VMware vSphere
@@ -138,6 +135,9 @@ NOTE: Les activités liées aux comportements suspects des utilisateurs et à l'
 * Nom de la politique de protection contre les ransomwares qui régit les instantanés et les sauvegardes
 * Aucune
 
+
+
+NOTE: Vous ne pouvez pas gérer la récupération dans Ransomware Resilience pour aucune politique SnapCenter.
 
 *Importance de la charge de travail*
 
@@ -285,37 +285,6 @@ Tous les 30 jours
 |===
 
 
-== Activez la protection cohérente des applications ou des machines virtuelles avec SnapCenter
-
-L'activation d'une protection cohérente au niveau des applications ou des machines virtuelles vous aide à protéger vos charges de travail d'application ou de machine virtuelle de manière cohérente, en obtenant un état de repos et cohérent pour éviter toute perte de données potentielle ultérieure si une récupération est nécessaire.
-
-Ce processus lance l'enregistrement du serveur logiciel SnapCenter pour les applications ou du SnapCenter Plug-in for VMware vSphere pour les machines virtuelles à l'aide de la sauvegarde et de la récupération.
-
-Après avoir activé la protection cohérente avec la charge de travail, vous pouvez gérer les stratégies de protection dans Ransomware Resilience.  La stratégie de protection comprend les politiques de capture instantanée et de sauvegarde gérées ailleurs ainsi qu'une politique de détection de ransomware gérée dans Ransomware Resilience.
-
-Pour en savoir plus sur l'enregistrement de SnapCenter ou du SnapCenter Plug-in for VMware vSphere à l'aide de Backup and Recovery, reportez-vous aux informations suivantes :
-
-* https://docs.netapp.com/us-en/data-services-backup-recovery/task-register-snapcenter-server.html["Enregistrer le logiciel SnapCenter Server"^]
-* https://docs.netapp.com/us-en/data-services-backup-recovery/task-register-snapCenter-plug-in-for-vmware-vsphere.html["Enregistrer le SnapCenter Plug-in for VMware vSphere"^]
-
-
-.Étapes
-. Dans le menu Résilience aux ransomwares, sélectionnez *Tableau de bord*.
-. Dans le volet Recommandations, recherchez l’une des recommandations suivantes et sélectionnez *Réviser et corriger* :
-+
-** Enregistrez le serveur SnapCenter disponible avec la NetApp Console
-** Enregistrez le SnapCenter Plug-in for VMware vSphere (SCV) avec la NetApp Console
-
-
-. Suivez les informations pour enregistrer le SnapCenter Plug-in for VMware vSphere-in SnapCenter ou SnapCenter pour l'hôte VMware vSphere à l'aide de Backup and Recovery.
-. Retour à la résilience aux ransomwares.
-. Depuis Ransomware Resilience, accédez au tableau de bord et relancez le processus de découverte.
-. Depuis Ransomware Resilience, sélectionnez *Protection* pour afficher la page Protection.
-. Consultez les détails dans la colonne des stratégies de capture instantanée et de sauvegarde sur la page Protection pour voir que les stratégies sont gérées ailleurs.
-
-
-
-
 == Ajouter une stratégie de protection contre les ransomwares
 
 Il existe trois approches pour ajouter une stratégie de protection contre les ransomwares :
@@ -330,7 +299,7 @@ La stratégie de protection contre les ransomwares comprend :
 ** Politique de sauvegarde
 
 
-* **Remplacez les stratégies de capture instantanée ou de sauvegarde existantes de SnapCenter ou de protection de sauvegarde et de récupération par des stratégies de protection gérées par Ransomware Resilience.**
+* **Remplacez les politiques d'instantané ou de sauvegarde existantes de la protection Backup and Recovery par des stratégies de protection gérées par Ransomware Resilience.**
 +
 La stratégie de protection contre les ransomwares comprend :
 
@@ -425,15 +394,15 @@ TIP: Pour activer le verrouillage de sauvegarde sur le stockage secondaire, conf
 
 
 
-=== Ajoutez une politique de détection aux charges de travail avec des politiques de snapshot et de sauvegarde existantes gérées par SnapCenter ou Backup and Recovery
+=== Ajoutez une stratégie de détection aux charges de travail disposant de stratégies de capture instantanée et de sauvegarde existantes gérées par Backup and Recovery
 
-Ransomware Resilience vous permet d'attribuer une politique de détection ou une politique de protection aux charges de travail avec une protection de snapshot et de sauvegarde existante gérée dans d'autres produits ou services NetApp .  D'autres services, tels que Backup and Recovery et SnapCenter, utilisent des stratégies qui régissent les snapshots, la réplication vers un stockage secondaire ou les sauvegardes vers un stockage d'objets.
+Ransomware Resilience vous permet d'attribuer une stratégie de détection ou une stratégie de protection aux charges de travail bénéficiant déjà d'une protection par instantané et sauvegarde gérée dans d'autres NetApp products or services. Backup and Recovery utilise des stratégies qui régissent les instantanés, la réplication vers un stockage secondaire ou les sauvegardes vers un stockage objet.
 
 
 
 ==== Ajouter une politique de détection aux charges de travail avec des politiques de sauvegarde ou de snapshot existantes
 
-Si vous disposez de stratégies de capture instantanée ou de sauvegarde existantes avec Backup and Recovery ou SnapCenter, vous pouvez ajouter une stratégie pour détecter les attaques de ransomware.  Pour gérer la protection et la détection avec Ransomware Resilience, voir<<protection,Protégez-vous grâce à la résilience contre les ransomwares>> .
+Si vous disposez déjà de stratégies d'instantané ou de sauvegarde avec Backup and Recovery, vous pouvez ajouter une stratégie pour détecter les attaques de ransomware. Pour gérer la protection et la détection avec Ransomware Resilience, voir <<protection,Protégez-vous grâce à la résilience contre les ransomwares>>.
 
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.
@@ -441,9 +410,8 @@ Si vous disposez de stratégies de capture instantanée ou de sauvegarde existan
 image:screen-protection.png["Gérer la page de stratégie"]
 
 . Depuis la page Protection, sélectionnez une charge de travail, puis sélectionnez *Protéger*.
-. Ransomware Resilience détecte s'il existe des politiques SnapCenter ou de sauvegarde et de récupération actives.
-. Pour conserver vos politiques de sauvegarde et de récupération ou SnapCenter existantes et appliquer uniquement une politique de _détection_, laissez la case **Remplacer les politiques existantes** décochée.
-. Pour voir les détails des politiques SnapCenter , sélectionnez la *flèche vers le bas*.
+. Ransomware Resilience détecte s'il existe des politiques de Backup and Recovery actives.
+. Pour laisser votre NetApp Backup and Recovery existant en place et appliquer uniquement une politique de _détection_, laissez la case **Remplacer les politiques existantes** décochée.
 . Sélectionnez les paramètres de détection que vous souhaitez :
 +
 ....
@@ -473,7 +441,7 @@ Vous pouvez remplacer vos politiques de sauvegarde ou de snapshot existantes par
 image:screen-protection.png["Gérer la page de stratégie"]
 
 . Depuis la page Protection, sélectionnez une charge de travail, puis sélectionnez *Protéger*.
-. Ransomware Resilience détecte s'il existe des politiques de sauvegarde et de récupération ou SnapCenter actives.  Pour remplacer les stratégies de sauvegarde et de récupération ou SnapCenter existantes, sélectionnez la case **Remplacer les stratégies existantes**.  Lorsque vous sélectionnez la case, Ransomware Resilience remplace la liste des stratégies de détection par des stratégies de détection.
+. Ransomware Resilience détecte s'il existe des politiques de Backup and Recovery actives. Pour remplacer les politiques existantes, cochez la case **Remplacer les politiques existantes**. Lorsque vous cochez la case, Ransomware Resilience remplace la liste des politiques de détection par des politiques de détection.
 . Choisissez une politique de protection.  Si aucune politique de protection n’existe, sélectionnez **Ajouter** pour créer une nouvelle politique.  Pour plus d'informations sur la création d'une politique, voir<<steps,Créer une politique de protection>> . Sélectionnez **Suivant**.
 . Si votre stratégie inclut la réplication, sélectionnez le **système de destination** et la **VM de stockage de destination**. Sélectionnez **Suivant**.
 . Sélectionnez une destination de sauvegarde ou créez-en une nouvelle. Sélectionnez **Suivant**.
@@ -494,103 +462,10 @@ Vous pouvez remplacer la politique existante par une autre.
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.
 . Depuis la page Protection, sur la ligne de charge de travail, sélectionnez *Modifier la protection*.
-. Si la charge de travail dispose d'une stratégie de sauvegarde et de récupération ou de SnapCenter existante que vous souhaitez conserver, décochez **Remplacer les stratégies existantes**.  Pour remplacer les politiques existantes, cochez **Remplacer les politiques existantes**.
+. Si la charge de travail possède une stratégie de sauvegarde et de restauration existante que vous souhaitez conserver, décochez **Remplacer les stratégies existantes**. Pour remplacer les stratégies existantes, cochez **Remplacer les stratégies existantes**.
 . Dans la page Politiques, sélectionnez la flèche vers le bas correspondant à la politique que vous souhaitez attribuer pour consulter les détails.
 . Sélectionnez la politique que vous souhaitez attribuer.
 . Sélectionnez *Protéger* pour terminer la modification.
-
-
-
-
-== Créer un groupe de protection
-
-Le regroupement des partages de fichiers dans un groupe de protection facilite la protection de votre parc de données.  Ransomware Resilience peut protéger tous les volumes d’un groupe en même temps plutôt que de protéger chaque volume séparément.
-
-Vous pouvez créer des groupes quel que soit leur état de protection (c'est-à-dire des groupes non protégés et des groupes protégés). Lorsque vous ajoutez une politique de protection à un groupe de protection, la nouvelle politique de protection remplace toute politique existante, y compris les politiques gérées par SnapCenter et NetApp Backup and Recovery.
-
-.Étapes
-. Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.
-+
-image:screen-protection.png["Gérer la page de stratégie"]
-
-. Depuis la page Protection, sélectionnez l’onglet *Groupes de protection*.
-+
-image:screen-protection-groups.png["Page des groupes de protection"]
-
-. Sélectionnez *Ajouter*.
-+
-image:screen-protection-groups-add.png["Ajouter une page de groupe de protection"]
-
-. Entrez un nom pour le groupe de protection.
-. Sélectionnez les charges de travail à ajouter au groupe.
-+
-
-TIP: Pour voir plus de détails sur les charges de travail, faites défiler vers la droite.
-
-. Sélectionnez *Suivant*.
-+
-image:screen-protection-groups-policy.png["Ajouter un groupe de protection - Page de stratégie"]
-
-. Sélectionnez la stratégie pour régir la protection de ce groupe.
-. Si la stratégie de protection inclut la réplication, vérifiez les paramètres de réplication.
-+
-.. Pour répliquer tous les instantanés vers la même destination, cochez **Utiliser la même destination pour chaque charge de travail**. Choisissez un *système de destination* et une *VM de stockage de destination* pour les charges de travail dans la section Agent de la console. + Pour utiliser des destinations différentes, décochez cette case. Examinez chaque charge de travail sous chaque agent de console et attribuez un *système de destination* et une *VM de stockage de destination* à chaque charge de travail. Sélectionnez **Suivant**.
-
-
-. Pour configurer une stratégie de sauvegarde, choisissez-en une puis sélectionnez **Suivant**.
-. Si votre politique de détection inclut la détection du comportement des utilisateurs, sélectionnez le collecteur de données que vous souhaitez utiliser, puis **Suivant**.
-. Passez en revue les sélections pour le groupe de protection.
-. Pour finaliser la création du groupe de protection, sélectionnez *Ajouter*.
-
-
-
-
-=== Modifier la protection du groupe
-
-Vous pouvez modifier la politique de détection sur un groupe existant.
-
-.Étapes
-. Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.
-. Depuis la page Protection, sélectionnez l'onglet *Groupes de protection* puis sélectionnez le groupe dont vous souhaitez modifier la politique.
-. Depuis la page d'aperçu du groupe de protection, sélectionnez *Modifier la protection*.
-. Sélectionnez une politique de protection existante à appliquer ou sélectionnez **Ajouter** pour créer une nouvelle politique de protection.  Pour plus d'informations sur l'ajout d'une politique de protection, consultez,<<steps,Créer une politique de protection>> .  Sélectionnez ensuite **Enregistrer**.
-. Dans l'aperçu de la destination de sauvegarde, sélectionnez une destination de sauvegarde existante ou **Ajoutez une nouvelle destination de sauvegarde**.
-. Sélectionnez **Suivant** pour examiner vos modifications.
-
-
-
-
-=== Supprimer les charges de travail d'un groupe
-
-Vous devrez peut-être ultérieurement supprimer des charges de travail d’un groupe existant.
-
-.Étapes
-. Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.
-. Depuis la page Protection, sélectionnez l’onglet *Groupes de protection*.
-. Sélectionnez le groupe à partir duquel vous souhaitez supprimer une ou plusieurs charges de travail.
-+
-image:screen-protection-groups-more-workloads.png["Page de détails du groupe de protection"]
-
-. À partir de la page du groupe de protection sélectionné, sélectionnez la charge de travail que vous souhaitez supprimer du groupe et sélectionnez *Actions*image:screenshot_horizontal_more_button.gif["Bouton Actions"] option.
-. Dans le menu Actions, sélectionnez *Supprimer la charge de travail*.
-. Confirmez que vous souhaitez supprimer la charge de travail et sélectionnez *Supprimer*.
-
-
-
-
-=== Supprimer le groupe de protection
-
-La suppression du groupe de protection supprime le groupe et sa protection, mais ne supprime pas les charges de travail individuelles.
-
-.Étapes
-. Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.
-. Depuis la page Protection, sélectionnez l’onglet *Groupes de protection*.
-. Sélectionnez le groupe à partir duquel vous souhaitez supprimer une ou plusieurs charges de travail.
-+
-image:screen-protection-groups-more-workloads.png["Page de détails du groupe de protection"]
-
-. Depuis la page du groupe de protection sélectionné, en haut à droite, sélectionnez *Supprimer le groupe de protection*.
-. Confirmez que vous souhaitez supprimer le groupe et sélectionnez *Supprimer*.
 
 
 

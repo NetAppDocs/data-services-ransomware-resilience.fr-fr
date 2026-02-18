@@ -21,6 +21,9 @@ NOTE: Ransomware Resilience ne détecte pas les charges de travail avec des volu
 
 Ransomware Resilience vérifie votre protection de sauvegarde actuelle, vos copies instantanées et vos options de protection autonome contre les ransomwares NetApp . Ransomware Resilience détecte également les informations de protection de SnapCenter for VMware pour les banques de données de machines virtuelles, de SnapCenter for Oracle et de NetApp Backup and Recovery pour les partages de fichiers et les partages de fichiers de machines virtuelles. Il recommande ensuite des moyens d’améliorer votre protection contre les ransomwares.
 
+
+IMPORTANT: Bien que Ransomware Resilience reconnaisse les politiques de SnapCenter, vous ne pouvez pas effectuer de récupération via SnapCenter avec Ransomware Resilience.
+
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
 
