@@ -12,13 +12,11 @@ summary: 'Avant de créer un agent d"activité utilisateur et d"autres collecteu
 
 
 [role="lead"]
-Avant de créer un agent d'activité utilisateur et d'autres collecteurs, vous devez vous assurer de répondre aux exigences décrites concernant le système d'exploitation, le serveur et le réseau.
+NetApp Ransomware Resilience la détection du comportement des utilisateurs vous permet de répondre aux événements de ransomware au niveau de l'utilisateur. Vous devez créer un ensemble d'agents pour activer la détection du comportement des utilisateurs. Avant d'activer la détection, vous devez vous assurer que vous répondez aux exigences du système d'exploitation, du serveur et du réseau décrites afin que Ransomware Resilience puisse détecter et signaler correctement les événements.
 
 
 
 == Prise en charge du fournisseur de cloud
-
-**Prise en charge des fournisseurs de services cloud**
 
 Les données d'activité suspecte des utilisateurs peuvent être stockées dans AWS et Azure dans les régions suivantes :
 

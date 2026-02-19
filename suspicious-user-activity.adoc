@@ -12,20 +12,20 @@ summary: La détection d’activité utilisateur suspecte dans Ransomware Resili
 
 
 [role="lead"]
-Pour activer la détection des comportements suspects des utilisateurs dans NetApp Ransomware Resilience, vous devez installer au moins un agent d'activité utilisateur. Lorsque vous activez la fonctionnalité de détection d'activité utilisateur suspecte depuis le tableau de bord de Ransomware Resilience, vous devez fournir les informations d'hôte de l'agent d'activité utilisateur.
+NetApp Ransomware Resilience détection de l'activité utilisateur vous aide à prévenir les événements de ransomware au niveau de l'utilisateur. Pour activer la détection des comportements suspects des utilisateurs dans Ransomware Resilience, vous devez installer au moins un agent d'activité utilisateur, ce qui crée un environnement de collecte de données pour surveiller le comportement des utilisateurs à la recherche de schémas aberrants ressemblant à des événements de ransomware.
 
-Un agent peut héberger plusieurs collecteurs de données. Les collecteurs de données envoient les données à un emplacement SaaS pour analyse. Il existe deux types de collectionneurs :
+Un agent d'activité utilisateur héberge un collecteur de données et un connecteur d'annuaire utilisateur, qui envoient tous deux des données vers un emplacement SaaS pour analyse.
 
-* Le **collecteur de données** collecte les données d’activité des utilisateurs à partir d’ ONTAP.
-* Le **connecteur d'annuaire utilisateur** se connecte à votre annuaire pour mapper les identifiants utilisateur aux noms d'utilisateur.
+* Le **collecteur de données** recueille les données d'activité des utilisateurs depuis ONTAP. Le collecteur de données est créé automatiquement lorsque vous créez une stratégie de protection avec détection du comportement des utilisateurs.
+* Le **connecteur d'annuaire utilisateur** se connecte à votre annuaire pour associer les identifiants utilisateur aux noms d'utilisateur. Vous devez configurer le connecteur d'annuaire utilisateur.
 
 
-Les collecteurs sont configurés dans les paramètres de résilience aux ransomwares.
+L'agent d'activité utilisateur, le collecteur de données et le connecteur d'annuaire utilisateur peuvent tous être gérés depuis le tableau de bord des paramètres de NetApp Ransomware Resilience.
 
 
 NOTE: Si vous utilisez déjà NetApp Data Infrastructure Insights (DII) Workload Security, il est recommandé d'utiliser les mêmes agents Workload Security pour Ransomware Resilience. Il n'est pas nécessaire de déployer des agents Workload Security distincts pour Ransomware Resilience, cependant, l'utilisation des mêmes agents Workload Security nécessite une relation de couplage entre l'organisation de la Ransomware Resilience Console et le locataire DII Storage Workload Security. Contactez votre responsable de compte pour activer ce couplage.
 
-+ Si vous n'utilisez pas déjà DII, suivez les instructions de configuration ici.
++ Si vous n'utilisez _pas_ DII, suivez les instructions de configuration ici.
 
 
 

@@ -58,6 +58,9 @@ image:screen-protection-groups-policy.png["Ajouter un groupe de protection - Pag
 
 
 
+TIP: Lors de la consultation du tableau de bord de protection dans NetApp Ransomware Resilience, vous pouvez trier les charges de travail par groupe de protection.
+
+
 
 === Modifier la protection du groupe
 

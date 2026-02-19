@@ -52,7 +52,7 @@ Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-
 
 === Volumes non pris en charge
 
-Les rapports de résilience aux ransomwares capturent désormais des informations sur les volumes pris en charge et non pris en charge dans le rapport **Résumé**. Utilisez ces informations pour diagnostiquer pourquoi certains volumes d'un système pourraient ne pas être éligibles à la protection contre les ransomwares.
+Les rapports de NetApp Ransomware Resilience incluent désormais des informations sur les volumes pris en charge et non pris en charge dans le rapport **Summary**. Utilisez ces informations pour diagnostiquer pourquoi des volumes d’un système peuvent ne pas être éligibles à la protection contre les ransomwares.
 
 Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-reports.html["Télécharger les rapports dans Ransomware Resilience"^].
 
@@ -439,7 +439,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect
 
 === Évaluation des risques de sécurité par Digital Advisor
 
-La BlueXP ransomware protection collecte désormais des informations sur les risques de sécurité élevés et critiques liés à un cluster à partir de NetApp Digital Advisor.  Si un risque est détecté, la BlueXP ransomware protection fournit une recommandation dans le volet *Actions recommandées* du tableau de bord : « Corriger une vulnérabilité de sécurité connue sur le cluster <nom>. »  À partir de la recommandation sur le tableau de bord, cliquer sur *Examiner et corriger* suggère de consulter Digital Advisor et un article sur les vulnérabilités et expositions courantes (CVE) pour résoudre le risque de sécurité.  S'il existe plusieurs risques de sécurité, consultez les informations dans Digital Advisor.
+BlueXP ransomware protection collecte désormais des informations sur les risques de sécurité élevés et critiques liés à un cluster depuis NetApp Digital Advisor. En cas de risque détecté, BlueXP ransomware protection propose une recommandation dans le volet *Actions recommandées* du tableau de bord : « Corriger une vulnérabilité de sécurité connue sur le cluster <name>. » Depuis la recommandation sur le tableau de bord, sélectionner *Vérifier et corriger* suggère de consulter Digital Advisor et un article Common Vulnerability & Exposure (CVE) pour résoudre le risque de sécurité. S'il existe plusieurs risques de sécurité, consultez les informations dans Digital Advisor.
 
 Se référer à https://docs.netapp.com/us-en/active-iq/index.html["Documentation du Digital Advisor"^] .
 

@@ -12,9 +12,9 @@ summary: Commencez à utiliser NetApp Ransomware Resilience en vérifiant la pri
 
 
 [role="lead"]
-Commencez par vérifier la préparation de votre environnement opérationnel, de votre accès réseau et de votre navigateur Web afin d'évaluer la NetApp Ransomware Resilience .
+Pour garantir le succès du déploiement de NetApp Ransomware Resilience, vérifiez la préparation de votre environnement opérationnel, de votre accès réseau et de votre navigateur web.
 
-Pour utiliser Ransomware Resilience, assurez-vous de remplir les conditions préalables.
+Vérifiez et assurez-vous de répondre aux exigences suivantes.
 
 
 

@@ -1,15 +1,13 @@
 ---
-sidebar: sidebar 
 permalink: rp-use-manage.html 
-keywords: ransomware protection workload name, ransomware protection 
-summary: 'Vous pouvez gérer les charges de travail en modifiant le nom de la charge de travail plutôt qu"en utilisant un nom par défaut, ce qui est plus risqué.' 
+redirect: data-services-ransomware-resilience/rp-use-protect.html 
 ---
-= Gérer les charges de travail dans NetApp Ransomware Resilience
-:hardbreaks:
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ./media/
 
+
+'''
+barre latérale : barre latérale lien permanent : rp-use-manage.html mots-clés : nom de la charge de travail de protection contre les ransomwares, résumé de la protection contre les ransomwares : Vous pouvez gérer les charges de travail en modifiant le nom de la charge de travail plutôt qu’en utilisant un nom par défaut, ce qui est plus risqué. --- = Modifier le nom des charges de travail dans NetApp Ransomware Resilience :hardbreaks: :icons: font :imagesdir: ./media/
 
 [role="lead"]
 Vous pouvez gérer les charges de travail dans NetApp Ransomware Resilience en modifiant le nom de la charge de travail.  L’utilisation d’un nom par défaut constitue un risque d’attaques par ransomware.

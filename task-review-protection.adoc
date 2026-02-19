@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task-review-protection.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, detection, protection, policy, malware 
+summary: Vous pouvez protéger les charges de travail contre les attaques de ransomware en attribuant des stratégies à une charge de travail dans NetApp Ransomware Resilience. 
+---
+= Vérifier l'état de la protection dans NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Ransomware Resilience Le tableau de bord de protection offre une vue d'ensemble de l'état de protection et de la préparation de vos charges de travail. Utilisez le tableau de bord de protection pour obtenir des informations sur ce qui est protégé, ce qui nécessite une protection et quelle est la portée de la protection.
+
+Une fois que vous aurez compris l’étendue de votre protection actuelle, link:rp-use-protect.html["Vous pouvez créer et appliquer des stratégies de protection contre les ransomwares à vos charges de travail"].
+
+
+
+== Afficher la protection sur une charge de travail
+
+L’une des premières étapes de la protection des charges de travail consiste à afficher vos charges de travail actuelles et leur état de protection.  Vous pouvez voir les types de charges de travail suivants :
+
+* Charges de travail des applications
+* Bloquer les charges de travail
+* Charges de travail de partage de fichiers
+* Charges de travail des machines virtuelles
+
+
+.Étapes
+. Dans le menu de navigation de gauche de la console, sélectionnez *Protection* > *Résilience aux ransomwares*.
+. Effectuez l’une des opérations suivantes :
++
+** Dans le volet Protection des données du tableau de bord, sélectionnez *Afficher tout*.
+** Dans le menu, sélectionnez *Protection*.
++
+image:screen-protection.png["Page de protection"]
+
+
+
+. À partir de cette page, vous pouvez afficher et modifier les détails de protection de la charge de travail.
+
+
+
+NOTE: Consultez link:rp-use-protect.html#add-a-ransomware-protection-strategy["Ajouter une stratégie de protection contre les ransomwares"] pour en savoir plus sur l'utilisation de Ransomware Resilience lorsqu'il existe déjà une politique de protection avec Backup and Recovery.
+
+
+
+== Comprendre le tableau de bord de protection
+
+Le tableau de bord de protection dans Ransomware Resilience affiche des informations détaillées sur les charges de travail (par exemple, nom et type de charge de travail, agent Console, système et machine virtuelle de stockage) en plus des indications sur l'état de la protection. Utilisez le tableau de bord de protection pour examiner et gérer la préparation des charges de travail face aux ransomwares. Les colonnes suivantes sont particulièrement utiles pour comprendre votre posture de protection :
+
+*État de protection* : une charge de travail peut afficher l’un des états de protection suivants pour indiquer si une politique est appliquée ou non :
+
+* *Protégé* : Une politique est appliquée.  ARP (ou ARP/AI selon la version ONTAP ) est activé sur tous les volumes liés à la charge de travail.
+* *À risque* : Aucune politique n'est appliquée.  Si une charge de travail n’a pas de stratégie de détection principale activée, elle est « à risque » même si une stratégie de capture instantanée et de sauvegarde est activée.
+* *En cours* : Une politique est en cours d'application mais pas encore finalisée.
+* *Échec* : Une politique est appliquée mais ne fonctionne pas.
+
+
+*État de la détection*:
+
++ Ransomware Resilience fournit des informations sur l'étendue des politiques de détection des ransomwares que vous avez configurées sur vos charges de travail. Consultez l'étendue de la détection à l'aide des champs suivants.
+
+* *État de détection du chiffrement*
+* *Statut de détection du comportement suspect de l'utilisateur*
+* *Bloquer les extensions de fichiers suspectes*
+
+
+*Stratégies de capture instantanée, de réplication et de sauvegarde* : Cette colonne indique le produit ou le service qui gère la stratégie. S'il n'y a pas de stratégie, le champ affiche N/A.
+
+*Importance*
+
+Ransomware Resilience attribue une importance ou une priorité à chaque charge de travail lors de la découverte en fonction d'une analyse de chaque charge de travail.  L’importance de la charge de travail est déterminée par les fréquences d’instantanés suivantes :
+
+* *Critique* : Plusieurs copies instantanées sont effectuées par heure (plan de protection très agressif)
+* *Important* : Les copies instantanées sont créées moins fréquemment qu’une fois par heure, mais plus fréquemment qu’une fois par jour.
+* *Standard* : Des copies instantanées sont prises plus d’une fois par jour.
+
+
+*Exposition de la vie privée* : Sélectionnez cette option pour link:task-classify.html["analyser les informations personnellement identifiables avec NetApp Data Classification"].
+
+*Destination de réplication* : Si vous avez configuré la réplication par instantané, les noms des machines virtuelles de stockage de destination et des systèmes sont affichés. S'il n'y a pas de réplication, ce champ affiche "N/A".
+
+*Destination de sauvegarde* : Si vous avez configuré une stratégie de protection contre les ransomwares avec des sauvegardes, le nom du système de destination de sauvegarde est indiqué ici.
+
+
+
+== Prochaines étapes
+
+* link:rp-use-protect.html["Protégez les charges de travail avec des stratégies de protection contre les ransomwares"]
+* link:task-protection-group.html["Gérer les groupes de protection"]
+* link:task-classify.html["Rechercher des données personnelles identifiables"]
+

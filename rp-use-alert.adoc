@@ -117,7 +117,7 @@ TIP: Pour configurer les notifications par e-mail dans la Console, consultez lin
 La page Alertes apparaît.
 
 . Passez en revue tous les incidents sur chaque volume pour chaque alerte.
-. Pour consulter des alertes supplémentaires, cliquez sur *Alerte* dans le fil d'Ariane en haut à gauche.
+. Pour consulter des alertes supplémentaires, sélectionnez *Alerte* dans le fil d'Ariane en haut à gauche.
 . Continuez avec l’une des options suivantes :
 +
 ** <<Détecter les activités malveillantes et les comportements anormaux des utilisateurs>> .

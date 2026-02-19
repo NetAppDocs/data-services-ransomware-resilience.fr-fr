@@ -4,7 +4,7 @@ permalink: rp-use-dashboard.html
 keywords: ransomware protection, ransomware protection dashboard, detect ransomware attacks, recover from ransomware attack 
 summary: 'Le tableau de bord de NetApp Ransomware Resilience fournit des informations sur l’état de protection de vos charges de travail.  Vous pouvez rapidement déterminer les charges de travail à risque ou protégées, les charges de travail impactées par un incident ou en cours de récupération, et évaluer l"étendue de la protection en examinant la quantité de stockage protégée ou à risque.  Vous pouvez également utiliser le tableau de bord pour examiner et appliquer les recommandations de protection.' 
 ---
-= Surveiller l'état de la charge de travail à l'aide du tableau de bord de NetApp Ransomware Resilience
+= Surveillez l'état de la charge de travail dans NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

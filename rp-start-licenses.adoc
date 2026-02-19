@@ -12,9 +12,9 @@ summary: Assurez-vous de répondre aux exigences de licence pour Ransomware Resi
 
 
 [role="lead"]
-Avec NetApp Ransomware Resilience, vous pouvez utiliser différents plans de licence.
+NetApp Ransomware Resilience propose différents plans de licence, vous permettant de souscrire au service là où cela a du sens pour votre organisation.
 
-Pour effectuer cette tâche, vous avez besoin du rôle d’administrateur d’organisation, de dossier ou de projet. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console"^] .
+Pour configurer les licences, vous devez disposer du rôle d'administrateur de l'organisation, de dossier ou de projet. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console"^].
 
 
 

@@ -12,7 +12,7 @@ summary: Vous pouvez protéger les charges de travail contre les attaques de ran
 
 
 [role="lead"]
-Vous pouvez protéger les charges de travail contre les attaques de ransomware en activant une protection cohérente avec la charge de travail ou en créant des stratégies de protection contre les ransomwares dans NetApp Ransomware Resilience.
+Les stratégies de protection contre les ransomwares sont un élément clé de NetApp Ransomware Resilience : elles permettent la détection, la protection et la réplication. Les stratégies de protection sont un élément essentiel de votre posture de cybersécurité.
 
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
@@ -61,92 +61,9 @@ NOTE: Les destinations de sauvegarde ne sont pas disponibles pour les charges de
 
 
 
-=== Politiques de protection pour les charges de travail non protégées par les applications NetApp
+==== Politiques de protection pour les charges de travail non protégées par les applications NetApp
 
 Si votre charge de travail n'est pas gérée par Backup and Recovery ou Ransomware Resilience, elle peut avoir des instantanés pris dans le cadre d'ONTAP ou d'autres produits. Si la protection FPolicy d'ONTAP est en place, vous pouvez modifier la protection FPolicy à l'aide d'ONTAP.
-
-
-
-== Afficher la protection contre les ransomwares sur une charge de travail
-
-L’une des premières étapes de la protection des charges de travail consiste à afficher vos charges de travail actuelles et leur état de protection.  Vous pouvez voir les types de charges de travail suivants :
-
-* Charges de travail des applications
-* Bloquer les charges de travail
-* Charges de travail de partage de fichiers
-* Charges de travail des machines virtuelles
-
-
-.Étapes
-. Dans le menu de navigation de gauche de la console, sélectionnez *Protection* > *Résilience aux ransomwares*.
-. Effectuez l’une des opérations suivantes :
-+
-** Dans le volet Protection des données du tableau de bord, sélectionnez *Afficher tout*.
-** Dans le menu, sélectionnez *Protection*.
-+
-image:screen-protection.png["Page de protection"]
-
-
-
-. À partir de cette page, vous pouvez afficher et modifier les détails de protection de la charge de travail.
-
-
-
-NOTE: Consultez link:#add-a-ransomware-protection-strategy["Ajouter une stratégie de protection contre les ransomwares"] pour en savoir plus sur l'utilisation de Ransomware Resilience lorsqu'il existe déjà une politique de protection avec Backup and Recovery.
-
-
-
-=== Comprendre la page Protection
-
-La page Protection affiche les informations suivantes sur la protection de la charge de travail :
-
-*État de protection* : une charge de travail peut afficher l’un des états de protection suivants pour indiquer si une politique est appliquée ou non :
-
-* *Protégé* : Une politique est appliquée.  ARP (ou ARP/AI selon la version ONTAP ) est activé sur tous les volumes liés à la charge de travail.
-* *À risque* : Aucune politique n'est appliquée.  Si une charge de travail n’a pas de stratégie de détection principale activée, elle est « à risque » même si une stratégie de capture instantanée et de sauvegarde est activée.
-* *En cours* : Une politique est en cours d'application mais pas encore finalisée.
-* *Échec* : Une politique est appliquée mais ne fonctionne pas.
-
-
-*Statut de détection* : Une charge de travail peut avoir l’un des statuts de détection de ransomware suivants :
-
-* *Apprentissage* : Une politique de détection de ransomware a récemment été attribuée à la charge de travail et Ransomware Resilience analyse les charges de travail.
-* *Actif* : une politique de protection contre la détection de ransomware est attribuée.
-* *Non défini* : aucune politique de protection contre la détection de ransomware n'est attribuée.
-* *Erreur* : Une stratégie de détection de ransomware a été attribuée, mais Ransomware Resilience a rencontré une erreur.
-+
-
-TIP: Lorsque la protection est activée dans Ransomware Resilience, la détection et la création de rapports d'alertes commencent après que l'état de la politique de détection des ransomwares passe du mode d'apprentissage au mode actif.
-
-
-
-
-NOTE: Les activités liées aux comportements suspects des utilisateurs et à l'activité FPolicy (extension de fichier suspecte) sont répertoriées séparément de l'état de détection.
-
-*Politique de détection* : Le nom de la politique de détection des ransomwares apparaît, si elle a été attribuée.  Si la politique de détection n'a pas été attribuée, « N/A » s'affiche.
-
-*Destination de réplication* : Si vous avez configuré la réplication par instantané, les noms des machines virtuelles et des systèmes de stockage de destination sont indiqués. En l'absence de réplication, ce champ affiche « Aucune ».
-
-*Stratégies de capture instantanée, de réplication et de sauvegarde* : Cette colonne affiche les stratégies de capture instantanée et de sauvegarde appliquées à la charge de travail et le produit ou service qui gère ces stratégies.
-
-* Géré par SnapCenter
-* Géré par SnapCenter Plug-in for VMware vSphere
-* Géré par Backup and Recovery
-* Nom de la politique de protection contre les ransomwares qui régit les instantanés et les sauvegardes
-* Aucune
-
-
-
-NOTE: Vous ne pouvez pas gérer la récupération dans Ransomware Resilience pour aucune politique SnapCenter.
-
-*Importance de la charge de travail*
-
-Ransomware Resilience attribue une importance ou une priorité à chaque charge de travail lors de la découverte en fonction d'une analyse de chaque charge de travail.  L’importance de la charge de travail est déterminée par les fréquences d’instantanés suivantes :
-
-* *Critique* : Plusieurs copies instantanées sont effectuées par heure (plan de protection très agressif)
-* *Important* : Les copies instantanées sont créées moins fréquemment qu’une fois par heure, mais plus fréquemment qu’une fois par jour.
-* *Standard* : Des copies instantanées sont prises plus d’une fois par jour.
-
 
 
 
@@ -394,11 +311,11 @@ image:screen-protection.png["Gérer la page de stratégie"]
 . Pour laisser votre NetApp Backup and Recovery existant en place et appliquer uniquement une politique de _détection_, laissez la case **Remplacer les politiques existantes** décochée.
 . Sélectionnez les paramètres de détection que vous souhaitez :
 +
-....
-*Encryption detection*
-*Suspicious user behavior detection*
-*Block suspicious file extensions*
-....
+** *Détection du chiffrement*
+** *Détection des comportements utilisateurs suspects*
+** *Bloquer les extensions de fichiers suspectes*
+
+
 . Sélectionnez **Suivant**.
 . Si vous avez sélectionné *Détection des comportements suspects des utilisateurs* comme paramètre de détection, sélectionnez l’agent d’activité utilisateur ou link:suspicious-user-activity.html#create-a-user-activity-agent["ou en créer un"].
 +
