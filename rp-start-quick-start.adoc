@@ -62,7 +62,7 @@ Ces tâches nécessitent le rôle _Ransomware Resilience admin_.  La configurati
 Après avoir configuré la protection dans Ransomware Resilience, voici ce que vous pouvez faire ensuite.
 
 [role="quick-margin-list"]
-* link:rp-use-protect-classify.html["Activer la classification des données pour identifier les risques de gouvernance et de sécurité"]
+* link:task-classify.html["Activer la classification des données pour identifier les risques de gouvernance et de sécurité"]
 * link:task-siem.html["Envoyer des alertes au SIEM"]
 * link:rp-use-reports.html["Téléchargez des rapports d'alerte, de protection, d'exercice de préparation, de récupération ou de synthèse"]
 

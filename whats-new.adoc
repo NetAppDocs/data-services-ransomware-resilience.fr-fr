@@ -236,7 +236,7 @@ Avant d’utiliser la BlueXP classification dans le service de BlueXP ransomware
 
 Vous pouvez déployer la BlueXP classification sur une charge de travail de partage de fichiers à partir de la BlueXP ransomware protection.  Dans la colonne *Exposition à la confidentialité*, sélectionnez l’option *Identifier l’exposition*.  Si vous avez activé le service de classification, cette action identifie l'exposition.  Sinon, avec cette version, une boîte de dialogue présente la possibilité de déployer la BlueXP classification.  Sélectionnez *Déployer* pour accéder à la page de destination du service de BlueXP classification , où vous pouvez déployer ce service.  W
 
-Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-cloud-compliance.html["Déployer la BlueXP classification dans le cloud"^] et pour utiliser le service dans la BlueXP ransomware protection, reportez-vous à https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect-classify.html["Rechercher des informations personnelles identifiables avec la BlueXP classification"] .
+Pour plus de détails, consultez  https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-cloud-compliance.html["Déployer la BlueXP classification dans le cloud"^] et pour utiliser le service dans BlueXP ransomware protection, consultez  https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-classify.html["Rechercher des informations personnelles identifiables avec la BlueXP classification"].
 
 
 
@@ -395,11 +395,7 @@ Avec cette version, vous pouvez activer la BlueXP classification, un composant e
 
 L'analyse des données PII dans la BlueXP ransomware protection est généralement disponible pour les clients qui ont déployé la BlueXP classification.  La BlueXP classification est disponible dans le cadre de la plateforme BlueXP sans frais supplémentaires et peut être déployée sur site ou dans le cloud client.
 
-Se référer à https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-settings.html["Configurer les paramètres de BlueXP ransomware protection"] .
-
-Pour lancer l'analyse, sur la page Protection, cliquez sur *Identifier l'exposition* dans la colonne Exposition à la confidentialité.
-
-https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect-classify.html["Recherchez des données sensibles personnellement identifiables avec la BlueXP classification"] .
+Pour lancer l'analyse, sur la page Protection, sélectionnez *Identifier l'exposition* dans la colonne Exposition à la vie privée du tableau de bord Protection. Pour plus d'informations, consultez https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-classify.html["Analysez les données sensibles personnellement identifiables avec BlueXP classification"].
 
 
 
@@ -407,7 +403,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect
 
 Vous pouvez désormais envoyer des données à votre système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces à l'aide de Microsoft Sentinel.  Auparavant, vous pouviez sélectionner AWS Security Hub ou Splunk Cloud comme SIEM.
 
-https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-settings.html["En savoir plus sur la configuration des paramètres de BlueXP ransomware protection"] .
+https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html["En savoir plus sur la configuration des paramètres de BlueXP ransomware protection"].
 
 
 

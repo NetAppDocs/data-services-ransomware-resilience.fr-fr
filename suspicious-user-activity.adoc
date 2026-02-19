@@ -80,11 +80,11 @@ Une fois l'agent d'activité utilisateur créé avec succès, retournez dans le 
 
 === Ajouter un collecteur de données
 
-Les collecteurs de données sont créés automatiquement lorsque vous activez une stratégie de protection contre les ransomwares avec détection d'activité utilisateur suspecte. Pour plus d'informations, voir xref:rp-use-protect.adoc#add-a-detection-policy-to-workloads-with-existing-snapshot-and-backup-policies-managed-by-snapcenter-or-backup-and-recovery[ajouter une politique de détection].
+Des collecteurs de données sont créés automatiquement lorsque vous activez une stratégie de protection contre les ransomwares avec détection des activités suspectes des utilisateurs. Pour plus d'informations, consultez link:rp-use-protect.html#add-a-detection-policy-to-workloads-with-existing-backup-or-snapshot-policies["ajouter une politique de détection"].
 
 Vous pouvez consulter les détails du collecteur de données. Dans Paramètres, sélectionnez **Gérer** dans la mosaïque Activité utilisateur. Sélectionnez l'onglet **Collecteur de données** puis sélectionnez le collecteur de données pour afficher ses détails ou le mettre en pause.
 
-image:user-activity-settings.png["Capture d'écran des paramètres d'activité de l'utilisateur"]
+image:user-activity-settings.png["Capture d'écran des paramètres d'activité utilisateur."]
 
 
 

@@ -244,26 +244,6 @@ Tous les 30 jours
 | 60 | 2 | 93 
 
 
-.4+| *Extension utilisateur de chiffrement*  a| 
-Quart d'heure
-| Toutes les 30 minutes | 3 | 72 | 93 
-
-
-| Tous les jours  a| 
-Tous les 1 jour
-| 14 | 14 | 93 
-
-
-| Hebdomadaire  a| 
-Toutes les 1 semaine
-| 35 | 5 | 93 
-
-
-| Mensuel  a| 
-Tous les 30 jours
-| 60 | 2 | 93 
-
-
 .4+| *Politique de réplication critique*  a| 
 Quart d'heure
 | Toutes les 15 minutes | 3 | 288 | 309 

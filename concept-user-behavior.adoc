@@ -39,7 +39,7 @@ image:all-file-activity.png["Capture d'écran de l'ensemble de l'activité des f
 Il existe trois composants clés dans la détection de l'activité de comportement utilisateur suspecte de NetApp Ransomware Resilience.
 
 * L’**agent d’activité utilisateur** est un environnement d’exécution pour les collecteurs de données. Vous devez configurer l’agent d’activité utilisateur.
-* Le **collecteur de données** partage les événements d'activité des utilisateurs avec Ransomware Resilience. Le collecteur de données est créé automatiquement lorsque vous xref:rp-use-protect.adoc#add-a-detection-policy-to-workloads-with-existing-snapshot-and-backup-policies-managed-by-snapcenter-or-backup-and-recovery[mettre en place une stratégie de protection contre les ransomwares avec détection des activités suspectes des utilisateurs].
+* Le **collecteur de données** partage les événements d'activité des utilisateurs avec Ransomware Resilience. Le collecteur de données est créé automatiquement lorsque vous link:rp-use-protect.html#add-a-detection-policy-to-workloads-with-existing-backup-or-snapshot-policies["mettre en place une stratégie de protection contre les ransomwares avec détection des activités suspectes des utilisateurs"].
 * Le **connecteur d'annuaire utilisateur** permet d'associer les noms d'utilisateur aux identifiants d'utilisateur, créant une plus grande clarté lors de la réponse à un comportement utilisateur suspect. Vous devez configurer le connecteur d'annuaire utilisateur.
 
 
