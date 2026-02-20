@@ -12,7 +12,7 @@ summary: Si Ransomware Resilience détecte une attaque possible, une alerte appa
 
 
 [role="lead"]
-Lorsque NetApp Ransomware Resilience détecte une attaque potentielle, il affiche une alerte sur le tableau de bord et dans la zone de notifications. Ransomware Resilience prend immédiatement un instantané. Consultez le risque potentiel dans l’onglet *Alertes* de résilience aux ransomwares.
+Lorsque NetApp Ransomware Resilience détecte une attaque potentielle, il affiche une alerte sur le tableau de bord et dans la zone de notifications. Ransomware Resilience prend immédiatement un snapshot. Lorsque vous recevez une alerte, examinez le risque potentiel dans l’onglet *Alerts* de Ransomware Resilience pour évaluer l’impact sur vos données et prévenir une éventuelle attaque de ransomware.
 
 Si Ransomware Resilience détecte une attaque potentielle, une notification apparaît dans les paramètres de notification de la Console, et un courriel est envoyé aux adresses configurées. Le courriel contient des informations sur la gravité, la charge de travail impactée et un lien vers l’alerte dans l’onglet *Alerts* de Ransomware Resilience.
 
@@ -25,17 +25,39 @@ Pour commencer à récupérer vos données, marquez l’alerte comme prête pour
 
 Chaque alerte peut inclure plusieurs incidents sur différents volumes et statuts.  Passez en revue tous les incidents.
 
-Ransomware Resilience fournit des informations appelées _preuves_ sur la cause de l'émission de l'alerte, telles que les suivantes :
 
+
+== Comment les alertes sont générées
+
+Ransomware Resilience s'appuie sur des données relatives aux modèles d'entropie des données, aux types d'extension de fichiers et au chiffrement pour produire des alertes. Les alertes sont basées sur les événements suivants :
+
+* Violation de données
+* Destruction de données
 * Des extensions de fichiers ont été créées ou modifiées
 * Création de fichier avec comparaison des taux détectés et attendus
 * Suppression de fichiers avec comparaison des taux détectés et attendus
+* Comportement utilisateur suspect
 * Lorsque le cryptage est élevé, sans modification de l'extension de fichier
 
 
-Une alerte est classée comme l’une des suivantes :
 
-* *Attaque potentielle* : une alerte se produit lorsque Autonomous Ransomware Protection détecte une nouvelle extension et que l'occurrence se répète plus de 20 fois au cours des dernières 24 heures (comportement par défaut).
+NOTE: Pour les alertes de violation de données, de destruction de données et de comportement utilisateur suspect, vous devez configurer link:concept-user-behavior.html["détection de l'activité de l'utilisateur"].
+
+
+
+=== Types et statuts d'alerte
+
+Les alertes ont l'un des deux statuts suivants : *New* ou *Inactive*.
+
+Une alerte est classée comme l'un des types suivants :
+
+* *Attaque potentielle* : Une alerte est classée comme attaque potentielle lorsque :
++
+** Autonomous Ransomware Protection détecte une nouvelle extension et l'occurrence se répète plus de 20 fois au cours des dernières 24 heures (comportement par défaut).
+** Des violations de données sont détectées.
+** Une destruction de données est détectée.
+
+
 * *Avertissement* : Un avertissement se produit en fonction des comportements suivants :
 +
 ** La détection d’une nouvelle extension n’a pas été identifiée auparavant et le même comportement ne se répète pas suffisamment de fois pour le déclarer comme une attaque.
@@ -50,34 +72,40 @@ NOTE: Pour les environnements SAN, les avertissements sont basés uniquement sur
 
 Les preuves sont basées sur les informations de Autonomous Ransomware Protection dans ONTAP. Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Présentation de la protection autonome contre les ransomwares"^] .
 
-Une alerte peut avoir l’un des statuts suivants :
 
-* *Nouveau*
-* *Inactif*
 
+=== États d'alerte
 
 Un incident d'alerte peut présenter les états suivants :
 
-* *Nouveau* : Tous les incidents sont marqués « nouveaux » lorsqu'ils sont identifiés pour la première fois.
-* *En cours d'examen* : Vous pouvez marquer un incident comme étant en cours d'examen pendant que vous l'évaluez.
-* *Rejeté* : Si vous pensez que l'activité n'est pas une attaque de ransomware, vous pouvez modifier le statut sur « Rejeté ».
-+
-
-CAUTION: Une fois une attaque rejetée, son statut ne peut être modifié. Si vous supprimez une charge de travail, toutes les copies d'instantané prises automatiquement en réponse à une potentielle attaque de ransomware seront définitivement supprimées.
-
-* *Rejet* : L'incident est en cours de rejet.
-* *Résolu* : L'incident a été résolu.
-* *Résolution automatique* : pour les alertes de faible priorité, l'incident est automatiquement résolu si aucune mesure n'a été prise à ce sujet dans les cinq jours.
+[cols="10%,90%"]
+|===
 
 
+| État | Description 
 
-TIP: Si vous avez configuré un système de gestion de la sécurité et des événements (SIEM) dans Ransomware Resilience dans la page Paramètres, Ransomware Resilience envoie les détails de l'alerte à votre système SIEM.
 
+| *Nouveau* | Tous les incidents sont marqués « nouveaux » lorsqu'ils sont identifiés pour la première fois. 
+
+
+| *En cours de révision* | Vous pouvez marquer manuellement un incident d'alerte comme « en cours d'examen » pendant que vous l'évaluez. 
+
+
+| *Rejeté*  a| 
+Si vous pensez qu'il ne s'agit pas d'une attaque de ransomware, vous pouvez changer le statut en « ignorée ». + ATTENTION : Après avoir ignoré une attaque, vous ne pouvez pas rétablir son statut. Si vous ignorez une charge de travail, toutes les copies de snapshots créées automatiquement en réponse à la potentielle attaque de ransomware seront définitivement supprimées.
+
+
+
+| *Résolu* | L'incident a été résolu. 
+
+
+| *Résolu automatiquement* | Pour les alertes de faible priorité, l'incident est automatiquement résolu si aucune action n'a été entreprise à son sujet dans un délai de cinq jours. 
+|===
 
 
 == Afficher les alertes
 
-Vous pouvez accéder aux alertes depuis le tableau de bord de résilience aux ransomwares ou depuis l'onglet *Alertes*.
+Vous pouvez accéder aux alertes depuis le tableau de bord Ransomware Resilience ou depuis l'onglet *Alerts*.
 
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet, d'administrateur de résilience aux ransomwares ou de visualiseur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
@@ -112,7 +140,7 @@ TIP: Pour configurer les notifications par e-mail dans la Console, consultez lin
 
 .Étapes
 . Afficher l'e-mail.
-. Dans l'e-mail, sélectionnez *Afficher l'alerte* et connectez-vous à Ransomware Resilience.
+. Dans l'e-mail, sélectionnez *View alert* et connectez-vous à Ransomware Resilience.
 +
 La page Alertes apparaît.
 
@@ -139,13 +167,15 @@ Pour afficher les alertes au niveau de l'utilisateur, vous devez avoir configur�
 
 === Afficher les activités malveillantes
 
-Lorsque la protection autonome contre les ransomwares déclenche une alerte dans Ransomware Resilience, vous pouvez afficher les détails suivants :
+Lorsque la protection autonome contre les ransomwares déclenche une alerte dans NetApp Ransomware Resilience, vous pouvez consulter les détails suivants :
 
+* Lorsque l'alerte a été déclenchée
+* Lorsque l'accès a été modifié ou refusé
 * Entropie des données entrantes
 * Taux de création attendu de nouveaux fichiers par rapport au taux détecté
 * Taux de suppression de fichiers attendu par rapport au taux détecté
 * Taux de renommage attendu des fichiers par rapport au taux détecté
-* Fichiers et répertoires impactés
+* Charges de travail, volumes, fichiers et répertoires impactés
 
 
 
@@ -172,7 +202,7 @@ Si vous avez configuré la détection des utilisateurs suspects pour afficher le
 . Sélectionnez une alerte.
 . Passez en revue les incidents dans l’alerte.
 +
-.. Pour bloquer un utilisateur suspect dans votre environnement, sélectionnez *Bloquer* à côté du nom de l'utilisateur.
+.. Pour bloquer un utilisateur suspect dans votre environnement, sélectionnez *Block* à côté du nom de l'utilisateur.
 .. Pour désactiver les alertes concernant un utilisateur faisant l'objet d'une alerte que vous savez être fausse, sélectionnez les trois points (`...` puis **Exclure cet utilisateur de la surveillance**. Examinez la boîte de dialogue, puis sélectionnez **Exclure** pour confirmer.
 
 
