@@ -40,7 +40,7 @@ Passez en revue les charges de travail qui sont dans l’état de récupération
 .Étapes
 . Effectuez l’une des opérations suivantes :
 +
-** Depuis le tableau de bord, vérifiez les totaux « Restauration nécessaire » dans le volet Alertes et sélectionnez *Afficher tout*.
+** Depuis le tableau de bord, consultez les totaux « Restore needed » dans le volet Alertes et sélectionnez *View all*.
 ** Dans le menu, sélectionnez *Récupération*.
 
 

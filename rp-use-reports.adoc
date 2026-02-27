@@ -41,7 +41,7 @@ Les fichiers CSV ou JSON incluent des données pour toutes les charges de travai
 +
 image:screen-dashboard.png["Page du tableau de bord"]
 
-. Depuis le tableau de bord ou une autre page, sélectionnez *Actualiser*image:button-refresh.png["Option de rafraîchissement"] option en haut à droite pour actualiser les données qui apparaîtront dans les rapports.
+. Depuis le tableau de bord ou une autre page, sélectionnez l’option *Actualiser* image:button-refresh.png["Option de rafraîchissement"] en haut à droite pour actualiser les données qui apparaîtront dans les rapports.
 . Effectuez l’une des opérations suivantes :
 +
 ** Depuis la page, sélectionnez *Télécharger*image:button-download.png["Option de téléchargement"] option.

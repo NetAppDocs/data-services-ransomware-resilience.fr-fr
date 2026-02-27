@@ -102,7 +102,7 @@ Se référer à la https://docs.netapp.com/us-en/console-setup-admin/reference-p
 
 * NetApp Backup and Recovery n’a pas besoin d’être activé sur le système.
 +
-Ransomware Resilience permet de configurer une destination de sauvegarde via l'option Paramètres. Voir link:rp-use-settings.html["Configurer les paramètres"] .
+Ransomware Resilience permet de configurer une destination de sauvegarde via l'option Paramètres. Voir link:task-backup-destination.html["Ajouter une destination de sauvegarde"].
 
 
 

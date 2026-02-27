@@ -280,7 +280,7 @@ Le verrouillage de copie d'instantané est disponible avec ONTAP 9.12.1 et versi
 *** *Planifications de sauvegarde* : Choisissez les options de planification pour le stockage secondaire et activez la planification.
 +
 
-TIP: Pour activer le verrouillage de sauvegarde sur le stockage secondaire, configurez vos destinations de sauvegarde à l'aide de l'option *Paramètres*. Pour plus de détails, consultez la section link:rp-use-settings.html["Configurer les paramètres"] .
+TIP: Pour activer le verrouillage des sauvegardes sur le stockage secondaire, configurez vos destinations de sauvegarde à l'aide de l'option *Paramètres*. Pour plus de détails, consultez link:task-backup-destination.html["Configurer les paramètres"].
 
 
 

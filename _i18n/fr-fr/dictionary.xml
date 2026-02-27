@@ -11,7 +11,6 @@
   <block id="d6e1df3f33358ae7e917c338cf462ca0" category="section-title">Sauvegarde sur Google Cloud Platform</block>
   <block id="a789dfb53f35524e96878624b0f44be1" category="paragraph">Avec cette version, vous pouvez définir une destination de sauvegarde sur un bucket Google Cloud Platform.  Auparavant, vous pouviez ajouter des destinations de sauvegarde uniquement à NetApp StorageGRID, Amazon Web Services et Microsoft Azure.</block>
   <block id="0d0fda3a15e7f6f6406a0dde3997c91f" category="inline-link">En savoir plus sur la configuration des paramètres de BlueXP ransomware protection</block>
-  <block id="a54b344e834fd0b16ead656bdeef0a91" category="paragraph"><block ref="e97e75c9449e5f1b8a8a75ebff67b7c3" category="inline-link-rx"></block> .</block>
   <block id="be2bdfb658850d167c76f763879faa2f" category="section-title">Prise en charge de Google Cloud Platform</block>
   <block id="1a5bbf622fa944b888ced1dd36e43b20" category="paragraph">Le service prend désormais en charge Cloud Volumes ONTAP pour Google Cloud Platform pour la protection du stockage.  Auparavant, le service prenait uniquement en charge Cloud Volumes ONTAP pour Amazon Web Services et Microsoft Azure ainsi que le NAS sur site.</block>
   <block id="571e1080641fe631491306478d4572a1" category="inline-link">En savoir plus sur la BlueXP ransomware protection et les sources de données prises en charge, les destinations de sauvegarde et les environnements de travail</block>
@@ -267,7 +266,6 @@
   <block id="8ba3ac2a14af0c43cfde525668f6e546" category="paragraph">Vous pouvez désactiver les stratégies FPolicy et de sauvegarde dans Ransomware Resilience en appliquant une stratégie différente qui ne les inclut pas.  Pour obtenir des instructions sur la définition des politiques de protection, reportez-vous à<block ref="cc10c371e1aab359fa44a886d5e79433" category="inline-link-macro-rx"></block> .</block>
   <block id="76722f595147e9e40ab79fef549441a4" category="admonition">Nous vous recommandons de ne pas désactiver les stratégies de capture instantanée.</block>
   <block id="ef54d92c7cc927ca7eb5e489c30b0e9b" category="summary">Lors de la découverte, Ransomware Resilience analyse tous les volumes et fichiers des systèmes sur tous les agents et comptes de la console.</block>
-  <block id="e9be3c13b1ed73a120f1b23e2cefb058" category="doc">Découvrez les charges de travail dans NetApp Ransomware Resilience</block>
   <block id="790472d97707885ad0bca12c5442db2a" category="paragraph">Dans chaque agent de console, sélectionnez les systèmes sur lesquels vous souhaitez découvrir les charges de travail.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Étapes</block>
   <block id="7b8dc42ed597eb23a119869a1195c334" category="list-text">Depuis la NetApp Console, sélectionnez *Protection* &gt; *Protection contre les ransomwares*.</block>
@@ -284,14 +282,8 @@
   <block id="6717014f0e48b7ab08c9846925b42c93" category="list-text">Sélectionnez *Découvrir*.</block>
   <block id="60b91ac4e4f14d7cb892956fc74437d2" category="list-text">Pour télécharger la liste des charges de travail découvertes, sélectionnez *Télécharger les résultats*.</block>
   <block id="f78bb7fa8ba897b7d7d1b1b09e4e9938" category="list-text">Pour afficher le tableau de bord de résilience aux ransomwares, sélectionnez *Accéder au tableau de bord*.</block>
-  <block id="ac0d10b22ed925b5d7db4e7ab168496b" category="paragraph">Le tableau de bord affiche l’état de la protection des données.  Le nombre de charges de travail à risque ou protégées est mis à jour à mesure que de nouvelles charges de travail sont découvertes.</block>
-  <block id="0779fbdbd2b1cb5a855e657ee10b03d0" category="inline-image-macro">Tableau de bord de résilience aux ransomwares</block>
-  <block id="4ddddff3aa2a45f8fe2ea3fb1183b4ce" category="paragraph"><block ref="4ddddff3aa2a45f8fe2ea3fb1183b4ce" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7aa859cab6bf5bccbd16604f19eefa93" category="inline-link-macro">Découvrez ce que le tableau de bord vous montre.</block>
-  <block id="6363fabfdf63bcf12dfba9fd9de06ba3" category="paragraph"><block ref="6363fabfdf63bcf12dfba9fd9de06ba3" category="inline-link-macro-rx"></block></block>
   <block id="0e8bd87ff5fa544ac4a41711a3b607ee" category="section-title">Découvrez les charges de travail nouvellement créées pour les systèmes précédemment sélectionnés</block>
   <block id="cee654483027bd7fe0b0908f5113b46f" category="section-title">Découvrez de nouveaux systèmes</block>
-  <block id="3a268026d4270688c4ec208104cc118c" category="paragraph">Si vous avez déjà découvert des systèmes, vous pouvez en trouver de nouveaux ou des systèmes non sélectionnés auparavant.</block>
   <block id="12138171b6ceeb4bdc45d66e55bebe1c" category="inline-image-macro">Actions verticales</block>
   <block id="405f846fd5caab9c6bb41e637ac55c97" category="summary">Trouvez une réponse à une question fréquemment posée sur la NetApp Ransomware Resilience.</block>
   <block id="815a60d80ffbc32f6db251b3410900b2" category="doc">Questions fréquemment posées sur la NetApp Ransomware Resilience</block>
@@ -441,7 +433,6 @@
   <block id="90061bb176f3e723f6f2161eafc1901c" category="paragraph">Se référer à la<block ref="31e1fb669a04af441205b80b4846232f" category="inline-link-rx"></block> pour plus de détails.</block>
   <block id="583833d6f0468c713c410ea158e1b6f6" category="list-text">NetApp Backup and Recovery n’a pas besoin d’être activé sur le système.</block>
   <block id="fb197ee87a0f850dc3b7bb98fe408518" category="inline-link-macro">Configurer les paramètres</block>
-  <block id="35743d3ea81079f21301876eeaf2d70d" category="paragraph">Ransomware Resilience permet de configurer une destination de sauvegarde via l'option Paramètres. Voir <block ref="522f9942d2238ef69c22ece6b9af5205" category="inline-link-macro-rx"></block> .</block>
   <block id="1afe90b99262d688f040631ea9d6dcce" category="section-title">Mettre à jour les autorisations des utilisateurs non administrateurs dans un système ONTAP</block>
   <block id="ddf0d8cb7fa932ccfbf9231d4f27f992" category="list-text">Sélectionnez *Afficher les informations supplémentaires* pour afficher le nom d'utilisateur.</block>
   <block id="ec2732dacf33a5e90fbcf1cf42cb9ef7" category="list-text">Modifier le rôle de l'utilisateur. Entrer:</block>
@@ -467,7 +458,6 @@
   <block id="5ba5a444d582677cee050d2bd25e9ebb" category="paragraph">Préparez l’une des destinations de sauvegarde suivantes :</block>
   <block id="6beccc67ff905f7da0b29dece26b0485" category="list-text">Amazon Web Services</block>
   <block id="1668ca1bd914c1d847f23b491319ac91" category="list-text">Microsoft Azure</block>
-  <block id="1d44ca4a7fa2ea890e722e804b194b58" category="paragraph">Après avoir configuré les options dans la destination de sauvegarde elle-même, vous la configurerez plus tard comme destination de sauvegarde dans Ransomware Resilience.  Pour plus de détails sur la configuration de la destination de sauvegarde dans Ransomware Resilience, reportez-vous à<block ref="d7283f05508223892c3d4b2693d5a6af" category="inline-link-macro-rx"></block> .</block>
   <block id="367e12449a6cc346263c57cc7bc9d0b8" category="section-title">Préparez StorageGRID pour devenir une destination de sauvegarde</block>
   <block id="3778f3873debfe11e2ace6bb6af1e417" category="inline-link">Documentation de StorageGRID</block>
   <block id="02ab63403df798aee66e35261bb4cb6d" category="paragraph">Si vous souhaitez utiliser StorageGRID comme destination de sauvegarde, reportez-vous à<block ref="4cc24fbab710afd2e2ecf5070c4cfaad" category="inline-link-rx"></block> pour plus de détails sur StorageGRID.</block>
@@ -580,7 +570,6 @@
   <block id="50ca22b8d354f001a742f726d3cf2be9" category="inline-image-macro">Page de rapports affichant le rapport d'exercice de préparation</block>
   <block id="179e5ea4317177f519c688d15ef67987" category="paragraph"><block ref="179e5ea4317177f519c688d15ef67987" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e462715e9b155f4f9638da4f314c8aff" category="list-text">Sélectionnez *Exercices de préparation* et *Télécharger* pour télécharger le rapport d’exercice de préparation.</block>
-  <block id="bb44ab86396f7335c45f2c99c022776c" category="summary">Si Ransomware Resilience détecte une attaque possible, une alerte apparaît sur le tableau de bord Ransomware Resilience indiquant une attaque potentielle. À ce stade, vous devez examiner le risque potentiel dans l’onglet Alertes de résilience aux ransomwares.</block>
   <block id="4c8cd66676ad1c434108e699d9777408" category="paragraph">Vous pouvez ignorer les faux positifs ou décider de récupérer vos données immédiatement.</block>
   <block id="899157335f0c98105a8cbc92966ba06d" category="admonition">Si vous ignorez l'alerte, Ransomware Resilience apprend ce comportement, l'associe aux opérations normales et ne déclenche plus d'alerte.</block>
   <block id="a8fd9e3988acb841854762788963d815" category="paragraph">Pour commencer à récupérer vos données, marquez l’alerte comme prête pour la récupération afin que votre administrateur de stockage puisse commencer le processus de récupération.</block>
@@ -597,7 +586,6 @@
   <block id="64c00e9ea78abe412d8db56dd1df0462" category="paragraph">Une alerte peut avoir l’un des statuts suivants :</block>
   <block id="adf79604cd73ac69e1173c85b1070d09" category="list-text">*Nouveau*</block>
   <block id="428c58ec1c2902ea6bff31e38cae88ff" category="section-title">Afficher les alertes</block>
-  <block id="d676f14418a66ee1ac07a8bb1f61d02f" category="list-text">Dans le tableau de bord de résilience aux ransomwares, examinez le volet Alertes.</block>
   <block id="6f619b1b7d17720e868f27a6a00e82c3" category="list-text">Sélectionnez *Afficher tout* sous l’un des statuts.</block>
   <block id="63afcf111af36e926f8c3a19c547e9ae" category="list-text">Sélectionnez une alerte pour examiner tous les incidents sur chaque volume pour chaque alerte.</block>
   <block id="5310a6be73ccb6e9b068c27c8e302abf" category="list-text">Pour consulter des alertes supplémentaires, sélectionnez *Alerte* dans le fil d'Ariane en haut à gauche.</block>
@@ -628,8 +616,6 @@
   <block id="44dd4f71dc5510ad8843ca6c09b8fa4f" category="inline-image-macro">Page d'alerte des incidents</block>
   <block id="2d8d33f13c7be8900f62bd32b802c107" category="paragraph"><block ref="2d8d33f13c7be8900f62bd32b802c107" category="inline-image-macro-rx" type="image"></block></block>
   <block id="24d8050f046c3ac972fd95f26e1a8670" category="list-text">Sélectionnez un incident pour consulter les détails de l’incident.</block>
-  <block id="ff74e9f48366f1b4465d1920693ddea8" category="inline-link-macro">Configurer les paramètres de résilience aux ransomwares</block>
-  <block id="f784461c39e5b287f6733d0ee28efad4" category="paragraph">Si vous avez configuré la détection des utilisateurs suspects pour afficher le comportement anormal des utilisateurs, vous pouvez afficher les données au niveau de l'utilisateur et bloquer des utilisateurs spécifiques. Pour activer les paramètres utilisateur suspects, voir<block ref="788275b5d10fa192a2bbf25cebb6c38f" category="inline-link-macro-rx"></block> .</block>
   <block id="705db8b34cf00efb73abf6403278e299" category="section-title">Marquer les incidents de ransomware comme prêts à être récupérés (une fois les incidents neutralisés)</block>
   <block id="a31e44b45b823ec61483db05b99be2cb" category="paragraph"><block ref="a31e44b45b823ec61483db05b99be2cb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9d6e925ee1290815ef828d96d28218c6" category="list-text">Dans la page Alertes, sélectionnez l’alerte.</block>
@@ -655,13 +641,9 @@
   <block id="3da0517dff453f03b4448de6079af196" category="inline-image-macro">liste des fichiers impactés par une alerte spécifique</block>
   <block id="a0fd18fc337758e79e647649d69f4149" category="paragraph"><block ref="a0fd18fc337758e79e647649d69f4149" category="inline-image-macro-rx" type="image"></block></block>
   <block id="955d1101c1424d23d653984e03cf7099" category="list-text">Pour cet incident, sélectionnez l'icône de téléchargement et téléchargez la liste des fichiers impactés au format CSV.</block>
-  <block id="efe8304005b9c8de768eaef14e8d07f2" category="summary">Le tableau de bord de NetApp Ransomware Resilience fournit des informations sur l’état de protection de vos charges de travail.  Vous pouvez rapidement déterminer les charges de travail à risque ou protégées, les charges de travail impactées par un incident ou en cours de récupération, et évaluer l'étendue de la protection en examinant la quantité de stockage protégée ou à risque.  Vous pouvez également utiliser le tableau de bord pour examiner et appliquer les recommandations de protection.</block>
-  <block id="8c036228e726b58da7c61083499276b0" category="paragraph">Le tableau de bord de NetApp Ransomware Resilience fournit des informations rapides sur l'état de protection de vos charges de travail.  Vous pouvez rapidement déterminer les charges de travail qui sont à risque ou protégées, identifier les charges de travail affectées par un incident ou en cours de récupération, et évaluer l'étendue de la protection en examinant la quantité de stockage protégée ou à risque.</block>
-  <block id="b5695a87e857b3dfe980329900e2d5c8" category="section-title">Examiner l'état de la charge de travail à l'aide du tableau de bord</block>
   <block id="2711b34ed6f854164ab28f6ba7d757fc" category="list-text">Une fois que la console a détecté vos charges de travail, le tableau de bord Ransomware Resilience affiche l’état de protection des données de la charge de travail.</block>
   <block id="1de66de0484295c7b0e311cd3746dab8" category="inline-image-macro">Page du tableau de bord</block>
   <block id="1541b6face8479b500e3accafb066eee" category="paragraph"><block ref="1541b6face8479b500e3accafb066eee" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bbb730a044e88545c3476ffea030b9f1" category="list-text">Depuis le tableau de bord, vous pouvez effectuer les actions suivantes dans chacun des volets :</block>
   <block id="5cf652b0493bef09f6f5bcbd5925413f" category="list-text">*Protection des données de charge de travail* : sélectionnez *Afficher tout* pour voir toutes les charges de travail à risque ou protégées sur la page Protection.  Les charges de travail sont menacées lorsque les niveaux de protection ne correspondent pas à une politique de protection. <block ref="2b2daeeb32402291362fa9fa843a5c7e" category="inline-link-macro-rx"></block> .</block>
   <block id="7946ca9134fecb1e363f88a194b4e259" category="inline-link-macro">Répondre à une alerte détectée</block>
   <block id="3e68731452668c74a209b358c132dbaa" category="list-text">*Alertes et récupération des données de charge de travail* : sélectionnez *Afficher tout* pour voir les incidents actifs qui ont eu un impact sur votre charge de travail, qui sont prêts à être récupérés une fois les incidents neutralisés ou qui sont en cours de récupération. <block ref="a57b82018dcad508c33f5a5c54351028" category="inline-link-macro-rx"></block> .</block>
@@ -677,13 +659,9 @@
   <block id="5fdf564f22be6bd901a690f1c5a6d9eb" category="list-text">Restauré</block>
   <block id="d7c8c85bf79bbe1b7188497c32c3b0ca" category="list-text">Échec</block>
   <block id="01ee1fb42827033e1ee6460d34d24118" category="list-text">*Actions recommandées* : Pour augmenter la protection, examinez chaque recommandation, puis sélectionnez *Examiner et corriger*.</block>
-  <block id="41bf60aacff85fc3a6f5582156e8869c" category="inline-link-macro">Consultez les suggestions de protection sur le tableau de bord</block>
-  <block id="fc21f844b3d14213e03663d544317aef" category="paragraph">Voir <block ref="f1ff80e23a7fe8beb1fae2892663601f" category="inline-link-macro-rx"></block> ou <block ref="2b2daeeb32402291362fa9fa843a5c7e" category="inline-link-macro-rx"></block> .</block>
-  <block id="5797fc242c655f3f3487214eefe9913e" category="paragraph">Ransomware Resilience affiche les nouvelles recommandations depuis votre dernière visite sur le tableau de bord avec la balise « Nouveau » pendant 24 heures.  Les actions apparaissent par ordre de priorité, la plus importante en haut.  Examinez, appliquez ou rejetez chaque recommandation.</block>
   <block id="ff6ad10fda2c352d0ae3b9ed9baae437" category="paragraph">Le nombre total d’actions n’inclut pas les actions que vous avez rejetées.</block>
   <block id="6308193424a44f7cb12ce18a9cc42d47" category="list-text">*Données de charge de travail* : Surveillez les changements dans la couverture de protection au cours des 7 derniers jours.</block>
   <block id="6b3bbaa6cd0742a7731eb93c459418bc" category="list-text">*Sauvegardes de charge de travail* : surveillez les modifications dans les sauvegardes de charge de travail créées par Ransomware Resilience qui ont échoué ou se sont terminées avec succès au cours des 7 derniers jours.</block>
-  <block id="c09a3324882f0d3d76129ae7f12aff7c" category="section-title">Consultez les recommandations de protection sur le tableau de bord</block>
   <block id="2838217aa1e79d198cbf4dd5348bcb25" category="paragraph">Ransomware Resilience évalue la protection de vos charges de travail et recommande des actions pour améliorer cette protection.</block>
   <block id="764adc71d40dd422f160607f5758c855" category="paragraph">Vous pouvez consulter une recommandation et agir en conséquence, ce qui modifie le statut de la recommandation sur Terminé.  Ou, si vous souhaitez agir plus tard, vous pouvez le rejeter.  Le rejet d’une action déplace la recommandation vers une liste d’actions rejetées, que vous pouvez consulter ultérieurement.</block>
   <block id="fd1b7aaaf1fd695d78f5ec65e3e321ad" category="paragraph">Voici un échantillon des recommandations proposées par Ransomware Resilience.</block>
@@ -694,8 +672,6 @@
   <block id="2b23e67a81e3d69dd9c1a80ae371b5ac" category="cell">Affecter une politique à la charge de travail. <block ref="cc10c371e1aab359fa44a886d5e79433" category="inline-link-macro-rx"></block> .</block>
   <block id="ddbb9fa44f09efeb718a317e736340b1" category="cell">Connectez-vous au SIEM pour signaler les menaces.</block>
   <block id="189c4ff0677fc252921dcedc653aa720" category="cell">Envoyez des données à un système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces.</block>
-  <block id="6dfbc052f1c7457b9c825b0e076c1503" category="inline-link-macro">Configurer les paramètres de protection</block>
-  <block id="c00b830d377d62d0c3d20c11bcd0ce1e" category="cell">Saisissez les détails du serveur SIEM/XDR pour activer la détection des menaces. <block ref="9f0b279394cf25f00a608a52b5aed0b2" category="inline-link-macro-rx"></block> .</block>
   <block id="2f2ad69d4eabc32debaa79396c406151" category="cell">Améliorer la posture de sécurité du système</block>
   <block id="ed1df3b69f10d586e5712ba9ce41d501" category="cell">NetApp Digital Advisor a identifié au moins un risque de sécurité élevé ou critique.</block>
   <block id="c422252635de9cce46903202ef695202" category="cell">Passez en revue tous les risques de sécurité dans NetApp Digital Advisor. Se référer à<block ref="5d1aa2fae9958ef5ced45eec5d13d250" category="inline-link-rx"></block> .</block>
@@ -704,7 +680,6 @@
   <block id="8db2e9b654cd93f28beeae96f827c30a" category="cell">Augmentez la rétention, ajoutez des sauvegardes, appliquez des sauvegardes immuables, bloquez les extensions de fichiers suspectes, activez la détection sur le stockage secondaire et bien plus encore. <block ref="cc10c371e1aab359fa44a886d5e79433" category="inline-link-macro-rx"></block> .</block>
   <block id="a3b50e444d5d5789130de78ddb2b3e45" category="cell">Préparez &lt;fournisseur de sauvegarde&gt; comme destination de sauvegarde pour sauvegarder vos données de charge de travail.</block>
   <block id="e08278c8217792f95a8bc1de9c7a7d8b" category="cell">La charge de travail n’a actuellement aucune destination de sauvegarde.</block>
-  <block id="600a7b18be10701f94a8ee3667ed9056" category="cell">Ajoutez des destinations de sauvegarde à cette charge de travail pour la protéger. <block ref="9f0b279394cf25f00a608a52b5aed0b2" category="inline-link-macro-rx"></block> .</block>
   <block id="3b4633f78219c68314768337af8968bf" category="cell">Protégez les charges de travail des applications critiques ou très importantes contre les ransomwares.</block>
   <block id="9c592743fe6a292e0be5b9e6343dc1ba" category="cell">La page Protéger affiche les charges de travail d'application critiques ou très importantes (en fonction du niveau de priorité attribué) qui ne sont pas protégées.</block>
   <block id="1f03c05bf6e65a368653bb061f47d41c" category="cell">Attribuez une politique à ces charges de travail. <block ref="cc10c371e1aab359fa44a886d5e79433" category="inline-link-macro-rx"></block> .</block>
@@ -812,7 +787,6 @@
   <block id="8a5042da8154d7b57ae6ca95c51af501" category="list-text">Bloquer les charges de travail</block>
   <block id="f6eb9aea7f708dfdaa2db67cab1a9d7a" category="list-text">Charges de travail de partage de fichiers</block>
   <block id="001c5efa43c01ae33e4db0d43c8d8fa5" category="list-text">Charges de travail des machines virtuelles</block>
-  <block id="78c48c7c6239e944a5c23274f2e1a24b" category="list-text">Dans le volet Protection des données du tableau de bord, sélectionnez *Afficher tout*.</block>
   <block id="1510439e7d258f968d00ed7cd507248d" category="list-text">Dans le menu, sélectionnez *Protection*.</block>
   <block id="431aa1e60febe9bcc661ecdca199701d" category="inline-image-macro">Page de protection</block>
   <block id="b6ed68904b26faac81b9a6914f1b95cd" category="paragraph"><block ref="b6ed68904b26faac81b9a6914f1b95cd" category="inline-image-macro-rx" type="image"></block></block>
@@ -889,7 +863,6 @@
   <block id="bec83ad5f3237718ad523140fca8ac2b" category="list-text">*Politique de sauvegarde*:</block>
   <block id="4c2335d5c61b4722f3bc7508bd4a0ada" category="list-text">*Nom de base de la politique de sauvegarde* : saisissez un nouveau nom ou choisissez un nom existant.</block>
   <block id="589d15d214feb500a590692bf3a50f04" category="list-text">*Planifications de sauvegarde* : Choisissez les options de planification pour le stockage secondaire et activez la planification.</block>
-  <block id="02fe451dde6aa884097ca3b7c67707a5" category="admonition">Pour activer le verrouillage de sauvegarde sur le stockage secondaire, configurez vos destinations de sauvegarde à l'aide de l'option *Paramètres*. Pour plus de détails, consultez la section <block ref="522f9942d2238ef69c22ece6b9af5205" category="inline-link-macro-rx"></block> .</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">Sélectionnez *Ajouter*.</block>
   <block id="1a068d6a85d666ea306209409d3e8bca" category="section-title">Ajouter une politique de détection aux charges de travail avec des politiques de sauvegarde ou de snapshot existantes</block>
   <block id="8ffd4321390a5a9174c14e023f8f68f8" category="inline-xref">Protégez-vous grâce à la résilience contre les ransomwares</block>
@@ -966,7 +939,6 @@
   <block id="a70aafb0a2b8a5a46157e22ae8d2dd99" category="list-text">*Échec* : le processus de restauration de la charge de travail n’a pas pu être terminé.</block>
   <block id="f591728141675d7a289dcb31f31fde56" category="section-title">Afficher les charges de travail prêtes à être restaurées</block>
   <block id="9e307871a02cb271c0a3a1a008a2e4e1" category="paragraph">Passez en revue les charges de travail qui sont dans l’état de récupération « Restauration nécessaire ».</block>
-  <block id="dc95440047836ad34d9f75e79a215019" category="list-text">Depuis le tableau de bord, vérifiez les totaux « Restauration nécessaire » dans le volet Alertes et sélectionnez *Afficher tout*.</block>
   <block id="2400d3aab4f81941f09385a6e9a6dda5" category="list-text">Dans le menu, sélectionnez *Récupération*.</block>
   <block id="6ff7646970e054813b30a697e9d483e8" category="list-text">Consultez les informations sur la charge de travail dans la page *Récupération*.</block>
   <block id="4adfa9c3d33f897660ad408e7f5dc8e8" category="inline-image-macro">Page de récupération</block>
@@ -1053,53 +1025,17 @@
   <block id="cba5c013826db3e7efce5d0c19aee9c1" category="admonition">Vous pouvez télécharger les rapports d'exercice de préparation uniquement à partir de la page *Rapports*.</block>
   <block id="5b21bc493cdab40a819ce8921c81c72d" category="paragraph">Si vous téléchargez des fichiers CSV ou JSON à partir de la page Protection, Alertes ou Récupération, les données affichent uniquement les données de cette page.</block>
   <block id="12d495a2d34cbe83eecedb29ea139390" category="paragraph">Les fichiers CSV ou JSON incluent des données pour toutes les charges de travail sur tous les systèmes de console.</block>
-  <block id="9e0c2bff29b02cc0054b8ebf63b422d9" category="list-text">Depuis le tableau de bord ou une autre page, sélectionnez *Actualiser*<block ref="94d384894f036157c348eadc55c40952" category="inline-image-macro-rx" type="image"></block> option en haut à droite pour actualiser les données qui apparaîtront dans les rapports.</block>
   <block id="4263eebb7cfbc2a50797df9b351df75d" category="list-text">Dans le menu NetApp Ransomware Resilience , sélectionnez *Rapports*.</block>
   <block id="09121bb3cb936ab87dd837c1fd8da18a" category="list-text">Si vous avez sélectionné l'option *Rapports*, sélectionnez l'un des noms de fichiers préconfigurés et sélectionnez *Télécharger*.</block>
-  <block id="edb56701c02931a83b80f61481367ade" category="summary">Vous pouvez configurer plusieurs options, notamment une destination de sauvegarde et la détection des menaces dans la page des paramètres.</block>
-  <block id="9aa6ed30a3e0d803a1b8b079e0b8d650" category="doc">Configurer les paramètres de protection dans NetApp Ransomware Resilience</block>
-  <block id="105c4d7cf6704d10a27fac5acd7333a3" category="paragraph">*Que pouvez-vous faire dans la page Paramètres ?*  Depuis la page Paramètres, vous pouvez effectuer les opérations suivantes :</block>
-  <block id="2fdebc69dc6e7b0ee210d7c727cf37e2" category="list-text">Simulez une attaque de ransomware en effectuant un exercice de préparation et répondez à une alerte de ransomware simulée. Pour plus de détails, consultez la section <block ref="764586bbfc596fce1f2309fe8b2a42c0" category="inline-link-macro-rx"></block> .</block>
-  <block id="3fdd6341b0ef86488ae1a773932c96c7" category="list-text">Configurer la découverte de charge de travail.</block>
-  <block id="d9e0cef30d1fd79b64dd0675b6e2eb12" category="list-text">Ajouter une destination de sauvegarde.</block>
-  <block id="f6de47008760d29836d5758a5a06bf0f" category="section-title">Accéder directement à la page Paramètres</block>
-  <block id="47ee39f07973e19ecd9ed033f5faabb1" category="paragraph">Vous pouvez facilement accéder à la page Paramètres à partir de l’option Actions près du menu supérieur.</block>
-  <block id="2ed94c26a1d2bdd8aa204fd20eb40937" category="list-text">Dans la résilience aux ransomwares, sélectionnez la verticale<block ref="ddacd9651566dbd67045ad6fbaf81a6c" category="inline-image-macro-rx" type="image"></block> ... option en haut à droite.</block>
-  <block id="812cd95f23a06cb24d767a5152f3fda4" category="list-text">Dans le menu déroulant, sélectionnez *Paramètres*.</block>
-  <block id="fd062f03b35e0850abe8729a63d5dfd8" category="section-title">Simuler une attaque de ransomware</block>
-  <block id="b1912bbcd229334a7b7efe77fde83f5c" category="paragraph">Réalisez un exercice de préparation aux ransomwares en simulant une attaque de ransomware sur une charge de travail d’échantillon nouvellement créée.  Ensuite, examinez l’attaque simulée et récupérez l’exemple de charge de travail.  Cette fonctionnalité vous aide à savoir que vous êtes préparé en cas d'attaque réelle de ransomware en testant les processus de notification d'alerte, de réponse et de récupération.  Vous pouvez exécuter un exercice de préparation aux ransomwares plusieurs fois.</block>
-  <block id="32061d28c608414124c4b8a09cdbf743" category="paragraph">Pour plus de détails, reportez-vous à<block ref="764586bbfc596fce1f2309fe8b2a42c0" category="inline-link-macro-rx"></block> .</block>
-  <block id="95f4d49dba3929bc4382593edcb20316" category="section-title">Configurer la découverte de la charge de travail</block>
-  <block id="13610c31818b5f10c6767e80066e91f5" category="paragraph">Vous pouvez configurer la découverte de charges de travail pour découvrir automatiquement de nouvelles charges de travail dans votre environnement.</block>
-  <block id="1a05798ddb931c37e9a93c9c6032ebe0" category="list-text">Dans la page Paramètres, recherchez la vignette *Découverte de charge de travail*.</block>
-  <block id="f8c07a3da1bbb04852c9804c697a6a52" category="list-text">Dans la mosaïque *Découverte de charge de travail*, sélectionnez *Découvrir les charges de travail*.</block>
-  <block id="e55a24dd7c3da72496ef8d6a747fe9a6" category="paragraph">Cette page affiche les agents de console avec des systèmes qui n'ont pas été sélectionnés précédemment, les agents de console nouvellement disponibles et les systèmes nouvellement disponibles.  Cette page n'affiche pas les systèmes qui ont été précédemment sélectionnés.</block>
-  <block id="bb4c646a0c4aec09fa7d84568d8072c6" category="list-text">Sélectionnez l’agent de console dans lequel vous souhaitez découvrir les charges de travail.</block>
-  <block id="37d7d335a14886e3bc4f36d6f37c49cc" category="list-text">Consultez la liste des systèmes.</block>
-  <block id="4c624f22bdf5c52da245d3b038c2b92e" category="list-text">Cochez les systèmes sur lesquels vous souhaitez découvrir les charges de travail ou cochez la case en haut du tableau pour découvrir les charges de travail dans tous les environnements de charge de travail découverts.</block>
-  <block id="9f9e31c32e5b1d13d9371a818f0a6ee0" category="list-text">Faites ceci pour d’autres systèmes si nécessaire.</block>
-  <block id="04abb68cc3e6cbd75c6183768d3cdb47" category="list-text">Sélectionnez *Découvrir* pour que Ransomware Resilience découvre automatiquement les nouvelles charges de travail dans l'agent de console sélectionné.</block>
   <block id="55483e3219b15f38112442f737a1bf92" category="section-title">Ajouter une destination de sauvegarde</block>
-  <block id="ca0d9b702b5686b0dbe483b8b038b9d5" category="paragraph">Ransomware Resilience peut identifier les charges de travail qui n'ont pas encore de sauvegardes ainsi que les charges de travail qui n'ont pas encore de destinations de sauvegarde attribuées.</block>
-  <block id="dc0a4770af38e660c7408d8ac2fac395" category="paragraph">Pour protéger ces charges de travail, vous devez ajouter une destination de sauvegarde.  Vous pouvez choisir l’une des destinations de sauvegarde suivantes :</block>
   <block id="943ca3782b28d89aff2f86a50b332b3c" category="list-text">Amazon Web Services (AWS)</block>
-  <block id="4ec94f814f491d45c196584c149a7d3e" category="paragraph">Vous pouvez ajouter une destination de sauvegarde en fonction d'une action recommandée à partir du tableau de bord ou en accédant à l'option Paramètres du menu.</block>
-  <block id="423773f9edb45d8141b1c7b6278c8092" category="section-title">Accéder aux options de destination de sauvegarde à partir des actions recommandées du tableau de bord</block>
-  <block id="fd0da3fefc8a8a7ae1d9742f929d60d2" category="paragraph">Le tableau de bord fournit de nombreuses recommandations.  Une recommandation pourrait être de configurer une destination de sauvegarde.</block>
-  <block id="9ecd11a52d34d612ecb23212f7129a81" category="list-text">Dans le tableau de bord Résilience aux ransomwares, examinez le volet Actions recommandées.</block>
-  <block id="81f9a9a695bd7ffbb88f9bd9cfd7d836" category="list-text">Depuis le tableau de bord, sélectionnez *Vérifier et corriger* pour la recommandation « Préparer &lt;fournisseur de sauvegarde&gt; comme destination de sauvegarde ».</block>
-  <block id="a82bda8819a63e3826ad458e0e8ab25b" category="list-text">Continuez avec les instructions en fonction du fournisseur de sauvegarde.</block>
   <block id="59912b4001ef661f28474ee0ce7ed1bf" category="section-title">Ajouter StorageGRID comme destination de sauvegarde</block>
   <block id="13fd4bbaaec71104de766a6fcaf75022" category="paragraph">Pour configurer NetApp StorageGRID comme destination de sauvegarde, saisissez les informations suivantes.</block>
-  <block id="147572838a23279927cd8e56b4653d88" category="list-text">Dans la page *Paramètres &gt; Destinations de sauvegarde*, sélectionnez *Ajouter*.</block>
   <block id="d1f688dbb6e20cd4b1f4b990fb68b154" category="list-text">Entrez un nom pour la destination de sauvegarde.</block>
   <block id="4fbba6e7c98e951220c91765128a2a1c" category="inline-image-macro">Page des destinations de sauvegarde</block>
   <block id="fe3f4461c233a8ac4062f3d5f2af86f7" category="paragraph"><block ref="fe3f4461c233a8ac4062f3d5f2af86f7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6c5cc1315b69c8256bbc33cf47a5a7ab" category="list-text">Sélectionnez * StorageGRID*.</block>
-  <block id="13b10c380acfb5b85c2c941d866e207d" category="list-text">Sélectionnez la flèche vers le bas à côté de chaque paramètre et saisissez ou sélectionnez des valeurs :</block>
   <block id="00b5412216c79ed8596030e02dc5e329" category="list-text">*Paramètres du fournisseur*:</block>
-  <block id="e538cd24113df55108b2b5486c3185cd" category="list-text">Créez un nouveau bucket ou apportez votre propre bucket qui stockera les sauvegardes.</block>
-  <block id="06f6d134784865bdbe387d20352bdc62" category="list-text">Nom de domaine complet du nœud de passerelle StorageGRID , port, clé d'accès StorageGRID et informations d'identification de la clé secrète.</block>
   <block id="5ff1fe0a088aed28b3f32142c788c3d5" category="list-text">*Réseau* : Choisissez l'espace IP.</block>
   <block id="47735c63b5c2c1bff1e1ab3134b1f722" category="list-text">L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder.  Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.</block>
   <block id="7893892c74ebd9bdff7410dbaa392aff" category="paragraph">La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.</block>
@@ -1120,31 +1056,22 @@
   <block id="ddb94f9350c1e81d9a2b81fff801820d" category="inline-link">AWS PrivateLink pour Amazon S3</block>
   <block id="6120da589313542c0a285c21416419e3" category="paragraph">Si vous souhaitez utiliser AWS PrivateLink, reportez-vous à<block ref="af9e60d5cdd147599f2efa13f8af008d" category="inline-link-rx"></block> .</block>
   <block id="14c57fcf8400c54bb7af17b1654ab07b" category="list-text">*Verrouillage de sauvegarde* : choisissez si vous souhaitez que Ransomware Resilience protège les sauvegardes contre toute modification ou suppression.  Cette option utilise la technologie NetApp DataLock.  Chaque sauvegarde sera verrouillée pendant la période de conservation, ou pendant un minimum de 30 jours, plus une période tampon pouvant aller jusqu'à 14 jours.</block>
-  <block id="a3e951895f5f060f1d88d3b40bfc2bc3" category="admonition">Si vous configurez le paramètre de verrouillage de sauvegarde maintenant, vous ne pourrez pas modifier le paramètre ultérieurement une fois la destination de sauvegarde configurée.</block>
   <block id="4237424c1b617924548283a398dcc6e0" category="list-text">*Mode de gouvernance* : des utilisateurs spécifiques (avec l'autorisation s3:BypassGovernanceRetention) peuvent écraser ou supprimer des fichiers protégés pendant la période de conservation.</block>
   <block id="d02c90160a20884d5b0943ef58a69be6" category="list-text">*Mode de conformité* : les utilisateurs ne peuvent pas écraser ou supprimer les fichiers de sauvegarde protégés pendant la période de conservation.</block>
   <block id="dc124b8a418fd7c870b3a36e771113d7" category="section-title">Ajouter Google Cloud Platform comme destination de sauvegarde</block>
   <block id="1fc66948429912c7b9127474aca26244" category="paragraph">Pour configurer Google Cloud Platform (GCP) comme destination de sauvegarde, saisissez les informations suivantes.</block>
   <block id="89facd2099770d471c8de70fdb5d0651" category="inline-link">Options d'installation de l'agent de console dans Google Cloud</block>
-  <block id="31ad81ad3dcccf234342095687bb3013" category="paragraph">Pour plus de détails sur la gestion de votre stockage GCP dans la console, reportez-vous à<block ref="5220899fd50cac31f9736d7329deb809" category="inline-link-rx"></block> .</block>
   <block id="67b81d6ff44f9fec33d0f8b0b6dd630d" category="paragraph"><block ref="67b81d6ff44f9fec33d0f8b0b6dd630d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9581f4ad188e6563d0593b866d14de7d" category="list-text">Sélectionnez *Google Cloud Platform*.</block>
-  <block id="bd1c2ba9cb21ab92548a9a2f4c58a9ca" category="list-text">Créer un nouveau bucket.  Entrez la clé d'accès et la clé secrète.</block>
-  <block id="996832355e0fb0882b2bc9dd46aa50ec" category="list-text">Saisissez ou sélectionnez votre projet et votre région Google Cloud Platform.</block>
   <block id="eacee6b79c3e170eb02cccb9bd67db59" category="list-text">*Cryptage* : Si vous créez un nouveau bucket, saisissez les informations de clé de cryptage fournies par le fournisseur.  Si vous avez choisi un bucket existant, les informations de chiffrement sont déjà disponibles.</block>
-  <block id="f01a112fe29fe81372d14171703671ce" category="paragraph">Les données du bucket sont chiffrées par défaut avec des clés gérées par Google.  Vous pouvez continuer à utiliser les clés gérées par Google.</block>
-  <block id="f378325fc971c8e4253dd4f1662dec3b" category="list-text">Vous pouvez également choisir si vous utiliserez un point de terminaison privé GCP (PrivateLink) que vous avez précédemment configuré.</block>
   <block id="d12d2643aef9b1e9c87feb8221ada2b4" category="section-title">Ajouter Microsoft Azure comme destination de sauvegarde</block>
   <block id="6aca8bb3d0f4710440538d2eeece0805" category="paragraph">Pour configurer Azure comme destination de sauvegarde, saisissez les informations suivantes.</block>
   <block id="e15fd4da82957060ab94e2cd7aeac3cc" category="inline-link">Gérez vos informations d'identification Azure et vos abonnements à la place de marché</block>
   <block id="c948d04b2fd5b89337ff1906928f4200" category="paragraph">Pour plus de détails sur la gestion de vos informations d'identification Azure et de vos abonnements à la place de marché dans la console, reportez-vous à<block ref="2d3716385813a465257e9795100c084d" category="inline-link-rx"></block> .</block>
   <block id="2164db8f01d0c0a0dc250abc3b9556f5" category="list-text">Sélectionnez *Azure*.</block>
   <block id="36e7cbe990b9e2387fc7c9ae5968cc95" category="list-text">Créez un nouveau compte de stockage, sélectionnez-en un existant s'il en existe déjà un dans la console ou apportez votre propre compte de stockage qui stockera les sauvegardes.</block>
-  <block id="105c6a0e171f35a3fcfd2d5e644de4e3" category="list-text">Abonnement Azure, région et groupe de ressources pour les informations d'identification Azure</block>
   <block id="594f3c4c0e3723497fdf8afb28b199a6" category="inline-link">Si vous souhaitez utiliser votre propre compte de stockage, reportez-vous à la section Ajouter des comptes de stockage Azure Blob.</block>
   <block id="e404fcdcd861fa6d86c24c298166ce4f" category="paragraph"><block ref="eb703d1a6f36b03e4ae0b2718274bd1f" category="inline-link-rx"></block> .</block>
-  <block id="73133a52f65d7c4fca9b1303968611d3" category="list-text">*Cryptage* : Si vous créez un nouveau compte de stockage, saisissez les informations de clé de cryptage fournies par le fournisseur.  Si vous avez choisi un compte existant, les informations de cryptage sont déjà disponibles.</block>
-  <block id="aa78926ffa846539dcb2cc00c9c16981" category="paragraph">Les données du compte sont chiffrées par défaut avec des clés gérées par Microsoft.  Vous pouvez continuer à utiliser les clés gérées par Microsoft ou gérer le chiffrement de vos données à l’aide de vos propres clés.</block>
   <block id="6c2708162873644f82108cfcad8ae099" category="list-text">Vous pouvez également choisir si vous utiliserez un point de terminaison privé Azure que vous avez précédemment configuré.</block>
   <block id="8044b0463892d9d29dbab8cfd03e8863" category="inline-link">Azure PrivateLink</block>
   <block id="13ed98575f9b615f49abab3355f19c34" category="paragraph">Si vous souhaitez utiliser Azure PrivateLink, reportez-vous à<block ref="dc49bf79d1a3da34447e7543d00fee44" category="inline-link-rx"></block> .</block>
@@ -1439,7 +1366,6 @@
   <block id="24fe52a2365d38c875f0bcf11a7463c6" category="section-title">Microsoft Azure ajouté comme destination de sauvegarde</block>
   <block id="cd9970a99d092fa49bfe0f1cf5ee4b7c" category="paragraph">Vous pouvez désormais ajouter Microsoft Azure comme destination de sauvegarde avec AWS et NetApp StorageGRID.</block>
   <block id="8e84b1daf78912b246a0f51f49a81be6" category="inline-link">En savoir plus sur la configuration des paramètres de protection</block>
-  <block id="3aa48700f676555617a370b571aa145e" category="paragraph"><block ref="b28e1e8da94cfec3c6c3735d25c2147b" category="inline-link-rx"></block> .</block>
   <block id="5e76a23879d0e6f7325f31678e623972" category="section-title">14 mai 2024</block>
   <block id="c03b667390566320b1f84fd433ac2cb0" category="section-title">Mises à jour des licences</block>
   <block id="fd480049706571e64359cf4351f9fcbc" category="paragraph">Vous pouvez vous inscrire pour un essai gratuit de 90 jours.  Bientôt, vous pourrez acheter un abonnement à la carte auprès d'Amazon Web Services Marketplace ou apporter votre propre licence NetApp .</block>
@@ -1459,7 +1385,6 @@
   <block id="a25458513b834667ae92c65418ac8918" category="section-title">Détection des menaces</block>
   <block id="6f39a651bab312935acf07a9f7b3905c" category="paragraph">L'activation de la détection des menaces est désormais disponible à l'aide d'un système tiers de gestion de la sécurité et des événements (SIEM).  Le tableau de bord affiche désormais une nouvelle recommandation « Activer la détection des menaces » qui peut être configurée sur la page Paramètres.</block>
   <block id="10bc4591a9635a8100fbcf18a580cc29" category="inline-link">En savoir plus sur la configuration des options de paramètres</block>
-  <block id="900a7e5872fb6c898655178f2fa35ed5" category="paragraph"><block ref="e92eb392bc60f64cbc3210e33ab1f4df" category="inline-link-rx"></block> .</block>
   <block id="f5e987cac9511e003e20769dfebfed7c" category="section-title">Ignorer les alertes de faux positifs</block>
   <block id="6131af6894f63b64bad9d4dabbbfd577" category="paragraph">Depuis l’onglet Alertes, vous pouvez désormais ignorer les faux positifs ou décider de récupérer vos données immédiatement.</block>
   <block id="b439d3ca10048f7d11cd05477ca961a7" category="inline-link">En savoir plus sur la réponse à une alerte de ransomware</block>
@@ -1475,7 +1400,6 @@
   <block id="6758a0bf77df1c4e4729d20133a2e170" category="section-title">Lien vers la documentation</block>
   <block id="ca0357e519e49764e6ebe9d52a39e2cd" category="paragraph">Le lien vers la documentation est désormais inclus dans l'interface utilisateur.  Vous pouvez accéder à cette documentation à partir du tableau de bord vertical *Actions*<block ref="03b376f37073f981f38dc4d6f450c046" category="inline-image-macro-rx" type="image"></block> option.  Sélectionnez *Quoi de neuf* pour afficher les détails dans les notes de publication ou *Documentation* pour afficher la page d'accueil de la documentation sur la BlueXP ransomware protection .</block>
   <block id="ede1cce9f240fed5ecc4264bd699cee1" category="section-title">BlueXP backup and recovery</block>
-  <block id="a6aa6353fca6a81fa6051f27dfeae733" category="paragraph">Le service de BlueXP backup and recovery n’a plus besoin d’être déjà activé sur le système. Voir <block ref="7cc100a4e35b42109d34b0d1c6d432c9" category="inline-link-macro-rx"></block> .  Le service de BlueXP ransomware protection permet de configurer une destination de sauvegarde via l'option Paramètres. Voir <block ref="522f9942d2238ef69c22ece6b9af5205" category="inline-link-macro-rx"></block> .</block>
   <block id="609943abdcf36e6b01b6e1bd91561708" category="section-title">Option Paramètres</block>
   <block id="dca5a35d56928cb7458a60a545581862" category="paragraph">Vous pouvez désormais configurer des destinations de sauvegarde dans les paramètres de BlueXP ransomware protection .</block>
   <block id="592997dde366d5775e7e052816854f74" category="section-title">5 mars 2024</block>
@@ -1487,7 +1411,6 @@
   <block id="2a6274cd80906a41f767d82d87b9879b" category="paragraph">Vous pouvez désormais rendre la sauvegarde immuable dans le stockage secondaire à l’aide de la technologie NetApp DataLock dans le magasin d’objets.<block ref="30d822bb5bc7d8307e119ffe13f01233" category="inline-link-rx"></block> .</block>
   <block id="643b17dc026d0c0147a8a815056a5f49" category="section-title">Sauvegarde automatique sur NetApp StorageGRID</block>
   <block id="732b7b17a4dd9ae4a4359cee4b9b391d" category="inline-link">En savoir plus sur la configuration des destinations de sauvegarde</block>
-  <block id="ad6b8f5314fbdf658a421086c8463a3b" category="paragraph">En plus d’utiliser AWS, vous pouvez désormais choisir StorageGRID comme destination de sauvegarde.<block ref="5c098460bee807344a1e691430f00deb" category="inline-link-rx"></block> .</block>
   <block id="62214a27f426a0d88db3ab38949106b2" category="section-title">Fonctionnalités supplémentaires pour enquêter sur les attaques potentielles</block>
   <block id="9e599e81fbf58f35a4e8ea8d4d14b0f6" category="inline-link">En savoir plus sur la réponse à une alerte de ransomware détectée</block>
   <block id="e4e11b8b26d220d6a7d910ac9d9b8b76" category="paragraph">Vous pouvez désormais afficher davantage de détails médico-légaux pour enquêter sur l’attaque potentielle détectée.<block ref="a80436187b82ac9f8b34d74ed89f86ca" category="inline-link-rx"></block> .</block>
@@ -1509,10 +1432,7 @@
   <block id="7b72a3240bb708a49cf4a635f75c8ca9" category="sidebar">Quoi de neuf dans Ransomware Resilience</block>
   <block id="ee68e5b99222bbc29a480fcb0d1d6ee2" category="sidebar">Prérequis</block>
   <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">Démarrage rapide</block>
-  <block id="03a0606ea5e305ef55dd39ee839003fd" category="sidebar">Configurer les destinations de sauvegarde et activer la détection des menaces</block>
   <block id="8bbd68b188344ab54d9a5aa4369f8add" category="sidebar">Utiliser la résilience aux ransomwares</block>
-  <block id="20efa84cce28541d6712947d04bd7aff" category="sidebar">Afficher l'état de la charge de travail à l'aide du tableau de bord</block>
-  <block id="166351bd2ed187c21a26c5609ef2768c" category="sidebar">Recherchez des informations personnelles identifiables avec la NetApp Data Classification</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs et communauté</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp Data Services</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Communauté NetApp</block>
@@ -1521,8 +1441,6 @@
   <block id="482723983a4f2af954e36ff41e567451" category="sidebar">Limitations connues</block>
   <block id="2b7922739b8db9e207b474124ef36abf" category="sidebar">Configurer la résilience aux ransomwares</block>
   <block id="3e89831fbd0267df9052ee5e70bc06ab" category="sidebar">Accéder à la résilience des ransomwares</block>
-  <block id="36eabf0873c4e7de41ebd02438b3b19f" category="sidebar">Simulez une attaque de ransomware avec un exercice de préparation</block>
-  <block id="a216cb7967dcfa49b3b976657369cd25" category="sidebar">Configurer les sauvegardes, la détection des menaces et les simulations d'attaque dans les paramètres</block>
   <block id="d67482bbf82ef9c339e44809ea9873b1" category="sidebar">Protégez les charges de travail avec des stratégies de protection contre les ransomwares</block>
   <block id="4b55af6e5a9948a11e84a0809a34edfb" category="sidebar">Rechercher des données personnelles identifiables</block>
   <block id="f8a7dc43864435cb9b522a28b586e556" category="sidebar">Se remettre d'une attaque de ransomware</block>
@@ -1632,7 +1550,6 @@
   <block id="eb736865032ae478d0b6e5b412448020" category="paragraph">UN <block ref="5f4e714854e79a1737929ec78e18ea2b" category="inline-link-macro-rx"></block> nécessite :</block>
   <block id="03e55fcba3b01c6e3fb1919d269654c0" category="list-text">une politique de détection des ransomwares, et</block>
   <block id="3f6fda029d0c02be255dfd8176381b0b" category="list-text">une politique d'instantané</block>
-  <block id="7b1ffd6b9cf684b80d475d03b8d6e7ee" category="paragraph">Oui, Ransomware Resilience découvre les planifications de snapshots définies dans ONTAP. Il permet également de déterminer si ARP et FPolicy sont activés sur tous les volumes d'une charge de travail détectée. Les informations affichées dans le tableau de bord de résilience aux ransomwares proviennent d'autres solutions et produits NetApp .</block>
   <block id="b47f32a472405e3fa06c5fd8b5ce74b9" category="paragraph-title">La solution Ransomware Resilience prend-elle en compte les politiques déjà définies dans Backup and Recovery et SnapCenter?</block>
   <block id="f9368916b722dbf65864396e08a2f81a" category="paragraph-title">Est-il possible de modifier les politiques transférées depuis NetApp Backup and Recovery et/ou SnapCenter?</block>
   <block id="1b574bfc0313243d6641e2a840917179" category="paragraph-title">Si des politiques existent depuis ONTAP (telles que ARP, FPolicy et les instantanés), sont-elles modifiées dans Ransomware Resilience ?</block>
@@ -1797,14 +1714,12 @@
   <block id="55971de7d1268c37251f60641b742b76" category="paragraph">Dans le tableau de bord Discovery, Ransomware Resilience affiche les configurations système prises en charge et celles qui ne le sont pas. Ransomware Resilience évalue les applications Oracle, les datastores VMware, les partages de fichiers et le stockage par blocs.</block>
   <block id="1e55889dc96c3aa2614c39626c9cecdd" category="admonition">Ransomware Resilience ne détecte pas les charges de travail avec des volumes utilisant FlexGroup.</block>
   <block id="c0605366a345249c74664f31f92636c4" category="paragraph">Ransomware Resilience vérifie votre protection de sauvegarde actuelle, vos copies instantanées et vos options de protection autonome contre les ransomwares NetApp . Ransomware Resilience détecte également les informations de protection de SnapCenter for VMware pour les banques de données de machines virtuelles, de SnapCenter for Oracle et de NetApp Backup and Recovery pour les partages de fichiers et les partages de fichiers de machines virtuelles. Il recommande ensuite des moyens d’améliorer votre protection contre les ransomwares.</block>
-  <block id="0c4db502345984347741cd5a9a3da447" category="list-text">Depuis le tableau de bord, sélectionnez l'icône *Actualiser* pour trouver les nouvelles charges de travail.</block>
   <block id="242b6b00ff2f35d933e337704d202041" category="list-text">Dans la carte Découverte de charge de travail, sélectionnez *Découvrir les charges de travail*. La découverte peut prendre quelques minutes.  Une icône de chargement indique la progression.</block>
   <block id="728cc93ad9329b5fca77365b0336ce77" category="list-text">Ransomware Resilience détecte les systèmes pris en charge et non pris en charge. Il ne prend pas en charge un système si sa version ONTAP est inférieure à la version requise. Lorsque vous survolez un système non pris en charge, une info-bulle affiche la raison. Sélectionnez les systèmes sur lesquels vous souhaitez découvrir les charges de travail.</block>
   <block id="ee23d61365a6507dff70606d3790e1de" category="list-text">Répondre aux potentielles attaques de ransomware en lançant automatiquement une capture instantanée verrouillée afin que la copie ne puisse pas être supprimée accidentellement ou malicieusement. Vos données de sauvegarde resteront immuables et protégées de bout en bout contre les attaques de ransomware, aussi bien à la source qu'à destination.</block>
   <block id="7e56b5e89b8f29e1bd4a5ecf15c201e8" category="paragraph">Vous pouvez essayer Ransomware Resilience avec un essai gratuit de 30 jours. NetApp ne vous facture pas l'utilisation de la version d'essai de Ransomware Resilience.</block>
   <block id="773dd0f5eb55036249a06d189bd46093" category="section-title">Exigences relatives aux comportements suspects des utilisateurs</block>
   <block id="567dcfd6302e5511c1b546a4df21a679" category="inline-link-macro">les exigences</block>
-  <block id="bb0857f5685be3107534e9cb3600a43f" category="paragraph">Utilisez le tableau de bord pour consulter les suggestions de protection, modifier les paramètres et télécharger les rapports.</block>
   <block id="acf2855d96f83cab1f4ac80844c18ed5" category="admonition">Sélectionnez l'info-bulle « i » pour voir des conseils sur ces données. Pour augmenter la limite de charge de travail, sélectionnez *Augmenter la limite de charge de travail* dans cette note. En sélectionnant cette option, vous accédez à la page d'assistance de la console où vous pouvez créer un ticket de cas.</block>
   <block id="c0bf6edc60bad775ee4a7ad24f670742" category="admonition">Vous pouvez ultérieurement transformer un élément rejeté en élément à faire. Lorsque vous marquez un élément comme terminé ou que vous transformez un élément abandonné en action À faire, le nombre total d'actions augmente de 1.</block>
   <block id="e820fe024db1b211ec2a532b3515e062" category="paragraph">Le téléchargement d'un fichier CSV à partir d'une page inclut uniquement les données de cette page.</block>
@@ -1856,8 +1771,6 @@
   <block id="89f2d4e28daee04bf630a66530a30349" category="paragraph">Ransomware Resilience ne découvre les données de charge de travail que lorsque vous sélectionnez le système. Le processus de découverte peut prendre plusieurs minutes.</block>
   <block id="67cfc97e3b12b9504bf641388c095506" category="paragraph">Si vous avez ajouté des charges de travail à un système précédemment découvert, vous devez relancer la découverte afin de protéger les nouvelles charges de travail.</block>
   <block id="a766aa8ad09c7fe20050753d75beca3f" category="list-text">Pour identifier la date et l'heure de la dernière détection, consultez la date et l'heure indiquées à côté de l'icône *Actualiser* en haut à droite du tableau de bord de résilience aux ransomwares.</block>
-  <block id="b449485bf7d14cf53070de7818e6bb15" category="inline-image-macro">Actions verticales&lt;block ref="2f43b42fd833d1e77420a8dae7419000" prefix="</block>
-  <block id="5b000e587ccbc59d84db84375ebb8da8" category="list-text">Dans le menu Résilience aux ransomwares, sélectionnez l'option verticale <block ref="fc01824fafc69aa9b95ac35277bbc402" category="inline-image-macro-rx" type="image"></block>" option category='inline-code'/&gt; en haut à droite. Dans le menu déroulant, sélectionnez *Paramètres*.</block>
   <block id="a73cb044815fd2c4fc6f7f4be69aea1b" category="paragraph">La fonctionnalité de résilience aux ransomwares vous permet d'exclure certaines charges de travail d'un système de la protection et de la détection contre les ransomwares.</block>
   <block id="195a678c9c8d484143eb63eed10f0646" category="paragraph">Vous ne pouvez exclure que les charges de travail prises en charge et qui ont été détectées avec succès. Vous pouvez modifier à tout moment la liste des charges de travail exclues. Vous n'êtes pas facturé pour les charges de travail exclues de la résilience aux ransomwares.</block>
   <block id="8177747908126fef8483f6d1d6004f44" category="list-title">Ajouter des charges de travail à la liste des charges de travail exclues</block>
@@ -1912,7 +1825,6 @@
   <block id="d6fa1bf46ad545c166256cf297b47ba9" category="list-text">Pour répliquer tous les instantanés vers la même destination, cochez **Utiliser la même destination pour chaque charge de travail**. Choisissez un *système de destination* et une *VM de stockage de destination* pour les charges de travail dans la section Agent de la console. + Pour utiliser des destinations différentes, décochez cette case. Examinez chaque charge de travail sous chaque agent de console et attribuez un *système de destination* et une *VM de stockage de destination* à chaque charge de travail. Sélectionnez **Suivant**.</block>
   <block id="87971b78e8c43e7c3e77036d3ec8d929" category="admonition">Avant de télécharger les fichiers, actualisez le tableau de bord pour que vos rapports intègrent les données les plus récentes.</block>
   <block id="5d26628350f5209b3a0d69e817a49a0f" category="list-text">**Résumé** : Comprend des listes de charges de travail prises en charge et non prises en charge, des actions recommandées pour améliorer votre posture de cyber-résilience et des informations capturées dans le tableau de bord de résilience aux ransomwares.</block>
-  <block id="886b1df808dc5d3879143640b1ad98a7" category="admonition">Dans la carte Découverte de la charge de travail des Paramètres, sélectionnez le menu Actions<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block> puis **Télécharger le rapport (JSON)** pour consulter la liste des charges de travail prises en charge et non prises en charge dans vos systèmes.</block>
   <block id="194a29c3464a05de3c32434145c0b5d6" category="section-title">19 janvier 2026</block>
   <block id="5971dc29642c8dabe6ddf4db4c2f9634" category="paragraph">*Rôle Console requis* Pour activer la détection des activités utilisateur suspectes, vous devez disposer du **rôle Organization admin**. Pour les configurations ultérieures relatives aux activités utilisateur suspectes, vous devez disposer du **rôle Ransomware Resilience user behavior admin**. <block ref="d9cbbacd5ef5cff6a1660fdb9d259f2f" category="inline-link-macro-rx"></block>.</block>
   <block id="49c6535c126789c87c5cd609fbdb3a3f" category="paragraph">Assurez-vous que chaque rôle est appliqué au niveau de l'organisation.</block>
@@ -1995,10 +1907,8 @@
   <block id="450a540c6661e25e017db4862aec2e38" category="list-text">Dans la boîte de dialogue contextuelle, sélectionnez **Supprimer** pour confirmer.</block>
   <block id="236c87046e76c7fbe637db256ad65c54" category="inline-link-macro">Détecter les activités malveillantes et les comportements suspects des utilisateurs</block>
   <block id="a22ce6d164acfe568fad471cc211d23a" category="paragraph">Une fois la détection des activités suspectes des utilisateurs configurée, vous pouvez suivre les événements sur la page des alertes. Pour plus d'informations, voir <block ref="8143bbb79caf2751151f26d9d0abf580" category="inline-link-macro-rx"></block>.</block>
-  <block id="907e291a40a36d257c91cac9e320dd0c" category="sidebar">Configurer la détection des activités suspectes des utilisateurs</block>
   <block id="36a605a41424e007ca5ba825a9623c96" category="sidebar">Configurer la détection de l'activité de l'utilisateur</block>
   <block id="f31838bfd1a4d7d1cc348bb0e79249aa" category="sidebar">Découvrez la détection de l'activité des utilisateurs</block>
-  <block id="f77c342afbfaabafce4f6d6b3c0fc25a" category="sidebar">Exigences relatives à l'activité de l'utilisateur</block>
   <block id="851ba516be036ed05e26d4e1aa17e994" category="sidebar">Configurer les agents et les collecteurs</block>
   <block id="f00a921e7dbbed8405cd9ce5fce914d3" category="list-text">*Clé SSH de la VM* - Saisissez la clé SSH au format suivant :</block>
   <block id="6180003c782f1663eb2df1464acac0bd" category="cell">CIFS, NFS et SAN</block>
@@ -2027,10 +1937,6 @@
   <block id="771abd282157ca2dcc3c9f4d73d158c2" category="admonition">Si vous configurez des stratégies de protection pour Amazon FSxN pour ONTAP et Azure NetApp Files, consultez <block ref="f35eaad9edb95ec2be22c4403bf0d360" category="inline-link-macro-rx"></block>.</block>
   <block id="3adbdb581af927d3972b2f1c8cfb96a6" category="admonition">Les destinations de sauvegarde ne sont pas disponibles pour les charges de travail dans Amazon FSx for NetApp ONTAP ou Azure NetApp Files. Effectuez les opérations de sauvegarde à l'aide du service de sauvegarde FSx for ONTAP. Vous définissez les stratégies de sauvegarde pour les charges de travail dans FSx for ONTAP dans AWS, et non dans Ransomware Resilience. Les stratégies de sauvegarde apparaissent dans Ransomware Resilience et restent inchangées par rapport à AWS.</block>
   <block id="3bc2d94b3185bcb1259a8b3cf7da880b" category="list-text">Sélectionnez les paramètres de détection que vous souhaitez :</block>
-  <block id="e468b341048b440bba27f4904f7a59c4" category="paragraph">Dans l'onglet Paramètres de NetApp Ransomware Resilience, vous pouvez configurer les destinations de sauvegarde, effectuer un exercice de préparation aux attaques, configurer la découverte des charges de travail ou configurer la détection des activités suspectes des utilisateurs.</block>
-  <block id="04ba211304888e157a1517c86860bd73" category="list-text">Configurez le signalement des activités suspectes des utilisateurs. Pour plus d'informations, consultez <block ref="da26800578b610b8b3390e49bb643377" category="inline-link-macro-rx"></block>.</block>
-  <block id="5d8eeee45929294781013d6d152aae8a" category="inline-link-macro">Connectez la résilience aux ransomwares NetApp à un SIEM</block>
-  <block id="143fb46cdff0222e6e176aa99a0f923e" category="list-text">Connectez votre système de gestion des événements et de la sécurité (SIEM) pour l'analyse et la détection des menaces. L'activation de la détection des menaces envoie automatiquement des données à votre SIEM pour l'analyse des menaces. Pour plus d'informations, voir <block ref="c7d7e4de61d3da74895aed14b126475d" category="inline-link-macro-rx"></block>.</block>
   <block id="eb7705f4441056c554dc7aea52de0b17" category="paragraph">S'il existe certains utilisateurs de confiance dont le comportement pourrait déclencher des alertes de comportement utilisateur, vous pouvez les exclure des alertes.</block>
   <block id="0189c7f085ff5d22843080df2225281b" category="list-text">Dans le tableau de bord Paramètres, repérez la carte User activity puis sélectionnez **Manage**.</block>
   <block id="82694a5fa079406313056daf01f9118b" category="list-text">Sélectionnez l’onglet **Excluded users**.</block>
@@ -2151,7 +2057,6 @@
   <block id="1054e7cee5045661c2dae3afe8f146e4" category="list-text">Sélectionnez *Authenticate*.</block>
   <block id="3538785960373ea81ad23e72866e9266" category="sidebar">Vérifier la protection</block>
   <block id="9b792a24170d5651c572c72e1a0fcfc2" category="admonition">La détection de l'activité des utilisateurs n'est actuellement pas prise en charge pour les charges de travail SAN. Vous pouvez utiliser la détection de l'activité des utilisateurs avec les charges de travail NAS dans Amazon FSxN for ONTAP, Cloud Volumes ONTAP et ONTAP.</block>
-  <block id="6aef124ac144e3ae69ac50e0f114e548" category="paragraph">Lorsque NetApp Ransomware Resilience détecte une attaque potentielle, il affiche une alerte sur le tableau de bord et dans la zone de notifications. Ransomware Resilience prend immédiatement un snapshot. Lorsque vous recevez une alerte, examinez le risque potentiel dans l’onglet *Alerts* de Ransomware Resilience pour évaluer l’impact sur vos données et prévenir une éventuelle attaque de ransomware.</block>
   <block id="51f69bf6a11f3daca8752b8344ebc420" category="section-title">Comment les alertes sont générées</block>
   <block id="9e7bcb464844b7db89d979e9085bac76" category="paragraph">Ransomware Resilience s'appuie sur des données relatives aux modèles d'entropie des données, aux types d'extension de fichiers et au chiffrement pour produire des alertes. Les alertes sont basées sur les événements suivants :</block>
   <block id="fb7cc6e16ef254f2ff2f03b0ba6cadee" category="list-text">Violation de données</block>
@@ -2192,5 +2097,72 @@
   <block id="89895786495ed60e80d759587b508469" category="paragraph">Les charges de travail protégées sont déduites de la capacité achetée ou de l'abonnement après la période d'essai gratuite. Ransomware Resilience est facturé au Go pour les données associées aux charges de travail protégées, avant application des gains d'efficacité.</block>
   <block id="9bd1fe262c57584526c5184d4de31827" category="list-text">Si vos clusters ONTAP sur site ou vos systèmes Cloud Volumes ONTAP ne sont pas configurés dans la Console, consultez <block ref="1c09904f3fbf9f22b68e96599d2dcddc" category="inline-link-macro-rx"></block> et <block ref="b04507b2bbabc17c071b912167d3ff4f" category="inline-link-macro-rx"></block>.</block>
   <block id="3eb45f3714606347a6ff182b822b69cc" category="list-text">Pour les clusters ONTAP ou Cloud Volumes ONTAP, NetApp Ransomware Resilience nécessite que la version ONTAP soit 9.11.1 ou supérieure.</block>
-  <block id="3bb07e9c940e6f6fa3da1abd9524ca12" category="admonition">Les destinations de sauvegarde ne sont pas disponibles pour les charges de travail dans Amazon FSx for NetApp ONTAP ni dans Azure NetApp Files. Effectuez des opérations de sauvegarde à l'aide des solutions de sauvegarde natives : FSx for ONTAP backup service ou Azure NetApp Files backups.</block>
+  <block id="4b2c42068bb1431d3a8d94e9ca135659" category="paragraph"><block ref="187dbd743d444b65478d146e1c2c85f6" category="inline-link-rx"></block>.</block>
+  <block id="956475ab89164a2884d7750c9285db21" category="doc">Découvrez et gérez les charges de travail dans NetApp Ransomware Resilience</block>
+  <block id="e300a441bfe88a3cd9729e46cfd3c605" category="paragraph">Le tableau de bord affiche l'état de la protection des données. Le nombre de charges de travail à risque ou protégées est mis à jour à mesure que de nouvelles charges de travail sont détectées.</block>
+  <block id="3d7e9fe4b06f7b72aa18a4870bc065e4" category="inline-image-macro">Tableau de bord NetApp Ransomware Resilience</block>
+  <block id="401331622ba7c8cd9b2b100526565200" category="paragraph"><block ref="401331622ba7c8cd9b2b100526565200" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="01dfed405f4d8cc130b8369c1886ec0f" category="inline-link-macro">Découvrez ce que le tableau de bord vous montre.</block>
+  <block id="7ca04b3ca0d38a36dbb53ddae48a80fa" category="paragraph"><block ref="7ca04b3ca0d38a36dbb53ddae48a80fa" category="inline-link-macro-rx"></block></block>
+  <block id="c86672f01f1885742d44030caeca3656" category="list-text">Depuis le tableau de bord, sélectionnez l’icône *Actualiser* pour trouver de nouvelles charges de travail.</block>
+  <block id="6a9bfc63a8ad7addf42c2109b163b952" category="paragraph">Si vous avez déjà découvert des charges de travail, vous pouvez en trouver de nouvelles ou des charges de travail précédemment non sélectionnées.</block>
+  <block id="86f1d97261d36debcad3b0a69e10f3f4" category="list-text">Dans NetApp Ransomware Resilience, sélectionnez *Paramètres*.</block>
+  <block id="91437eaac9ac7d1f1da9a4e4751cbaa6" category="paragraph">Oui, Ransomware Resilience détecte les planifications de snapshots définies dans ONTAP. Il détecte également si ARP et FPolicy sont activés sur tous les volumes d'une charge de travail détectée. Les informations affichées dans le tableau de bord Ransomware Resilience proviennent d'autres NetApp solutions et produits.</block>
+  <block id="30d645e3c3e5cd0e502a92a067fc1be8" category="paragraph">Ransomware Resilience permet de configurer une destination de sauvegarde via l'option Paramètres. Voir <block ref="e25a1b60993d45f33b0deea2ae726330" category="inline-link-macro-rx"></block>.</block>
+  <block id="c4550c3db972a64a4938aff3fdcc3f3d" category="paragraph">Après avoir configuré les options dans la destination de sauvegarde elle-même, vous la configurerez ensuite comme destination de sauvegarde dans NetApp Ransomware Resilience. Pour plus de détails sur la façon de configurer la destination de sauvegarde dans NetApp Ransomware Resilience, reportez-vous à <block ref="e0972ac2b24cae233c2035120c295c6d" category="inline-link-macro-rx"></block>.</block>
+  <block id="bc46a0ba0f385a3e46fe17c4f792de15" category="summary">Si Ransomware Resilience détecte une attaque potentielle, une alerte apparaît sur le tableau de bord Ransomware Resilience indiquant une attaque potentielle. À ce stade, vous devez examiner le risque potentiel dans l'onglet Alertes Ransomware Resilience.</block>
+  <block id="3c333ed4b45464bb8628169fb460f0b4" category="paragraph">Lorsque NetApp Ransomware Resilience détecte une attaque potentielle, une alerte s'affiche sur le tableau de bord et dans le menu Notifications. Ransomware Resilience prend immédiatement un snapshot. Lorsque vous recevez une alerte, examinez le risque potentiel dans l'onglet *Alerts* de Ransomware Resilience pour évaluer l'impact sur vos données et prévenir une éventuelle attaque de ransomware.</block>
+  <block id="0b24c011fc6a43f772b1630fb31bc484" category="list-text">Dans le tableau de bord NetApp Ransomware Resilience, consultez le volet Alertes.</block>
+  <block id="4e5e53b0b4e5652ec832b50377d88c7a" category="inline-link-macro">Configurer les agents et les collecteurs pour la détection de l'activité des utilisateurs</block>
+  <block id="2e4c2d16e9645587ca42bd1619923007" category="paragraph">Si vous avez configuré la détection des utilisateurs suspects pour visualiser les comportements anormaux des utilisateurs, vous pouvez consulter les données au niveau de l'utilisateur et bloquer des utilisateurs spécifiques. Pour activer les paramètres relatifs aux utilisateurs suspects, voir <block ref="0f4cfaa1d8c2a9cdfa625e5e097fd539" category="inline-link-macro-rx"></block>.</block>
+  <block id="e29621dc2c0ac79f9d5888f0d3d7b097" category="summary">Utilisez le Ransomware Resilience pour déterminer quelles charges de travail nécessitent une protection ou une attention et pour évaluer l'étendue de la protection en examinant la quantité de stockage protégée ou à risque.</block>
+  <block id="00ce8994cfc9e95bc7f237b9394ec077" category="paragraph">Le tableau de bord NetApp Ransomware Resilience offre un aperçu rapide de l'état de protection de vos charges de travail. Vous pouvez rapidement déterminer les charges de travail à risque ou protégées, identifier celles impactées par un incident ou en cours de récupération, et évaluer l'étendue de la protection en regardant la quantité de stockage protégée ou à risque.</block>
+  <block id="258cef76c737e5fb4c0a326f50f351ac" category="paragraph">Utilisez le tableau de bord pour consulter les suggestions de protection, modifier les paramètres et télécharger des rapports.</block>
+  <block id="e094e26183004c53cd65819096b01e61" category="section-title">Examinez l'état de santé de la charge de travail à l'aide du tableau de bord</block>
+  <block id="3081db6d0330b0294d153a17b29e7766" category="list-text">Depuis le tableau de bord, vous pouvez effectuer les actions suivantes dans chacun des volets :</block>
+  <block id="43373e9864a15885db684cef91b5ba4b" category="inline-link-macro">Consultez les suggestions de protection sur le tableau de bord</block>
+  <block id="039b2ad77409908c3ef8c4fd2eeb0789" category="paragraph">Voir <block ref="dc43db082fb7b6e5d7d6f98564b3f6cb" category="inline-link-macro-rx"></block> ou <block ref="2b2daeeb32402291362fa9fa843a5c7e" category="inline-link-macro-rx"></block>.</block>
+  <block id="a1048b180af720afaeaf5566afdbf0fb" category="paragraph">Ransomware Resilience affiche de nouvelles recommandations depuis votre dernière visite sur le tableau de bord avec l’étiquette « Nouveau » pendant 24 heures. Les actions apparaissent par ordre de priorité, la plus importante en haut. Examinez, agissez ou ignorez chaque recommandation.</block>
+  <block id="9227cb2bdb6633cc7a0528780638687e" category="section-title">Consultez les recommandations de protection sur le tableau de bord</block>
+  <block id="8c600f29f899b74aad0eea00b5927162" category="inline-link-macro">Se connecter à un SIEM</block>
+  <block id="4640cffe8cecf29a2e28eccc89d62e54" category="cell">Saisissez les informations du serveur SIEM/XDR pour activer la détection des menaces. Consultez <block ref="ffa7fd2a3621d8607d19220a5312c79a" category="inline-link-macro-rx"></block>.</block>
+  <block id="384ff6974e7af6bfbb47b5f1a1e8a8ef" category="cell">Ajoutez des destinations de sauvegarde à cette charge de travail pour la protéger. Consultez <block ref="e25a1b60993d45f33b0deea2ae726330" category="inline-link-macro-rx"></block>.</block>
+  <block id="b6ac186c730d3951ea5f7795e32f0554" category="admonition">Pour activer le verrouillage des sauvegardes sur le stockage secondaire, configurez vos destinations de sauvegarde à l'aide de l'option *Paramètres*. Pour plus de détails, consultez <block ref="33c35db19b883807eccfb2734290ae91" category="inline-link-macro-rx"></block>.</block>
+  <block id="11f2f37965157c7da67e33eb40c1030c" category="list-text">Depuis le tableau de bord, consultez les totaux « Restore needed » dans le volet Alertes et sélectionnez *View all*.</block>
+  <block id="bcecace85f7c3d476feccac24d9db3eb" category="list-text">Depuis le tableau de bord ou une autre page, sélectionnez l’option *Actualiser* <block ref="94d384894f036157c348eadc55c40952" category="inline-image-macro-rx" type="image"></block> en haut à droite pour actualiser les données qui apparaîtront dans les rapports.</block>
+  <block id="cc3ae719c12cc9e21d1f9b6b919eb818" category="summary">Ajoutez une destination de sauvegarde dans NetApp Ransomware Resilience pour améliorer la cyber-résilience.</block>
+  <block id="162cbc2e55bba363e404fc5b076b5396" category="doc">Ajouter une destination de sauvegarde dans NetApp Ransomware Resilience</block>
+  <block id="446db85eccf33f9784ac89c8ce79da30" category="paragraph">Lorsque NetApp Ransomware Resilience découvre des charges de travail, si des sauvegardes sont configurées, Ransomware Resilience reconnaît les destinations de sauvegarde. Si vous prévoyez d'utiliser des sauvegardes comme partie de votre <block ref="1b99ecd04f1b8fdcacaf1c94375e162a" category="inline-link-macro-rx"></block> mais que vous n'avez pas configuré de destinations de sauvegarde sur la charge de travail, vous devez ajouter une destination de sauvegarde dans NetApp Ransomware Resilience pour améliorer la cyber-résilience.</block>
+  <block id="0e9035ba0ada85f7e642c4c90f3c75f8" category="paragraph">Vous pouvez choisir l'une des destinations de sauvegarde suivantes :</block>
+  <block id="3162fb5159875a4da43217649ccde717" category="admonition">Les destinations de sauvegarde ne sont pas disponibles pour les charges de travail dans Amazon FSx for NetApp ONTAP et Azure NetApp Files. Effectuez des opérations de sauvegarde à l'aide des solutions de sauvegarde natives : FSx for ONTAP backup service ou Azure NetApp Files backups.</block>
+  <block id="20719b7356c72f5e746a8124c0018499" category="list-text">Dans la tuile **Backup Destinations**, sélectionnez **View**.</block>
+  <block id="a97e0ce614da1b49c8b092a1822430d8" category="list-text">Sélectionnez la flèche vers le bas à côté de chaque paramètre pour consulter les champs obligatoires :</block>
+  <block id="637e10d99594d64e7cd9d0d69d72ce35" category="list-text">Choisissez de **créer un nouveau bucket** ou **d'apporter votre propre bucket**.</block>
+  <block id="a44e6c0f0ed5b8afbc0546f0e7bcdbcf" category="list-text">Fournissez le **domaine complet (FQDN) du nœud de passerelle** et le **port**.</block>
+  <block id="39238a7d16a545e3153ac6188dccc20b" category="list-text">Fournissez les informations d'identification StorageGRID : **Clé d'accès** et **Clé secrète**.</block>
+  <block id="58c6baa7e738e1c2a697b17b79f69e08" category="list-text">*Verrouillage de sauvegarde*</block>
+  <block id="0446f59cb9541bf643a366b3bfc7f9c9" category="paragraph">Choisissez si vous souhaitez configurer le verrouillage des sauvegardes. Avec le verrouillage des sauvegardes, les copies sont protégées contre toute modification ou suppression et analysées pour détecter les menaces de type ransomware. Vous ne pouvez pas modifier ce paramètre après avoir configuré la destination de sauvegarde. ** Si vous ne souhaitez pas de verrouillage des sauvegardes, sélectionnez **None**. ** Sélectionnez **Governance mode** pour permettre aux utilisateurs disposant d'autorisations spécifiques d'écraser ou de supprimer les fichiers de sauvegarde protégés pendant la période de conservation. ** Sélectionnez **Compliance mode** pour empêcher les utilisateurs d'écraser ou de supprimer les fichiers de sauvegarde protégés pendant la période de conservation.</block>
+  <block id="c2ca1e570494662ffeeec3aac86d52ca" category="inline-image-macro">Capture d'écran des destinations de sauvegarde.</block>
+  <block id="8e8be18865dfc474c8a0fdc05ec83382" category="paragraph"><block ref="8e8be18865dfc474c8a0fdc05ec83382" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3afbe3caed331a4fe312b09dd19ba861" category="paragraph">Pour plus d'informations sur la gestion de votre stockage AWS dans la console, consultez <block ref="d28e943f48573d2ec34356664b12696b" category="inline-link-macro-rx"></block>.</block>
+  <block id="61f193d433e88c991226eeb753947efa" category="admonition">Si vous configurez le paramètre de verrouillage de sauvegarde maintenant, vous ne pourrez pas modifier ce paramètre après la configuration de la destination de sauvegarde.</block>
+  <block id="a6d6cdedcaae785fdab08060b365df39" category="paragraph">Pour plus d'informations sur la gestion de votre stockage GCP dans la console, consultez <block ref="8c660c85b48d08f9c4fe5006456d31e0" category="inline-link-macro-rx"></block>.</block>
+  <block id="710940f94cd4bfa2993412389104c9f9" category="list-text">Fournissez les identifiants Google Cloud Platform : **Clé d’accès** et **Clé secrète**.</block>
+  <block id="7aa3a3bab716c0e0e907d725a02d0031" category="list-text">Sélectionnez votre **Project** et la **Region** dans laquelle il se trouve.</block>
+  <block id="02e13f00b52eacd0aacaff10979ed36a" category="paragraph">Les données du bucket sont chiffrées par défaut avec des clés gérées par Google. Vous pouvez conserver ce paramètre par défaut en sélectionnant **Google-managed keys** ou utiliser **Customer-managed keys**.</block>
+  <block id="d49c45945bd734f52704ed8105d9da64" category="list-text">Indiquez l'ID de l'application (client), le secret client et l'ID du répertoire (tenant). Sélectionnez **Authenticate**.</block>
+  <block id="8fd2e4c27a1cf60ce4cf47a3cbb0213a" category="list-text">Sélectionnez l’abonnement Azure, la région et le groupe de ressources de votre abonnement Azure.</block>
+  <block id="a5b90db63cae88965232ed9ad16857e4" category="list-text">*Chiffrement* : Par défaut, les données sont chiffrées à l’aide d’une clé gérée par Microsoft. Sélectionnez **Clé gérée par Microsoft** pour conserver cette option ; sinon, choisissez **Clé gérée par le client** pour utiliser vos propres clés pour le chiffrement.</block>
+  <block id="5d26d73e045508a9d800de36d5cb7f6a" category="list-text">Dans le volet Protection des données du tableau de bord, sélectionnez *Afficher tout*.</block>
+  <block id="3452edc9500068aa4e81efa3065f4840" category="paragraph"><block ref="96190f34ca9057dac88958fdc8616fb9" category="inline-link-rx"></block>.</block>
+  <block id="fa6202de22795192c36a3d9f19dcacb4" category="paragraph"><block ref="d9c5e920a3325d09f15af3a23d7257a6" category="inline-link-rx"></block>.</block>
+  <block id="82de0d759c073c04ac48fc6b696c90aa" category="paragraph">Le service de sauvegarde et de restauration BlueXP n'a plus besoin d'être déjà activé sur le système. Voir <block ref="7cc100a4e35b42109d34b0d1c6d432c9" category="inline-link-macro-rx"></block>. Le service de protection contre les ransomwares BlueXP aide à configurer une destination de sauvegarde via l'option Paramètres. Voir <block ref="33c35db19b883807eccfb2734290ae91" category="inline-link-macro-rx"></block>.</block>
+  <block id="7209939f330d57760a2e770bb0ab9c7f" category="paragraph"><block ref="53473569759b47ea5993e29bc6231811" category="inline-link-rx"></block>.</block>
+  <block id="3df7a12f3abd02947ddedf343ef8a9c1" category="paragraph">En plus d'utiliser AWS, vous pouvez désormais choisir StorageGRID comme destination de sauvegarde.<block ref="5604d592dccc445b9b989e4fbf577c14" category="inline-link-rx"></block>.</block>
+  <block id="5b100261e7fff478dae16ee021b3a1ba" category="sidebar">Afficher l'état de santé de la charge de travail</block>
+  <block id="e65f6e4b1867bfedf08120cb1ab99c24" category="sidebar">Configurer la détection des activités suspectes des utilisateurs</block>
+  <block id="5cd628c617c563813496781dd1388400" category="sidebar">Protéger et détecter</block>
+  <block id="0fbc6e1e6b007cdd357b2d64d431dff7" category="sidebar">Exigences de détection de l'activité de l'utilisateur</block>
+  <block id="9625b1e458d75145b2fbf2d4b886fc70" category="sidebar">Répondre et récupérer</block>
+  <block id="d805ea206a1d58881a7d28213018ae80" category="sidebar">Effectuer un exercice de préparation</block>
 </blocks>

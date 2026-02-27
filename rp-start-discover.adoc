@@ -4,7 +4,7 @@ permalink: rp-start-discover.html
 keywords: bluexp, ransomware protection, protection, risk, cyber attack, security,data security, data protection, data recovery, data discovery 
 summary: Lors de la découverte, Ransomware Resilience analyse tous les volumes et fichiers des systèmes sur tous les agents et comptes de la console. 
 ---
-= Découvrez les charges de travail dans NetApp Ransomware Resilience
+= Découvrez et gérez les charges de travail dans NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -60,10 +60,10 @@ Ransomware Resilience ne découvre les données de charge de travail que lorsque
 . Pour télécharger la liste des charges de travail découvertes, sélectionnez *Télécharger les résultats*.
 . Pour afficher le tableau de bord de résilience aux ransomwares, sélectionnez *Accéder au tableau de bord*.
 +
-Le tableau de bord affiche l’état de la protection des données.  Le nombre de charges de travail à risque ou protégées est mis à jour à mesure que de nouvelles charges de travail sont découvertes.
+Le tableau de bord affiche l'état de la protection des données. Le nombre de charges de travail à risque ou protégées est mis à jour à mesure que de nouvelles charges de travail sont détectées.
 
 +
-image:screen-dashboard.png["Tableau de bord de résilience aux ransomwares"]
+image:screen-dashboard.png["Tableau de bord NetApp Ransomware Resilience"]
 
 +
 link:rp-use-dashboard.html["Découvrez ce que le tableau de bord vous montre."]
@@ -78,7 +78,7 @@ Si vous avez ajouté des charges de travail à un système précédemment décou
 
 .Étapes
 . Pour identifier la date et l'heure de la dernière détection, consultez la date et l'heure indiquées à côté de l'icône *Actualiser* en haut à droite du tableau de bord de résilience aux ransomwares.
-. Depuis le tableau de bord, sélectionnez l'icône *Actualiser* pour trouver les nouvelles charges de travail.
+. Depuis le tableau de bord, sélectionnez l’icône *Actualiser* pour trouver de nouvelles charges de travail.
 
 
 
@@ -88,10 +88,10 @@ TIP: Si vous constatez que certains volumes ne s'affichent pas pour le système 
 
 == Découvrez de nouveaux systèmes
 
-Si vous avez déjà découvert des systèmes, vous pouvez en trouver de nouveaux ou des systèmes non sélectionnés auparavant.
+Si vous avez déjà découvert des charges de travail, vous pouvez en trouver de nouvelles ou des charges de travail précédemment non sélectionnées.
 
 .Étapes
-. Dans le menu Résilience aux ransomwares, sélectionnez l'option verticale " option category='inline-code'/> en haut à droite. Dans le menu déroulant, sélectionnez *Paramètres*.
+. Dans NetApp Ransomware Resilience, sélectionnez *Paramètres*.
 . Dans la carte Découverte de charge de travail, sélectionnez *Découvrir les charges de travail*. La découverte peut prendre quelques minutes.  Une icône de chargement indique la progression.
 . Ransomware Resilience détecte les systèmes pris en charge et non pris en charge. Il ne prend pas en charge un système si sa version ONTAP est inférieure à la version requise. Lorsque vous survolez un système non pris en charge, une info-bulle affiche la raison. Sélectionnez les systèmes sur lesquels vous souhaitez découvrir les charges de travail.
 . Sélectionnez *Découvrir*.

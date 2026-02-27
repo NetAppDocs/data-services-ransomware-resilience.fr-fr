@@ -20,30 +20,24 @@ indexpage:
     links:
     - title: En savoir plus sur la résilience aux ransomwares
       url: "/concept-ransomware-resilience.html"
+    - title: Découvrez la détection de l'activité des utilisateurs
+      url: "/concept-user-behavior.html"
     - title: Quoi de neuf dans Ransomware Resilience
       url: "/whats-new.html"
     - title: Prérequis
       url: "/rp-start-prerequisites.html"
     - title: Démarrage rapide
       url: "/rp-start-quick-start.html"
-    - title: Configurer les destinations de sauvegarde et activer la détection des
-        menaces
-      url: "/rp-use-settings.html"
-    - title: Simuler une attaque de ransomware
-      url: "/rp-start-simulate.html"
-    - title: Configurer la détection des activités suspectes des utilisateurs
-      url: "/suspicious-user-activity.html"
   - title: Utiliser la résilience aux ransomwares
     links:
     - title: Découvrir les charges de travail
       url: "/rp-start-discover.html"
-    - title: Afficher l'état de la charge de travail à l'aide du tableau de bord
+    - title: Afficher l'état de santé de la charge de travail
       url: "/rp-use-dashboard.html"
     - title: Protéger les charges de travail
       url: "/rp-use-protect.html"
-    - title: Recherchez des informations personnelles identifiables avec la NetApp
-        Data Classification
-      url: "/task-classify.html"
+    - title: Configurer la détection des activités suspectes des utilisateurs
+      url: "/suspicious-user-activity.html"
     - title: Répondre à une alerte détectée
       url: "/rp-use-alert.html"
     - title: Se remettre d'une attaque

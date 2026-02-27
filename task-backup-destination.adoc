@@ -1,0 +1,215 @@
+---
+sidebar: sidebar 
+permalink: task-backup-destination.html 
+keywords: ransomware protection, backup destination, storagegrid, aws, azure, google cloud 
+summary: Ajoutez une destination de sauvegarde dans NetApp Ransomware Resilience pour améliorer la cyber-résilience. 
+---
+= Ajouter une destination de sauvegarde dans NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Lorsque NetApp Ransomware Resilience découvre des charges de travail, si des sauvegardes sont configurées, Ransomware Resilience reconnaît les destinations de sauvegarde. Si vous prévoyez d'utiliser des sauvegardes comme partie de votre link:rp-use-protect.html["stratégie de protection contre les ransomwares"] mais que vous n'avez pas configuré de destinations de sauvegarde sur la charge de travail, vous devez ajouter une destination de sauvegarde dans NetApp Ransomware Resilience pour améliorer la cyber-résilience.
+
+Vous pouvez choisir l'une des destinations de sauvegarde suivantes :
+
+* NetApp StorageGRID
+* Amazon Web Services (AWS)
+* Plateforme Google Cloud
+* Microsoft Azure
+
+
+
+NOTE: Les destinations de sauvegarde ne sont pas disponibles pour les charges de travail dans Amazon FSx for NetApp ONTAP et Azure NetApp Files. Effectuez des opérations de sauvegarde à l'aide des solutions de sauvegarde natives : FSx for ONTAP backup service ou Azure NetApp Files backups.
+
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
+
+
+
+== Ajouter StorageGRID comme destination de sauvegarde
+
+Pour configurer NetApp StorageGRID comme destination de sauvegarde, saisissez les informations suivantes.
+
+.Étapes
+. Dans Ransomware Resilience, sélectionnez **Paramètres**.
+. Dans la tuile **Backup Destinations**, sélectionnez **View**.
+. Sélectionnez **Ajouter**.
+. Entrez un nom pour la destination de sauvegarde.
++
+image:screen-settings-backup-destination.png["Page des destinations de sauvegarde"]
+
+. Sélectionnez * StorageGRID*.
+. Sélectionnez la flèche vers le bas à côté de chaque paramètre pour consulter les champs obligatoires :
++
+** *Paramètres du fournisseur*:
++
+*** Choisissez de **créer un nouveau bucket** ou **d'apporter votre propre bucket**.
+*** Fournissez le **domaine complet (FQDN) du nœud de passerelle** et le **port**.
+*** Fournissez les informations d'identification StorageGRID : **Clé d'accès** et **Clé secrète**.
+
+
+** *Réseau* : Choisissez l'espace IP.
++
+*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder.  Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
+
+
+** *Verrouillage de sauvegarde*
++
+Choisissez si vous souhaitez configurer le verrouillage des sauvegardes. Avec le verrouillage des sauvegardes, les copies sont protégées contre toute modification ou suppression et analysées pour détecter les menaces de type ransomware. Vous ne pouvez pas modifier ce paramètre après avoir configuré la destination de sauvegarde. ** Si vous ne souhaitez pas de verrouillage des sauvegardes, sélectionnez **None**. ** Sélectionnez **Governance mode** pour permettre aux utilisateurs disposant d'autorisations spécifiques d'écraser ou de supprimer les fichiers de sauvegarde protégés pendant la période de conservation. ** Sélectionnez **Compliance mode** pour empêcher les utilisateurs d'écraser ou de supprimer les fichiers de sauvegarde protégés pendant la période de conservation.
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Résultat
+La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
+
+image:screen-settings-backup-destinations-list2.png["Capture d'écran des destinations de sauvegarde."]
+
+
+
+== Ajouter Amazon Web Services comme destination de sauvegarde
+
+Pour configurer AWS comme destination de sauvegarde, saisissez les informations suivantes.
+
+Pour plus d'informations sur la gestion de votre stockage AWS dans la console, consultez link:https://docs.netapp.com/us-en/console-setup-admin/task-viewing-amazon-s3.html["Gérez vos buckets Amazon S3"^].
+
+.Étapes
+. Dans Ransomware Resilience, sélectionnez **Paramètres**.
+. Dans la tuile **Backup Destinations**, sélectionnez **View**.
+. Sélectionnez **Ajouter**.
+. Sélectionnez *Amazon Web Services*.
+. Sélectionnez la flèche vers le bas à côté de chaque paramètre et saisissez ou sélectionnez des valeurs :
++
+** *Paramètres du fournisseur*:
++
+*** Créez un nouveau bucket, sélectionnez un bucket existant s'il en existe déjà un dans la console ou apportez votre propre bucket qui stockera les sauvegardes.
+*** Compte AWS, région, clé d'accès et clé secrète pour les informations d'identification AWS
++
+https://docs.netapp.com/us-en/storage-management-s3-storage/task-add-s3-bucket.html["Si vous souhaitez apporter votre propre seau, reportez-vous à Ajouter des seaux S3"^] .
+
+
+
+** *Cryptage* : si vous créez un nouveau compartiment S3, saisissez les informations de clé de cryptage fournies par le fournisseur.  Si vous avez choisi un bucket existant, les informations de chiffrement sont déjà disponibles.
++
+Les données du bucket sont chiffrées par défaut avec des clés gérées par AWS.  Vous pouvez continuer à utiliser les clés gérées par AWS ou gérer le chiffrement de vos données à l'aide de vos propres clés.
+
+** *Réseau* : Choisissez l'espace IP et indiquez si vous utiliserez un point de terminaison privé.
++
+*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder.  Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
+*** Vous pouvez également choisir si vous utiliserez un point de terminaison privé AWS (PrivateLink) que vous avez précédemment configuré.
++
+Si vous souhaitez utiliser AWS PrivateLink, reportez-vous à https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["AWS PrivateLink pour Amazon S3"^] .
+
+
+
+** *Verrouillage de sauvegarde* : choisissez si vous souhaitez que Ransomware Resilience protège les sauvegardes contre toute modification ou suppression.  Cette option utilise la technologie NetApp DataLock.  Chaque sauvegarde sera verrouillée pendant la période de conservation, ou pendant un minimum de 30 jours, plus une période tampon pouvant aller jusqu'à 14 jours.
++
+
+CAUTION: Si vous configurez le paramètre de verrouillage de sauvegarde maintenant, vous ne pourrez pas modifier ce paramètre après la configuration de la destination de sauvegarde.
+
++
+*** *Mode de gouvernance* : des utilisateurs spécifiques (avec l'autorisation s3:BypassGovernanceRetention) peuvent écraser ou supprimer des fichiers protégés pendant la période de conservation.
+*** *Mode de conformité* : les utilisateurs ne peuvent pas écraser ou supprimer les fichiers de sauvegarde protégés pendant la période de conservation.
+
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Résultat
+La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
+
+image:screen-settings-backup-destinations-list2.png["Page des destinations de sauvegarde l'option Paramètres"]
+
+
+
+== Ajouter Google Cloud Platform comme destination de sauvegarde
+
+Pour configurer Google Cloud Platform (GCP) comme destination de sauvegarde, saisissez les informations suivantes.
+
+Pour plus d'informations sur la gestion de votre stockage GCP dans la console, consultez link:https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html["Options d'installation de l'agent de console dans Google Cloud"^].
+
+.Étapes
+. Dans Ransomware Resilience, sélectionnez **Paramètres**.
+. Dans la tuile **Backup Destinations**, sélectionnez **View**.
+. Sélectionnez **Ajouter**.
+. Entrez un nom pour la destination de sauvegarde.
+. Sélectionnez *Google Cloud Platform*.
+. Sélectionnez la flèche vers le bas à côté de chaque paramètre et saisissez ou sélectionnez des valeurs :
++
+** *Paramètres du fournisseur*:
++
+*** Choisissez de **créer un nouveau bucket** ou **d'apporter votre propre bucket**.
+*** Fournissez les identifiants Google Cloud Platform : **Clé d’accès** et **Clé secrète**.
+*** Sélectionnez votre **Project** et la **Region** dans laquelle il se trouve.
++
+image:screen-settings-backup-destination-gcp.png["Page des destinations de sauvegarde"]
+
+
+
+** *Cryptage* : Si vous créez un nouveau bucket, saisissez les informations de clé de cryptage fournies par le fournisseur.  Si vous avez choisi un bucket existant, les informations de chiffrement sont déjà disponibles.
++
+Les données du bucket sont chiffrées par défaut avec des clés gérées par Google. Vous pouvez conserver ce paramètre par défaut en sélectionnant **Google-managed keys** ou utiliser **Customer-managed keys**.
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Résultat
+La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
+
+
+
+== Ajouter Microsoft Azure comme destination de sauvegarde
+
+Pour configurer Azure comme destination de sauvegarde, saisissez les informations suivantes.
+
+Pour plus de détails sur la gestion de vos informations d'identification Azure et de vos abonnements à la place de marché dans la console, reportez-vous à https://docs.netapp.com/us-en/console-setup-admin/task-adding-azure-accounts.html["Gérez vos informations d'identification Azure et vos abonnements à la place de marché"^] .
+
+.Étapes
+. Dans Ransomware Resilience, sélectionnez **Paramètres**.
+. Dans la tuile **Backup Destinations**, sélectionnez **View**.
+. Sélectionnez **Ajouter**.
+. Sélectionnez *Azure*.
+. Sélectionnez la flèche vers le bas à côté de chaque paramètre et saisissez ou sélectionnez des valeurs :
++
+** *Paramètres du fournisseur*:
++
+*** Créez un nouveau compte de stockage, sélectionnez-en un existant s'il en existe déjà un dans la console ou apportez votre propre compte de stockage qui stockera les sauvegardes.
+*** Indiquez l'ID de l'application (client), le secret client et l'ID du répertoire (tenant). Sélectionnez **Authenticate**.
+*** Sélectionnez l’abonnement Azure, la région et le groupe de ressources de votre abonnement Azure.
++
+https://docs.netapp.com/us-en/storage-management-blob-storage/task-add-blob-storage.html["Si vous souhaitez utiliser votre propre compte de stockage, reportez-vous à la section Ajouter des comptes de stockage Azure Blob."^] .
+
+
+
+** *Chiffrement* : Par défaut, les données sont chiffrées à l’aide d’une clé gérée par Microsoft. Sélectionnez **Clé gérée par Microsoft** pour conserver cette option ; sinon, choisissez **Clé gérée par le client** pour utiliser vos propres clés pour le chiffrement.
+** *Réseau* : Choisissez l'espace IP et indiquez si vous utiliserez un point de terminaison privé.
++
+*** L'espace IP est le cluster dans lequel résident les volumes que vous souhaitez sauvegarder.  Les LIF intercluster pour cet espace IP doivent disposer d'un accès Internet sortant.
+*** Vous pouvez également choisir si vous utiliserez un point de terminaison privé Azure que vous avez précédemment configuré.
++
+Si vous souhaitez utiliser Azure PrivateLink, reportez-vous à https://azure.microsoft.com/en-us/products/private-link/["Azure PrivateLink"^] .
+
+
+
+** *Verrouillage de sauvegarde*
++
+Choisissez si vous souhaitez configurer le verrouillage des sauvegardes. Avec le verrouillage des sauvegardes, les copies sont protégées contre toute modification ou suppression et analysées pour détecter les menaces de type ransomware. Vous ne pouvez pas modifier ce paramètre après avoir configuré la destination de sauvegarde. ** Si vous ne souhaitez pas de verrouillage des sauvegardes, sélectionnez **None**. ** Sélectionnez **Governance mode** pour permettre aux utilisateurs disposant d'autorisations spécifiques d'écraser ou de supprimer les fichiers de sauvegarde protégés pendant la période de conservation. ** Sélectionnez **Compliance mode** pour empêcher les utilisateurs d'écraser ou de supprimer les fichiers de sauvegarde protégés pendant la période de conservation.
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Résultat
+La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
+
+image:screen-settings-backup-destinations-list2.png["Page des destinations de sauvegarde l'option Paramètres"]

@@ -26,7 +26,7 @@ Préparez l’une des destinations de sauvegarde suivantes :
 * Microsoft Azure
 
 
-Après avoir configuré les options dans la destination de sauvegarde elle-même, vous la configurerez plus tard comme destination de sauvegarde dans Ransomware Resilience.  Pour plus de détails sur la configuration de la destination de sauvegarde dans Ransomware Resilience, reportez-vous àlink:rp-use-settings.html["Configurer les destinations de sauvegarde"] .
+Après avoir configuré les options dans la destination de sauvegarde elle-même, vous la configurerez ensuite comme destination de sauvegarde dans NetApp Ransomware Resilience. Pour plus de détails sur la façon de configurer la destination de sauvegarde dans NetApp Ransomware Resilience, reportez-vous à link:task-backup-destination.html["Configurer les destinations de sauvegarde"].
 
 
 
