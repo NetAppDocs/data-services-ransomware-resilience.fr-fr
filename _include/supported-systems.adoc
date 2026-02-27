@@ -15,19 +15,19 @@
 .2+| Cloud Volumes ONTAP pour AWS | CIFS et NFS | 9.11.1 et versions ultérieures 
 
 
-| SAN (FC, iSCSI et NVMe) | 9.17.1 et versions ultérieures 
+| SAN (iSCSI et NVMe) | 9.17.1 et versions ultérieures 
 
 
 .2+| Cloud Volumes ONTAP pour Google Cloud Platform | CIFS et NFS | 9.11.1 et versions ultérieures 
 
 
-| SAN (FC, iSCSI et NVMe) | 9.17.1 et versions ultérieures 
+| SAN (iSCSI et NVMe) | 9.17.1 et versions ultérieures 
 
 
 .2+| Cloud Volumes ONTAP pour Microsoft Azure | CIFS et NFS | 9.12.1 et versions ultérieures 
 
 
-| SAN (FC, iSCSI et NVMe) | 9.17.1 et versions ultérieures 
+| SAN (iSCSI et NVMe) | 9.17.1 et versions ultérieures 
 
 
 .2+| ONTAP (sur site) | CIFS et NFS | 9.11.1 et versions ultérieures 
