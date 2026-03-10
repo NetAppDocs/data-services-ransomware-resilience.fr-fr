@@ -18,6 +18,26 @@ Découvrez les nouveautés de NetApp Ransomware Resilience.
 
 
 
+== 09 mars 2026
+
+
+
+=== Exclure en masse des utilisateurs des alertes de comportement utilisateur
+
+Ransomware Resilience prend désormais en charge le téléchargement d'une liste JSON d'utilisateurs à exclure des alertes d'activité comportementale des utilisateurs, en plus des options existantes basées sur l'interface utilisateur et le format CSV.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#exclude-users-from-alerts["Exclure les utilisateurs des alertes"^].
+
+
+
+=== Améliorations de l'activité des utilisateurs
+
+Ransomware Resilience a amélioré la compréhension du comportement des utilisateurs en ajoutant des alertes par e-mail et en incluant les événements liés au comportement des utilisateurs dans les données d'événements SIEM prises en charge (AWS Security Hub, Microsoft Sentinel et Splunk Cloud). Ces améliorations fournissent des informations plus précises sur la surveillance de votre sécurité et de votre conformité.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Connectez la résilience aux ransomwares NetApp à un SIEM"^].
+
+
+
 == 16 février 2026
 
 
@@ -26,7 +46,7 @@ Découvrez les nouveautés de NetApp Ransomware Resilience.
 
 Ransomware Resilience prend désormais en charge les systèmes Azure NetApp Files, vous permettant de détecter et de contrer efficacement les menaces de ransomware dans Azure NetApp Files. Lorsque vous découvrez des charges de travail, Ransomware Resilience présente désormais Azure NetApp Files et les affiche dans le tableau de bord de protection. La prise en charge de Ransomware Resilience pour Azure NetApp Files inclut des stratégies de détection et de protection uniquement avec des instantanés. La prise en charge d’Azure NetApp Files est actuellement en préversion.
 
-Pour plus d'informations, consultez le lien : Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["En savoir plus sur la résilience aux ransomwares"^].
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["En savoir plus sur la résilience aux ransomwares"^].
 
 
 

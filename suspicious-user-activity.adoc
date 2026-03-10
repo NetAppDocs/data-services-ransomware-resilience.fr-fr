@@ -171,9 +171,12 @@ S'il existe certains utilisateurs de confiance dont le comportement pourrait dé
 . Pour consulter les utilisateurs individuellement dans l'interface utilisateur, choisissez **Select manually**. Pour importer une liste d'utilisateurs exclus, sélectionnez **Upload**.
 +
 .. Si vous avez sélectionné **Select manually**, cochez la case en regard des noms des utilisateurs spécifiques que vous souhaitez exclure.
-.. Si vous sélectionnez **Upload**, vous devez d'abord télécharger un fichier CSV contenant la liste de tous les utilisateurs. Sélectionnez **Download** pour accéder à la liste.
+.. Si vous sélectionnez **Upload**, téléchargez le fichier CSV ou JSON contenant la liste de tous les utilisateurs. Sélectionnez **Download** pour accéder à la liste.
 +
-Examinez le fichier CSV. Supprimez les noms de tous les utilisateurs pour lesquels vous souhaitez maintenir la détection. Lorsque la liste ne contient plus que les noms des utilisateurs que vous souhaitez exclure de la détection, enregistrez-la. Sélectionnez **Importer** pour localiser le fichier, puis choisissez-le.
+Sur votre ordinateur local, examinez le fichier. Supprimez les noms de tous les utilisateurs pour lesquels vous souhaitez maintenir la détection. Lorsque la liste ne contient plus que les noms des utilisateurs que vous souhaitez exclure de la détection, enregistrez-la.
+
++
+Dans NetApp Ransomware Resilience, sélectionnez **Téléverser**. Localisez et téléversez le fichier.
 
 
 
@@ -193,6 +196,8 @@ Vous pouvez réintégrer un utilisateur dans la détection après.
 .Étapes
 . Dans le tableau de bord Paramètres, repérez la carte User activity puis sélectionnez **Manage**.
 . Sélectionnez l’onglet **Excluded users**.
+. Sélectionnez **Ajouter**.
+. Pour exclure des utilisateurs individuels de l'interface utilisateur, choisissez **Select manually**.
 . Repérez le nom de l'utilisateur que vous souhaitez supprimer de la liste des utilisateurs exclus. Sélectionnez le menu d'actions (`...` sur la ligne contenant le nom de l'utilisateur, puis **Supprimer**.
 . Dans la boîte de dialogue, sélectionnez **Remove** pour confirmer que vous souhaitez supprimer les utilisateurs sélectionnés.
 
