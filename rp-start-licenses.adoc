@@ -47,6 +47,19 @@ NOTE: Si vous disposez à la fois de Backup and Recovery et de Ransomware Resili
 
 
 
+== Coût
+
+Si vous disposez à la fois de Backup and Recovery et de Ransomware Resilience, toutes les données communes protégées par les deux produits sont facturées uniquement par Ransomware Resilience.
+
+Lorsqu'une charge de travail est classée comme protégée, elle est déduite de la capacité achetée ou de l'abonnement PAYGO. Ransomware Resilience classe une charge de travail comme protégée lorsqu'une stratégie de détection est activée avec au moins une règle de sauvegarde ou d'instantané. Les charges de travail détectées avec une stratégie de détection mais  règles de sauvegarde ou d'instantané sont classées comme à risque. Les charges de travail à risque ne sont pas déduites de la capacité achetée.
+
+Les charges de travail protégées sont déduites de la capacité achetée ou de l’abonnement après la période d’essai gratuite. Ransomware Resilience est facturé au Go pour les données associées aux charges de travail protégées (telles que rapportées par ONTAP) avant application des gains d’efficacité.
+
+
+TIP: Surveillez la taille des données protégées dans le tableau de bord de protection Ransomware Resilience. Pour ajouter de la capacité, consultez link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html#update-a-license["Mettre à jour une licence"^].
+
+
+
 == Essayez Ransomware Resilience avec un essai gratuit de 30 jours
 
 Vous pouvez essayer Ransomware Resilience avec un essai gratuit de 30 jours.  Vous devez être administrateur de l'organisation de la console pour démarrer l'essai gratuit.
