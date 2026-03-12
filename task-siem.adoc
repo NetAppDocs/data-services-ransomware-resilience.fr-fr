@@ -23,6 +23,9 @@ Ransomware Resilience prend en charge les SIEM suivants :
 Avant d'activer SIEM dans Ransomware Resilience, vous devez configurer votre système SIEM.
 
 
+TIP: Ransomware Resilience prend également en charge link:reference-soar.html["playbooks de security orchestration, automation, and response (SOAR)"^].
+
+
 
 == Données d'événements envoyées à un SIEM
 
@@ -256,4 +259,11 @@ NOTE: Les informations que vous saisissez dépendent du SIEM que vous avez séle
 +
 La page Paramètres affiche « Connecté ».
 
+
+
+
+
+== Prochaines étapes
+
+* link:reference-soar.html["Intégrer un playbook SOAR"]
 

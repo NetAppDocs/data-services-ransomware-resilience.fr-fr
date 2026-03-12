@@ -70,6 +70,8 @@ sidebar:
       url: "/rp-start-simulate.html"
     - title: Configurer SIEM
       url: "/task-siem.html"
+    - title: Intégrer les playbooks SOAR
+      url: "/reference-soar.html"
     - title: Télécharger les rapports
       url: "/rp-use-reports.html"
   - section: support
