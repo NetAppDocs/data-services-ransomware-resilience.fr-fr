@@ -39,5 +39,5 @@ Azure NetApp Files est pris en charge dans Ransomware Resilience. Les limitation
 * Les stratégies de protection contre les ransomwares avec des politiques de sauvegarde ne sont pas prises en charge pour Azure NetApp Files. Vous pouvez utiliser la sauvegarde Azure NetApp Files à la place.
 * Les stratégies de protection contre les ransomwares avec réplication ne sont pas prises en charge pour Azure NetApp Files.
 * Lors du choix d'une stratégie de protection, assurez-vous que sa fréquence de création d'instantanés est compatible avec Azure NetApp Files. La fréquence de création d'instantanés la plus fréquente disponible dans Azure NetApp Files est horaire.
-* Il est recommandé de ne pas utiliser les fonctionnalités prises en charge link:reference-soar.html["Playbooks SOAR"] avec Azure NetApp Files, car les API Azure NetApp Files bloquent les actions automatisées.
+* Il est recommandé de ne pas utiliser link:reference-soar.html["Playbooks SOAR"] avec Azure NetApp Files, car les API Azure NetApp Files bloquent les actions automatisées.
 
