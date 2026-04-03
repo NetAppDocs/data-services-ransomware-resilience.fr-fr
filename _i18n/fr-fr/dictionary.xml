@@ -498,7 +498,6 @@
   <block id="6c66a8a541d348bc3f3a48dc2e58492c" category="list-text">Sélectionnez un système de test.</block>
   <block id="9d5c8a6e3597683b4559e2c596a2ead9" category="list-text">Sélectionnez un SVM de stockage de test.</block>
   <block id="09cb5a7830e25d2457463ef0f909f5a0" category="list-text">Si vous avez sélectionné une machine virtuelle de stockage CIFS (SMB), les champs **Nom d'utilisateur** et **Mot de passe** s'affichent.  Saisissez le nom d’utilisateur et le mot de passe de la machine virtuelle de stockage.</block>
-  <block id="6773f809e3f238c4a8a25adcd8e46f13" category="list-text">Saisissez le nom d’une nouvelle charge de travail de test à créer.  N'incluez pas de tirets dans le nom.</block>
   <block id="b5ffafbc91e02195737c6716b418141e" category="admonition">Vous pouvez modifier la configuration de l'exercice de préparation ultérieurement à l'aide de la page Paramètres.</block>
   <block id="187666a138e7f6f15224af7bcef93040" category="section-title">Démarrer un exercice de préparation</block>
   <block id="b30d5003eb8b470d6df77c1edbb96724" category="paragraph">Après avoir configuré l’exercice de préparation, vous pouvez démarrer l’exercice.</block>
@@ -538,7 +537,6 @@
   <block id="402892b652810818eb61e703ca333d06" category="list-text">Sélectionnez *Marquer comme restauration nécessaire*.</block>
   <block id="f1a43a1191cd8e11a5db942f4175b31f" category="list-text">Vérifiez la confirmation et sélectionnez *Marquer comme restauration nécessaire* dans la boîte de confirmation.</block>
   <block id="63d4b8d17265522f12b229a2016b08c9" category="list-text">Dans le menu Résilience aux ransomwares, sélectionnez *Récupération*.</block>
-  <block id="001b6bed17667ada4d5dad085e5729b3" category="list-text">Sélectionnez la charge de travail de test marquée « Exercice de préparation » que vous souhaitez restaurer.</block>
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">Sélectionnez *Restaurer*.</block>
   <block id="98576e747c7efb09ca0d1e50a58ae308" category="list-text">Dans la page Restaurer, fournissez les informations pour la restauration :</block>
   <block id="05e2304cb46b92601ea1e826aa3fec0b" category="list-text">Sélectionnez la copie instantanée source.</block>
@@ -555,7 +553,6 @@
   <block id="b707d985234424bd425b96580911950e" category="list-text">Sélectionnez à nouveau l’alerte.</block>
   <block id="2da9a9f4e6a92f5857d147337ae308f7" category="list-text">Indiquez le statut en sélectionnant *Modifier le statut* et modifiez le statut en l'un des suivants :</block>
   <block id="e0a30b860c06e610cadc21ebf64426da" category="list-text">Rejeté : si vous pensez que l’activité n’est pas une attaque de ransomware, modifiez le statut sur Rejeté.</block>
-  <block id="ff8d215b189dca41bf900d6545392594" category="admonition">Après avoir rejeté une attaque, vous ne pouvez pas la modifier à nouveau.  Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à l’attaque potentielle du ransomware seront définitivement supprimées.  Si vous ignorez l’alerte, l’exercice de préparation est considéré comme terminé.</block>
   <block id="36b45588cbfa3653d0bdeb91883b49f4" category="list-text">Résolu : L’incident a été atténué.</block>
   <block id="1be5568d0c3f299b7d0fa2b810d4b90d" category="section-title">Rapports d'examen sur l'exercice de préparation</block>
   <block id="1618fcb06831249fd4142102d83577f5" category="paragraph">Une fois l’exercice de préparation terminé, vous souhaiterez peut-être consulter et enregistrer un rapport sur l’exercice.</block>
@@ -2209,4 +2206,7 @@
   <block id="d0c1ba6e120f697911d5bd92a51f0322" category="paragraph">Ransomware Resilience propose désormais un guide d'orchestration, d'automatisation et de réponse en matière de sécurité (SOAR) pour <block ref="d942356c034f7ad3c314a5fae7d11e1d" category="inline-link-macro-rx"></block>. Ce guide facilite la gestion des réponses aux menaces, automatise les tâches et les tests, et prend en charge les actions essentielles de réponse aux ransomwares, notamment la création de snapshots et la mise hors ligne d'un volume.</block>
   <block id="dce0959f50faa93a47d141f615365404" category="paragraph">Ransomware Resilience propose des guides pratiques pour Google SecOps, Microsoft Sentinel et Splunk. Consultez les pages GitHub correspondantes pour plus de détails sur la configuration.</block>
   <block id="4f61a1c38b74708d0982090b3ace3f21" category="list-text">Il est recommandé de ne pas utiliser <block ref="237628f5d72273fb0e39c8149431292e" category="inline-link-macro-rx"></block> avec Azure NetApp Files, car les API Azure NetApp Files bloquent les actions automatisées.</block>
+  <block id="4fcce21aba16e6a89d3c15cbcce7db5a" category="list-text">Saisissez le nom de la charge de travail de test. N'incluez pas de tirets dans le nom.</block>
+  <block id="922e09477f5763a3965ac29db0b9139d" category="list-text">Sélectionnez la charge de travail de test marquée « Readiness drill » que vous souhaitez restaurer.</block>
+  <block id="3aecb1c0d4a2579d6c2b4487309b2cdc" category="admonition">Une fois l'attaque ignorée, il est impossible de revenir en arrière. Si vous ignorez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à une potentielle attaque de ransomware seront définitivement supprimées. Si vous ignorez l'alerte, l'exercice de préparation est considéré comme terminé.</block>
 </blocks>

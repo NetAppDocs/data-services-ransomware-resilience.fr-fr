@@ -53,7 +53,7 @@ image:screen-settings-alert-drill-configure.png["Configurer la page d'exercice d
 .. Sélectionnez un SVM de stockage de test.
 .. Si vous avez sélectionné une machine virtuelle de stockage CIFS (SMB), les champs **Nom d'utilisateur** et **Mot de passe** s'affichent.  Saisissez le nom d’utilisateur et le mot de passe de la machine virtuelle de stockage.
 .. Sélectionnez le type d’exercice de préparation. Pour une récupération manuelle après une violation de données de chiffrement, choisissez **Récupération personnalisée**. Pour récupérer une activité utilisateur suspecte, choisissez **Violation de données**.
-.. Saisissez le nom d’une nouvelle charge de travail de test à créer.  N'incluez pas de tirets dans le nom.
+.. Saisissez le nom de la charge de travail de test. N'incluez pas de tirets dans le nom.
 
 
 . Sélectionnez *Enregistrer*.
@@ -151,7 +151,7 @@ Après avoir examiné l’alerte d’exercice de préparation, restaurez la char
 ** Vérifiez la confirmation et sélectionnez *Marquer comme restauration nécessaire* dans la boîte de confirmation.
 +
 *** Dans le menu Résilience aux ransomwares, sélectionnez *Récupération*.
-*** Sélectionnez la charge de travail de test marquée « Exercice de préparation » que vous souhaitez restaurer.
+*** Sélectionnez la charge de travail de test marquée « Readiness drill » que vous souhaitez restaurer.
 *** Sélectionnez *Restaurer*.
 *** Dans la page Restaurer, fournissez les informations pour la restauration :
 
@@ -189,7 +189,7 @@ Après avoir examiné l’alerte d’exercice de préparation et restauré la ch
 ** Rejeté : si vous pensez que l’activité n’est pas une attaque de ransomware, modifiez le statut sur Rejeté.
 +
 
-IMPORTANT: Après avoir rejeté une attaque, vous ne pouvez pas la modifier à nouveau.  Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à l’attaque potentielle du ransomware seront définitivement supprimées.  Si vous ignorez l’alerte, l’exercice de préparation est considéré comme terminé.
+IMPORTANT: Une fois l'attaque ignorée, il est impossible de revenir en arrière. Si vous ignorez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à une potentielle attaque de ransomware seront définitivement supprimées. Si vous ignorez l'alerte, l'exercice de préparation est considéré comme terminé.
 
 ** Résolu : L’incident a été atténué.
 
