@@ -18,6 +18,7 @@ Ransomware Resilience prend en charge les SIEM suivants :
 * AWS Security Hub
 * Microsoft Sentinel
 * Splunk Cloud
+* Splunk Enterprise
 
 
 Avant d'activer SIEM dans Ransomware Resilience, vous devez configurer votre système SIEM.
@@ -202,16 +203,19 @@ NOTE: Une fois l'authentification réussie, un message « Authentifié » s'affi
 
 
 
-== Configurer Splunk Cloud pour la détection des menaces
+== Configurer Splunk Cloud et Splunk Enterprise pour la détection des menaces
 
-Avant d'activer Splunk Cloud dans Ransomware Resilience, vous devez effectuer les étapes de haut niveau suivantes dans Splunk Cloud :
+Ransomware Resilience prend en charge la détection des menaces avec Splunk Cloud et Splunk Enterprise. Avant d'activer la connexion Splunk dans Ransomware Resilience, vous devez :
 
-* Activez un collecteur d’événements HTTP dans Splunk Cloud pour recevoir des données d’événement via HTTP ou HTTPS à partir de la console.
-* Créez un jeton de collecteur d’événements dans Splunk Cloud.
+* Activez un collecteur d'événements HTTP dans Splunk Cloud ou Enterprise pour recevoir les données d'événements via HTTP ou HTTPS depuis la Console.
+* Créez un jeton de collecteur d'événements dans Splunk Cloud ou Enterprise.
 
+
+
+NOTE: Pour Splunk Enterprise, vous devez autoriser le trafic Internet public entrant pour que Ransomware Resilience puisse envoyer des événements en utilisant les détails du collecteur d'événements HTTP qui lui sont fournis.
 
 .Étapes pour activer un collecteur d'événements HTTP dans Splunk
-. Accédez à Splunk Cloud.
+. Accédez à l'environnement Splunk de votre choix : Cloud ou Enterprise.
 . Sélectionnez *Paramètres* > *Entrées de données*.
 . Sélectionnez *Collecteur d’événements HTTP* > *Paramètres globaux*.
 . Sur le bouton bascule Tous les jetons, sélectionnez *Activé*.
@@ -220,7 +224,7 @@ Avant d'activer Splunk Cloud dans Ransomware Resilience, vous devez effectuer le
 
 
 .Étapes pour créer un jeton de collecteur d'événements dans Splunk
-. Accédez à Splunk Cloud.
+. Accédez à Splunk Cloud ou Enterprise.
 . Sélectionnez *Paramètres* > *Ajouter des données*.
 . Sélectionnez *Moniteur* > *Collecteur d'événements HTTP*.
 . Saisissez un nom pour le jeton et sélectionnez *Suivant*.
@@ -250,7 +254,7 @@ image:screen-settings2.png["Page des paramètres"]
 image:screen-settings-threat-detection-3options.png["Activer la page de détails de détection des menaces"]
 
 . Choisissez l’un des systèmes SIEM.
-. Saisissez le jeton et les détails d’authentification que vous avez configurés dans AWS Security Hub ou Splunk Cloud.
+. Saisissez le jeton et les informations d'authentification que vous avez configurés dans AWS Security Hub, Splunk Cloud ou Splunk Enterprise.
 +
 
 NOTE: Les informations que vous saisissez dépendent du SIEM que vous avez sélectionné.
