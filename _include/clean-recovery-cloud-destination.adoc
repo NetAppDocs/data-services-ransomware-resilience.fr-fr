@@ -2,19 +2,17 @@
 :allow-uri-read: 
 
 
-[NOTE]
 .Données SVM de salle blanche LIF IP (crr-data-LIF-IP)
-====
-Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, ignorez cette exigence d'adresse IP LIF de données SVM de salle blanche.
-
-====
 * Attribuez une adresse IP à l'interface LIF de données SVM de la salle blanche. Notez cette adresse IP : vous en aurez besoin lors du processus de configuration IRE.
 +
 ** Pour Cloud Volumes ONTAP avec AWS utilisant une restauration propre cloud à cloud, assurez-vous que l'adresse IP est attribuée à l'Elastic Network Interface.
 
 
-* Autoriser le routage de l’IP LIF de données SVM vers l’IRE.
+* Autoriser le routage de l’IP de la LIF de données SVM vers l’IRE.
 
+
+
+NOTE: Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, ignorez cette exigence d'adresse IP LIF de données SVM de salle blanche.
 
 .table de routage de l'environnement de production
 * La table de routage de production doit autoriser le trafic du sous-réseau IRE vers l'adresse IP LIF des données de restauration propres. Vous devez ajouter cette route à la table de routage de production.
@@ -51,17 +49,18 @@ Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, ignorez ce
 
 
 .cloud privé virtuel (VPC)
-* Pour l'IRE, provisionnez un VPC dans la plage d'adresses IP de votre environnement de production. L'adresse IP ne doit pas entrer en conflit avec une adresse IP existante.
+* Pour l'IRE, provisionnez un VPC dans la plage d'adresses IP de votre environnement de production. L'adresse IP ne doit pas entrer en conflit avec des adresses IP existantes.
 +
 ** Le VPC doit avoir une capacité minimale de 64 adresses IP (un masque de sous-réseau /26).
-** Le VPC doit autoriser l'accès à Internet public. Sinon, l'agent de la console ne fonctionnera pas
+** Le VPC doit autoriser l'accès à Internet public. Sinon, l'agent Console ne fonctionnera pas
 
 
 
 
 .Autorisations cloud
-* Ransomware Resilience a besoin de la clé d'accès et du secret AWS avec les autorisations IAM appropriées pour effectuer la restauration propre dans un environnement AWS. link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["Créer une politique IAM dans AWS"^] avec les autorisations suivantes, puis associez la stratégie à un utilisateur nouvellement créé. Après avoir créé l'utilisateur, générez les informations d'identification IAM et fournissez-les pour la restauration propre.
-+
+* Ransomware Resilience a besoin de la clé d'accès et du secret AWS avec les autorisations IAM appropriées pour effectuer la restauration propre dans un environnement AWS. link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["Créer une politique IAM dans AWS"^] avec les autorisations suivantes, puis associez la stratégie à un utilisateur nouvellement créé. Après avoir créé l'utilisateur, générez les informations d'identification IAM et fournissez-les à la restauration propre.
+
+
 [source, json]
 ----
 {
@@ -132,4 +131,3 @@ Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, ignorez ce
     ]
 }
 ----
-

@@ -38,7 +38,7 @@ Une charge de travail peut avoir l’un des états de restauration suivants :
 Passez en revue les charges de travail qui sont dans l’état de récupération « Restauration nécessaire ».
 
 .Étapes
-. Depuis le tableau de bord principal de NetApp Ransomware Resilience, consultez les totaux « Restore needed » dans le volet Alerts et sélectionnez *View all*.
+. Depuis le tableau de bord principal de Ransomware Resilience, consultez les totaux « Restore needed » dans le volet Alertes et sélectionnez *View all*.
 +
 Vous pouvez également sélectionner *Recovery* dans la barre latérale.
 
@@ -52,7 +52,7 @@ image:screen-recovery2.png["Page de récupération"]
 
 == Récupérer une charge de travail
 
-Après avoir évalué les charges de travail, vous avez deux options pour rétablir votre charge de travail :
+Après avoir évalué les charges de travail, vous avez deux options pour restaurer votre charge de travail :
 
 * xref:task-custom-restore.html[Récupérez avec une restauration personnalisée]
 * xref:task-clean-restore.html[Récupérez avec une restauration propre]

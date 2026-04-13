@@ -4,7 +4,7 @@ permalink: task-clean-restore-recover.html
 keywords: clean room, clean restore, secure recovery, recover, isolated recovery environment, ire 
 summary: 'Ransomware Resilience vous permet de contrôler et d"assainir vos charges de travail grâce à une restauration propre.' 
 ---
-= Récupérez les charges de travail grâce à une restauration propre dans NetApp Ransomware Resilience
+= Récupérez vos charges de travail grâce à une restauration propre dans NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Ransomware Resilience vous permet de contrôler et d"assainir vos char
 
 
 [role="lead"]
-Avec NetApp Ransomware Resilience, vous pouvez effectuer une récupération guidée après une attaque de ransomware par chiffrement grâce à une restauration complète. La restauration complète identifie les chemins de récupération optimisés afin de minimiser la perte de données et de remettre vos charges de travail en ligne dans les plus brefs délais.
+Avec NetApp Ransomware Resilience, vous pouvez effectuer une récupération guidée après une attaque de ransomware par chiffrement grâce à une restauration propre. La restauration propre identifie les chemins de récupération optimisés afin de minimiser la perte de données et de remettre vos charges de travail en ligne dans les plus brefs délais.
 
 L'option de restauration propre est une alternative à la xref:task-custom-restore.html[option de restauration personnalisée].
 
@@ -33,10 +33,10 @@ Vous devez avoir configuré un link:task-clean-restore.html["environnement de r�
 * Vous ne pouvez effectuer qu'une restauration complète en cas d'attaque par ransomware basée sur le chiffrement.
 * Si l'environnement de récupération isolé ne dispose pas de capacité pour une nouvelle opération, celle-ci est mise en file d'attente jusqu'à ce qu'une disponibilité se présente.
 +
-** Vous pouvez surveiller à tout moment l'état des opérations de restauration complètes actives et en file d'attente dans le tableau de bord Ransomware Resilience Recovery.
+** Vous pouvez surveiller à tout moment l'état des opérations de restauration propres actives et en file d'attente dans le tableau de bord Ransomware Resilience Recovery.
 
 
-* Lorsque vous lancez une restauration propre, le volume d'origine est démonté, ce qui peut perturber l'accès aux E/S.
+* Lorsque vous lancez une restauration propre, le volume d'origine est démonté, ce qui peut perturber l'accès aux IO.
 
 
 
@@ -45,10 +45,10 @@ Vous devez avoir configuré un link:task-clean-restore.html["environnement de r�
 
 . Dans la section **Récupération**, sélectionnez la charge de travail que vous souhaitez restaurer. Sélectionnez **Restaurer**.
 . Dans les options Type de restauration, sélectionnez **Restauration propre** puis **Suivant**.
-. Sélectionnez l’environnement de récupération isolé que vous souhaitez utiliser, puis **Suivant**.
+. Sélectionnez l'environnement de récupération isolé que vous souhaitez utiliser, puis **Suivant**.
 . Vérifiez l'environnement de récupération isolé et assurez-vous qu'il s'agit du bon emplacement. Sélectionnez **Restaurer**.
-. Ransomware Resilience effectue la configuration nécessaire. Une fois la configuration terminée avec succès, Ransomware Resilience indique **Setup complete**. Pour procéder à l’analyse, sélectionnez **Next**.
-. Une fois l'installation terminée, sélectionnez **Run analysis**. NetApp Ransomware Resilience analyse tous les points de restauration disponibles au cours des sept jours précédant l'événement de ransomware, affichant la date et le type de point de restauration.
+. Ransomware Resilience effectue la configuration nécessaire. Une fois la configuration terminée avec succès, Ransomware Resilience indique **Configuration terminée**. Pour procéder à l’analyse, sélectionnez **Suivant**.
+. Une fois l'installation terminée, sélectionnez **Run analysis**. NetApp Ransomware Resilience analyse tous les points de restauration disponibles au cours des sept jours précédant l'événement ransomware, affichant la date et le type de point de restauration.
 +
 image:screenshot-clean-room-analysis.png["Capture d'écran de l'étape d'analyse de restauration propre."]
 

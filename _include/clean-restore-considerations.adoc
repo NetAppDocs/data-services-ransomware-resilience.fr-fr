@@ -5,8 +5,8 @@
 * Vous ne pouvez effectuer qu'une restauration complète en cas d'attaque par ransomware basée sur le chiffrement.
 * Si l'environnement de récupération isolé ne dispose pas de capacité pour une nouvelle opération, celle-ci est mise en file d'attente jusqu'à ce qu'une disponibilité se présente.
 +
-** Vous pouvez surveiller à tout moment l'état des opérations de restauration complètes actives et en file d'attente dans le tableau de bord Ransomware Resilience Recovery.
+** Vous pouvez surveiller à tout moment l'état des opérations de restauration propres actives et en file d'attente dans le tableau de bord Ransomware Resilience Recovery.
 
 
-* Lorsque vous lancez une restauration propre, le volume d'origine est démonté, ce qui peut perturber l'accès aux E/S.
+* Lorsque vous lancez une restauration propre, le volume d'origine est démonté, ce qui peut perturber l'accès aux IO.
 

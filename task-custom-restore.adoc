@@ -15,13 +15,13 @@ summary: 'Après une attaque, NetApp Ransomware Resilience vérifie que les donn
 Avec Ransomware Resilience, les administrateurs de stockage peuvent déterminer la meilleure façon de restaurer les charges de travail soit à partir du point de restauration recommandé, soit à partir du point de restauration préféré.
 
 
-TIP: Ransomware Resilience prend également en charge une xref:task-clean-restore.html[option de restauration propre], qui offre une récupération guidée et des capacités avancées pour garantir que seules les données propres et non chiffrées soient récupérées.
+TIP: Ransomware Resilience prend également en charge une xref:task-clean-restore.html[option de restauration propre], qui offre une récupération guidée et des capacités avancées pour garantir que seules les données propres et non chiffrées sont récupérées.
 
 
 
 == Restaurer une charge de travail
 
-*Rôle requis dans la console* Administrateur d'organisation, administrateur de dossier ou de projet, ou administrateur de protection contre les logiciels de ransomware. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^].
+*Rôle requis dans la console* Administrateur d'organisation, administrateur de dossier ou de projet, ou administrateur de protection contre les ransomwares. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^].
 
 L'administrateur du stockage de sécurité peut récupérer des données à différents niveaux :
 
