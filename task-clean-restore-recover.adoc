@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: task-clean-restore-recover.html 
+keywords: clean room, clean restore, secure recovery, recover, isolated recovery environment, ire 
+summary: 'Ransomware Resilience vous permet de contrôler et d"assainir vos charges de travail grâce à une restauration propre.' 
+---
+= Récupérez les charges de travail grâce à une restauration propre dans NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Avec NetApp Ransomware Resilience, vous pouvez effectuer une récupération guidée après une attaque de ransomware par chiffrement grâce à une restauration complète. La restauration complète identifie les chemins de récupération optimisés afin de minimiser la perte de données et de remettre vos charges de travail en ligne dans les plus brefs délais.
+
+L'option de restauration propre est une alternative à la xref:task-custom-restore.html[option de restauration personnalisée].
+
+
+
+== Avant de commencer
+
+Vous devez avoir configuré un link:task-clean-restore.html["environnement de récupération isolé"^] avant de pouvoir effectuer une restauration complète.
+
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
+
+
+
+== Considérations
+
+* Vous ne pouvez effectuer qu'une restauration complète en cas d'attaque par ransomware basée sur le chiffrement.
+* Si l'environnement de récupération isolé ne dispose pas de capacité pour une nouvelle opération, celle-ci est mise en file d'attente jusqu'à ce qu'une disponibilité se présente.
++
+** Vous pouvez surveiller à tout moment l'état des opérations de restauration complètes actives et en file d'attente dans le tableau de bord Ransomware Resilience Recovery.
+
+
+* Lorsque vous lancez une restauration propre, le volume d'origine est démonté, ce qui peut perturber l'accès aux E/S.
+
+
+
+
+== Effectuez une restauration propre
+
+. Dans la section **Récupération**, sélectionnez la charge de travail que vous souhaitez restaurer. Sélectionnez **Restaurer**.
+. Dans les options Type de restauration, sélectionnez **Restauration propre** puis **Suivant**.
+. Sélectionnez l’environnement de récupération isolé que vous souhaitez utiliser, puis **Suivant**.
+. Vérifiez l'environnement de récupération isolé et assurez-vous qu'il s'agit du bon emplacement. Sélectionnez **Restaurer**.
+. Ransomware Resilience effectue la configuration nécessaire. Une fois la configuration terminée avec succès, Ransomware Resilience indique **Setup complete**. Pour procéder à l’analyse, sélectionnez **Next**.
+. Une fois l'installation terminée, sélectionnez **Run analysis**. NetApp Ransomware Resilience analyse tous les points de restauration disponibles au cours des sept jours précédant l'événement de ransomware, affichant la date et le type de point de restauration.
++
+image:screenshot-clean-room-analysis.png["Capture d'écran de l'étape d'analyse de restauration propre."]
+
+. Une fois l'analyse terminée, sélectionnez **Suivant** pour planifier votre restauration. Ransomware Resilience propose deux options : **Least data loss** et **Latest unimpacted restore point**. Sélectionnez l'une ou l'autre option et, si vous le souhaitez, consultez les données de fichiers individuels pour chaque point de restauration.
++
+Pour afficher des données détaillées sur les événements liés aux fichiers, sélectionnez un fichier pour analyser son état de chiffrement, quand il a été créé, modifié ou supprimé, et quel point de restauration correspond à quelle action.
+
++
+image:clean-restore-plan.png["Capture d'écran de l'étape du plan de restauration propre."]
+
+. Après avoir choisi votre point de restauration, sélectionnez **Suivant** pour commencer le nettoyage de vos fichiers.
+. Ransomware Resilience commence le nettoyage de la charge de travail.
++
+Une fois le nettoyage terminé, sélectionnez **Démarrer la récupération** pour lancer la récupération.
+
+. Choisissez si vous souhaitez conserver la charge de travail d'origine. Pour ne pas la conserver, sélectionnez **Non, remplacer la charge de travail d'origine**. Pour la conserver, sélectionnez **Oui, conserver la charge de travail d'origine** puis saisissez un nouveau nom pour la charge de travail.
+. Sélectionnez **Démarrer la récupération** pour lancer la récupération.
+. Une fois la récupération terminée, sélectionnez **Suivant** pour passer à la phase finale.
+. Sélectionnez **Libérer les ressources et terminer** pour libérer les ressources et fermer la salle blanche. Pour confirmer que vous souhaitez libérer la ressource, sélectionnez **Terminer**.
+

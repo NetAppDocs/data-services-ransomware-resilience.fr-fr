@@ -1,0 +1,603 @@
+---
+sidebar: sidebar 
+permalink: task-clean-restore.html 
+keywords: clean room, clean restore, secure recovery, restore, isolated recovery environment 
+summary: 'Ransomware Resilience vous permet de contrôler et d"assainir vos charges de travail grâce à une restauration propre.' 
+---
+= Configurer l'environnement de restauration propre dans NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Ransomware Resilience offre des restaurations propres, qui fournissent une récupération guidée après des attaques de ransomware. Pour effectuer une restauration propre, vous devez d'abord créer un environnement de récupération isolé (IRE), soit sur site, soit dans un environnement cloud pris en charge. Dans l'IRE, vous créez une salle blanche où Ransomware Resilience isole la charge de travail afin d'identifier les fichiers sains et ceux qui sont impactés par le ransomware.
+
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
+
+
+
+== Découvrez les restaurations propres
+
+Lorsque vous effectuez une restauration complète, NetApp Ransomware Resilience vous guide à travers un processus en plusieurs étapes qui optimise la récupération.
+
+* **CONFIGURATION** : Pour effectuer une restauration complète, vous devez d’abord créer un IRE, puis sélectionner la charge de travail à restaurer. Ransomware Resilience crée une salle blanche où toutes les actions pour la charge de travail sont effectuées.
+* **ANALYSE** : En salle blanche, Ransomware Resilience analyse tous les instantanés pour détecter la présence de chiffrement. La restauration propre établit une carte de récupération afin de déterminer le plan de récupération optimal.
++
+Une fois qu'un point de restauration sans fichier impacté est découvert, tous les points de restauration antérieurs sont ignorés. Par exemple, si l'événement de ransomware a eu lieu le 10 octobre et qu'un point de restauration a été découvert le 7 octobre à 10 h 21 sans fichier impacté, tous les points de restauration antérieurs au 7 octobre à 10 h 21 sont ignorés.
+
++
+L'étape d'analyse affiche également le nombre de fichiers examinés, en indiquant lesquels sont concernés et lesquels ne le sont pas.
+
+* **PLAN**: Choisissez les options de récupération proposées :
++
+** _Dernier point de restauration non affecté_ : le point de restauration le plus rapide à partir du dernier instantané non chiffré antérieur à l’attaque
+** _Perte de données minimale_ : la version la plus récente de chaque fichier non chiffré provenant de différents instantanés
++
+Vous pouvez également consulter l'historique des fichiers lors de l'étape de planification, afin de voir quand les attaques de ransomware ont affecté les fichiers et comment le point de récupération se situe dans le temps par rapport à cet événement.
+
+
+
+* **NETTOYAGE** : NetApp Ransomware Resilience supprime les logiciels malveillants du point de récupération. Si certains fichiers ne peuvent être nettoyés, ils sont exclus de la récupération et mis en quarantaine dans un emplacement distinct.
+* **RESTAURATION** : NetApp Ransomware Resilience restaure les données saines dans l’environnement source.
+* **FIN** : Ransomware Resilience fournit un résumé détaillé du processus et ferme la salle blanche, libérant les ressources allouées lors de la configuration afin d’éliminer les coûts facturés ultérieurement.
+
+
+
+
+== Configurations prises en charge
+
+* Vous ne pouvez créer qu'une seule IRE par compte Ransomware Resilience. Chaque IRE peut comporter trois salles blanches.
+* La restauration complète n'est actuellement prise en charge que pour les partages de fichiers NAS (NFS/CIFS).
+* Vous devez effectuer une restauration propre de l'environnement source.
+* Vous pouvez créer un IRE dans le cloud ou sur site. Actuellement, les configurations suivantes sont prises en charge :
++
+|===
+| Source | Destination (IRE) | Régions de destination prises en charge 
+
+
+| Sur site (systèmes AFF ou FAS uniquement)* | Sur site (VMware vCenter) | S/O 
+
+
+| Sur site (systèmes AFF ou FAS uniquement)* | Cloud : AWS  a| 
+** US East 1
+** EU Central 1
+
+
+
+
+| Cloud : Cloud Volumes ONTAP avec AWS* | Cloud : AWS  a| 
+** US East 1
+** EU Central 1
+
+
+
+
+| Cloud : Amazon FSxN pour ONTAP | Cloud : AWS  a| 
+** US East 1
+** EU Central 1
+
+
+|===
++
+{asterisk}Vous devez utiliser ONTAP 9.11.1 ou une version ultérieure.
+
+
+
+
+NOTE: Effectuer une restauration complète dans un environnement cloud peut entraîner des frais de calcul supplémentaires facturés par le fournisseur de cloud. Pour plus d'informations, voir link:#cost-and-licensing["Coût et licence"].
+
+
+
+== Considérations
+
+* Vous ne pouvez effectuer qu'une restauration complète en cas d'attaque par ransomware basée sur le chiffrement.
+* Si l'environnement de récupération isolé ne dispose pas de capacité pour une nouvelle opération, celle-ci est mise en file d'attente jusqu'à ce qu'une disponibilité se présente.
++
+** Vous pouvez surveiller à tout moment l'état des opérations de restauration complètes actives et en file d'attente dans le tableau de bord Ransomware Resilience Recovery.
+
+
+* Lorsque vous lancez une restauration propre, le volume d'origine est démonté, ce qui peut perturber l'accès aux E/S.
+
+
+
+
+=== Considérations supplémentaires pour les environnements sur site
+
+Si vous déployez un IRE sur site, lorsqu'une machine virtuelle Windows est clonée pour l'analyse de récupération lors d'une restauration complète, la machine virtuelle clonée conserve la même configuration que la source. Cela peut entraîner des conflits :
+
+* L'utilisation du même identifiant de sécurité (SID) entraîne des conflits d'authentification et de sécurité.
+* L'utilisation du même nom d'ordinateur (CN) provoque des conflits réseau.
+* L'utilisation de la même identité machine entraîne des problèmes de licence et d'activation.
+
+
+Pour éviter ces conflits, Ransomware Resilience effectue une préparation système (sysprep) sur la machine virtuelle clonée, ce qui réinitialise le SID, le CN et l'identité de la machine. La réinitialisation de ces valeurs garantit que la machine virtuelle clonée fonctionne comme une instance unique et indépendante, sans interférer avec la machine virtuelle source.
+
+
+
+=== Sources secondaires
+
+Lorsque vous créez l'IRE pour les sources locales, vous avez la possibilité d'ajouter une source secondaire.
+
+Si la source principale est disponible, la restauration complète doit être effectuée sur la source principale. Si la source principale est indisponible et que vous avez configuré une source secondaire, la restauration complète sera effectuée sur la source secondaire.
+
+Par défaut, la procédure de restauration propre analyse les instantanés de l'environnement source. Si l'environnement source est indisponible ou si aucun instantané non chiffré n'est disponible sur la source, la restauration propre analyse les instantanés d'un système secondaire si vous en avez configuré un.
+
+
+
+== Coût et licence
+
+La restauration complète est proposée dans le cadre de la solution Ransomware Resilience. Aucune licence supplémentaire n'est requise pour effectuer une restauration complète ou créer un IRE.
+
+L'activation de la restauration complète peut entraîner des frais facturés par un fournisseur de cloud tiers. Selon votre utilisation du service, ces frais peuvent se répéter tant que les environnements de restauration complète existent.
+
+Les frais facturés par des tiers peuvent inclure la création et le déploiement d'instances de calcul, ainsi que la mise à disposition de capacités de stockage de production supplémentaires pour le nettoyage et la récupération. Voici quelques exemples :
+
+* Lorsqu'un IRE est déployé dans AWS et que vous lancez la restauration propre, deux instances AWS EC2 t3.medium sont déployées dans la salle blanche à l'intérieur de l'IRE pour le nettoyage du chiffrement et des logiciels malveillants.
+* Dans Cloud Volumes ONTAP, la restauration propre crée une machine virtuelle de stockage « clean room » pour les volumes de métadonnées et les clones d'instantanés destinés à l'analyse.
+
+
+
+
+== Prérequis
+
+Assurez-vous d'avoir rempli les conditions préalables pour le type de déploiement de restauration propre que vous avez choisi. Sélectionnez l'onglet correspondant à votre configuration IRE.
+
+
+NOTE: Lors de la création de l'IRE, vous devez ajouter chaque système (primaire ou secondaire) que vous souhaitez utiliser pour l'analyse lors de l'étape de sélection du système lorsque vous créez l'IRE.
+
+[role="tabbed-block"]
+====
+.cloud à cloud
+--
+Ce schéma illustre un exemple de configuration de restauration complète entre clouds. Consultez le schéma et les ressources à configurer avant de créer l'IRE.
+
+image::diagram-clean-recovery-cloud-cloud.png[Schéma de restauration propre cloud à cloud]
+
+--
+====
+Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, ignorez cette exigence d'adresse IP LIF de données SVM de salle blanche.
+
+[]
+====
+* Attribuez une adresse IP à l'interface LIF de données SVM de la salle blanche. Notez cette adresse IP : vous en aurez besoin lors du processus de configuration IRE.
++
+** Pour Cloud Volumes ONTAP avec AWS utilisant une restauration propre cloud à cloud, assurez-vous que l'adresse IP est attribuée à l'Elastic Network Interface.
+
+
+* Autoriser le routage de l’IP LIF de données SVM vers l’IRE.
+
+
+.table de routage de l'environnement de production
+* La table de routage de production doit autoriser le trafic du sous-réseau IRE vers l'adresse IP LIF des données de restauration propres. Vous devez ajouter cette route à la table de routage de production.
+* Les groupes de sécurité et les pare-feu du cluster ONTAP de production doivent autoriser le trafic entrant NFSv4 et NFSv3 vers l'adresse IP LIF des données de restauration propres. Le pare-feu doit être ouvert au trafic entrant provenant de la plage CIDR IRE :
++
+[cols="1,1,1,1"]
+|===
+| Protocole | Port de destination | Source | But 
+
+
+| TCP et UDP | 2049 | Plage CIDR IRE VPC | Accès NFSv4 depuis IRE 
+
+
+| TCP et UDP | 111 | Plage CIDR IRE VPC | Accès NFSv3 depuis IRE 
+
+
+| TCP et UDP | 635 | Plage CIDR IRE VPC | Accès NFSv3 depuis IRE 
+
+
+| TCP et UDP | 4045 | Plage CIDR IRE VPC | Accès NFSv3 depuis IRE 
+
+
+| TCP et UDP | 4046 | Plage CIDR IRE VPC | Accès NFSv3 depuis IRE 
+
+
+| TCP et UDP | 4049 | Plage CIDR IRE VPC | Accès NFSv3 depuis IRE 
+|===
+
+
+.Tableau de routage IRE
+* La table de routage IRE doit être la table de routage principale du VPC IRE.
+* La table de routage IRE doit autoriser le routage vers l'adresse IP LIF des données de restauration propres.
+* La table de routage IRE doit également autoriser une route vers Internet public pour que l'agent IRE puisse fonctionner.
+
+
+.cloud privé virtuel (VPC)
+* Pour l'IRE, provisionnez un VPC dans la plage d'adresses IP de votre environnement de production. L'adresse IP ne doit pas entrer en conflit avec une adresse IP existante.
++
+** Le VPC doit avoir une capacité minimale de 64 adresses IP (un masque de sous-réseau /26).
+** Le VPC doit autoriser l'accès à Internet public. Sinon, l'agent de la console ne fonctionnera pas
+
+
+
+
+.Autorisations cloud
+* Ransomware Resilience a besoin de la clé d'accès et du secret AWS avec les autorisations IAM appropriées pour effectuer la restauration propre dans un environnement AWS. link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["Créer une politique IAM dans AWS"^] avec les autorisations suivantes, puis associez la stratégie à un utilisateur nouvellement créé. Après avoir créé l'utilisateur, générez les informations d'identification IAM et fournissez-les pour la restauration propre.
++
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "EC2Isolated recovery environmentFullAccess",
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "aws:ResourceTag/rps::Isolated recovery environment-name": "*"
+                }
+            }
+        },
+        {
+            "Sid": "EC2CreateAccess",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "EC2ReadPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:Describe*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "IAMFullAccess",
+            "Effect": "Allow",
+            "Action": "iam:*",
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "aws:ResourceTag/rps::Isolated recovery environment-name": "*"
+                }
+            }
+        },
+        {
+            "Sid": "S3FullAccessToIsolated recovery environmentStateBucketCreation",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "S3FullAccessToIsolated recovery environmentStateBucketObjects",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": "arn:aws:s3:::*-netapp-Isolated recovery environment-state-bucket/*"
+        },
+        {
+            "Sid": "S3FullAccessToIsolated recovery environmentStateBucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": "arn:aws:s3:::*-netapp-Isolated recovery environment-state-bucket"
+        }
+    ]
+}
+----
+
+
+--
+
+--
+Ce schéma illustre un exemple de configuration de restauration complète sur site vers le cloud. Consultez le schéma et les ressources à configurer avant de créer l'IRE.
+
+image:diagram-clean-recovery-cloud-on-prem.png["Schéma de restauration propre du cloud vers l'infrastructure sur site"]
+
+====
+Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, ignorez cette exigence d'adresse IP LIF de données SVM de salle blanche.
+
+[]
+====
+* Attribuez une adresse IP à l'interface LIF de données SVM de la salle blanche. Notez cette adresse IP : vous en aurez besoin lors du processus de configuration IRE.
++
+** Pour Cloud Volumes ONTAP avec AWS utilisant une restauration propre cloud à cloud, assurez-vous que l'adresse IP est attribuée à l'Elastic Network Interface.
+
+
+* Autoriser le routage de l’IP LIF de données SVM vers l’IRE.
+
+
+.table de routage de l'environnement de production
+* La table de routage de production doit autoriser le trafic du sous-réseau IRE vers l'adresse IP LIF des données de restauration propres. Vous devez ajouter cette route à la table de routage de production.
+* Les groupes de sécurité et les pare-feu du cluster ONTAP de production doivent autoriser le trafic entrant NFSv4 et NFSv3 vers l'adresse IP LIF des données de restauration propres. Le pare-feu doit être ouvert au trafic entrant provenant de la plage CIDR IRE :
++
+[cols="1,1,1,1"]
+|===
+| Protocole | Port de destination | Source | But 
+
+
+| TCP et UDP | 2049 | Plage CIDR IRE VPC | Accès NFSv4 depuis IRE 
+
+
+| TCP et UDP | 111 | Plage CIDR IRE VPC | Accès NFSv3 depuis IRE 
+
+
+| TCP et UDP | 635 | Plage CIDR IRE VPC | Accès NFSv3 depuis IRE 
+
+
+| TCP et UDP | 4045 | Plage CIDR IRE VPC | Accès NFSv3 depuis IRE 
+
+
+| TCP et UDP | 4046 | Plage CIDR IRE VPC | Accès NFSv3 depuis IRE 
+
+
+| TCP et UDP | 4049 | Plage CIDR IRE VPC | Accès NFSv3 depuis IRE 
+|===
+
+
+.Tableau de routage IRE
+* La table de routage IRE doit être la table de routage principale du VPC IRE.
+* La table de routage IRE doit autoriser le routage vers l'adresse IP LIF des données de restauration propres.
+* La table de routage IRE doit également autoriser une route vers Internet public pour que l'agent IRE puisse fonctionner.
+
+
+.cloud privé virtuel (VPC)
+* Pour l'IRE, provisionnez un VPC dans la plage d'adresses IP de votre environnement de production. L'adresse IP ne doit pas entrer en conflit avec une adresse IP existante.
++
+** Le VPC doit avoir une capacité minimale de 64 adresses IP (un masque de sous-réseau /26).
+** Le VPC doit autoriser l'accès à Internet public. Sinon, l'agent de la console ne fonctionnera pas
+
+
+
+
+.Autorisations cloud
+* Ransomware Resilience a besoin de la clé d'accès et du secret AWS avec les autorisations IAM appropriées pour effectuer la restauration propre dans un environnement AWS. link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["Créer une politique IAM dans AWS"^] avec les autorisations suivantes, puis associez la stratégie à un utilisateur nouvellement créé. Après avoir créé l'utilisateur, générez les informations d'identification IAM et fournissez-les pour la restauration propre.
++
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "EC2Isolated recovery environmentFullAccess",
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "aws:ResourceTag/rps::Isolated recovery environment-name": "*"
+                }
+            }
+        },
+        {
+            "Sid": "EC2CreateAccess",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "EC2ReadPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:Describe*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "IAMFullAccess",
+            "Effect": "Allow",
+            "Action": "iam:*",
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "aws:ResourceTag/rps::Isolated recovery environment-name": "*"
+                }
+            }
+        },
+        {
+            "Sid": "S3FullAccessToIsolated recovery environmentStateBucketCreation",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "S3FullAccessToIsolated recovery environmentStateBucketObjects",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": "arn:aws:s3:::*-netapp-Isolated recovery environment-state-bucket/*"
+        },
+        {
+            "Sid": "S3FullAccessToIsolated recovery environmentStateBucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": "arn:aws:s3:::*-netapp-Isolated recovery environment-state-bucket"
+        }
+    ]
+}
+----
+
+
+--
+
+--
+Ce schéma illustre un exemple de configuration de restauration complète entre systèmes locaux. Consultez le schéma et les ressources à configurer avant de pouvoir créer l'IRE.
+
+image:diagram-clean-recovery-on-prem.png["Schéma de restauration propre du cloud vers l'infrastructure sur site"]
+
+.Données SVM de salle blanche LIF IP (crr-data-LIF-IP)
+* Une machine virtuelle de stockage (SVM) est créée sur chacun des systèmes que vous sélectionnez pour la connexion à l'IRE en vue de la restauration des charges de travail. Vous devez fournir une adresse IP dédiée pour chaque système utilisé comme LIF de données de la SVM de salle blanche.
+
+
+.Hôtes et vCenter
+* Le vCenter doit être en version 7.0 ou ultérieure avec au moins un centre de données.
+* L'hôte ESXi doit être une version ESXi 7.0 ou ultérieure avec au moins un hôte disposant de ressources CPU et mémoire suffisantes pour cloner les VMs.
+* Les informations d'identification vCenter fournies doivent disposer des autorisations nécessaires pour découvrir les ressources et cloner les machines virtuelles.
+
+
+.Machines virtuelles de base (Windows ou Linux)
+* Lors d'une restauration complète, les machines virtuelles de base sont clonées dans un centre de données sélectionné, placées sur le serveur de calcul ESXi choisi, mappées sur la banque de données spécifiée et connectées au réseau désigné. Une fois clonées, les machines virtuelles sont configurées avec 2 vCPU et 4 Go de RAM (pour les machines virtuelles Linux ou Windows) et disposent du même espace disque que les machines virtuelles de base. Chaque session de restauration complète utilise deux adresses IP de la plage CIDR spécifiée.
+* Vous devez fournir une plage d'adresses IP suffisante pour permettre plusieurs sessions simultanées en salle blanche. Les adresses IP sont libérées une fois la récupération terminée.
+* Le système de stockage de données doit disposer d'une capacité libre suffisante pour accueillir les machines virtuelles clonées.
+* La plage d'adresses IP doit être spécifiée au format CIDR (par exemple, 100.100.0.0/24)
+* Pour les machines virtuelles Linux :
++
+** Le système d'exploitation doit être Ubuntu Linux 20.04 ou une version ultérieure.
+** Le système sur site doit être mis sous tension.
+** VMware Tools doit être installé et en cours d'exécution.
+** Le protocole SSH doit être activé.
+** Vous devez avoir installé nfs-common.
+** Docker doit être installé et en cours d'exécution.
+** Vous devez disposer d'un minimum de 40 Go d'espace libre.
+
+
+* Pour les machines virtuelles Windows :
++
+** Les machines virtuelles Windows doivent disposer de 20 Go d'espace libre.
+** Le système d'exploitation doit être Windows Server 2022 ou 2025.
+** VMware Tools doit être installé et en cours d'exécution.
+** WinRM doit être activé.
+** L'adresse IP doit être configurée.
+** Assurez-vous de disposer de la licence appropriée pour autoriser le clonage des machines virtuelles de base.
+** La machine virtuelle doit être allumée.
+
+
+
+
+.Réseau
+* Configurez les ressources VLAN avec l'accès suivant :
++
+[cols="25,75"]
+|===
+| Ressource | Accéder 
+
+
+| VLAN SVM de salle blanche  a| 
+Accès NFS à : * Agent de la Production Console * VLAN de l’agent de la Console * VLAN de la salle blanche
+
+
+
+| Agent de console VLAN  a| 
+** Accès NFS au VLAN SVM de la salle blanche
+** Accès HTTP/SSH au VLAN de la salle blanche
+
+
+
+
+| VLAN de salle blanche | Accès NFS au VLAN SVM de la salle blanche 
+|===
+
+
+.Agent de console dédié
+* Déployez un agent NetApp Console dédié pour l'IRE. L'agent Console doit être déployé dans le vCenter de destination avec accès au VLAN de la salle blanche. Pour plus d'informations sur le processus de déploiement, consultez link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html["Déployer un agent de Console sur site"^].
+
+
+--
+
+--
+====
+
+
+== Créer un environnement de récupération isolé
+
+Avant de procéder à une restauration complète, vous devez créer une salle de récupération isolée.
+
+La procédure de création d'une salle de reprise d'activité isolée diffère selon que l'environnement est dans le cloud ou sur site. Veillez à suivre les instructions correspondant à l'emplacement approprié.
+
+[role="tabbed-block"]
+====
+.Cloud
+--
+. Dans Ransomware Resilience, sélectionnez **Paramètres**.
+. Dans la carte Restauration propre, sélectionnez **Configurer** s'il s'agit de votre premier environnement ou **Gérer** si vous en avez déjà créé un.
+. Si c’est la première fois que vous créez un IRE, passez à l’étape suivante.
++
+Si vous avez déjà créé un IRE, sélectionnez **Ajouter** pour en créer un autre.
+
+. Pour un IRE basé sur le cloud, sélectionnez **Amazon Web Services**.
+. Développez la section **Nom**. Créez un **Nom** pour l’environnement.
+. Développez la section *Systèmes*. Choisissez les systèmes à connecter à l'IRE. Pour chaque système sélectionné, vous devez indiquer l'adresse IP, le masque de sous-réseau et la passerelle de la machine virtuelle de stockage.
++
+
+NOTE: Pour les IRE déployés sur Amazon FSxN pour ONTAP, vous n'avez pas besoin de fournir ces informations.
+
++
+image:clean-restore-systems.png["Capture d'écran de l'interface de sélection des systèmes."]
+
+. Développez la section **Authentification**.
++
+** Saisissez l’ID du compte cloud et sélectionnez la région pour le compte.
+** Saisissez la **clé d'accès** et la **clé secrète** du compte**.
+** Développez la section *Cloud privé virtuel (VPC)*. Saisissez l'ID du VPC sur lequel l'IRE doit être déployé.
++
+image:screenshot-set-up-recovery-environment.png["Capture d'écran de la configuration de l'authentification IRE."]
+
+
+
+. Sélectionnez **Ajouter** pour créer l'IRE.
++
+Ransomware Resilience teste la connexion après que vous ayez sélectionné add, ce qui peut prendre quelques minutes.
+
+
+
+--
+.Sur site
+--
+. Dans Ransomware Resilience, sélectionnez **Paramètres**.
+. Dans la carte Restaurations propres, sélectionnez **Ajouter** s'il s'agit de votre premier environnement ou **Gérer** si vous en avez déjà créé un.
+. Si c'est la première fois que vous créez un IRE, passez à l'étape suivante. Si vous avez déjà créé un IRE, sélectionnez **Ajouter** pour en créer un autre.
+. Pour l'emplacement, sélectionnez **Sur site**.
+. Développez la section *Nom*. Attribuez un **Nom** à l'IRE.
+. Développez la section *Systèmes*. Sélectionnez les systèmes à connecter à l'IRE. Attribuez une adresse IP de machine virtuelle de stockage, un masque de sous-réseau et une passerelle à chaque système dont les charges de travail doivent être récupérées dans l'IRE.
++
+Chaque système sélectionné doit posséder une adresse IP. Vous pouvez choisir un système principal ou secondaire. Les systèmes secondaires peuvent être utilisés pour l'analyse et la restauration si le système principal ne dispose d'aucun instantané non chiffré ou s'il est indisponible.
+
++
+image:clean-restore-systems.png["Capture d'écran de l'interface de sélection des systèmes."]
+
+. Développez la section **Agent de console**. Sélectionnez l'agent de console dans le menu déroulant qui est déployé dans l'IRE.
+. Développez la section *Compute*.
++
+.. Fournissez les informations d'identification pour authentifier le serveur vCenter : *adresse IP* ou nom de domaine complet (FQDN), *port*, *nom d'utilisateur* et *mot de passe*.
+.. Sélectionnez **S'authentifier** pour confirmer vos identifiants. Attendez que l'interface utilisateur confirme vos identifiants avant de continuer.
+.. Sélectionnez le *Datacenter*, le *Cluster* et l'*ESXi host* sur lesquels les machines virtuelles seront déployées.
+.. Sélectionnez les hôtes ESXi *Datastore* et *Network*.
+.. Saisissez la *plage d'adresses IP* et la *passerelle* pour les machines virtuelles.
++
+image:clean-restore-compute.png["Capture d'écran de l'interface de sélection des ressources de calcul."]
+
+
+
+. Développez la section *VMs*, préremplie en fonction de vos saisies dans la section *Compute*. Sélectionnez les VMs situées sur l’hôte ESXi que vous utiliserez pour l’analyse des logiciels malveillants lors de la restauration propre. Indiquez le *User name* et le *Password* pour chaque VM sélectionnée.
+. Sélectionnez **Ajouter** pour créer l'IRE. NetApp Ransomware Resilience teste la connexion après que vous ayez sélectionné Ajouter ; ce processus peut prendre un certain temps.
+
+
+--
+====
+Vous pouvez suivre la progression. Dans l'onglet Paramètres, sélectionnez **Environnements de récupération isolés**. La page Environnements de récupération isolés affiche tous les IRE et leur statut. Sélectionnez **Afficher les tâches** pour obtenir le détail de toutes les tâches relatives à cet environnement.
+
+Vous pouvez modifier les systèmes d'un IRE après sa création. Dans l'onglet Paramètres, sélectionnez **Environnements de récupération isolés**. Localisez l'IRE à modifier, sélectionnez le menu Actions `...` puis **Modifier**. Procédez à la modification des systèmes. Sélectionnez **Enregistrer** une fois terminé.
+
+
+
+== Supprimer un environnement de récupération isolé
+
+Vous ne pouvez pas supprimer un IRE pendant une opération de restauration en cours ; vous pouvez annuler l’opération de restauration ou attendre que la restauration soit terminée, puis supprimer l’IRE.
+
+
+IMPORTANT: Si vous supprimez l'IRE, cela supprime également le SVM de la salle blanche et le volume de métadonnées. Une fois ces éléments supprimés, vous ne pourrez plus générer de rapports pour la restauration propre.
+
+. Accédez aux **Paramètres**.
+. Dans la carte Restauration propre, sélectionnez **Gérer**.
+. Identifiez la salle blanche que vous souhaitez supprimer. Dans la colonne du menu Actions de cette salle, sélectionnez les trois points `...` puis **Supprimer**.
+. Dans la boîte de dialogue, sélectionnez **Supprimer** pour confirmer l'opération.
+

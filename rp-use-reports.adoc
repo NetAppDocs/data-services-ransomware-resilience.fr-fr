@@ -12,29 +12,25 @@ summary: Grâce à NetApp Ransomware Resilience, vous pouvez télécharger des r
 
 
 [role="lead"]
-NetApp Ransomware Resilience fournit des rapports aux formats CSV et JSON qui affichent des détails sur les volumes pris en charge et non pris en charge, les exercices de préparation aux attaques, la protection, les alertes et la récupération. Avec les rapports, vous pouvez enregistrer et consulter hors ligne des rapports sur les exercices, la posture de protection, les alertes et les événements de récupération.
+NetApp Ransomware Resilience fournit des rapports au format JSON qui détaillent les volumes pris en charge et non pris en charge, les exercices de préparation aux attaques, la protection, les alertes et la récupération, vous permettant d’évaluer et d’examiner hors ligne les événements liés aux ransomwares et votre niveau de préparation.
 
 
 TIP: Avant de télécharger les fichiers, actualisez le tableau de bord pour que vos rapports intègrent les données les plus récentes.
 
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet, d'administrateur de résilience aux ransomwares ou de visualiseur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
 
-*Quelles données pouvez-vous télécharger ?*  Vous pouvez télécharger des fichiers à partir de n’importe quelle option du menu principal :
+*Quels rapports puis-je télécharger ?*
 
 * **Résumé** : Comprend des listes de charges de travail prises en charge et non prises en charge, des actions recommandées pour améliorer votre posture de cyber-résilience et des informations capturées dans le tableau de bord de résilience aux ransomwares.
 * *Protection* : Comprend l’état et les détails de toutes les charges de travail, y compris le nombre total de charges de travail protégées et à risque.
 * *Alertes* : inclut l'état et les détails de toutes les alertes, y compris le nombre total d'alertes et d'instantanés automatisés.
 * *Récupération* : inclut l'état et les détails de toutes les charges de travail qui doivent être restaurées, y compris le nombre total de charges de travail marquées « Restauration nécessaire », « En cours », « Échec de la restauration » et « Restaurée avec succès ».
-* *Rapports* : Vous pouvez exporter des données depuis n'importe quelle page et télécharger les fichiers.
+* *Exercices de préparation* : Comprend les résultats d’attaques simulées afin de mettre en évidence les points à améliorer.
+* *Restauration propre* : Inclut des détails sur les charges de travail restaurées avec une restauration propre.
 +
-
-NOTE: Vous pouvez télécharger les rapports d'exercice de préparation uniquement à partir de la page *Rapports*.
-
+Vous devez disposer d'un environnement de récupération isolé (IRE) actif pour générer des rapports de restauration complets. Les rapports de restauration complets ne sont pas disponibles après la suppression de l'IRE.
 
 
-Si vous téléchargez des fichiers CSV ou JSON à partir de la page Protection, Alertes ou Récupération, les données affichent uniquement les données de cette page.
-
-Les fichiers CSV ou JSON incluent des données pour toutes les charges de travail sur tous les systèmes de console.
 
 .Étapes
 . Dans la navigation de gauche de la console, sélectionnez *Protection* > *Résilience aux ransomwares*.

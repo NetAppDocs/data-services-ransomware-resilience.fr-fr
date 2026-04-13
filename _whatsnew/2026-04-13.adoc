@@ -1,0 +1,27 @@
+= Restauration propre
+:allow-uri-read: 
+
+
+
+
+=== Restauration propre
+
+Ransomware Resilience prend désormais en charge les restaurations propres, une nouvelle option de récupération qui vous aide à vous remettre rapidement et facilement des attaques de ransomware. Les restaurations propres offrent des flux de travail guidés qui identifient les points de restauration optimaux pour remettre vos charges de travail en service tout en minimisant l'interruption. Les flux de travail dans la restauration propre fournissent également des informations au niveau fichier sur vos données, garantissant que vous pouvez restaurer des charges de travail exemptes de logiciels malveillants, ce qui empêche toute réinfection et minimise la perte de données.
+
+Pour en savoir plus sur les configurations prises en charge et sur la manière de configurer votre système pour une restauration complète, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Créer un environnement de récupération isolé"^]. Pour en savoir plus sur la procédure de restauration complète, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore-recover["Récupérez les charges de travail avec une restauration propre"^].
+
+
+
+=== Prise en charge SIEM pour Splunk Enterprise
+
+Ransomware Resilience offre désormais une prise en charge de la gestion des informations et des événements de sécurité (SIEM) pour Splunk Enterprise, vous permettant de centraliser les données de journalisation et d'événements et de rationaliser l'analyse et la détection des menaces.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html["Connectez NetApp Ransomware Resilience à un SIEM"^].
+
+
+
+=== Amélioration de l'activité des utilisateurs
+
+Les informations relatives aux incidents de violation de données sont désormais conservées pendant 13 mois après un incident, ce qui permet une conservation des données plus longue pour vos besoins de reporting.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-user-behavior.html["Découvrez la détection de l'activité des utilisateurs"^].
