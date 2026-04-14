@@ -16,15 +16,13 @@ summary: 'Ransomware Resilience vous permet de contrôler et d"assainir vos char
 [role="lead"]
 Avec NetApp Ransomware Resilience, vous pouvez effectuer une récupération guidée après une attaque de ransomware par chiffrement grâce à une restauration propre. La restauration propre identifie les chemins de récupération optimisés afin de minimiser la perte de données et de remettre vos charges de travail en ligne dans les plus brefs délais.
 
-L'option de restauration propre est une alternative à la xref:task-custom-restore.html[option de restauration personnalisée].
-
 
 
 == Avant de commencer
 
-Vous devez avoir configuré un link:task-clean-restore.html["environnement de récupération isolé"^] avant de pouvoir effectuer une restauration complète.
-
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
+
+Vous devez avoir configuré un link:task-clean-restore.html["environnement de récupération isolé"^] avant de pouvoir effectuer une restauration complète.
 
 
 
