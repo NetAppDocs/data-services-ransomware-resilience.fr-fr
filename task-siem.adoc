@@ -47,11 +47,24 @@ Ransomware Resilience peut envoyer les données d’événement suivantes à vot
 +
 ** *incident_id* : l'ID d'incident généré par Ransomware Resilience pour le volume attaqué dans Ransomware Resilience.
 ** *alert_id* : l'ID généré par Ransomware Resilience pour la charge de travail.
-** *gravité* : L'un des niveaux d'alerte suivants : « CRITIQUE », « ÉLEVÉ », « MOYEN », « FAIBLE ».
+** *gravité* : Le niveau de gravité des alertes : « CRITICAL », « HIGH », « MEDIUM », « LOW ».
 ** *description* : Détails sur l'alerte détectée, par exemple : « Une attaque potentielle de rançongiciel détectée sur la charge de travail arp_learning_mode_test_2630 »
+** *titre* : Nom d’affichage de l’alerte détectée
+** *criticité* : Une évaluation de la criticité du volume dans votre environnement : « CRITICAL », « IMPORTANT », « STANDARD ».
+** *incident_status*: Le statut actif de l'incident, qui peut être : « NEW », « RESOLVED », « DISMISSED », « AUTO_RESOLVED ».
+** *first_detected* : Horodatage indiquant le moment où l’incident a été détecté pour la première fois par Ransomware Resilience.
+** *is_readiness_drill* : Valeur booléenne indiquant si l’alerte est un exercice ou un incident réel.
+** *protocole* : Le protocole utilisé par le volume. Les valeurs possibles sont « iSCSI », « NFS » et « SMB ».
+** *alert_type* : Le type de menace détectée. Les valeurs possibles sont « Chiffrement », « Destruction de données », « Fuite de données » et « Comportement suspect de l’utilisateur ».
+** *user_name* : Le nom d’utilisateur de l’utilisateur suspect associé à l’alerte.
+** *user_id* : L’identifiant de l’utilisateur suspect associé à l’alerte.
+** *client_ips* : Liste des adresses IP des clients associées à l’activité suspecte, applicable uniquement aux alertes NFS.
 
 
 
+
+
+NOTE: Les champs *user_name* et *user_id* ne sont pertinents que si vous avez configuré xref:concept-user-behavior.adoc[détection du comportement de l'utilisateur].
 
 
 
