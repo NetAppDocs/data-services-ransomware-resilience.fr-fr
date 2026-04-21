@@ -26,7 +26,7 @@ Pour plus de détails sur les actions que vous pouvez encore effectuer après l'
 
 == Désactiver les politiques de protection
 
-Si vous souhaitez arrêter d’utiliser les stratégies de protection appliquées aux charges de travail, vous pouvez les désactiver à l’aide du Gestionnaire système, des appels API ou de l’interface de ligne de commande.
+Si vous souhaitez cesser d'utiliser les stratégies de protection appliquées aux charges de travail, vous pouvez les désactiver à l'aide de System Manager, d'appels d'API ou de la CLI.
 
 Vous pouvez désactiver les stratégies FPolicy et de sauvegarde dans Ransomware Resilience en appliquant une stratégie différente qui ne les inclut pas.  Pour obtenir des instructions sur la définition des politiques de protection, reportez-vous àlink:rp-use-protect.html["Protégez les charges de travail contre les attaques de ransomware"] .
 

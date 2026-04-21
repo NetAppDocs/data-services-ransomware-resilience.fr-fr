@@ -1,20 +1,20 @@
 ---
 indexpage:
   title: Documentation sur la NetApp Ransomware Resilience
-  summary: NetApp Ransomware Resilience protège, détecte et prend en charge la récupération
-    des charges de travail des applications et des partages de fichiers contre les
-    menaces de ransomware dans le stockage sur site et dans le cloud. Ransomware Resilience
-    permet une sauvegarde et une restauration sécurisées, aidant les organisations
-    à protéger leurs données critiques et à maintenir la continuité de leurs activités
-    pour Oracle, les banques de données VM, le stockage NAS, et bien plus encore.
+  summary: NetApp Ransomware Resilience protège, détecte et prend en charge la restauration
+    des charges de travail menacées par des ransomwares, aussi bien sur site que dans
+    le stockage cloud. Ransomware Resilience permet une sauvegarde et une restauration
+    sécurisées, aidant ainsi les entreprises à protéger les données stratégiques et
+    à assurer la continuité de leurs activités pour Oracle, les datastores de VM,
+    le stockage NAS, et plus encore.
   keywords: bluexp, ransomware, anti-ransomware, cyber attack, netapp, ontap, amazon
     web services, aws, storagegrid, protection, resilience
-  lead: NetApp Ransomware Resilience protège, détecte et prend en charge la récupération
-    des charges de travail des applications et des partages de fichiers contre les
-    menaces de ransomware dans le stockage sur site et dans le cloud. Ransomware Resilience
-    permet une sauvegarde et une restauration sécurisées, aidant les organisations
-    à protéger leurs données critiques et à maintenir la continuité de leurs activités
-    pour Oracle, les banques de données VM, le stockage NAS, et bien plus encore.
+  lead: NetApp Ransomware Resilience protège, détecte et prend en charge la restauration
+    des charges de travail menacées par des ransomwares, aussi bien sur site que dans
+    le stockage cloud. Ransomware Resilience permet une sauvegarde et une restauration
+    sécurisées, aidant ainsi les entreprises à protéger les données stratégiques et
+    à assurer la continuité de leurs activités pour Oracle, les datastores de VM,
+    le stockage NAS, et plus encore.
   tiles:
   - title: Commencer
     links:

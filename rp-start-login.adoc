@@ -41,8 +41,5 @@ Sinon, le tableau de bord de résilience aux ransomwares apparaît.
 +
 image:screen-dashboard.png["Capture d'écran du tableau de bord de résilience aux ransomwares"]
 
-. Si vous ne l’avez pas déjà fait, sélectionnez l’option *Découvrir les charges de travail*.
-+
-link:rp-start-discover.html["Découvrir les charges de travail"] .
-
+. Si c’est la première fois que vous utilisez Ransomware Resilience, link:rp-start-discover.html["découvrir les charges de travail"].
 

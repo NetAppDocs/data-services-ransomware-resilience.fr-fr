@@ -39,11 +39,11 @@ image:concept-security-layer-diagram.png["Diagramme de la couche de sécurité"]
 
 Ransomware Resilience offre une utilisation complète de plusieurs technologies NetApp afin que votre administrateur de stockage, administrateur de sécurité des données ou ingénieur des opérations de sécurité puisse atteindre les objectifs suivants :
 
-* *Identifiez* les charges de travail basées sur des applications, de partage de fichiers ou gérées par VMware dans les systèmes NAS et SAN sur site NetApp à travers la NetApp Console, les projets et les agents Console. Après la découverte des charges de travail, Ransomware Resilience identifie des opportunités pour améliorer la résilience face aux ransomwares.
+*  les charges de travail sur les systèmes NAS et SAN NetApp locaux, au sein de la NetApp Console, des projets et des agents de la Console. Après la découverte des charges de travail, NetApp Ransomware Resilience identifie des opportunités pour améliorer la résilience face aux ransomwares.
 * *Protégez* vos charges de travail en activant les sauvegardes, les copies instantanées et les stratégies de protection contre les ransomwares sur vos données.
 * *Détecter* les anomalies qui pourraient être des attaques de ransomware.note de bas de page : [Bien qu'il soit possible qu'une attaque passe inaperçue, nos recherches indiquent que la technologie NetApp a permis un degré élevé de détection de certaines attaques de ransomware basées sur le chiffrement de fichiers.]
 * Répondre aux potentielles attaques de ransomware en lançant automatiquement une capture instantanée verrouillée afin que la copie ne puisse pas être supprimée accidentellement ou malicieusement. Vos données de sauvegarde resteront immuables et protégées de bout en bout contre les attaques de ransomware, aussi bien à la source qu'à destination.
-* *Récupérez* vos charges de travail qui contribuent à accélérer la disponibilité des charges de travail en orchestrant plusieurs technologies NetApp .  Vous pouvez choisir de récupérer des volumes spécifiques.  Ransomware Resilience fournit des recommandations sur les meilleures options.
+* *Restaurez* vos charges de travail pour optimiser leur disponibilité grâce à l'orchestration de plusieurs technologies NetApp. Vous pouvez choisir de récupérer des volumes spécifiques. Ransomware Resilience vous propose des recommandations sur les meilleures options.
 * *Gouverner* : Mettez en œuvre votre stratégie de protection contre les ransomwares et surveillez les résultats.
 
 
@@ -119,8 +119,8 @@ image:diagram-rp-architecture-preview3.png["Diagramme montrant l'architecture de
 
 
 | *IDENTIFIER*  a| 
-* Trouve toutes les données NAS (protocoles NFS et CIFS) et SAN (FC, iSCSI et NVMe) sur site et dans le cloud des clients dans les systèmes attachés à la Console.
-* Identifie les données client à partir des API ONTAP et des services NetApp Backup and Recovery et les associe aux charges de travail. En savoir plus https://docs.netapp.com/us-en/ontap-family/["ONTAP"^].
+* Trouve toutes les données NAS (protocoles NFS et CIFS) et SAN (FC, iSCSI et NVMe) sur site et dans le cloud des systèmes connectés à la Console.
+* Identifie les données provenant des API des services ONTAP et NetApp Backup and Recovery et les associe aux charges de travail. En savoir plus sur https://docs.netapp.com/us-en/ontap-family/["ONTAP"^].
 * Découvre le niveau de protection actuel de chaque volume des copies instantanées NetApp et des politiques de sauvegarde, ainsi que toutes les capacités de détection intégrées. Ransomware Resilience associe ensuite cette posture de protection aux charges de travail en utilisant Backup and Recovery, les services ONTAP et les technologies NetApp telles que la protection autonome contre les ransomwares (ARP ou ARP/AI selon votre version ONTAP ), FPolicy, les politiques de sauvegarde et les politiques de snapshot.  Apprenez-en davantage sur https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Protection autonome contre les ransomwares"^] , https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["NetApp Backup and Recovery"^] , et https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["Politique ONTAP"^] .
 * Attribue une priorité métier à chaque charge de travail en fonction des niveaux de protection découverts automatiquement et recommande des politiques de protection pour les charges de travail en fonction de leur priorité métier.  La priorité de la charge de travail est basée sur les fréquences d’instantanés déjà appliquées à chaque volume associé à la charge de travail.
 
@@ -244,5 +244,5 @@ Ransomware Resilience protège les charges de travail basées sur les applicatio
 Il pourrait être utile de comprendre certains termes liés à la protection contre les ransomwares.
 
 * *Protection* : La protection dans Ransomware Resilience signifie garantir que des instantanés et des sauvegardes immuables se produisent régulièrement dans un domaine de sécurité différent à l'aide de politiques de protection.
-* *Charge de travail* : Une charge de travail dans Ransomware Resilience peut inclure des bases de données Oracle, des datastores VMware ou des partages de fichiers.
+* *Charge de travail* : Une charge de travail est un regroupement logique de ressources de stockage au sein d’un système, par exemple une base de données Oracle, un datastore VMware ou un partage de fichiers.
 
