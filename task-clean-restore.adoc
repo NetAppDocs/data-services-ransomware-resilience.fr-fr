@@ -171,7 +171,6 @@ NOTE: Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, igno
 
 .table de routage de l'environnement de production
 * La table de routage de production doit autoriser le trafic du sous-réseau IRE vers l'adresse IP LIF des données de restauration propres. Vous devez ajouter cette route à la table de routage de production.
-* Les groupes de sécurité et les pare-feu du cluster ONTAP de production doivent autoriser le trafic entrant NFSv4 et NFSv3 vers l'adresse IP LIF des données de restauration propres. Le pare-feu doit être ouvert au trafic entrant provenant de la plage CIDR IRE :
 +
 [cols="1,1,1,1"]
 |===
@@ -195,6 +194,10 @@ NOTE: Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, igno
 
 | TCP et UDP | 4049 | Plage CIDR IRE VPC | Accès NFSv3 depuis IRE 
 |===
+
+
+.Pare-feu IRE
+* Vous devez créer un pare-feu distinct pour gérer le trafic entrant pour le crr-data-LIF-IP. Ce pare-feu doit autoriser les montages NFSv3 et NFSv4 provenant de la plage CIDR du VPC IRE.
 
 
 .Tableau de routage IRE
@@ -307,7 +310,6 @@ NOTE: Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, igno
 
 .table de routage de l'environnement de production
 * La table de routage de production doit autoriser le trafic du sous-réseau IRE vers l'adresse IP LIF des données de restauration propres. Vous devez ajouter cette route à la table de routage de production.
-* Les groupes de sécurité et les pare-feu du cluster ONTAP de production doivent autoriser le trafic entrant NFSv4 et NFSv3 vers l'adresse IP LIF des données de restauration propres. Le pare-feu doit être ouvert au trafic entrant provenant de la plage CIDR IRE :
 +
 [cols="1,1,1,1"]
 |===
@@ -331,6 +333,10 @@ NOTE: Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, igno
 
 | TCP et UDP | 4049 | Plage CIDR IRE VPC | Accès NFSv3 depuis IRE 
 |===
+
+
+.Pare-feu IRE
+* Vous devez créer un pare-feu distinct pour gérer le trafic entrant pour le crr-data-LIF-IP. Ce pare-feu doit autoriser les montages NFSv3 et NFSv4 provenant de la plage CIDR du VPC IRE.
 
 
 .Tableau de routage IRE
