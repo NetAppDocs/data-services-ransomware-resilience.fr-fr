@@ -16,7 +16,7 @@ summary: 'Ransomware Resilience vous permet d"afficher des informations pertinen
 [role="lead"]
 Les attaques de ransomware peuvent bloquer l’accès à vos données et les attaquants peuvent demander une rançon en échange de la divulgation des données ou de leur décryptage.  Selon l’IDC, il n’est pas rare que les victimes de ransomware subissent plusieurs attaques de ransomware.  L'attaque peut perturber l'accès à vos données pendant une durée allant d'un jour à plusieurs semaines.
 
-NetApp Ransomware Resilience protège vos données contre les attaques de ransomware. Dans Ransomware Resilience, la protection est disponible pour les charges de travail applicatives Oracle, les datastores de machines virtuelles et les partages de fichiers pour le stockage NAS (protocoles NFS et CIFS) et le stockage SAN (protocoles FC, iSCSI et NVMe). Ransomware Resilience est pris en charge dans le stockage sur site ainsi que Cloud Volumes ONTAP pour Amazon Web Services, Cloud Volumes ONTAP pour Google Cloud, Cloud Volumes ONTAP pour Microsoft Azure, Azure NetApp Files, et Amazon FSx for NetApp ONTAP à travers la NetApp Console. Vous pouvez sauvegarder des données vers Amazon Web Services, Google Cloud, Microsoft Azure et NetApp StorageGRID.
+NetApp Ransomware Resilience protège vos données contre les attaques de ransomware. Dans Ransomware Resilience, la protection est disponible pour les partages de fichiers pour le stockage NAS (protocoles NFS et CIFS) et le stockage SAN (protocoles FC, iSCSI et NVMe). Ransomware Resilience est pris en charge dans le stockage sur site ainsi que dans Cloud Volumes ONTAP for Amazon Web Services, Cloud Volumes ONTAP for Google Cloud, Cloud Volumes ONTAP for Microsoft Azure, Azure NetApp Files, et Amazon FSx for NetApp ONTAP via la NetApp Console. Vous pouvez sauvegarder des données sur Amazon Web Services, Google Cloud, Microsoft Azure et NetApp StorageGRID.
 
 
 
@@ -27,7 +27,6 @@ Votre posture de sécurité comprend généralement plusieurs couches de défens
 * *Couche la plus externe* : il s'agit de votre première ligne de défense utilisant des pare-feu, des systèmes de détection d'intrusion et des réseaux privés virtuels pour protéger les limites du réseau.
 * *Sécurité du réseau* : Cette couche s'appuie sur la base de la segmentation du réseau, de la surveillance du trafic et du chiffrement.
 * *Sécurité des identités* : utilise des méthodes d'authentification, des contrôles d'accès et une gestion des identités pour garantir que seuls les utilisateurs autorisés peuvent accéder aux ressources sensibles.
-* *Sécurité des applications* : protège les applications logicielles à l'aide de pratiques de codage sécurisées, de tests de sécurité et d'autoprotection des applications d'exécution.
 * *Sécurité des données* : Protégez vos données grâce à des stratégies de protection des données, de sauvegarde et de récupération.  La résilience aux ransomwares opère sur cette couche.
 
 
@@ -58,7 +57,7 @@ Ransomware Resilience offre les avantages suivants :
 * Découvre les charges de travail et leurs planifications de snapshots et de sauvegarde existantes, et classe leur importance relative.
 * Évalue votre niveau de protection contre les ransomwares et l'affiche dans un tableau de bord facile à comprendre, tout en fournissant des recommandations pour améliorer la protection.
 * Applique les recommandations de protection des données basées sur l'IA/ML avec un accès en un clic.
-* Protège les données dans les charges de travail applicatives telles que les datastores Oracle et VMware, ainsi que les partages de fichiers.
+* Protège les données dans les partages de fichiers.
 * Détecte les attaques de ransomware sur les données en temps réel sur le stockage principal à l'aide de la technologie d'IA.
 * Lance des actions automatisées en réponse aux attaques potentielles détectées en créant des copies instantanées et en lançant des alertes sur une activité anormale.
 * Applique une stratégie de récupération personnalisée pour respecter les objectifs de point de récupération (RPO). Ransomware Resilience orchestre la récupération suite à des incidents de ransomware grâce à NetApp Backup and Recovery.
@@ -150,7 +149,7 @@ image:diagram-rp-architecture-preview3.png["Diagramme montrant l'architecture de
 
 | *RÉCUPÉRER*  a| 
 * Détermine le meilleur instantané ou la meilleure sauvegarde et recommande le meilleur point de récupération réel (RPA) en utilisant les technologies et services Backup and Recovery, ONTAP, Autonomous Ransomware Protection (ARP ou ARP/AI selon votre version ONTAP ) et FPolicy.
-* Orchestre la récupération des charges de travail, notamment les machines virtuelles, les partages de fichiers, le stockage en blocs et les bases de données avec cohérence des applications.
+* Orchestre la récupération des charges de travail, y compris les machines virtuelles, les partages de fichiers et le stockage bloc.
 
 
 
@@ -223,18 +222,10 @@ NOTE: L'utilisation d'ARP/AI dans ONTAP nécessite ONTAP 9.16 ou une version sup
 
 === Sources de données de charge de travail prises en charge
 
-Ransomware Resilience protège les charges de travail basées sur les applications suivantes sur les volumes de données principaux :
+Ransomware Resilience protège les charges de travail suivantes sur les volumes de données principaux :
 
 * Stockage en bloc
-* Bases de données:
-+
-** Microsoft SQL Server
-** Oracle
-** PostgreSQL
-
-
-* Partages de fichiers NetApp
-* Banques de données VMware
+* Partages de fichiers
 
 
 
@@ -244,5 +235,5 @@ Ransomware Resilience protège les charges de travail basées sur les applicatio
 Il pourrait être utile de comprendre certains termes liés à la protection contre les ransomwares.
 
 * *Protection* : La protection dans Ransomware Resilience signifie garantir que des instantanés et des sauvegardes immuables se produisent régulièrement dans un domaine de sécurité différent à l'aide de politiques de protection.
-* *Charge de travail* : Une charge de travail est un regroupement logique de ressources de stockage au sein d’un système, par exemple une base de données Oracle, un datastore VMware ou un partage de fichiers.
+* *Charge de travail* : Une charge de travail est un regroupement logique de ressources de stockage au sein d’un système, par exemple un partage de fichiers.
 

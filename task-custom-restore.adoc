@@ -26,8 +26,7 @@ TIP: Ransomware Resilience prend également en charge une xref:task-clean-restor
 L'administrateur du stockage de sécurité peut récupérer des données à différents niveaux :
 
 * Récupérer tous les volumes
-* Récupérer une application au niveau du volume ou au niveau du fichier et du dossier.
-* Récupérer un partage de fichiers au niveau du volume, du répertoire ou du fichier/dossier.
+* Récupérer un partage de fichiers au niveau du volume, du répertoire ou du fichier.
 * Récupérer à partir d’une banque de données au niveau d’une machine virtuelle.
 
 
@@ -54,7 +53,7 @@ TIP: Vous pouvez sélectionner jusqu'à 100 fichiers ou un seul dossier.
 
 
 
-. Continuez avec l’une des procédures suivantes selon que vous avez choisi l’application, le volume ou le fichier.
+. Poursuivez avec l'une des procédures suivantes selon que vous ayez choisi un volume ou un fichier.
 
 
 
@@ -62,7 +61,7 @@ TIP: Vous pouvez sélectionner jusqu'à 100 fichiers ou un seul dossier.
 === Restaurer tous les volumes
 
 . Dans le menu Résilience aux ransomwares, sélectionnez *Récupération*.
-. Sélectionnez une charge de travail qui est dans l’état « Restauration nécessaire ».
+. Sélectionnez une charge de travail dans l'état « Restore needed ».
 . Pour restaurer, sélectionnez *Restaurer*.
 . Sur la page Restaurer, dans l’étendue de la restauration, sélectionnez *Tous les volumes*.
 +
@@ -98,10 +97,10 @@ TIP: Le nouveau nom de volume apparaît sous la forme préfixe + nom de volume d
 
 
 
-=== Restaurer une charge de travail d'application au niveau du volume
+=== Restaurez une charge de travail au niveau du volume
 
 . Dans le menu Résilience aux ransomwares, sélectionnez *Récupération*.
-. Sélectionnez une charge de travail d’application qui est dans l’état « Restauration nécessaire ».
+. Sélectionnez une charge de travail dans l'état « Restore needed ».
 . Pour restaurer, sélectionnez *Restaurer*.
 . Sur la page Restaurer, dans l’étendue de la restauration, sélectionnez *Par volume*.
 +
@@ -138,11 +137,11 @@ TIP: Le nouveau nom de volume apparaît comme le nom du volume d'origine + le no
 
 
 
-=== Restaurer une charge de travail d'application au niveau du fichier
+=== Restaurez une charge de travail au niveau du fichier
 
-Avant de restaurer une charge de travail d’application au niveau du fichier, vous pouvez afficher une liste des fichiers impactés.  Vous pouvez accéder à la page Alertes pour télécharger une liste des fichiers impactés.  Utilisez ensuite la page de récupération pour télécharger la liste et choisir les fichiers à restaurer.
+Avant de restaurer une charge de travail au niveau des fichiers, vous pouvez consulter une liste des fichiers concernés. Vous pouvez accéder à la page Alertes pour télécharger une liste des fichiers concernés. Utilisez ensuite la page Récupération pour importer la liste et choisir les fichiers à restaurer.
 
-Vous pouvez restaurer une charge de travail d'application au niveau du fichier sur le même système ou sur un système différent.
+Vous pouvez restaurer une charge de travail au niveau du fichier sur le même système ou sur un système différent.
 
 
 
@@ -155,7 +154,7 @@ TIP: Si un volume comporte plusieurs alertes, vous devez télécharger la liste 
 
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez *Alertes*.
-. Sur la page Alertes, triez les résultats par charge de travail pour afficher les alertes pour la charge de travail d’application que vous souhaitez restaurer.
+. Sur la page Alertes, triez les résultats par charge de travail pour afficher les alertes relatives à la charge de travail que vous souhaitez restaurer.
 . Dans la liste des alertes pour cette charge de travail, sélectionnez une alerte.
 . Pour cette alerte, sélectionnez un seul incident.
 +
@@ -173,7 +172,7 @@ Après avoir évalué les fichiers concernés, vous pouvez les restaurer.
 
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez *Récupération*.
-. Sélectionnez une charge de travail d’application qui est dans l’état « Restauration nécessaire ».
+. Sélectionnez une charge de travail dans l'état « Restore needed ».
 . Sélectionnez *Restaurer*.
 . Sur la page Restaurer, dans l’étendue Restaurer, sélectionnez *Par fichier*.
 . Dans la liste des volumes, sélectionnez le volume qui contient les fichiers que vous souhaitez restaurer.

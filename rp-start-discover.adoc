@@ -14,7 +14,7 @@ summary: Lors de la découverte, Ransomware Resilience analyse tous les volumes 
 [role="lead"]
 Avant de pouvoir utiliser NetApp Ransomware Resilience, il est nécessaire de découvrir les données de charge de travail. Lors de la découverte, Ransomware Resilience analyse tous les volumes et fichiers des systèmes sur tous les agents et projets de console au sein d'une organisation.
 
-Dans le tableau de bord Discovery, Ransomware Resilience affiche les configurations système prises en charge et celles qui ne le sont pas. Ransomware Resilience évalue les applications Oracle, les datastores VMware, les partages de fichiers et le stockage par blocs.
+Dans le tableau de bord Discovery, Ransomware Resilience affiche les configurations système prises en charge et non prises en charge. Ransomware Resilience évalue les partages de fichiers et le stockage bloc.
 
 
 NOTE: Ransomware Resilience ne découvre pas les systèmes avec des volumes utilisant FlexGroup.

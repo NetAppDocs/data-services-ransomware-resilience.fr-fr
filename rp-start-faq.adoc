@@ -80,9 +80,7 @@ Pour la gestion des licences et la facturation, Ransomware Resilience peut s'int
 == Charges de travail
 
 .Qu’est-ce qu’une charge de travail dans le contexte de la résilience aux ransomwares ?
-Une charge de travail est une application, une machine virtuelle ou un partage de fichiers. Une charge de travail inclut tous les volumes utilisés par une seule instance d’application.
-
-Par exemple, prenons le cas d'une base de données Oracle déployée sur ora3.host.com avec `vol1` contenant des données et `vol2` contenant des journaux. Les deux volumes constituent la charge de travail de cette instance de base de données Oracle.
+Une charge de travail est une machine virtuelle ou un partage de fichiers.
 
 .Comment Ransomware Resilience priorise-t-il les données de charge de travail ?
 La priorité de la charge de travail (critique, standard, importante) est déterminée par les fréquences de snapshots déjà appliquées à chaque volume associé à la charge de travail et aux sauvegardes planifiées.

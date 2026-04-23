@@ -22,7 +22,6 @@ Une fois que vous aurez compris l’étendue de votre protection actuelle, link:
 
 L’une des premières étapes de la protection des charges de travail consiste à afficher vos charges de travail actuelles et leur état de protection.  Vous pouvez voir les types de charges de travail suivants :
 
-* Charges de travail des applications
 * Bloquer les charges de travail
 * Charges de travail de partage de fichiers
 * Charges de travail des machines virtuelles
