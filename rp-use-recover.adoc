@@ -54,6 +54,6 @@ image:screen-recovery2.png["Page de récupération"]
 
 Après avoir évalué les charges de travail, vous avez deux options pour restaurer votre charge de travail :
 
-* xref:task-custom-restore.html[Récupérez avec une restauration personnalisée]
 * xref:task-clean-restore.html[Récupérez avec une restauration propre]
+* xref:task-custom-restore.html[Récupérez avec une restauration personnalisée]
 
