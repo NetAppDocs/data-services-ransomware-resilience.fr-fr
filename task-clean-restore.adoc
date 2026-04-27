@@ -457,7 +457,7 @@ image:diagram-clean-recovery-on-prem.png["Schéma de restauration propre du clou
 ** VMware Tools doit être installé et en cours d'exécution.
 ** Le protocole SSH doit être activé.
 ** Vous devez avoir installé nfs-common.
-** Docker doit être installé et en cours d'exécution.
+** Docker version 20.x ou supérieure doit être installé et en cours d'exécution.
 ** Vous devez disposer d'un minimum de 40 Go d'espace libre.
 
 
