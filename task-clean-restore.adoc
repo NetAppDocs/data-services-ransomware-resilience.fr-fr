@@ -518,8 +518,9 @@ La procédure de création d'une salle de reprise d'activité isolée diffère s
 --
 . Dans Ransomware Resilience, sélectionnez **Paramètres**.
 . Dans la carte Restauration propre, sélectionnez **Ajouter** pour créer l'environnement de récupération isolé.
-. Pour un IRE basé sur le cloud, sélectionnez **Amazon Web Services**.
+. Dans la section Type, choisissez *Nettoyage uniquement*.
 . Développez la section **Nom**. Saisissez un **Nom** pour l’environnement.
+. Pour un IRE basé sur le cloud, sélectionnez **Amazon Web Services**.
 . Développez la section *Systèmes*. Choisissez les systèmes à connecter à l'IRE. Pour chaque système sélectionné, vous devez indiquer l'adresse IP, le masque de sous-réseau et la passerelle de la machine virtuelle de stockage.
 +
 
@@ -549,8 +550,9 @@ Ransomware Resilience teste la connexion après que vous ayez sélectionné ajou
 --
 . Dans Ransomware Resilience, sélectionnez **Paramètres**.
 . Dans la carte Clean restores, sélectionnez **Ajouter** s'il s'agit de votre premier environnement ou **Gérer** si vous en avez déjà créé un.
-. Pour l'emplacement, sélectionnez **Sur site**.
+. Dans la section Type, choisissez *Nettoyage uniquement*.
 . Développez la section *Nom*. Attribuez un **Nom** à l'IRE.
+. Pour l'emplacement, sélectionnez **Sur site**.
 . Développez la section *Systèmes*. Sélectionnez les systèmes à connecter à l'IRE. Attribuez une adresse IP de machine virtuelle de stockage, un masque de sous-réseau et une passerelle à chaque système dont les charges de travail doivent être récupérées dans l'IRE.
 +
 Chaque système sélectionné doit posséder une adresse IP assignée. Vous pouvez sélectionner des systèmes principaux ou secondaires. Les systèmes secondaires peuvent être utilisés pour l'analyse et la restauration si le système principal ne dispose d'aucun instantané non chiffré ou s'il est indisponible.

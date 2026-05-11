@@ -1,0 +1,35 @@
+= Améliorations de la restauration propre
+:allow-uri-read: 
+
+
+
+
+=== Améliorations de la restauration propre
+
+La restauration propre prend désormais en charge la récupération sur des clusters alternatifs et l’analyse au-delà de sept jours.
+
+link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Récupérez les charges de travail avec une restauration propre"^].
+
+
+
+=== Assistance Google SecOps SIEM
+
+Ransomware Resilience prend désormais en charge la gestion des informations et des événements de sécurité (SIEM) avec Google SecOps, vous permettant d'envoyer automatiquement des données à Google SecOps pour une analyse et une détection des menaces simplifiées.
+
+Pour plus d'informations sur la configuration, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html["Connectez NetApp Ransomware Resilience à un SIEM"^].
+
+
+
+=== La prise en charge d'Azure NetApp Files est désormais disponible pour tous
+
+Ransomware Resilience prend désormais en charge les systèmes Azure NetApp Files, vous permettant de détecter et de contrer efficacement les menaces de ransomware dans Azure NetApp Files. Lors de la découverte des charges de travail, Ransomware Resilience présente désormais Azure NetApp Files et les affiche dans le tableau de bord de protection. La prise en charge d’Azure NetApp Files par Ransomware Resilience inclut des stratégies de détection et de protection uniquement avec des instantanés. La prise en charge d’Azure NetApp Files est désormais généralement disponible (GA).
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["En savoir plus sur la résilience aux ransomwares"^].
+
+
+
+=== Prise en charge SOAR pour le blocage des utilisateurs
+
+Ransomware Resilience prend désormais en charge le blocage individuel des utilisateurs avec Google SecOps et les playbooks SOAR de Splunk. Avec cette addition, vous pouvez automatiser le blocage des utilisateurs lorsque Ransomware Resilience détecte une activité utilisateur suspecte, telle qu'une violation de données ou une suppression massive de données.
+
+link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/reference-soar.html["Intégrer un playbook SOAR"^].
