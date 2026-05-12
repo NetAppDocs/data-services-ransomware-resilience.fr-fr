@@ -6,9 +6,9 @@
 
 === Améliorations de la restauration propre
 
-La restauration propre prend désormais en charge la récupération sur des clusters alternatifs et l’analyse au-delà de sept jours.
+La restauration propre prend désormais en charge la récupération vers un emplacement alternatif, ce qui vous permet de restaurer des volumes sur différents systèmes, machines virtuelles de stockage et agrégats gérés par le même agent Console. De plus, la restauration propre a supprimé la limitation de sept jours dans la recherche de snapshots exploitables pour la récupération. La restauration propre continue désormais de rechercher un point de récupération viable parmi les snapshots disponibles, quelle que soit la distance par rapport à l'événement de ransomware.
 
-link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Récupérez les charges de travail avec une restauration propre"^].
+link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore-recover.html["Récupérez les charges de travail avec une restauration propre"^].
 
 
 

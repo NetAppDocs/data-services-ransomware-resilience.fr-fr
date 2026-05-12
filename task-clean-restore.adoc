@@ -122,7 +122,7 @@ Pour éviter ces conflits, Ransomware Resilience effectue une préparation syst�
 
 Lorsque vous créez l'IRE pour les sources locales, vous avez la possibilité d'ajouter une source secondaire.
 
-Si la source principale est disponible, la restauration complète doit être effectuée sur la source principale. Si la source principale est indisponible et que vous avez configuré une source secondaire, la restauration complète sera effectuée sur la source secondaire.
+Si la source principale est indisponible et que vous avez configuré une source secondaire, la restauration complète sera effectuée sur la source secondaire.
 
 Par défaut, la procédure de restauration propre analyse les instantanés de l'environnement source. Si l'environnement source est indisponible ou si aucun instantané non chiffré n'est disponible sur la source, la restauration propre analyse les instantanés d'un système secondaire si vous en avez configuré un.
 

@@ -39,33 +39,52 @@ Vous devez avoir configuré un link:task-clean-restore.html["environnement de r�
 
 
 
+=== Considérations relatives à la restauration dans un autre emplacement
+
+Lorsque vous restaurez un volume à l'aide d'une restauration propre, vous pouvez choisir un emplacement alternatif géré par le même agent Console. Ce nouvel emplacement peut se trouver sur le même système, une machine virtuelle de stockage, un agrégat, ou sur un système différent. Lorsque vous restaurez vers un emplacement alternatif :
+
+* Le protocole ARP est automatiquement activé sur le nouveau volume.
+* Le chemin de jonction est défini en fonction du nom que vous fournissez. Par exemple : `<Data LIF IP address of destination storage VM>:<new volume name>`.
+* La règle d'export du volume restauré est identique à celle du volume source.
+* Les partages SMB sur le volume restauré sont identiques à ceux du volume source.
+
+
+
+
 == Effectuez une restauration propre
 
-. Dans la section **Récupération**, sélectionnez la charge de travail que vous souhaitez restaurer. Sélectionnez **Restaurer**.
+. Dans la section **Récupération**, identifiez la charge de travail que vous souhaitez restaurer. Sélectionnez **Restaurer**.
 . Dans les options Type de restauration, sélectionnez **Restauration propre** puis **Suivant**.
 . Sélectionnez l'environnement de récupération isolé que vous souhaitez utiliser, puis **Suivant**.
 . Vérifiez l'environnement de récupération isolé et assurez-vous qu'il s'agit du bon emplacement. Sélectionnez **Restaurer**.
-. Ransomware Resilience effectue la configuration nécessaire. Une fois la configuration terminée avec succès, Ransomware Resilience indique **Configuration terminée**. Pour procéder à l’analyse, sélectionnez **Suivant**.
-. Une fois l'installation terminée, sélectionnez **Lancer l'analyse**. Ransomware Resilience recherche les points de restauration disponibles antérieurs à l'événement de ransomware et affiche la date et le type de point de restauration. Ransomware Resilience recherche les points de restauration par intervalles de sept jours. Si aucun point de restauration n'est disponible au cours des sept premiers jours, Ransomware Resilience examine les sept jours précédents et répète le processus jusqu'à ce qu'une solution de récupération viable soit trouvée.
+. Ransomware Resilience effectue la configuration nécessaire. Une fois la configuration terminée, Ransomware Resilience met à jour le statut. Pour continuer, sélectionnez **Suivant**.
+. Une fois l'installation terminée, sélectionnez **Lancer l'analyse**. Ransomware Resilience recherche le dernier instantané non affecté.
 +
 image:screenshot-clean-room-analysis.png["Capture d'écran de l'étape d'analyse de restauration propre."]
 
 . Une fois l'analyse terminée, sélectionnez **Suivant** pour planifier votre restauration. Ransomware Resilience propose deux options : **Least data loss** et **Latest unimpacted restore point**. Sélectionnez l'une ou l'autre option et, si vous le souhaitez, consultez les données de fichiers individuels pour chaque point de restauration.
 +
-Pour afficher des données détaillées sur les événements liés aux fichiers, sélectionnez un fichier pour analyser son état de chiffrement, quand il a été créé, modifié ou supprimé, et quel point de restauration correspond à quelle action.
+Pour afficher des données détaillées sur les événements des fichiers, sélectionnez un fichier pour analyser son état de chiffrement et ses métadonnées : quand il a été créé, modifié ou supprimé, et quel point de restauration correspond à quelle action.
 
 +
 image:clean-restore-plan.png["Capture d'écran de l'étape du plan de restauration propre."]
 
-. Après avoir choisi votre point de restauration, sélectionnez **Suivant** pour commencer le nettoyage de vos fichiers. Ransomware Resilience commence le nettoyage de la charge de travail.
-. Choisissez la destination de récupération.
+. Après avoir choisi votre point de restauration, sélectionnez **Créer un point de restauration**. Ransomware Resilience lance alors une série de tâches pour créer le point de restauration. Une fois ce processus terminé, sélectionnez **Suivant**.
+. Sélectionnez **Démarrer le nettoyage** pour commencer à supprimer les logiciels malveillants des fichiers.
+. Une fois le nettoyage terminé, sélectionnez **Suivant**.
+. Choisissez la destination de récupération :
 +
-.. Si vous avez choisi *Alternatif*, sélectionnez le *Système*, la *VM de stockage* et l'*Agrégat* sur lesquels effectuer la restauration. Saisissez un nom pour le *Nouveau volume*.
+** Sélectionnez **Primaire (original)** pour restaurer vers la destination d'origine.
++
+Si l'emplacement principal est indisponible et link:task-clean-restore.html#secondary-sources["vous avez configuré une source secondaire"], vous pouvez restaurer à la place vers la source **Secondaire**.
+
+** Sélectionnez **Alternatif** pour restaurer sur un nouveau volume. Choisissez le **Système**, la **VM de stockage** et l'**Agrégat** pour le nouveau volume, puis indiquez un **nom du nouveau volume**.
++
+image:alternate-recovery-destination.png["Capture d'écran de la destination de récupération alternative"]
 
 
-. Une fois le nettoyage terminé, sélectionnez **Démarrer la récupération** pour lancer la récupération.
-. Choisissez si vous souhaitez conserver la charge de travail d'origine. Pour ne pas la conserver, sélectionnez **Non, remplacer la charge de travail d'origine**. Pour la conserver, sélectionnez **Oui, conserver la charge de travail d'origine** puis saisissez un nouveau nom pour la charge de travail.
+
 . Sélectionnez **Démarrer la récupération** pour lancer la récupération.
 . Une fois la récupération terminée, sélectionnez **Suivant** pour passer à la phase finale.
-. Sélectionnez **Libérer les ressources et terminer** pour libérer les ressources et fermer la salle blanche. Pour confirmer que vous souhaitez libérer la ressource, sélectionnez **Terminer**.
+. Sélectionnez **Libérer les ressources et quitter** pour libérer les ressources et fermer la salle blanche. Pour confirmer, sélectionnez **Terminer**.
 
