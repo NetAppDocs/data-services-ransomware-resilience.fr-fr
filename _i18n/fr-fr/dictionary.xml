@@ -2199,7 +2199,6 @@
   <block id="42d5a005352158447d080ff821694db4" category="list-text">L'utilisation de la même identité machine entraîne des problèmes de licence et d'activation.</block>
   <block id="2b973fe4e18c7b4ee211cfe2a2373d41" category="paragraph">Pour éviter ces conflits, Ransomware Resilience effectue une préparation système (sysprep) sur la machine virtuelle clonée, ce qui réinitialise le SID, le CN et l'identité de la machine. La réinitialisation de ces valeurs garantit que la machine virtuelle clonée fonctionne comme une instance unique et indépendante, sans interférer avec la machine virtuelle source.</block>
   <block id="c94b2ef9dde0531d36cb0d4e5d7b4b72" category="section-title">Sources secondaires</block>
-  <block id="08607b19598a980be86467b52da1e4d3" category="paragraph">Lorsque vous créez l'IRE pour les sources locales, vous avez la possibilité d'ajouter une source secondaire.</block>
   <block id="4a03772068b579d9b09ff0433b7acadd" category="paragraph">Par défaut, la procédure de restauration propre analyse les instantanés de l'environnement source. Si l'environnement source est indisponible ou si aucun instantané non chiffré n'est disponible sur la source, la restauration propre analyse les instantanés d'un système secondaire si vous en avez configuré un.</block>
   <block id="bf6aff190124dd12362477474eddaf9b" category="paragraph">La restauration complète est proposée dans le cadre de la solution Ransomware Resilience. Aucune licence supplémentaire n'est requise pour effectuer une restauration complète ou créer un IRE.</block>
   <block id="2c5f8b1bf69ff1fef550992679ff59b6" category="paragraph">L'activation de la restauration complète peut entraîner des frais facturés par un fournisseur de cloud tiers. Selon votre utilisation du service, ces frais peuvent se répéter tant que les environnements de restauration complète existent.</block>
@@ -2493,4 +2492,5 @@
   <block id="84c03f1b38aa942e542555e111083674" category="paragraph"><block ref="84c03f1b38aa942e542555e111083674" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f5cfed6a695ca584c4de91e043cec8df" category="list-text">Sélectionnez **Libérer les ressources et quitter** pour libérer les ressources et fermer la salle blanche. Pour confirmer, sélectionnez **Terminer**.</block>
   <block id="ee9eb963788511d80fc2e4d572229dfc" category="paragraph">Si la source principale est indisponible et que vous avez configuré une source secondaire, la restauration complète sera effectuée sur la source secondaire.</block>
+  <block id="1ed548d363a0d2a6ce0c5db113b94db8" category="paragraph">Lors de la création de l'IRE, vous avez la possibilité d'ajouter une source secondaire.</block>
 </blocks>

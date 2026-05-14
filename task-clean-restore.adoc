@@ -120,7 +120,7 @@ Pour éviter ces conflits, Ransomware Resilience effectue une préparation syst�
 
 === Sources secondaires
 
-Lorsque vous créez l'IRE pour les sources locales, vous avez la possibilité d'ajouter une source secondaire.
+Lors de la création de l'IRE, vous avez la possibilité d'ajouter une source secondaire.
 
 Si la source principale est indisponible et que vous avez configuré une source secondaire, la restauration complète sera effectuée sur la source secondaire.
 
