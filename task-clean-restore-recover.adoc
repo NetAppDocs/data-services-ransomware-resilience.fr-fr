@@ -62,6 +62,9 @@ Lorsque vous restaurez un volume à l'aide d'une restauration propre, vous pouve
 +
 image:screenshot-clean-room-analysis.png["Capture d'écran de l'étape d'analyse de restauration propre."]
 
++
+Pendant l'analyse, vous pouvez sélectionner **Arrêter**. L'arrêt de l'analyse nécessite que le processus de restauration propre soit recommencé.
+
 . Une fois l'analyse terminée, sélectionnez **Suivant** pour planifier votre restauration. Ransomware Resilience propose deux options : **Least data loss** et **Latest unimpacted restore point**. Sélectionnez l'une ou l'autre option et, si vous le souhaitez, consultez les données de fichiers individuels pour chaque point de restauration.
 +
 Pour afficher des données détaillées sur les événements des fichiers, sélectionnez un fichier pour analyser son état de chiffrement et ses métadonnées : quand il a été créé, modifié ou supprimé, et quel point de restauration correspond à quelle action.
