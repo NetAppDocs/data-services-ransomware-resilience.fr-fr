@@ -23,6 +23,10 @@ Ces tâches nécessitent le rôle _Console admin_.
 [role="quick-margin-list"]
 * link:https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html#agent-installation["Assurez-vous d'avoir installé un agent de console"^]
 * link:rp-start-prerequisites.html["Assurez-vous que votre système répond aux exigences"]
++
+** Examinez également les exigences relatives à link:reference-user-activity-requirements.html["détection d'activité utilisateur suspecte"] et link:task-clean-restore.html["restaurations propres"].
+
+
 * link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-roles.html["Examiner les rôles des utilisateurs de Ransomware Resilience et attribuer des autorisations aux utilisateurs accédant à Ransomware Resilience"]
 * link:rp-start-licenses.html["Configurer les licences"]
 
