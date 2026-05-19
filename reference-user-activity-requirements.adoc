@@ -100,6 +100,52 @@ Le serveur doit répondre aux exigences minimales suivantes :
 
 
 
+=== Recommandations de dimensionnement
+
+Lors de la collecte d'événements utilisateur, assurez-vous que la machine hébergeant l'agent d'activité utilisateur est dimensionnée pour supporter votre débit d'événements. Cela signifie que vous devez disposer d'un nombre suffisant de collecteurs de données ainsi que d'un CPU et d'une RAM suffisants sur la machine hébergeant l'agent d'activité utilisateur pour tolérer le nombre d'événements par seconde. Pour augmenter le nombre de collecteurs de données, il peut être nécessaire d'augmenter la capacité de la RAM ou du CPU. Ransomware Resilience prend en charge jusqu'à 50 collecteurs de données par agent d'activité utilisateur.
+
+Le tableau suivant fournit des indications générales pour le dimensionnement :
+
+|===
+| Configuration de la machine de l'agent d'activité utilisateur | Nombre de collecteurs de données | Taux d'événements maximal 
+
+
+| 4 cœurs, 16 Go | 10 collecteurs de données | 20 000 événements/seconde 
+
+
+| 4 cœurs, 32 Go | 20 collecteurs de données | 20 000 événements/seconde 
+|===
+Vous pouvez également calculer vos besoins spécifiques. Pour déterminer la taille appropriée, il est recommandé d'appliquer une marge de sécurité de 30 %. Utilisez cette formule pour vérifier si votre configuration peut supporter la charge.
+
+[listing]
+----
+Where E is the sum of all events per second across all data collectors:
+
+E + (0.3 x E) < 20,000 events/second
+----
+.Ransomware Resilience propose un script pour calculer le débit de données d'événements. Découvrez comment calculer le débit de données d'événements dans Ransomware Resilience.
+[%collapsible]
+====
+Ransomware Resilience fournit un script que vous pouvez exécuter sur votre système pour calculer le débit de données d'événements. Par défaut, le script s'exécute pour un maximum de cinq machines virtuelles de stockage. Si votre environnement comprend plus de 5 SVM, vous pouvez modifier le script en conséquence. Quel que soit le nombre de SVM, le script prend environ cinq minutes pour obtenir une lecture moyenne du débit d'événements. Avant d'exécuter le script, vous devez avoir :
+
+* link:suspicious-user-activity.html["Agent d'activité utilisateur configuré"]
+* L'adresse IP du cluster
+* Nom d'utilisateur et mot de passe de l'administrateur du cluster
+* Installé `sshpass` sur la machine Linux (vous pouvez l’installer avec la commande `sudo yum install -y sshpass`)
+
+
+.Étapes
+. Depuis le cluster hébergeant l'agent d'activité utilisateur, exécutez le script en tant qu'administrateur : `/opt/netapp/cloudsecure/agent/install/svm_event_rate_checker.sh`
+. Lorsque vous y êtes invité, fournissez l'adresse IP du cluster, le nom d'utilisateur admin et le mot de passe admin.
+. L'exécution du script prend environ cinq minutes. Une fois terminée, la ligne de commandes affiche le taux d'événements, par exemple "Svm svm_rate is generating 100 events/sec."
++
+Utilisez le taux d'événements pour calculer votre dimensionnement.
+
+
+
+====
+
+
 == règles d'accès au réseau cloud
 
 Veuillez consulter les règles d'accès au réseau cloud pour votre zone géographique concernée (Asie-Pacifique, Europe ou États-Unis).

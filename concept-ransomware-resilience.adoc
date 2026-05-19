@@ -156,7 +156,7 @@ image:diagram-rp-architecture-preview3.png["Diagramme montrant l'architecture de
 
 | *GOUVERNER*  a| 
 * Attribue les stratégies de protection contre les ransomwares
-* Vous aide à surveiller les résultats.
+* Vous aide à suivre les résultats.
 
 
 |===
