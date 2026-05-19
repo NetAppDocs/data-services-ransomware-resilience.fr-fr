@@ -27,13 +27,13 @@ Contrairement à la détection de chiffrement par ARP au niveau de la couche de 
 
 IMPORTANT: Vous devez utiliser le nouveaulink:#new-user-roles-for-data-breach-detection["Administrateur du comportement utilisateur de Ransomware Resilience et visualiseur du comportement utilisateur de Ransomware Resilience"] rôles pour accéder aux paramètres de détection des comportements suspects des utilisateurs.
 
-Pour plus d'informations, voirlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Activer la détection des activités suspectes des utilisateurs"] etlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html#view-anomalous-user-behavior["Afficher le comportement anormal des utilisateurs"] .
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Activer la détection de l'activité de l'utilisateur"] et link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html#view-anomalous-user-behavior["Afficher le comportement anormal des utilisateurs"].
 
 
 
 ==== Détections supplémentaires d'activités suspectes d'utilisateurs
 
-En plus de la détection des violations de données, Ransomware Resilience détecte également les types d'alertes suivants en fonction de l'activité suspecte observée des utilisateurs :
+Outre la détection des violations de données, Ransomware Resilience détecte également les types d'alertes suivants en fonction de l'activité des utilisateurs observée :
 
 * **Destruction de données - attaque potentielle** - Une alerte avec la gravité d'une attaque potentielle est créée lorsque le nombre de suppressions de fichiers dépasse la norme historique.
 * **Comportement suspect de l'utilisateur - attaque potentielle** - Une alerte avec la gravité d'une attaque potentielle est créée lorsque des opérations de lecture, de renommage et de suppression dans une séquence similaire à une attaque de ransomware sont observées
@@ -44,7 +44,7 @@ En plus de la détection des violations de données, Ransomware Resilience déte
 
 ==== Nouveaux rôles d'utilisateur pour la détection des violations de données
 
-Pour gérer les alertes d'activité utilisateur suspecte, Ransomware Resilience a introduit deux nouveaux rôles pour les administrateurs de l'organisation de la console afin d'accorder l'accès à la détection d'activité utilisateur suspecte : administrateur du comportement utilisateur Ransomware Resilience et visualiseur du comportement utilisateur Ransomware Resilience.
+Pour gérer les alertes d'activité des utilisateurs, Ransomware Resilience a introduit deux nouveaux rôles pour les administrateurs d'organisation de la NetApp Console afin d'accorder l'accès à la détection des activités suspectes des utilisateurs : Ransomware Resilience user behavior admin et Ransomware Resilience user behavior viewer.
 
 Vous devez être un administrateur du comportement utilisateur pour configurer les paramètres de comportement utilisateur suspect. Le rôle d’administrateur Ransomware Resilience n’est pas pris en charge pour la configuration des paramètres de comportement utilisateur suspect.
 

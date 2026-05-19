@@ -24,7 +24,7 @@ Ces tâches nécessitent le rôle _Console admin_.
 * link:https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html#agent-installation["Assurez-vous d'avoir installé un agent de console"^]
 * link:rp-start-prerequisites.html["Assurez-vous que votre système répond aux exigences"]
 +
-** Examinez également les exigences relatives à link:reference-user-activity-requirements.html["détection d'activité utilisateur suspecte"] et link:task-clean-restore.html["restaurations propres"].
+** Examinez également les exigences relatives à link:reference-user-activity-requirements.html["détection des comportements suspects des utilisateurs"] et link:task-clean-restore.html["restaurations propres"].
 
 
 * link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-roles.html["Examiner les rôles des utilisateurs de Ransomware Resilience et attribuer des autorisations aux utilisateurs accédant à Ransomware Resilience"]
@@ -43,12 +43,12 @@ Ces tâches nécessitent le rôle _Ransomware Resilience admin_.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"]Configurer la protection et la détection dans Ransomware Resilience
 [role="quick-margin-para"]
-Ces tâches nécessitent le rôle _Ransomware Resilience admin_.  La configuration d'une activité de comportement utilisateur suspecte nécessite le rôle supplémentaire _Ransomware Resilience user behavior admin_.
+Ces tâches requièrent le rôle _Ransomware Resilience admin_. La configuration de la détection du comportement des utilisateurs requiert le rôle supplémentaire _Ransomware Resilience user behavior admin_.
 
 [role="quick-margin-list"]
 * link:rp-use-protect.html["Protéger les charges de travail"]
 +
-** En option,link:suspicious-user-activity.html["améliorer la protection en configurant la détection des activités suspectes des utilisateurs"]
+** Facultativement, link:suspicious-user-activity.html["améliorez la protection en configurant la détection du comportement de l'utilisateur"]
 
 
 * Vous pouvez également configurer les destinations de sauvegarde :
@@ -63,10 +63,11 @@ Ces tâches nécessitent le rôle _Ransomware Resilience admin_.  La configurati
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatre"]Quelle est la prochaine étape ?
 [role="quick-margin-para"]
-Après avoir configuré la protection dans Ransomware Resilience, voici ce que vous pouvez faire ensuite.
+Une fois la protection configurée dans Ransomware Resilience, vous pouvez :
 
 [role="quick-margin-list"]
 * link:task-classify.html["Activer la classification des données pour identifier les risques de gouvernance et de sécurité"]
 * link:task-siem.html["Envoyer des alertes au SIEM"]
+* link:reference-soar.html["Configurer un playbook SOAR"]
 * link:rp-use-reports.html["Téléchargez des rapports d'alerte, de protection, d'exercice de préparation, de récupération ou de synthèse"]
 

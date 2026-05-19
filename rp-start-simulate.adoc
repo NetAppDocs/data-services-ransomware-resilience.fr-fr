@@ -52,7 +52,7 @@ image:screen-settings-alert-drill-configure.png["Configurer la page d'exercice d
 .. Sélectionnez un système de test.
 .. Sélectionnez un SVM de stockage de test.
 .. Si vous avez sélectionné une machine virtuelle de stockage CIFS (SMB), les champs **Nom d'utilisateur** et **Mot de passe** s'affichent.  Saisissez le nom d’utilisateur et le mot de passe de la machine virtuelle de stockage.
-.. Sélectionnez le type d’exercice de préparation. Pour une récupération manuelle après une violation de données de chiffrement, choisissez **Récupération personnalisée**. Pour récupérer une activité utilisateur suspecte, choisissez **Violation de données**.
+.. Sélectionnez le type d'exercice de préparation. Pour une récupération manuelle après une violation de données par chiffrement, choisissez **Récupération personnalisée**. Pour une récupération après un comportement utilisateur suspect, choisissez **Fuite de données**.
 .. Saisissez le nom de la charge de travail de test. N'incluez pas de tirets dans le nom.
 
 

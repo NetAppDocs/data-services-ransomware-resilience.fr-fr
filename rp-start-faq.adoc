@@ -120,6 +120,18 @@ UN link:rp-use-protect.html#add-a-ransomware-protection-strategy["stratégie de 
 
 Une politique de sauvegarde n’est pas requise dans la stratégie de résilience aux ransomwares.
 
+.Quels types d'attaques NetApp Ransomware Resilience reconnaît-elle ?
+Ransomware Resilience reconnaît cinq types d'attaques :
+
+* Chiffrement (entropie)
+* Chiffrement (comportement de l'utilisateur)
+* Violation de données
+* Destruction de données
+* Activité utilisateur suspecte
+
+
+En savoir plus sur link:concept-ransomware-resilience.html#attack-types["types d'attaque"].
+
 .La résilience face aux ransomwares est-elle consciente des paramètres de protection dans ONTAP?
 Oui, Ransomware Resilience détecte les planifications de snapshots définies dans ONTAP. Il détecte également si ARP et FPolicy sont activés sur tous les volumes d'une charge de travail détectée. Les informations affichées dans le tableau de bord Ransomware Resilience proviennent d'autres NetApp solutions et produits.
 

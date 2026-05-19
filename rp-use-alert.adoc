@@ -161,7 +161,7 @@ La page Alertes apparaît.
 
 En consultant l’onglet Alertes, vous pouvez identifier s’il s’agit d’une activité malveillante ou d’un comportement anormal de l’utilisateur.
 
-Pour afficher les alertes au niveau de l'utilisateur, vous devez avoir configuré un agent d'activité utilisateur et activé une stratégie de protection avec détection du comportement de l'utilisateur. La colonne *Utilisateur suspect* apparaît dans le tableau de bord Alertes uniquement lorsque la détection du comportement de l'utilisateur est activée. Pour activer la détection des utilisateurs suspects, voir link:suspicious-user-activity.html["Activité utilisateur suspecte"].
+Pour consulter les alertes au niveau de l'utilisateur, vous devez avoir configuré un agent d'activité utilisateur et activé une stratégie de protection avec détection du comportement de l'utilisateur. La colonne *Utilisateur suspect* apparaît dans le tableau de bord Alertes uniquement lorsque la détection du comportement de l'utilisateur est activée. Pour plus d'informations, link:suspicious-user-activity.html["en savoir plus sur la détection de l'activité des utilisateurs"].
 
 
 
@@ -195,7 +195,7 @@ image:screen-alerts-incidents3.png["Page d'alerte des incidents"]
 
 === Afficher le comportement anormal des utilisateurs
 
-Si vous avez configuré la détection des utilisateurs suspects pour visualiser les comportements anormaux des utilisateurs, vous pouvez consulter les données au niveau de l'utilisateur et bloquer des utilisateurs spécifiques. Pour activer les paramètres relatifs aux utilisateurs suspects, voir link:suspicious-user-activity.html["Configurer les agents et les collecteurs pour la détection de l'activité des utilisateurs"].
+Si vous avez configuré la détection du comportement des utilisateurs, vous pouvez consulter les données au niveau de l'utilisateur et bloquer certains utilisateurs. Pour activer la détection de l'activité des utilisateurs, consultez link:suspicious-user-activity.html["Configurer les agents et les collecteurs"].
 
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez *Alertes*.

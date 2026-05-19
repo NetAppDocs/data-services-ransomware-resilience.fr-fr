@@ -20,7 +20,7 @@ Pour plus d'informations, consultez le lien : Pour plus d'informations, consult
 
 
 
-=== Prise en charge des groupes de protection pour l'activité des comportements des utilisateurs
+=== Prise en charge des groupes de protection pour la détection du comportement des utilisateurs
 
 Les groupes de protection Ransomware Resilience prennent désormais en charge les politiques de détection des comportements suspects des utilisateurs. Lorsque vous appliquez une stratégie de protection contre les ransomwares à un groupe de protection, elle applique une politique à l'ensemble des charges de travail, simplifiant la gestion de votre posture de cybersécurité.
 
