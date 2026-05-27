@@ -14,7 +14,7 @@ summary: Vous pouvez protéger les charges de travail contre les attaques de ran
 [role="lead"]
 Les stratégies de protection contre les ransomwares sont un élément clé de NetApp Ransomware Resilience : elles permettent la détection, la protection et la réplication. Les stratégies de protection sont un élément essentiel de votre posture de cybersécurité.
 
-*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet ou d'administrateur de résilience aux ransomwares. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^] .
+*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super administrateur"^] ou du rôle d'administrateur Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^].
 
 
 
