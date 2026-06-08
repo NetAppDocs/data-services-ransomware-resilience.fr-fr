@@ -18,6 +18,30 @@ Découvrez les nouveautés de NetApp Ransomware Resilience.
 
 
 
+== 08 juin 2026
+
+
+
+=== Flexibilité accrue pour les stratégies de protection
+
+La solution Ransomware Resilience offre désormais une plus grande flexibilité dans le choix des stratégies de détection des ransomwares. Auparavant, toutes les stratégies de protection contre les ransomwares devaient inclure la détection du chiffrement. Désormais, vous pouvez activer une stratégie de protection contre les ransomwares basée uniquement sur la détection du comportement de l'utilisateur.
+
+Les stratégies de protection peuvent toujours inclure la détection du chiffrement  la détection des comportements suspects des utilisateurs. Le blocage des extensions de fichiers peut également être ajouté à toute stratégie de protection.
+
+Si vous désactivez une partie de la stratégie de protection d'une politique existante, les alertes créées dans le cadre de la version précédente de cette politique ne peuvent être marquées que comme « Résolues » et non comme « Ignorées ». Par exemple, si vous aviez une stratégie de protection qui incluait la détection du chiffrement et le comportement utilisateur suspect, mais que vous avez désactivé la détection du chiffrement, vous ne pouvez résoudre qu'une alerte de chiffrement existante pour cette charge de travail.
+
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Protégez les charges de travail avec les stratégies de protection NetApp Ransomware Resilience"^].
+
+
+
+=== Améliorations apportées au playbook SOAR
+
+Les playbooks SOAR de Ransomware Resilience proposent désormais des étapes de remédiation après que vous avez bloqué un utilisateur ou mis un volume hors ligne. Vous pouvez désormais remettre un volume en ligne et débloquer un utilisateur si l'action a été jugée non constitutive d'une menace de type ransomware.
+
+link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/reference-soar.html["Intégrer un playbook SOAR"^].
+
+
+
 == 26 mai 2026
 
 
@@ -112,7 +136,7 @@ Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-serv
 
 Les informations relatives aux incidents de violation de données sont désormais conservées pendant 13 mois après un incident, ce qui permet une conservation des données plus longue pour vos besoins de reporting.
 
-Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-user-behavior.html["Découvrez la détection de l'activité des utilisateurs"^].
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-user-behavior.html["Découvrez la détection du comportement des utilisateurs"^].
 
 
 

@@ -1609,7 +1609,6 @@
   <block id="9f1822f26663cadd0ea726defa3cca17" category="list-text">Dans la boîte de dialogue, sélectionnez **Supprimer** pour confirmer que vous souhaitez supprimer les charges de travail de la liste d'exclusion.</block>
   <block id="01e74a47d7af3692bf72faf95ffcd1a3" category="inline-image-macro">Capture d'écran de la suppression réussie d'une charge de travail exclue.</block>
   <block id="af77f82e6f94939c1b89727420b621ac" category="list-text">Si la charge de travail est retirée avec succès de la liste des charges de travail exclues, un message de confirmation s'affiche sur la page des charges de travail exclues et la charge de travail n'apparaît plus dans la liste des charges de travail exclues. Si l'action échoue, un message d'erreur s'affiche ; veuillez réessayer. <block ref="364f1d2f9b1485226ce83c7872b1bae0" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b8b45f3c53a227dc5aa1d806ef340f06" category="list-text">**Les politiques de détection** permettent d'identifier les menaces de type ransomware.</block>
   <block id="68fc9b8869c6d23ecc7c4acaf4ef7761" category="list-text">Les **stratégies de réplication** vous permettent de répliquer les instantanés de Ransomware Resilience vers un site secondaire. Les calendriers de réplication peuvent être définis sur des fréquences horaires, quotidiennes, hebdomadaires ou mensuelles.</block>
   <block id="3ed69b14426127876e3ab79ddc2e266e" category="paragraph">Actuellement, vous ne pouvez répliquer les instantanés que vers un stockage ONTAP local.</block>
   <block id="6474bbda8f7c072686c6e020cf107ead" category="list-text">Dans le menu de navigation de gauche de la console, sélectionnez *Protection* &gt; *Résilience aux ransomwares*.</block>
@@ -1977,7 +1976,6 @@
   <block id="70a6131a6c77f1f9afbf85c23200dee6" category="list-text">Créer un instantané d'un volume</block>
   <block id="a4431e17a1690b12df20e34bb2f4b744" category="list-text">Enrichir une adresse IP avec des renseignements sur les menaces</block>
   <block id="762279f864f96ffbe81b311754b74896" category="list-text">Enrichir les informations de stockage pour un agent et un système donnés</block>
-  <block id="b826f101cb377022bc455ad2020f2f86" category="list-text">Mettre un volume hors ligne pour la réponse aux incidents</block>
   <block id="dbc85b383817f560c0d1b083f4449627" category="list-text">Tester la connectivité</block>
   <block id="870d0fb8b0bf7879e6ada101131c6864" category="list-text">Vérifiez le statut d'un travail d'enrichissement</block>
   <block id="5156f3fe3404db2816f53b4f01711a75" category="section-title">Playbooks</block>
@@ -2057,7 +2055,6 @@
   <block id="c81c8aac6cfb1c5f690b914eda6a69fd" category="inline-link-macro">Connectez NetApp Ransomware Resilience à un SIEM</block>
   <block id="dbdca0e081ed0b247153e35ce9b1c298" category="paragraph">Pour plus d'informations, consultez <block ref="d02df671c233387bf6b644be94acfdf7" category="inline-link-macro-rx"></block>.</block>
   <block id="7ee4b3a8392885d95b1b7c9f5a6c99e5" category="paragraph">Les informations relatives aux incidents de violation de données sont désormais conservées pendant 13 mois après un incident, ce qui permet une conservation des données plus longue pour vos besoins de reporting.</block>
-  <block id="787e93d4c2f472a6434cd13d74f3f4d4" category="paragraph">Pour plus d'informations, consultez <block ref="1a6935dbce91cdb72e61e2f8c1313b36" category="inline-link-macro-rx"></block>.</block>
   <block id="ff1d8a11789570b9a7e5f2d8fa4b3245" category="list-text">Si vous n'avez pas déjà ajouté d'agent Console pour d'autres services, <block ref="51497621bfe4b6ebf6d24d0214cc9366" category="inline-link-macro-rx"></block>.</block>
   <block id="5ce927453063236746bf9f7b1ee339ed" category="list-text">Sélectionnez *Add license* pour accéder à la page Licenses and subscriptions de la console.</block>
   <block id="5aacdcc38fb6938e8f7950fb8e5395fc" category="doc">Consultez l'état de la récupération dans NetApp Ransomware Resilience</block>
@@ -2344,7 +2341,6 @@
   <block id="23261131430f46ec6fb27110ac7f00fc" category="section-title">Prise en charge SOAR pour le blocage des utilisateurs</block>
   <block id="e5b8f2d9ef7cdce04d260640283c68c6" category="paragraph">Ransomware Resilience prend désormais en charge le blocage individuel des utilisateurs avec Google SecOps et les playbooks SOAR de Splunk. Avec cette addition, vous pouvez automatiser le blocage des utilisateurs lorsque Ransomware Resilience détecte une activité utilisateur suspecte, telle qu'une violation de données ou une suppression massive de données.</block>
   <block id="2f82a2e72d177e2d1d65a490cf072506" category="paragraph"><block ref="f63222f2dbc8e79c6867c1aa1bf7ad40" category="inline-link-macro-rx"></block>.</block>
-  <block id="cec6d1e77603c10f8f9b0c0c23a333f4" category="list-text">Bloquer un utilisateur*</block>
   <block id="5e5e4d611b545e088600f1e94c227e02" category="list-text">Dans la section Type, choisissez *Nettoyage uniquement*.</block>
   <block id="15133f0d70ddd9da0f0a4ccaf25d12f2" category="paragraph">Un système de gestion des informations et des événements de sécurité (SIEM) centralise les journaux et les données d'événements afin de fournir des informations sur les incidents de sécurité et la conformité. NetApp Ransomware Resilience prend en charge l'envoi automatique des données à votre SIEM pour une analyse et une détection des menaces simplifiées.</block>
   <block id="f6f2f1de81eb4c260d55918d831d8b4e" category="paragraph">Ransomware Resilience prend en charge les systèmes SIEM suivants :</block>
@@ -2486,11 +2482,8 @@
   <block id="d8e08662cf603a3c4ee9aaf071e19599" category="section-title">Types d'attaque</block>
   <block id="e4234a1d906d9cdc9c698d93ee4a1039" category="paragraph">Ransomware Resilience identifie cinq types d'attaques :</block>
   <block id="fa56851239948098bf91b1314fa7effe" category="cell">Type d'attaque</block>
-  <block id="0b890b1926b90387673882e6ccae7fdc" category="cell">Définition</block>
   <block id="c4ffd36782688a65f942ba6948827e83" category="cell">Chiffrement (entropie)</block>
-  <block id="fd2cef800f88467f684f65a53518ac63" category="cell">Ransomware Resilience reconnaît les schémas d'IOPS anormaux, l'entropie des données et les suffixes de fichiers non standard.</block>
   <block id="403901db25c61c486833fc82dd2d7acd" category="cell">Chiffrement (comportement de l'utilisateur)</block>
-  <block id="4ae2d9c30cc3f3a656abf5d6a3d16fa4" category="cell">Ransomware Resilience identifie les activités anormales de lecture, d'écriture et de renommage de fichiers effectuées par un utilisateur spécifique.</block>
   <block id="bf4ede30456e84ab02d9c068f99126f7" category="cell">Ransomware Resilience détecte les schémas d'accès en lecture de fichiers anormaux effectués par un utilisateur spécifique.</block>
   <block id="85205fe8e109c0311a7cc912374e07a9" category="cell">Ransomware Resilience détecte la suppression massive de fichiers par un utilisateur spécifique.</block>
   <block id="9ad1cf824a5d301d8eb3668a3f64e5c9" category="cell">Ransomware Resilience identifie les comportements anormaux qui vont au-delà des violations de données, de la destruction de données ou du chiffrement.</block>
@@ -2509,7 +2502,6 @@
   <block id="73ec7da766dca94cf1c4b669985cd2a5" category="list-text"><block ref="73ec7da766dca94cf1c4b669985cd2a5" category="inline-link-macro-rx"></block></block>
   <block id="f2947fbfc4001f394585c42e28740767" category="inline-link-macro">Configurer les agents et détecteurs de comportement utilisateur</block>
   <block id="ad709ceaf0cfdbb15b5cbf9fdce90fd8" category="list-text"><block ref="ad709ceaf0cfdbb15b5cbf9fdce90fd8" category="inline-link-macro-rx"></block></block>
-  <block id="bd3c8dbfc7f9bd3854a71cfc2ee0f27e" category="paragraph">{asterisk}Le blocage d'un utilisateur est uniquement pris en charge pour les playbooks Splunk et Google SecOps SOAR. Vous devez avoir configuré <block ref="1c8c6ad1b9f3fa5ec23ffb4b53fcc1e8" category="inline-link-macro-rx"></block> sur un système compatible pour bloquer un utilisateur.</block>
   <block id="4a7bec04cbec6247858664ff561920a3" category="paragraph">La détection du comportement de l'utilisateur est prise en charge dans NetApp Ransomware Resilience pour les charges de travail sur les systèmes ONTAP sur site ainsi que sur Amazon FsxN for NetApp ONTAP et les systèmes Cloud Volumes ONTAP qui s'alignent avec <block ref="12d7be4f3da31a90f0de3bba45ddeec1" category="inline-xref-macro-rx"></block>.</block>
   <block id="f79eb8967b3c8df9a5242b71bfa6765b" category="paragraph">Les données relatives au comportement des utilisateurs peuvent être stockées dans AWS et Azure dans les régions suivantes :</block>
   <block id="f7d8c82b937f1272bcd68f037f70dcbb" category="list-text">Azure NetApp Files ne prend pas en charge FPolicy ni la détection du comportement des utilisateurs. Azure NetApp Files ne prend pas non plus en charge l'analyse forensique de l'entropie.</block>
@@ -2549,4 +2541,25 @@
   <block id="ff6a5ffc05eb6e03c3063d043a5357eb" category="inline-link-macro">Super administrateur</block>
   <block id="3a7fa73e20b4b1d037f90f17dc665f22" category="paragraph">*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du <block ref="91fb5ef1173b6f41fdaa815d28743781" category="inline-link-macro-rx"></block>, du rôle d'administrateur Ransomware Resilience ou du rôle de lecteur Ransomware Resilience. <block ref="d9cbbacd5ef5cff6a1660fdb9d259f2f" category="inline-link-macro-rx"></block>.</block>
   <block id="61c00724cddefbe4d1c796a3d8795e62" category="paragraph">*Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du <block ref="91fb5ef1173b6f41fdaa815d28743781" category="inline-link-macro-rx"></block> ou du rôle d'administrateur Ransomware Resilience. <block ref="d9cbbacd5ef5cff6a1660fdb9d259f2f" category="inline-link-macro-rx"></block>.</block>
+  <block id="4b77ea6c402cb5104fd06a61c7376030" category="inline-link-macro">Découvrez la détection du comportement des utilisateurs</block>
+  <block id="85780f52607b54dbe81ff2c46d981a17" category="paragraph">Pour plus d'informations, voir <block ref="371ae1c35fd8f1482622c079d0f009f9" category="inline-link-macro-rx"></block>.</block>
+  <block id="ad047b692e58386490130db85fe198fd" category="doc">Flexibilité accrue pour les stratégies de protection</block>
+  <block id="0492ddae19933de338f553ff06833c6f" category="paragraph">La solution Ransomware Resilience offre désormais une plus grande flexibilité dans le choix des stratégies de détection des ransomwares. Auparavant, toutes les stratégies de protection contre les ransomwares devaient inclure la détection du chiffrement. Désormais, vous pouvez activer une stratégie de protection contre les ransomwares basée uniquement sur la détection du comportement de l'utilisateur.</block>
+  <block id="7238c31678a241cb872ee9d18f1e46a2" category="paragraph">Les stratégies de protection peuvent toujours inclure la détection du chiffrement  la détection des comportements suspects des utilisateurs. Le blocage des extensions de fichiers peut également être ajouté à toute stratégie de protection.</block>
+  <block id="bd1924893d8fb00ed3c326b7af6243b5" category="paragraph">Si vous désactivez une partie de la stratégie de protection d'une politique existante, les alertes créées dans le cadre de la version précédente de cette politique ne peuvent être marquées que comme « Résolues » et non comme « Ignorées ». Par exemple, si vous aviez une stratégie de protection qui incluait la détection du chiffrement et le comportement utilisateur suspect, mais que vous avez désactivé la détection du chiffrement, vous ne pouvez résoudre qu'une alerte de chiffrement existante pour cette charge de travail.</block>
+  <block id="2b7a103134591ddcc36191e5b569a29b" category="paragraph">Pour plus d'informations, voir <block ref="5b0b8f72704979749944145d24f2c6be" category="inline-link-macro-rx"></block>.</block>
+  <block id="eac1000048fff271adb3d0d010dd86f5" category="section-title">Améliorations apportées au playbook SOAR</block>
+  <block id="993b3419e78327c12451169533b8d701" category="paragraph">Les playbooks SOAR de Ransomware Resilience proposent désormais des étapes de remédiation après que vous avez bloqué un utilisateur ou mis un volume hors ligne. Vous pouvez désormais remettre un volume en ligne et débloquer un utilisateur si l'action a été jugée non constitutive d'une menace de type ransomware.</block>
+  <block id="74ea76930b47f412faf2fb55e463038e" category="cell">Ransomware Resilience détecte les schémas d'IOPS anormaux, l'entropie des données et les suffixes de fichiers non standard.</block>
+  <block id="583ab768c1c1f45999e48e96c301cc48" category="cell">Ransomware Resilience identifie les activités anormales de lecture, d'écriture et de renommage de fichiers effectuées par un utilisateur spécifique.</block>
+  <block id="48c197e68b527d9bc2137bcea71c2e76" category="list-text">Bloquer/débloquer un utilisateur*</block>
+  <block id="1943cfeff6e7967a7ab396ecab9a4c21" category="list-text">Mettre un volume hors ligne pour répondre à un incident ou remettre un volume en ligne après un incident</block>
+  <block id="46d3a8bf54f5d5c4058a1eba2e7daa4a" category="paragraph">{asterisk} Le blocage/déblocage d'un utilisateur est uniquement pris en charge pour les playbooks Splunk et Google SecOps SOAR. Vous devez avoir configuré <block ref="1c8c6ad1b9f3fa5ec23ffb4b53fcc1e8" category="inline-link-macro-rx"></block> sur un système compatible pour bloquer un utilisateur.</block>
+  <block id="495dc566c29577d14a3418e529c90d3c" category="list-text">Les **politiques de détection** identifient les menaces de type ransomware. Vous avez trois options pour la détection :</block>
+  <block id="b3b96411f9486bb0c2c8a4e2b07e7d35" category="list-text">Détection de chiffrement</block>
+  <block id="2b694a9a00b006682bcbea870c2ca4fb" category="list-text">Bloquez les extensions de fichiers suspectes</block>
+  <block id="a1c735fa1a87c7cfca09d994cfe02048" category="inline-link-macro">Activité suspecte de l'utilisateur (nécessitant des configurations supplémentaires)</block>
+  <block id="262d414194517bdfa67b048201f2b424" category="paragraph">Votre politique de détection peut inclure les trois options ou une combinaison de celles-ci. Elle doit inclure soit la détection du chiffrement, soit <block ref="0c1271458a5eed3dcf0b345a743161db" category="inline-link-macro-rx"></block>.</block>
+  <block id="38cfc49361136d6f7410fbe2c3b7430a" category="list-text">*Modifications de la protection* : Comprend un examen des modifications apportées aux stratégies de protection des charges de travail sur une période donnée : 30 jours, 60 jours, 90 jours ou 1 an.</block>
+  <block id="3e323562bd488e4cbd90a025b9424181" category="section-title">08 juin 2026</block>
 </blocks>

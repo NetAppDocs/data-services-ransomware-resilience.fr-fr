@@ -168,10 +168,10 @@ Ransomware Resilience identifie cinq types d'attaques :
 
 [cols="25,75"]
 |===
-| Type d'attaque | Définition 
+| Type d'attaque | Description 
 
 
-| Chiffrement (entropie) | Ransomware Resilience reconnaît les schémas d'IOPS anormaux, l'entropie des données et les suffixes de fichiers non standard. 
+| Chiffrement (entropie) | Ransomware Resilience détecte les schémas d'IOPS anormaux, l'entropie des données et les suffixes de fichiers non standard. 
 
 
 | Chiffrement (comportement de l'utilisateur) | Ransomware Resilience identifie les activités anormales de lecture, d'écriture et de renommage de fichiers effectuées par un utilisateur spécifique. 

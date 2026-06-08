@@ -24,4 +24,4 @@ Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-serv
 
 Les informations relatives aux incidents de violation de données sont désormais conservées pendant 13 mois après un incident, ce qui permet une conservation des données plus longue pour vos besoins de reporting.
 
-Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-user-behavior.html["Découvrez la détection de l'activité des utilisateurs"^].
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-user-behavior.html["Découvrez la détection du comportement des utilisateurs"^].

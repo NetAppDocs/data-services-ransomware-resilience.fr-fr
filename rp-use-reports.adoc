@@ -26,6 +26,7 @@ Quels rapports puis-je télécharger ?
 * *Alertes* : inclut l'état et les détails de toutes les alertes, y compris le nombre total d'alertes et d'instantanés automatisés.
 * *Récupération* : inclut l'état et les détails de toutes les charges de travail qui doivent être restaurées, y compris le nombre total de charges de travail marquées « Restauration nécessaire », « En cours », « Échec de la restauration » et « Restaurée avec succès ».
 * *Exercices de préparation* : Inclut les résultats d’attaques simulées afin de mettre en évidence les points à améliorer.
+* *Modifications de la protection* : Comprend un examen des modifications apportées aux stratégies de protection des charges de travail sur une période donnée : 30 jours, 60 jours, 90 jours ou 1 an.
 * *Restauration propre* : Inclut des détails sur les charges de travail restaurées avec une restauration propre.
 +
 Vous devez disposer d'un environnement de récupération isolé (IRE) actif pour générer des rapports de restauration complets. Les rapports de restauration complets ne sont pas disponibles après la suppression de l'IRE.

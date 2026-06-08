@@ -15,16 +15,16 @@ Ransomware Resilience propose des playbooks d'orchestration, d'automatisation et
 
 Les playbooks Ransomware Resilience offrent les fonctionnalités suivantes :
 
-* Bloquer un utilisateur*
+* Bloquer/débloquer un utilisateur*
 * Créer un instantané d'un volume
 * Enrichir une adresse IP avec des renseignements sur les menaces
 * Enrichir les informations de stockage pour un agent et un système donnés
-* Mettre un volume hors ligne pour la réponse aux incidents
+* Mettre un volume hors ligne pour répondre à un incident ou remettre un volume en ligne après un incident
 * Tester la connectivité
 * Vérifiez le statut d'un travail d'enrichissement
 
 
-{asterisk}Le blocage d'un utilisateur est uniquement pris en charge pour les playbooks Splunk et Google SecOps SOAR. Vous devez avoir configuré link:concept-user-behavior["détection du comportement de l'utilisateur"] sur un système compatible pour bloquer un utilisateur.
+{asterisk} Le blocage/déblocage d'un utilisateur est uniquement pris en charge pour les playbooks Splunk et Google SecOps SOAR. Vous devez avoir configuré link:concept-user-behavior["détection du comportement de l'utilisateur"] sur un système compatible pour bloquer un utilisateur.
 
 
 
