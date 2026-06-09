@@ -19,7 +19,7 @@ Si Ransomware Resilience détecte une attaque potentielle, une notification appa
 Vous pouvez ignorer les faux positifs ou décider de récupérer vos données immédiatement.
 
 
-TIP: Si vous ignorez l'alerte, Ransomware Resilience apprend ce comportement, l'associe aux opérations normales et ne déclenche plus d'alerte.
+TIP: Si vous ignorez l'alerte, Ransomware Resilience apprend ce comportement, l'associe à un fonctionnement normal et cesse d'envoyer des alertes pour des événements similaires.
 
 Pour commencer à récupérer vos données, marquez l’alerte comme prête pour la récupération afin que votre administrateur de stockage puisse commencer le processus de récupération.
 
@@ -101,6 +101,9 @@ Si vous pensez qu'il ne s'agit pas d'une attaque de ransomware, vous pouvez chan
 
 | *Résolu automatiquement* | Pour les alertes de faible priorité, l'incident est automatiquement résolu si aucune action n'a été entreprise à son sujet dans un délai de cinq jours. 
 |===
+
+NOTE: Si vous avez une stratégie de protection existante et que vous désactivez ensuite une forme de détection, les alertes créées dans le cadre de la version précédente de la stratégie ne peuvent être marquées que comme « Résolues » et non comme « Ignorées ». Par exemple, si vous aviez une alerte active pour une stratégie de protection incluant la détection du chiffrement et des comportements suspects des utilisateurs, mais que vous avez ensuite désactivé la détection du chiffrement, vous ne pouvez marquer cette alerte que comme « Résolue ».
+
 
 
 == Afficher les alertes

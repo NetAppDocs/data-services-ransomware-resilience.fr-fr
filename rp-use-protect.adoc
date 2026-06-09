@@ -254,11 +254,15 @@ NOTE: Si vous choisissez de copier et de modifier une stratégie existante, Rans
 ** *Politique de détection*:
 +
 *** *Politique* : Choisissez l’une des politiques de détection prédéfinies.
-*** *Détection primaire* : Activez la résilience aux ransomwares pour détecter les attaques potentielles de ransomware.
-*** *Détection de comportement utilisateur suspect* : activez la détection du comportement utilisateur pour transmettre les événements d'activité utilisateur à Ransomware Resilience et détecter les événements suspects, tels que les violations de données.
-*** *Bloquer les extensions de fichiers* : Activez la résistance aux ransomwares pour bloquer les extensions de fichiers suspectes connues. Ransomware Resilience effectue des copies instantanées automatisées lorsque la détection principale est activée.
+*** *Détection du chiffrement* : Activez la résilience aux ransomwares pour détecter les attaques basées sur le chiffrement.
+*** *Détection des comportements suspects des utilisateurs* : Activez la détection des comportements des utilisateurs pour transmettre les événements d’activité des utilisateurs à Ransomware Resilience et détecter les événements suspects tels que les violations de données ou la destruction de données.
+*** *Bloquer les extensions de fichiers* : Activez la Ransomware Resilience pour bloquer les extensions de fichiers suspectes connues.
 +
 Si vous souhaitez modifier les extensions de fichiers bloquées, modifiez-les dans le Gestionnaire système.
+
++
+
+NOTE: Vous pouvez choisir n'importe quelle combinaison de règles de détection. La règle de détection doit inclure soit la détection du chiffrement, soit la détection des comportements suspects des utilisateurs.
 
 
 

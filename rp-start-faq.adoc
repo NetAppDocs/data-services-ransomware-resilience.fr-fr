@@ -94,10 +94,10 @@ Ransomware Resilience peut identifier les charges de travail suivantes : Oracle
 Ransomware Resilience détecte les volumes et les extensions de fichiers et les associe à la charge de travail appropriée.
 
 .Qu'est-ce qu'une charge de travail protégée ?
-Dans Ransomware Resilience, une charge de travail affiche l'état *protégé* lorsqu'une stratégie de _détection_ principale est activée, ce qui signifie link:concept-ransomware-resilience.html["Protection autonome contre les ransomwares (ARP)"] est activé sur tous les volumes liés à la charge de travail.
+Dans Ransomware Resilience, une charge de travail affiche le statut *protégé* lorsqu'une règle de détection est activée. La règle de détection doit consister en la détection du chiffrement ou la détection des comportements suspects des utilisateurs (ou les deux). Elle peut également inclure la détection des extensions de fichiers suspectes. Pour plus d'informations, voir link:rp-use-protect.html#add-a-ransomware-protection-strategy["politique de détection"].
 
 .Qu’est-ce qu’une charge de travail « à risque » ?
-Si une charge de travail ne dispose pas d'une stratégie de détection principale activée, elle est considérée comme « à risque », même si une stratégie de sauvegarde et de capture instantanée est activée. Pour vous protéger contre les ransomwares, vous devez activer un link:rp-use-protect.html#add-a-ransomware-protection-strategy["politique de détection"].
+Si une charge de travail ne dispose pas d'une stratégie de détection activée, elle est considérée comme « à risque », même si elle dispose d'une règles de sauvegarde et de capture instantanée activée. Pour une protection contre les ransomwares, vous devez activer une link:rp-use-protect.html#add-a-ransomware-protection-strategy["politique de détection"].
 
 .J'ai ajouté un nouveau volume, mais il n'est pas encore apparu. Que dois-je faire?
 Si vous avez ajouté un nouveau volume à votre environnement, relancez la découverte de la charge de travail. Une fois le volume découvert, link:rp-use-protect.html#add-a-ransomware-protection-strategy["appliquer des politiques de protection pour protéger le nouveau volume"].

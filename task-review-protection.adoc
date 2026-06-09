@@ -52,10 +52,10 @@ Le tableau de bord de protection dans Ransomware Resilience affiche des informat
 
 *État de protection* : une charge de travail peut afficher l’un des états de protection suivants pour indiquer si une politique est appliquée ou non :
 
-* *Protégé* : Une politique est appliquée.  ARP (ou ARP/AI selon la version ONTAP ) est activé sur tous les volumes liés à la charge de travail.
-* *À risque* : Aucune politique n'est appliquée.  Si une charge de travail n’a pas de stratégie de détection principale activée, elle est « à risque » même si une stratégie de capture instantanée et de sauvegarde est activée.
-* *En cours* : Une politique est en cours d'application mais pas encore finalisée.
-* *Échec* : Une politique est appliquée mais ne fonctionne pas.
+* *Protégé* : Une règle de détection est appliquée.
+* *À risque* : Aucune politique n’est appliquée. Si aucune politique de détection n’est activée pour une charge de travail, celle-ci est considérée comme « à risque », même si elle dispose d’un instantané et qu’une règles de sauvegarde est activée.
+* *En cours* : Une règle de sauvegarde est en cours d’application, mais l’opération n’est pas encore terminée.
+* *Échec* : Une règle de sauvegarde a été configurée, mais une erreur s'est produite.
 
 
 *État de la détection*:
