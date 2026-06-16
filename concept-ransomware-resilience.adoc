@@ -212,7 +212,7 @@ Ransomware Resilience prend en charge les cibles de sauvegarde, les systèmes et
 | Environnement | Protocole | Versions prises en charge 
 
 
-| Amazon FSx for NetApp ONTAP* | CIFS, NFS et SAN | S/O 
+| Amazon FSx for NetApp ONTAP | CIFS, NFS et SAN | S/O 
 
 
 | Azure NetApp Files | CIFS et NFS | S/O 
@@ -244,8 +244,6 @@ Ransomware Resilience prend en charge les cibles de sauvegarde, les systèmes et
 
 | Google Cloud NetApp Volumes | CIFS, NFS, SAN (iSCSI et NVMe) | S/O 
 |===
-Amazon FSx for NetApp ONTAP utilise la protection autonome contre les ransomwares (ARP) et non ARP/AI.  Pour plus d'informations sur la différence, voirlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/#arp-ai["ARP/IA"^] .
-
 
 NOTE: La détection de l'activité des utilisateurs n'est pas prise en charge pour Azure NetApp Files ni pour Google Cloud NetApp Volumes. Pour plus d'informations sur la prise en charge de la détection de l'activité des utilisateurs, consultez link:reference-user-activity-requirements.html["Exigences de détection de l'activité de l'utilisateur"].
 

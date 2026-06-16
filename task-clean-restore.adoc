@@ -76,7 +76,7 @@ Vous pouvez également consulter l'historique des fichiers lors de l'étape de p
 
 
 
-| Cloud : Amazon FSxN pour ONTAP | Cloud : AWS  a| 
+| Cloud : Amazon FSx for NetApp ONTAP | Cloud : AWS  a| 
 ** US East 1
 ** UE Central 1
 
@@ -167,7 +167,7 @@ image::diagram-clean-recovery-cloud-cloud.png[Schéma de restauration propre clo
 
 
 
-NOTE: Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, ignorez cette exigence d'adresse IP LIF de données SVM de salle blanche.
+NOTE: Si vous configurez un IRE avec la source dans Amazon FSx for NetApp ONTAP, ignorez cette exigence d’adresse IP LIF de données SVM de salle blanche.
 
 .table de routage de l'environnement de production
 * La table de routage de production doit autoriser le trafic du sous-réseau IRE vers l'adresse IP LIF des données de restauration propres. Vous devez ajouter cette route à la table de routage de production.
@@ -306,7 +306,7 @@ image:diagram-clean-recovery-cloud-on-prem.png["Schéma de restauration propre d
 
 
 
-NOTE: Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, ignorez cette exigence d'adresse IP LIF de données SVM de salle blanche.
+NOTE: Si vous configurez un IRE avec la source dans Amazon FSx for NetApp ONTAP, ignorez cette exigence d’adresse IP LIF de données SVM de salle blanche.
 
 .table de routage de l'environnement de production
 * La table de routage de production doit autoriser le trafic du sous-réseau IRE vers l'adresse IP LIF des données de restauration propres. Vous devez ajouter cette route à la table de routage de production.
@@ -524,7 +524,7 @@ La procédure de création d'une salle de reprise d'activité isolée diffère s
 . Développez la section *Systèmes*. Choisissez les systèmes à connecter à l'IRE. Pour chaque système sélectionné, vous devez indiquer l'adresse IP, le masque de sous-réseau et la passerelle de la machine virtuelle de stockage.
 +
 
-NOTE: Pour les IRE déployés sur Amazon FSxN pour ONTAP, vous n'avez pas besoin de fournir ces informations.
+NOTE: Pour les IRE déployés sur Amazon FSx for NetApp ONTAP, vous n'avez pas besoin de fournir ces informations.
 
 +
 image:clean-restore-systems.png["Capture d'écran de l'interface de sélection des systèmes."]

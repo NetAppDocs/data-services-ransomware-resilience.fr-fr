@@ -1411,7 +1411,6 @@
   <block id="3c110de67497eb3f8d4c100e43101c81" category="cell">Est des États-Unis</block>
   <block id="0ba29c6a1afacf586b03a26162c72274" category="cell">Environnement</block>
   <block id="888a77f5ac0748b6c8001822417df8b6" category="cell">Protocole</block>
-  <block id="b881921e058834170584afe9213c4c73" category="cell">Amazon FSx for NetApp ONTAP*</block>
   <block id="382b0f5185773fa0f67a8ed8056c7759" category="cell">S/O</block>
   <block id="096f3522cfa2f31de45d052b740adc65" category="cell">Cloud Volumes ONTAP pour AWS</block>
   <block id="05bcab512eefa1e7e2cc2d1e45970a7d" category="cell">CIFS et NFS</block>
@@ -1421,8 +1420,6 @@
   <block id="9722c69e4736d9b151d70e30b917a4e1" category="cell">Cloud Volumes ONTAP pour Microsoft Azure</block>
   <block id="22f284bcf4504118b4d7e9ed2bce2c2e" category="cell">9.12.1 et versions ultérieures</block>
   <block id="7cfe224d3c8892dba0ae59bcf6d0c053" category="cell">ONTAP (sur site)</block>
-  <block id="954e661212d7a62095e6b957259dc36f" category="inline-link-macro">ARP/IA</block>
-  <block id="7271886a703021fd0851304115b49ee2" category="paragraph">Amazon FSx for NetApp ONTAP utilise la protection autonome contre les ransomwares (ARP) et non ARP/AI.  Pour plus d'informations sur la différence, voir<block ref="ee25b596f35c0a0b982fc7b7e342f828" category="inline-link-macro-rx"></block> .</block>
   <block id="c71c95f02c8e85a6e5cddd09ad2a5d8b" category="admonition">L'utilisation d'ARP/AI dans ONTAP nécessite ONTAP 9.16 ou une version supérieure. + ONTAP ne fournit pas de prise en charge de la protection contre les ransomwares pour les volumes FabricPool FlexCache, FlexGroup , les volumes de points de montage de groupes de cohérence, les volumes de chemin de montage, les volumes hors ligne et les volumes de protection des données (DP). Assurez-vous de consulter<block ref="49252e6bcf11c366c792cea95977195b" category="inline-link-macro-rx"></block> .</block>
   <block id="2feeca48692986e9cc471ec61f847fca" category="paragraph">NetApp fournit un support pour NetApp Console et ses services cloud de diverses manières. De nombreuses options d'auto-assistance gratuites sont disponibles 24h/24 et 7j/7, telles que des articles de la base de connaissances (KB) et un forum communautaire. Votre inscription au support inclut une assistance technique à distance via un ticket web.</block>
   <block id="317cbd2c4fdbfd06a6c66bcd3f57d7ad" category="paragraph">Pour obtenir une assistance technique relative à un service de fichiers de fournisseur cloud, à son infrastructure ou à toute solution utilisant le service, reportez-vous à la documentation de ce produit.</block>
@@ -1717,7 +1714,6 @@
   <block id="c65a69d50600a3f76ccdd1109d15b6e3" category="inline-link-macro">Exclure les utilisateurs</block>
   <block id="d632bf28d8164d0436ca05f069b989e9" category="admonition">Pour réactiver les alertes d'un utilisateur, renvoyez l'alerte. Sélectionnez les trois points, puis **Inclure cet utilisateur dans la surveillance**. Vous pouvez également <block ref="e33a84d4132808c30f0e6b091e9f7e88" category="inline-link-macro-rx"></block> depuis la surveillance.</block>
   <block id="fb7f1789c81ab5377f72e16f6b9384ad" category="inline-link-macro">les limitations de chaque service</block>
-  <block id="771abd282157ca2dcc3c9f4d73d158c2" category="admonition">Si vous configurez des stratégies de protection pour Amazon FSxN pour ONTAP et Azure NetApp Files, consultez <block ref="f35eaad9edb95ec2be22c4403bf0d360" category="inline-link-macro-rx"></block>.</block>
   <block id="3adbdb581af927d3972b2f1c8cfb96a6" category="admonition">Les destinations de sauvegarde ne sont pas disponibles pour les charges de travail dans Amazon FSx for NetApp ONTAP ou Azure NetApp Files. Effectuez les opérations de sauvegarde à l'aide du service de sauvegarde FSx for ONTAP. Vous définissez les stratégies de sauvegarde pour les charges de travail dans FSx for ONTAP dans AWS, et non dans Ransomware Resilience. Les stratégies de sauvegarde apparaissent dans Ransomware Resilience et restent inchangées par rapport à AWS.</block>
   <block id="3bc2d94b3185bcb1259a8b3cf7da880b" category="list-text">Sélectionnez les paramètres de détection que vous souhaitez :</block>
   <block id="eb7705f4441056c554dc7aea52de0b17" category="paragraph">S'il existe certains utilisateurs de confiance dont le comportement pourrait déclencher des alertes de comportement utilisateur, vous pouvez les exclure des alertes.</block>
@@ -1818,7 +1814,6 @@
   <block id="3e16604d2667be9816f6bfb6ba4f70f1" category="list-text"><block ref="3e16604d2667be9816f6bfb6ba4f70f1" category="inline-link-macro-rx"></block></block>
   <block id="1054e7cee5045661c2dae3afe8f146e4" category="list-text">Sélectionnez *Authenticate*.</block>
   <block id="3538785960373ea81ad23e72866e9266" category="sidebar">Vérifier la protection</block>
-  <block id="9b792a24170d5651c572c72e1a0fcfc2" category="admonition">La détection de l'activité des utilisateurs n'est actuellement pas prise en charge pour les charges de travail SAN. Vous pouvez utiliser la détection de l'activité des utilisateurs avec les charges de travail NAS dans Amazon FSxN for ONTAP, Cloud Volumes ONTAP et ONTAP.</block>
   <block id="51f69bf6a11f3daca8752b8344ebc420" category="section-title">Comment les alertes sont générées</block>
   <block id="9e7bcb464844b7db89d979e9085bac76" category="paragraph">Ransomware Resilience s'appuie sur des données relatives aux modèles d'entropie des données, aux types d'extension de fichiers et au chiffrement pour produire des alertes. Les alertes sont basées sur les événements suivants :</block>
   <block id="fb7cc6e16ef254f2ff2f03b0ba6cadee" category="list-text">Violation de données</block>
@@ -2001,7 +1996,6 @@
   <block id="261f193d834ffba7dae6c54f99306659" category="list-text">Accédez à l'environnement Splunk de votre choix : Cloud ou Enterprise.</block>
   <block id="eade5cc0d987bed25c884550a681c364" category="list-text">Accédez à Splunk Cloud ou Enterprise.</block>
   <block id="c49fdbd48abc0805f78e165d087f6c4b" category="list-title">Données SVM de salle blanche LIF IP (crr-data-LIF-IP)</block>
-  <block id="f0778a7682182f497af90edd54b04a18" category="admonition">Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, ignorez cette exigence d'adresse IP LIF de données SVM de salle blanche.</block>
   <block id="074ccc576a0d2f59ff97aa7d5cd6f1db" category="list-text">Attribuez une adresse IP à l'interface LIF de données SVM de la salle blanche. Notez cette adresse IP : vous en aurez besoin lors du processus de configuration IRE.</block>
   <block id="6e72e986d17ee66e6f3fdfe4e138163d" category="list-text">Pour Cloud Volumes ONTAP avec AWS utilisant une restauration propre cloud à cloud, assurez-vous que l'adresse IP est attribuée à l'Elastic Network Interface.</block>
   <block id="b1573f80f25470f8eb281542e0c5be32" category="list-text">Autoriser le routage de l’IP de la LIF de données SVM vers l’IRE.</block>
@@ -2105,7 +2099,6 @@
   <block id="8086e076c1440c96a66792ace0ad9a9a" category="list-text">US East 1</block>
   <block id="2cefd515e4957f2cd0e6e94109aedf59" category="list-text">UE Central 1</block>
   <block id="3189552bad716cc50b21cf06e1ce8055" category="cell">Cloud : Cloud Volumes ONTAP avec AWS*</block>
-  <block id="6eac9a8614fc5276d77f16262e773b73" category="cell">Cloud : Amazon FSxN pour ONTAP</block>
   <block id="b1f5b0ae27e9c2d8ce17d7546a138c55" category="paragraph">{asterisk}Vous devez utiliser ONTAP 9.11.1 ou une version ultérieure.</block>
   <block id="e94e6e5768958058fb727a7416bb95cc" category="inline-link-macro">Coût et licence</block>
   <block id="df793ad0d2ee67dbaef2bbd64569c674" category="admonition">Effectuer une restauration complète dans un environnement cloud peut entraîner des frais de calcul supplémentaires facturés par le fournisseur de cloud. Pour plus d'informations, voir <block ref="c8aa07fb5af5da0ce42c5de706498fc6" category="inline-link-macro-rx"></block>.</block>
@@ -2175,7 +2168,6 @@
   <block id="c8e2277ecfb1427838c488c217f99466" category="open-title">Cloud</block>
   <block id="b0836e1bf6680e789281aea3293f7647" category="list-text">Pour un IRE basé sur le cloud, sélectionnez **Amazon Web Services**.</block>
   <block id="b330f48d8947ae91888a185951c00937" category="list-text">Développez la section *Systèmes*. Choisissez les systèmes à connecter à l'IRE. Pour chaque système sélectionné, vous devez indiquer l'adresse IP, le masque de sous-réseau et la passerelle de la machine virtuelle de stockage.</block>
-  <block id="9c0961645ab2dde42b360b9dd39f0dcc" category="admonition">Pour les IRE déployés sur Amazon FSxN pour ONTAP, vous n'avez pas besoin de fournir ces informations.</block>
   <block id="be33043acadffab164c32971cd856af7" category="inline-image-macro">Capture d'écran de l'interface de sélection des systèmes.</block>
   <block id="9aa6cf1eff1a76b0409b3e752312ea85" category="paragraph"><block ref="9aa6cf1eff1a76b0409b3e752312ea85" category="inline-image-macro-rx" type="image"></block></block>
   <block id="89fdf1c0dc132ad5060755aed85034a8" category="list-text">Développez la section **Authentification**.</block>
@@ -2489,7 +2481,6 @@
   <block id="73ec7da766dca94cf1c4b669985cd2a5" category="list-text"><block ref="73ec7da766dca94cf1c4b669985cd2a5" category="inline-link-macro-rx"></block></block>
   <block id="f2947fbfc4001f394585c42e28740767" category="inline-link-macro">Configurer les agents et détecteurs de comportement utilisateur</block>
   <block id="ad709ceaf0cfdbb15b5cbf9fdce90fd8" category="list-text"><block ref="ad709ceaf0cfdbb15b5cbf9fdce90fd8" category="inline-link-macro-rx"></block></block>
-  <block id="4a7bec04cbec6247858664ff561920a3" category="paragraph">La détection du comportement de l'utilisateur est prise en charge dans NetApp Ransomware Resilience pour les charges de travail sur les systèmes ONTAP sur site ainsi que sur Amazon FsxN for NetApp ONTAP et les systèmes Cloud Volumes ONTAP qui s'alignent avec <block ref="12d7be4f3da31a90f0de3bba45ddeec1" category="inline-xref-macro-rx"></block>.</block>
   <block id="f79eb8967b3c8df9a5242b71bfa6765b" category="paragraph">Les données relatives au comportement des utilisateurs peuvent être stockées dans AWS et Azure dans les régions suivantes :</block>
   <block id="f7d8c82b937f1272bcd68f037f70dcbb" category="list-text">Azure NetApp Files ne prend pas en charge FPolicy ni la détection du comportement des utilisateurs. Azure NetApp Files ne prend pas non plus en charge l'analyse forensique de l'entropie.</block>
   <block id="30d4c1b67b11bb42e2278b195f299c80" category="list-text">Actuellement, vous ne pouvez appliquer que des stratégies de protection basées sur le chiffrement et FPolicy aux charges de travail Google Cloud NetApp Volumes. Vous ne pouvez pas appliquer de stratégies de protection basées sur le comportement des utilisateurs.</block>
@@ -2563,4 +2554,11 @@
   <block id="7f2fe4ecc84891950d87f953f70363aa" category="list-text">*Échec* : Une règle de sauvegarde a été configurée, mais une erreur s'est produite.</block>
   <block id="ed3c60417302240ba271d87f011c0f32" category="paragraph">Avant d'activer AWS Security Hub dans Ransomware Resilience, vous devez effectuer des configurations de sécurité dans AWS Security Hub :</block>
   <block id="6209d7a62e35781f2a36ba4149e80d90" category="list-title">Configurez les autorisations dans AWS Security Hub</block>
+  <block id="7eba97a8ef53163c9fd30177df926301" category="admonition">Si vous configurez un IRE avec la source dans Amazon FSx for NetApp ONTAP, ignorez cette exigence d’adresse IP LIF de données SVM de salle blanche.</block>
+  <block id="4d82a1ec1af02725042c8c785564ee7a" category="cell">Amazon FSx for NetApp ONTAP</block>
+  <block id="7e04984fc8cb78806e36cbf9552342fd" category="admonition">La détection de l'activité des utilisateurs n'est actuellement pas prise en charge pour les charges de travail SAN. Vous pouvez utiliser la détection de l'activité des utilisateurs avec les charges de travail NAS dans Amazon FSx for NetApp ONTAP, Cloud Volumes ONTAP et ONTAP.</block>
+  <block id="d3009064cbb364032ea2a7bc94ab246b" category="paragraph">La détection du comportement de l'utilisateur est prise en charge dans Ransomware Resilience pour les charges de travail sur les systèmes ONTAP sur site, ainsi que sur les systèmes Amazon FSx for NetApp ONTAP et Cloud Volumes ONTAP qui s'alignent avec <block ref="12d7be4f3da31a90f0de3bba45ddeec1" category="inline-xref-macro-rx"></block>.</block>
+  <block id="0270ec13158ac8d81c5022ad41a38235" category="admonition">Si vous configurez des stratégies de protection pour Amazon FSx for NetApp ONTAP et Azure NetApp Files, consultez <block ref="f35eaad9edb95ec2be22c4403bf0d360" category="inline-link-macro-rx"></block>.</block>
+  <block id="b70244907e8a4cb4fbb47d6e9fdda53a" category="cell">Cloud : Amazon FSx for NetApp ONTAP</block>
+  <block id="b4bada7d854e6650f9cc28e404fe40fb" category="admonition">Pour les IRE déployés sur Amazon FSx for NetApp ONTAP, vous n'avez pas besoin de fournir ces informations.</block>
 </blocks>

@@ -14,7 +14,7 @@ summary: 'Avant de créer un agent d"activité utilisateur et d"autres collecteu
 [role="lead"]
 NetApp Ransomware Resilience la détection du comportement des utilisateurs vous permet de répondre aux événements de ransomware au niveau de l'utilisateur. Vous devez créer un ensemble d'agents pour activer la détection du comportement des utilisateurs. Avant d'activer la détection, vous devez vous assurer que vous répondez aux exigences du système d'exploitation, du serveur et du réseau décrites afin que Ransomware Resilience puisse détecter et signaler correctement les événements.
 
-La détection du comportement de l'utilisateur est prise en charge dans NetApp Ransomware Resilience pour les charges de travail sur les systèmes ONTAP sur site ainsi que sur Amazon FsxN for NetApp ONTAP et les systèmes Cloud Volumes ONTAP qui s'alignent avec <<Prise en charge du fournisseur de cloud>>.
+La détection du comportement de l'utilisateur est prise en charge dans Ransomware Resilience pour les charges de travail sur les systèmes ONTAP sur site, ainsi que sur les systèmes Amazon FSx for NetApp ONTAP et Cloud Volumes ONTAP qui s'alignent avec <<Prise en charge du fournisseur de cloud>>.
 
 
 

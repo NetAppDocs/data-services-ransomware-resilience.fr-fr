@@ -48,7 +48,7 @@ Actuellement, vous ne pouvez répliquer les instantanés que vers un stockage ON
 
 
 
-NOTE: Si vous configurez des stratégies de protection pour Amazon FSxN pour ONTAP et Azure NetApp Files, consultez link:rp-reference-limitations.html["les limitations de chaque service"].
+NOTE: Si vous configurez des stratégies de protection pour Amazon FSx for NetApp ONTAP et Azure NetApp Files, consultez link:rp-reference-limitations.html["les limitations de chaque service"].
 
 
 TIP: Pour une gestion et une protection améliorées de votre patrimoine de données, vous pouvez créer link:task-protection-group.html["groupes de charges de travail"] pour protéger collectivement les volumes sous une seule stratégie.

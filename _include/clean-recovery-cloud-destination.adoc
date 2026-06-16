@@ -12,7 +12,7 @@
 
 
 
-NOTE: Si vous configurez un IRE avec la source dans Amazon FSxN pour ONTAP, ignorez cette exigence d'adresse IP LIF de données SVM de salle blanche.
+NOTE: Si vous configurez un IRE avec la source dans Amazon FSx for NetApp ONTAP, ignorez cette exigence d’adresse IP LIF de données SVM de salle blanche.
 
 .table de routage de l'environnement de production
 * La table de routage de production doit autoriser le trafic du sous-réseau IRE vers l'adresse IP LIF des données de restauration propres. Vous devez ajouter cette route à la table de routage de production.
