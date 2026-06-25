@@ -738,9 +738,10 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect
 
 Si les stratégies de capture instantanée ou de sauvegarde n'existent pas sur la charge de travail, vous pouvez créer une stratégie de protection contre les ransomwares, qui peut inclure les stratégies suivantes que vous créez dans ce service :
 
-* Politique d'instantané
-* Politique de sauvegarde
 * Politique de détection
+* Politique de sauvegarde
+* Politique d'instantané
+* Politique de réplication
 
 
 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["En savoir plus sur la protection des charges de travail"] .

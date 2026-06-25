@@ -2405,7 +2405,6 @@
   <block id="c36975af9ca6baf7b5a05658605b577d" category="paragraph">Si vous devez mettre à jour les autorisations des utilisateurs non administrateurs pour un système particulier, suivez cette procédure :</block>
   <block id="3e24330471da607e91da657f3cdf7a39" category="list-text">Connectez-vous à la console. Sur le tableau de bord, identifiez le système dont les autorisations utilisateur ONTAP doivent être mises à jour.</block>
   <block id="df790109011414a6034217652cd48d7c" category="inline-link-macro">restaurations propres</block>
-  <block id="ff3968cf2fd662dd2275d75511ef33af" category="cell">CIFS, NFS, SAN (iSCSI et NVMe)</block>
   <block id="a1b7351b5e78c5f7b3c07f1f9b210761" category="doc">Prise en charge de Google Cloud NetApp Volumes (aperçu)</block>
   <block id="d80af1c0606a32f418ab576db57cacc1" category="paragraph">Ransomware Resilience prend désormais en charge les systèmes Google Cloud NetApp Volumes, vous permettant de détecter et de contrer efficacement les menaces de ransomware dans Google Cloud NetApp Volumes. Lorsque vous effectuez une découverte, Ransomware Resilience affiche automatiquement les charges de travail provenant des systèmes Google Cloud NetApp Volumes. Lorsque vous découvrez les systèmes, ils apparaissent dans le tableau de bord de Ransomware Resilience. La prise en charge de Google Cloud NetApp Volumes dans Ransomware Resilience est actuellement en préversion.</block>
   <block id="35b27350003f459df80234524883b5fc" category="inline-link-macro">Limites de la résilience face aux ransomwares</block>
@@ -2563,4 +2562,6 @@
   <block id="b4bada7d854e6650f9cc28e404fe40fb" category="admonition">Pour les IRE déployés sur Amazon FSx for NetApp ONTAP, vous n'avez pas besoin de fournir ces informations.</block>
   <block id="f5b6822ed53c8f99c424ea0e8e011bf7" category="admonition">Ransomware Resilience ne peut découvrir que jusqu'à 3 000 charges de travail par agent Console.</block>
   <block id="bb4393b6187d55f98dbeb4c5bb8add00" category="list-text">Il existe une limite de 3 000 charges de travail par agent Console.</block>
+  <block id="8df5e57d843114bbbb53a4c85f76cb68" category="list-text">Les charges de travail SAN provenant de Google Cloud NetApp Volumes ne sont actuellement pas prises en charge par Ransomware Resilience.</block>
+  <block id="afce532bad172bcef50d75935d2ed43b" category="list-text">Politique de réplication</block>
 </blocks>

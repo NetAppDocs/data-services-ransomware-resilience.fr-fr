@@ -56,7 +56,7 @@ Assurez-vous d'utiliser un système pris en charge :
 | SAN (iSCSI et NVMe) | 9.17.1 et versions ultérieures 
 
 
-| Google Cloud NetApp Volumes | CIFS, NFS, SAN (iSCSI et NVMe) | S/O 
+| Google Cloud NetApp Volumes | CIFS et NFS | S/O 
 |===
 
 NOTE: La détection de l'activité des utilisateurs n'est pas prise en charge pour Azure NetApp Files ni pour Google Cloud NetApp Volumes. Pour plus d'informations sur la prise en charge de la détection de l'activité des utilisateurs, consultez link:reference-user-activity-requirements.html["Exigences de détection de l'activité de l'utilisateur"].
