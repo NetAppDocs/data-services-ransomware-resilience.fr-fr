@@ -18,6 +18,18 @@ Découvrez les nouveautés de NetApp Ransomware Resilience.
 
 
 
+== 29 juin 2026
+
+
+
+=== Réponses automatisées aux alertes d'activité des utilisateurs
+
+NetApp Ransomware Resilience prend désormais en charge l'automatisation de la création de snapshots et le blocage des utilisateurs lorsqu'une alerte d'activité utilisateur est générée. Avec des réponses automatisées, vous pouvez bloquer un utilisateur dès qu'un avertissement est généré et créer un snapshot pour la restauration, ce qui permet une réaction plus rapide sans intervention manuelle.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-automate-user-activity.html["Automatisez les réponses aux alertes d'activité des utilisateurs"^].
+
+
+
 == 08 juin 2026
 
 

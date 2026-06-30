@@ -50,3 +50,10 @@ image:screen-dashboard.png["Page du tableau de bord"]
 image:screen-reports.png["Page de rapports affichant le rapport d'exercice de préparation"]
 
 
+
+
+
+== Plus d'informations
+
+* link:task-automate-user-activity.html["Automatisez les réponses aux événements d'activité des utilisateurs"]
+

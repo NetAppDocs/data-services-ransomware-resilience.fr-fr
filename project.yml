@@ -56,6 +56,8 @@ sidebar:
           url: "/reference-user-activity-requirements.html"
         - title: Configurer les agents et les collecteurs
           url: "/suspicious-user-activity.html"
+        - title: Gérer les alertes et le blocage des utilisateurs
+          url: "/task-users-manage.html"
       - title: Gérer les groupes de protection
         url: "/task-protection-group.html"
       - title: Rechercher des données personnelles identifiables
@@ -64,6 +66,8 @@ sidebar:
       entries:
       - title: Répondre à une alerte détectée
         url: "/rp-use-alert.html"
+      - title: Automatisez les réponses aux alertes d'activité des utilisateurs
+        url: "/task-automate-user-activity.html"
       - title: Examiner l'état de rétablissement
         url: "/rp-use-recover.html"
       - title: Récupérez avec une restauration propre

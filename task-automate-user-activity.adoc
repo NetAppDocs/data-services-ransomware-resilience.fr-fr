@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: task-automate-user-activity.html 
+keywords: data breach detection, data breach, user activity, automated response 
+summary: 'NetApp Ransomware Resilience prend en charge la création de réponses automatisées aux événements d"activité des utilisateurs, vous permettant de créer automatiquement un instantané ou de bloquer un utilisateur.' 
+---
+= Automatisez les réponses aux alertes d'activité des utilisateurs dans NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Ransomware Resilience prend en charge la création de réponses automatisées à link:concept-user-behavior.html["événements d'activité de l'utilisateur"]. Grâce à ces réponses automatisées, Ransomware Resilience peut créer un instantané ou bloquer un utilisateur lorsqu'une attaque ou une alerte est détectée, permettant ainsi une réaction plus rapide aux incidents liés aux ransomwares.
+
+Les réponses automatisées sont prises en charge pour le chiffrement (comportement de l'utilisateur), les violations de données et les événements de destruction de données. Vous devez disposer de link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#create-a-user-activity-agent["configuré un agent d'activité utilisateur, activé une stratégie avec détection d'activité utilisateur et créé un connecteur d'annuaire utilisateur"] avant de créer une réponse automatisée.
+
+
+
+== Créer une réponse automatisée
+
+Vous ne pouvez protéger qu'une seule machine virtuelle de stockage avec au moins une charge de travail protégée par une politique de détection des comportements suspects des utilisateurs.
+
+.Étapes
+. Dans Ransomware Resilience, sélectionnez **Paramètres**.
+. Dans la vignette de surveillance de l'activité de l'utilisateur, sélectionnez **Gérer**.
+. Sélectionnez l'onglet **Réponses automatisées**.
+. Sélectionnez **Ajouter** pour créer le comportement.
+. Saisissez un **nom** pour la réponse automatisée.
+. Choisissez le type d'événement qui déclenchera la réponse : **Attaque** ou **Avertissement**. En savoir plus sur les différentes link:rp-use-alert.html#alert-types-and-statuses["types d'alertes"].
+. Choisissez la réponse :
++
+** **Blocage de l'accès utilisateur** : L'utilisateur est bloqué sur toutes les machines virtuelles de stockage protégées par NetApp Ransomware Resilience lorsque l'alerte est déclenchée.
++
+Si vous choisissez cette option, vous devez également sélectionner la durée du bloc. Il peut s'agir d'un intervalle de 1 à 24 heures ou permanent.
+
+** **Prenez des instantanés** : Créez un instantané des charges de travail impactées à utiliser pour une éventuelle récupération. Les instantanés sont conservés pendant sept jours.
+
+
+. Sélectionnez les types d'alertes qui déclenchent la réponse automatisée :
++
+|===
+
+
+| Type d'alerte | Description 
+
+
+| Chiffrement (comportement de l'utilisateur) | Ransomware Resilience identifie les activités anormales de lecture, d'écriture et de renommage de fichiers effectuées par un utilisateur spécifique. 
+
+
+| Violation de données | Ransomware Resilience détecte les schémas d'accès en lecture de fichiers anormaux effectués par un utilisateur spécifique. 
+
+
+| Destruction de données | Ransomware Resilience détecte la suppression massive de fichiers par un utilisateur spécifique. 
+|===
+. Sélectionnez les machines virtuelles de stockage auxquelles appliquer la réponse automatisée.
+. Sélectionnez **Ajouter** pour créer la réponse automatisée.
+
+
+
+
+== Modifier une réponse automatisée
+
+Après avoir créé une réponse automatisée, vous pouvez suspendre, redémarrer ou modifier la réponse. Vous pouvez modifier le nom de la réponse, les types d'alertes qui déclenchent la réponse, les machines virtuelles de stockage et l'action effectuée.
+
+.Étapes
+. Dans Ransomware Resilience, sélectionnez **Paramètres**.
+. Dans la vignette de surveillance de l'activité de l'utilisateur, sélectionnez **Gérer**.
+. Sélectionnez l'onglet **Réponses automatisées**.
+. Sélectionnez la réponse automatique que vous souhaitez modifier.
+. Pour mettre en pause ou supprimer la réponse, sélectionnez le menu d’actions puis **Pause** (ou **Start**) ou **Delete**.
++
+Pour modifier la réponse, sélectionnez **Edit**.
+
+. Vous pouvez modifier tous les paramètres, à l'exception du niveau de gravité de l'alerte.
+. Sélectionnez **Enregistrer** pour capturer les modifications.
+
