@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: task-users-manage.html 
 keywords: user activity detection, 
-summary: 'Après avoir créé le connecteur d"annuaire utilisateur dans NetApp Ransomware Resilience, vous pouvez bloquer et débloquer des utilisateurs et exclure des utilisateurs des alertes.' 
+summary: 'Après avoir créé le connecteur d"annuaire utilisateur dans NetApp Ransomware Resilience, vous pouvez bloquer et débloquer des utilisateurs et exclure des utilisateurs des alertes. Vous pouvez également exclure des chemins de fichiers de la génération d"alertes.' 
 ---
-= Gérer le blocage des utilisateurs et les alertes dans NetApp Ransomware Resilience
+= Gérez les alertes et les utilisateurs bloqués dans NetApp Ransomware Resilience
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Après avoir créé le connecteur d'annuaire utilisateur dans NetApp Ransomware Resilience, vous pouvez bloquer et débloquer des utilisateurs lors d'événements de ransomware et les évaluer. Vous pouvez également exclure sélectivement des utilisateurs des alertes de ransomware si vous êtes certain que leurs actions ne sont pas des attaques.
+Après avoir configuré la surveillance du comportement des utilisateurs dans NetApp Ransomware Resilience, vous pouvez personnaliser les alertes et gérer les utilisateurs bloqués. La personnalisation des alertes vous permet d’exclure certains utilisateurs ou chemins de fichiers de la génération d’une alerte. Le blocage des utilisateurs est destiné à répondre aux événements liés aux ransomwares afin de prévenir toute activité malveillante de la part des utilisateurs.
 
 Vous devez avoir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#create-a-user-activity-agent["configuré un agent d'activité utilisateur, activé une stratégie avec détection d'activité utilisateur et créé un connecteur d'annuaire utilisateur"] pour bloquer les utilisateurs.
 
@@ -46,7 +46,7 @@ Vous pouvez bloquer les utilisateurs lorsque vous pensez qu'ils sont responsable
 
 
 
-== Gérer les alertes utilisateur
+== Exclure les utilisateurs des alertes
 
 S'il existe certains utilisateurs de confiance dont le comportement pourrait déclencher des alertes de comportement utilisateur, vous pouvez les exclure des alertes.
 
@@ -73,14 +73,33 @@ Dans NetApp Ransomware Resilience, sélectionnez **Téléverser**. Localisez et 
 
 TIP: Vous pouvez également exclure un utilisateur directement d'une alerte. Pour plus d'informations, consultez link:rp-use-alert.html["Répondre aux alertes de ransomware"].
 
-.Supprimer des utilisateurs de la liste des utilisateurs exclus
-. Dans le tableau de bord Paramètres, repérez la vignette de surveillance de l'activité de l'utilisateur, puis sélectionnez **Gérer**.
+.Supprimer les utilisateurs de la liste des utilisateurs exclus
+. Dans le tableau de bord Paramètres, repérez la carte User activity puis sélectionnez **Manage**.
 . Sélectionnez l'onglet **Exclu de la surveillance**.
 . Sélectionnez **Ajouter**.
-. Pour exclure des utilisateurs individuels de l'interface utilisateur, choisissez **Sélection manuelle**.
+. Pour exclure des utilisateurs individuels de l'interface utilisateur, choisissez **Select manually**.
 . Repérez le nom de l'utilisateur que vous souhaitez supprimer de la liste des utilisateurs exclus. Sélectionnez le menu d'actions (`...` sur la ligne contenant le nom de l'utilisateur, puis **Supprimer**.
 . Dans la boîte de dialogue, sélectionnez **Remove** pour confirmer que vous souhaitez supprimer les utilisateurs sélectionnés.
 
+
+
+
+== Exclure les chemins d'accès aux fichiers de la surveillance
+
+Chaque chemin d'accès doit commencer par le nom d'un volume. Il peut inclure jusqu'à trois sous-répertoires pour ce volume, par exemple "volume/répertoire/sous-répertoire/sous-répertoire2". Vous pouvez exclure des chemins d'accès en les saisissant manuellement ou en important un fichier CSV qui les répertorie.
+
+.Étapes
+. Dans Ransomware Resilience, sélectionnez **Paramètres**.
+. Dans la vignette de surveillance de l'activité de l'utilisateur, sélectionnez **Gérer**.
+. Sélectionnez l’onglet *Exclu de la surveillance*.
+. Sélectionnez **Ajouter** pour saisir les chemins d'accès aux fichiers à exclure.
+. Pour saisir les chemins d'accès aux fichiers dans l'interface utilisateur, sélectionnez le bouton radio *Saisie manuelle*, puis saisissez le chemin d'accès, par exemple "volume/directory/subdirectory/". Pour saisir d'autres chemins d'accès, sélectionnez **Select file path**.
+. Pour importer une liste de chemins de fichiers, sélectionnez l’option **Importer**. Sélectionnez le bouton d’importation pour choisir le fichier CSV.
+. Sélectionnez **Ajouter**.
+
+
+.Résultat
+Une fois l'opération terminée avec succès, NetApp Ransomware Resilience commence à exclure les fichiers situés dans les chemins sélectionnés de la surveillance des comportements suspects des utilisateurs. Vous pouvez consulter la liste des chemins à tout moment dans le menu Paramètres. Si vous devez réactiver la surveillance de ces chemins de fichiers, vous pouvez les retirer de la liste.
 
 
 

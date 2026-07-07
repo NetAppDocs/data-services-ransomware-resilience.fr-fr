@@ -41,7 +41,7 @@ Ransomware Resilience s'appuie sur des données relatives aux modèles d'entropi
 
 
 
-NOTE: Pour les alertes de violation de données, de destruction de données et de comportement utilisateur suspect, vous devez configurer link:concept-user-behavior.html["détection de l'activité de l'utilisateur"].
+NOTE: Pour les alertes en cas de violation de données, de destruction de données et de comportement suspect des utilisateurs, vous devez configurer link:concept-user-behavior.html["détection de l'activité de l'utilisateur"]. Vous pouvez également empêcher link:task-users-manage.html["chemins de fichiers et utilisateurs spécifiques"] de générer des alertes.
 
 
 
