@@ -2611,7 +2611,6 @@
   <block id="ddebb8e31f83ddb3bde0b3a0292845dc" category="doc">Exclure les chemins de fichiers des alertes de comportement utilisateur</block>
   <block id="33239db9e04a3b1473f3468fd2d9d99b" category="paragraph">Ransomware Resilience permet d'exclure certains chemins d'accès aux fichiers des alertes de surveillance du comportement des utilisateurs. Vous pouvez exclure des chemins d'accès si vous savez qu'ils ne sont pas à risque ou si vous effectuez des opérations sur des fichiers dans un volume susceptible de déclencher des alertes.</block>
   <block id="f1780a3dd9362a514caa277752b942f2" category="inline-link-macro">Exclure les chemins de fichiers des alertes</block>
-  <block id="4cbd1bb5d6b8178b77b88be565a35c9b" category="paragraph">Pour plus d'informations, voir <block ref="8c33118b4350e89c06a1a557095207c2" category="inline-link-macro-rx"></block>.</block>
   <block id="1d20fa647694e6811cd363111cf77538" category="inline-link-macro">chemins de fichiers et utilisateurs spécifiques</block>
   <block id="2e9d0337668c42840413047306ef5b57" category="admonition">Pour les alertes en cas de violation de données, de destruction de données et de comportement suspect des utilisateurs, vous devez configurer <block ref="9403988536e87b1b5fabe2157e11581a" category="inline-link-macro-rx"></block>. Vous pouvez également empêcher <block ref="bd37368d247ac8892eb2f81e8ff6fc76" category="inline-link-macro-rx"></block> de générer des alertes.</block>
   <block id="75cd3815cc2e90d9679458215fb968dd" category="inline-link-macro">Gérer les paramètres d'alerte et les utilisateurs bloqués</block>
@@ -2632,4 +2631,5 @@
   <block id="67510fe1e2eaace9d146396c21a7a119" category="paragraph">Une fois l'opération terminée avec succès, NetApp Ransomware Resilience commence à exclure les fichiers situés dans les chemins sélectionnés de la surveillance des comportements suspects des utilisateurs. Vous pouvez consulter la liste des chemins à tout moment dans le menu Paramètres. Si vous devez réactiver la surveillance de ces chemins de fichiers, vous pouvez les retirer de la liste.</block>
   <block id="ea1fca7315926f55d77bcab3ed051982" category="section-title">07 juillet 2026</block>
   <block id="4c0600f62cb13917f7a785731376b1cb" category="sidebar">Gérer les alertes et les utilisateurs bloqués</block>
+  <block id="5f2a57952e65084ab1bcb535d4662440" category="paragraph">Pour plus d'informations, consultez <block ref="8c33118b4350e89c06a1a557095207c2" category="inline-link-macro-rx"></block>.</block>
 </blocks>
