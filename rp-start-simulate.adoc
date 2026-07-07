@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-start-simulate.html 
 keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert, simulate, readiness drill, practice, ransomware attack, ransomware attack response, ransomware attack readiness drill 
-summary: Réalisez un exercice de préparation aux ransomwares en simulant une attaque de ransomware sur un échantillon de charge de travail nouvellement créé.  Ensuite, examinez l’attaque simulée et récupérez l’exemple de charge de travail.  Vous pouvez exécuter un exercice de préparation aux ransomwares plusieurs fois. 
+summary: 'Effectuez un exercice de préparation contre les rançongiciels en simulant une attaque par rançongiciel sur un échantillon de charge de travail. Ensuite, analysez l"attaque simulée et restaurez l"échantillon de charge de travail. Vous pouvez effectuer un exercice de préparation contre les rançongiciels plusieurs fois.' 
 ---
 = Effectuez un exercice de préparation aux attaques de ransomware dans NetApp Ransomware Resilience
 :hardbreaks:
@@ -14,10 +14,19 @@ summary: Réalisez un exercice de préparation aux ransomwares en simulant une a
 [role="lead"]
 Effectuez un exercice de préparation à une attaque par ransomware dans NetApp Ransomware Resilience pour tester votre préparation à une véritable attaque par ransomware. Avec l’exercice de préparation, Ransomware Resilience simule une attaque sur un nouvel échantillon de charge de travail, vous permettant d’analyser l’attaque simulée et d’effectuer une restauration sans impacter vos véritables données de production. L’exercice de préparation vous aide à vous familiariser avec les notifications d’alerte et à vous préparer à la réponse et à la restauration. Vous pouvez exécuter l’exercice aussi souvent que nécessaire.
 
-
-TIP: Vos données de charge de travail réelles ne sont pas affectées.
-
 Vous pouvez exécuter des exercices de préparation sur les charges de travail NFS et CIFS (SMB).
+
+
+
+== Comment fonctionnent les exercices de préparation
+
+La solution Ransomware Resilience propose trois types d’exercices : link:task-clean-restore-recover.html["restauration propre"], link:rp-use-recover.html["récupération personnalisée"] et link:suspicious-user-activity.html["récupération après une fuite de données"]. Les exercices de restauration propre et de récupération personnalisée simulent des attaques basées sur le chiffrement (entropie) et diffèrent par la méthode de récupération qu’ils proposent. Les exercices de récupération après fuite de données simulent une exfiltration avec des schémas de lecture inhabituels sur vos données.
+
+Lorsque vous configurez un exercice de préparation, Ransomware Resilience crée un volume de test, applique une protection contre les ransomwares avec une stratégie de snapshot au volume, valide la connectivité, monte le volume, copie les données de référence, démonte le volume et crée un snapshot de référence.
+
+Lorsque vous lancez l'exercice, Ransomware Resilience monte le volume puis simule une attaque de ransomware. Si l'exercice de préparation concerne une récupération personnalisée ou une restauration complète, les données de base du volume de test sont remplacées par des extensions de fichiers connues pour être associées aux ransomwares, ainsi que par des fichiers chiffrés ou modifiés par entropie. Lors d'un exercice de récupération suite à une fuite de données, les fichiers ne sont pas remplacés ; Ransomware Resilience simule plutôt un attaquant lisant et exfiltrant systématiquement les données. Quel que soit le type d'exercice, Ransomware Resilience déclenche ensuite une alerte et vérifie que l'alerte a bien été générée.
+
+Lorsque vous exécutez l'exercice, vous pouvez tester votre réaction aux alertes et, si vous le souhaitez, parcourir le processus de récupération sans impacter les données réelles.
 
 
 
@@ -30,9 +39,9 @@ Vous pouvez exécuter des exercices de préparation sur les charges de travail N
 . Dans la tuile Readiness drill, sélectionnez **Configure**.
 . Choisissez le **type d'exercice de préparation**.
 +
-** **Récupération personnalisée** : Cet exercice crée une alerte, puis vous permet d’effectuer link:rp-use-recover.html["une restauration personnalisée"] où vous configurez le point de récupération.
-** **Restauration propre** : Cette procédure génère une alerte puis vous amène au link:task-clean-restore-recover.html["restauration propre"] processus de récupération, qui vous guide vers des points de récupération optimisés.
-** **Reprise après une fuite de données** : Cet exercice génère une alerte en cas de fuite de données déclenchée par un utilisateur. Vous devez avoir configuré link:suspicious-user-activity.html["un agent d'activité utilisateur"] avant de pouvoir activer ce type d’exercice.
+** **Récupération personnalisée** : Répondez à une attaque de chiffrement (entropie) avec un link:rp-use-recover.html["restauration personnalisée"] où vous configurez le point de récupération.
+** **Restauration propre** : Répondez à une attaque de chiffrement (entropie) par un link:task-clean-restore-recover.html["restauration propre"] processus de récupération qui vous guide vers des points de récupération optimisés.
+** **Reprise après une violation de données** : Vous devez avoir configuré link:suspicious-user-activity.html["un agent d'activité utilisateur"] avant de pouvoir activer ce type d’exercice.
 
 
 . Choisissez l'environnement dans lequel le test de préparation sera créé.
@@ -73,7 +82,7 @@ image:screen-dashboard.png["Page du tableau de bord affichant le bouton Exécute
 
 
 
-NOTE: Vous ne pouvez pas modifier la configuration de l'exercice de préparation pendant son exécution. Pour modifier l'exercice de préparation, sélectionnez **Réinitialiser** puis modifiez l'exercice.
+NOTE: Vous ne pouvez pas modifier la configuration de l'exercice de préparation pendant son exécution. Pour modifier l'exercice de préparation, sélectionnez **Reset**, puis modifiez l'exercice.
 
 
 

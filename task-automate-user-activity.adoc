@@ -22,6 +22,9 @@ Les réponses automatisées sont prises en charge pour le chiffrement (comportem
 
 Vous ne pouvez protéger qu'une seule machine virtuelle de stockage avec au moins une charge de travail protégée par une politique de détection des comportements suspects des utilisateurs.
 
+
+NOTE: Pour les réponses automatisées aux comportements suspects des utilisateurs, vous pouvez uniquement prendre un snapshot. Le blocage d'un utilisateur n'est pas pris en charge comme réponse automatisée à un comportement suspect.
+
 .Étapes
 . Dans Ransomware Resilience, sélectionnez **Paramètres**.
 . Dans la vignette de surveillance de l'activité de l'utilisateur, sélectionnez **Gérer**.
@@ -53,6 +56,9 @@ Si vous choisissez cette option, vous devez également sélectionner la durée d
 
 
 | Destruction de données | Ransomware Resilience détecte la suppression massive de fichiers par un utilisateur spécifique. 
+
+
+| Comportement utilisateur suspect | Ransomware Resilience identifie les comportements anormaux qui vont au-delà des violations de données, de la destruction de données ou du chiffrement. 
 |===
 . Sélectionnez les machines virtuelles de stockage auxquelles appliquer la réponse automatisée.
 . Sélectionnez **Ajouter** pour créer la réponse automatisée.
