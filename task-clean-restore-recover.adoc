@@ -18,6 +18,7 @@ Avec NetApp Ransomware Resilience, vous pouvez effectuer une récupération guid
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super administrateur"^] ou du rôle d'administrateur Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^].
@@ -26,6 +27,7 @@ Vous devez avoir configuré un link:task-clean-restore.html["environnement de r�
 
 
 
+[[considerations]]
 == Considérations
 
 * Vous ne pouvez effectuer qu'une restauration complète en cas d'attaque par ransomware basée sur le chiffrement.
@@ -39,6 +41,7 @@ Vous devez avoir configuré un link:task-clean-restore.html["environnement de r�
 
 
 
+[[considerations-for-restoring-to-an-alternate-location]]
 === Considérations relatives à la restauration dans un autre emplacement
 
 Lorsque vous restaurez un volume à l'aide d'une restauration propre, vous pouvez choisir un emplacement alternatif géré par le même agent Console. Ce nouvel emplacement peut se trouver sur le même système, une machine virtuelle de stockage, un agrégat, ou sur un système différent. Lorsque vous restaurez vers un emplacement alternatif :
@@ -51,6 +54,7 @@ Lorsque vous restaurez un volume à l'aide d'une restauration propre, vous pouve
 
 
 
+[[perform-a-clean-restore]]
 == Effectuez une restauration propre
 
 . Dans la section **Récupération**, identifiez la charge de travail que vous souhaitez restaurer. Sélectionnez **Restaurer**.

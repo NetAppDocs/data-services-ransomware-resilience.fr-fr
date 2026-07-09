@@ -29,6 +29,7 @@ Si vous n'utilisez _pas_ DII, suivez les instructions de configuration ici.
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 * Assurez-vous de respecter les link:reference-user-activity-requirements.html["exigences relatives au système d'exploitation, au serveur et au réseau"].
@@ -40,6 +41,7 @@ Assurez-vous que chaque rôle est appliqué au niveau de l'organisation.
 
 
 
+[[create-a-user-activity-agent]]
 == Créer un agent d'activité utilisateur
 
 Les agents d'activité utilisateur sont des environnements exécutables pour link:#add-a-data-collector["collecteurs de données"] ; les collecteurs de données partagent les événements d'activité utilisateur avec Ransomware Resilience. Vous devez créer au moins un agent d'activité utilisateur pour activer la détection de l'activité utilisateur.
@@ -78,6 +80,7 @@ Une fois l'agent d'activité utilisateur créé avec succès, retournez dans le 
 
 
 
+[[add-a-data-collector]]
 === Ajouter un collecteur de données
 
 Des collecteurs de données sont créés automatiquement lorsque vous activez une stratégie de protection contre les ransomwares avec détection de l'activité de l'utilisateur. Pour plus d'informations, consultez link:rp-use-protect.html#add-a-detection-policy-to-workloads-with-existing-backup-or-snapshot-policies["ajouter une politique de détection"].
@@ -88,6 +91,7 @@ image:user-activity-settings.png["Capture d'écran des paramètres d'activité u
 
 
 
+[[create-a-user-directory-connector]]
 == Créer un connecteur d'annuaire utilisateur
 
 Pour mapper les ID utilisateur aux noms d’utilisateur, vous devez créer un connecteur d’annuaire utilisateur.
@@ -148,6 +152,7 @@ Fournissez les détails du mappage des attributs :
 
 
 
+[[delete-a-user-directory-connector]]
 === Supprimer un connecteur d'annuaire utilisateur
 
 .Étapes
@@ -160,6 +165,7 @@ Fournissez les détails du mappage des attributs :
 
 
 
+[[respond-to-user-activity-alerts]]
 == Répondre aux alertes d'activité des utilisateurs
 
 Une fois la détection de l'activité des utilisateurs configurée, vous pouvez suivre les événements sur la page des alertes. Pour plus d'informations, voir link:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["Détecter les activités malveillantes et les comportements suspects des utilisateurs"].
@@ -168,6 +174,7 @@ Vous pouvez également link:task-automate-user-activity.html["Automatisez les r�
 
 
 
+[[next-steps]]
 == Prochaines étapes
 
 * link:task-users-manage.html["Gérer les paramètres d'alerte et les utilisateurs bloqués"]

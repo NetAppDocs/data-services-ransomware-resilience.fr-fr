@@ -18,6 +18,7 @@ Les stratégies de protection contre les ransomwares sont un élément clé de N
 
 
 
+[[understand-ransomware-protection-strategies]]
 == Comprendre les stratégies de protection contre les ransomwares
 
 Les stratégies de protection contre les ransomwares englobent _détection_, _protection_ et _réplication_.
@@ -55,6 +56,7 @@ TIP: Pour une gestion et une protection améliorées de votre patrimoine de donn
 
 
 
+[[protection-policies-with-other-netapp-managed-services]]
 === Politiques de protection avec d'autres services gérés par NetApp
 
 Au-delà de la résilience aux ransomwares, vous pouvez utiliser NetApp Backup and Recovery pour gérer la protection des partages de fichiers et des partages de fichiers de machines virtuelles.
@@ -74,6 +76,7 @@ Si votre charge de travail n'est pas gérée par Backup and Recovery ou Ransomwa
 
 
 
+[[predefined-detection-policies]]
 === Politiques de détection prédéfinies
 
 Vous pouvez choisir l’une des politiques prédéfinies de résilience aux ransomwares suivantes, qui sont alignées sur l’importance de la charge de travail.
@@ -189,6 +192,7 @@ Tous les 30 jours
 |===
 
 
+[[add-a-ransomware-protection-strategy]]
 == Ajouter une stratégie de protection contre les ransomwares
 
 Il existe trois approches pour ajouter une stratégie de protection contre les ransomwares :
@@ -224,6 +228,7 @@ La politique de détection active la protection autonome contre les ransomwares 
 
 
 
+[[create-a-ransomware-protection-strategy-if-you-have-no-snapshot-or-backup-policies]]
 === Créer une stratégie de protection contre les ransomwares (si vous n'avez pas de politiques de capture instantanée ou de sauvegarde)
 
 Si les stratégies de capture instantanée ou de sauvegarde n'existent pas sur la charge de travail, vous pouvez créer une stratégie de protection contre les ransomwares, qui peut inclure les stratégies suivantes que vous créez dans Ransomware Resilience :
@@ -302,6 +307,7 @@ TIP: Pour activer le verrouillage des sauvegardes sur le stockage secondaire, co
 
 
 
+[[add-a-detection-policy-to-workloads-with-existing-snapshot-and-backup-policies-managed-by-backup-and-recovery]]
 === Ajoutez une stratégie de détection aux charges de travail disposant de stratégies de capture instantanée et de sauvegarde existantes gérées par Backup and Recovery
 
 Ransomware Resilience vous permet d'attribuer une stratégie de détection ou une stratégie de protection aux charges de travail bénéficiant déjà d'une protection par instantané et sauvegarde gérée dans d'autres NetApp products or services. Backup and Recovery utilise des stratégies qui régissent les instantanés, la réplication vers un stockage secondaire ou les sauvegardes vers un stockage objet.
@@ -363,6 +369,7 @@ image:screen-protection.png["Gérer la page de stratégie"]
 
 
 
+[[assign-a-different-policy]]
 === Attribuer une politique différente
 
 Vous pouvez remplacer la politique existante par une autre.
@@ -378,12 +385,14 @@ Vous pouvez remplacer la politique existante par une autre.
 
 
 
+[[manage-ransomware-protection-strategies]]
 == Gérer les stratégies de protection contre les ransomwares
 
 Vous pouvez supprimer une stratégie de ransomware.
 
 
 
+[[view-workloads-protected-by-a-ransomware-protection-strategy]]
 === Afficher les charges de travail protégées par une stratégie de protection contre les ransomwares
 
 Avant de supprimer une stratégie de protection contre les ransomwares, vous souhaiterez peut-être afficher les charges de travail protégées par cette stratégie.
@@ -404,6 +413,7 @@ image:screen-protection-strategy-list.png["Écran des stratégies de protection 
 
 
 
+[[delete-a-ransomware-protection-strategy]]
 === Supprimer une stratégie de protection contre les ransomwares
 
 Vous pouvez supprimer une stratégie de protection qui n’est actuellement associée à aucune charge de travail.

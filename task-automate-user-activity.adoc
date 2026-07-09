@@ -18,6 +18,7 @@ Les réponses automatisées sont prises en charge pour le chiffrement (comportem
 
 
 
+[[create-an-automated-response]]
 == Créer une réponse automatisée
 
 Vous ne pouvez protéger qu'une seule machine virtuelle de stockage avec au moins une charge de travail protégée par une politique de détection des comportements suspects des utilisateurs.
@@ -66,6 +67,7 @@ Si vous choisissez cette option, vous devez également sélectionner la durée d
 
 
 
+[[modify-an-automated-response]]
 == Modifier une réponse automatisée
 
 Après avoir créé une réponse automatisée, vous pouvez suspendre, redémarrer ou modifier la réponse. Vous pouvez modifier le nom de la réponse, les types d'alertes qui déclenchent la réponse, les machines virtuelles de stockage et l'action effectuée.

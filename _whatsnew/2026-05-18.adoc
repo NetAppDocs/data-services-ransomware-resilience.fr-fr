@@ -4,6 +4,7 @@
 
 
 
+[[google-cloud-netapp-volumes-support-preview]]
 === Prise en charge de Google Cloud NetApp Volumes (aperçu)
 
 Ransomware Resilience prend désormais en charge les systèmes Google Cloud NetApp Volumes, vous permettant de détecter et de contrer efficacement les menaces de ransomware dans Google Cloud NetApp Volumes. Lorsque vous effectuez une découverte, Ransomware Resilience affiche automatiquement les charges de travail provenant des systèmes Google Cloud NetApp Volumes. Lorsque vous découvrez les systèmes, ils apparaissent dans le tableau de bord de Ransomware Resilience. La prise en charge de Google Cloud NetApp Volumes dans Ransomware Resilience est actuellement en préversion.
@@ -12,6 +13,7 @@ Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-serv
 
 
 
+[[clean-restore-enhancements]]
 === Améliorations de la restauration propre
 
 La restauration complète prend désormais en charge les rapports. Grâce aux rapports, vous pouvez consulter et évaluer les restaurations complètes, en enregistrant ces informations hors ligne au format CSV.

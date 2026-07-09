@@ -4,6 +4,7 @@
 
 
 
+[[unsupported-volumes]]
 === Volumes non pris en charge
 
 Les rapports de NetApp Ransomware Resilience incluent désormais des informations sur les volumes pris en charge et non pris en charge dans le rapport **Summary**. Utilisez ces informations pour diagnostiquer pourquoi des volumes d’un système peuvent ne pas être éligibles à la protection contre les ransomwares.

@@ -4,6 +4,7 @@
 
 
 
+[[clean-restore-enhancements]]
 === Améliorations de la restauration propre
 
 La restauration propre prend désormais en charge la récupération vers un emplacement alternatif, ce qui vous permet de restaurer des volumes sur différents systèmes, machines virtuelles de stockage et agrégats gérés par le même agent Console. De plus, la restauration propre a supprimé la limitation de sept jours dans la recherche de snapshots exploitables pour la récupération. La restauration propre continue désormais de rechercher un point de récupération viable parmi les snapshots disponibles, quelle que soit la distance par rapport à l'événement de ransomware.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clea
 
 
 
+[[google-secops-siem-support]]
 === Assistance Google SecOps SIEM
 
 Ransomware Resilience prend désormais en charge la gestion des informations et des événements de sécurité (SIEM) avec Google SecOps, vous permettant d'envoyer automatiquement des données à Google SecOps pour une analyse et une détection des menaces simplifiées.
@@ -20,6 +22,7 @@ Pour plus d'informations sur la configuration, voir link:https://docs.netapp.com
 
 
 
+[[azure-netapp-files-support-is-now-generally-available]]
 === La prise en charge d'Azure NetApp Files est désormais disponible pour tous
 
 Ransomware Resilience prend désormais en charge les systèmes Azure NetApp Files, vous permettant de détecter et de contrer efficacement les menaces de ransomware dans Azure NetApp Files. Lors de la découverte des charges de travail, Ransomware Resilience présente désormais Azure NetApp Files et les affiche dans le tableau de bord de protection. La prise en charge d’Azure NetApp Files par Ransomware Resilience inclut des stratégies de détection et de protection uniquement avec des instantanés. La prise en charge d’Azure NetApp Files est désormais généralement disponible (GA).
@@ -28,6 +31,7 @@ Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-serv
 
 
 
+[[soar-support-for-blocking-users]]
 === Prise en charge SOAR pour le blocage des utilisateurs
 
 Ransomware Resilience prend désormais en charge le blocage individuel des utilisateurs avec Google SecOps et les playbooks SOAR de Splunk. Avec cette addition, vous pouvez automatiser le blocage des utilisateurs lorsque Ransomware Resilience détecte une activité utilisateur suspecte, telle qu'une violation de données ou une suppression massive de données.

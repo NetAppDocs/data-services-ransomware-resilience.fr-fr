@@ -33,6 +33,7 @@ Une charge de travail peut avoir l’un des états de restauration suivants :
 
 
 
+[[view-workloads-that-are-ready-to-be-restored]]
 == Afficher les charges de travail prêtes à être restaurées
 
 Passez en revue les charges de travail qui sont dans l’état de récupération « Restauration nécessaire ».
@@ -50,6 +51,7 @@ image:screen-recovery2.png["Page de récupération"]
 
 
 
+[[recover-a-workload]]
 == Récupérer une charge de travail
 
 Après avoir évalué les charges de travail, vous avez deux options pour restaurer votre charge de travail :

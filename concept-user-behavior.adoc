@@ -25,6 +25,7 @@ IMPORTANT: La détection de l'activité des utilisateurs n'est actuellement pas 
 
 
 
+[[user-activity-forensics]]
 == Analyse forensique de l'activité des utilisateurs
 
 Ransomware Resilience propose une analyse forensique des comportements des utilisateurs : listes et graphiques montrant quand une activité suspecte a eu lieu et quand des notifications ont été envoyées. Ces éléments détaillent la fréquence des activités suspectes sur les fichiers, répertoires, volumes et charges de travail au fil du temps pour aider à retracer les événements. Vous pouvez également observer l’apparition de nouvelles extensions de fichiers.
@@ -37,6 +38,7 @@ image:all-file-activity.png["Capture d'écran de l'ensemble de l'activité des f
 
 
 
+[[components]]
 == Composants
 
 La détection du comportement de l'utilisateur dans NetApp Ransomware Resilience comporte trois composantes clés.
@@ -48,6 +50,7 @@ La détection du comportement de l'utilisateur dans NetApp Ransomware Resilience
 
 
 
+[[ransomware-resilience-and-data-infrastructure-insights]]
 == Ransomware Resilience et Data Infrastructure Insights
 
 La détection du comportement des utilisateurs dans Ransomware Resilience est une intégration avec Data Infrastructure Insights (DII) Workload Security et utilise link:reference-user-activity-requirements.html["Points de terminaison DII"]. Vous n'avez besoin d'aucune configuration DII pour activer la détection du comportement des utilisateurs dans Ransomware Resilience. Pour activer la détection du comportement des utilisateurs, link:suspicious-user-activity.html["créez l’agent et les collecteurs requis et activez la stratégie de protection contre les ransomwares appropriée"].
@@ -56,6 +59,7 @@ Si vous utilisez déjà NetApp Data Infrastructure Insights (DII) Workload Secur
 
 
 
+[[next-steps]]
 == Prochaines étapes
 
 * link:reference-user-activity-requirements.html["Exigences relatives à la détection du comportement des utilisateurs"]

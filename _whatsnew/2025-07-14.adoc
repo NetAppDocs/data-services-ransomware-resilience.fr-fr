@@ -4,6 +4,7 @@
 
 
 
+[[san-workload-support]]
 === Prise en charge de la charge de travail SAN
 
 Cette version inclut la prise en charge des charges de travail SAN dans la BlueXP ransomware protection. Vous pouvez désormais protéger les charges de travail SAN en plus des charges de travail NFS et CIFS.
@@ -12,6 +13,7 @@ Pour plus d'informations, reportez-vous à link:https://docs.netapp.com/us-en/da
 
 
 
+[[improved-workload-protection]]
 === Protection améliorée de la charge de travail
 
 Cette version améliore le processus de configuration pour les charges de travail avec des stratégies de snapshot et de sauvegarde provenant d'autres NetApp tools, comme BlueXP backup and recovery. Dans les versions précédentes, BlueXP ransomware protection découvrait les stratégies provenant d'autres outils, ne vous permettant que de modifier la stratégie de détection. Avec cette version, vous pouvez désormais remplacer les stratégies de snapshot et de sauvegarde par des stratégies BlueXP ransomware protection ou continuer à utiliser les stratégies provenant d'autres outils.
@@ -20,6 +22,7 @@ Pour plus de détails, reportez-vous àlink:https://docs.netapp.com/us-en/data-s
 
 
 
+[[email-notifications]]
 === Notifications par e-mail
 
 Si la BlueXP ransomware protection détecte une attaque possible, une notification apparaît dans les notifications BlueXP et un e-mail est envoyé à l'adresse e-mail que vous avez configurée.

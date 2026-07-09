@@ -25,6 +25,7 @@ Ransomware Resilience vérifie votre protection de sauvegarde actuelle, les copi
 
 
 
+[[select-workloads-to-discover]]
 == Sélectionnez les charges de travail à découvrir
 
 Dans chaque agent de Console, sélectionnez les systèmes sur lesquels vous souhaitez identifier les charges de travail.
@@ -69,6 +70,7 @@ link:rp-use-dashboard.html["Découvrez ce que le tableau de bord vous montre."]
 
 
 
+[[discover-newly-created-workloads-for-previously-selected-systems]]
 == Découvrez les charges de travail nouvellement créées pour les systèmes précédemment sélectionnés
 
 Si vous avez ajouté des charges de travail à un système précédemment découvert, vous devez relancer la découverte afin de protéger les nouvelles charges de travail.
@@ -83,6 +85,7 @@ TIP: Si vous constatez que certains volumes ne s'affichent pas pour le système 
 
 
 
+[[discover-new-systems]]
 == Découvrez de nouveaux systèmes
 
 Si vous avez déjà effectué une découverte sur un système et que vous y avez ajouté une charge de travail depuis, effectuez une nouvelle découverte pour identifier les charges de travail.
@@ -96,6 +99,7 @@ Si vous avez déjà effectué une découverte sur un système et que vous y avez
 
 
 
+[[exclude-workloads]]
 == Exclure les charges de travail
 
 La fonctionnalité de résilience aux ransomwares vous permet d'exclure certaines charges de travail d'un système de la protection et de la détection contre les ransomwares.

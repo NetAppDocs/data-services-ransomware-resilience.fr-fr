@@ -29,6 +29,7 @@ NOTE: Les destinations de sauvegarde ne sont pas disponibles pour les charges de
 
 
 
+[[add-storagegrid-as-a-backup-destination]]
 == Ajouter StorageGRID comme destination de sauvegarde
 
 Pour configurer NetApp StorageGRID comme destination de sauvegarde, saisissez les informations suivantes.
@@ -72,6 +73,7 @@ image:screen-settings-backup-destinations-list2.png["Capture d'écran des destin
 
 
 
+[[add-amazon-web-services-as-a-backup-destination]]
 == Ajouter Amazon Web Services comme destination de sauvegarde
 
 Pour configurer AWS comme destination de sauvegarde, saisissez les informations suivantes.
@@ -129,6 +131,7 @@ image:screen-settings-backup-destinations-list2.png["Page des destinations de sa
 
 
 
+[[add-google-cloud-platform-as-a-backup-destination]]
 == Ajouter Google Cloud Platform comme destination de sauvegarde
 
 Pour configurer Google Cloud Platform (GCP) comme destination de sauvegarde, saisissez les informations suivantes.
@@ -167,6 +170,7 @@ La nouvelle destination de sauvegarde est ajoutée à la liste des destinations 
 
 
 
+[[add-microsoft-azure-as-a-backup-destination]]
 == Ajouter Microsoft Azure comme destination de sauvegarde
 
 Pour configurer Azure comme destination de sauvegarde, saisissez les informations suivantes.

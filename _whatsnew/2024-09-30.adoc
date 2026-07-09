@@ -4,6 +4,7 @@
 
 
 
+[[custom-grouping-of-file-share-workloads]]
 === Regroupement personnalisé des charges de travail de partage de fichiers
 
 Avec cette version, vous pouvez désormais regrouper les partages de fichiers en groupes pour faciliter la protection de votre parc de données.  Le service peut protéger tous les volumes d’un groupe en même temps.  Auparavant, vous deviez protéger chaque volume séparément.

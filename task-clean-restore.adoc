@@ -20,6 +20,7 @@ NetApp Ransomware Resilience offre des restaurations propres, qui fournissent un
 
 
 
+[[learn-about-clean-restores]]
 == Découvrez les restaurations propres
 
 Lorsque vous effectuez une restauration complète, NetApp Ransomware Resilience vous guide à travers un processus en plusieurs étapes qui optimise la récupération.
@@ -48,6 +49,7 @@ Vous pouvez également consulter l'historique des fichiers lors de l'étape de p
 
 
 
+[[supported-configurations]]
 == Configurations prises en charge
 
 * Vous ne pouvez créer qu'une seule IRE par compte Ransomware Resilience. Chaque IRE peut comporter trois salles blanches.
@@ -92,6 +94,7 @@ NOTE: Effectuer une restauration complète dans un environnement cloud peut entr
 
 
 
+[[considerations]]
 == Considérations
 
 * Vous ne pouvez effectuer qu'une restauration complète en cas d'attaque par ransomware basée sur le chiffrement.
@@ -105,6 +108,7 @@ NOTE: Effectuer une restauration complète dans un environnement cloud peut entr
 
 
 
+[[additional-considerations-for-on-premises-environments]]
 === Considérations supplémentaires pour les environnements sur site
 
 Si vous déployez un IRE sur site, lorsqu'une machine virtuelle Windows est clonée pour l'analyse de récupération lors d'une restauration complète, la machine virtuelle clonée conserve la même configuration que la source. Cela peut entraîner des conflits :
@@ -118,6 +122,7 @@ Pour éviter ces conflits, Ransomware Resilience effectue une préparation syst�
 
 
 
+[[secondary-sources]]
 === Sources secondaires
 
 Lors de la création de l'IRE, vous avez la possibilité d'ajouter une source secondaire.
@@ -128,6 +133,7 @@ Par défaut, la procédure de restauration propre analyse les instantanés de l'
 
 
 
+[[cost-and-licensing]]
 == Coût et licence
 
 La restauration complète est proposée dans le cadre de la solution Ransomware Resilience. Aucune licence supplémentaire n'est requise pour effectuer une restauration complète ou créer un IRE.
@@ -142,6 +148,7 @@ Les frais facturés par des tiers peuvent inclure la création et le déploiemen
 
 
 
+[[prerequisites]]
 == Prérequis
 
 Assurez-vous d'avoir rempli les conditions préalables pour le type de déploiement de restauration propre que vous avez choisi. Sélectionnez l'onglet correspondant à votre configuration IRE.
@@ -506,6 +513,7 @@ Accès NFS à : * Agent de la Production Console * VLAN de l’agent de la Cons
 ====
 
 
+[[create-an-isolated-recovery-environment]]
 == Créer un environnement de récupération isolé
 
 Avant de procéder à une restauration complète, vous devez créer une salle de récupération isolée.
@@ -593,6 +601,7 @@ TIP: Pour modifier les paramètres de l'IRE, sélectionnez *Paramètres* dans la
 
 
 
+[[delete-an-isolated-recovery-environment]]
 == Supprimer un environnement de récupération isolé
 
 Vous ne pouvez pas supprimer un IRE pendant une opération de restauration en cours ; vous pouvez annuler l’opération de restauration ou attendre que la restauration soit terminée, puis supprimer l’IRE.

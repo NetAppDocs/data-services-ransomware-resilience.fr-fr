@@ -20,6 +20,7 @@ Utilisez le tableau de bord pour consulter les suggestions de protection, modifi
 
 
 
+[[review-workload-health-using-the-dashboard]]
 == Examinez l'état de santé de la charge de travail à l'aide du tableau de bord
 
 .Étapes
@@ -78,6 +79,7 @@ Le nombre total d’actions n’inclut pas les actions que vous avez rejetées.
 
 
 
+[[review-protection-recommendations-on-the-dashboard]]
 == Consultez les recommandations de protection sur le tableau de bord
 
 Ransomware Resilience évalue la protection de vos charges de travail et recommande des actions pour améliorer cette protection.
@@ -129,6 +131,7 @@ TIP: Vous pouvez ultérieurement transformer un élément rejeté en élément �
 
 
 
+[[export-protection-data-to-csv-files]]
 == Exporter les données de protection vers des fichiers CSV
 
 Vous pouvez exporter des données et télécharger des fichiers CSV qui affichent les détails de la protection, des alertes et de la récupération.
@@ -157,6 +160,7 @@ Les fichiers CSV incluent des données pour toutes les charges de travail sur to
 
 
 
+[[access-technical-documentation]]
 == Accéder à la documentation technique
 
 Vous pouvez accéder à la documentation technique de Ransomware Resilience à partir delink:https://docs.netapp.com["docs.netapp.com"^] ou depuis Ransomware Resilience.

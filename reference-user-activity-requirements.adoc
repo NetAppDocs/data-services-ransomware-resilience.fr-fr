@@ -18,6 +18,7 @@ La détection du comportement de l'utilisateur est prise en charge dans Ransomwa
 
 
 
+[[cloud-provider-support]]
 == Prise en charge du fournisseur de cloud
 
 Les données relatives au comportement des utilisateurs peuvent être stockées dans AWS et Azure dans les régions suivantes :
@@ -38,6 +39,7 @@ Les données relatives au comportement des utilisateurs peuvent être stockées 
 |===
 
 
+[[operating-system-requirements]]
 == Configuration requise pour le système d'exploitation
 
 La détection des comportements suspects des utilisateurs est prise en charge avec les systèmes d'exploitation suivants :
@@ -80,6 +82,7 @@ Le `unzip` Cette commande est requise pour l'installation. Le `sudo su -` Cette 
 
 
 
+[[server-requirements]]
 == Configuration requise pour le serveur
 
 Le serveur doit répondre aux exigences minimales suivantes :
@@ -91,6 +94,7 @@ Le serveur doit répondre aux exigences minimales suivantes :
 
 
 
+[[server-recommendations]]
 === Recommandations serveur
 
 * Allouez de l'espace disque supplémentaire pour permettre la création du système de fichiers. Assurez-vous qu'il y a au moins 35 Go d'espace libre dans le système de fichiers. + Si `/opt` Il s'agit d'un dossier monté depuis un stockage NAS ; les utilisateurs locaux doivent avoir accès à ce dossier. La création de l'agent d'activité utilisateur peut échouer si les utilisateurs locaux ne disposent pas des autorisations nécessaires.
@@ -100,6 +104,7 @@ Le serveur doit répondre aux exigences minimales suivantes :
 
 
 
+[[sizing-recommendations]]
 === Recommandations de dimensionnement
 
 Lors de la collecte d'événements utilisateur, assurez-vous que la machine hébergeant l'agent d'activité utilisateur est dimensionnée pour supporter votre débit d'événements. Cela signifie que vous devez disposer d'un nombre suffisant de collecteurs de données ainsi que d'un CPU et d'une RAM suffisants sur la machine hébergeant l'agent d'activité utilisateur pour tolérer le nombre d'événements par seconde. Pour augmenter le nombre de collecteurs de données, il peut être nécessaire d'augmenter la capacité de la RAM ou du CPU. Ransomware Resilience prend en charge jusqu'à 50 collecteurs de données par agent d'activité utilisateur.
@@ -146,6 +151,7 @@ Utilisez le taux d'événements pour calculer votre dimensionnement.
 ====
 
 
+[[cloud-network-access-rules]]
 == règles d'accès au réseau cloud
 
 Veuillez consulter les règles d'accès au réseau cloud pour votre zone géographique concernée (Asie-Pacifique, Europe ou États-Unis).
@@ -158,6 +164,7 @@ NOTE: L'agent d'activité utilisateur utilise la technologie NetApp Data Insight
 
 
 
+[[apac-based-user-activity-agent-deployments]]
 === Déploiements d'agents d'activité utilisateur basés en APAC
 
 [cols="1,1,1,3,1"]
@@ -175,6 +182,7 @@ NOTE: L'agent d'activité utilisateur utilise la technologie NetApp Data Insight
 |===
 
 
+[[europe-based-user-activity-agent-deployments]]
 === Déploiements d'agents d'activité utilisateur basés en Europe
 
 [cols="1,1,1,3,1"]
@@ -192,6 +200,7 @@ NOTE: L'agent d'activité utilisateur utilise la technologie NetApp Data Insight
 |===
 
 
+[[us-based-user-activity-agent-deployments]]
 === Déploiements d'agents d'activité utilisateur basés aux États-Unis
 
 [cols="1,1,1,3,1"]
@@ -209,6 +218,7 @@ NOTE: L'agent d'activité utilisateur utilise la technologie NetApp Data Insight
 |===
 
 
+[[in-network-rules]]
 == Règles du réseau
 
 [cols="5*"]
@@ -234,6 +244,7 @@ Données SVM Adresses IP LIF
 |===
 
 
+[[next-step]]
 == Étape suivante
 
 * link:suspicious-user-activity.html["Configurer les agents d'activité utilisateur et les collecteurs"]

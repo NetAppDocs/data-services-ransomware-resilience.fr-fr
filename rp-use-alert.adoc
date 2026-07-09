@@ -27,6 +27,7 @@ Chaque alerte peut inclure plusieurs incidents sur différents volumes et statut
 
 
 
+[[how-alerts-are-generated]]
 == Comment les alertes sont générées
 
 Ransomware Resilience s'appuie sur des données relatives aux modèles d'entropie des données, aux types d'extension de fichiers et au chiffrement pour produire des alertes. Les alertes sont basées sur les événements suivants :
@@ -45,6 +46,7 @@ NOTE: Pour les alertes en cas de violation de données, de destruction de donné
 
 
 
+[[alert-types-and-statuses]]
 === Types et statuts d'alerte
 
 Les alertes ont l'un des deux statuts suivants : *New* ou *Inactive*.
@@ -74,6 +76,7 @@ Les preuves sont basées sur les informations de Autonomous Ransomware Protectio
 
 
 
+[[alert-states]]
 === États d'alerte
 
 Un incident d'alerte peut présenter les états suivants :
@@ -106,6 +109,7 @@ NOTE: Si vous avez une stratégie de protection existante et que vous désactive
 
 
 
+[[view-alerts]]
 == Afficher les alertes
 
 Vous pouvez accéder aux alertes depuis le tableau de bord Ransomware Resilience ou depuis l'onglet *Alerts*.
@@ -132,6 +136,7 @@ image:screen-alerts.png["Page d'alertes"]
 
 
 
+[[respond-to-an-alert-email]]
 == Répondre à un e-mail d'alerte
 
 Lorsque Ransomware Resilience détecte une attaque potentielle, il envoie une notification par e-mail aux utilisateurs abonnés selon leurs préférences de notification d’abonnement configurées dans les paramètres de la NetApp Console. L’e-mail contient des informations sur l’alerte, y compris la gravité et les ressources impactées.
@@ -160,6 +165,7 @@ La page Alertes apparaît.
 
 
 
+[[detect-malicious-activity-and-anomalous-user-behavior]]
 == Détecter les activités malveillantes et les comportements anormaux des utilisateurs
 
 En consultant l’onglet Alertes, vous pouvez identifier s’il s’agit d’une activité malveillante ou d’un comportement anormal de l’utilisateur.
@@ -168,6 +174,7 @@ Pour consulter les alertes au niveau de l'utilisateur, vous devez avoir configur
 
 
 
+[[view-malicious-activity]]
 === Afficher les activités malveillantes
 
 Lorsque la protection autonome contre les ransomwares déclenche une alerte dans NetApp Ransomware Resilience, vous pouvez consulter les détails suivants :
@@ -196,6 +203,7 @@ image:screen-alerts-incidents3.png["Page d'alerte des incidents"]
 
 
 
+[[view-anomalous-user-behavior]]
 === Afficher le comportement anormal des utilisateurs
 
 Si vous avez configuré la détection du comportement des utilisateurs, vous pouvez consulter les données au niveau de l'utilisateur et bloquer certains utilisateurs. Pour activer la détection de l'activité des utilisateurs, consultez link:suspicious-user-activity.html["Configurer les agents et les collecteurs"].
@@ -218,6 +226,7 @@ TIP: Pour réactiver les alertes d'un utilisateur, renvoyez l'alerte. Sélection
 
 
 
+[[mark-ransomware-incidents-as-ready-for-recovery-after-incidents-are-neutralized]]
 == Marquer les incidents de ransomware comme prêts à être récupérés (une fois les incidents neutralisés)
 
 Après avoir arrêté l'attaque, informez votre administrateur de stockage que les données sont prêtes afin qu'il puisse lancer le processus de récupération.
@@ -244,6 +253,7 @@ Une fois l’alerte marquée pour restauration, elle passe de l’onglet Alertes
 
 
 
+[[dismiss-incidents-that-are-not-potential-attacks]]
 == Ignorer les incidents qui ne sont pas des attaques potentielles
 
 Après avoir examiné les incidents, vous devez déterminer si les incidents constituent des attaques potentielles. Si elles ne constituent pas de véritables menaces, elles peuvent être ignorées.
@@ -288,6 +298,7 @@ Le statut de l'incident ou des incidents passe à « Classé sans suite ».
 
 
 
+[[view-a-list-of-impacted-files]]
 == Afficher la liste des fichiers concernés
 
 Avant de restaurer une charge de travail au niveau des fichiers, vous pouvez consulter une liste des fichiers concernés. Vous pouvez accéder à la page Alertes pour télécharger une liste des fichiers concernés. Utilisez ensuite la page Récupération pour importer la liste et choisir les fichiers à restaurer.

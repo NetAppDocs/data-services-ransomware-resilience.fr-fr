@@ -16,6 +16,7 @@ Cette FAQ peut vous aider si vous recherchez simplement une réponse rapide à u
 
 
 
+[[deployment]]
 == Déploiement
 
 .Avez-vous besoin d'une licence pour utiliser Ransomware Resilience ?
@@ -49,6 +50,7 @@ Pour le dimensionnement, les coûts de licence sont basés sur la capacité logi
 
 
 
+[[access]]
 == Accéder
 
 .Quelle est l'URL de résilience face aux ransomwares ?
@@ -65,6 +67,7 @@ Vous pouvez accéder à la NetApp Console avec n'importe quel navigateur Web mod
 
 
 
+[[interoperability]]
 == Interopérabilité
 
 .La résilience face aux ransomwares est-elle consciente des paramètres de protection dans ONTAP?
@@ -77,6 +80,7 @@ Pour la gestion des licences et la facturation, Ransomware Resilience peut s'int
 
 
 
+[[workloads]]
 == Charges de travail
 
 .Qu’est-ce qu’une charge de travail dans le contexte de la résilience aux ransomwares ?
@@ -104,6 +108,7 @@ Si vous avez ajouté un nouveau volume à votre environnement, relancez la déco
 
 
 
+[[protection-policies]]
 == Politiques de protection
 
 .Les politiques de résilience aux ransomwares peuvent-elles coexister avec d'autres types de politiques de charge de travail ?

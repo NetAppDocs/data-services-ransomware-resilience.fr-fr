@@ -18,6 +18,7 @@ Une fois que vous aurez compris l’étendue de votre protection actuelle, link:
 
 
 
+[[view-protection-on-a-workload]]
 == Afficher la protection sur une charge de travail
 
 L’une des premières étapes de la protection des charges de travail consiste à afficher vos charges de travail actuelles et leur état de protection.  Vous pouvez voir les types de charges de travail suivants :
@@ -46,6 +47,7 @@ NOTE: Consultez link:rp-use-protect.html#add-a-ransomware-protection-strategy["A
 
 
 
+[[understand-the-protection-dashboard]]
 == Comprendre le tableau de bord de protection
 
 Le tableau de bord de protection dans Ransomware Resilience affiche des informations détaillées sur les charges de travail (par exemple, nom et type de charge de travail, agent Console, système et machine virtuelle de stockage) en plus des indications sur l'état de la protection. Utilisez le tableau de bord de protection pour examiner et gérer la préparation des charges de travail face aux ransomwares. Les colonnes suivantes sont particulièrement utiles pour comprendre votre posture de protection :
@@ -86,6 +88,7 @@ Ransomware Resilience attribue une importance ou une priorité à chaque charge 
 
 
 
+[[next-steps]]
 == Prochaines étapes
 
 * link:rp-use-protect.html["Protégez les charges de travail avec des stratégies de protection contre les ransomwares"]

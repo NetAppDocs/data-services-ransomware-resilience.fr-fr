@@ -16,12 +16,14 @@ Les limitations connues identifient les plates-formes, les appareils ou les fonc
 
 
 
+[[readiness-drill-reset-option-issue]]
 == Problème d'option de réinitialisation de l'exercice de préparation
 
 Si vous sélectionnez un volume ONTAP 9.11.1 pour l’exercice de préparation aux attaques de ransomware, Ransomware Resilience envoie une alerte.  Si vous récupérez les données à l'aide de l'option « cloner sur volume » et réinitialisez la perceuse, l'opération de réinitialisation échoue.
 
 
 
+[[amazon-fsx-for-netapp-ontap-limitations]]
 == Limitations Amazon FSx for NetApp ONTAP
 
 Les limitations suivantes s'appliquent à Amazon FSx pour ONTAP :
@@ -32,6 +34,7 @@ Les limitations suivantes s'appliquent à Amazon FSx pour ONTAP :
 
 
 
+[[azure-netapp-files-limitations]]
 == Limitations d'Azure NetApp Files
 
 Les limitations suivantes s'appliquent à Azure NetApp Files :
@@ -46,6 +49,7 @@ Les limitations suivantes s'appliquent à Azure NetApp Files :
 
 
 
+[[google-cloud-netapp-volumes-limitations]]
 == Limitations de Google Cloud NetApp Volumes
 
 Les limitations suivantes s'appliquent à Google Cloud NetApp Volumes :

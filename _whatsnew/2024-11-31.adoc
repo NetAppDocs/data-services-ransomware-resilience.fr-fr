@@ -4,6 +4,7 @@
 
 
 
+[[detect-anomalous-user-behavior-using-data-infrastructure-insights-storage-workload-security]]
 === Détectez les comportements anormaux des utilisateurs à l'aide de Data Infrastructure Insights Storage Workload Security
 
 Avec cette version, vous pouvez utiliser Data Infrastructure Insights Storage Workload Security pour détecter les comportements anormaux des utilisateurs dans vos charges de travail de stockage.  Cette fonctionnalité vous aide à identifier les menaces de sécurité potentielles et à bloquer les utilisateurs potentiellement malveillants pour protéger vos données.
@@ -16,6 +17,7 @@ Se référer à https://docs.netapp.com/us-en/data-services-ransomware-resilienc
 
 
 
+[[select-workloads-to-discover-and-protect]]
 === Sélectionnez les charges de travail à découvrir et à protéger
 
 Avec cette version, vous pouvez désormais effectuer les opérations suivantes :

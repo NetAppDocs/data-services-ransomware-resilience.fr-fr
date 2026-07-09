@@ -18,6 +18,7 @@ Vous pouvez exécuter des exercices de préparation sur les charges de travail N
 
 
 
+[[how-readiness-drills-work]]
 == Comment fonctionnent les exercices de préparation
 
 La solution Ransomware Resilience propose trois types d’exercices : link:task-clean-restore-recover.html["restauration propre"], link:rp-use-recover.html["récupération personnalisée"] et link:suspicious-user-activity.html["récupération après une fuite de données"]. Les exercices de restauration propre et de récupération personnalisée simulent des attaques basées sur le chiffrement (entropie) et diffèrent par la méthode de récupération qu’ils proposent. Les exercices de récupération après fuite de données simulent une exfiltration avec des schémas de lecture inhabituels sur vos données.
@@ -30,6 +31,7 @@ Lorsque vous exécutez l'exercice, vous pouvez tester votre réaction aux alerte
 
 
 
+[[configure-a-ransomware-attack-readiness-drill]]
 == Configurer un exercice de préparation aux attaques de ransomware
 
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super administrateur"^] ou du rôle d'administrateur Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^].
@@ -63,6 +65,7 @@ TIP: Vous pouvez modifier la configuration de l'exercice de préparation ultéri
 
 
 
+[[start-a-readiness-drill]]
 == Démarrer un exercice de préparation
 
 Après avoir configuré l’exercice de préparation, vous pouvez démarrer l’exercice.
@@ -86,6 +89,7 @@ NOTE: Vous ne pouvez pas modifier la configuration de l'exercice de préparation
 
 
 
+[[respond-to-a-readiness-drill-alert]]
 == Répondre à une alerte d'exercice de préparation
 
 Testez votre état de préparation en répondant à une alerte d’exercice de préparation.
@@ -124,6 +128,7 @@ Si la gravité indique qu’un utilisateur est suspecté d’activité malveilla
 
 
 
+[[restore-the-test-workload]]
 == Restaurer la charge de travail du test
 
 Après avoir examiné l’alerte d’exercice de préparation, restaurez la charge de travail de test si nécessaire.
@@ -146,6 +151,7 @@ Après avoir examiné l’alerte d’exercice de préparation, restaurez la char
 
 
 
+[[change-the-alert-status-after-the-readiness-drill]]
 == Modifier le statut de l'alerte après l'exercice de préparation
 
 Après avoir examiné l’alerte d’exercice de préparation et restauré la charge de travail, modifiez le statut de l’alerte si nécessaire.
@@ -169,6 +175,7 @@ IMPORTANT: Une fois l'attaque ignorée, il est impossible de revenir en arrière
 
 
 
+[[review-reports-on-the-readiness-drill]]
 == Rapports d'examen sur l'exercice de préparation
 
 Une fois l'exercice de préparation terminé, vous pouvez générer et enregistrer un rapport sur l'exercice. Le rapport d'exercice est un fichier JSON contenant des informations telles que la politique de détection, le type et l'horodatage de l'alerte, les détails de l'attaque et l'état de la récupération.

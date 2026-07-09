@@ -4,6 +4,7 @@
 
 
 
+[[clean-restore]]
 === Restauration propre
 
 Ransomware Resilience prend désormais en charge les restaurations propres, une nouvelle option de récupération qui vous aide à vous remettre rapidement et facilement des attaques de ransomware. Les restaurations propres offrent des flux de travail guidés qui identifient les points de restauration optimaux pour remettre vos charges de travail en service tout en minimisant l'interruption. Les flux de travail dans la restauration propre fournissent également des informations au niveau fichier sur vos données, garantissant que vous pouvez restaurer des charges de travail exemptes de logiciels malveillants, ce qui empêche toute réinfection et minimise la perte de données.
@@ -12,6 +13,7 @@ Pour en savoir plus sur les configurations prises en charge et sur la manière d
 
 
 
+[[siem-support-for-splunk-enterprise]]
 === Prise en charge SIEM pour Splunk Enterprise
 
 Ransomware Resilience offre désormais une prise en charge de la gestion des informations et des événements de sécurité (SIEM) pour Splunk Enterprise, vous permettant de centraliser les données de journalisation et d'événements et de rationaliser l'analyse et la détection des menaces.
@@ -20,6 +22,7 @@ Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-serv
 
 
 
+[[user-behavior-detection-enhancement]]
 === Amélioration de la détection du comportement des utilisateurs
 
 Les informations relatives aux incidents de violation de données sont désormais conservées pendant 13 mois après un incident, ce qui permet une conservation des données plus longue pour vos besoins de reporting.

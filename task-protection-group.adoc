@@ -18,6 +18,7 @@ NetApp Ransomware Resilience propose des groupes de protection pour faciliter la
 
 
 
+[[create-a-protection-group]]
 == Créer un groupe de protection
 
 Vous pouvez créer des groupes quel que soit leur niveau de protection (c'est-à-dire, groupes non protégés et groupes protégés). Lorsque vous ajoutez une stratégie de protection à un groupe de protection, la nouvelle stratégie de protection remplace toute stratégie existante, y compris les stratégies gérées NetApp Backup and Recovery.
@@ -62,6 +63,7 @@ TIP: Lors de la consultation du tableau de bord de protection dans NetApp Ransom
 
 
 
+[[edit-group-protection]]
 === Modifier la protection du groupe
 
 Vous pouvez modifier la politique de détection sur un groupe existant.
@@ -77,6 +79,7 @@ Vous pouvez modifier la politique de détection sur un groupe existant.
 
 
 
+[[remove-workloads-from-a-protection-group]]
 == Supprimer les charges de travail d'un groupe de protection
 
 Vous pourriez avoir besoin ultérieurement de supprimer des charges de travail d'un groupe de protection existant.
@@ -95,6 +98,7 @@ image:screen-protection-groups-more-workloads.png["Page de détails du groupe de
 
 
 
+[[delete-a-protection-group]]
 == Supprimer un groupe de protection
 
 Lorsque vous supprimez un groupe de protection, Ransomware Resilience supprime le groupe et la stratégie de protection sur les charges de travail. Il ne supprime pas les charges de travail individuelles.
