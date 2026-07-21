@@ -1,0 +1,21 @@
+= Configurer le SIEM via des webhooks
+:allow-uri-read: 
+
+
+
+
+[[configure-siem-through-webhooks]]
+=== Configurer le SIEM via des webhooks
+
+Ransomware Resilience prend désormais en charge la configuration d'un système de gestion des informations et des événements de sécurité (SIEM) via des webhooks dans l'interface utilisateur de Ransomware Resilience. Grâce aux webhooks, vous pouvez utiliser votre système SIEM préféré pour organiser la surveillance de vos ransomwares.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html["Configurer un système SIEM"^].
+
+
+
+[[email-alerts-for-automated-responses-to-user-activity-events]]
+=== Alertes par e-mail pour les réponses automatisées aux événements d'activité des utilisateurs
+
+Ransomware Resilience envoie désormais des notifications par e-mail lorsque des réponses automatisées sont déclenchées par des événements d'activité des utilisateurs, ce qui améliore la clarté et la visibilité sur Ransomware Resilience et les activités liées aux ransomwares.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-automate-user-activity.html["Automatisez les réponses aux alertes d'activité des utilisateurs"^].

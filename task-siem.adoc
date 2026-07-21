@@ -13,7 +13,7 @@ summary: 'Vous pouvez envoyer automatiquement des données de NetApp Ransomware 
 [role="lead"]
 Un système de gestion des informations et des événements de sécurité (SIEM) centralise les journaux et les données d'événements afin de fournir des informations sur les incidents de sécurité et la conformité. NetApp Ransomware Resilience prend en charge l'envoi automatique des données à votre SIEM pour une analyse et une détection des menaces simplifiées.
 
-Ransomware Resilience prend en charge les systèmes SIEM suivants :
+Ransomware Resilience prend en charge la configuration de n'importe quel système SIEM avec <<webhooks,webhooks>>. De plus, Ransomware Resilience offre une prise en charge native des systèmes SIEM suivants :
 
 * AWS Security Hub
 * Google SecOps
@@ -35,34 +35,28 @@ TIP: Ransomware Resilience fournit également link:reference-soar.html["playbook
 Ransomware Resilience peut envoyer les données d’événement suivantes à votre système SIEM :
 
 * *contexte*:
-+
-** *os*: Il s'agit d'une constante avec la valeur ONTAP.
-** *os_version* : la version d' ONTAP exécutée sur le système.
-** *connector_id* : l'ID de l'agent de console qui gère le système.
-** *cluster_id* : l'ID de cluster signalé par ONTAP pour le système.
-** *svm_name* : Le nom du SVM où l'alerte a été trouvée.
-** *volume_name* : Le nom du volume sur lequel l'alerte est trouvée.
-** *volume_id* : l'ID du volume signalé par ONTAP pour le système.
-
-
+* *os*: Il s'agit d'une constante avec la valeur ONTAP.
+* *os_version* : la version d' ONTAP exécutée sur le système.
+* *connector_id* : l'ID de l'agent de console qui gère le système.
+* *cluster_id* : l'ID de cluster signalé par ONTAP pour le système.
+* *svm_name* : Le nom du SVM où l'alerte a été trouvée.
+* *volume_name* : Le nom du volume sur lequel l'alerte est trouvée.
+* *volume_id* : l'ID du volume signalé par ONTAP pour le système.
 * *incident*:
-+
-** *incident_id* : l'ID d'incident généré par Ransomware Resilience pour le volume attaqué dans Ransomware Resilience.
-** *alert_id* : l'ID généré par Ransomware Resilience pour la charge de travail.
-** *gravité* : Le niveau de gravité des alertes : « CRITICAL », « HIGH », « MEDIUM », « LOW ».
-** *description* : Détails sur l'alerte détectée, par exemple : « Une attaque potentielle de rançongiciel détectée sur la charge de travail arp_learning_mode_test_2630 »
-** *title* : Le nom d’affichage de l’alerte détectée.
-** *criticité* : Une évaluation de la criticité du volume dans votre environnement : « CRITICAL », « IMPORTANT », « STANDARD ».
-** *incident_status*: Le statut actif de l'incident, qui peut être : « NEW », « RESOLVED », « DISMISSED », « AUTO_RESOLVED ».
-** *first_detected* : Horodatage indiquant le moment où l’incident a été détecté pour la première fois par Ransomware Resilience.
-** *is_readiness_drill* : Valeur booléenne indiquant si l’alerte est un exercice ou un incident réel.
-** *protocole* : Le protocole utilisé par le volume. Les valeurs possibles sont « iSCSI », « NFS » et « SMB ».
-** *alert_type* : Le type de menace détectée. Les valeurs possibles sont « Chiffrement », « Destruction de données », « Fuite de données » et « Comportement suspect de l’utilisateur ».
-** *user_name* : Le nom d’utilisateur de l’utilisateur suspect associé à l’alerte.
-** *user_id* : L’identifiant de l’utilisateur suspect associé à l’alerte.
-** *client_ips* : Liste des adresses IP des clients associées à l’activité suspecte, applicable uniquement aux alertes NFS.
-
-
+* *incident_id* : l'ID d'incident généré par Ransomware Resilience pour le volume attaqué dans Ransomware Resilience.
+* *alert_id* : l'ID généré par Ransomware Resilience pour la charge de travail.
+* *gravité* : Le niveau de gravité des alertes : « CRITICAL », « HIGH », « MEDIUM », « LOW ».
+* *description* : Détails concernant l’alerte détectée, par exemple « A potential ransomware attack detected on workload arp_learning_mode_test_2630 »
+* *title* : Le nom d’affichage de l’alerte détectée.
+* *criticité* : Une évaluation de la criticité du volume dans votre environnement : « CRITICAL », « IMPORTANT », « STANDARD ».
+* *incident_status*: Le statut actif de l'incident, qui peut être : « NEW », « RESOLVED », « DISMISSED », « AUTO_RESOLVED ».
+* *first_detected* : Horodatage indiquant le moment où l’incident a été détecté pour la première fois par Ransomware Resilience.
+* *is_readiness_drill* : Valeur booléenne indiquant si l’alerte est un exercice ou un incident réel.
+* *protocole* : Le protocole utilisé par le volume. Les valeurs possibles sont « iSCSI », « NFS » et « SMB ».
+* *alert_type* : Le type de menace détectée. Les valeurs possibles sont « Chiffrement », « Destruction de données », « Fuite de données » et « Comportement suspect de l’utilisateur ».
+* *user_name* : Le nom d’utilisateur de l’utilisateur suspect associé à l’alerte.
+* *user_id* : L’identifiant de l’utilisateur suspect associé à l’alerte.
+* *client_ips* : Liste des adresses IP des clients associées à l’activité suspecte, applicable uniquement aux alertes NFS.
 
 
 
@@ -76,7 +70,7 @@ NOTE: Les champs *user_name* et *user_id* ne sont pertinents que si vous avez co
 Avant d'activer AWS Security Hub dans Ransomware Resilience, vous devez effectuer des configurations de sécurité dans AWS Security Hub :
 
 * Configurez les autorisations dans AWS Security Hub.
-* Configurez la clé d’accès d’authentification et la clé secrète dans AWS Security Hub.  (Ces étapes ne sont pas fournies ici.)
+* Configurez la clé d'accès et la clé secrète dans AWS Security Hub pour l'authentification. (Ces étapes ne sont pas détaillées ici.)
 
 
 .Configurez les autorisations dans AWS Security Hub
@@ -111,11 +105,10 @@ Avant d'activer AWS Security Hub dans Ransomware Resilience, vous devez effectue
 +
 image:screen-settings2.png["Page des paramètres"]
 
-. Dans la page Paramètres, sélectionnez *Connecter* dans la mosaïque de connexion SIEM.
+. Dans la page Paramètres, sélectionnez *Connect* dans la vignette de connexion SIEM, puis choisissez *AWS Security Hub* dans le menu déroulant.
 +
 image:screen-settings-threat-detection-3options.png["Activer la page de détails de détection des menaces"]
 
-. Choisissez *AWS Security Hub* comme fournisseur SIEM.
 . Consultez les sections *Autorisations*.
 . Développez la section *Authentification*.
 +
@@ -131,7 +124,7 @@ image:screen-settings-threat-detection-3options.png["Activer la page de détails
 [[configure-google-secops-for-threat-detection]]
 == Configurer Google SecOps pour la détection des menaces
 
-Avant d'activer Google SecOps dans Ransomware Resilience, vous devez enregistrer le type de journal et le webhook dans Google SecOps pour permettre la connexion entre les services.
+Avant d'activer Google SecOps dans NetApp Ransomware Resilience, vous devez enregistrer le type de journal et le webhook dans Google SecOps afin de permettre une connexion entre les services.
 
 .Créer un type de journal
 . Accédez à Google SecOps.
@@ -161,11 +154,10 @@ Si vous utilisez un type de journal personnalisé, vous devez créer un parser. 
 +
 image:screen-settings2.png["Page des paramètres"]
 
-. Dans la page Paramètres, sélectionnez *Connecter* dans la mosaïque de connexion SIEM.
+. Dans la page Paramètres, sélectionnez *Connect* dans la vignette de connexion SIEM, puis choisissez *Google SecOps* dans le menu déroulant.
 +
 image:screen-settings-threat-detection-3options.png["Activer la page de détails de détection des menaces"]
 
-. Choisissez *Google SecOps* comme fournisseur SIEM.
 . Consultez les sections *Prérequis* et *Flux Webhook*.
 . Développez la section *Authentification*.
 +
@@ -184,17 +176,11 @@ image:screen-settings-threat-detection-3options.png["Activer la page de détails
 Avant d'activer Microsoft Sentinel dans Ransomware Resilience, vous devez effectuer les étapes générales suivantes dans Microsoft Sentinel :
 
 * *Prérequis*
-+
-** Activer Microsoft Sentinel.
-** Créez un rôle personnalisé dans Microsoft Sentinel.
-
-
+* Activer Microsoft Sentinel.
+* Créez un rôle personnalisé dans Microsoft Sentinel.
 * *Inscription*
-+
-** Inscrivez-vous à Ransomware Resilience pour recevoir des événements de Microsoft Sentinel.
-** Créez un secret pour l'inscription.
-
-
+* Inscrivez-vous à Ransomware Resilience pour recevoir des événements de Microsoft Sentinel.
+* Créez un secret pour l'inscription.
 * *Autorisations* : Attribuer des autorisations à l'application.
 * *Authentification* : Saisissez les informations d'authentification pour l'application.
 
@@ -293,11 +279,10 @@ NOTE: Une fois l'authentification réussie, un message « Authentifié » s'affi
 +
 image:screen-settings2.png["Page des paramètres"]
 
-. Dans la page Paramètres, sélectionnez *Connecter* dans la mosaïque de connexion SIEM.
+. Dans la page Paramètres, sélectionnez *Connecter* dans la vignette de connexion SIEM, puis choisissez *Microsoft Sentinel* dans le menu déroulant.
 +
 image:screen-settings-threat-detection-3options.png["Activer la page de détails de détection des menaces"]
 
-. Choisissez *Microsoft Sentinel* comme fournisseur SIEM.
 . Veuillez consulter les sections *Prérequis*, *Inscription* et *Autorisations* pour vous assurer d'avoir correctement effectué chaque étape.
 . Développez la section *Authentification*.
 +
@@ -320,7 +305,7 @@ Ransomware Resilience prend en charge la détection des menaces avec Splunk Clou
 
 
 
-NOTE: Pour Splunk Enterprise, vous devez autoriser le trafic Internet public entrant pour que Ransomware Resilience puisse envoyer des événements en utilisant les détails du collecteur d'événements HTTP qui lui sont fournis.
+NOTE: Pour Splunk Enterprise, vous devez autoriser le trafic Internet public entrant pour que NetApp Ransomware Resilience puisse envoyer des événements en utilisant les détails du collecteur d'événements HTTP qui lui sont fournis.
 
 .Activer un collecteur d'événements HTTP dans Splunk
 . Accédez à l'environnement Splunk de votre choix : Cloud ou Enterprise.
@@ -354,13 +339,40 @@ image:screen-settings-threat-detection-3options.png["Activer la page de détails
 . Consultez les sections *Collecteur d'événements* et *Jeton* pour confirmer que vous disposez des informations correctes.
 . Développez la section *Authentification*.
 +
-.. Sélectionnez le **protocole** pour le collecteur d'événements HTTP. Il est recommandé d'utiliser HTTPS, mais si SSL n'est pas activé pour le collecteur d'événements HTTP, sélectionnez *HTTP*.
+.. Sélectionnez le *protocole* pour le collecteur d'événements HTTP. Il est recommandé d'utiliser HTTPS, mais si SSL n'est pas activé pour le collecteur d'événements HTTP, sélectionnez *HTTP*.
 .. Saisissez l'*hôte* et le *port* de l'instance Splunk Cloud qui exécute le collecteur d'événements HTTP. Le port doit correspondre à celui que vous avez saisi dans le processus du collecteur d'événements HTTP.
 .. Saisissez le jeton du collecteur d'événements que vous avez créé dans Splunk.
 
 
 . Sélectionnez *Connect* pour commencer l'envoi des données SIEM.
 
+
+
+
+[[configure-a-siem-with-webhooks]]
+[[webhooks]]
+== Configurer un SIEM avec des webhooks
+
+Avant d'établir la connexion SIEM avec NetApp Ransomware Resilience, vous devez avoir configuré le SIEM sur sa propre plateforme. Suivez ces étapes pour configurer la communication avec NetApp Ransomware Resilience.
+
+.Étapes
+. Dans NetApp Ransomware Resilience, sélectionnez *Paramètres*.
+. Dans la section *SIEM*, sélectionnez *Connecter* puis *Webhooks* si c'est la première fois que vous configurez un SIEM. Sinon, sélectionnez *Gérer*. Sur la page d’aperçu, sélectionnez *+ Connecter* puis *Webhook*.
+. Veuillez indiquer le *nom* du produit SIEM et l'*URL* pour la connexion. L'URL ne peut pas être encodée.
+. Saisissez les *en-têtes personnalisés* au format « Clé : Valeur ». Chaque paire clé-valeur doit être saisie sur une ligne distincte.
+. Examinez le modèle de *Message* au format JSON.
++
+Pour ajouter des paramètres supplémentaires, copiez-les depuis la liste située à côté des champs de saisie, puis collez-les dans la partie appropriée du message. Vous pouvez également ajouter des paramètres personnalisés : dans les paramètres personnalisés, sélectionnez *Add* puis saisissez le *Name*, la *Value* et la *Description*. Copiez et collez dans la section du message.
+
++
+image:siem-webhook.png["Capture d'écran de la configuration du webhook SIEM."]
+
+. Vous pouvez également sélectionner *Envoyer un message de test* pour tester la connectivité.
+. Sélectionnez *Connect* pour établir la connexion à NetApp Ransomware Resilience.
+
+
+
+NOTE: Vous pouvez modifier la configuration SIEM après sa création. Vous pouvez modifier tous les champs, à l'exception du nom.
 
 
 
