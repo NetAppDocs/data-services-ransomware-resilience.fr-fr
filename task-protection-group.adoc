@@ -23,6 +23,8 @@ NetApp Ransomware Resilience propose des groupes de protection pour faciliter la
 
 Vous pouvez créer des groupes quel que soit leur niveau de protection (c'est-à-dire, groupes non protégés et groupes protégés). Lorsque vous ajoutez une stratégie de protection à un groupe de protection, la nouvelle stratégie de protection remplace toute stratégie existante, y compris les stratégies gérées NetApp Backup and Recovery.
 
+Les charges de travail d'un groupe de protection doivent être du même type de charge de travail ; cela signifie que vous ne pouvez pas mélanger des charges de travail de type stockage bloc et de type système de fichiers. Les charges de travail doivent également appartenir au même type de système. Par exemple, un groupe de protection peut inclure toutes les charges de travail de système de fichiers ONTAP sur site ; vous ne pouvez pas ajouter des charges de travail Amazon FSx for NetApp ONTAP au même groupe de protection.
+
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.
 +
@@ -37,6 +39,7 @@ image:screen-protection-groups.png["Page des groupes de protection"]
 image:screen-protection-groups-add.png["Ajouter une page de groupe de protection"]
 
 . Entrez un nom pour le groupe de protection.
+. Sélectionnez le **type de charge de travail** (stockage bloc ou système de fichiers) et le **type de système**.
 . Sélectionnez les charges de travail à ajouter au groupe.
 +
 
@@ -66,7 +69,10 @@ TIP: Lors de la consultation du tableau de bord de protection dans NetApp Ransom
 [[edit-group-protection]]
 === Modifier la protection du groupe
 
-Vous pouvez modifier la politique de détection sur un groupe existant.
+Vous pouvez modifier la politique de détection d'un groupe existant ou ajouter et supprimer des charges de travail.
+
+
+NOTE: Si un groupe de protection a été créé avant août 2026 et comprend des charges de travail de types différents (par exemple, il mélange des charges de travail de stockage bloc et de système de fichiers) ou de types de systèmes différents, vous ne pouvez pas ajouter de nouvelles charges de travail à ce groupe de protection. Vous pouvez supprimer des charges de travail afin qu'il n'y ait plus qu'un seul type de charge de travail et de système présent, puis vous pourrez ajouter des charges de travail. Cette modification vise à garantir que les stratégies de protection contre les ransomwares sont appliquées de manière uniforme à tous les types de charges de travail et de systèmes.
 
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.

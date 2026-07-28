@@ -1,0 +1,32 @@
+= Standardiser les groupes de protection en fonction de la charge de travail et du type de système
+:allow-uri-read: 
+
+
+
+
+[[standardize-protection-groups-based-on-workload-and-system-type]]
+=== Standardiser les groupes de protection en fonction de la charge de travail et du type de système
+
+La fonctionnalité de résilience aux ransomwares impose désormais que les groupes de protection ne comprennent qu'un seul type de charge de travail et un seul type de système. Lorsque vous créez un nouveau groupe de protection, vous devez désigner à la fois le type de charge de travail (système de fichiers ou stockage bloc) et le système pour la charge de travail. Cette amélioration garantit que la stratégie de protection contre les ransomwares choisie pour le groupe de protection peut être appliquée avec succès à toutes les charges de travail du groupe.
+
+Si vous avez des groupes de protection existants qui mélangent des types de systèmes et de charges de travail, vous pouvez continuer à les utiliser, mais vous ne pouvez pas ajouter de charges de travail au groupe de protection.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-protection-group.html["Créer un groupe de protection"^].
+
+
+
+[[readiness-drill-enhancement]]
+=== Amélioration des exercices de préparation
+
+Ransomware Resilience vous permet désormais d'effectuer des exercices de préparation en fonction du type d'attaque. Ransomware Resilience détecte cinq types d'attaques et vous permet de réaliser des exercices de préparation pour chacune d'elles afin de simuler le processus d'attaque et de récupération et ainsi évaluer votre niveau de préparation face à une attaque de ransomware.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-simulate.html["Effectuer un exercice de préparation"^].
+
+
+
+[[pause-or-delete-a-siem-system]]
+=== Mettre en pause ou supprimer un système SIEM
+
+Ransomware Resilience propose désormais dans son interface utilisateur des options permettant de suspendre ou de supprimer un système SIEM. Cette amélioration facilite la désactivation temporaire du système pour le dépannage ou la maintenance, ou sa suppression définitive.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html#disable-a-siem-system["Désactiver un système SIEM"^].

@@ -1,0 +1,23 @@
+= 
+:allow-uri-read: 
+
+
+[cols="25,75"]
+|===
+| Type d'attaque | Description 
+
+
+| Chiffrement (entropie) | Ransomware Resilience détecte les schémas d'IOPS anormaux, l'entropie des données et les suffixes de fichiers non standard. 
+
+
+| Chiffrement (comportement de l'utilisateur) | Ransomware Resilience identifie les activités anormales de lecture, d'écriture et de renommage de fichiers effectuées par un utilisateur spécifique. 
+
+
+| Violation de données | Ransomware Resilience détecte les schémas d'accès en lecture de fichiers anormaux effectués par un utilisateur spécifique. 
+
+
+| Destruction de données | Ransomware Resilience détecte la suppression massive de fichiers par un utilisateur spécifique. 
+
+
+| Comportement utilisateur suspect | Ransomware Resilience identifie les comportements anormaux qui vont au-delà des violations de données, de la destruction de données ou du chiffrement. 
+|===

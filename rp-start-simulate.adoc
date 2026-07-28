@@ -34,12 +34,39 @@ Lorsque vous exécutez l'exercice, vous pouvez tester votre réaction aux alerte
 [[configure-a-ransomware-attack-readiness-drill]]
 == Configurer un exercice de préparation aux attaques de ransomware
 
+Avant de lancer une simulation, vous devez configurer l'exercice de préparation. Vous devez créer l'exercice de préparation pour un type spécifique d'attaque de ransomware. Ransomware Resilience reconnaît cinq types d'attaques :
+
+[cols="25,75"]
+|===
+| Type d'attaque | Description 
+
+
+| Chiffrement (entropie) | Ransomware Resilience détecte les schémas d'IOPS anormaux, l'entropie des données et les suffixes de fichiers non standard. 
+
+
+| Chiffrement (comportement de l'utilisateur) | Ransomware Resilience identifie les activités anormales de lecture, d'écriture et de renommage de fichiers effectuées par un utilisateur spécifique. 
+
+
+| Violation de données | Ransomware Resilience détecte les schémas d'accès en lecture de fichiers anormaux effectués par un utilisateur spécifique. 
+
+
+| Destruction de données | Ransomware Resilience détecte la suppression massive de fichiers par un utilisateur spécifique. 
+
+
+| Comportement utilisateur suspect | Ransomware Resilience identifie les comportements anormaux qui vont au-delà des violations de données, de la destruction de données ou du chiffrement. 
+|===
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super administrateur"^] ou du rôle d'administrateur Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^].
 
 .Étapes
 . Dans Ransomware Resilience, sélectionnez **Paramètres**.
-. Dans la tuile Readiness drill, sélectionnez **Configure**.
-. Choisissez le **type d'exercice de préparation**.
+. Dans la fiche d'exercice de préparation de la page Paramètres, sélectionnez *Configurer*.
++
+La console affiche la page Configurer l'exercice de préparation.
+
++
+image:screen-settings-alert-drill-configure.png["Configurer la page d'exercice de préparation"]
+
+. Sélectionnez le *type d'attaque par rançongiciel*.
 +
 ** **Récupération personnalisée** : Répondez à une attaque de chiffrement (entropie) avec un link:rp-use-recover.html["restauration personnalisée"] où vous configurez le point de récupération.
 ** **Restauration propre** : Répondez à une attaque de chiffrement (entropie) par un link:task-clean-restore-recover.html["restauration propre"] processus de récupération qui vous guide vers des points de récupération optimisés.
@@ -52,16 +79,13 @@ Lorsque vous exécutez l'exercice, vous pouvez tester votre réaction aux alerte
 .. Après avoir choisi le **Système**, choisissez la **VM de stockage** dans la liste préremplie.
 .. Fournissez un nom pour la **nouvelle charge de travail de test**. La charge de travail de test sera précédée de « rps_test_ ».
 .. Si l'exercice de préparation concerne la récupération après une violation de données, sélectionnez l'**agent d'activité utilisateur** pour l'environnement d'exercice.
-+
-image:screen-settings-alert-drill-configure.png["Capture d'écran des options de configuration de l'exercice de préparation."]
-
 
 
 . Sélectionnez *Enregistrer*.
 
 
 
-TIP: Vous pouvez modifier la configuration de l'exercice de préparation ultérieurement à l'aide de la page Paramètres.
+TIP: Vous pouvez modifier ultérieurement la configuration de l'exercice de préparation à partir de la page Paramètres.
 
 
 
@@ -73,15 +97,8 @@ Après avoir configuré l’exercice de préparation, vous pouvez démarrer l’
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super administrateur"^] ou du rôle d'administrateur Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^].
 
 .Étapes
-. Pour lancer l'exercice :
-+
-** Depuis le tableau de bord NetApp Ransomware Resilience, sélectionnez le bouton *Exécuter l'exercice de préparation* en haut à droite.
-+
-image:screen-dashboard.png["Page du tableau de bord affichant le bouton Exécuter l'exercice de préparation"]
-
-** Ou accédez à **Paramètres**. Dans la vignette Exercice de préparation, sélectionnez *Démarrer*.
-
-
+. Dans Ransomware Resilience, sélectionnez **Paramètres**.
+. Dans la page Paramètres, sélectionnez *Démarrer*.
 
 
 
@@ -98,13 +115,7 @@ Testez votre état de préparation en répondant à une alerte d’exercice de p
 
 .Étapes
 . Dans le menu Résilience aux ransomwares, sélectionnez *Alertes*.
-+
-La console affiche la page Alertes.  Dans la colonne ID d'alerte, vous voyez « Exercice de préparation » à côté de l'ID.
-
-+
-image:screen-alerts-readiness.png["Page d'alertes affichant l'alerte d'exercice de préparation"]
-
-. Sélectionnez l'alerte portant la mention « Readiness drill ».
+. Sélectionnez l'alerte portant la mention « Exercice de préparation ». Une liste d'alertes d'incident s'affiche sur la page de détails des alertes.
 +
 image:screen-alerts-readiness-details.png["Page de détails des alertes affichant l'alerte d'exercice de préparation"]
 
@@ -121,8 +132,15 @@ Lors de l'examen de l'incident, tenez compte des éléments suivants :
 +
 Si la gravité indique qu’un utilisateur est suspecté d’activité malveillante, vérifiez le nom d’utilisateur. Vous pouvez égalementlink:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["bloquer l'utilisateur."]
 
-* Activité des fichiers par rapport aux taux attendus. Cela inclut le taux de lecture/écriture, la création de fichiers, le renommage de fichiers et la suppression.
-* La liste des fichiers concernés. Examinez les extensions susceptibles d'être à l'origine de l'attaque.
+* Examinez l'activité du fichier et les processus suspects :
++
+** Examinez les données détectées entrantes par rapport aux données attendues.
+** Examinez le taux de création de fichiers détecté par rapport au taux attendu.
+** Examinez le taux de renommage de fichiers détecté par rapport au taux attendu.
+** Examinez le taux de suppression par rapport au taux attendu.
+
+
+* Consultez la liste des fichiers concernés. Examinez les extensions susceptibles d'être à l'origine de l'attaque.
 * Déterminez l’impact et l’ampleur de l’attaque en examinant le nombre de fichiers et de répertoires impactés.
 
 
