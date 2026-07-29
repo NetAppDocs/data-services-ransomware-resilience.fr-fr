@@ -256,11 +256,9 @@ Une fois l’alerte marquée pour restauration, elle passe de l’onglet Alertes
 [[dismiss-incidents-that-are-not-potential-attacks]]
 == Ignorer les incidents qui ne sont pas des attaques potentielles
 
-Après avoir examiné les incidents, vous devez déterminer si les incidents constituent des attaques potentielles. Si elles ne constituent pas de véritables menaces, elles peuvent être ignorées.
+Après avoir examiné les incidents, vous devez déterminer si les incidents sont des attaques potentielles. S'il ne s'agit pas de menaces réelles, ils peuvent être ignorés. Si vous ignorez une alerte, toutes les copies instantanées prises automatiquement en réponse à une attaque de ransomware potentielle sont définitivement supprimées.
 
-Vous pouvez ignorer les faux positifs ou décider de récupérer vos données immédiatement. Si vous ignorez l'alerte, Ransomware Resilience apprend ce comportement et l'associe à un fonctionnement normal, et ne déclenche plus d'alerte pour un tel comportement.
-
-Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à une attaque potentielle de ransomware sont définitivement supprimées.
+Pour les alertes déclenchées par des événements de chiffrement (entropie), Ransomware Resilience apprend de votre rejet de l’alerte afin d’associer cette activité à des opérations normales ; à l’avenir, vous ne recevrez plus d’alertes basées sur ce type d’activité. Cela s’explique par le fait que les événements de chiffrement (entropie) sont gérés par ARP/AI. Pour les alertes déclenchées par link:concept-ransomware-resilience.html#attack-types["autres événements"], Ransomware Resilience n’apprend _pas_ du rejet, car ces alertes sont basées sur les modèles d’activité des utilisateurs.
 
 
 CAUTION: Si vous ignorez une alerte, vous ne pouvez pas modifier son statut ni annuler cette modification.

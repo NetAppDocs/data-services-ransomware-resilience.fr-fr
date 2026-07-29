@@ -197,7 +197,6 @@
   <block id="5fefe6c4ada89d95390ae77eba79e7db" category="cell">*RÉCUPÉRER*</block>
   <block id="059d032d5bb8125e3e1681f7d9ce6023" category="list-text">Détermine le meilleur instantané ou la meilleure sauvegarde et recommande le meilleur point de récupération réel (RPA) en utilisant les technologies et services Backup and Recovery, ONTAP, Autonomous Ransomware Protection (ARP ou ARP/AI selon votre version ONTAP ) et FPolicy.</block>
   <block id="4ddd3abee434eb92eb13e6cac3e1ad1d" category="cell">*GOUVERNER*</block>
-  <block id="cc4378b1dc9af2e69cb13a88397e2aa7" category="list-text">Attribue les stratégies de protection contre les ransomwares</block>
   <block id="4f743c093ec077920561596aa32a74f6" category="section-title">Cibles de sauvegarde, systèmes et sources de données de charge de travail pris en charge</block>
   <block id="b45c27598e81de132cbcf41c4f6124d9" category="paragraph">Ransomware Resilience prend en charge les cibles de sauvegarde, les systèmes et les sources de données suivants :</block>
   <block id="736ca911d7d143d01bd8cbfe0d4afbca" category="list-text">Amazon Web Services (AWS) S3</block>
@@ -521,7 +520,6 @@
   <block id="6faff9d182a89c619b1ad36913af4fa5" category="list-text">Pour lancer la récupération de la charge de travail, sélectionnez *Récupérer* la charge de travail dans le message ou sélectionnez l'onglet *Récupération*.</block>
   <block id="dbb2ae89216b8dfda3662d01ab32469f" category="paragraph">Une fois l’alerte marquée pour restauration, elle passe de l’onglet Alertes à l’onglet Récupération.</block>
   <block id="d3870301348c9947a819b7a9ed0c25df" category="section-title">Ignorer les incidents qui ne sont pas des attaques potentielles</block>
-  <block id="5a5533258cfacee641d19f7f201b727f" category="paragraph">Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à une attaque potentielle de ransomware sont définitivement supprimées.</block>
   <block id="c4229f2836db3c8f0198619d853bad27" category="list-text">Si vous déterminez que l’incident ne constitue pas une menace, considérez-le comme un faux positif :</block>
   <block id="a20ff2150b7b9f34f30c94111d0f2672" category="list-text">Sélectionnez l'incident.</block>
   <block id="4c8220d9b08f6a99b99ca2a31e910796" category="list-text">Sélectionnez le bouton *Modifier le statut* au-dessus du tableau.</block>
@@ -1446,8 +1444,6 @@
   <block id="be8cc003074f86f2bc2b3ef0d2f3a334" category="list-text">Découvre le niveau de protection actuel de chaque volume des copies instantanées NetApp et des politiques de sauvegarde, ainsi que toutes les capacités de détection intégrées. Ransomware Resilience associe ensuite cette posture de protection aux charges de travail en utilisant Backup and Recovery, les services ONTAP et les technologies NetApp telles que la protection autonome contre les ransomwares (ARP ou ARP/AI selon votre version ONTAP ), FPolicy, les politiques de sauvegarde et les politiques de snapshot.  Apprenez-en davantage sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline-link-rx"></block> ,<block ref="2b1b7f994c6938347657a18d8edc7db7" category="inline-link-rx"></block> , et<block ref="591ebe16737e602cc342b68e859c040e" category="inline-link-rx"></block> .</block>
   <block id="ee1bc5da2dde4f02ef7aa47df921506a" category="doc">Gérer les alertes dans NetApp Ransomware Resilience</block>
   <block id="6fe459ab097d6c4270e2ad317a017b93" category="paragraph">Un incident d'alerte peut présenter les états suivants :</block>
-  <block id="c95e7dd9856afddc701e5bf3b384f093" category="paragraph">Après avoir examiné les incidents, vous devez déterminer si les incidents constituent des attaques potentielles. Si elles ne constituent pas de véritables menaces, elles peuvent être ignorées.</block>
-  <block id="c73a9fafaefc34f0b97adbaba4200dc9" category="paragraph">Vous pouvez ignorer les faux positifs ou décider de récupérer vos données immédiatement. Si vous ignorez l'alerte, Ransomware Resilience apprend ce comportement et l'associe à un fonctionnement normal, et ne déclenche plus d'alerte pour un tel comportement.</block>
   <block id="ea3cf0f8eb2106f78fd9e62d674bd7c0" category="list-text">Sélectionnez un ou plusieurs incidents. Vous pouvez également sélectionner tous les incidents en cochant la case « ID de l’incident » en haut à gauche du tableau.</block>
   <block id="845279243191f55592e2d4438456de67" category="list-text">Dans la boîte de dialogue Modifier le statut, choisissez le statut *Rejeté*.</block>
   <block id="c66f0ec622b69a240be9821f2dbbb082" category="paragraph">Des informations supplémentaires concernant la charge de travail et la suppression des copies d'instantané apparaissent.</block>
@@ -1881,7 +1877,6 @@
   <block id="dbc85b383817f560c0d1b083f4449627" category="list-text">Tester la connectivité</block>
   <block id="870d0fb8b0bf7879e6ada101131c6864" category="list-text">Vérifiez le statut d'un travail d'enrichissement</block>
   <block id="5156f3fe3404db2816f53b4f01711a75" category="section-title">Playbooks</block>
-  <block id="8ab0c1a60a7c0ca7e1eee721cf8a8924" category="list-text"><block ref="8ab0c1a60a7c0ca7e1eee721cf8a8924" category="inline-link-macro-rx"></block></block>
   <block id="4655146bfbabab7fd679c2d1ca7a8d15" category="list-text"><block ref="4655146bfbabab7fd679c2d1ca7a8d15" category="inline-link-macro-rx"></block></block>
   <block id="fcd13f38c6a87165a33577bfdd3654b4" category="inline-link-macro">Splunkbase</block>
   <block id="2a89449caab8a2ca7d825a1c6a44640c" category="admonition">Pour Splunk Cloud, vous devez utiliser la version 7.0, 7.1, 7.2, 8.0 ou 8.4 de la plateforme. Pour plus d'informations, consultez <block ref="258077ff9a23292548ab7c25d009028a" category="inline-link-macro-rx"></block>.</block>
@@ -1901,7 +1896,6 @@
   <block id="895dff905f51ff367d108afbf6e634a7" category="inline-link-macro">Playbooks SOAR</block>
   <block id="d8fdc2681cdec613a02ac551c44a6e8c" category="section-title">31 mars 2026</block>
   <block id="d0c1ba6e120f697911d5bd92a51f0322" category="paragraph">Ransomware Resilience propose désormais un guide d'orchestration, d'automatisation et de réponse en matière de sécurité (SOAR) pour <block ref="d942356c034f7ad3c314a5fae7d11e1d" category="inline-link-macro-rx"></block>. Ce guide facilite la gestion des réponses aux menaces, automatise les tâches et les tests, et prend en charge les actions essentielles de réponse aux ransomwares, notamment la création de snapshots et la mise hors ligne d'un volume.</block>
-  <block id="dce0959f50faa93a47d141f615365404" category="paragraph">Ransomware Resilience propose des guides pratiques pour Google SecOps, Microsoft Sentinel et Splunk. Consultez les pages GitHub correspondantes pour plus de détails sur la configuration.</block>
   <block id="4f61a1c38b74708d0982090b3ace3f21" category="list-text">Il est recommandé de ne pas utiliser <block ref="237628f5d72273fb0e39c8149431292e" category="inline-link-macro-rx"></block> avec Azure NetApp Files, car les API Azure NetApp Files bloquent les actions automatisées.</block>
   <block id="3aecb1c0d4a2579d6c2b4487309b2cdc" category="admonition">Une fois l'attaque ignorée, il est impossible de revenir en arrière. Si vous ignorez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à une potentielle attaque de ransomware seront définitivement supprimées. Si vous ignorez l'alerte, l'exercice de préparation est considéré comme terminé.</block>
   <block id="5dba46907e72d7502229329d2aafd8a2" category="list-text">Splunk Enterprise</block>
@@ -2752,4 +2746,12 @@
   <block id="4f453d8498e817d93a2c0554465ba5c9" category="list-text">Sélectionnez le menu d'actions <block ref="2f43b42fd833d1e77420a8dae7419000" prefix="(" category="inline-code"></block>) pour le système SIEM que vous souhaitez arrêter, puis sélectionnez *Pause* ou *Delete*.</block>
   <block id="38ddf84a5ab8383176b784d60f3f4942" category="paragraph">Si vous supprimez, sélectionnez *Supprimer* dans la boîte de dialogue de confirmation pour terminer l'action.</block>
   <block id="24cebcb9541a6a3a7ee2888a734c6961" category="section-title">27 juillet 2026</block>
+  <block id="3ac6600c6085e72cacdcb1dd48274907" category="list-text">Reconnaît les schémas comportementaux des utilisateurs afin d'identifier les activités utilisateur malveillantes.</block>
+  <block id="cea7288c4707622a327049f1efc1f09a" category="list-text">Définit les stratégies de protection contre les ransomwares.</block>
+  <block id="9853f1beb4647abf8719e30889039648" category="paragraph">Ransomware Resilience propose des guides pratiques pour Google SecOps, Microsoft Sentinel et Splunk. Consultez la page correspondante pour les détails de configuration.</block>
+  <block id="3eea574b43f2f6412368381aa7e9dc8a" category="inline-link-macro">Lien GitHub</block>
+  <block id="29b5adbc7a04c877456d237755b1e5e1" category="list-text"><block ref="f35f69abcb839f30e64f7800ed807b52" category="inline-link-macro-rx"></block> | <block ref="c3163b3c34297c2188fd1502baa6be3c" category="inline-link-macro-rx"></block></block>
+  <block id="843273e8b4d640d7a2b23ee18e37263a" category="paragraph">Après avoir examiné les incidents, vous devez déterminer si les incidents sont des attaques potentielles. S'il ne s'agit pas de menaces réelles, ils peuvent être ignorés. Si vous ignorez une alerte, toutes les copies instantanées prises automatiquement en réponse à une attaque de ransomware potentielle sont définitivement supprimées.</block>
+  <block id="16f166ba2ceaca92e52aea587fb0114f" category="inline-link-macro">autres événements</block>
+  <block id="b7c7e492cc2a239de36bc7e713a56532" category="paragraph">Pour les alertes déclenchées par des événements de chiffrement (entropie), Ransomware Resilience apprend de votre rejet de l’alerte afin d’associer cette activité à des opérations normales ; à l’avenir, vous ne recevrez plus d’alertes basées sur ce type d’activité. Cela s’explique par le fait que les événements de chiffrement (entropie) sont gérés par ARP/AI. Pour les alertes déclenchées par <block ref="69f4bf74babfcd1e97eceb84702fb4ae" category="inline-link-macro-rx"></block>, Ransomware Resilience n’apprend _pas_ du rejet, car ces alertes sont basées sur les modèles d’activité des utilisateurs.</block>
 </blocks>
