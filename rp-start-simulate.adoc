@@ -55,30 +55,30 @@ Avant de lancer une simulation, vous devez configurer l'exercice de préparation
 
 | Comportement utilisateur suspect | Ransomware Resilience identifie les comportements anormaux qui vont au-delà des violations de données, de la destruction de données ou du chiffrement. 
 |===
+
+NOTE: Vous devez configurer link:concept-user-behavior.html["détection de l'activité de l'utilisateur"] pour détecter le chiffrement (comportement de l'utilisateur), les violations de données, la destruction de données et les attaques liées à un comportement utilisateur suspect.
+
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super administrateur"^] ou du rôle d'administrateur Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^].
+
+.Avant de commencer
+* Pour configurer un exercice de préparation à tout type d’attaque de ransomware autre que le chiffrement (entropie), vous devez avoir configuré link:concept-user-behavior.html["détection de l'activité de l'utilisateur"].
+* Lorsque vous créez un exercice de préparation pour une charge de travail CIFS, vous devez saisir des identifiants utilisateur. Vous devriez créer un utilisateur de test dédié, hors production, pour les exercices de préparation, en particulier lors des tests de types d'attaque liés à l'activité utilisateur (c'est-à-dire une violation de données). Si vous utilisez un véritable utilisateur de production, Ransomware Resilience signale cet utilisateur, ce qui peut entraîner le blocage de son accès aux données de production. Si vous utilisez un utilisateur de test, tous les utilisateurs conservent un accès normal aux données.
+
 
 .Étapes
 . Dans Ransomware Resilience, sélectionnez **Paramètres**.
 . Dans la fiche d'exercice de préparation de la page Paramètres, sélectionnez *Configurer*.
 +
-La console affiche la page Configurer l'exercice de préparation.
-
-+
 image:screen-settings-alert-drill-configure.png["Configurer la page d'exercice de préparation"]
 
 . Sélectionnez le *type d'attaque par rançongiciel*.
-+
-** **Récupération personnalisée** : Répondez à une attaque de chiffrement (entropie) avec un link:rp-use-recover.html["restauration personnalisée"] où vous configurez le point de récupération.
-** **Restauration propre** : Répondez à une attaque de chiffrement (entropie) par un link:task-clean-restore-recover.html["restauration propre"] processus de récupération qui vous guide vers des points de récupération optimisés.
-** **Reprise après une violation de données** : Vous devez avoir configuré link:suspicious-user-activity.html["un agent d'activité utilisateur"] avant de pouvoir activer ce type d’exercice.
-
-
 . Choisissez l'environnement dans lequel le test de préparation sera créé.
 +
-.. Choisissez l'**agent de console** et le **système**.
-.. Après avoir choisi le **Système**, choisissez la **VM de stockage** dans la liste préremplie.
-.. Fournissez un nom pour la **nouvelle charge de travail de test**. La charge de travail de test sera précédée de « rps_test_ ».
-.. Si l'exercice de préparation concerne la récupération après une violation de données, sélectionnez l'**agent d'activité utilisateur** pour l'environnement d'exercice.
+.. Choisissez l’**agent de console** et le **système principal**.
+.. Après avoir choisi le système principal, choisissez la **Storage VM** dans la liste préremplie.
+.. Si la machine virtuelle de stockage utilise le protocole CIFS, saisissez les informations d'identification Active Directory. Vous pouvez éventuellement saisir le **domaine Active Directory** ; vous devez saisir le **nom d'utilisateur** et le **mot de passe**. Il est recommandé de saisir les informations d'identification d'un utilisateur de test dédié.
+.. Veuillez indiquer un nom pour la **nouvelle charge de travail de test**. Le nom de la charge de travail de test sera précédé de `rps_test_`.
+.. Si l'exercice de préparation concerne un type d'attaque par activité utilisateur, sélectionnez l'**agent d'activité utilisateur** pour l'environnement de l'exercice.
 
 
 . Sélectionnez *Enregistrer*.
