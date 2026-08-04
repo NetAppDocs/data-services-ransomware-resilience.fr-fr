@@ -30,7 +30,7 @@ Vous pouvez bloquer les utilisateurs lorsque vous pensez qu'ils sont responsable
 . Dans le tableau de bord Paramètres, repérez la vignette de surveillance de l'activité de l'utilisateur, puis sélectionnez **Gérer**.
 . Sélectionnez l’onglet **Utilisateurs**.
 . Sélectionnez **Bloquer les utilisateurs**.
-. Sélectionnez la durée du blocage : elle peut aller d’une heure à 24 heures ou être permanente.
+. Choisissez la durée du blocage. Vous pouvez bloquer les utilisateurs définitivement ou définir un blocage d'une durée comprise entre 1 et 24 heures.
 . Cochez la case en regard des noms des utilisateurs que vous souhaitez bloquer.
 . Sélectionnez **Block**.
 
@@ -40,7 +40,7 @@ Vous pouvez bloquer les utilisateurs lorsque vous pensez qu'ils sont responsable
 . Dans le tableau de bord Paramètres, repérez la vignette de surveillance de l'activité de l'utilisateur, puis sélectionnez **Gérer**.
 . Sélectionnez l’onglet **Utilisateurs**.
 . Sélectionnez **Modifier le blocage des utilisateurs**.
-. Choisissez la modification. Pour modifier la durée du blocage, sélectionnez **Période de blocage pour les utilisateurs bloqués**, puis modifiez la durée. Pour retirer des utilisateurs de la liste des utilisateurs bloqués, sélectionnez **Débloquer les utilisateurs**.
+. Choisissez le type de blocage d'utilisateurs que vous souhaitez modifier. Pour modifier la durée du blocage, sélectionnez **Période de blocage pour les utilisateurs bloqués** puis modifiez la **Période**. Pour retirer des utilisateurs de la liste des utilisateurs bloqués, sélectionnez **Débloquer les utilisateurs**.
 . Cochez la case en regard du nom de l'utilisateur bloqué dont vous souhaitez modifier le statut.
 . Sélectionnez **Enregistrer**.
 

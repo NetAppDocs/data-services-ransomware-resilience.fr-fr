@@ -1,0 +1,21 @@
+= Prise en charge SAN pour Google Cloud NetApp Volumes (aperçu)
+:allow-uri-read: 
+
+
+
+
+[[san-support-for-google-cloud-netapp-volumes-preview]]
+=== Prise en charge SAN pour Google Cloud NetApp Volumes (aperçu)
+
+Ransomware Resilience prend désormais en charge les charges de travail SAN de Google Cloud NetApp Volumes, ce qui vous permet de détecter les attaques de ransomware basées sur le chiffrement pour les charges de travail SAN. La prise en charge de SAN dans Google Cloud NetApp Volumes est actuellement en préversion.
+
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html#supported-systems["systèmes pris en charge"^] et link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-limitations.html#azure-netapp-files-limitations["Stockage SAN dans la résilience aux ransomwares"^].
+
+
+
+[[streamlined-interface-for-user-blocking]]
+=== Interface simplifiée pour le blocage des utilisateurs
+
+Ransomware Resilience offre désormais une expérience utilisateur simplifiée pour bloquer des utilisateurs et gérer les utilisateurs bloqués. Avec cette mise à jour, vous pouvez facilement consulter et modifier les utilisateurs que vous avez bloqués. Vous devez avoir configuré link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-user-behavior.html["détection de l'activité de l'utilisateur"^] pour bloquer des utilisateurs.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-users-manage.html#manage-blocked-users["Utilisateurs bloqués gérés"^].
