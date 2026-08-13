@@ -91,6 +91,21 @@ image:user-activity-settings.png["Capture d'écran des paramètres d'activité u
 
 
 
+[[delete-a-data-collector]]
+=== Supprimer un collecteur de données
+
+Si un collecteur de données est obsolète ou ne fonctionne plus, vous pouvez le supprimer. Toute charge de travail surveillée par le collecteur de données ne sera plus surveillée pour un comportement utilisateur suspect après sa suppression.
+
+.Étapes
+. Dans Ransomware Resilience, accédez à *Paramètres*.
+. Dans la vignette de surveillance de l'activité de l'utilisateur, sélectionnez **Gérer**.
+. Sélectionnez l'onglet *Agents et collecteurs* puis *Collecteurs de données*.
+. Identifiez le collecteur de données que vous souhaitez supprimer. Sélectionnez le menu Actions, puis **Supprimer**.
+. Dans la boîte de dialogue, sélectionnez *Supprimer* pour confirmer.
+
+
+
+
 [[create-a-user-directory-connector]]
 == Créer un connecteur d'annuaire utilisateur
 
@@ -99,7 +114,7 @@ Pour mapper les ID utilisateur aux noms d’utilisateur, vous devez créer un co
 .Étapes
 . Dans Ransomware Resilience, accédez à *Paramètres*.
 . Dans la vignette de surveillance de l'activité de l'utilisateur, sélectionnez **Gérer**.
-. Sélectionnez l'onglet **Connecteurs d'annuaire utilisateur** puis **Ajouter**.
+. Sélectionnez l'onglet *Agents et collecteurs*, puis l'onglet **Connecteurs d'annuaire utilisateur**, puis **Ajouter**.
 . Configurez la connexion. Saisissez les informations requises pour chaque champ.
 +
 [cols="25,75"]

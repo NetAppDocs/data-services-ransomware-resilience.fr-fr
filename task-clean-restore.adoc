@@ -525,8 +525,8 @@ La procédure de création d'une salle de reprise d'activité isolée diffère s
 .Cloud
 --
 . Dans Ransomware Resilience, sélectionnez **Paramètres**.
-. Dans la carte Restauration propre, sélectionnez **Ajouter** pour créer l'environnement de récupération isolé.
-. Dans la section Type, choisissez *Nettoyage uniquement*.
+. Dans la carte Isolation cleaning and recovery, sélectionnez **Ajouter** pour créer l'environnement de récupération isolé.
+. Dans la section Type, choisissez *Nettoyage à la demande*.
 . Développez la section **Nom**. Saisissez un **Nom** pour l’environnement.
 . Pour un IRE basé sur le cloud, sélectionnez **Amazon Web Services**.
 . Développez la section *Systèmes*. Choisissez les systèmes à connecter à l'IRE. Pour chaque système sélectionné, vous devez indiquer l'adresse IP, le masque de sous-réseau et la passerelle de la machine virtuelle de stockage.
@@ -535,18 +535,18 @@ La procédure de création d'une salle de reprise d'activité isolée diffère s
 NOTE: Pour les IRE déployés sur Amazon FSx for NetApp ONTAP, vous n'avez pas besoin de fournir ces informations.
 
 +
-image:clean-restore-systems.png["Capture d'écran de l'interface de sélection des systèmes."]
+image::clean-restore-systems.png[Capture d'écran de l'interface de sélection des systèmes.]
 
 . Développez la section **Authentification**.
 +
 ** Saisissez l'identifiant du compte **Account** cloud et sélectionnez la **Region** correspondante pour le compte dans le menu déroulant. Vous ne pouvez déployer un IRE que dans une région prise en charge.
 ** Saisissez la **clé d'accès** et la **clé secrète** du compte.
++
+image::screenshot-set-up-recovery-environment.png[Capture d'écran de la configuration de l'authentification IRE.]
+
 
 
 . Développez la section *Cloud privé virtuel (VPC)*. Saisissez l'ID du VPC où l'IRE doit être déployé.
-+
-image:screenshot-set-up-recovery-environment.png["Capture d'écran de la configuration de l'authentification IRE."]
-
 . Sélectionnez **Ajouter** pour créer l'IRE.
 +
 Ransomware Resilience teste la connexion après que vous ayez sélectionné ajouter, ce qui peut prendre quelques minutes. L'IRE est déployé avec succès lorsque son statut affiche « déployé ».
@@ -558,18 +558,15 @@ Ransomware Resilience teste la connexion après que vous ayez sélectionné ajou
 --
 . Dans Ransomware Resilience, sélectionnez **Paramètres**.
 . Dans la carte Clean restores, sélectionnez **Ajouter** s'il s'agit de votre premier environnement ou **Gérer** si vous en avez déjà créé un.
-. Dans la section Type, choisissez *Nettoyage uniquement*.
+. Dans la section Type, choisissez *Nettoyage à la demande*.
 . Développez la section *Nom*. Attribuez un **Nom** à l'IRE.
 . Pour l'emplacement, sélectionnez **Sur site**.
 . Développez la section *Systèmes*. Sélectionnez les systèmes à connecter à l'IRE. Attribuez une adresse IP de machine virtuelle de stockage, un masque de sous-réseau et une passerelle à chaque système dont les charges de travail doivent être récupérées dans l'IRE.
 +
 Chaque système sélectionné doit posséder une adresse IP assignée. Vous pouvez sélectionner des systèmes principaux ou secondaires. Les systèmes secondaires peuvent être utilisés pour l'analyse et la restauration si le système principal ne dispose d'aucun instantané non chiffré ou s'il est indisponible.
 
-+
-image:clean-restore-systems.png["Capture d'écran de l'interface de sélection des systèmes."]
-
 . Développez la section **Agent de console**. Sélectionnez l'agent de console dans le menu déroulant qui est déployé dans l'IRE.
-. Développez la section *Compute*.
+. Développez la section *Clean room compute*.
 +
 .. Fournissez les informations d'identification pour authentifier le serveur vCenter : *adresse IP* ou nom de domaine complet (FQDN), *Port*, *Nom d'utilisateur* et *Mot de passe*.
 .. Sélectionnez **S'authentifier** pour confirmer vos identifiants. Attendez que l'interface utilisateur confirme vos identifiants avant de continuer.
@@ -581,7 +578,7 @@ image:clean-restore-compute.png["Capture d'écran de l'interface de sélection d
 
 
 
-. Développez la section *VMs*, préremplie en fonction de vos saisies dans la section *Compute*.
+. Développez la section *Clean room VMs*, qui est remplie en fonction de vos entrées dans la section *Compute*.
 +
 .. Pour la machine virtuelle Linux que Ransomware Resilience utilise pour rechercher les ransomwares, sélectionnez la machine virtuelle dans le menu déroulant, puis saisissez le *nom d'utilisateur* et le *mot de passe* de la machine virtuelle.
 .. Pour la machine virtuelle Windows utilisée pour l'analyse, sélectionnez la machine virtuelle dans le menu déroulant, puis saisissez le *nom d'utilisateur* et le *mot de passe* de la machine virtuelle.
@@ -597,7 +594,7 @@ Vous pouvez suivre la progression. Dans l'onglet Paramètres, sélectionnez **En
 Vous pouvez modifier les systèmes d'un IRE après sa création. Dans l'onglet Paramètres, sélectionnez **Environnements de récupération isolés**. Localisez l'IRE à modifier, sélectionnez le menu Actions `...` puis **Modifier**. Procédez à la modification des systèmes. Sélectionnez **Enregistrer** une fois terminé.
 
 
-TIP: Pour modifier les paramètres de l'IRE, sélectionnez *Paramètres* dans la barre latérale Ransomware Resilience, puis, dans la carte Clean restore, sélectionnez **Manage**. Sélectionnez le menu d'actions de l'IRE puis **Edit** pour modifier la configuration.
+TIP: Si vous devez modifier des détails de l'IRE, sélectionnez *Paramètres* dans la barre latérale Résilience aux ransomwares, puis, dans la carte Nettoyage et récupération de l'isolation, sélectionnez **Gérer**. Sélectionnez le menu d'actions de l'IRE, puis **Modifier** pour changer la configuration.
 
 
 
@@ -610,7 +607,7 @@ Vous ne pouvez pas supprimer un IRE pendant une opération de restauration en co
 IMPORTANT: Si vous supprimez l'IRE, cela supprime également le SVM de la salle blanche et le volume de métadonnées. Une fois ces éléments supprimés, vous ne pourrez plus générer de rapports pour la restauration propre.
 
 . Accédez aux **Paramètres**.
-. Dans la carte Restauration propre, sélectionnez **Gérer**.
+. Dans la carte Isolation cleaning and recovery, sélectionnez **Gérer**.
 . Identifiez la salle blanche que vous souhaitez supprimer. Sélectionnez le menu d'actions (`...` pour l'IRE, puis **Supprimer**.
 . Dans la boîte de dialogue, sélectionnez **Supprimer** pour confirmer l'opération.
 
