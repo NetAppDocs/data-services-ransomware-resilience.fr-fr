@@ -11,7 +11,7 @@ summary: 'Si vous rencontrez un problème lors de l"installation de l"agent d"ac
 
 
 [role="lead"]
-Si vous rencontrez un problème lors de l'installation ou de l'exécution de l'agent d'activité utilisateur dans NetApp Ransomware Resilience, consultez les scénarios et solutions courants suivants.
+Si vous rencontrez des problèmes lors de l'installation ou de l'exécution de l'agent d'activité utilisateur dans NetApp Ransomware Resilience, consultez ces scénarios et solutions courants.
 
 
 

@@ -12,13 +12,13 @@ summary: Détectez les activités anormales des utilisateurs dans NetApp Ransomw
 
 
 [role="lead"]
-Grâce à la détection de l'activité de l'utilisateur, NetApp Ransomware Resilience vous permet de gérer les incidents liés aux ransomwares au niveau de l'utilisateur, en stoppant des événements tels que les violations de données et les suppressions à grande échelle.
+La détection de l'activité des utilisateurs dans NetApp Ransomware Resilience vous aide à identifier et à stopper les comportements suspects des utilisateurs, notamment les violations de données et les suppressions à grande échelle.
 
-NetApp Ransomware Resilience fournit une détection basée sur l’IA et une surveillance des comportements utilisateurs suspects. Les augmentations soudaines de l’activité de lecture ou les schémas d’accès inhabituels sont utilisées pour déterminer une intention malveillante. Une fois détecté, Ransomware Resilience génère automatiquement des alertes dans la NetApp Console, par e-mail et dans tout écosystème de sécurité configuré (par exemple, SIEM).
+NetApp Ransomware Resilience fournit une détection basée sur l'IA qui surveille les comportements suspects des utilisateurs. Une augmentation soudaine de l'activité de lecture ou des schémas d'accès inhabituels peut indiquer une intention malveillante. Une fois détecté, Ransomware Resilience génère automatiquement des alertes dans la NetApp Console, par e-mail et dans les écosystèmes de sécurité configurés tels que SIEM.
 
-Grâce à la détection et à l'alerte comportementales des utilisateurs, NetApp Ransomware Resilience vous avertit des tentatives de violation et de destruction de données, ainsi que des schémas suspects. Dans chaque alerte, NetApp Ransomware Resilience identifie un utilisateur que vous pouvez bloquer.
+Grâce à la détection et à l'alerte des comportements des utilisateurs, Ransomware Resilience vous avertit des schémas suspects ainsi que des tentatives de violation ou de destruction de données. Dans chaque alerte, Ransomware Resilience identifie un utilisateur que vous pouvez bloquer.
 
-Ransomware Resilience détecte l'activité suspecte des utilisateurs en analysant les événements d'activité des utilisateurs générés par FPolicy dans ONTAP. Pour collecter des données d’activité utilisateur, vous devez déployer un ou plusieurs agents d’activité utilisateur. L'agent est un serveur Linux ou une machine virtuelle avec connectivité aux appareils de votre locataire.
+Ransomware Resilience détecte les activités suspectes des utilisateurs en analysant les événements d'activité utilisateur générés par FPolicy dans ONTAP. Pour collecter les données d'activité utilisateur, vous devez déployer un ou plusieurs agents d'activité utilisateur. Un agent d'activité utilisateur est un serveur Linux ou une machine virtuelle disposant d'une connectivité aux appareils de votre tenant.
 
 
 IMPORTANT: La détection de l'activité des utilisateurs n'est actuellement pas prise en charge pour les charges de travail SAN. Vous pouvez utiliser la détection de l'activité des utilisateurs avec les charges de travail NAS dans Amazon FSx for NetApp ONTAP, Cloud Volumes ONTAP et ONTAP.
@@ -55,7 +55,7 @@ La détection du comportement de l'utilisateur dans NetApp Ransomware Resilience
 
 La détection du comportement des utilisateurs dans Ransomware Resilience est une intégration avec Data Infrastructure Insights (DII) Workload Security et utilise link:reference-user-activity-requirements.html["Points de terminaison DII"]. Vous n'avez besoin d'aucune configuration DII pour activer la détection du comportement des utilisateurs dans Ransomware Resilience. Pour activer la détection du comportement des utilisateurs, link:suspicious-user-activity.html["créez l’agent et les collecteurs requis et activez la stratégie de protection contre les ransomwares appropriée"].
 
-Si vous utilisez déjà NetApp Data Infrastructure Insights (DII) Workload Security, il est recommandé d'utiliser les mêmes agents Workload Security pour Ransomware Resilience. Il n'est pas nécessaire de déployer des agents Workload Security distincts pour Ransomware Resilience, cependant, l'utilisation des mêmes agents Workload Security nécessite une relation de couplage entre l'organisation de la Ransomware Resilience Console et le locataire DII Storage Workload Security. Contactez votre responsable de compte pour activer ce couplage.
+Si vous utilisez déjà NetApp Data Infrastructure Insights (DII) Workload Security, utilisez les mêmes agents Workload Security pour Ransomware Resilience. Vous n'avez pas besoin de déployer des agents Workload Security distincts pour Ransomware Resilience. Cependant, l'utilisation des mêmes agents Workload Security nécessite une relation d'appariement entre l'organisation de la console Ransomware Resilience et le locataire DII Storage Workload Security. Contactez votre représentant de compte pour activer cet appariement.
 
 
 

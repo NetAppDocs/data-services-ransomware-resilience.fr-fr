@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-protection-group.html 
-keywords: ransomware protection, protection group, modify, create, 
+keywords: ransomware protection, protection group, modify, create 
 summary: Vous pouvez protéger les charges de travail contre les attaques de ransomware en attribuant des stratégies à une charge de travail dans NetApp Ransomware Resilience. 
 ---
 = Gérer les groupes de protection dans NetApp Ransomware Resilience
@@ -12,7 +12,7 @@ summary: Vous pouvez protéger les charges de travail contre les attaques de ran
 
 
 [role="lead"]
-NetApp Ransomware Resilience propose des groupes de protection pour faciliter la gestion de votre patrimoine de données. Les groupes de protection sont des regroupements logiques de charges de travail. Ransomware Resilience peut protéger tous les volumes d'un groupe de protection en même temps avec une seule stratégie de protection, vous évitant d'appliquer une stratégie à chaque charge de travail.
+Utilisez les groupes de protection dans NetApp Ransomware Resilience pour gérer ensemble les charges de travail connexes et appliquer une seule stratégie de protection à l'ensemble des charges de travail du groupe.
 
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super administrateur"^] ou du rôle d'administrateur Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^].
 
@@ -21,7 +21,7 @@ NetApp Ransomware Resilience propose des groupes de protection pour faciliter la
 [[create-a-protection-group]]
 == Créer un groupe de protection
 
-Vous pouvez créer des groupes quel que soit leur niveau de protection (c'est-à-dire, groupes non protégés et groupes protégés). Lorsque vous ajoutez une stratégie de protection à un groupe de protection, la nouvelle stratégie de protection remplace toute stratégie existante, y compris les stratégies gérées NetApp Backup and Recovery.
+Vous pouvez créer des groupes quel que soit le niveau de protection des charges de travail que vous y ajoutez. Lorsque vous ajoutez une stratégie de protection à un groupe de protection, la nouvelle stratégie remplace toute stratégie existante, y compris celles gérées par NetApp Backup and Recovery.
 
 Les charges de travail d'un groupe de protection doivent être du même type de charge de travail ; cela signifie que vous ne pouvez pas mélanger des charges de travail de type stockage bloc et de type système de fichiers. Les charges de travail doivent également appartenir au même type de système. Par exemple, un groupe de protection peut inclure toutes les charges de travail de système de fichiers ONTAP sur site ; vous ne pouvez pas ajouter des charges de travail Amazon FSx for NetApp ONTAP au même groupe de protection.
 

@@ -12,7 +12,7 @@ summary: Lors de la découverte, Ransomware Resilience analyse tous les volumes 
 
 
 [role="lead"]
-Avant de pouvoir utiliser NetApp Ransomware Resilience, il est nécessaire de découvrir les données de charge de travail. Lors de la découverte, Ransomware Resilience analyse tous les volumes et fichiers des systèmes sur tous les agents et projets de console au sein d'une organisation.
+Avant de pouvoir protéger les charges de travail, NetApp Ransomware Resilience doit les découvrir en analysant les volumes et les fichiers des systèmes à travers les agents Console et les projets de votre organisation.
 
 Dans le tableau de bord Discovery, Ransomware Resilience affiche les configurations système prises en charge et non prises en charge. Ransomware Resilience évalue les partages de fichiers et le stockage bloc.
 
@@ -28,7 +28,7 @@ Ransomware Resilience vérifie votre protection de sauvegarde actuelle, les copi
 [[select-workloads-to-discover]]
 == Sélectionnez les charges de travail à découvrir
 
-Dans chaque agent de Console, sélectionnez les systèmes sur lesquels vous souhaitez identifier les charges de travail.
+Dans chaque agent de la Console, sélectionnez les systèmes sur lesquels vous souhaitez découvrir les charges de travail.
 
 La découverte des charges de travail ne les protège pas automatiquement. Ransomware Resilience reconnaît les politiques de protection existantes de NetApp Backup and Recovery ou ONTAP lors du processus de découverte. Toute charge de travail non protégée nécessite que vous link:rp-use-protect.html["configurer la protection"].
 
@@ -53,7 +53,7 @@ image:screen-discover-workloads.png["Capture d'écran de la découverte des char
 . Sélectionnez les systèmes sur lesquels vous souhaitez effectuer une découverte.
 . Sélectionnez *Découvrir*.
 +
-Ransomware Resilience ne découvre les données de charge de travail que lorsque vous sélectionnez le système. Le processus de découverte peut prendre plusieurs minutes.
+Ransomware Resilience découvre les données de charge de travail uniquement pour les systèmes que vous sélectionnez. Le processus de découverte peut prendre plusieurs minutes.
 
 . Pour télécharger la liste des charges de travail découvertes, sélectionnez *Télécharger les résultats*.
 . Pour afficher le tableau de bord de résilience aux ransomwares, sélectionnez *Accéder au tableau de bord*.
@@ -73,7 +73,7 @@ link:rp-use-dashboard.html["Découvrez ce que le tableau de bord vous montre."]
 [[discover-newly-created-workloads-for-previously-selected-systems]]
 == Découvrez les charges de travail nouvellement créées pour les systèmes précédemment sélectionnés
 
-Si vous avez ajouté des charges de travail à un système précédemment découvert, vous devez relancer la découverte afin de protéger les nouvelles charges de travail.
+Si vous avez ajouté des charges de travail à un système précédemment découvert, relancez la découverte pour identifier et protéger les nouvelles charges de travail.
 
 .Étapes
 . Pour identifier la date et l'heure de la dernière détection, consultez la date et l'heure indiquées à côté de l'icône *Actualiser* en haut à droite du tableau de bord de résilience aux ransomwares.
@@ -88,7 +88,7 @@ TIP: Si vous constatez que certains volumes ne s'affichent pas pour le système 
 [[discover-new-systems]]
 == Découvrez de nouveaux systèmes
 
-Si vous avez déjà effectué une découverte sur un système et que vous y avez ajouté une charge de travail depuis, effectuez une nouvelle découverte pour identifier les charges de travail.
+Si vous avez déjà effectué une découverte sur un système et que vous ajoutez ultérieurement une charge de travail, effectuez à nouveau une découverte pour l'identifier.
 
 .Étapes
 . Dans NetApp Ransomware Resilience, sélectionnez *Paramètres*.
@@ -102,7 +102,7 @@ Si vous avez déjà effectué une découverte sur un système et que vous y avez
 [[exclude-workloads]]
 == Exclure les charges de travail
 
-La fonctionnalité de résilience aux ransomwares vous permet d'exclure certaines charges de travail d'un système de la protection et de la détection contre les ransomwares.
+Ransomware Resilience vous permet d'exclure certaines charges de travail d'un système de la protection et de la détection contre les ransomwares.
 
 Vous ne pouvez exclure que les charges de travail prises en charge et qui ont été détectées avec succès. Vous pouvez modifier à tout moment la liste des charges de travail exclues. Vous n'êtes pas facturé pour les charges de travail exclues de la résilience aux ransomwares.
 
@@ -128,5 +128,5 @@ image:settings-excluded-workload.png["Capture d'écran du tableau de bord des pa
 Pour supprimer plusieurs charges de travail, cochez la case en regard des charges de travail que vous souhaitez supprimer, puis **Supprimer de la liste des charges de travail exclues**.
 
 . Dans la boîte de dialogue, sélectionnez **Supprimer** pour confirmer que vous souhaitez supprimer les charges de travail de la liste d'exclusion.
-. Si la charge de travail est retirée avec succès de la liste des charges de travail exclues, un message de confirmation s'affiche sur la page des charges de travail exclues et la charge de travail n'apparaît plus dans la liste des charges de travail exclues. Si l'action échoue, un message d'erreur s'affiche ; veuillez réessayer. image:exclude-workload-remove-successful.png["Capture d'écran de la suppression réussie d'une charge de travail exclue."]
+. Si la charge de travail est correctement retirée de la liste des charges de travail exclues, un message de confirmation s’affiche sur la page Charges de travail exclues et la charge de travail ne figure plus dans la liste des charges de travail exclues. En cas d’échec, un message d’erreur s’affiche ; veuillez réessayer l’opération.image:exclude-workload-remove-successful.png["Capture d'écran de la suppression réussie d'une charge de travail exclue."]
 

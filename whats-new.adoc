@@ -778,7 +778,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html
 [[free-trial-now-30-days]]
 === Essai gratuit maintenant 30 jours
 
-Avec cette version, les nouveaux déploiements de la BlueXP ransomware protection bénéficient désormais d'un essai gratuit de 30 jours.  Auparavant, la BlueXP ransomware protection offrait 90 jours d'essai gratuit.  Si vous bénéficiez déjà de l'essai gratuit de 90 jours, cette offre se poursuit pendant 90 jours.
+Les nouveaux déploiements de la protection contre les ransomwares BlueXP bénéficient désormais d'un essai gratuit de 30 jours. Auparavant, la protection contre les ransomwares BlueXP offrait un essai gratuit de 90 jours. Si vous êtes déjà dans la période d'essai gratuit de 90 jours, cette offre se poursuit pendant 90 jours.
 
 
 
@@ -804,7 +804,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect
 [[security-risk-assessment-from-digital-advisor]]
 === Évaluation des risques de sécurité par Digital Advisor
 
-BlueXP ransomware protection collecte désormais des informations sur les risques de sécurité élevés et critiques liés à un cluster depuis NetApp Digital Advisor. En cas de risque détecté, BlueXP ransomware protection propose une recommandation dans le volet *Actions recommandées* du tableau de bord : « Corriger une vulnérabilité de sécurité connue sur le cluster <name>. » Depuis la recommandation sur le tableau de bord, sélectionner *Vérifier et corriger* suggère de consulter Digital Advisor et un article Common Vulnerability & Exposure (CVE) pour résoudre le risque de sécurité. S'il existe plusieurs risques de sécurité, consultez les informations dans Digital Advisor.
+La protection contre les ransomwares BlueXP collecte désormais des informations sur les risques de sécurité élevés et critiques du cluster auprès de NetApp Digital Advisor. En cas de risque détecté, la protection contre les ransomwares BlueXP affiche cette recommandation dans le volet *Actions recommandées* du tableau de bord : « Corrigez une vulnérabilité de sécurité connue sur le cluster <name>. » Depuis la recommandation du tableau de bord, sélectionnez *Examiner et corriger* pour consulter Digital Advisor et l’article Common Vulnerability & Exposure (CVE) associé. S’il existe plusieurs risques de sécurité, consultez les détails dans Digital Advisor.
 
 Se référer à https://docs.netapp.com/us-en/active-iq/index.html["Documentation du Digital Advisor"^] .
 

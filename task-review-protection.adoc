@@ -12,7 +12,7 @@ summary: Vous pouvez protéger les charges de travail contre les attaques de ran
 
 
 [role="lead"]
-NetApp Ransomware Resilience Le tableau de bord de protection offre une vue d'ensemble de l'état de protection et de la préparation de vos charges de travail. Utilisez le tableau de bord de protection pour obtenir des informations sur ce qui est protégé, ce qui nécessite une protection et quelle est la portée de la protection.
+Utilisez le tableau de bord de protection dans NetApp Ransomware Resilience pour consulter l’état de la protection des charges de travail, identifier les charges de travail qui nécessitent une attention et comprendre votre couverture de protection globale.
 
 Une fois que vous aurez compris l’étendue de votre protection actuelle, link:rp-use-protect.html["Vous pouvez créer et appliquer des stratégies de protection contre les ransomwares à vos charges de travail"].
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-clean-restore.html 
 keywords: clean room, clean restore, secure recovery, restore, isolated recovery environment 
-summary: Avant de procéder à une restauration complète dans NetApp Ransomware Resilience, vous devez créer un environnement de récupération isolé afin de séquestrer et de nettoyer l’environnement. 
+summary: Avant de procéder à une restauration complète dans NetApp Ransomware Resilience, vous devez créer un environnement de récupération isolé afin de mettre en quarantaine et de nettoyer l’environnement. 
 ---
 = Configurez l'environnement pour une restauration propre dans NetApp Ransomware Resilience
 :hardbreaks:
@@ -23,7 +23,7 @@ NetApp Ransomware Resilience offre des restaurations propres, qui fournissent un
 [[learn-about-clean-restores]]
 == Découvrez les restaurations propres
 
-Lorsque vous effectuez une restauration complète, NetApp Ransomware Resilience vous guide à travers un processus en plusieurs étapes qui optimise la récupération.
+Lorsque vous effectuez une restauration complète, Ransomware Resilience vous guide à travers un processus en plusieurs étapes qui optimise la récupération.
 
 * **CONFIGURATION** : Pour effectuer une restauration complète, vous devez d’abord créer un IRE, puis sélectionner la charge de travail à restaurer. Ransomware Resilience crée une salle blanche où toutes les actions pour la charge de travail sont effectuées.
 * **ANALYSE** : En salle blanche, NetApp Ransomware Resilience analyse tous les instantanés pour détecter la présence de chiffrement. La restauration propre établit une carte de récupération afin de déterminer le plan de récupération optimal.
@@ -44,7 +44,7 @@ Vous pouvez également consulter l'historique des fichiers lors de l'étape de p
 
 * **NETTOYAGE** : NetApp Ransomware Resilience supprime les logiciels malveillants du point de récupération. Si certains fichiers ne peuvent être nettoyés, ils sont exclus de la récupération et mis en quarantaine dans un emplacement distinct.
 * **RESTAURATION** : NetApp Ransomware Resilience restaure les données saines dans l’environnement source.
-* **FIN** : Ransomware Resilience fournit un résumé détaillé du processus et ferme la salle blanche, libérant les ressources provisioned lors de la configuration afin d’éliminer les coûts facturés ultérieurement.
+* **FIN** : Ransomware Resilience fournit un résumé détaillé du processus et ferme la salle blanche, libérant les ressources allouées lors de la configuration afin d’éliminer les coûts facturés ultérieurement.
 
 
 

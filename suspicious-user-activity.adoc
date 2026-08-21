@@ -12,9 +12,9 @@ summary: 'La détection de l"activité des utilisateurs dans NetApp Ransomware R
 
 
 [role="lead"]
-NetApp Ransomware Resilience détection du comportement des utilisateurs vous aide à prévenir les événements de ransomware au niveau utilisateur. Pour activer la détection du comportement des utilisateurs dans Ransomware Resilience, vous devez installer au moins un agent d'activité utilisateur, qui crée un environnement de collecte de données pour surveiller le comportement des utilisateurs à la recherche de schémas aberrants ressemblant à des événements de ransomware.
+Utilisez la détection du comportement des utilisateurs de NetApp Ransomware Resilience pour identifier les activités suspectes pouvant indiquer un ransomware, une violation de données ou des événements de destruction de données. Pour l'activer, installez au moins un agent d'activité utilisateur afin de créer l'environnement de collecte de données.
 
-Un agent d'activité utilisateur héberge un collecteur de données et un connecteur d'annuaire utilisateur, qui envoient tous deux des données vers un emplacement SaaS pour analyse.
+Un agent d'activité utilisateur héberge un collecteur de données et un connecteur d'annuaire d'utilisateurs, qui envoient des données vers un emplacement cloud pour analyse.
 
 * Le **collecteur de données** recueille les données d'activité des utilisateurs depuis ONTAP. Le collecteur de données est créé automatiquement lorsque vous créez une stratégie de protection avec détection du comportement des utilisateurs.
 * Le **connecteur d'annuaire utilisateur** se connecte à votre annuaire pour associer les identifiants utilisateur aux noms d'utilisateur. Vous devez configurer le connecteur d'annuaire utilisateur.
@@ -23,9 +23,9 @@ Un agent d'activité utilisateur héberge un collecteur de données et un connec
 L'agent d'activité utilisateur, le collecteur de données et le connecteur d'annuaire utilisateur peuvent tous être gérés depuis le tableau de bord des paramètres de NetApp Ransomware Resilience.
 
 
-NOTE: Si vous utilisez déjà NetApp Data Infrastructure Insights (DII) Workload Security, il est recommandé d'utiliser les mêmes agents Workload Security pour Ransomware Resilience. Il n'est pas nécessaire de déployer des agents Workload Security distincts pour Ransomware Resilience, cependant, l'utilisation des mêmes agents Workload Security nécessite une relation de couplage entre l'organisation de la Ransomware Resilience Console et le locataire DII Storage Workload Security. Contactez votre responsable de compte pour activer ce couplage.
+NOTE: Si vous utilisez déjà NetApp Data Infrastructure Insights (DII) Workload Security, utilisez les mêmes agents Workload Security pour Ransomware Resilience. Vous n'avez pas besoin de déployer des agents Workload Security distincts pour Ransomware Resilience. Cependant, l'utilisation des mêmes agents Workload Security nécessite une relation d'appariement entre l'organisation de la console Ransomware Resilience et le locataire DII Storage Workload Security. Contactez votre représentant de compte pour activer cet appariement.
 
-Si vous n'utilisez _pas_ DII, suivez les instructions de configuration ici.
+Si vous n'utilisez pas DII, suivez les instructions de configuration ici.
 
 
 
@@ -44,7 +44,7 @@ Assurez-vous que chaque rôle est appliqué au niveau de l'organisation.
 [[create-a-user-activity-agent]]
 == Créer un agent d'activité utilisateur
 
-Les agents d'activité utilisateur sont des environnements exécutables pour link:#add-a-data-collector["collecteurs de données"] ; les collecteurs de données partagent les événements d'activité utilisateur avec Ransomware Resilience. Vous devez créer au moins un agent d'activité utilisateur pour activer la détection de l'activité utilisateur.
+Les agents d'activité utilisateur sont des environnements exécutables pour link:#add-a-data-collector["collecteurs de données"], qui partagent les événements d'activité utilisateur avec Ransomware Resilience. Vous devez créer au moins un agent d'activité utilisateur pour activer la détection de l'activité utilisateur.
 
 .Étapes
 . Si c'est la première fois que vous créez un agent d'activité utilisateur, accédez au **Tableau de bord**. Dans la mosaïque **Activité utilisateur**, sélectionnez **Activer**.

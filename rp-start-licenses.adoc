@@ -12,9 +12,9 @@ summary: Assurez-vous de respecter les exigences de licence de Ransomware Resili
 
 
 [role="lead"]
-NetApp Ransomware Resilience propose différents plans de licence, vous permettant de souscrire au service là où cela a du sens pour votre organisation.
+Choisissez parmi les options de licence d'essai, PAYGO et BYOL pour NetApp Ransomware Resilience celle qui convient le mieux à votre organisation.
 
-Pour configurer les licences, vous devez disposer du rôle d'administrateur de l'organisation, de dossier ou de projet. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console"^].
+Pour configurer les licences, vous devez disposer du rôle d'administrateur de l'organisation, du dossier ou du projet. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console"^].
 
 
 
@@ -176,7 +176,7 @@ NOTE: Un e-mail vous est envoyé contenant le numéro de série de Ransomware Re
 +
 image:screen-license-dw-add-license.png["Capture d'écran de la page Ajouter une licence."]
 
-. Sur la page Ajouter une licence, sélectionnez *Entrer le numéro de série* puis saisissez le numéro de série figurant dans l'e-mail qui vous a été envoyé.  Sélectionnez *Ajouter une licence*.
+. Sur la page Ajouter une licence, sélectionnez *Saisir le numéro de série*, puis saisissez le numéro de série figurant dans l'e-mail qui vous a été envoyé. Sélectionnez *Ajouter une licence*.
 . Pour afficher les détails de la licence dans Licenses and subscriptions, dans la navigation de gauche de la console, sélectionnez *Gouvernance* > * Licenses and subscriptions*.
 +
 ** Pour voir les informations d'abonnement, sélectionnez *Abonnements*.
@@ -259,7 +259,7 @@ image:screen-license-dw-add-license.png["Capture d'écran de la page Ajouter une
 +
 Si votre compte de site de support NetApp n'est pas disponible dans la liste déroulante, https://docs.netapp.com/us-en/console-setup-admin/task-adding-nss-accounts.html["ajouter le compte NSS à la console"^] .
 
-** Si vous disposez du fichier de licence zvondolr (requis lors de l'installation sur un site sombre), sélectionnez l'option *Télécharger le fichier de licence* et suivez les instructions pour joindre le fichier.
+** Si vous possédez le fichier de licence (requis lors d'une installation sur un site isolé), sélectionnez l’option *Téléverser le fichier de licence* et suivez les instructions pour joindre le fichier.
 
 
 . Sélectionnez *Ajouter une licence*.
