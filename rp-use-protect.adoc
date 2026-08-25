@@ -265,44 +265,48 @@ NOTE: Si vous choisissez de copier et de modifier une stratégie existante, Rans
 +
 Si vous souhaitez modifier les extensions de fichiers bloquées, modifiez-les dans le Gestionnaire système.
 
-+
+
+
+
+
+
+
 
 NOTE: Vous pouvez choisir n'importe quelle combinaison de règles de détection. La règle de détection doit inclure soit la détection du chiffrement, soit la détection des comportements suspects des utilisateurs.
 
-
-
-** *Politique d'instantané*:
+* *Politique d'instantané*:
 +
-*** *Nom de base de la politique d'instantané* : sélectionnez une politique ou sélectionnez *Créer* et saisissez un nom pour la politique d'instantané.
-*** *Verrouillage des instantanés* : activez cette option pour verrouiller les copies d'instantanés sur le stockage principal afin qu'elles ne puissent pas être modifiées ou supprimées pendant une certaine période, même si une attaque de ransomware parvient à atteindre la destination de stockage de sauvegarde.  Ceci est également appelé _stockage immuable_.  Cela permet un temps de restauration plus rapide.
+** *Nom de base de la politique d'instantané* : sélectionnez une politique ou sélectionnez *Créer* et saisissez un nom pour la politique d'instantané.
+** *Verrouillage des instantanés* : activez cette option pour verrouiller les copies d'instantanés sur le stockage principal afin qu'elles ne puissent pas être modifiées ou supprimées pendant une certaine période, même si une attaque de ransomware parvient à atteindre la destination de stockage de sauvegarde.  Ceci est également appelé _stockage immuable_.  Cela permet un temps de restauration plus rapide.
 +
 Lorsqu'un instantané est verrouillé, le délai d'expiration du volume est défini sur le délai d'expiration de la copie de l'instantané.
 
 +
 Le verrouillage de copie d'instantané est disponible avec ONTAP 9.12.1 et versions ultérieures.  Pour en savoir plus sur SnapLock, reportez-vous à https://docs.netapp.com/us-en/ontap/snaplock/index.html["SnapLock dans ONTAP"^] .
 
-*** *Planifications d'instantanés* : Choisissez les options de planification, le nombre de copies d'instantanés à conserver et sélectionnez pour activer la planification.
+** *Planifications d'instantanés* : Choisissez les options de planification, le nombre de copies d'instantanés à conserver et sélectionnez pour activer la planification.
 
 
-** *Politique de réplication* :
+* *Politique de réplication* :
 +
-*** *Nom de base de la stratégie de réplication* : Saisissez un nouveau nom ou choisissez-en un existant. Le nom de base est le préfixe ajouté à tous les instantanés.
-*** *Planifications de réplication* : Activez les fréquences que vous souhaitez (horaire, quotidienne, hebdomadaire ou mensuelle) et définissez la valeur de rétention (le nombre d’instantanés répliqués à conserver) pour chaque planification activée.
+** *Nom de base de la stratégie de réplication* : Saisissez un nouveau nom ou choisissez-en un existant. Le nom de base est le préfixe ajouté à tous les instantanés.
+** *Planifications de réplication* : Activez les fréquences que vous souhaitez (horaire, quotidienne, hebdomadaire ou mensuelle) et définissez la valeur de rétention (le nombre d’instantanés répliqués à conserver) pour chaque planification activée.
 
 
-** *Politique de sauvegarde*:
+* *Politique de sauvegarde*:
 +
-*** *Nom de base de la politique de sauvegarde* : saisissez un nouveau nom ou choisissez un nom existant.
-*** *Planifications de sauvegarde* : Choisissez les options de planification pour le stockage secondaire et activez la planification.
+** *Nom de base de la politique de sauvegarde* : saisissez un nouveau nom ou choisissez un nom existant.
+** *Planifications de sauvegarde* : Choisissez les options de planification pour le stockage secondaire et activez la planification.
 +
 
 TIP: Pour activer le verrouillage des sauvegardes sur le stockage secondaire, configurez vos destinations de sauvegarde à l'aide de l'option *Paramètres*. Pour plus de détails, consultez link:task-backup-destination.html["Configurer les paramètres"].
 
++
+... Sélectionnez *Ajouter*.
 
 
 
 
-. Sélectionnez *Ajouter*.
 
 
 
@@ -334,7 +338,7 @@ image:screen-protection.png["Gérer la page de stratégie"]
 
 
 . Sélectionnez **Suivant**.
-. Si vous avez sélectionné *Détection des comportements suspects des utilisateurs* comme paramètre de détection, sélectionnez l’agent d’activité utilisateur ou link:suspicious-user-activity.html#create-a-user-activity-agent["ou en créer un"].
+. Si vous avez sélectionné *Détection des comportements suspects des utilisateurs* comme paramètre de détection, sélectionnez l'agent d'activité utilisateur ou link:suspicious-user-activity.html#create-a-user-activity-agent["ou en créer un"].
 +
 L'agent d'activité utilisateur héberge les nouveaux collecteurs de données. Ransomware Resilience crée automatiquement le collecteur de données pour transmettre les événements d'activité des utilisateurs à Ransomware Resilience afin de détecter les comportements anormaux des utilisateurs.
 
