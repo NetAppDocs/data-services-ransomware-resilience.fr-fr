@@ -68,3 +68,10 @@ Les limitations suivantes s'appliquent aux charges de travail SAN (stockage bloc
 * Lorsque Ransomware Resilience génère des avertissements pour les charges de travail SAN, ceux-ci sont uniquement basés sur une entropie élevée.
 * Les charges de travail SAN ne peuvent être restaurées qu'à l'aide d'une link:task-custom-restore.html["restauration personnalisée"]. La restauration propre n'est actuellement pas disponible pour les charges de travail SAN.
 
+
+
+
+[[multi-admin-verification]]
+== Vérification multi-administrateurs
+
+La vérification multi-administrateurs n'est pas prise en charge dans Ransomware Resilience ni dans la NetApp Console. Si vous avez configuré link:https://docs.netapp.com/us-en/ontap/multi-admin-verify/["Vérification multi-administrateurs dans ONTAP"^], certains flux de travail pourraient ne pas fonctionner comme prévu dans Ransomware Resilience.
