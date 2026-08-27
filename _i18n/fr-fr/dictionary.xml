@@ -2832,7 +2832,6 @@
   <block id="e6ec36efa0bbdf10fd60a8a6852a644c" category="list-text">Recherchez et sélectionnez *Monitoring Metrics Publisher*.</block>
   <block id="73e02342b0fefad869141a2cc487f962" category="list-text">Ajoutez l'attribution de rôle au principal de service de l'enregistrement d'application créé à l'étape d'enregistrement.</block>
   <block id="b0802f3f26bd5c4a23f49c39d352174a" category="list-text">*Révision + attribution*.</block>
-  <block id="6f1c2a09c472f2a1bfe8859795a99f57" category="list-text">Retournez à l'interface utilisateur de Ransomware Resilience. Copiez le JSON du modèle ARM pour créer la table personnalisée Log Analytics, le point de terminaison de collecte de données (DCE), la règle de collecte de données (DCR) et les règles d'analyse Sentinel dans votre environnement Azure.</block>
   <block id="a7656865ad634af8f75799041e4e11e9" category="list-text">Dans le portail Azure, recherchez *Déployer un modèle personnalisé*.</block>
   <block id="c5fc6c378447cbf81248f4df4fa19d5c" category="list-text">Sélectionnez *Créer votre propre modèle* dans l’éditeur.</block>
   <block id="0e50b795f9b35da566dbb3463a0e930d" category="list-text">Collez le JSON copié dans l'éditeur. Sélectionnez *Enregistrer*.</block>
@@ -2844,4 +2843,5 @@
   <block id="31181df1565380de486e372742d4ec62" category="list-text">Saisissez le *Log Ingestion Endpoint* et l'*ID immuable DCR* que vous avez copiés précédemment.</block>
   <block id="38ed29f4cd44c37378781f175f5b1752" category="list-text">Sélectionnez *Connect* pour établir la connexion.</block>
   <block id="f6bbe5efd3f2141104f822ac01ed3102" category="section-title">25 août 2026</block>
+  <block id="bb23df37e6fe74c9adce400b2dce40db" category="list-text">Retournez à la section Résilience aux ransomwares. Copiez le JSON du modèle ARM pour créer la table personnalisée Log Analytics, le point de terminaison de collecte de données (DCE), la règle de collecte de données (DCR) et les règles d'analyse Sentinel dans votre environnement Azure.</block>
 </blocks>
