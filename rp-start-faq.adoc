@@ -42,7 +42,7 @@ Vous pouvez essayer Ransomware Resilience avec un essai gratuit de 30 jours. Net
 
 Si vous disposez à la fois de Backup and Recovery et de Ransomware Resilience, toutes les données communes protégées par les deux produits sont facturées uniquement par Ransomware Resilience.
 
-Lorsqu'une charge de travail est classée comme protégée, elle est déduite de la capacité achetée ou de l'abonnement PAYGO. Ransomware Resilience classe une charge de travail comme protégée lorsqu'une stratégie de détection est activée avec au moins une règle de sauvegarde ou d'instantané. Les charges de travail détectées avec une stratégie de détection mais  aucune règle de sauvegarde ou d'instantané sont classées comme à risque. Les charges de travail à risque ne sont pas déduites de la capacité achetée.
+Lorsqu'une charge de travail est classée comme protégée, elle est déduite de la capacité achetée ou de l'abonnement PAYGO. Ransomware Resilience classe une charge de travail comme protégée lorsqu'une stratégie de chiffrement ou de détection d'activité utilisateur est activée. Sans au moins une de ces stratégies de détection, une charge de travail est classée comme à risque. Les charges de travail à risque ne sont pas déduites de la capacité achetée.
 
 Les charges de travail protégées sont déduites de la capacité achetée ou de l’abonnement après la période d’essai gratuite. Ransomware Resilience est facturé au Go pour les données associées aux charges de travail protégées (telles que rapportées par ONTAP) avant application des gains d’efficacité.
 
@@ -98,10 +98,14 @@ Ransomware Resilience peut identifier les charges de travail suivantes : Oracle
 Ransomware Resilience détecte les volumes et les extensions de fichiers et les associe à la charge de travail appropriée.
 
 .Qu'est-ce qu'une charge de travail protégée ?
-Dans Ransomware Resilience, une charge de travail affiche le statut *protégé* lorsqu'une règle de détection est activée. La règle de détection doit consister en la détection du chiffrement ou la détection des comportements suspects des utilisateurs (ou les deux). Elle peut également inclure la détection des extensions de fichiers suspectes. Pour plus d'informations, voir link:rp-use-protect.html#add-a-ransomware-protection-strategy["politique de détection"].
+Dans Ransomware Resilience, une charge de travail affiche le statut *protégé* lorsqu'une règle de détection est activée. La règle de détection doit consister en la détection du chiffrement ou la détection des comportements suspects des utilisateurs (ou les deux). Pour plus d'informations, voir link:rp-use-protect.html#add-a-ransomware-protection-strategy["politique de détection"].
 
 .Qu’est-ce qu’une charge de travail « à risque » ?
-Si une charge de travail ne dispose pas d'une stratégie de détection activée, elle est considérée comme « à risque », même si elle dispose d'une règles de sauvegarde et de capture instantanée activée. Pour une protection contre les ransomwares, vous devez activer une link:rp-use-protect.html#add-a-ransomware-protection-strategy["politique de détection"].
+Pour qu'une charge de travail soit considérée comme protégée, elle doit disposer d'une politique de protection des données contre les ransomwares avec la détection du chiffrement ou la détection du comportement de l'utilisateur activée. Sans au moins l'une de ces stratégies de détection, la charge de travail est considérée comme à risque. Si une charge de travail dispose d'une politique de sauvegarde ou d'instantané mais n'inclut pas la détection du chiffrement ou la détection du comportement de l'utilisateur activée, elle sera considérée comme à risque.
+
+Ransomware Resilience propose également la détection des extensions de fichiers suspectes. Si la détection des extensions de fichiers suspectes est la seule règle de détection activée, la charge de travail sera considérée comme à risque.
+
+Pour une protection contre les ransomwares, vous devez activer une link:rp-use-protect.html#add-a-ransomware-protection-strategy["politique de détection"].
 
 .J'ai ajouté un nouveau volume, mais il n'est pas encore apparu. Que dois-je faire?
 Si vous avez ajouté un nouveau volume à votre environnement, relancez la découverte de la charge de travail. Une fois le volume découvert, link:rp-use-protect.html#add-a-ransomware-protection-strategy["appliquer des politiques de protection pour protéger le nouveau volume"].

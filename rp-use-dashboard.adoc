@@ -30,7 +30,7 @@ image:screen-dashboard.png["Page du tableau de bord"]
 
 . Depuis le tableau de bord, vous pouvez effectuer les actions suivantes dans chaque volet :
 +
-** *Protection des données de charge de travail* : sélectionnez *Afficher tout* pour voir toutes les charges de travail à risque ou protégées sur la page Protection.  Les charges de travail sont menacées lorsque les niveaux de protection ne correspondent pas à une politique de protection. link:rp-use-protect.html["Protéger les charges de travail"] .
+** *Protection des données des charges de travail* : sélectionnez *Tout afficher* pour consulter toutes les charges de travail à risque ou protégées sur la page Protection. Sans détection de chiffrement ni détection d’activité utilisateur, la charge de travail est considérée comme à risque. Reportez-vous à link:rp-use-protect.html["Protéger les charges de travail"].
 +
 
 TIP: Sélectionnez l'info-bulle « i » pour voir des conseils sur ces données. Pour augmenter la limite de charge de travail, sélectionnez *Augmenter la limite de charge de travail* dans cette note. En sélectionnant cette option, vous accédez à la page d'assistance de la console où vous pouvez créer un ticket de cas.

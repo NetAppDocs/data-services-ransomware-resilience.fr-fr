@@ -54,8 +54,8 @@ Le tableau de bord de protection dans Ransomware Resilience affiche des informat
 
 *État de protection* : une charge de travail peut afficher l’un des états de protection suivants pour indiquer si une politique est appliquée ou non :
 
-* *Protégé* : Une règle de détection est appliquée.
-* *À risque* : Aucune politique n’est appliquée. Si aucune politique de détection n’est activée pour une charge de travail, celle-ci est considérée comme « à risque », même si elle dispose d’un instantané et qu’une règles de sauvegarde est activée.
+* *Protégé* : Une politique de chiffrement ou de détection de l’activité de l’utilisateur est activée.
+* *À risque* : Si une charge de travail ne dispose pas d'une politique de protection avec la détection du chiffrement ou la détection de l'activité de l'utilisateur activée, elle est considérée comme à risque. Même si la charge de travail bénéficie d'une protection par instantané et sauvegarde ainsi que du blocage des extensions de fichiers, elle est toujours considérée comme à risque sans la détection du chiffrement ou la détection du comportement de l'utilisateur activée.
 * *En cours* : Une règle de sauvegarde est en cours d’application, mais l’opération n’est pas encore terminée.
 * *Échec* : Une règle de sauvegarde a été configurée, mais une erreur s'est produite.
 
