@@ -24,7 +24,7 @@ Les playbooks Ransomware Resilience offrent les fonctionnalités suivantes :
 * Vérifiez le statut d'un travail d'enrichissement
 
 
-{asterisk} Le blocage/déblocage d'un utilisateur est uniquement pris en charge pour les playbooks Splunk et Google SecOps SOAR. Vous devez avoir configuré link:concept-user-behavior["détection du comportement de l'utilisateur"] sur un système compatible pour bloquer un utilisateur.
+{asterisk} Le blocage/déblocage d'un utilisateur est uniquement pris en charge pour les playbooks Splunk et Google SecOps SOAR. Vous devez avoir configuré link:concept-user-behavior.html["détection du comportement de l'utilisateur"] sur un système compatible pour bloquer un utilisateur.
 
 
 
@@ -34,7 +34,7 @@ Les playbooks Ransomware Resilience offrent les fonctionnalités suivantes :
 Ransomware Resilience propose des guides pratiques pour Google SecOps, Microsoft Sentinel et Splunk. Consultez la page correspondante pour les détails de configuration.
 
 * link:https://github.com/chronicle/content-hub/tree/main/content/response_integrations/third_party/partner/netappransomwareresilience["Google SecOps"^]
-* link:https://marketplace.microsoft.com/en-us/product/netapp.azure-sentinel-solution-netapprrs?tab=Overview["Microsoft Sentinel"^] | link:https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/NetApp%20Ransomware%20Resilience/Playbooks["Lien GitHub"^]
+* link:https://marketplace.microsoft.com/en-us/product/netapp.azure-sentinel-solution-netapprrs["Microsoft Sentinel"^] | link:https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/NetApp%20Ransomware%20Resilience/Playbooks["Lien GitHub"^]
 * link:https://github.com/splunk-soar-connectors/netappransomwareresilience["Splunk"^]
 +
 Pour Splunk Cloud, vous devez utiliser la version 7.0, 7.1, 7.2, 8.0 ou 8.4 de la plateforme. Pour plus d'informations, consultez link:https://splunkbase.splunk.com/app/8483["Splunkbase"^].

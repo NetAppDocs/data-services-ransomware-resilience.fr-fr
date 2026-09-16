@@ -48,6 +48,16 @@ Les charges de travail protégées sont déduites de la capacité achetée ou de
 
 Lors de l'évaluation du dimensionnement, les coûts de licence sont basés sur la capacité logique du système de fichier actif, que ces données résident dans des niveaux de stockage chaud ou froid. L'espace consommé par les instantanés n'est pas inclus dans ce calcul, même si ces instantanés sont stockés dans un niveau de stockage froid.
 
+.Que se passe-t-il après la fin de ma période d'essai ou l'expiration de ma licence ?
+Une fois la période d'essai gratuite terminée ou la licence ou l'abonnement expiré, les charges de travail restent visibles sur Ransomware Resilience, sauf si vous les excluez. Avec une licence ou une période d'essai expirée, vous pouvez :
+
+* Afficher les charges de travail et l'état de la charge de travail
+* Supprimer des ressources telles que des politiques
+* Exécutez toutes les opérations planifiées créées pendant la période d'essai ou sous la licence
+
+
+Pour désactiver NetApp Ransomware Resilience, veuillez soumettre une demande d'assistance. La demande doit inclure l'identifiant de votre organisation et préciser que vous souhaitez désactiver le service.
+
 
 
 [[access]]

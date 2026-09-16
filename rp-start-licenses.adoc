@@ -30,7 +30,12 @@ Ransomware Resilience est disponible avec les types de licences suivants :
 
 Après avoir configuré votre BYOL ou acheté un abonnement PAYGO, vous pouvez voir la licence dans la section Licenses and subscriptions de la console.
 
-Une fois l'essai gratuit terminé ou la licence ou l'abonnement expiré, vous pouvez toujours :
+
+
+[[expired-licenses]]
+=== Licences expirées
+
+Une fois la période d'essai gratuite terminée ou la licence ou l'abonnement expiré, les charges de travail restent visibles sur Ransomware Resilience, sauf si vous les excluez. Avec une licence ou une période d'essai expirée, vous pouvez :
 
 * Afficher les charges de travail et l'état de la charge de travail
 * Supprimer des ressources telles que des politiques
