@@ -82,9 +82,7 @@ Si votre charge de travail n'est pas gérée par Backup and Recovery ou Ransomwa
 Vous pouvez choisir l’une des politiques prédéfinies de résilience aux ransomwares suivantes, qui sont alignées sur l’importance de la charge de travail.
 
 
-NOTE: La stratégie **Extension utilisateur de chiffrement** est la seule stratégie prédéfinie qui prend en charge la détection des comportements suspects des utilisateurs.
-
-+ La **stratégie de réplication critique** est la seule stratégie prédéfinie qui prend en charge la réplication des instantanés vers ONTAP.
+NOTE: La stratégie **Extension utilisateur de chiffrement** est la seule stratégie prédéfinie qui prend en charge la détection des comportements utilisateur suspects. + La stratégie **Réplication critique** est la seule stratégie prédéfinie qui prend en charge la réplication des instantanés vers ONTAP.
 
 [cols="10,15a,20,15,15,15"]
 |===

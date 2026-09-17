@@ -30,7 +30,7 @@ Vous devez avoir configuré un link:task-clean-restore.html["environnement de r�
 [[considerations]]
 == Considérations
 
-* Vous pouvez uniquement effectuer une restauration complète pour les attaques basées sur le chiffrement (comportement de l'utilisateur et entropie) et les attaques liées à un comportement utilisateur suspect. La restauration complète n'est pas prise en charge pour les attaques de violation de données et de destruction de données.
+* Vous ne pouvez effectuer une restauration complète que pour les attaques basées sur le chiffrement (comportement de l'utilisateur et entropie) et les attaques par comportement utilisateur suspect. La restauration complète n'est pas prise en charge pour les attaques de violation de données et de destruction de données.
 * Si l'environnement de récupération isolé ne dispose pas de capacité pour une nouvelle opération, celle-ci est mise en file d'attente jusqu'à ce qu'une disponibilité se présente.
 +
 ** Vous pouvez surveiller à tout moment l'état des opérations de restauration propres actives et en file d'attente dans le tableau de bord Ransomware Resilience Recovery.
