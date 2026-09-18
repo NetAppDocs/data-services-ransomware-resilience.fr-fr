@@ -10,12 +10,3 @@
 Les restaurations propres sont désormais disponibles pour la récupération après un comportement utilisateur suspect et des attaques par chiffrement basées sur l'utilisateur. Cette amélioration vient s’ajouter à la prise en charge existante des attaques basées sur le chiffrement (entropie). Cette capacité améliorée vous permet de tirer parti de l’approche guidée de la restauration propre, en identifiant les points de restauration optimaux afin de minimiser la perte de données et d’accélérer la récupération.
 
 Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Créez un environnement de récupération isolé pour une restauration propre"^].
-
-
-
-[[san-support-for-google-cloud-netapp-volumes]]
-=== Prise en charge SAN pour Google Cloud NetApp Volumes
-
-Ransomware Resilience prend désormais en charge les charges de travail SAN de Google Cloud NetApp Volumes, vous permettant de détecter les attaques de ransomware basées sur le chiffrement pour les charges de travail SAN. La prise en charge de SAN dans Google Cloud NetApp Volumes est désormais généralement disponible.
-
-Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html#supported-systems["systèmes pris en charge"^] et link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-limitations.html["Stockage SAN dans la résilience aux ransomwares"^].
