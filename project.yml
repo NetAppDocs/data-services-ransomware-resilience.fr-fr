@@ -86,8 +86,20 @@ sidebar:
         url: "/rp-start-simulate.html"
       - title: Simuler des événements d'utilisateur malveillant
         url: "/task-test-user-activity.html"
-    - title: Configurer SIEM
-      url: "/task-siem.html"
+    - title: Configurer un SIEM
+      entries:
+      - title: Comprendre la prise en charge de SIEM
+        url: "/task-siem.html"
+      - title: Configurer AWS Security Hub
+        url: "/task-siem-security-hub.html"
+      - title: Configurer Google SecOps
+        url: "/task-siem-secops.html"
+      - title: Configurer Microsoft Sentinel
+        url: "/task-siem-sentinel.html"
+      - title: Configurer Splunk Cloud & Enterprise
+        url: "/task-siem-splunk.html"
+      - title: Configurer un SIEM avec des webhooks
+        url: "/task-siem-webhook.html"
     - title: Intégrer les playbooks SOAR
       url: "/reference-soar.html"
     - title: Télécharger les rapports

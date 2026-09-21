@@ -9,7 +9,7 @@
 
 Ransomware Resilience prend désormais en charge la configuration d'un système de gestion des informations et des événements de sécurité (SIEM) via des webhooks dans l'interface utilisateur de Ransomware Resilience. Grâce aux webhooks, vous pouvez utiliser votre système SIEM préféré pour organiser la surveillance de vos ransomwares.
 
-Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html["Configurer un système SIEM"^].
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem-webhook.html["Configurer un système SIEM avec des webhooks"^].
 
 
 
