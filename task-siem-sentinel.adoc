@@ -150,8 +150,8 @@ TIP: La durée de vie d'une clé secrète client est limitée à deux ans (24 mo
 
 
 
-[[authenticate-microsoft-sentinel-in-ransomware-resilience]]
-== Authentifier Microsoft Sentinel dans Ransomware Resilience
+[[add-roles-in-azure-and-authenticate-microsoft-sentinel-in-ransomware-resilience]]
+== Ajoutez des rôles dans Azure et authentifiez Microsoft Sentinel dans Ransomware Resilience
 
 Pour le Microsoft Sentinel SIEM, vous pouvez choisir un déploiement automatique où Ransomware Resilience déploie les ressources en fonction des autorisations que vous fournissez. Vous pouvez également effectuer un déploiement manuel où vous déployez les ressources à partir d’un modèle ARM fourni. Les deux options nécessitent que vous définissiez les autorisations dans le portail Azure, puis que vous authentifiiez la connexion dans Ransomware Resilience, bien que les étapes diffèrent. Choisissez le flux de travail qui correspond le mieux à vos besoins.
 
