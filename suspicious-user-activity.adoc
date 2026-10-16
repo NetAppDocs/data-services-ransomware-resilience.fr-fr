@@ -22,9 +22,6 @@ Un agent d'activité utilisateur héberge un collecteur de données et un connec
 
 L'agent d'activité utilisateur, le collecteur de données et le connecteur d'annuaire utilisateur peuvent tous être gérés depuis le tableau de bord des paramètres de NetApp Ransomware Resilience.
 
-
-NOTE: Si vous utilisez déjà NetApp Data Infrastructure Insights (DII) Workload Security, utilisez les mêmes agents Workload Security pour Ransomware Resilience. Vous n'avez pas besoin de déployer des agents Workload Security distincts pour Ransomware Resilience. Cependant, l'utilisation des mêmes agents Workload Security nécessite une relation d'appariement entre l'organisation de la console Ransomware Resilience et le locataire DII Storage Workload Security. Contactez votre représentant de compte pour activer cet appariement.
-
 Si vous n'utilisez pas DII, suivez les instructions de configuration ici.
 
 
@@ -38,6 +35,13 @@ Si vous n'utilisez pas DII, suivez les instructions de configuration ici.
 *Rôle Console requis* Pour activer la détection du comportement des utilisateurs, vous devez disposer du **rôle d'administrateur de l'organisation**. Pour les configurations ultérieures de la détection du comportement des utilisateurs, vous devez disposer du **rôle d'administrateur du comportement des utilisateurs de Ransomware Resilience**. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^].
 
 Assurez-vous que chaque rôle est appliqué au niveau de l'organisation.
+
+
+
+[[considerations-for-data-infrastructure-insights-dii-workload-security-users]]
+=== Considérations pour les utilisateurs de la sécurité des workloads de Data Infrastructure Insights (DII)
+
+Si vous utilisez déjà NetApp Data Infrastructure Insights (DII) Workload Security, utilisez les mêmes agents Workload Security pour Ransomware Resilience. Vous n'avez pas besoin de déployer des agents Workload Security distincts pour Ransomware Resilience. Cependant, l'utilisation des mêmes agents Workload Security nécessite une relation d'appariement entre l'organisation de la console Ransomware Resilience et le locataire DII Storage Workload Security. Contactez votre représentant de compte pour activer cet appariement.
 
 
 
