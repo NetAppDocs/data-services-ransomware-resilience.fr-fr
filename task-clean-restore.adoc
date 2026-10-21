@@ -527,27 +527,31 @@ La procédure de création d'une salle de reprise d'activité isolée diffère s
 . Dans Ransomware Resilience, sélectionnez **Paramètres**.
 . Dans la carte Isolation cleaning and recovery, sélectionnez **Ajouter** pour créer l'environnement de récupération isolé.
 . Dans la section Type, choisissez *Nettoyage à la demande*.
-. Développez la section **Nom**. Saisissez un **Nom** pour l’environnement.
-. Pour un IRE basé sur le cloud, sélectionnez **Amazon Web Services**.
-. Développez la section *Systèmes*. Choisissez les systèmes à connecter à l'IRE. Pour chaque système sélectionné, vous devez indiquer l'adresse IP, le masque de sous-réseau et la passerelle de la machine virtuelle de stockage.
+. Pour un I basé sur le cloud, choisissez **Amazon Web Services** comme emplacement.
+. Saisissez un **Nom** pour l’environnement.
+. Sélectionnez *Suivant*.
+. Développez la section *Systems*. Choisissez les systèmes que vous souhaitez connecter à l'IRE. Pour chaque système que vous sélectionnez. Chaque système doit disposer d'une connectivité réseau avec l'IRE. Vous devrez შესაძლოა fournir une adresse IP de LIF de données pour chaque système afin d'établir le point de récupération de restauration propre.
 +
 
 NOTE: Pour les IRE déployés sur Amazon FSx for NetApp ONTAP, vous n'avez pas besoin de fournir ces informations.
 
+. Pour chaque système que vous avez ajouté autre qu'Amazon FSx for NetApp ONTAP, sélectionnez *Modifier la machine virtuelle de stockage*. Dans la fenêtre contextuelle, saisissez l'*adresse IP de la machine virtuelle de stockage* et le *masque de sous-réseau de la machine virtuelle de stockage*. Pour le *domaine de diffusion*, choisissez default ou management. Vous pouvez éventuellement saisir une *passerelle de machine virtuelle de stockage*.
 +
 image::clean-restore-systems.png[Capture d'écran de l'interface de sélection des systèmes.]
 
-. Développez la section **Authentification**.
+. Sélectionnez *Suivant*.
+. Dans la section *Authentification*, saisissez l'**ID du compte** cloud et sélectionnez la **Région** correspondante dans le menu déroulant. Vous ne pouvez déployer un IRE que dans une région prise en charge.
+. Saisissez la **clé d'accès** et la **clé secrète** du compte.
 +
-** Saisissez l'identifiant du compte **Account** cloud et sélectionnez la **Region** correspondante pour le compte dans le menu déroulant. Vous ne pouvez déployer un IRE que dans une région prise en charge.
-** Saisissez la **clé d'accès** et la **clé secrète** du compte.
+
+NOTE: Le compte doit disposer des autorisations nécessaires pour permettre à Ransomware Resilience de déployer l'agent Console et de créer la salle blanche à la demande.
+
 +
 image::screenshot-set-up-recovery-environment.png[Capture d'écran de la configuration de l'authentification IRE.]
 
-
-
-. Développez la section *Cloud privé virtuel (VPC)*. Saisissez l'ID du VPC où l'IRE doit être déployé.
-. Sélectionnez **Ajouter** pour créer l'IRE.
+. Développez la section *Amazon VPC*. Saisissez l'ID du cloud privé virtuel dans lequel l'IRE doit être déployé. (Il s'agit du VPC que vous avez configuré dans les prérequis.)
+. Sélectionnez *Suivant* pour consulter la configuration.
+. Vérifiez la configuration. Sélectionnez *Ajouter* pour créer l'IRE.
 +
 Ransomware Resilience teste la connexion après que vous ayez sélectionné ajouter, ce qui peut prendre quelques minutes. L'IRE est déployé avec succès lorsque son statut affiche « déployé ».
 
@@ -559,31 +563,30 @@ Ransomware Resilience teste la connexion après que vous ayez sélectionné ajou
 . Dans Ransomware Resilience, sélectionnez **Paramètres**.
 . Dans la carte Clean restores, sélectionnez **Ajouter** s'il s'agit de votre premier environnement ou **Gérer** si vous en avez déjà créé un.
 . Dans la section Type, choisissez *Nettoyage à la demande*.
-. Développez la section *Nom*. Attribuez un **Nom** à l'IRE.
 . Pour l'emplacement, sélectionnez **Sur site**.
-. Développez la section *Systèmes*. Sélectionnez les systèmes à connecter à l'IRE. Attribuez une adresse IP de machine virtuelle de stockage, un masque de sous-réseau et une passerelle à chaque système dont les charges de travail doivent être récupérées dans l'IRE.
+. Saisissez un *nom d’environnement de récupération Isolate*.
+. Sélectionnez *Suivant*.
+. Développez la section *Systèmes*. Sélectionnez les systèmes à connecter à l'IRE.
 +
 Chaque système sélectionné doit posséder une adresse IP assignée. Vous pouvez sélectionner des systèmes principaux ou secondaires. Les systèmes secondaires peuvent être utilisés pour l'analyse et la restauration si le système principal ne dispose d'aucun instantané non chiffré ou s'il est indisponible.
 
-. Développez la section **Agent de console**. Sélectionnez l'agent de console dans le menu déroulant qui est déployé dans l'IRE.
-. Développez la section *Clean room compute*.
+. Pour chaque système que vous avez ajouté, sélectionnez *Edit storage VM*. Dans la fenêtre contextuelle, saisissez l’*adresse IP de la machine virtuelle de stockage* et le *masque de sous-réseau de la machine virtuelle de stockage*. Pour le *Broadcast domain*, choisissez default ou management. Vous pouvez éventuellement saisir une *passerelle de la machine virtuelle de stockage*.
+. Sélectionnez *Suivant*.
+. Sélectionnez l'agent de console dans le menu déroulant qui est déployé dans l'IRE.
+. Fournissez les informations d'identification pour authentifier le serveur vCenter : *adresse IP ou nom de domaine complet (FQDN)*, *Port*, *Nom d'utilisateur* et *Mot de passe*.
+. Sélectionnez **S'authentifier** pour confirmer vos identifiants. Attendez que l'interface utilisateur confirme vos identifiants avant de continuer.
+. Développez la section *Informatique en salle blanche*.
+. Sélectionnez le *centre de données* et le *cluster* où les machines virtuelles seront déployées.
+. Sélectionnez le *Datastore* et le *Network* pour l'hôte ESXi.
+. Saisissez la *plage d'adresses IP* au format CIDR (par exemple 10.0.0.1/24), le *masque de sous-réseau* et la *passerelle* pour les VMs.
+. Sélectionnez les machines virtuelles situées sur l’hôte ESXi, qui serviront de machine virtuelle de base pour le clonage lors du processus de reprise.
 +
-.. Fournissez les informations d'identification pour authentifier le serveur vCenter : *adresse IP* ou nom de domaine complet (FQDN), *Port*, *Nom d'utilisateur* et *Mot de passe*.
-.. Sélectionnez **S'authentifier** pour confirmer vos identifiants. Attendez que l'interface utilisateur confirme vos identifiants avant de continuer.
-.. Sélectionnez le *centre de données* et le *cluster* où les machines virtuelles seront déployées.
-.. Sélectionnez le *Datastore* et le *Network* pour l'hôte ESXi.
-.. Saisissez la *plage d'adresses IP* au format CIDR (par exemple 10.0.0.1/24), le *masque de sous-réseau* et la *passerelle* pour les VMs.
+Pour la machine virtuelle Linux que Ransomware Resilience utilise pour rechercher les ransomwares, sélectionnez la machine virtuelle dans le menu déroulant, puis saisissez le *nom d'utilisateur* et le *mot de passe* de la machine virtuelle.
+
 +
-image:clean-restore-compute.png["Capture d'écran de l'interface de sélection de ressources de calcul."]
+Pour la machine virtuelle Windows utilisée pour l'analyse, sélectionnez la machine virtuelle dans le menu déroulant, puis saisissez le *nom d'utilisateur* et le *mot de passe* de la machine virtuelle.
 
-
-
-. Développez la section *Clean room VMs*, qui est remplie en fonction de vos entrées dans la section *Compute*.
-+
-.. Pour la machine virtuelle Linux que Ransomware Resilience utilise pour rechercher les ransomwares, sélectionnez la machine virtuelle dans le menu déroulant, puis saisissez le *nom d'utilisateur* et le *mot de passe* de la machine virtuelle.
-.. Pour la machine virtuelle Windows utilisée pour l'analyse, sélectionnez la machine virtuelle dans le menu déroulant, puis saisissez le *nom d'utilisateur* et le *mot de passe* de la machine virtuelle.
-
-
+. Sélectionnez *Suivant* pour consulter la configuration.
 . Sélectionnez **Ajouter** pour créer l'IRE. Ransomware Resilience teste la connexion après que vous avez sélectionné Ajouter ; ce processus peut prendre quelques minutes. L'IRE a été déployé avec succès lorsque son statut affiche « déployé ».
 
 

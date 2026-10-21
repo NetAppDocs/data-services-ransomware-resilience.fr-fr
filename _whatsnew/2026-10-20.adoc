@@ -1,0 +1,19 @@
+= Configuration améliorée de l’environnement de récupération isolé
+:allow-uri-read: 
+
+
+
+
+[[enhanced-isolated-recovery-environment-configuration]]
+=== Configuration améliorée de l’environnement de récupération isolé
+
+Ransomware Resilience propose désormais un flux de travail amélioré pour la configuration d'un environnement de récupération isolé. Ce nouveau flux de travail clarifie et simplifie le processus de mise en place d'un environnement de récupération isolé pour le cloud ou les environnements sur site.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Créez un environnement de récupération isolé pour une restauration propre"^].
+
+
+
+[[google-cloud-netapp-volumes-flex-service-level-generally-available]]
+=== Niveau de service Flex de Google Cloud NetApp Volumes généralement disponible
+
+La prise en charge du niveau de service Flex de Google Cloud NetApp Volumes dans Ransomware Resilience est désormais en disponibilité générale (GA).
