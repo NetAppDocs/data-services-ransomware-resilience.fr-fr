@@ -1,0 +1,196 @@
+---
+sidebar: sidebar 
+permalink: concept-strategy.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, detection, protection, policy, malware 
+summary: 'Découvrez les stratégies de protection contre les ransomwares dans NetApp Ransomware Resilience. Ces stratégies permettent la détection, ainsi que les snapshots, la sauvegarde et la réplication afin d"établir une base de référence pour la restauration.' 
+---
+= Découvrez les stratégies de protection dans NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dans NetApp Ransomware Resilience, les stratégies de protection constituent un élément essentiel de votre dispositif de défense contre les ransomwares. Les stratégies de protection englobent la _détection_, la _protection_ et la _réplication_, ce qui vous permet de détecter les attaques de ransomware, de vous en protéger et d’établir une base de référence pour la reprise.
+
+
+
+[[protection-strategy-elements]]
+== Éléments de la stratégie de protection
+
+Les stratégies de protection comportent trois éléments : la détection, la protection et la réplication.
+
+* Les **politiques de détection** identifient les menaces de type ransomware. Vous avez trois options pour la détection :
++
+** Détection de chiffrement
+** Activité utilisateur suspecte
+** Bloquez les extensions de fichiers suspectes
++
+Votre politique de détection peut inclure les trois options ou une combinaison de celles-ci. Elle doit inclure soit la détection du chiffrement, soit link:suspicious-user-activity.html["activité utilisateur suspecte (nécessitant une configuration supplémentaire)"].
+
+
+
+* **Les politiques de protection** incluent les politiques de capture instantanée et de sauvegarde.  Les politiques de détection et de capture instantanée sont nécessaires dans une stratégie de protection.  Les politiques de sauvegarde sont facultatives.
++
+Si vous utilisez d'autres produits NetApp pour protéger votre charge de travail, Ransomware Resilience les découvre et offre la possibilité de :
+
++
+** Utilisez une politique de détection des ransomwares et continuez à utiliser les politiques de capture instantanée et de sauvegarde créées par d'autres outils NetApp, ou
+** Utilisez Ransomware Resilience pour gérer la détection, les instantanés et les sauvegardes.
+
+
+* Les **stratégies de réplication** vous permettent de répliquer les instantanés de Ransomware Resilience vers un site secondaire. Les calendriers de réplication peuvent être définis sur des fréquences horaires, quotidiennes, hebdomadaires ou mensuelles.
++
+Actuellement, vous ne pouvez répliquer les instantanés que vers un stockage ONTAP local.
+
+
+
+
+NOTE: Si vous configurez des stratégies de protection pour Amazon FSx for NetApp ONTAP ou Azure NetApp Files, consultez link:rp-reference-limitations.html["les limitations de chaque service"].
+
+
+TIP: Pour une gestion et une protection améliorées de votre patrimoine de données, vous pouvez link:task-protection-group.html["groupes de charges de travail"] pour protéger collectivement les volumes dans le cadre d'une stratégie unique.
+
+
+
+[[protection-policies-with-other-netapp-managed-services]]
+== Politiques de protection avec d'autres services gérés par NetApp
+
+Au-delà de la résilience face aux ransomwares, vous pouvez utiliser NetApp Backup and Recovery pour gérer la protection des partages de fichiers.
+
+Les informations de protection issues des services Backup and Recovery apparaissent dans Ransomware Resilience. Vous pouvez ajouter une stratégie de détection des ransomwares à une stratégie Backup and Recovery existante. Vous pouvez également ajouter des stratégies de sauvegarde via Ransomware Resilience, qui remplacent les stratégies de protection existantes de Backup and Recovery.
+
+Si une politique de détection de ransomware est gérée par Autonomous Ransomware Protection (ARP ou ARP/AI, selon la version ONTAP ) et FPolicy dans ONTAP, ces charges de travail sont protégées et continueront d'être gérées par ARP et FPolicy.
+
+
+NOTE: Les destinations de sauvegarde ne sont pas disponibles pour les charges de travail dans Amazon FSx for NetApp ONTAP ou Azure NetApp Files. Effectuez les opérations de sauvegarde à l'aide du service de sauvegarde FSx for ONTAP. Vous définissez les stratégies de sauvegarde pour les charges de travail dans FSx for ONTAP dans AWS, et non dans Ransomware Resilience. Les stratégies de sauvegarde apparaissent dans Ransomware Resilience et restent inchangées par rapport à AWS.
+
+
+
+[[protection-policies-for-workloads-not-protected-by-netapp-applications]]
+=== Politiques de protection pour les charges de travail non protégées par les applications NetApp
+
+Si votre charge de travail n'est pas gérée par Backup and Recovery ou Ransomware Resilience, elle peut avoir des instantanés pris dans le cadre d'ONTAP ou d'autres produits. Si la protection FPolicy d'ONTAP est en place, vous pouvez modifier la protection FPolicy à l'aide d'ONTAP.
+
+
+
+[[predefined-policies]]
+== Politiques prédéfinies
+
+Vous pouvez choisir l’une des politiques prédéfinies de résilience aux ransomwares suivantes, qui sont alignées sur l’importance de la charge de travail.
+
+
+NOTE: La stratégie **Encryption user extension** est la seule stratégie prédéfinie qui prend en charge la détection des activités utilisateur suspectes. + La stratégie **Critical replication policy** est la seule stratégie prédéfinie qui prend en charge la réplication des instantanés vers ONTAP.
+
+[cols="10,15a,20,15,15,15"]
+|===
+| Niveau politique | Instantané | Fréquence | Rétention (jours) | Nombre de copies d'instantané | Nombre maximal de copies d'instantané 
+
+
+.4+| *Politique de charge de travail critique*  a| 
+Quart d'heure
+| Toutes les 15 minutes | 3 | 288 | 309 
+
+
+| Tous les jours  a| 
+Tous les 1 jour
+| 14 | 14 | 309 
+
+
+| Hebdomadaire  a| 
+Toutes les 1 semaine
+| 35 | 5 | 309 
+
+
+| Mensuel  a| 
+Tous les 30 jours
+| 60 | 2 | 309 
+
+
+.4+| *Politique importante relative à la charge de travail*  a| 
+toutes les demi-heures
+| Toutes les 30 minutes | 3 | 144 | 165 
+
+
+| Tous les jours  a| 
+Tous les 1 jour
+| 14 | 14 | 165 
+
+
+| Hebdomadaire  a| 
+Toutes les 1 semaine
+| 35 | 5 | 165 
+
+
+| Mensuel  a| 
+Tous les 30 jours
+| 60 | 2 | 165 
+
+
+.4+| *Politique de charge de travail standard*  a| 
+toutes les demi-heures
+| Toutes les 30 minutes | 3 | 72 | 93 
+
+
+| Tous les jours  a| 
+Tous les 1 jour
+| 14 | 14 | 93 
+
+
+| Hebdomadaire  a| 
+Toutes les 1 semaine
+| 35 | 5 | 93 
+
+
+| Mensuel  a| 
+Tous les 30 jours
+| 60 | 2 | 93 
+
+
+.4+| *Extension utilisateur de chiffrement*  a| 
+toutes les demi-heures
+| Toutes les 30 minutes | 3 | 72 | 93 
+
+
+| Tous les jours  a| 
+Tous les 1 jour
+| 14 | 14 | 93 
+
+
+| Hebdomadaire  a| 
+Toutes les 1 semaine
+| 35 | 5 | 93 
+
+
+| Mensuel  a| 
+Tous les 30 jours
+| 60 | 2 | 93 
+
+
+.4+| *Politique de réplication critique*  a| 
+Quart d'heure
+| Toutes les 15 minutes | 3 | 288 | 309 
+
+
+| Tous les jours  a| 
+Tous les 1 jour
+| 14 | 14 | 309 
+
+
+| Hebdomadaire  a| 
+Toutes les 1 semaine
+| 35 | 5 | 309 
+
+
+| Mensuel  a| 
+Tous les 30 jours
+| 60 | 2 | 309 
+|===
+
+
+[[next-steps]]
+== Prochaines étapes
+
+* link:rp-use-protect.html["Protéger les charges de travail grâce à la résilience contre les ransomwares"]
+

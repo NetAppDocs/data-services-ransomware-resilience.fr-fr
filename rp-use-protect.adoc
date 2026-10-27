@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: rp-use-protect.html 
-keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, detection, protection, policy, malware 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, detection, protection, policy, malware, replication, snapshot policy, backup policy, protection strategy 
 summary: Vous pouvez protéger les charges de travail contre les attaques de ransomware en attribuant des stratégies à une charge de travail dans NetApp Ransomware Resilience. 
 ---
 = Protégez les charges de travail avec les stratégies de protection NetApp Ransomware Resilience
@@ -12,182 +12,17 @@ summary: Vous pouvez protéger les charges de travail contre les attaques de ran
 
 
 [role="lead"]
-Les stratégies de protection contre les ransomwares sont une fonctionnalité clé de NetApp Ransomware Resilience : elles prennent en charge la détection, la protection et la réplication. Activez une stratégie de protection contre les ransomwares pour détecter les attaques de ransomware et garantir que vous disposez d’une base de référence de protection pour la récupération.
+Après avoir découvert les workloads dans NetApp Ransomware Resilience, il est essentiel d’appliquer link:concept-strategy.html["stratégies de protection"] à vos workloads pour configurer une combinaison de détection, de protection et de réplication contre les ransomwares. Activez une stratégie de protection contre les ransomwares pour détecter les attaques par rançongiciel et vous assurer de disposer d’une base de protection pour la reprise.
 
 *Rôle de console requis* Pour effectuer cette tâche, vous devez disposer du link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super administrateur"^] ou du rôle d'administrateur Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["En savoir plus sur les rôles de résilience aux ransomwares pour la NetApp Console"^].
 
 
 
-[[understand-ransomware-protection-strategies]]
-== Comprendre les stratégies de protection contre les ransomwares
+[[before-you-begin]]
+== Avant de commencer
 
-Les stratégies de protection contre les ransomwares englobent _détection_, _protection_ et _réplication_.
+Si vous envisagez de créer une politique de protection avec détection des comportements suspects des utilisateurs, assurez-vous link:suspicious-user-activity.html["ont effectué la mise en place nécessaire"]de disposer d'un système de surveillance de l'activité des utilisateurs.
 
-* Les **politiques de détection** identifient les menaces de type ransomware. Vous avez trois options pour la détection :
-+
-** Détection de chiffrement
-** Activité utilisateur suspecte
-** Bloquez les extensions de fichiers suspectes
-+
-Votre politique de détection peut inclure les trois options ou une combinaison de celles-ci. Elle doit inclure soit la détection du chiffrement, soit link:suspicious-user-activity.html["Activité suspecte de l'utilisateur (nécessitant des configurations supplémentaires)"].
-
-
-
-* **Les politiques de protection** incluent les politiques de capture instantanée et de sauvegarde.  Les politiques de détection et de capture instantanée sont nécessaires dans une stratégie de protection.  Les politiques de sauvegarde sont facultatives.
-+
-Si vous utilisez d'autres produits NetApp pour protéger votre charge de travail, Ransomware Resilience les découvre et offre la possibilité de :
-
-+
-** utiliser une politique de détection de ransomware et continuer à utiliser les politiques de snapshot et de sauvegarde créées par d'autres outils NetApp , ou
-** utilisez Ransomware Resilience pour gérer la détection, les instantanés et les sauvegardes.
-
-
-* Les **stratégies de réplication** vous permettent de répliquer les instantanés de Ransomware Resilience vers un site secondaire. Les calendriers de réplication peuvent être définis sur des fréquences horaires, quotidiennes, hebdomadaires ou mensuelles.
-+
-Actuellement, vous ne pouvez répliquer les instantanés que vers un stockage ONTAP local.
-
-
-
-
-NOTE: Si vous configurez des stratégies de protection pour Amazon FSx for NetApp ONTAP et Azure NetApp Files, consultez link:rp-reference-limitations.html["les limitations de chaque service"].
-
-
-TIP: Pour une gestion et une protection améliorées de votre patrimoine de données, vous pouvez créer link:task-protection-group.html["groupes de charges de travail"] pour protéger collectivement les volumes sous une seule stratégie.
-
-
-
-[[protection-policies-with-other-netapp-managed-services]]
-=== Politiques de protection avec d'autres services gérés par NetApp
-
-Au-delà de la résilience aux ransomwares, vous pouvez utiliser NetApp Backup and Recovery pour gérer la protection des partages de fichiers et des partages de fichiers de machines virtuelles.
-
-Les informations de protection des services de Backup & Recovery apparaissent dans Ransomware Resilience. Vous pouvez ajouter des stratégies de détection à ces services avec Ransomware Resilience. L'ajout d'une stratégie de protection avec Ransomware Resilience remplace les stratégies de protection existantes.
-
-Si une politique de détection de ransomware est gérée par Autonomous Ransomware Protection (ARP ou ARP/AI, selon la version ONTAP ) et FPolicy dans ONTAP, ces charges de travail sont protégées et continueront d'être gérées par ARP et FPolicy.
-
-
-NOTE: Les destinations de sauvegarde ne sont pas disponibles pour les charges de travail dans Amazon FSx for NetApp ONTAP ou Azure NetApp Files. Effectuez les opérations de sauvegarde à l'aide du service de sauvegarde FSx for ONTAP. Vous définissez les stratégies de sauvegarde pour les charges de travail dans FSx for ONTAP dans AWS, et non dans Ransomware Resilience. Les stratégies de sauvegarde apparaissent dans Ransomware Resilience et restent inchangées par rapport à AWS.
-
-
-
-==== Politiques de protection pour les charges de travail non protégées par les applications NetApp
-
-Si votre charge de travail n'est pas gérée par Backup and Recovery ou Ransomware Resilience, elle peut avoir des instantanés pris dans le cadre d'ONTAP ou d'autres produits. Si la protection FPolicy d'ONTAP est en place, vous pouvez modifier la protection FPolicy à l'aide d'ONTAP.
-
-
-
-[[predefined-detection-policies]]
-=== Politiques de détection prédéfinies
-
-Vous pouvez choisir l’une des politiques prédéfinies de résilience aux ransomwares suivantes, qui sont alignées sur l’importance de la charge de travail.
-
-
-NOTE: La stratégie **Extension utilisateur de chiffrement** est la seule stratégie prédéfinie qui prend en charge la détection des comportements utilisateur suspects. + La stratégie **Réplication critique** est la seule stratégie prédéfinie qui prend en charge la réplication des instantanés vers ONTAP.
-
-[cols="10,15a,20,15,15,15"]
-|===
-| Niveau politique | Instantané | Fréquence | Rétention (jours) | Nombre de copies d'instantané | Nombre maximal de copies d'instantané 
-
-
-.4+| *Politique de charge de travail critique*  a| 
-Quart d'heure
-| Toutes les 15 minutes | 3 | 288 | 309 
-
-
-| Tous les jours  a| 
-Tous les 1 jour
-| 14 | 14 | 309 
-
-
-| Hebdomadaire  a| 
-Toutes les 1 semaine
-| 35 | 5 | 309 
-
-
-| Mensuel  a| 
-Tous les 30 jours
-| 60 | 2 | 309 
-
-
-.4+| *Politique importante relative à la charge de travail*  a| 
-Quart d'heure
-| Toutes les 30 minutes | 3 | 144 | 165 
-
-
-| Tous les jours  a| 
-Tous les 1 jour
-| 14 | 14 | 165 
-
-
-| Hebdomadaire  a| 
-Toutes les 1 semaine
-| 35 | 5 | 165 
-
-
-| Mensuel  a| 
-Tous les 30 jours
-| 60 | 2 | 165 
-
-
-.4+| *Politique de charge de travail standard*  a| 
-Quart d'heure
-| Toutes les 30 minutes | 3 | 72 | 93 
-
-
-| Tous les jours  a| 
-Tous les 1 jour
-| 14 | 14 | 93 
-
-
-| Hebdomadaire  a| 
-Toutes les 1 semaine
-| 35 | 5 | 93 
-
-
-| Mensuel  a| 
-Tous les 30 jours
-| 60 | 2 | 93 
-
-
-.4+| *Extension utilisateur de chiffrement*  a| 
-Quart d'heure
-| Toutes les 30 minutes | 3 | 72 | 93 
-
-
-| Tous les jours  a| 
-Tous les 1 jour
-| 14 | 14 | 93 
-
-
-| Hebdomadaire  a| 
-Toutes les 1 semaine
-| 35 | 5 | 93 
-
-
-| Mensuel  a| 
-Tous les 30 jours
-| 60 | 2 | 93 
-
-
-.4+| *Politique de réplication critique*  a| 
-Quart d'heure
-| Toutes les 15 minutes | 3 | 288 | 309 
-
-
-| Tous les jours  a| 
-Tous les 1 jour
-| 14 | 14 | 309 
-
-
-| Hebdomadaire  a| 
-Toutes les 1 semaine
-| 35 | 5 | 309 
-
-
-| Mensuel  a| 
-Tous les 30 jours
-| 60 | 2 | 309 
-|===
 
 
 [[add-a-ransomware-protection-strategy]]
@@ -247,64 +82,56 @@ image:screen-protection.png["Gérer la page de stratégie"]
 +
 image:screen-protection-strategy-add.png["Ajouter une page de stratégie affichant la section d'instantanés"]
 
-. Saisissez un nouveau nom de stratégie ou saisissez un nom existant pour le copier.  Si vous entrez un nom existant, choisissez celui que vous souhaitez copier et sélectionnez *Copier*.
-+
-
-NOTE: Si vous choisissez de copier et de modifier une stratégie existante, Ransomware Resilience ajoute « _copy » au nom d'origine.  Vous devez modifier le nom et au moins un paramètre pour le rendre unique.
-
+. Saisissez un nouveau nom de stratégie. Ce nom ne doit pas contenir d'espaces.
+. Vous pouvez également choisir une stratégie de protection existante comme base de la nouvelle stratégie. Dans *Copier depuis une stratégie de résilience aux ransomwares existante*, choisissez *Sélectionner*. Sélectionnez la stratégie existante, puis *Copier*.
 . Pour chaque élément, sélectionnez la *flèche vers le bas*.
+. Choisissez les paramètres de la *stratégie de détection* :
 +
-** *Politique de détection*:
-+
-*** *Politique* : Choisissez l’une des politiques de détection prédéfinies.
-*** *Détection du chiffrement* : Activez la résilience aux ransomwares pour détecter les attaques basées sur le chiffrement.
-*** *Détection des comportements suspects des utilisateurs* : Activez la détection des comportements des utilisateurs pour transmettre les événements d’activité des utilisateurs à Ransomware Resilience et détecter les événements suspects tels que les violations de données ou la destruction de données.
-*** *Bloquer les extensions de fichiers* : Activez la Ransomware Resilience pour bloquer les extensions de fichiers suspectes connues.
+** *Détection du chiffrement* : Activez la résilience aux ransomwares pour détecter les attaques basées sur le chiffrement.
+** *Détection des comportements suspects des utilisateurs* : Activez la détection des comportements des utilisateurs pour transmettre les événements d’activité des utilisateurs à Ransomware Resilience et détecter les événements suspects tels que les violations de données ou la destruction de données.
+** *Bloquer les extensions de fichiers* : Activez la Ransomware Resilience pour bloquer les extensions de fichiers suspectes connues.
 +
 Si vous souhaitez modifier les extensions de fichiers bloquées, modifiez-les dans le Gestionnaire système.
 
-
-
-
-
-
-
++
 
 NOTE: Vous pouvez choisir n'importe quelle combinaison de règles de détection. La règle de détection doit inclure soit la détection du chiffrement, soit la détection des comportements suspects des utilisateurs.
 
-* *Politique d'instantané*:
+
+
+. Définissez la *stratégie Snapshot*. Pour importer les paramètres Snapshot à partir d’une link:concept-strategy.html#predefined-policies["politique prédéfinie"], choisissez le bouton radio *Sélectionner*, puis choisissez la stratégie dans la liste déroulante. Aucune autre configuration Snapshot n’est requise si vous importez une stratégie.
 +
-** *Nom de base de la politique d'instantané* : sélectionnez une politique ou sélectionnez *Créer* et saisissez un nom pour la politique d'instantané.
-** *Verrouillage des instantanés* : activez cette option pour verrouiller les copies d'instantanés sur le stockage principal afin qu'elles ne puissent pas être modifiées ou supprimées pendant une certaine période, même si une attaque de ransomware parvient à atteindre la destination de stockage de sauvegarde.  Ceci est également appelé _stockage immuable_.  Cela permet un temps de restauration plus rapide.
+Pour configurer vos propres paramètres, sélectionnez *Créer* puis saisissez un *nom de base pour l'instantané*. Le nom de base est le préfixe ajouté à chaque instantané.
+
+. Si vous configurez vos propres paramètres de snapshot, vous pouvez activer le *verrouillage des snapshots*. Si vous activez le verrouillage des snapshots, définissez une valeur pour la *durée de conservation du verrouillage* (c'est-à-dire la durée pendant laquelle les snapshots sont verrouillés).
 +
-Lorsqu'un instantané est verrouillé, le délai d'expiration du volume est défini sur le délai d'expiration de la copie de l'instantané.
+Le verrouillage des snapshots crée un stockage immuable en verrouillant les copies de snapshots sur le stockage principal afin qu’elles ne puissent pas être modifiées ni supprimées pendant une certaine période, même si une attaque par ransomware parvient jusqu’à la destination de stockage de sauvegarde. Cela permet un délai de restauration plus rapide. Lorsqu’un snapshot est verrouillé, la date d’expiration du volume est définie sur la date d’expiration de la copie du snapshot.
 
 +
-Le verrouillage de copie d'instantané est disponible avec ONTAP 9.12.1 et versions ultérieures.  Pour en savoir plus sur SnapLock, reportez-vous à https://docs.netapp.com/us-en/ontap/snaplock/index.html["SnapLock dans ONTAP"^] .
+Le verrouillage des copies Snapshot est disponible avec ONTAP 9.12.1 et les versions ultérieures. Pour en savoir plus sur SnapLock, consultez link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["Documentation ONTAP pour SnapLock"^].
 
-** *Planifications d'instantanés* : Choisissez les options de planification, le nombre de copies d'instantanés à conserver et sélectionnez pour activer la planification.
-
-
-* *Politique de réplication* :
 +
-** *Nom de base de la stratégie de réplication* : Saisissez un nouveau nom ou choisissez-en un existant. Le nom de base est le préfixe ajouté à tous les instantanés.
-** *Planifications de réplication* : Activez les fréquences que vous souhaitez (horaire, quotidienne, hebdomadaire ou mensuelle) et définissez la valeur de rétention (le nombre d’instantanés répliqués à conserver) pour chaque planification activée.
+Si vous configurez vos propres paramètres de snapshot, définissez les options de planification des snapshots. Choisissez si vous souhaitez prendre des snapshots à une fréquence de quelques minutes, heures, jours, semaines ou mois. Pour toutes les options sauf « quotidien », choisissez à quel moment de la journée, de la semaine ou du mois prendre les snapshots. Choisissez également le nombre de copies de chaque type de snapshot à conserver dans le champ *Retention*.
 
-
-* *Politique de sauvegarde*:
 +
-** *Nom de base de la politique de sauvegarde* : saisissez un nouveau nom ou choisissez un nom existant.
-** *Planifications de sauvegarde* : Choisissez les options de planification pour le stockage secondaire et activez la planification.
+image:add-policy-snapshot.png["Capture d'écran des options de stratégie de capture d'instantané."]
+
+. Pour les charges de travail sur site, vous pouvez éventuellement définir une *stratégie de réplication* pour répliquer la workload vers le stockage ONTAP.
++
+Pour importer une stratégie définie par le système, choisissez le bouton radio *Sélectionner*, puis choisissez l’link:concept-strategy.html#predefined-policies["politique prédéfinie"] dans le menu déroulant.
+
++
+Pour définir vos propres paramètres de réplication, sélectionnez *Créer*, puis saisissez un *Nom de base de la stratégie de réplication*, qui correspond au préfixe ajouté à tous les instantanés. Définissez les *Planifications de réplication*. Activez les fréquences que vous souhaitez utiliser (horaire, quotidienne, hebdomadaire ou mensuelle) et définissez la valeur de conservation (le nombre d'instantanés répliqués à conserver) pour chaque planification que vous activez.
+
+. Vous pouvez éventuellement définir une *stratégie de sauvegarde*. Pour en importer une existante, sélectionnez le bouton radio *Sélectionner*, puis choisissez link:concept-strategy.html#predefined-policies["politique prédéfinie"] dans le menu déroulant.
++
+Pour créer votre propre politique, sélectionnez *Créer* et saisissez un *nom de base de la politique de sauvegarde*. Définissez les *planifications de sauvegarde* en activant les différentes fréquences (horaire, quotidienne, hebdomadaire et mensuelle), puis en définissant le nombre de sauvegardes à conserver pour chacune.
+
 +
 
 TIP: Pour activer le verrouillage des sauvegardes sur le stockage secondaire, configurez vos destinations de sauvegarde à l'aide de l'option *Paramètres*. Pour plus de détails, consultez link:task-backup-destination.html["Configurer les paramètres"].
 
-+
-... Sélectionnez *Ajouter*.
-
-
-
-
+. Sélectionnez *Ajouter*.
 
 
 
@@ -362,7 +189,7 @@ image:screen-protection.png["Gérer la page de stratégie"]
 . Si votre stratégie inclut la réplication, sélectionnez le **système de destination** et la **VM de stockage de destination**. Sélectionnez **Suivant**.
 . Sélectionnez une destination de sauvegarde ou créez-en une nouvelle. Sélectionnez **Suivant**.
 +
-.. Si votre stratégie de protection inclut la détection du comportement des utilisateurs, sélectionnez un agent d’activité utilisateur dans votre environnement pour héberger les nouveaux collecteurs de données. Ransomware Resilience crée automatiquement le collecteur de données pour transmettre les événements d'activité des utilisateurs à Ransomware Resilience afin de détecter les comportements anormaux des utilisateurs.
+.. Si votre stratégie de protection inclut la détection du comportement des utilisateurs, sélectionnez un *agent d’activité utilisateur* dans votre environnement pour héberger les nouveaux collecteurs de données. Ransomware Resilience crée automatiquement le collecteur de données pour transmettre les événements d’activité des utilisateurs à Ransomware Resilience afin de détecter les comportements anormaux des utilisateurs.
 
 
 . Passez en revue la nouvelle stratégie de protection, puis sélectionnez **Protéger** pour l’appliquer.
@@ -387,36 +214,8 @@ Vous pouvez remplacer la politique existante par une autre.
 
 
 
-[[manage-ransomware-protection-strategies]]
-== Gérer les stratégies de protection contre les ransomwares
-
-Vous pouvez supprimer une stratégie de ransomware.
-
-
-
-[[view-workloads-protected-by-a-ransomware-protection-strategy]]
-=== Afficher les charges de travail protégées par une stratégie de protection contre les ransomwares
-
-Avant de supprimer une stratégie de protection contre les ransomwares, vous souhaiterez peut-être afficher les charges de travail protégées par cette stratégie.
-
-Vous pouvez afficher les charges de travail à partir de la liste des stratégies ou lorsque vous modifiez une stratégie spécifique.
-
-.Étapes pour visualiser les stratégies
-. Dans le menu Résilience aux ransomwares, sélectionnez *Protection*.
-. Depuis la page Protection, sélectionnez *Gérer les stratégies de protection*.
-+
-La page Stratégies de protection contre les ransomwares affiche une liste de stratégies.
-
-+
-image:screen-protection-strategy-list.png["Écran des stratégies de protection contre les ransomwares affichant une liste de stratégies"]
-
-. Sur la page Stratégies de protection contre les ransomwares, dans la colonne Charges de travail protégées, sélectionnez la flèche vers le bas à la fin de la ligne.
-
-
-
-
 [[delete-a-ransomware-protection-strategy]]
-=== Supprimer une stratégie de protection contre les ransomwares
+== Supprimer une stratégie de protection contre les ransomwares
 
 Vous pouvez supprimer une stratégie de protection qui n’est actuellement associée à aucune charge de travail.
 
@@ -425,4 +224,15 @@ Vous pouvez supprimer une stratégie de protection qui n’est actuellement asso
 . Depuis la page Protection, sélectionnez *Gérer les stratégies de protection*.
 . Dans la page Gérer les stratégies, sélectionnez les *Actions*image:screenshot_horizontal_more_button.gif["Bouton Actions"] option pour la stratégie que vous souhaitez supprimer.
 . Dans le menu Actions, sélectionnez *Supprimer la politique*.
+
+
+
+
+[[next-steps]]
+== Prochaines étapes
+
+* link:concept-strategy.html["Découvrez les stratégies de protection"]
+* link:task-protection-group.html["Gérer les groupes de protection"]
+* link:task-backup-destination.html["Gérer les destinations de sauvegarde"]
+* link:suspicious-user-activity.html["Configurer la détection de l'activité de l'utilisateur"]
 

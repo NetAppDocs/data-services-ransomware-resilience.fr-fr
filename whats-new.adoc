@@ -37,7 +37,7 @@ Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-serv
 
 Ransomware Resilience a amélioré le flux de travail d’activation de la surveillance de l’activité utilisateur. Auparavant, Ransomware Resilience testait la connexion du collecteur de données chaque fois que vous activiez une stratégie de protection contre les ransomwares avec surveillance de l’activité utilisateur sur une charge de travail. Avec cette mise à jour, cette vérification est désormais ignorée s’il existe un collecteur de données pour la storage VM et qu’il est dans l’état "running", ce qui accélère le flux de travail de protection.
 
-Pour plus d'informations, consultez link:link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["protéger les charges de travail"^].
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["protéger les charges de travail"^].
 
 
 
