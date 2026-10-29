@@ -24,7 +24,7 @@ Découvrez les nouveautés de NetApp Ransomware Resilience.
 
 
 [[new-manual-workflow-for-creating-a-user-activity-agent]]
-== Nouveau flux de travail manuel pour la création d'un agent d'activité utilisateur
+=== Nouveau flux de travail manuel pour la création d'un agent d'activité utilisateur
 
 Ransomware Resilience propose désormais un workflow de création manuelle de l’agent d’activité utilisateur, offrant un contrôle accru sur la façon dont vous créez votre agent d’activité utilisateur sur votre VM. Grâce à ce nouveau workflow, vous pouvez installer directement l’agent d’activité utilisateur et configurer les paramètres de proxy sans fournir de clés SSH de la VM.
 
