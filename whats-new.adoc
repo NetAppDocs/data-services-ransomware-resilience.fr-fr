@@ -18,6 +18,20 @@ Découvrez les nouveautés de NetApp Ransomware Resilience.
 
 
 
+[[26-october-2026]]
+== 26 octobre 2026
+
+
+
+[[new-manual-workflow-for-creating-a-user-activity-agent]]
+== Nouveau flux de travail manuel pour la création d'un agent d'activité utilisateur
+
+Ransomware Resilience propose désormais un workflow de création manuelle de l’agent d’activité utilisateur, offrant un contrôle accru sur la façon dont vous créez votre agent d’activité utilisateur sur votre VM. Grâce à ce nouveau workflow, vous pouvez installer directement l’agent d’activité utilisateur et configurer les paramètres de proxy sans fournir de clés SSH de la VM.
+
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#create-a-user-activity-agent["Créer un agent d'activité utilisateur"^].
+
+
+
 [[20-october-2026]]
 == 20 octobre 2026
 
@@ -32,7 +46,7 @@ Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-serv
 
 
 
-[[enhanced-workflow-for-enabling-user-activity-monitoring]]
+[[improved-workflow-for-enabling-user-activity-monitoring]]
 === Flux de travail amélioré pour activer la surveillance de l'activité des utilisateurs
 
 Ransomware Resilience a amélioré le flux de travail d’activation de la surveillance de l’activité utilisateur. Auparavant, Ransomware Resilience testait la connexion du collecteur de données chaque fois que vous activiez une stratégie de protection contre les ransomwares avec surveillance de l’activité utilisateur sur une charge de travail. Avec cette mise à jour, cette vérification est désormais ignorée s’il existe un collecteur de données pour la storage VM et qu’il est dans l’état "running", ce qui accélère le flux de travail de protection.
@@ -53,8 +67,8 @@ La prise en charge du niveau de service Flex de Google Cloud NetApp Volumes dans
 
 
 
-[[enhanced-support-for-clean-restores]]
-=== Prise en charge améliorée des restaurations propres
+[[clean-restore-support-for-suspicious-user-behavior-and-user-based-encryption-attacks]]
+=== Prise en charge de la restauration propre en cas de comportement utilisateur suspect et d’attaques de chiffrement basées sur l’utilisateur
 
 Les restaurations propres sont désormais disponibles pour la récupération après un comportement utilisateur suspect et des attaques par chiffrement basées sur l'utilisateur. Cette amélioration vient s’ajouter à la prise en charge existante des attaques basées sur le chiffrement (entropie). Cette capacité améliorée vous permet de tirer parti de l’approche guidée de la restauration propre, en identifiant les points de restauration optimaux afin de minimiser la perte de données et d’accélérer la récupération.
 

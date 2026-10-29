@@ -1,11 +1,11 @@
-= Prise en charge améliorée des restaurations propres
+= Prise en charge de la restauration propre en cas de comportement utilisateur suspect et d’attaques de chiffrement basées sur l’utilisateur
 :allow-uri-read: 
 
 
 
 
-[[enhanced-support-for-clean-restores]]
-=== Prise en charge améliorée des restaurations propres
+[[clean-restore-support-for-suspicious-user-behavior-and-user-based-encryption-attacks]]
+=== Prise en charge de la restauration propre en cas de comportement utilisateur suspect et d’attaques de chiffrement basées sur l’utilisateur
 
 Les restaurations propres sont désormais disponibles pour la récupération après un comportement utilisateur suspect et des attaques par chiffrement basées sur l'utilisateur. Cette amélioration vient s’ajouter à la prise en charge existante des attaques basées sur le chiffrement (entropie). Cette capacité améliorée vous permet de tirer parti de l’approche guidée de la restauration propre, en identifiant les points de restauration optimaux afin de minimiser la perte de données et d’accélérer la récupération.
 
