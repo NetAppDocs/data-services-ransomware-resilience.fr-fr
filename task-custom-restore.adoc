@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-custom-restore.html 
 keywords: ransomware protection recovery, recover from a ransomware attack, recovery point, RPA 
-summary: 'Après une attaque, NetApp Ransomware Resilience vérifie que les données de sauvegarde sur le stockage secondaire sont propres, recommande un point de récupération réel (RPA) et orchestre le flux de travail pour une récupération résistante aux pannes.' 
+summary: Restaurez les workloads après une attaque de ransomware en utilisant le point de restauration recommandé ou préféré au niveau du volume, du fichier ou de la machine virtuelle, sans nettoyer les fichiers au préalable. 
 ---
-= Récupérez-vous après une attaque de ransomware grâce à une restauration personnalisée dans NetApp Ransomware Resilience
+= Récupérez des workloads grâce à une restauration personnalisée dans NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: 'Après une attaque, NetApp Ransomware Resilience vérifie que les donn
 
 
 [role="lead"]
-Avec Ransomware Resilience, les administrateurs de stockage peuvent déterminer la meilleure façon de restaurer les charges de travail soit à partir du point de restauration recommandé, soit à partir du point de restauration préféré.
+Récupérez vos workloads après une attaque de ransomware grâce à une restauration personnalisée dans NetApp Ransomware Resilience. Sélectionnez le point de restauration recommandé ou un point de restauration de votre choix pour restaurer les données sans nettoyer les fichiers au préalable.
 
 
 TIP: Ransomware Resilience prend également en charge une xref:task-clean-restore.html[option de restauration propre], qui offre une récupération guidée et des capacités avancées pour garantir que seules les données propres et non chiffrées sont récupérées.
@@ -143,7 +143,7 @@ TIP: Le nouveau nom de volume apparaît comme le nom du volume d'origine + le no
 [[restore-a-workload-at-the-file-level]]
 === Restaurez une charge de travail au niveau du fichier
 
-Avant de restaurer une charge de travail au niveau des fichiers, vous pouvez consulter une liste des fichiers concernés. Vous pouvez accéder à la page Alertes pour télécharger une liste des fichiers concernés. Utilisez ensuite la page Récupération pour importer la liste et choisir les fichiers à restaurer.
+Avant de restaurer un workload au niveau des fichiers, vous pouvez télécharger une liste des fichiers concernés depuis la page Alerts. Utilisez la page Recovery pour importer la liste et choisir les fichiers à restaurer.
 
 Vous pouvez restaurer une charge de travail au niveau du fichier sur le même système ou sur un système différent.
 
@@ -198,7 +198,7 @@ image:screen-recovery-app-by-file-select-files.png["Sélectionnez manuellement l
 
 +
 
-NOTE: Si des fichiers ne peuvent pas être restaurés à l'aide du point de restauration sélectionné, un message apparaît indiquant le nombre de fichiers qui ne peuvent pas être restaurés et vous permet de télécharger la liste de ces fichiers en sélectionnant *Télécharger la liste des fichiers impactés*.
+NOTE: Si certains fichiers ne peuvent être restaurés à partir du point de restauration sélectionné, un message indique leur nombre. Pour télécharger la liste de ces fichiers, sélectionnez *Télécharger la liste des fichiers concernés*.
 
 
 
@@ -207,7 +207,7 @@ NOTE: Si des fichiers ne peuvent pas être restaurés à l'aide du point de rest
 .. Choisissez où restaurer les données : emplacement source d’origine ou un autre emplacement que vous pouvez spécifier.
 +
 
-TIP: Bien que les fichiers ou répertoires d'origine soient écrasés par les données restaurées, les noms de fichiers et de dossiers d'origine restent les mêmes, sauf si vous spécifiez de nouveaux noms.
+TIP: Les données restaurées écrasent les fichiers ou le répertoire d'origine, mais les noms de fichiers et de dossiers d'origine restent inchangés, sauf si vous spécifiez de nouveaux noms.
 
 .. Sélectionnez le système.
 .. Sélectionnez la machine virtuelle de stockage.
@@ -216,7 +216,7 @@ TIP: Bien que les fichiers ou répertoires d'origine soient écrasés par les do
 
 TIP: Si vous ne spécifiez pas de chemin pour la restauration, les fichiers seront restaurés sur un nouveau volume dans le répertoire de niveau supérieur.
 
-.. Sélectionnez si vous souhaitez que les noms des fichiers ou du répertoire restaurés soient les mêmes que ceux de l'emplacement actuel ou des noms différents.
+.. Choisissez si vous souhaitez conserver les noms actuels ou utiliser des noms différents pour les fichiers ou le répertoire restaurés.
 
 
 . Sélectionnez *Suivant*.
@@ -271,7 +271,7 @@ TIP: Si vous ne spécifiez pas de chemin pour la restauration, les fichiers sero
 [[restore-a-vm-file-share-at-the-vm-level]]
 === Restaurer un partage de fichiers VM au niveau de la VM
 
-Sur la page de récupération, après avoir sélectionné une machine virtuelle à restaurer, continuez avec ces étapes.
+Sur la page de récupération, après avoir sélectionné une machine virtuelle à restaurer, poursuivez en suivant ces étapes.
 
 . *Source* : Sélectionnez la flèche vers le bas à côté de Source pour voir les détails.
 +

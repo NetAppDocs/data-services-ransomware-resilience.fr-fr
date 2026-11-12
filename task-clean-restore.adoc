@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-clean-restore.html 
 keywords: clean room, clean restore, secure recovery, restore, isolated recovery environment 
-summary: Avant de procéder à une restauration complète dans NetApp Ransomware Resilience, vous devez créer un environnement de récupération isolé afin de mettre en quarantaine et de nettoyer l’environnement. 
+summary: Créez un environnement de récupération isolé dans NetApp Ransomware Resilience pour mettre en quarantaine et nettoyer les workloads, examiner les configurations prises en charge et vous préparer à une restauration propre. 
 ---
 = Configurez l'environnement pour une restauration propre dans NetApp Ransomware Resilience
 :hardbreaks:
@@ -97,8 +97,8 @@ NOTE: Effectuer une restauration complète dans un environnement cloud peut entr
 [[considerations]]
 == Considérations
 
-* Vous ne pouvez effectuer une restauration complète que pour les attaques basées sur le chiffrement (comportement de l'utilisateur et entropie) et les attaques par comportement utilisateur suspect. La restauration complète n'est pas prise en charge pour les attaques de violation de données et de destruction de données.
-* Si l'environnement de récupération isolé ne dispose pas de capacité pour une nouvelle opération, celle-ci est mise en file d'attente jusqu'à ce qu'une disponibilité se présente.
+* Vous pouvez effectuer une restauration propre uniquement pour les attaques basées sur le chiffrement (comportement utilisateur et entropie) et les attaques par comportement utilisateur suspect. La restauration propre n'est pas prise en charge pour les attaques de fuite de données et de destruction de données.
+* Si l'environnement de récupération isolé ne dispose pas de capacité pour une nouvelle opération, l'opération est placée en file d'attente jusqu'à ce que de la capacité soit disponible.
 +
 ** Vous pouvez surveiller à tout moment l'état des opérations de restauration propres actives et en file d'attente dans le tableau de bord Ransomware Resilience Recovery.
 
@@ -111,7 +111,7 @@ NOTE: Effectuer une restauration complète dans un environnement cloud peut entr
 [[additional-considerations-for-on-premises-environments]]
 === Considérations supplémentaires pour les environnements sur site
 
-Si vous déployez un IRE sur site, lorsqu'une machine virtuelle Windows est clonée pour l'analyse de récupération lors d'une restauration complète, la machine virtuelle clonée conserve la même configuration que la source. Cela peut entraîner des conflits :
+Si vous déployez un IRE sur site, lorsqu'une machine virtuelle Windows est clonée pour l'analyse de récupération lors d'une restauration propre, la machine virtuelle clonée conserve la même configuration que la source. Cette duplication peut engendrer des conflits :
 
 * L'utilisation du même identifiant de sécurité (SID) entraîne des conflits d'authentification et de sécurité.
 * L'utilisation du même nom d'ordinateur (CN) provoque des conflits réseau.
@@ -125,7 +125,7 @@ Pour éviter ces conflits, Ransomware Resilience effectue une préparation syst�
 [[secondary-sources]]
 === Sources secondaires
 
-Lors de la création de l'IRE, vous avez la possibilité d'ajouter une source secondaire.
+Lorsque vous créez l'IRE, vous pouvez ajouter une source secondaire.
 
 Si la source principale est indisponible et que vous avez configuré une source secondaire, les données seront restaurées sur la source secondaire.
 
@@ -151,7 +151,7 @@ Les frais facturés par des tiers peuvent inclure la création et le déploiemen
 [[prerequisites]]
 == Prérequis
 
-Assurez-vous d'avoir rempli les conditions préalables pour le type de déploiement de restauration propre que vous avez choisi. Sélectionnez l'onglet correspondant à votre configuration IRE.
+Vérifiez que vous avez bien rempli les conditions préalables pour le type de déploiement de restauration propre que vous avez choisi. Sélectionnez l'onglet correspondant à votre configuration IRE.
 
 
 NOTE: Lors de la création de l'IRE, vous devez ajouter chaque système (primaire ou secondaire) que vous souhaitez utiliser pour l'analyse lors de l'étape de sélection du système.
@@ -217,7 +217,7 @@ NOTE: Si vous configurez un IRE avec la source dans Amazon FSx for NetApp ONTAP,
 * Pour l'IRE, provisionnez un VPC dans la plage d'adresses IP de votre environnement de production. L'adresse IP ne doit pas entrer en conflit avec des adresses IP existantes.
 +
 ** Le VPC doit avoir une capacité minimale de 64 adresses IP (un masque de sous-réseau /26).
-** Le VPC doit autoriser l'accès à Internet public. Sinon, l'agent Console ne fonctionnera pas
+** Le VPC doit autoriser l'accès à Internet public. Sinon, l'agent Console ne fonctionnera pas.
 
 
 
@@ -356,7 +356,7 @@ NOTE: Si vous configurez un IRE avec la source dans Amazon FSx for NetApp ONTAP,
 * Pour l'IRE, provisionnez un VPC dans la plage d'adresses IP de votre environnement de production. L'adresse IP ne doit pas entrer en conflit avec des adresses IP existantes.
 +
 ** Le VPC doit avoir une capacité minimale de 64 adresses IP (un masque de sous-réseau /26).
-** Le VPC doit autoriser l'accès à Internet public. Sinon, l'agent Console ne fonctionnera pas
+** Le VPC doit autoriser l'accès à Internet public. Sinon, l'agent Console ne fonctionnera pas.
 
 
 
@@ -475,7 +475,7 @@ image:diagram-clean-recovery-on-prem.png["Schéma de restauration propre d’un 
 ** VMware Tools doit être installé et en cours d'exécution.
 ** WinRM doit être activé.
 ** L'adresse IP doit être configurée.
-** Assurez-vous de disposer de la licence appropriée pour autoriser le clonage des machines virtuelles de base.
+** Vous devez disposer de la licence appropriée pour autoriser le clonage des machines virtuelles de base.
 ** La machine virtuelle doit être allumée.
 
 
@@ -519,6 +519,9 @@ Accès NFS à : * Agent de la Production Console * VLAN de l’agent de la Cons
 Avant de procéder à une restauration propre, vous devez créer un environnement de récupération isolé.
 
 La procédure de création d'un environnement de reprise d'activité isolé diffère selon que cet environnement se trouve dans le cloud ou sur site. Veillez à suivre les instructions correspondant à l'emplacement approprié.
+
+
+TIP: link:https://www.netapp.com/video/6Vj0Ijo3mno/netapp-ransomware-resilience-clean-restore/["Regardez une vidéo qui vous guide tout au long du déploiement de la récupération isolée."^]
 
 [role="tabbed-block"]
 ====
@@ -610,10 +613,18 @@ TIP: Si vous devez modifier des détails de l'IRE, sélectionnez *Paramètres* d
 Vous ne pouvez pas supprimer un IRE pendant une opération de restauration en cours ; vous pouvez annuler l’opération de restauration ou attendre que la restauration soit terminée, puis supprimer l’IRE.
 
 
-IMPORTANT: Si vous supprimez l'IRE, cela supprime également le SVM de la salle blanche et le volume de métadonnées. Une fois ces éléments supprimés, vous ne pourrez plus générer de rapports pour la restauration propre.
+IMPORTANT: Si vous supprimez l’IRE, le SVM de la salle blanche et le volume de métadonnées sont également supprimés. Une fois ces éléments supprimés, vous ne pourrez plus générer de rapports pour la restauration propre.
 
 . Accédez aux **Paramètres**.
 . Dans la carte Isolation cleaning and recovery, sélectionnez **Gérer**.
 . Identifiez la salle blanche que vous souhaitez supprimer. Sélectionnez le menu d'actions (`...` pour l'IRE, puis **Supprimer**.
 . Dans la boîte de dialogue, sélectionnez **Supprimer** pour confirmer l'opération.
+
+
+
+
+[[more-information]]
+== Plus d'informations
+
+* link:https://www.youtube.com/watch?v=6Vj0Ijo3mno&t=6s["VIDÉO : Déploiement d’un environnement de récupération isolé"]
 

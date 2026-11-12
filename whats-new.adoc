@@ -40,7 +40,7 @@ Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-serv
 [[enhanced-isolated-recovery-environment-configuration]]
 === Configuration améliorée de l’environnement de récupération isolé
 
-Ransomware Resilience propose désormais un flux de travail amélioré pour la configuration d'un environnement de récupération isolé. Ce nouveau flux de travail clarifie et simplifie le processus de mise en place d'un environnement de récupération isolé pour le cloud ou les environnements sur site.
+Ransomware Resilience propose désormais un flux de travail amélioré pour la configuration d'un environnement de récupération isolé. Ce nouveau flux de travail simplifie et clarifie la procédure de mise en place d'un tel environnement, que ce soit pour le cloud ou sur site.
 
 Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Créez un environnement de récupération isolé pour une restauration propre"^].
 
@@ -49,7 +49,7 @@ Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-serv
 [[improved-workflow-for-enabling-user-activity-monitoring]]
 === Flux de travail amélioré pour activer la surveillance de l'activité des utilisateurs
 
-Ransomware Resilience a amélioré le flux de travail d’activation de la surveillance de l’activité utilisateur. Auparavant, Ransomware Resilience testait la connexion du collecteur de données chaque fois que vous activiez une stratégie de protection contre les ransomwares avec surveillance de l’activité utilisateur sur une charge de travail. Avec cette mise à jour, cette vérification est désormais ignorée s’il existe un collecteur de données pour la storage VM et qu’il est dans l’état "running", ce qui accélère le flux de travail de protection.
+Ransomware Resilience a amélioré le processus d'activation de la surveillance de l'activité utilisateur. Auparavant, Ransomware Resilience vérifiait la connexion du collecteur de données chaque fois que vous activiez une stratégie de protection contre les ransomwares avec surveillance de l'activité utilisateur sur un workload. Avec cette mise à jour, Ransomware Resilience omet désormais cette vérification si un collecteur de données existe pour la storage VM et est à l'état "running", ce qui accélère le processus de protection.
 
 Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["protéger les charges de travail"^].
 
@@ -283,7 +283,7 @@ Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-serv
 
 La restauration complète prend désormais en charge les rapports. Grâce aux rapports, vous pouvez consulter et évaluer les restaurations complètes, en enregistrant ces informations hors ligne au format CSV.
 
-La restauration propre permet désormais d'interrompre l'analyse. Si vous interrompez l'analyse, vous devez recommencer la restauration propre.
+La restauration propre permet désormais d'interrompre l'analyse. Si vous interrompez l'analyse, vous devrez relancer la restauration propre.
 
 Pour en savoir plus sur les rapports, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-reports.html["Télécharger les rapports dans Ransomware Resilience"^]. Pour en savoir plus sur la récupération, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore-recover.html["Récupérez les charges de travail avec une restauration propre"^].
 
@@ -338,7 +338,7 @@ link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/reference
 [[clean-restore]]
 === Restauration propre
 
-Ransomware Resilience prend désormais en charge les restaurations propres, une nouvelle option de récupération qui vous aide à vous remettre rapidement et facilement des attaques de ransomware. Les restaurations propres offrent des flux de travail guidés qui identifient les points de restauration optimaux pour remettre vos charges de travail en service tout en minimisant l'interruption. Les flux de travail dans la restauration propre fournissent également des informations au niveau fichier sur vos données, garantissant que vous pouvez restaurer des charges de travail exemptes de logiciels malveillants, ce qui empêche toute réinfection et minimise la perte de données.
+Ransomware Resilience prend désormais en charge les restaurations propres, une nouvelle option de récupération qui vous aide à vous remettre rapidement et facilement des attaques de ransomware. Les restaurations propres proposent des workflows guidés qui identifient les points de restauration optimaux pour remettre vos workloads en service tout en minimisant l'interruption. Les workflows de restauration propre fournissent également des informations sur vos données au niveau des fichiers, garantissant ainsi que vous pouvez restaurer des workloads exempts de malware afin d'éviter toute réinfection et de minimiser la perte de données.
 
 Pour en savoir plus sur les configurations prises en charge et sur la manière de configurer votre système pour une restauration complète, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Créer un environnement de récupération isolé"^]. Pour en savoir plus sur la procédure de restauration complète, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore-recover.html["Récupérez les charges de travail avec une restauration propre"^].
 

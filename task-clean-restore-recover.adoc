@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-clean-restore-recover.html 
 keywords: clean room, clean restore, secure recovery, recover, isolated recovery environment, ire 
-summary: 'Ransomware Resilience vous permet de contrôler et d"assainir vos charges de travail grâce à une restauration propre.' 
+summary: 'Récupérez les workloads après une attaque de ransomware en utilisant la restauration propre pour analyser les snapshots, supprimer les logiciels malveillants et restaurer les données à leur emplacement d"origine ou à un autre emplacement.' 
 ---
 = Récupérez vos charges de travail grâce à une restauration propre dans NetApp Ransomware Resilience
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Ransomware Resilience vous permet de contrôler et d"assainir vos char
 
 
 [role="lead"]
-Avec NetApp Ransomware Resilience, vous pouvez effectuer une récupération guidée après une attaque de ransomware par chiffrement grâce à une restauration propre. La restauration propre identifie les chemins de récupération optimisés afin de minimiser la perte de données et de remettre vos charges de travail en ligne dans les plus brefs délais.
+Avec NetApp Ransomware Resilience, vous pouvez effectuer une récupération guidée après une attaque par ransomware fondée sur le chiffrement à l’aide d’une restauration propre. La restauration propre identifie des chemins de récupération optimisés afin de minimiser la perte de données et de remettre vos workloads en ligne aussi rapidement que possible.
 
 
 
@@ -30,8 +30,8 @@ Vous devez avoir configuré un link:task-clean-restore.html["environnement de r�
 [[considerations]]
 == Considérations
 
-* Vous ne pouvez effectuer une restauration complète que pour les attaques basées sur le chiffrement (comportement de l'utilisateur et entropie) et les attaques par comportement utilisateur suspect. La restauration complète n'est pas prise en charge pour les attaques de violation de données et de destruction de données.
-* Si l'environnement de récupération isolé ne dispose pas de capacité pour une nouvelle opération, celle-ci est mise en file d'attente jusqu'à ce qu'une disponibilité se présente.
+* Vous pouvez effectuer une restauration propre uniquement pour les attaques basées sur le chiffrement (comportement utilisateur et entropie) et les attaques par comportement utilisateur suspect. La restauration propre n'est pas prise en charge pour les attaques de fuite de données et de destruction de données.
+* Si l'environnement de récupération isolé ne dispose pas de capacité pour une nouvelle opération, l'opération est placée en file d'attente jusqu'à ce que de la capacité soit disponible.
 +
 ** Vous pouvez surveiller à tout moment l'état des opérations de restauration propres actives et en file d'attente dans le tableau de bord Ransomware Resilience Recovery.
 
@@ -44,7 +44,7 @@ Vous devez avoir configuré un link:task-clean-restore.html["environnement de r�
 [[considerations-for-restoring-to-an-alternate-location]]
 === Considérations relatives à la restauration dans un autre emplacement
 
-Lorsque vous restaurez un volume à l'aide d'une restauration propre, vous pouvez choisir un emplacement alternatif géré par le même agent Console. Ce nouvel emplacement peut se trouver sur le même système, une machine virtuelle de stockage, un agrégat, ou sur un système différent. Lorsque vous restaurez vers un emplacement alternatif :
+Lorsque vous restaurez un volume à l’aide d’une restauration propre, vous pouvez le restaurer vers un autre emplacement géré par le même Console agent. Le nouvel emplacement peut se trouver sur le même système ou sur un système différent, la même storage VM ou une storage VM différente, ou le même agrégat ou un agrégat différent. Lorsque vous restaurez vers un autre emplacement :
 
 * Le protocole ARP est automatiquement activé sur le nouveau volume.
 * Le chemin de jonction est défini en fonction du nom que vous fournissez. Par exemple : `<Data LIF IP address of destination storage VM>:<new volume name>`.
@@ -61,13 +61,13 @@ Lorsque vous restaurez un volume à l'aide d'une restauration propre, vous pouve
 . Dans les options Type de restauration, sélectionnez **Restauration propre** puis **Suivant**.
 . Sélectionnez l'environnement de récupération isolé que vous souhaitez utiliser, puis **Suivant**.
 . Vérifiez l'environnement de récupération isolé et assurez-vous qu'il s'agit du bon emplacement. Sélectionnez **Restaurer**.
-. Ransomware Resilience effectue la configuration nécessaire. Une fois la configuration terminée, Ransomware Resilience met à jour le statut. Pour continuer, sélectionnez **Suivant**.
+. Ransomware Resilience effectue la configuration nécessaire. Une fois la configuration terminée avec succès, Ransomware Resilience met à jour l’état. Pour continuer, sélectionnez **Suivant**.
 . Une fois l'installation terminée, sélectionnez **Lancer l'analyse**. Ransomware Resilience recherche le dernier instantané non affecté.
 +
 image:screenshot-clean-room-analysis.png["Capture d'écran de l'étape d'analyse de restauration propre."]
 
 +
-Pendant l'analyse, vous pouvez sélectionner **Arrêter**. L'arrêt de l'analyse nécessite que le processus de restauration propre soit recommencé.
+Pendant l'analyse, vous pouvez sélectionner **Arrêter**. Si vous arrêtez l'analyse, vous devez recommencer le processus de restauration propre.
 
 . Une fois l'analyse terminée, sélectionnez **Suivant** pour planifier votre restauration. Ransomware Resilience propose deux options : **Least data loss** et **Latest unimpacted restore point**. Sélectionnez l'une ou l'autre option et, si vous le souhaitez, consultez les données de fichiers individuels pour chaque point de restauration.
 +
@@ -85,7 +85,7 @@ image:clean-restore-plan.png["Capture d'écran de l'étape du plan de restaurati
 +
 Si l'emplacement principal est indisponible et link:task-clean-restore.html#secondary-sources["vous avez configuré une source secondaire"], vous pouvez restaurer à la place vers la source **Secondaire**.
 
-** Sélectionnez **Alternatif** pour restaurer sur un nouveau volume. Choisissez le **Système**, la **VM de stockage** et l'**Agrégat** pour le nouveau volume, puis indiquez un **nom du nouveau volume**.
+** Sélectionnez **Alternatif** pour restaurer sur un nouveau volume. Choisissez le **Système**, la **VM de stockage** et l'**Agrégat** pour le nouveau volume, puis indiquez un **Nom du nouveau volume**.
 +
 image:alternate-recovery-destination.png["Capture d'écran de la destination de récupération alternative"]
 

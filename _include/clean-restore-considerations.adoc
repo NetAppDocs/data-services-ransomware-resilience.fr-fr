@@ -2,8 +2,8 @@
 :allow-uri-read: 
 
 
-* Vous ne pouvez effectuer une restauration complète que pour les attaques basées sur le chiffrement (comportement de l'utilisateur et entropie) et les attaques par comportement utilisateur suspect. La restauration complète n'est pas prise en charge pour les attaques de violation de données et de destruction de données.
-* Si l'environnement de récupération isolé ne dispose pas de capacité pour une nouvelle opération, celle-ci est mise en file d'attente jusqu'à ce qu'une disponibilité se présente.
+* Vous pouvez effectuer une restauration propre uniquement pour les attaques basées sur le chiffrement (comportement utilisateur et entropie) et les attaques par comportement utilisateur suspect. La restauration propre n'est pas prise en charge pour les attaques de fuite de données et de destruction de données.
+* Si l'environnement de récupération isolé ne dispose pas de capacité pour une nouvelle opération, l'opération est placée en file d'attente jusqu'à ce que de la capacité soit disponible.
 +
 ** Vous pouvez surveiller à tout moment l'état des opérations de restauration propres actives et en file d'attente dans le tableau de bord Ransomware Resilience Recovery.
 

@@ -21,7 +21,7 @@ Vous pouvez restaurer la charge de travail en sélectionnant tous les volumes, d
 
 
 
-TIP: La récupération de la charge de travail peut avoir un impact sur les charges de travail en cours d’exécution.  Vous devez coordonner les processus de récupération avec les parties prenantes appropriées.
+TIP: La reprise du workload peut affecter les workloads en cours d’exécution. Coordonnez les processus de reprise avec les parties prenantes concernées.
 
 Une charge de travail peut avoir l’un des états de restauration suivants :
 

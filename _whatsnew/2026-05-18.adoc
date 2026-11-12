@@ -18,6 +18,6 @@ Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-serv
 
 La restauration complète prend désormais en charge les rapports. Grâce aux rapports, vous pouvez consulter et évaluer les restaurations complètes, en enregistrant ces informations hors ligne au format CSV.
 
-La restauration propre permet désormais d'interrompre l'analyse. Si vous interrompez l'analyse, vous devez recommencer la restauration propre.
+La restauration propre permet désormais d'interrompre l'analyse. Si vous interrompez l'analyse, vous devrez relancer la restauration propre.
 
 Pour en savoir plus sur les rapports, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-reports.html["Télécharger les rapports dans Ransomware Resilience"^]. Pour en savoir plus sur la récupération, consultez link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore-recover.html["Récupérez les charges de travail avec une restauration propre"^].
