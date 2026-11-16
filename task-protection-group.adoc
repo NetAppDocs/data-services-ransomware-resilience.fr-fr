@@ -50,13 +50,20 @@ TIP: Pour voir plus de détails sur les charges de travail, faites défiler vers
 image:screen-protection-groups-policy.png["Ajouter un groupe de protection - Page de stratégie"]
 
 . Choisissez une stratégie de protection pour le groupe.
+. Si votre politique inclut le blocage des extensions de fichiers suspectes, sélectionnez l'icône en forme de crayon pour accéder aux configurations optionnelles du blocage des extensions de fichiers.
++
+L'option « Bloquer les extensions de fichiers suspectes » utilise la liste par défaut que vous avez configurée pour l'organisation. Pour link:task-file-extensions.html["utiliser une liste personnalisée"] accéder à cette liste, sélectionnez l'icône en forme de crayon.
+
++
+Si vous avez configuré des listes d'extensions de fichier bloquées dans ONTAP, vous pouvez remplacer ces listes en sélectionnant *Remplacer les listes ONTAP par les listes de Ransomware Resilience*. Choisissez ensuite si vous souhaitez que le SVM *autorise toutes les extensions de fichier sauf celles de la liste bloquée* ou *bloque toutes les extensions de fichier sauf celles de la liste autorisée*. Sélectionnez ensuite la liste dans le menu déroulant. Toutes les VM de stockage (SVM) du workload utiliseront cette liste; vous pourrez ensuite appliquer des listes différentes à différents SVM du workload.
+
 . Si la stratégie de protection inclut la réplication, vérifiez les paramètres de réplication.
 +
 .. Pour répliquer tous les instantanés vers la même destination, cochez **Utiliser la même destination pour chaque charge de travail**. Choisissez un *système de destination* et une *VM de stockage de destination* pour les charges de travail dans la section Agent de la console. + Pour utiliser des destinations différentes, décochez cette case. Examinez chaque charge de travail sous chaque agent de console et attribuez un *système de destination* et une *VM de stockage de destination* à chaque charge de travail. Sélectionnez **Suivant**.
 
 
 . Pour configurer une stratégie de sauvegarde, choisissez-en une puis sélectionnez **Suivant**.
-. Si votre politique de détection inclut la détection du comportement des utilisateurs, sélectionnez le collecteur de données que vous souhaitez utiliser, puis **Suivant**.
+. Si votre politique inclut la détection du comportement des utilisateurs, sélectionnez le collecteur de données que vous souhaitez utiliser puis **Suivant**.
 . Passez en revue les sélections pour le groupe de protection.
 . Pour finaliser le groupe de protection, sélectionnez *Add*.
 

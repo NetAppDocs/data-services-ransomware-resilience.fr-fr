@@ -1,0 +1,14 @@
+= prise en charge de MetroCluster
+:allow-uri-read: 
+
+
+
+
+[[metrocluster-support]]
+=== prise en charge de MetroCluster
+
+Ransomware Resilience prend désormais en charge MetroCluster, ce qui permet la protection, la détection et la récupération contre les ransomwares pour les configurations MetroCluster en miroir. Lors de l’activation de la protection contre les ransomwares sur des configurations MetroCluster, les deux systèmes de la paire MetroCluster doivent être ajoutés à la Console. Lorsque vous découvrez et activez la protection sur un côté de la paire, elle est automatiquement activée de l’autre côté.
+
+Lors de la récupération après une attaque par ransomware sur un MetroCluster workload, vous ne pouvez actuellement utiliser qu'une restauration personnalisée.
+
+Pour plus d’informations, voir link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-discover.html#metrocluster-discovery["MetroCluster découverte"].

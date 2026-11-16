@@ -120,6 +120,10 @@ Vous pouvez accéder aux alertes depuis le tableau de bord Ransomware Resilience
 . Dans le tableau de bord NetApp Ransomware Resilience, consultez le volet Alertes.
 . Sélectionnez *Afficher tout* sous l’un des statuts.
 . Sélectionnez une alerte pour examiner tous les incidents sur chaque volume pour chaque alerte.
++
+
+TIP: Si l'alerte a été déclenchée par une extension de fichier suspecte, vous pouvez empêcher que ce type de fichier soit de nouveau autorisé sur la machine virtuelle de stockage. Dans l'alerte, sélectionnez *Supprimer les extensions de la liste d'autorisation* link:task-file-extensions.html["modifier la liste des extensions de fichiers autorisées"].
+
 . Pour consulter des alertes supplémentaires, sélectionnez *Alerte* dans le fil d'Ariane en haut à gauche.
 . Consultez les alertes sur la page Alertes.
 +

@@ -72,6 +72,14 @@ Les limitations suivantes s'appliquent aux charges de travail SAN (stockage bloc
 
 
 
+[[metrocluster-limitations]]
+== Limites de MetroCluster
+
+* La restauration propre n'est actuellement pas prise en charge pour les workloads MetroCluster.
+
+
+
+
 [[multi-admin-verification]]
 == Vérification multi-administrateurs
 

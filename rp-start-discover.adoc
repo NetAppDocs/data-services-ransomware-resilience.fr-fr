@@ -25,6 +25,18 @@ Ransomware Resilience vérifie votre protection de sauvegarde actuelle, les copi
 
 
 
+[[metrocluster-discovery]]
+== MetroCluster découverte
+
+Ransomware Resilience charge automatiquement les configurations MetroCluster pour la détection. Vous devez avoir ajouté les deux systèmes de la paire MetroCluster à la Console pour effectuer la détection avec succès.
+
+Si les deux systèmes de la paire MetroCluster ont été ajoutés avec succès à l’organisation Console, les deux systèmes seront visibles dans la sélection de découverte. Il vous suffit de sélectionner un seul système pour la découverte ; la paire miroir sera ajoutée automatiquement.
+
+
+TIP: Les systèmes MetroCluster sont signalés par un **+1** dans le tableau de bord Discovery. Survolez le **+1** pour afficher tous les systèmes de la paire.
+
+
+
 [[select-workloads-to-discover]]
 == Sélectionnez les charges de travail à découvrir
 

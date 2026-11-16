@@ -176,7 +176,7 @@ Oui, si vous avez des charges de travail gérées dans Backup and Recovery, ces 
 Non, vous ne pouvez pas modifier les politiques gérées par Backup and Recovery depuis Ransomware Resilience. Vous gérez toute modification de ces politiques dans Backup and Recovery.
 
 .Si des politiques existent dans ONTAP (telles que ARP, FPolicy et les instantanés), Ransomware Resilience les modifie-t-il ?
-Ransomware Resilience ne modifie aucune politique de détection existante (paramètres ARP et FPolicy) d'ONTAP. Si vous modifiez des paramètres dans Ransomware Resilience, vous pouvez remplacer les paramètres d'ONTAP.
+Pas automatiquement. Ransomware Resilience ne modifie aucune politique de détection existante (paramètres ARP, FPolicy) d'ONTAP, sauf si vous modifiez manuellement ces paramètres dans Ransomware Resilience.
 
 .Que se passe-t-il si vous ajoutez de nouvelles politiques dans Backup and Recovery après avoir souscrit à Ransomware Resilience ?
 Ransomware Resilience reconnaît les nouvelles politiques créées et les modifications de politiques dans Backup and Recovery.

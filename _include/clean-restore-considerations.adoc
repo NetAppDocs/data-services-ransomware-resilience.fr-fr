@@ -9,4 +9,5 @@
 
 
 * Lorsque vous lancez une restauration propre, le volume d'origine est démonté, ce qui peut perturber l'accès aux IO.
+* La restauration complète n'est actuellement pas prise en charge pour MetroCluster ou les workloads SAN.
 
