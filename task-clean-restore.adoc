@@ -54,7 +54,6 @@ Vous pouvez également consulter l'historique des fichiers lors de l'étape de p
 
 * Vous ne pouvez créer qu'une seule IRE par compte Ransomware Resilience. Chaque IRE peut comporter trois salles blanches.
 * La restauration complète n'est actuellement prise en charge que pour les partages de fichiers NAS (NFS/CIFS).
-* Avec une restauration propre, vous ne pouvez restaurer que dans l'environnement source.
 * Vous pouvez créer un IRE dans le cloud ou sur site. Actuellement, les configurations suivantes sont prises en charge :
 +
 |===
