@@ -7,7 +7,7 @@ summary: 'NetApp propose une assistance pour la résilience face aux ransomwares
 = Obtenez de l'aide pour la résilience contre les ransomwares
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: https://docs.netapp.com/us-en/console-family/media/
 
 
 [role="lead"]
@@ -87,7 +87,7 @@ Les pièces jointes sont limitées à 25 Mo par fichier. Les extensions de fichi
 
 
 +
-image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/screenshot-create-case.png["Capture d'écran du formulaire Créer un cas qui vous permet de créer un cas auprès du support NetApp ."]
+image:screenshot-create-case.png["Capture d'écran du formulaire Créer un cas qui vous permet de créer un cas auprès du support NetApp ."]
 
 
 
@@ -141,10 +141,10 @@ La page *Gestion des cas* affiche les cas ouverts liés au compte NSS associé �
 ** Sous *Cas de l'organisation*, sélectionnez *Afficher* pour afficher tous les cas associés à votre entreprise.
 ** Modifiez la plage de dates en choisissant une plage de dates exacte ou en choisissant une période différente.
 ** Filtrer le contenu des colonnes.
-** Modifiez les colonnes qui apparaissent dans le tableau en sélectionnantimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-table-columns.png["L'icône plus qui apparaît dans le tableau"] et ensuite choisir les colonnes que vous souhaitez afficher.
+** Modifiez les colonnes affichées dans le tableau en sélectionnant image:icon-table-columns.png["L'icône plus qui apparaît dans le tableau"] puis en choisissant les colonnes que vous souhaitez afficher.
 
 
-. Gérer un dossier existant en sélectionnantimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-table-action.png["Une icône avec trois points qui apparaît dans la dernière colonne du tableau"] et en sélectionnant l’une des options disponibles :
+. Gérez un dossier existant en sélectionnant image:icon-table-action.png["Une icône avec trois points qui apparaît dans la dernière colonne du tableau"] l'une des options disponibles :
 +
 ** *Voir le cas* : Afficher tous les détails sur un cas spécifique.
 ** *Mettre à jour les notes du cas* : fournissez des détails supplémentaires sur votre problème ou sélectionnez *Télécharger des fichiers* pour joindre jusqu'à un maximum de cinq fichiers.
